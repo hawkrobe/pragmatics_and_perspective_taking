@@ -2,7 +2,6 @@
 title: 'Psych 254 W15 PS #1'
 author: "Mike Frank"
 date: "January 11, 2015"
-output: html_document
 ---
 
 This is problem set #1, in which we hope you will practice the packages tidyr and dplyr. There are some great cheat sheets from [RStudio](http://www.rstudio.com/resources/cheatsheets/).
@@ -21,6 +20,7 @@ I pretty much always clear the workspace and load the same basic helper function
 
 ```{r prelims}
 rm(list=ls())
+setwd("/Users/rxdh/Repos/psych254/analyses/")
 source("../helper/useful.R")
 ```
 
@@ -33,15 +33,21 @@ The first part of this exercise actually just consists of getting the data in a 
 
 ```{r data1}
 d <- read.csv("../data/janiszewski_rep_exercise.csv")
+str(d)
 ```
 
 Fine, right? Why can't we go forward with the analysis?
+
+**There are several ways in which the data need to be cleaned. One tip-off about this is that a number of variables that should be numeric end up as factors... In particular, we note:**
+1. **Some participants appear multiple times (90 rows, but only 87 worker ids)**
+2. **There are commas in some of the input.price numbers**
+3. **someone entered their response for "dog cost" as a character string: "five hundred"**
 
 HINT: try computing some summary statistics for the different items. Also, are there any participants that did the task more than once?
 
 Fix the data file so that it looks reasonable.
 
-
+**To fix these issues, we just open the .csv in another program (e.g. emacs), fix these little problems by hand (or using find/replace), and then save it under a different name, as "cleaned"**
 
 Part 2: Making these data tidy
 ------------------------------
@@ -59,7 +65,8 @@ To make this data tidy, we'll do some cleanup. First, remove the columns you don
 HINT: `?select` and the examples of helper functions will help you be efficient.
 
 ```{r select}
-d.tidy <- select(...)
+d.tidy <- select(d, WorkerId, Input.condition, 
+                 starts_with("Answer"))
 ```
 
 
@@ -72,7 +79,10 @@ Try renaming some variables using `rename`. A good naming scheme is:
 Try using the `%>%` operator as well. So you will be "piping" `d %>% rename(...)`.
 
 ```{r rename}
-d.tidy <- ...
+d.tidy <- d.tidy %>% rename(condition = Input.condition,
+                            dog_response = Answer.dog_cost,
+                            plasma_response = Answer.plasma_cost,
+                            sushi_response = Answer.sushi_cost)
 ```
 
 
@@ -81,14 +91,15 @@ OK, now for the tricky part. Use the verb *gather* to turn this into a *tidy* da
 HINT: look for online examples!
 
 ```{r gather}
-d.tidy <- ...
+d.tidy <- d.tidy %>% gather(name, cost, 
+                 dog_response, plasma_response, sushi_response) 
 ```
 
 
 Bonus problem: *spread* these data back into a wide format data frame.
 
 ```{r spread}
-d.wide <- ...
+d.wide <- d.tidy %>% spread(name, cost)
 ```
 
 
@@ -99,57 +110,69 @@ Try also using the dplyr `distinct` function to remove the duplicate participant
 
 ```{r}
 d.raw <- read.csv("../data/janiszewski_rep_exercise.csv")
-d.unique.subs <- ...
+d.unique.subs <- distinct(d.raw, WorkerId)
 ```
 
 As we said in class, a good thing to do is always to check histograms of the response variable. Do that now, using either regular base graphics or ggplot. What can you conclude? 
 
 ```{r}
+g <- (ggplot(d.tidy, aes(x = cost))
+      + geom_histogram())
+g
 ```
+
+**We can conclude that** 
+1. **there are three clumps of data, corresponding to the three different objects (sushi, dog, plasma)**, 
+2. **recalling that the anchors were set at 9, 2500, and 5000 (remember, we're not yet separating out classes of objects), we see that there seems to be a general trend of under-estimation**
 
 OK, now we turn to the actual data anlysis. We'll be using dplyr verbs to `filter`, `group`,`mutate`, and `summarise` the data.
 
 Start by using `summarise` on `d.tidy` to compute the mean bet across all participants. Note that this is simply taking the grand mean. Ultimately, we would like to compute the mean for different conditions and items, but this will come later. Right now we're just learning the syntax of `summarise`.
 
 ```{r}
-...
+# Note that worker A3S99S9NJ6X08J left "sushi_response" blank, so we 
+# must exclude NAs
+summarise(d.tidy, m = mean(cost, na.rm = TRUE))
 ```
 
 This is a great time to get comfortable with the `%>%` operator. In brief, `%>%` allows you to pipe data from one function to another. So if you would have written:
 
 ```{r}
-d <- function(d, other_stuff)
+# d <- function(d, other_stuff)
 ```
   
 you can now write:
 
 ```{r}
-d <- d %>% function(other_stufF)
+# d <- d %>% function(other_stufF)
 ```
 
 That doesn't seem like much, but it's cool when you can replace:
 
 ```{r}
-d <- function1(d, other_stuff)
-d <- function2(d, lots_of_other_stuff, more_stuff)
-d <- function3(d, yet_more_stuff)
+# d <- function1(d, other_stuff)
+# d <- function2(d, lots_of_other_stuff, more_stuff)
+# d <- function3(d, yet_more_stuff)
 ```
 
 with
 
 ```{r}
-d <- d %>% 
-  function1(other_stuff) %>%
-  function2(lots_of_other_stuff, more_stuff) %>%
-  function3(yet_more_stuff)
+# d <- d %>% 
+#   function1(other_stuff) %>%
+#   function2(lots_of_other_stuff, more_stuff) %>%
+#   function3(yet_more_stuff)
 ```
 
 In other words, you get to make a clean list of the things you want to do and chain them together without a lot of intermediate assignments. 
 
 Let's use that capacity to combine `summarise` with `group_by`, which allows us to break up our summary into groups. Try grouping by item and condition and taking means using `summarise`, chaining these two verbs with `%>%`.
 
+
 ```{r}
-...
+d.tidy %>% 
+  group_by(name, condition) %>% 
+  summarise(mean(cost, na.rm = TRUE))
 ```
 
 OK, it's looking like there are maybe some differences between conditions, but how are we going to plot these? They are fundamentally different magnitudes from one another. 
@@ -183,12 +206,13 @@ Now we can do the same thing as before but look at the relative difference betwe
 * By computing absolute value of percentage change in price, and 
 * By computing z-scores over items.
 
-To do the first, use the `mutate` verb to add a percent change column, then comute the same summary as before. 
+To do the first, use the `mutate` verb to add a percent change column, then compute the same summary as before. 
 
 ```{r}
 pcts <- d.tidy %>%
-  mutate(pct_change = ... ) %>%
-  ...
+  mutate(pct_change = anchor / cost) %>%
+  group_by(name, condition) %>% 
+  summarise(mean(cost, na.rm = TRUE))  
 ```
 
 To do the second, you will need to `group` first by item, compute z-scores with respect to items, then further group by condition.
