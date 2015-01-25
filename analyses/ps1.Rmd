@@ -1,7 +1,7 @@
 ---
 title: 'Psych 254 W15 PS #1'
-author: "Mike Frank"
-date: "January 11, 2015"
+author: "Robert Hawkins"
+date: "January 25, 2015"
 ---
 
 This is problem set #1, in which we hope you will practice the packages tidyr and dplyr. There are some great cheat sheets from [RStudio](http://www.rstudio.com/resources/cheatsheets/).
