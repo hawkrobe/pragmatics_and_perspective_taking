@@ -1,0 +1,149 @@
+---
+title: 'Psych 254 W15 PS #2'
+author: "Mike Frank"
+date: "February 4, 2015"
+output: html_document
+---
+
+This is problem set #2, in which we hope you will practice the visualization package ggplot2, as well as hone your knowledge of the packages tidyr and dplyr. 
+
+Part 1: Basic intro to ggplot
+=============================
+
+Part 1A: Exploring ggplot2 using qplot
+--------------------------------------
+
+Note, that this example is from the_grammar.R on http://had.co.nz/ggplot2 
+I've adapted this for psych 254 purposes
+
+First install and load the package.
+
+```{r}
+install.packages("ggplot2")
+library(ggplot2)
+```
+
+Now we're going to use qplot. qplot is the easy interface, meant to replace plot. You can give it simple `qplot(x,y)` examples, or slightly more complex examples like `qplot(x, y, col=grp, data=d)`. 
+
+We're going to be using the diamonds dataset. This is a set of measurements of diamonds, along with their price etc.
+
+```{r}
+head(diamonds)
+qplot(diamonds$carat, diamonds$price)
+```
+
+Scatter plots are trivial, and easy to add features to. Modify this plot so that it uses the dataframe rather than working from variables in the general namespace (good to get away from retyping `diamonds$` every time you reference a variable). 
+
+```{r}
+```
+
+Try adding clarity and cut, using shape and color as your visual variables. 
+
+```{r}
+```
+
+One of the primary benefits of `ggplot2` is the use of facets - also known as small multiples in the Tufte vocabulary. That last plot was probably hard to read. Facets could make it better. Try adding a `facets = x ~ y` argument. `x ~ y` means row facets are by x, column facets by y. 
+
+```{r}
+```
+
+But facets can also get overwhelming. Try to strike a good balance between color, shape, and faceting.
+
+HINT: `facets = . ~ x` puts x on the columns, but `facets = ~ x` (no dot) *wraps* the facets. These are underlying calls to different functions, `facet_wrap` (no dot) and `facet_grid` (two arguments). 
+
+```{r}
+```
+
+The basic unit of a ggplot plot is a "geom" - a mapping between data (via an "aesthetic") and a particular geometric configuration on coordinate axes. 
+
+Let's try some other geoms and manipulate their parameters. First, try a histogram (`geom="hist"`). 
+
+```{r}
+```
+
+Now facet your histogram by clarity and cut. 
+
+```{r}
+```
+
+I like a slightly cleaner look to my plots. Luckily, ggplot allows you to add "themes" to your plots. Try doing the same plot but adding `+ theme_bw()` or `+ theme_classic()`. Different themes work better for different applications, in my experience. 
+
+```{r}
+```
+
+Part 1B: Exploring ggplot2 using ggplot
+---------------------------------------
+
+`ggplot` is just a way of building `qplot` calls up more systematically. It's
+sometimes easier to use and sometimes a bit more complicated. What I want to show off here is the functionality of being able to build up complex plots with multiple elements. You can actually do this using qplot pretty easily, but there are a few things that are hard to do. 
+
+`ggplot` is the basic call, where you specify A) a dataframe and B) an aesthetic mapping from variables in the plot space to variables in the dataset. 
+
+```{r}
+d <- ggplot(diamonds, aes(x=carat, y=price)) # first you set the aesthetic and dataset
+d + geom_point() # then you add geoms
+d + geom_point(aes(colour = carat)) # and you can keep doing this to add layers to the plot
+```
+
+Try writing this as a single set of additions (e.g. one line of R code, though you can put in linebreaks). This is the most common workflow for me. 
+
+
+```{r}
+```
+
+
+You can also set the aesthetic separately for each geom, and make some great plots this way. Though this can get complicated. Try using `ggplot` to build a histogram of prices. 
+
+```{r}
+```
+
+Part 2: Diving into real data: Sklar et al. (2012)
+==================================================
+
+Sklar et al. (2012) claims evidence for unconscious arithmetic processing. We're going to do a reanalysis of their Experiment 6, which is the primary piece of evidence for that claim. The data are generously contributed by Asael Sklar. 
+
+First let's set up a few preliminaries. 
+
+```{r}
+library(tidyr)
+library(dplyr)
+
+sem <- function(x) {sd(x) / sqrt(length(x))}
+ci95 <- function(x) {sem(x) * 1.96}
+```
+
+Data Prep
+---------
+
+First read in two data files and subject info. A and B refer to different trial order counterbalances. 
+
+```{r}
+subinfo <- read.csv("../data/sklar_expt6_subinfo_corrected.csv")
+d.a <- read.csv("../data/sklar_expt6a_corrected.csv")
+d.b <- read.csv("../data/sklar_expt6b_corrected.csv")
+```
+
+Gather these datasets into long form and get rid of the Xs in the headers.
+
+```{r}
+```
+
+Bind these together. Check out `bind_rows`.
+
+```{r}
+```
+
+Merge these with subject info. You will need to look into merge and its relatives, `left_join` and `right_join`. Call this dataframe `d`, by convention. 
+
+```{r}
+```
+
+Clean up the factor structure.
+
+```{r}
+d$presentation.time <- factor(d$presentation.time)
+levels(d$operand) <- c("addition","subtraction")
+```
+
+Data Analysis
+-------------
