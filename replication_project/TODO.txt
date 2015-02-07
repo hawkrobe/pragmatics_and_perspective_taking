@@ -1,0 +1,37 @@
+TODO:
+
+* database... 
+
+COMPLETED:
+
+* Allow more than 2 people to be in a room together
+  -- Don't need separate function for 'host' and 'other', since players are identical
+  -- Notify and update clients when new player joins
+* Set sizes & speeds to couzin spec
+* Integrate keyboard.js to collect user input
+* remove all the clicking functions
+* get turning to work smoothly (constant angular velocity)
+* get space bar boost to work
+* display modifications
+  -- big curr bonus header
+  -- smaller cumulative bonus & time remaining trackers
+  -- color curr bonus val with gradient
+  -- move instructions to footer (clear out playable space)
+* draw visibility radius around each player
+  -- actually block view of other players outside of visibility radius (during round)
+* start game once threshold number of players has been reached 
+* collect next set of players in waiting room once first game starts
+* reset positions to center beginning of each round
+* allow people to disconnect gracefully (without ending the game)
+* keep track of how long the game has been going
+-> give player correct feedback about how many minutes are remaining
+* put dots on circle to represent direction
+* integrate light field
+-> give player correct feedback about current & cumulative bonus 
+* write the data we want to file
+-> curr bonus, positions, keyboard inputs, active?, angle, noise level, velocity, list of players in visibility radius
+* change color of whole background (not viewpoint -- white to green)
+* redirect to landing page after 6 min. (http://people.csail.mit.edu/pkrafft/experiment/landing.html)
+* set bonus at 0 around edge
+* get UID from querystring
+* read num. players and noise level from file when creating a game
