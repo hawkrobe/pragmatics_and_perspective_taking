@@ -376,46 +376,45 @@ game_core.prototype.create_physics_simulation = function() {
 		    p.player.total_points = p.player.avg_score * local_game.max_bonus;
 		    
 		    // Handle inactive, hidden, or high latency players...
-		    if(p.player.kicked || p.player.inactive || p.player.lagging) {
-			p.player.instance.disconnect();
-		    } else {
-			if(p.player.visible == 'hidden') {
-			    p.player.hidden_count += 1
-			}
-			if(p.player.hidden_count > local_game.ticks_per_sec*15) { // kick after being hidden for 15 seconds
-			    if(local_game.booting) {
-				p.player.kicked = true
-				console.log('Player ' + p.id + ' will be disconnected for being hidden.')
-			    }
-			}
-			var not_changing = p.player.last_speed == p.player.speed && p.player.last_angle == p.player.angle;
-			p.player.last_speed = p.player.speed
-			p.player.last_angle = p.player.angle
-			if(on_wall && not_changing) {
-			    p.player.inactive_count += 1
-			}
-			if(p.player.inactive_count > local_game.ticks_per_sec*30) {  // kick after being inactive for 30 seconds
-			    if(local_game.booting) {
-				if(p.player.lag_count > local_game.game_clock*0.1) {
-				    p.player.lagging = true
-				    console.log('Player ' + p.id + ' will be disconnected because of latency.')
-				} else {
-				    p.player.inactive = true
-				    console.log('Player ' + p.id + ' will be disconnected for inactivity.')
-				}
-			    }
-			}
-			if(p.player.latency > this.tick_frequency) {
-			    if(p.player.visible != 'hidden') {
-				p.player.lag_count += 1
-			    }
-			}
-			if(p.player.lag_count > local_game.game_length*0.1) {
-			    p.player.lagging = true
-			    console.log('Player ' + p.id + ' will be disconnected because of latency.')
-			}
+		 //    if(p.player.kicked || p.player.inactive || p.player.lagging) {
+			// p.player.instance.disconnect();
+		 //    } else {
+			// if(p.player.visible == 'hidden') {
+			//     p.player.hidden_count += 1
+			// }
+			// if(p.player.hidden_count > local_game.ticks_per_sec*15) { // kick after being hidden for 15 seconds
+			//     if(local_game.booting) {
+			// 	p.player.kicked = true
+			// 	console.log('Player ' + p.id + ' will be disconnected for being hidden.')
+			//     }
+			// }
+			// var not_changing = p.player.last_speed == p.player.speed && p.player.last_angle == p.player.angle;
+			// p.player.last_speed = p.player.speed
+			// p.player.last_angle = p.player.angle
+			// if(on_wall && not_changing) {
+			//     p.player.inactive_count += 1
+			// }
+			// if(p.player.inactive_count > local_game.ticks_per_sec*30) {  // kick after being inactive for 30 seconds
+			//     if(local_game.booting) {
+			// 	if(p.player.lag_count > local_game.game_clock*0.1) {
+			// 	    p.player.lagging = true
+			// 	    console.log('Player ' + p.id + ' will be disconnected because of latency.')
+			// 	} else {
+			// 	    p.player.inactive = true
+			// 	    console.log('Player ' + p.id + ' will be disconnected for inactivity.')
+			// 	}
+			//     }
+			// }
+			// if(p.player.latency > this.tick_frequency) {
+			//     if(p.player.visible != 'hidden') {
+			// 	p.player.lag_count += 1
+			//     }
+			// }
+			// if(p.player.lag_count > local_game.game_length*0.1) {
+			//     p.player.lagging = true
+			//     console.log('Player ' + p.id + ' will be disconnected because of latency.')
+			// }
 		    }
-		}
 	    }
 	}
 	// If you're a player, tell the server about your angle only every 125ms

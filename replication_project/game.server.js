@@ -40,12 +40,17 @@ game_server.server_onMessage = function(client,message) {
     var message_type = message_parts[0];
     //console.log("received message: " + message)
     //Extract important variables
+    var all = client.game.gamecore.get_active_players();
     var target = client.game.gamecore.get_player(client.userid);
     var others = client.game.gamecore.get_others(client.userid);
     if(message_type == 'a') {    // Client is changing angle
         // Set their (server) angle 
         target.angle = message_parts[1];
-	
+    } else if (message_type == 'chatMessage') {
+        var msg = message_parts[1].replace(/-/g,'.')
+        console.log(target + "sent message:" + msg)
+        _.map(all, function(p){
+            p.player.instance.emit( 'chatMessage', {user: target.id, msg: msg})})
     } else if (message_type == 's') {
         target.speed = message_parts[1].replace(/-/g,'.');;
     } else if (message_type == "h") { // Receive message when browser focus shifts

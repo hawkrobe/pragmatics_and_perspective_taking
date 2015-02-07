@@ -25,19 +25,26 @@
     <script type="text/javascript" src="game.client.js"></script>
     <script type="text/javascript" src="drawing.js"></script>
 
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font: 13px Helvetica, Arial; }
+        /*#messages { list-style-type: none; margin: 0; padding: 0; }
+        #messages li { padding: 5px 10px; }
+        #messages li:nth-child(odd) { background: #eee; }*/
+    </style>
+
     </head>
 
-  <body>
-    <div id='main'>
-        <h1 id='curr_bonus'> </h1>
-        <div id='second_row'>
-            <h5 class='alignleft' id='cumulative_bonus'> </h5> <h5 class='alignright' id='time'> </h5> 
-        </div>
-        <canvas id="viewport"> </canvas>
-        <div id='instructions'> 
-            <p> Controls: Hold <span style="color:yellow">left</span> and <span style="color:yellow">right</span> arrows to turn; hold <span style="color:yellow">spacebar</span> to move faster. </p> 
-	    <p>Do not refresh this page.</p>
-	</div>
+    <body>
+        <div id='main'>
+            <canvas id="viewport"> </canvas>
+            <ul id="messages"></ul>
+            <div id="chatarea">
+                <form action="">
+                    <input id="chatbox" autocomplete="off" />
+                    <button id="chatbutton">Send</button>
+                </form>
+            </div>
         </div>
     </body>
 </html>

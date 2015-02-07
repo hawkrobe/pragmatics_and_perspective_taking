@@ -38,7 +38,7 @@ app.get( '/*' , function( req, res ) {
     console.log('\t :: Express :: file requested: ' + file);    
     
     if(req.query.id && !valid_id(req.query.id)) {
-	res.redirect('http://projects.csail.mit.edu/ci/turk/forms/invalid.html')
+       res.redirect('http://projects.csail.mit.edu/ci/turk/forms/invalid.html')
     } else {
 	if(req.query.id && req.query.id in global_player_set) {
 	    res.redirect('http://projects.csail.mit.edu/ci/turk/forms/duplicate.html')
@@ -57,16 +57,16 @@ io.on('connection', function (client) {
     var hs = client.handshake;    
     var query = require('url').parse(client.handshake.headers.referer, true).query;
     if( !(query.id && query.id in global_player_set) ) {
-	if(query.id) {
-	    global_player_set[query.id] = true
-	    var id = query.id; // use id from query string if exists
-	} else {
-	    var id = utils.UUID();
-	}
-	if(valid_id(id)) {
-	    console.log("user connecting...")
-	    initialize(query, client, id);
-	}
+        if(query.id) {
+            global_player_set[query.id] = true
+	           var id = query.id; // use id from query string if exists
+            } else {
+            var id = utils.UUID();
+        }
+        if(valid_id(id)) {
+            console.log("user connecting...")
+            initialize(query, client, id);
+        }
     }
 });
 
@@ -83,7 +83,7 @@ var initialize = function(query, client, id) {
 
     //Pass off to game.server.js code
     game_server.findGame(client);
-    
+
     // Now we want set up some callbacks to handle messages that clients will send.
     // We'll just pass messages off to the server_onMessage function for now.
     client.on('message', function(m) {

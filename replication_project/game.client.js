@@ -39,15 +39,7 @@ right_turn = function() {
 client_ondisconnect = function(data) {
     // Redirect to exit survey
     console.log("server booted")
-    if(game.get_player(my_id).kicked) {
-        var URL = 'http://projects.csail.mit.edu/ci/turk/forms/away.html';
-    } else if(game.get_player(my_id).inactive) {
-        var URL = 'http://projects.csail.mit.edu/ci/turk/forms/error.html?id=' + my_id;
-    } else if(game.get_player(my_id).lagging) {
-        var URL = 'http://projects.csail.mit.edu/ci/turk/forms/latency.html?id=' + my_id;
-    } else {
 	var URL = 'http://projects.csail.mit.edu/ci/turk/forms/end.html?id=' + my_id;
-    }
     window.location.replace(URL);
 };
 
@@ -117,13 +109,12 @@ client_onMessage = function(data) {
 
     switch(command) {
     case 's': //server message
-
         switch(subcommand) {    
-	case 'end' :
-	    // Redirect to exit survey
-	    console.log("received end message...")
-	    var URL = 'http://projects.csail.mit.edu/ci/turk/forms/end.html?id=' + my_id;
-	    window.location.replace(URL); break;
+        case 'end' :
+	       // Redirect to exit survey
+          console.log("received end message...")
+          var URL = 'http://projects.csail.mit.edu/ci/turk/forms/end.html?id=' + my_id;
+          window.location.replace(URL); break;
         case 'alert' : // Not in database, so you can't play...
             alert('You did not enter an ID'); 
             window.location.replace('http://nodejs.org'); break;
@@ -334,13 +325,27 @@ window.onload = function(){
 // Associates callback functions corresponding to different socket messages
 client_connect_to_server = function(game) {
     //Store a local reference to our connection to the server
+
     game.socket = io.connect();
+
+    $('form').submit(function(){
+        var msg = 'chatMessage.' + $('#chatbox').val();
+        game.socket.send(msg);
+        $('#chatbox').val('');
+        return false;
+    });
+    game.socket.on('chatMessage', function(data){
+        $('#messages').append($('<li>').text(data.user + ":" + data.msg));
+        $('#messages').stop().animate({
+            scrollTop: $("#messages")[0].scrollHeight
+        }, 800);
+    })
+
 
     //When we connect, we are not 'connected' until we have a server id
     //and are placed in a game by the server. The server sends us a message for that.
-    game.socket.on('connect', function(){
-//        game.state = 'connecting';
-    }.bind(game));
+    game.socket.on('connect', function(){}.bind(game));
+
 
     game.socket.on('ping', function(data){
 	    game.socket.send('pong.' + data.sendTime + "." + data.tick_num)})
