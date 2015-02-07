@@ -335,7 +335,8 @@ client_connect_to_server = function(game) {
         return false;
     });
     game.socket.on('chatMessage', function(data){
-        $('#messages').append($('<li>').text(data.user + ":" + data.msg));
+        var source = data.user === my_id ? "You" : "Your partner"
+        $('#messages').append($('<li>').text(source + ":" + data.msg));
         $('#messages').stop().animate({
             scrollTop: $("#messages")[0].scrollHeight
         }, 800);

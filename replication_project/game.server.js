@@ -48,9 +48,8 @@ game_server.server_onMessage = function(client,message) {
         target.angle = message_parts[1];
     } else if (message_type == 'chatMessage') {
         var msg = message_parts[1].replace(/-/g,'.')
-        console.log(target + "sent message:" + msg)
         _.map(all, function(p){
-            p.player.instance.emit( 'chatMessage', {user: target.id, msg: msg})})
+            p.player.instance.emit( 'chatMessage', {user: client.userid, msg: msg})})
     } else if (message_type == 's') {
         target.speed = message_parts[1].replace(/-/g,'.');;
     } else if (message_type == "h") { // Receive message when browser focus shifts
