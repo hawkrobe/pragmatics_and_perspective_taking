@@ -259,31 +259,31 @@ game_core.prototype.server_update_physics = function() {
 // Every second, we print out a bunch of information to a file in a
 // "data" directory. We keep EVERYTHING so that we
 // can analyze the data to an arbitrary precision later on.
-game_core.prototype.writeData = function() {
-    var local_game = this;
-    _.map(local_game.get_active_players(), function(p) {
-	var player_angle = p.player.angle;
-	if (player_angle < 0) 
-	    player_angle = parseInt(player_angle, 10) + 360;
-	//also, keyboard inputs,  list of players in visibility radius?
-	var line = String(p.id) + ',';
-	line += String(local_game.game_clock) + ',';
-	line += p.player.visible + ',';
-	line += p.player.pos.x +',';
-	line += p.player.pos.y +',';
-	line += p.player.speed +',';
-	line += player_angle +',';
-	line += p.player.curr_background +',';
-	line += p.player.total_points.fixed(2) ;
-	if(local_game.game_started) {
-	    local_game.gameDataStream.write(String(line) + "\n",
-					    function (err) {if(err) throw err;});
-	} else {
-	    local_game.waitingDataStream.write(String(line) + "\n",
-					    function (err) {if(err) throw err;});
-	}
-    })
-};
+// game_core.prototype.writeData = function() {
+//     var local_game = this;
+//     _.map(local_game.get_active_players(), function(p) {
+// 	var player_angle = p.player.angle;
+// 	if (player_angle < 0) 
+// 	    player_angle = parseInt(player_angle, 10) + 360;
+// 	//also, keyboard inputs,  list of players in visibility radius?
+// 	var line = String(p.id) + ',';
+// 	line += String(local_game.game_clock) + ',';
+// 	line += p.player.visible + ',';
+// 	line += p.player.pos.x +',';
+// 	line += p.player.pos.y +',';
+// 	line += p.player.speed +',';
+// 	line += player_angle +',';
+// 	line += p.player.curr_background +',';
+// 	line += p.player.total_points.fixed(2) ;
+// 	if(local_game.game_started) {
+// 	    local_game.gameDataStream.write(String(line) + "\n",
+// 					    function (err) {if(err) throw err;});
+// 	} else {
+// 	    local_game.waitingDataStream.write(String(line) + "\n",
+// 					    function (err) {if(err) throw err;});
+// 	}
+//     })
+// };
 
 // This is a really important function -- it gets called when a round
 // has been completed, and updates the database with how much money
@@ -426,7 +426,7 @@ game_core.prototype.create_physics_simulation = function() {
 	}
 	if (this.server){
             this.server_send_update();
-            this.writeData();
+//            this.writeData();
 	}
 	
 	local_game.game_clock += 1;
@@ -443,51 +443,9 @@ game_core.prototype.create_physics_simulation = function() {
 };
 
 game_core.prototype.update_physics = function() {
-    if(this.server) {
-        this.server_update_physics();
-	var t = 0;
-        // start reading csv and updating background once game starts
-	if(this.game_started && this.game_clock < this.game_length) {
-	    t = this.game_clock;
-	}
-	if(t % 1 == 0) {
-            var local_game = this;
-	    var this_file = this.noise_location+'t'+t+'.csv'
-            local_game.fs.open(this_file,
-			       'r', function(err, fd) {
-				   var players = local_game.get_active_players()
-				   for (i=0; i < players.length; i++) {
-				       var p = players[i];
-				       var pos = null
-				       if(p)
-					   pos = p.player.pos;
-				       
-				       if(pos) {
-					   var loc = (280*5 + 1)*Math.round(pos.x) + Math.round(pos.y)*5;
-					   var buf = new Buffer(p.id.length + 4)
-					   buf.write(p.id)
-					   local_game.fs.read(fd, buf, p.id.length, 4, loc, 
-							      function(err, bytesRead, buffer) {
-								  var buf_string = buffer.toString('utf8')
-								  var pid = buf_string.slice(0,p.id.length)
-								  var val = buf_string.slice(p.id.length)
-								  if(err) 
-								      console.log('update_physics: ' + err + ' pos.x: ' + pos.x + ' pos.y: ' + pos.y + ' loc: ' + loc)
-								  else {
-								      var player = local_game.get_player(pid)
-								      if(player) {
-									  player.curr_background = 1 - val
-								      }
-								  }
-							      });
-				       }
-				   }
-				   local_game.fs.close(fd, function(){})
-				   
-			       })
-	}
-	
-    };
+  if(this.server) {
+    this.server_update_physics();
+  };
 }
 
 //Prevents people from leaving the arena

@@ -53,13 +53,13 @@ game_server.server_onMessage = function(client,message) {
     } else if (message_type == 'pong') {
 	var latency = (Date.now() - message_parts[1])/2;
 	target.latency = latency;
-	if(client.game.gamecore.game_started) {
-	    client.game.gamecore.latencyStream.write(String(client.userid)+","+message_parts[2]+","+latency+"\n",
-						     function(err) { if(err) throw err; });
-	} else {
-	    client.game.gamecore.waitingLatencyStream.write(String(client.userid)+","+message_parts[2]+","+latency+"\n",
-						     function(err) { if(err) throw err; });
-	}
+	// if(client.game.gamecore.game_started) {
+	//     client.game.gamecore.latencyStream.write(String(client.userid)+","+message_parts[2]+","+latency+"\n",
+	// 					     function(err) { if(err) throw err; });
+	// } else {
+	//     client.game.gamecore.waitingLatencyStream.write(String(client.userid)+","+message_parts[2]+","+latency+"\n",
+	// 					     function(err) { if(err) throw err; });
+	// }
     }
 };
 
@@ -154,15 +154,15 @@ game_server.createGame = function(player) {
     game.gamecore.noise_location = noise_location
 
     // Set up the filesystem variable we'll use later, and write headers
-    var game_f = "data/waiting_games/" + name + ".csv"
-    var latency_f = "data/waiting_latencies/" + name + ".csv"
+    // var game_f = "data/waiting_games/" + name + ".csv"
+    // var latency_f = "data/waiting_latencies/" + name + ".csv"
     
-    game.gamecore.fs = fs;
+    // game.gamecore.fs = fs;
     
-    fs.writeFile(game_f, "pid,tick,active,x_pos,y_pos,velocity,angle,bg_val,total_points\n", function (err) {if(err) throw err;})
-    game.gamecore.waitingDataStream = fs.createWriteStream(game_f, {'flags' : 'a'});
-    fs.writeFile(latency_f, "pid,tick,latency\n", function (err) {if(err) throw err;})
-    game.gamecore.waitingLatencyStream = fs.createWriteStream(latency_f, {'flags' : 'a'});
+    // fs.writeFile(game_f, "pid,tick,active,x_pos,y_pos,velocity,angle,bg_val,total_points\n", function (err) {if(err) throw err;})
+    // game.gamecore.waitingDataStream = fs.createWriteStream(game_f, {'flags' : 'a'});
+    // fs.writeFile(latency_f, "pid,tick,latency\n", function (err) {if(err) throw err;})
+    // game.gamecore.waitingLatencyStream = fs.createWriteStream(latency_f, {'flags' : 'a'});
     
     // tell the player that they have joined a game
     // The client will parse this message in the "client_onMessage" function
@@ -270,10 +270,10 @@ game_server.startGame = function(game) {
     var game_f = "data/games/" + name + ".csv"
     var latency_f = "data/latencies/" + name + ".csv"
     
-    fs.writeFile(game_f, "pid,tick,active,x_pos,y_pos,velocity,angle,bg_val,total_points\n", function (err) {if(err) throw err;})
-    game.gamecore.gameDataStream = fs.createWriteStream(game_f, {'flags' : 'a'});
-    fs.writeFile(latency_f, "pid,tick,latency\n", function (err) {if(err) throw err;})
-    game.gamecore.latencyStream = fs.createWriteStream(latency_f, {'flags' : 'a'});
+    // fs.writeFile(game_f, "pid,tick,active,x_pos,y_pos,velocity,angle,bg_val,total_points\n", function (err) {if(err) throw err;})
+    // game.gamecore.gameDataStream = fs.createWriteStream(game_f, {'flags' : 'a'});
+    // fs.writeFile(latency_f, "pid,tick,latency\n", function (err) {if(err) throw err;})
+    // game.gamecore.latencyStream = fs.createWriteStream(latency_f, {'flags' : 'a'});
 
     console.log('game ' + game.id + ' starting with ' + game.player_count + ' players...')
     
