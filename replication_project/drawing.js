@@ -1,3 +1,5 @@
+
+
 // Draw players as triangles using HTML5 canvas
 draw_player = function(game, player){
     // Draw avatar as triangle

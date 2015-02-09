@@ -228,42 +228,45 @@ client_update = function() {
 
 };
 
-var timeRemaining = function(remaining, limit) {
-    var time_remaining = limit - Math.floor(remaining / (1000*60));
-    if(time_remaining > 1) {
-	return {t: time_remaining, unit: 'minutes', actual: (limit - remaining/1000)}
-    } else {
-	time_remaining = limit - Math.floor(remaining / (1000 * 60)*6)/6
-	time_remaining = Math.max(Math.floor(time_remaining*6)*10, 10)
-	return {t: time_remaining, unit: 'seconds', actual: (limit - remaining/1000)}
-    }
+function mouseDownListener(evt) {
+    var i;
+    //We are going to pay attention to the layering order of the objects so that if a mouse down occurs over more than object,
+    //only the topmost one will be dragged.
+    var highestIndex = -1;
+        
+    //getting mouse position correctly, being mindful of resizing that may have occured in the browser:
+    var bRect = game.viewport.getBoundingClientRect();
+    mouseX = (evt.clientX - bRect.left)*(game.viewport.width/bRect.width);
+    mouseY = (evt.clientY - bRect.top)*(game.viewport.height/bRect.height);
 
-}
-
-var percentColors = [
-//    { pct: 0.0, color: { r: 0xff, g: 0x00, b: 0 } },
-    { pct: 0.0, color: { r: 0xff, g: 0xff, b: 0xff } },
-    { pct: 1.0, color: { r: 0x00, g: 0xff, b: 0 } } ];
- 
-var getColorForPercentage = function(pct) {
-    for (var i = 0; i < percentColors.length; i++) {
-        if (pct <= percentColors[i].pct) {
-            var lower = percentColors[i - 1] || { pct: 0.1, color: { r: 0x0, g: 0x00, b: 0 } };
-            var upper = percentColors[i];
-            var range = upper.pct - lower.pct;
-            var rangePct = (pct - lower.pct) / range;
-            var pctLower = 1 - rangePct;
-            var pctUpper = rangePct;
-            var color = {
-                r: Math.floor(lower.color.r * pctLower + upper.color.r * pctUpper),
-                g: Math.floor(lower.color.g * pctLower + upper.color.g * pctUpper),
-                b: Math.floor(lower.color.b * pctLower + upper.color.b * pctUpper)
-            };
-            return 'rgb(' + [color.r, color.g, color.b].join(',') + ')';
+    //find which shape was clicked
+    for (i=0; i < numObjects; i++) {
+        if  (hitTest(objects[i], mouseX, mouseY)) {
+            dragging = true;
+            if (i > highestIndex) {
+                //We will pay attention to the point on the object where the mouse is "holding" the object:
+                dragHoldX = mouseX - objects[i].x;
+                dragHoldY = mouseY - objects[i].y;
+                highestIndex = i;
+                dragIndex = i;
+            }
         }
     }
-}
+    if (dragging) {
+        window.addEventListener("mousemove", mouseMoveListener, false);
+    }
+    game.viewport.removeEventListener("mousedown", mouseDownListener, false);
+    window.addEventListener("mouseup", mouseUpListener, false);
 
+    //code below prevents the mouse down from having an effect on the main browser window:
+    if (evt.preventDefault) {
+        evt.preventDefault();
+    } //standard
+    else if (evt.returnValue) {
+        evt.returnValue = false;
+    } //older IE
+    return false;
+}
 /*
   The following code should NOT need to be changed
 */
@@ -284,33 +287,7 @@ window.onload = function(){
     game.viewport.width = game.world.width;
     game.viewport.height = game.world.height;
 
-    // Keep track of which keys are being pressed. Keys fire continuously while held.
-    KeyboardJS.on('left', 
-	function(){ // Only notify on FIRST press
-	    if(!_.contains(active_keys, 'left')) {
-		active_keys.push('left');
-	    }
-	},
-	function(){ // Only notify on first release
-	    if(_.contains(active_keys, 'left')) {
-		game.socket.send('a.' + game.get_player(my_id).angle)
-	    }
-	    active_keys = _.without(active_keys, 'left');});
-    KeyboardJS.on('right', 
-        function(){ // Only notify on first press
-	    if(!_.contains(active_keys, 'right')) {
-		active_keys.push('right');
-	    }
-	}, 
-        function(){ // Only notify on first release
-	    if(_.contains(active_keys, 'right')) {
-		game.socket.send('a.' + game.get_player(my_id).angle)
-	    }
-	    active_keys = _.without(active_keys, 'right');})
-    KeyboardJS.on('space', 
-        function(){speed_change = "up"}, 
-        function(){speed_change = "down"})
-
+    theCanvas.addEventListener("mousedown", mouseDownListener, false);
 
     //Fetch the rendering contexts
     game.ctx = game.viewport.getContext('2d');
@@ -325,18 +302,21 @@ window.onload = function(){
 // Associates callback functions corresponding to different socket messages
 client_connect_to_server = function(game) {
     //Store a local reference to our connection to the server
-
     game.socket = io.connect();
 
+    // Tell server when client types something in the chatbox
     $('form').submit(function(){
         var msg = 'chatMessage.' + $('#chatbox').val();
         game.socket.send(msg);
         $('#chatbox').val('');
         return false;
     });
+
+    // Update messages log when other players send chat
     game.socket.on('chatMessage', function(data){
         var source = data.user === my_id ? "You" : "Your partner"
-        $('#messages').append($('<li>').text(source + ":" + data.msg));
+        var col = source === "You" ? "#363636" : "#707070"
+        $('#messages').append($('<li style="padding: 5px 10px; background: ' + col + '">').text(source + ": " + data.msg));
         $('#messages').stop().animate({
             scrollTop: $("#messages")[0].scrollHeight
         }, 800);

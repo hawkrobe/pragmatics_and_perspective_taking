@@ -41,6 +41,8 @@ html , body {
 	font-size: 200%;
 	border: solid 1px #999; 
 	overflow-y: scroll;'
+	list-style-type: none; 
+	padding: 0;
 }
 
 #chatarea form {

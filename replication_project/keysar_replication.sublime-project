@@ -1,0 +1,25 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"node",
+				"app.js"
+			],
+			"name": "node",
+			"path": "/usr/local/bin/"
+		}
+	],
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/rxdh/Downloads/SimpleDragging"
+		}
+	]
+}
