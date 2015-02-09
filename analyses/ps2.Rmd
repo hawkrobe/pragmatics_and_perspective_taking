@@ -145,5 +145,60 @@ d$presentation.time <- factor(d$presentation.time)
 levels(d$operand) <- c("addition","subtraction")
 ```
 
-Data Analysis
--------------
+Data Analysis Preliminaries
+---------------------------
+
+Examine the basic properties of the dataset. First, take a histogram.
+
+```{r}
+```
+
+Challenge question: what is the sample rate of the input device they are using to gather RTs?
+
+```{r}
+```
+
+Sklar et al. did two manipulation checks. Subjective - asking participants whether they saw the primes - and objective - asking them to report the parity of the primes (even or odd) to find out if they could actually read the primes when they tried. Examine both the unconscious and conscious manipulation checks (this information is stored in subinfo). What do you see? Are they related to one another?
+
+```{r} 
+```
+
+OK, let's turn back to the measure and implement Sklar et al.'s exclusion criterion. You need to have said you couldn't see (subjective test) and also be not significantly above chance on the objective test (< .6 correct). Call your new data frame `ds`.
+
+```{r}
+```
+
+Sklar et al.'s analysis
+-----------------------
+
+Sklar et al. show a plot of a "facilitation effect" - the time to respond to incongruent primes minus the time to respond to congruent primes. They then show plot this difference score for the subtraction condition and for the two presentation times they tested. Try to reproduce this analysis.
+
+HINT: first take averages within subjects, then compute your error bars across participants, using the `sem` function (defined above). 
+
+```{r}
+```
+
+Now plot this summary, giving more or less the bar plot that Sklar et al. gave (though I would keep operation as a variable here. Make sure you get some error bars on there (e.g. `geom_errorbar` or `geom_linerange`). 
+
+```{r}
+```
+
+What do you see here? How close is it to what Sklar et al. report? Do the error bars match? How do you interpret these data? 
+
+Challenge problem: verify Sklar et al.'s claim about the relationship between RT and the objective manipulation check.
+
+```{r}
+```
+
+Your own analysis
+-----------------
+
+Show us what you would do with these data, operating from first principles. What's the fairest plot showing a test of Sklar et al.'s original hypothesis that people can do arithmetic "non-consciously"?
+
+```{r}
+```
+
+Challenge problem: Do you find any statistical support for Sklar et al.'s findings?
+
+```{r}
+```
