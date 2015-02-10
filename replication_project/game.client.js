@@ -115,64 +115,6 @@ client_onMessage = function(data) {
     } 
 }; 
 
-// Restarts things on the client side. Necessary for iterated games.
-client_newgame = function() {
-    // Initiate countdown (with timeouts)
-    //game.get_player(my_id).angle = null;
-    started = true;
-    client_countdown();
-}; 
-
-client_countdown = function() {
-    var player = game.get_player(my_id);
-    player.message = 'Begin in 3...';
-    setTimeout(function(){player.message = 'Begin in 2...';}, 
-               1000);
-    setTimeout(function(){player.message = 'Begin in 1...';}, 
-               2000);
-    setTimeout(function(){
-        player.message = 'GO!';     
-        game.start_time = new Date();}, 
-	3000);
-    setTimeout(function(){player.message = '';}, 
-               4000);
-}
-
-client_update = function() {
-    var player = game.get_player(my_id);
-
-    //Clear the screen area
-    game.ctx.clearRect(0,0,485,280);
-
-    // Alter speeds
-    if (speed_change != "none") {
-        player.speed = speed_change == "up" ? game.max_speed : game.min_speed;
-        game.socket.send("s." + String(player.speed).replace(/\./g,'-'));
-        speed_change = "none"
-    }
-
-    // Turn if key is still being held... Don't do anything if both are held
-    if (active_keys.length == 1) {
-        if(_.contains(active_keys, 'right')) right_turn();
-        if(_.contains(active_keys, 'left')) left_turn() ;
-    }
-
-    //Draw opponent next 
-    _.map(game.get_others(my_id), function(p){
-        draw_player(game, p.player)
-	draw_label(game, p.player, "Player " + p.id.slice(0,4))
-    })
-    
-    //And then we draw ourself so we're always in front
-    if(player.pos) {
-	draw_player(game, player)
-	draw_label(game, player, "YOU");
-    }
-
-};
-
-
-
 // When loading the page, we store references to our
 // drawing canvases, and initiate a game instance.
 window.onload = function(){

@@ -167,6 +167,8 @@ game_server.createGame = function(player) {
     
     var game_server = this
    
+    game.gamecore.server_send_update()
+
     //return it
     return game;
 }; 
