@@ -19,10 +19,7 @@ var game = {};
 var my_id = null;
 // Keeps track of whether player is paying attention...
 var visible;
-var active_keys = []; 
-var speed_change = "none";
-var started = false;
-var ending = false;
+var dragging;
 
 // what happens when you press 'left'?
 left_turn = function() {
@@ -66,30 +63,15 @@ client_onserverupdate_received = function(data){
         _.map(_.zip(data.players, game.players),
             function(z){
                 z[1].id = z[0].id
-                if (z[0].player == null) {
-                    z[1].player = null
-                } else {
-                    var s_player = z[0].player
-                    var l_player = z[1].player
-                    if(z[0].id != my_id || l_player.angle == null) 
-                       l_player.angle = s_player.angle
-                   l_player.curr_background = s_player.cbg
-                   l_player.total_points = s_player.tot
-                   l_player.pos = game.pos(s_player.pos)
-                   l_player.speed = s_player.speed
-                   l_player.onwall = s_player.onwall
-                   l_player.kicked = s_player.kicked
-                   l_player.inactive = s_player.inactive
-                   l_player.lagging = s_player.lagging
-                }
             })
     }
-    
+    console.log(data.objects)
+    game.objects = data.objects;
     game.game_started = data.gs;
     game.players_threshold = data.pt;
     game.player_count = data.pc;
     game.waiting_remaining = data.wr;
-
+    drawScreen(game)
 }; 
 
 // This is where clients parse socket.io messages from the server. If
@@ -180,45 +162,6 @@ client_update = function() {
         draw_player(game, p.player)
 	draw_label(game, p.player, "Player " + p.id.slice(0,4))
     })
-
-    // Draw points scoreboard 
-    $("#cumulative_bonus").html("Total bonus so far: $" + (player.total_points).fixed(2));
-
-    onwall = player.onwall;
-    if(onwall) {
-	$("#curr_bonus").html("Current Score: <span style='color: red;'>0%</span>");
-    } else {
-	if(game.game_started) {
-	    $("#curr_bonus").html("Current Score: <span style='color: " 
-				  + getColorForPercentage(player.curr_background) 
-				  +";'>" + Math.floor(player.curr_background*100) + "%</span>");
-	} else {
-	    $("#curr_bonus").html("Current Score: <span style='color: " 
-				  + getColorForPercentage(0) 
-				  +";'>---</span>");	
-	}
-    }
-    
-    if(!started) {
-	var left = timeRemaining(game.waiting_remaining, game.waiting_room_limit)
-	var diff = game.players_threshold - game.player_count
-	//game.get_player(my_id).message = 'Waiting for ' + diff + ' more players or ' + left['t'] + ' more ' + left['unit'] + '.';
-    }
-    
-    if(game.game_started) {
-	var left = new Date() - game.start_time;
-	if((game.round_length*60 - Math.floor(left/1000)) < 6) {
-	    var remainder = game.round_length*60 - Math.floor(left/1000);
-	    if(remainder < 0) 
-		remainder = 0
-	    player.message = 'Ending in ' + remainder;
-	}
-	left = timeRemaining(left, game.round_length);
-	// Draw time remaining 
-	$("#time").html("Time remaining: " + left['t'] + " " + left['unit']);
-    } else {
-	$("#time").html('You are in the waiting room.');
-    }
     
     //And then we draw ourself so we're always in front
     if(player.pos) {
@@ -228,48 +171,7 @@ client_update = function() {
 
 };
 
-function mouseDownListener(evt) {
-    var i;
-    //We are going to pay attention to the layering order of the objects so that if a mouse down occurs over more than object,
-    //only the topmost one will be dragged.
-    var highestIndex = -1;
-        
-    //getting mouse position correctly, being mindful of resizing that may have occured in the browser:
-    var bRect = game.viewport.getBoundingClientRect();
-    mouseX = (evt.clientX - bRect.left)*(game.viewport.width/bRect.width);
-    mouseY = (evt.clientY - bRect.top)*(game.viewport.height/bRect.height);
 
-    //find which shape was clicked
-    for (i=0; i < numObjects; i++) {
-        if  (hitTest(objects[i], mouseX, mouseY)) {
-            dragging = true;
-            if (i > highestIndex) {
-                //We will pay attention to the point on the object where the mouse is "holding" the object:
-                dragHoldX = mouseX - objects[i].x;
-                dragHoldY = mouseY - objects[i].y;
-                highestIndex = i;
-                dragIndex = i;
-            }
-        }
-    }
-    if (dragging) {
-        window.addEventListener("mousemove", mouseMoveListener, false);
-    }
-    game.viewport.removeEventListener("mousedown", mouseDownListener, false);
-    window.addEventListener("mouseup", mouseUpListener, false);
-
-    //code below prevents the mouse down from having an effect on the main browser window:
-    if (evt.preventDefault) {
-        evt.preventDefault();
-    } //standard
-    else if (evt.returnValue) {
-        evt.returnValue = false;
-    } //older IE
-    return false;
-}
-/*
-  The following code should NOT need to be changed
-*/
 
 // When loading the page, we store references to our
 // drawing canvases, and initiate a game instance.
@@ -287,7 +189,7 @@ window.onload = function(){
     game.viewport.width = game.world.width;
     game.viewport.height = game.world.height;
 
-    theCanvas.addEventListener("mousedown", mouseDownListener, false);
+    game.viewport.addEventListener("mousedown", mouseDownListener, false);
 
     //Fetch the rendering contexts
     game.ctx = game.viewport.getContext('2d');
@@ -295,8 +197,7 @@ window.onload = function(){
     //Set the draw style for the font
     game.ctx.font = '11px "Helvetica"';
 
-    //Finally, start the loop
-    game.update();
+    drawScreen(game);
 };
 
 // Associates callback functions corresponding to different socket messages
@@ -322,14 +223,15 @@ client_connect_to_server = function(game) {
         }, 800);
     })
 
-
+    game.socket.on('objMove', function(data){
+        game.objects[data.i].x = data.x;
+        game.objects[data.i].y = data.y;
+        drawScreen(game)
+    })
     //When we connect, we are not 'connected' until we have a server id
     //and are placed in a game by the server. The server sends us a message for that.
     game.socket.on('connect', function(){}.bind(game));
 
-
-    game.socket.on('ping', function(data){
-	    game.socket.send('pong.' + data.sendTime + "." + data.tick_num)})
     //Sent when we are disconnected (network, server down, etc)
     game.socket.on('disconnect', client_ondisconnect.bind(game));
     //Sent each tick of the server simulation. This is our authoritive update
@@ -346,7 +248,6 @@ client_onconnected = function(data) {
     // so that we remember who we are.  
     my_id = data.id;
     game.players[0].id = my_id;
-    game.get_player(my_id).online = true;
 };
 
 client_onjoingame = function(num_players) {
@@ -358,6 +259,96 @@ client_onjoingame = function(num_players) {
     game.get_player(my_id).speed = game.min_speed;
     game.get_player(my_id).message = 'Please remain active while you wait.';
 }; 
+
+/*
+MOUSE EVENT LISTENERS
+*/
+
+function mouseDownListener(evt) {
+    var i;
+    //We are going to pay attention to the layering order of the objects so that if a mouse down occurs over more than object,
+    //only the topmost one will be dragged.
+    var highestIndex = -1;
+    
+    //getting mouse position correctly, being mindful of resizing that may have occured in the browser:
+    var bRect = game.viewport.getBoundingClientRect();
+    mouseX = (evt.clientX - bRect.left)*(game.viewport.width/bRect.width);
+    mouseY = (evt.clientY - bRect.top)*(game.viewport.height/bRect.height);
+
+    console.log(game.numObjects)
+    //find which shape was clicked
+    for (i=0; i < game.numObjects; i++) {
+        if  (hitTest(game.objects[i], mouseX, mouseY)) {
+            dragging = true;
+            if (i > highestIndex) {
+                //We will pay attention to the point on the object where the mouse is "holding" the object:
+                dragHoldX = mouseX - game.objects[i].x;
+                dragHoldY = mouseY - game.objects[i].y;
+                highestIndex = i;
+                dragIndex = i;
+            }
+        }
+    }
+    if (dragging) {
+        window.addEventListener("mousemove", mouseMoveListener, false);
+    }
+    game.viewport.removeEventListener("mousedown", mouseDownListener, false);
+    window.addEventListener("mouseup", mouseUpListener, false);
+
+    //code below prevents the mouse down from having an effect on the main browser window:
+    if (evt.preventDefault) {
+        evt.preventDefault();
+    } //standard
+    else if (evt.returnValue) {
+        evt.returnValue = false;
+    } //older IE
+    return false;
+}
+
+function mouseUpListener(evt) {
+    game.viewport.addEventListener("mousedown", mouseDownListener, false);
+    window.removeEventListener("mouseup", mouseUpListener, false);
+    if (dragging) {
+        dragging = false;
+        window.removeEventListener("mousemove", mouseMoveListener, false);
+    }
+}
+
+function mouseMoveListener(evt) {
+    var posX;
+    var posY;
+    var shapeRad = game.objects[dragIndex].rad;
+    var minX = shapeRad;
+    var maxX = game.viewport.width - shapeRad;
+    var minY = shapeRad;
+    var maxY = game.viewport.height - shapeRad;
+    //getting mouse position correctly 
+    var bRect = game.viewport.getBoundingClientRect();
+    mouseX = (evt.clientX - bRect.left)*(game.viewport.width/bRect.width);
+    mouseY = (evt.clientY - bRect.top)*(game.viewport.height/bRect.height);
+
+    //clamp x and y positions to prevent object from dragging outside of canvas
+    posX = mouseX - dragHoldX;
+    posX = (posX < minX) ? minX : ((posX > maxX) ? maxX : posX);
+    posY = mouseY - dragHoldY;
+    posY = (posY < minY) ? minY : ((posY > maxY) ? maxY : posY);
+
+    game.objects[dragIndex].x = Math.round(posX);
+    game.objects[dragIndex].y = Math.round(posY);
+    game.socket.send("objMove." + dragIndex + "." + Math.round(posX) + "." + Math.round(posY))
+    drawScreen(game);
+}
+
+function hitTest(shape,mx,my) {
+
+    var dx;
+    var dy;
+    dx = mx - shape.x;
+    dy = my - shape.y;
+
+    //a "hit" will be registered if the distance away from the center is less than the radius of the circular object        
+    return (dx*dx + dy*dy < shape.rad*shape.rad);
+    }
 
 // Automatically registers whether user has switched tabs...
 (function() {
@@ -396,28 +387,3 @@ function onchange (evt) {
     game.socket.send("h." + document.body.className);
 };
 
-// Flashes title to notify user that game has started
-(function () {
-
-    var original = document.title;
-    var timeout;
-
-    window.flashTitle = function (newMsg, howManyTimes) {
-        function step() {
-            document.title = (document.title == original) ? newMsg : original;
-            if (visible == "hidden") {
-                timeout = setTimeout(step, 500);
-            } else {
-                document.title = original;
-            }
-        };
-        cancelFlashTitle(timeout);
-        step();
-    };
-
-window.cancelFlashTitle = function (timeout) {
-    clearTimeout(timeout);
-    document.title = original;
-};
-
-}());

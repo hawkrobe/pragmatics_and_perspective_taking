@@ -39,8 +39,31 @@ var game_core = function(game_instance){
     this.world = {width : 500, height : 500};  // 160cm * 3
     this.numObjects = 2;
     this.objects = [];
-    this.makeShapes(this.numObjects)
     this.num_rounds = 8;
+
+    if(this.server) {
+        this.makeShapes(this.numObjects)
+        this.players = [{
+            id: this.instance.player_instances[0].id, 
+            player: new game_player(this,this.instance.player_instances[0].player)
+        }];
+    } else {
+        this.players = [{
+            id: null, 
+            player: new game_player(this)
+        }]
+    }
+}; 
+
+var game_player = function( game_instance, player_instance) {
+    //Store the instance, if any
+    this.instance = player_instance;
+    this.game = game_instance;
+    this.role = ''
+    //Set up initial values for our state information
+    this.message = '';
+    this.id = '';
+
 }; 
 
 /* The player class
@@ -52,9 +75,27 @@ var game_core = function(game_instance){
 // it can use it in other files (specifically, game.server.js)
 if('undefined' != typeof global) {
     module.exports = global.game_core = game_core;
+    module.exports = global.game_player = game_player;
 }
 
 // HELPER FUNCTIONS
+
+// Method to easily look up player 
+game_core.prototype.get_player = function(id) {
+    var result = _.find(this.players, function(e){ return e.id == id; });
+    return result.player
+};
+
+// Method to get list of players that aren't the given id
+game_core.prototype.get_others = function(id) {
+    return _.without(_.map(_.filter(this.players, function(e){return e.id != id}), 
+        function(p){return p.player ? p : null}), null)
+};
+
+game_core.prototype.get_active_players = function() {
+    return _.without(_.map(this.players, function(p){
+        return p.player ? p : null}), null)
+};
 
 game_core.prototype.makeShapes = function (numObjects) {
     var i;
@@ -116,12 +157,6 @@ game_core.prototype.makeShapes = function (numObjects) {
 game_core.prototype.server_newgame = function() {
     var local_gamecore = this;
     
-    // Don't want players moving during countdown
-    //_.map(local_gamecore.get_active_players(), function(p) {p.player.speed = 0;})
-        
-    //Reset positions
-    //this.server_reset_positions();
-
     //Tell clients about it so they can call their newgame procedure (which does countdown)
     _.map(local_gamecore.get_active_players(), function(p) {
 	p.player.instance.send('s.begin_game.')})
@@ -143,6 +178,29 @@ game_core.prototype.server_reset_positions = function() {
         p.player.angle = get_random_angle(local_gamecore.world);
     })
 }; 
+
+game_core.prototype.server_send_update = function(){
+    //Make a snapshot of the current state, for updating the clients
+    var local_game = this;
+    
+    // Add info about all players
+    var player_packet = _.map(local_game.players, function(p){
+        return {id: p.id,
+            player: null}
+        })
+    var state = {
+            gs : this.game_started,                      // true when game's started
+            pt : this.players_threshold,
+            pc : this.player_count,
+        };
+    _.extend(state, {players: player_packet})
+    _.extend(state, {objects: this.objects})
+    //Send the snapshot to the players
+    this.state = state;
+    _.map(local_game.get_active_players(), function(p){
+        p.player.instance.emit( 'onserverupdate', state)})
+};
+
 
 // MATH FUNCTIONS
 

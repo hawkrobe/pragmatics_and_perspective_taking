@@ -35,7 +35,6 @@ counter = 0
 game_server.server_onMessage = function(client,message) {
     //Cut the message up into sub components
     var message_parts = message.split('.');
-
     //The first is always the type of message
     var message_type = message_parts[0];
     //console.log("received message: " + message)
@@ -43,9 +42,14 @@ game_server.server_onMessage = function(client,message) {
     var all = client.game.gamecore.get_active_players();
     var target = client.game.gamecore.get_player(client.userid);
     var others = client.game.gamecore.get_others(client.userid);
-    if(message_type == 'a') {    // Client is changing angle
-        // Set their (server) angle 
-        target.angle = message_parts[1];
+    if(message_type == 'objMove') {    // Client is changing angle
+        console.log(message_parts)
+        var obj = client.game.gamecore.objects[message_parts[1]]
+        obj.x = parseInt(message_parts[2])
+        obj.y = parseInt(message_parts[3])
+        _.map(all, function(p) {
+            p.player.instance.emit( 'objMove', {i: message_parts[1], x: message_parts[2], y: message_parts[3]})
+        })
     } else if (message_type == 'chatMessage') {
         var msg = message_parts[1].replace(/-/g,'.')
         _.map(all, function(p){
@@ -54,17 +58,7 @@ game_server.server_onMessage = function(client,message) {
         target.speed = message_parts[1].replace(/-/g,'.');;
     } else if (message_type == "h") { // Receive message when browser focus shifts
         target.visible = message_parts[1];
-    } else if (message_type == 'pong') {
-	var latency = (Date.now() - message_parts[1])/2;
-	target.latency = latency;
-	// if(client.game.gamecore.game_started) {
-	//     client.game.gamecore.latencyStream.write(String(client.userid)+","+message_parts[2]+","+latency+"\n",
-	// 					     function(err) { if(err) throw err; });
-	// } else {
-	//     client.game.gamecore.waitingLatencyStream.write(String(client.userid)+","+message_parts[2]+","+latency+"\n",
-	// 					     function(err) { if(err) throw err; });
-	// }
-    }
+    } 
 };
 
 /* 
@@ -82,7 +76,7 @@ game_server.findGame = function(player) {
             if(!this.games.hasOwnProperty(gameid)) continue;
             var game = this.games[gameid];
             var gamecore = game.gamecore;
-            if(game.player_count < gamecore.players_threshold && !game.active && !game.holding) { 
+            if(game.player_count < gamecore.players_threshold) { 
                joined_a_game = true;
                 // player instances are array of actual client handles
                 game.player_instances.push({
@@ -102,14 +96,10 @@ game_server.findGame = function(player) {
                 player.send('s.join.' + gamecore.players.length)
 
                 // notify existing players that someone new is joining
-                _.map(gamecore.get_others(player.userid), function(p){p.player.instance.send( 's.add_player.' + player.userid)})
-		gamecore.player_count = game.player_count;
-                gamecore.server_send_update();
-                gamecore.update();
-		
-                if (game.player_count == gamecore.players_threshold) {
-                    this.holdGame(game)
-                }
+                _.map(gamecore.get_others(player.userid), 
+                    function(p){p.player.instance.send( 's.add_player.' + player.userid)})
+                gamecore.server_send_update()
+                gamecore.player_count = game.player_count;
             }
         }
         if(!joined_a_game) { // if we didn't join a game, we must create one
@@ -124,23 +114,18 @@ game_server.findGame = function(player) {
 
 // Will run when first player connects
 game_server.createGame = function(player) {
-    // Figure out variables
-    var thresholds = Array(5,5);
-    var players_threshold = thresholds[Math.floor(Math.random()*thresholds.length)];
-    //var noise_id = Math.floor(Math.random() * 4) + '-1en01'
-    var noise_id = '5-1en01'
-    var noise_location = '/home/rxdh/couzin_replication/light-fields/' + noise_id + '/'
+    var players_threshold = 2
 
     var d = new Date();
     var start_time = d.getFullYear() + '-' + d.getMonth() + 1 + '-' + d.getDate() + '-' + d.getHours() + '-' + d.getMinutes() + '-' + d.getSeconds() + '-' + d.getMilliseconds()
-    var id = utils.UUID();
+    var gameID = utils.UUID();
 
-    var name = start_time + '_' + players_threshold + '_' + noise_id + '_' + id;
+    var name = start_time + '_' + gameID;
     
     //Create a new game instance
     var game = {
 	//generate a new id for the game
-        id : id,           
+        id : gameID,           
 	//store list of players in the game
         player_instances: [{id: player.userid, player: player}],
 	//for simple checking of state
@@ -152,10 +137,9 @@ game_server.createGame = function(player) {
     game.gamecore = new game_core(game);
 
     // Tell the game about its own id
-    game.gamecore.game_id = id;
+    game.gamecore.game_id = gameID;
     game.gamecore.players_threshold = players_threshold
     game.gamecore.player_count = 1
-    game.gamecore.noise_location = noise_location
 
     // Set up the filesystem variable we'll use later, and write headers
     // var game_f = "data/waiting_games/" + name + ".csv"
@@ -171,35 +155,18 @@ game_server.createGame = function(player) {
     // tell the player that they have joined a game
     // The client will parse this message in the "client_onMessage" function
     // in game.client.js, which redirects to other functions based on the command
+
     player.game = game;
     player.send('s.join.' + game.gamecore.players.length)
     this.log('player ' + player.userid + ' created a game with id ' + player.game.id);
     //Start updating the game loop on the server
-    game.gamecore.update();
 
     // add to game collection
     this.games[ game.id ] = game;
     this.game_count++;
-    if(game.gamecore.players_threshold == 1) {
-	this.holdGame(game)
-    }
     
     var game_server = this
-
-    // schedule the game to stop receing new players
-    setTimeout(function() {
-	    if(!game.active) {
-		game_server.holdGame(game);
-	    }
-	}, game.gamecore.waiting_room_limit*60*1000*4/5.0)
-
-    // schedule the game to start to prevent players from waiting too long
-    setTimeout(function() {
-	    if(!game.active) {
-		game_server.startGame(game);
-	    }
-	}, game.gamecore.waiting_room_limit*60*1000)
-	    
+   
     //return it
     return game;
 }; 
@@ -222,12 +189,8 @@ game_server.endGame = function(gameid, userid) {
             if (!thegame.active) {
                 thegame.player_count--;
 		thegame.gamecore.player_count = thegame.player_count;
-                thegame.gamecore.server_send_update();
-                thegame.gamecore.update();
 	    }
         } else {
-            // If the game only has one player and they leave, remove it.
-            thegame.gamecore.stop_update();
             delete this.games[gameid];
             this.game_count--;
             this.log('game removed. there are now ' + this.game_count + ' games' );
@@ -237,39 +200,16 @@ game_server.endGame = function(gameid, userid) {
     }   
 }; 
 
-// When the threshold is exceeded or time has passed, stop receiving new players and schedule game start
-game_server.holdGame = function(game) {
-    game.holding = true;
-    setTimeout(function() {
-	if(!game.active) {
-	    game_server.startGame(game);
-	}
-    }, game.gamecore.waiting_room_limit*60*1000/5.0)
-};
     
 // When the threshold is exceeded, this gets called
 game_server.startGame = function(game) {
 
     game.active = true;
     
-    if(game.player_count == 5) { 
-	var noises = Array(1,2);
-	var noise_id = (counter % 2) + 1 + '-1en01'
-	counter += 1
-    } else if(game.player_count == 4) {
-	var noise_id = '0-1en01'
-    } else if(game.player_count == 3) {
-	var noise_id = '3-1en01'
-    } else {
-	var noise_id = Math.floor(Math.random() * 4) + '-1en01'
-    }
-    var noise_location = '/home/rxdh/couzin_replication/light-fields/' + noise_id + '/'
-    game.gamecore.noise_location = noise_location
-
     var d = new Date();
     var start_time = d.getFullYear() + '-' + d.getMonth() + 1 + '-' + d.getDate() + '-' + d.getHours() + '-' + d.getMinutes() + '-' + d.getSeconds() + '-' + d.getMilliseconds()
     
-    var name = start_time + '_' + game.player_count + '_' + noise_id + '_' + game.id;
+    var name = start_time + '_' + game.id;
     
     var game_f = "data/games/" + name + ".csv"
     var latency_f = "data/latencies/" + name + ".csv"
