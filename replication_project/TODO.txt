@@ -1,0 +1,21 @@
+[x] Real-time messaging
+	[x] chat box in focus
+	[x] message box that scrolls
+[x] Allow moving objects
+	[x] update across participants
+	[x] attach object locations to game
+[] separate out agent/director roles
+	[] give director the instruction prompt
+	    [] load in from external file 
+	    [] overlay arrows on director screen
+	    [] make interface for 'scripted' instructions
+	[] don't allow director to move objects
+	[] correct and record error if player makes one
+[] write data to file
+	[] time stamped messages to one file (when it happens)
+	[] mouse positions and object locations to another file (every 100ms or something)
+[] draw things 
+	[x] draw grid
+	[] indicate occluded cells in a salient way
+	[] draw objects from paper (once Keysar replies)
+	[] 
