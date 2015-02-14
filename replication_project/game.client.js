@@ -21,18 +21,6 @@ var my_id = null;
 var visible;
 var dragging;
 
-// what happens when you press 'left'?
-left_turn = function() {
-    var self = game.get_player(my_id);
-    self.angle = (Number(self.angle) - 5) % 360;
-};
-
-// what happens when you press 'left'?
-right_turn = function() {
-    var self = game.get_player(my_id);
-    self.angle = (Number(self.angle) + 5) % 360;
-};
-
 client_ondisconnect = function(data) {
     // Redirect to exit survey
     console.log("server booted")
@@ -72,6 +60,7 @@ client_onserverupdate_received = function(data){
     game.player_count = data.pc;
     game.waiting_remaining = data.wr;
     drawScreen(game)
+    drawGrid(game);
 }; 
 
 // This is where clients parse socket.io messages from the server. If
@@ -140,6 +129,8 @@ window.onload = function(){
     game.ctx.font = '11px "Helvetica"';
 
     drawScreen(game);
+    document.getElementById('chatbox').focus();
+
 };
 
 // Associates callback functions corresponding to different socket messages
@@ -170,6 +161,7 @@ client_connect_to_server = function(game) {
         game.objects[data.i].y = data.y;
         drawScreen(game)
     })
+
     //When we connect, we are not 'connected' until we have a server id
     //and are placed in a game by the server. The server sends us a message for that.
     game.socket.on('connect', function(){}.bind(game));
