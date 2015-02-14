@@ -120,7 +120,6 @@ window.onload = function(){
     game.viewport.width = game.world.width;
     game.viewport.height = game.world.height;
 
-    game.viewport.addEventListener("mousedown", mouseDownListener, false);
 
     //Fetch the rendering contexts
     game.ctx = game.viewport.getContext('2d');
@@ -191,6 +190,9 @@ client_onjoingame = function(num_players, role) {
     game.get_player(my_id).color = game.self_color;
     // Start 'em moving
     $('#header').append(role);
+    if(role === "agent")
+        game.viewport.addEventListener("mousedown", mouseDownListener, false);
+
     game.get_player(my_id).speed = game.min_speed;
     game.get_player(my_id).message = 'Please remain active while you wait.';
 }; 

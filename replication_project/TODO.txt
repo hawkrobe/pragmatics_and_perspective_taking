@@ -4,12 +4,12 @@
 [x] Allow moving objects
 	[x] update across participants
 	[x] attach object locations to game
-[] separate out agent/director roles
+[x] separate out agent/director roles
 	[] give director the instruction prompt
 	    [] load in from external file 
 	    [] overlay arrows on director screen
 	    [] make interface for 'scripted' instructions
-	[] don't allow director to move objects
+	[x] don't allow director to move objects
 	[] correct and record error if player makes one
 [] write data to file
 	[] time stamped messages to one file (when it happens)
