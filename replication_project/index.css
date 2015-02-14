@@ -14,6 +14,17 @@ html , body {
 	float: right;
 }
 
+#header {
+	height: auto;
+	width: auto;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto ;
+	left:0; right:0; top:1%; bottom: 0;
+	position: absolute;
+}
+
 #main {
 	height: auto;
 	width: auto;

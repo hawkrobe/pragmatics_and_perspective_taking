@@ -42,7 +42,7 @@ var game_core = function(game_instance){
     this.num_rounds = 8;
 
     if(this.server) {
-        this.makeShapes(this.numObjects)
+        this.makeObjects(this.numObjects)
         this.players = [{
             id: this.instance.player_instances[0].id, 
             player: new game_player(this,this.instance.player_instances[0].player)
@@ -63,7 +63,6 @@ var game_player = function( game_instance, player_instance) {
     //Set up initial values for our state information
     this.message = '';
     this.id = '';
-
 }; 
 
 /* The player class
@@ -97,7 +96,9 @@ game_core.prototype.get_active_players = function() {
         return p.player ? p : null}), null)
 };
 
-game_core.prototype.makeShapes = function (numObjects) {
+game_core.prototype.makeObjects = function (objectSetID) {
+    // if objectSetID == 1 ... objects = ... 
+    var numObjects = 2;
     var i;
     var tempX;
     var tempY;
@@ -186,6 +187,7 @@ game_core.prototype.server_send_update = function(){
     // Add info about all players
     var player_packet = _.map(local_game.players, function(p){
         return {id: p.id,
+            role : p.role,
             player: null}
         })
     var state = {

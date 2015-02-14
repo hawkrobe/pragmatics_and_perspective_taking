@@ -91,7 +91,7 @@ client_onMessage = function(data) {
             window.location.replace('http://nodejs.org'); break;
         case 'join' : //join a game requested
             var num_players = commanddata;
-            client_onjoingame(num_players); break;
+            client_onjoingame(num_players, commands[3]); break;
         case 'add_player' : // New player joined... Need to add them to our list.
             console.log("adding player" + commanddata)
             game.players.push({id: commanddata, player: new game_player(game)}); break;
@@ -184,12 +184,13 @@ client_onconnected = function(data) {
     game.players[0].id = my_id;
 };
 
-client_onjoingame = function(num_players) {
+client_onjoingame = function(num_players, role) {
     // Need client to know how many players there are, so they can set up the appropriate data structure
     _.map(_.range(num_players - 1), function(i){game.players.unshift({id: null, player: new game_player(game)})});
     // Set self color, leave others default white
     game.get_player(my_id).color = game.self_color;
     // Start 'em moving
+    $('#header').append(role);
     game.get_player(my_id).speed = game.min_speed;
     game.get_player(my_id).message = 'Please remain active while you wait.';
 }; 

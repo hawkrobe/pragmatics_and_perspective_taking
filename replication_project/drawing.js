@@ -1,5 +1,5 @@
 
-drawGrid = function(game){
+drawGrid = function(game, occludedList){
     //size of canvas
     var cw = game.viewport.width;
     var ch = game.viewport.height;

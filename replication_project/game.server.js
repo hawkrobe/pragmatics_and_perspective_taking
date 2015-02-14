@@ -89,11 +89,13 @@ game_server.findGame = function(player) {
                     id: player.userid, 
                     player: new game_player(gamecore,player)
                 });
+
                 // Attach game to player so server can look at it later
                 player.game = game;
-		
+                player.role = 'agent';
+
                 // notify new player that they're joining game
-                player.send('s.join.' + gamecore.players.length)
+                player.send('s.join.' + gamecore.players.length + '.' + player.role)
 
                 // notify existing players that someone new is joining
                 _.map(gamecore.get_others(player.userid), 
@@ -157,7 +159,8 @@ game_server.createGame = function(player) {
     // in game.client.js, which redirects to other functions based on the command
 
     player.game = game;
-    player.send('s.join.' + game.gamecore.players.length)
+    player.role = 'director';
+    player.send('s.join.' + game.gamecore.players.length + '.' + player.role)
     this.log('player ' + player.userid + ' created a game with id ' + player.game.id);
     //Start updating the game loop on the server
 
