@@ -7,16 +7,17 @@ drawGrid = function(game, occludedList){
     //padding around grid
     var p = 25;
 
+    console.log(cw, ch)
     //grid width and height
     var bw = cw - (p*2) ;
     var bh = ch - (p*2) ;
 
-    for (var x = 0; x <= bw; x += 100) {
+    for (var x = 0; x <= bw; x += Math.floor((cw - 2*p) / 4)) {
         game.ctx.moveTo(0.5 + x + p, p);
         game.ctx.lineTo(0.5 + x + p, bh + p);
     }
 
-    for (var x = 0; x <= bh; x += 100) {
+    for (var x = 0; x <= bh; x += Math.floor((ch - 2*p) / 4)) {
         game.ctx.moveTo(p, 0.5 + x + p);
         game.ctx.lineTo(bw + p, 0.5 + x + p);
     }

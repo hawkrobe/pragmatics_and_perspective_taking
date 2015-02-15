@@ -15,13 +15,13 @@ html , body {
 }
 
 #header {
-	height: auto;
-	width: auto;
+	height: 10%;
+	width: 100%;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: auto ;
-	left:0; right:0; top:1%; bottom: 0;
+	left:0; right:0; top:3%; bottom: 0;
 	position: absolute;
 }
 
@@ -32,51 +32,52 @@ html , body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: auto ;
-	left:0; right:0; top:5%; bottom: 0;
+	left:0; right:0; top:10%; bottom: 0;
 	position: absolute;
 }
 
 #viewport {
 	float: right;
 	border:solid 1px #333;
-	height: 85%;
-	width: 45%;
+	height: 600px;
+	width: 600px
 	margin-left: 2.5%;
 	margin-right: 2.5%;
-	margin-bottom: 2.5%;
-
 	background: #383838; 
 }
 
-#messages {
-	height: 85%; 
+#message_panel {
+	height: 90%;
+	width: 40%;
+ 
 	float: left;
 
 	margin-left: 5%;
 	margin-right: 5%;
-	margin-bottom: 5%;
-
-	text-align: left;
-	width: 40%;
-	font-size: 200%;
-	border: solid 1px #999; 
-	overflow-y: scroll;'
 	list-style-type: none; 
+
+	border: solid 1px #999; 
+}
+
+#messages {
+	height:93%;
+	text-align: left;
+	font-size: 200%;
+	overflow-y: scroll;
 }
 
 #chatarea form {
-	background: #000; 
+     background: #212121; 
 	padding: 3px; 
-	position: fixed; 
-	bottom: 0; 
 	height: 10%;
 	width: 100%; 
+	float: bottom;
 }
 
 #chatarea input {
 	border: 0; 
-	height: 75%;
-	font-size: 200%;
+	height: 100%;
+	font-size: 150%;
 	width: 80%; 
 	margin-left: .5%;
 	margin-right: .5%; 
@@ -84,9 +85,9 @@ html , body {
 }
 
 #chatarea button {
-	width: 9%; 
-	height: 75%;
-	font-size: 200%;
+	width: 15%; 
+	height: 100%;
+	font-size: 150%;
 	background: rgb(130, 224, 255); 
 	border: none; 
 	padding: 5px;

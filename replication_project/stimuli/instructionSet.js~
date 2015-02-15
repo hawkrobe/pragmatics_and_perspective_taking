@@ -1,0 +1,2 @@
+// Indexed by object set ID
+var instructions = {1: [{script: "Move the tape up",

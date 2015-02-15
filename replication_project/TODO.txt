@@ -1,7 +1,7 @@
 [x] Real-time messaging
 	[x] chat box in focus
 	[x] message box that scrolls
-	[] greyed-out "type here"
+	[x] move chat box to bottom of message panel
 [x] Allow moving objects
 	[x] update across participants
 	[x] attach object locations to game
@@ -18,7 +18,7 @@
 [] draw things 
 	[x] draw grid
 	[x] draw jpgs from file
-	[] initialize things in correct places
+	[x] initialize things in correct places
 	[] indicate occluded cells in a salient way
 	[] draw actual objects from paper (once Keysar replies)
 	[] 

@@ -37,16 +37,18 @@
     <body>
         <h1 id='header'> You are the </h1> 
         <div id='main'>
-            <span id = 'main_panel'> 
-            <ul id="messages"></ul>
+            <span>
+            <div id='message_panel'>
+                <ul id="messages"></ul>
+                <div id="chatarea">
+                    <form action="">
+                        <input id="chatbox" autocomplete="off" />
+                        <button id="chatbutton">Send</button>
+                    </form>
+                </div>
+            </div>
             <canvas id="viewport"> </canvas>
             </span>
-            <div id="chatarea">
-                <form action="">
-                    <input id="chatbox" autocomplete="off" />
-                    <button id="chatbutton">Send</button>
-                </form>
-            </div>
         </div>
     </body>
 </html>

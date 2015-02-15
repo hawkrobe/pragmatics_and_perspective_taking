@@ -24,6 +24,10 @@ if( typeof _ === 'undefined' ) {
     else throw new Error('mymodule requires underscore, see http://underscorejs.org');
 }
 
+if('undefined' != typeof global) {
+    var objectSet = require('./stimuli/objectSet')
+}
+
 var game_core = function(game_instance){
 
     this.debug = false
@@ -36,13 +40,14 @@ var game_core = function(game_instance){
     this.server = this.instance !== undefined;
 
     //Dimensions of world -- Used in collision detection, etc.
-    this.world = {width : 450, height : 450};  // 160cm * 3
+    this.world = {width : 600, height : 600};  // 160cm * 3
     this.numObjects = 2;
     this.objects = [];
     this.num_rounds = 8;
 
     if(this.server) {
-        this.makeObjects(this.numObjects)
+        this.objects = this.makeObjects(1)
+        console.log(this.objects)
         this.players = [{
             id: this.instance.player_instances[0].id, 
             player: new game_player(this,this.instance.player_instances[0].player)
@@ -98,19 +103,23 @@ game_core.prototype.get_active_players = function() {
 
 game_core.prototype.makeObjects = function (objectSetID) {
     // if objectSetID == 1 ... objects = ... 
-    this.objects = [{
-        url: 'stimuli/cassetteTape.jpg',
-        width: 87.5, 
-        height: 55,
-        x: Math.random()*(this.world.width - 87.5),
-        y: Math.random()*(this.world.height - 55*2),
-    }, {
-        url: 'stimuli/rollOfTape.jpg',
-        width: 83,
-        height: 83,
-        x: Math.random()*(this.world.width - 83),   
-        y: Math.random()*(this.world.height - 83),
-    }];
+    var local_this = this;
+    return _.map(objectSet.objects[objectSetID], function(obj) {
+        var gridCell = local_this.getGridCell(obj.initialCell[0], obj.initialCell[1])
+        return _.extend(obj, 
+            {x: gridCell.centerX - (obj.width/2),
+             y: gridCell.centerY - (obj.height/2)})
+    })
+}
+
+// for x = 1,2,3,4; y = 1,2,3,4
+game_core.prototype.getGridCell = function (x, y) {
+    return {
+        centerX: 25 + 68.75 + 137.5 * (x - 1),
+        centerY: 25 + 68.75 + 137.5 * (y - 1),
+        width: 137.5,
+        height: 137.5
+    }
 }
 
 // SERVER FUNCTIONS
