@@ -53,14 +53,16 @@ client_onserverupdate_received = function(data){
                 z[1].id = z[0].id
             })
     }
-    console.log(data.objects)
     game.objects = data.objects;
     game.game_started = data.gs;
     game.players_threshold = data.pt;
     game.player_count = data.pc;
     game.waiting_remaining = data.wr;
+
+
+
+//    console.log(game.objects)
     drawScreen(game)
-    drawGrid(game);
 }; 
 
 // This is where clients parse socket.io messages from the server. If
@@ -127,7 +129,6 @@ window.onload = function(){
     //Set the draw style for the font
     game.ctx.font = '11px "Helvetica"';
 
-    drawScreen(game);
     document.getElementById('chatbox').focus();
 
 };
@@ -155,6 +156,7 @@ client_connect_to_server = function(game) {
         }, 800);
     })
 
+    // Draw objects when someone else moves them
     game.socket.on('objMove', function(data){
         game.objects[data.i].x = data.x;
         game.objects[data.i].y = data.y;
@@ -176,25 +178,20 @@ client_connect_to_server = function(game) {
 }; 
 
 client_onconnected = function(data) {
-    //The server responded that we are now in a game,
-    //this lets us store the information about ourselves  
-    // so that we remember who we are.  
+    //The server responded that we are now in a game. Remember who we are
     my_id = data.id;
     game.players[0].id = my_id;
 };
 
 client_onjoingame = function(num_players, role) {
     // Need client to know how many players there are, so they can set up the appropriate data structure
-    _.map(_.range(num_players - 1), function(i){game.players.unshift({id: null, player: new game_player(game)})});
-    // Set self color, leave others default white
-    game.get_player(my_id).color = game.self_color;
-    // Start 'em moving
+    _.map(_.range(num_players - 1), function(i){
+        game.players.unshift({id: null, player: new game_player(game)})});
+
+    // Update w/ role (can only move stuff if agent)
     $('#header').append(role);
     if(role === "agent")
         game.viewport.addEventListener("mousedown", mouseDownListener, false);
-
-    game.get_player(my_id).speed = game.min_speed;
-    game.get_player(my_id).message = 'Please remain active while you wait.';
 }; 
 
 /*
@@ -212,7 +209,6 @@ function mouseDownListener(evt) {
     mouseX = (evt.clientX - bRect.left)*(game.viewport.width/bRect.width);
     mouseY = (evt.clientY - bRect.top)*(game.viewport.height/bRect.height);
 
-    console.log(game.numObjects)
     //find which shape was clicked
     for (i=0; i < game.numObjects; i++) {
         if  (hitTest(game.objects[i], mouseX, mouseY)) {

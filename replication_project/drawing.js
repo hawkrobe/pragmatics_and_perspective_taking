@@ -25,21 +25,21 @@ drawGrid = function(game, occludedList){
     game.ctx.stroke();
 }
 
-drawShapes = function(game) {
+drawObjects = function(game) {
         var i;
-        for (i=0; i < game.numObjects; i++) {
-            game.ctx.fillStyle = game.objects[i].color;
-            game.ctx.beginPath();
-            game.ctx.arc(game.objects[i].x, game.objects[i].y, game.objects[i].rad, 0, 2*Math.PI, false);
-            game.ctx.closePath();
-            game.ctx.fill();
-        }
-    }
+        _.map(game.objects, function(obj) {
+            var imgObj = new Image()
+            imgObj.src = obj.url
+            imgObj.onload = function() {
+                game.ctx.drawImage(imgObj, obj.x, obj.y, obj.width, obj.height)
+            }
+        })
+}
     
 drawScreen = function(game) {
         //bg
         game.ctx.fillStyle = "#000000";
         game.ctx.fillRect(0,0,game.viewport.width,game.viewport.height);
         drawGrid(game);
-        drawShapes(game);       
+        drawObjects(game);       
     }

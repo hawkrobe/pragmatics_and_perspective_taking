@@ -98,26 +98,19 @@ game_core.prototype.get_active_players = function() {
 
 game_core.prototype.makeObjects = function (objectSetID) {
     // if objectSetID == 1 ... objects = ... 
-    var numObjects = 2;
-    var i;
-    var tempX;
-    var tempY;
-    var tempRad;
-    var tempR;
-    var tempG;
-    var tempB;
-    var tempColor;
-    for (i=0; i < numObjects; i++) {
-        tempRad = 10 + Math.floor(Math.random()*25);
-        tempX = Math.random()*(this.world.width - tempRad);
-        tempY = Math.random()*(this.world.height - tempRad);
-        tempR = Math.floor(Math.random()*255);
-        tempG = Math.floor(Math.random()*255);
-        tempB = Math.floor(Math.random()*255);
-        tempColor = "rgb(" + tempR + "," + tempG + "," + tempB +")";
-        tempShape = {x:tempX, y:tempY, rad:tempRad, color:tempColor};
-        this.objects.push(tempShape);
-    }
+    this.objects = [{
+        url: 'stimuli/cassetteTape.jpg',
+        width: 87.5, 
+        height: 55,
+        x: Math.random()*(this.world.width - 87.5),
+        y: Math.random()*(this.world.height - 55*2),
+    }, {
+        url: 'stimuli/rollOfTape.jpg',
+        width: 83,
+        height: 83,
+        x: Math.random()*(this.world.width - 83),   
+        y: Math.random()*(this.world.height - 83),
+    }];
 }
 
 // SERVER FUNCTIONS
@@ -196,6 +189,7 @@ game_core.prototype.server_send_update = function(){
             pc : this.player_count,
         };
     _.extend(state, {players: player_packet})
+    console.log(this.objects)
     _.extend(state, {objects: this.objects})
     //Send the snapshot to the players
     this.state = state;
