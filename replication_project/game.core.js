@@ -24,10 +24,6 @@ if( typeof _ === 'undefined' ) {
     else throw new Error('mymodule requires underscore, see http://underscorejs.org');
 }
 
-if('undefined' != typeof global) {
-    var objectSet = require('./stimuli/objectSet')
-}
-
 var game_core = function(game_instance){
 
     this.debug = false
@@ -75,11 +71,12 @@ var game_player = function( game_instance, player_instance) {
         as well as to draw that state when required.
 */
 
-// server side we set the 'game_core' class to a global type, so that
-// it can use it in other files (specifically, game.server.js)
+// server side we set some classes to global types, so that
+// it can use them in other files (specifically, game.server.js)
 if('undefined' != typeof global) {
     module.exports = global.game_core = game_core;
     module.exports = global.game_player = game_player;
+    var objectSet = require('./stimuli/objectSet')
 }
 
 // HELPER FUNCTIONS
@@ -96,11 +93,13 @@ game_core.prototype.get_others = function(id) {
         function(p){return p.player ? p : null}), null)
 };
 
+// Returns all other players
 game_core.prototype.get_active_players = function() {
     return _.without(_.map(this.players, function(p){
         return p.player ? p : null}), null)
 };
 
+// Takes an objectSetID (between 0 and 8), and returns the corresponding set of objects to be drawn
 game_core.prototype.makeObjects = function (objectSetID) {
     // if objectSetID == 1 ... objects = ... 
     var local_this = this;
@@ -112,6 +111,7 @@ game_core.prototype.makeObjects = function (objectSetID) {
     })
 }
 
+// maps a grid location to the exact pixel coordinates
 // for x = 1,2,3,4; y = 1,2,3,4
 game_core.prototype.getGridCell = function (x, y) {
     return {
@@ -206,40 +206,5 @@ game_core.prototype.server_send_update = function(){
         p.player.instance.emit( 'onserverupdate', state)})
 };
 
-
-// MATH FUNCTIONS
-
-get_random_position = function(world) {
-    return {
-        x: Math.floor((Math.random() * world.width) + 1),
-        y: Math.floor((Math.random() * world.height) + 1)
-    };
-};
-
-// At beginning of round, want to start people close enough 
-// together that they can see at least one or two others...
-// In circle with radius quarter size of tank.
-get_random_center_position = function(world) {
-    var theta = Math.random()*Math.PI*2;
-    return {
-        x: world.width /2 + (Math.cos(theta)* world.width /16),
-        y: world.height/2 + (Math.sin(theta)* world.height/16)
-    };
-}
-    
-get_random_angle = function() {
-    return Math.floor((Math.random() * 360) + 1);
-};
-
 // (4.22208334636).fixed(n) will return fixed point value to n places, default n = 3
 Number.prototype.fixed = function(n) { n = n || 3; return parseFloat(this.toFixed(n)); };
-
-function zeros(dimensions) {
-    var array = [];
-
-    for (var i = 0; i < dimensions[0]; ++i) {
-        array.push(dimensions.length == 1 ? 0 : zeros(dimensions.slice(1)));
-    }
-
-    return array;
-}

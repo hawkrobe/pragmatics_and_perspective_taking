@@ -53,13 +53,19 @@ client_onserverupdate_received = function(data){
                 z[1].id = z[0].id
             })
     }
-    game.objects = data.objects;
+    if (game.objects != data.objects) {
+        game.objects = _.map(data.objects, function(obj) {
+            var imgObj = new Image()
+            imgObj.src = obj.url
+            imgObj.onload = function(){game.ctx.drawImage(imgObj, obj.x, obj.y, obj.width, obj.height)}
+            return _.extend(obj, {img: imgObj})
+        })
+        console.log(game.objects)
+    }
     game.game_started = data.gs;
     game.players_threshold = data.pt;
     game.player_count = data.pc;
     game.waiting_remaining = data.wr;
-
-
 
 //    console.log(game.objects)
     drawScreen(game)
@@ -209,6 +215,7 @@ function mouseDownListener(evt) {
     mouseX = (evt.clientX - bRect.left)*(game.viewport.width/bRect.width);
     mouseY = (evt.clientY - bRect.top)*(game.viewport.height/bRect.height);
 
+    console.log([mouseX, mouseY])
     //find which shape was clicked
     for (i=0; i < game.numObjects; i++) {
         if  (hitTest(game.objects[i], mouseX, mouseY)) {
@@ -273,15 +280,14 @@ function mouseMoveListener(evt) {
 }
 
 function hitTest(shape,mx,my) {
-
-    var dx;
-    var dy;
-    dx = mx - shape.x;
-    dy = my - shape.y;
-
-    //a "hit" will be registered if the distance away from the center is less than the radius of the circular object        
-    return (dx*dx + dy*dy < shape.rad*shape.rad);
-    }
+    var dx = mx - shape.x;
+    var dy = my - shape.y;
+    console.log([dx,dy])
+    console.log([shape.width, shape.height])
+    console.log("condition 1: " + (dx < shape.width))
+    console.log("condition 2: " + (dy < shape.height))
+    return (0 < dx) && (dx < shape.width) && (0 < dy) && (dy < shape.height)
+}
 
 // Automatically registers whether user has switched tabs...
 (function() {

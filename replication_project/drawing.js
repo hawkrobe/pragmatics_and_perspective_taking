@@ -27,20 +27,17 @@ drawGrid = function(game, occludedList){
 }
 
 drawObjects = function(game) {
-        var i;
-        _.map(game.objects, function(obj) {
-            var imgObj = new Image()
-            imgObj.src = obj.url
-            imgObj.onload = function() {
-                game.ctx.drawImage(imgObj, obj.x, obj.y, obj.width, obj.height)
-            }
-        })
+    var i;
+    _.map(game.objects, function(obj) {
+        game.ctx.drawImage(obj.img, obj.x, obj.y, obj.width, obj.height)
+    })
 }
+
     
 drawScreen = function(game) {
-        //bg
-        game.ctx.fillStyle = "#000000";
-        game.ctx.fillRect(0,0,game.viewport.width,game.viewport.height);
-        drawGrid(game);
-        drawObjects(game);       
-    }
+    //bg
+    game.ctx.fillStyle = "#000000";
+    game.ctx.fillRect(0,0,game.viewport.width,game.viewport.height);
+    drawGrid(game);
+    drawObjects(game);       
+}
