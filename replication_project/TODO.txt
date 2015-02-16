@@ -1,11 +1,11 @@
 [x] Real-time messaging
 	[x] chat box in focus
 	[x] message box that scrolls
-	[x] move chat box to bottom of message panel
+	[x] put chat box to bottom of message panel
 [x] Allow moving objects
 	[x] update across participants
 	[x] attach object locations to game
-[x] separate out agent/director roles
+[] separate out agent/director roles
 	[] give director the instruction prompt
 	    [] load in from external file 
 	    [] overlay arrows on director screen
@@ -23,3 +23,4 @@
 	[] indicate occluded cells in a salient way
 	[] draw actual objects from paper (once Keysar replies)
 	[] 
+[] end game if one player disconnects (vs. re-filling their spot)
