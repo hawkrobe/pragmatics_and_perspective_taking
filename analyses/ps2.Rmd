@@ -1,7 +1,7 @@
 ---
 title: 'Psych 254 W15 PS #2'
-author: "Mike Frank"
-date: "February 4, 2015"
+author: "Robert Hawkins"
+date: "February 16, 2015"
 output: html_document
 ---
 
@@ -19,8 +19,8 @@ I've adapted this for psych 254 purposes
 First install and load the package.
 
 ```{r}
-install.packages("ggplot2")
 library(ggplot2)
+setwd("~/Repos/psych254/analyses/")
 ```
 
 Now we're going to use qplot. qplot is the easy interface, meant to replace plot. You can give it simple `qplot(x,y)` examples, or slightly more complex examples like `qplot(x, y, col=grp, data=d)`. 
@@ -28,7 +28,6 @@ Now we're going to use qplot. qplot is the easy interface, meant to replace plot
 We're going to be using the diamonds dataset. This is a set of measurements of diamonds, along with their price etc.
 
 ```{r}
-#read.csv("~/Repos/psych254/data/")
 head(diamonds)
 qplot(diamonds$carat, diamonds$price)
 ```
@@ -42,13 +41,13 @@ qplot(carat, price, data = diamonds)
 Try adding clarity and cut, using shape and color as your visual variables. 
 
 ```{r}
-qplot(carat, price, col=cut, shape=clarity, data = diamonds)
+qplot(carat, price, col=clarity, shape=cut, data = diamonds)
 ```
 
 One of the primary benefits of `ggplot2` is the use of facets - also known as small multiples in the Tufte vocabulary. That last plot was probably hard to read. Facets could make it better. Try adding a `facets = x ~ y` argument. `x ~ y` means row facets are by x, column facets by y. 
 
 ```{r}
-qplot(carat, price, )
+qplot(carat, price, facets = clarity ~ cut, data = diamonds)
 ```
 
 But facets can also get overwhelming. Try to strike a good balance between color, shape, and faceting.
@@ -56,6 +55,7 @@ But facets can also get overwhelming. Try to strike a good balance between color
 HINT: `facets = . ~ x` puts x on the columns, but `facets = ~ x` (no dot) *wraps* the facets. These are underlying calls to different functions, `facet_wrap` (no dot) and `facet_grid` (two arguments). 
 
 ```{r}
+qplot(carat, price, col = clarity, facets = ~ cut, data = diamonds)
 ```
 
 The basic unit of a ggplot plot is a "geom" - a mapping between data (via an "aesthetic") and a particular geometric configuration on coordinate axes. 
@@ -63,16 +63,23 @@ The basic unit of a ggplot plot is a "geom" - a mapping between data (via an "ae
 Let's try some other geoms and manipulate their parameters. First, try a histogram (`geom="hist"`). 
 
 ```{r}
+qplot(price, geom="histogram", data = diamonds)
 ```
+
+**We see that most diamonds are between \$0 and \$1000 (with a mode around \$725), but that there is a very long tail, dragging the mean up to \$4000**
 
 Now facet your histogram by clarity and cut. 
 
 ```{r}
+qplot(price, geom="histogram", facets =clarity ~ cut , data = diamonds)
 ```
+
+**Unsurprisingly, the tail gets longer as the clarity gets bettter, although the VVS2 cut appears to have fairly long tails regardless of cut**
 
 I like a slightly cleaner look to my plots. Luckily, ggplot allows you to add "themes" to your plots. Try doing the same plot but adding `+ theme_bw()` or `+ theme_classic()`. Different themes work better for different applications, in my experience. 
 
 ```{r}
+qplot(price, geom="histogram", facets =clarity ~ cut , data = diamonds) + theme_bw()
 ```
 
 Part 1B: Exploring ggplot2 using ggplot
@@ -93,12 +100,18 @@ Try writing this as a single set of additions (e.g. one line of R code, though y
 
 
 ```{r}
+d <- (ggplot(diamonds, aes(x = carat, y=price))
+      + geom_point(aes(colour = carat)))
+d
 ```
 
 
 You can also set the aesthetic separately for each geom, and make some great plots this way. Though this can get complicated. Try using `ggplot` to build a histogram of prices. 
 
 ```{r}
+d <- (ggplot(diamonds, aes(x = price))
+      + geom_histogram())
+d
 ```
 
 Part 2: Diving into real data: Sklar et al. (2012)
@@ -112,7 +125,7 @@ First let's set up a few preliminaries.
 library(tidyr)
 library(dplyr)
 
-sem <- function(x) {sd(x) / sqrt(length(x))}
+sem <- function(x) {sd(x, na.rm = T) / sqrt(length(x))}
 ci95 <- function(x) {sem(x) * 1.96}
 ```
 
@@ -130,16 +143,23 @@ d.b <- read.csv("../data/sklar_expt6b_corrected.csv")
 Gather these datasets into long form and get rid of the Xs in the headers.
 
 ```{r}
+d.a.long = gather(d.a, subid, RT, starts_with("X")) %>% 
+  mutate(subid = as.numeric(substr(subid, 2,3))) 
+d.b.long = gather(d.b, subid, RT, starts_with("X")) %>% 
+  mutate(subid = as.numeric(substr(subid, 2,3)))
 ```
 
 Bind these together. Check out `bind_rows`.
 
 ```{r}
+d.data <- bind_rows(d.a.long, d.b.long)
+cat(length(d.a.long$subid), length(d.b.long$subid), length(d.data$subid))
 ```
 
 Merge these with subject info. You will need to look into merge and its relatives, `left_join` and `right_join`. Call this dataframe `d`, by convention. 
 
 ```{r}
+d <- right_join(d.data, subinfo, by = c('subid'))
 ```
 
 Clean up the factor structure.
@@ -155,54 +175,146 @@ Data Analysis Preliminaries
 Examine the basic properties of the dataset. First, take a histogram.
 
 ```{r}
+library(ggplot2)
+qplot(RT, data = d)
 ```
+
+**We see that the data is a bit skewed to the left but otherwise passably normal, centered at about 600ms. We also note a few outliers toward the top and bottom.**
 
 Challenge question: what is the sample rate of the input device they are using to gather RTs?
 
 ```{r}
+qplot(RT, subid, geom = 'point', data = d)
 ```
+
+**First, we note that if we plot individual RTs for each participant, they seem to fall in bins rather than continuously**
+
+```{r}
+unique_RTs = sort(unique(subset(d, RT <= 1000 & RT >= 500)$RT))
+qplot(1:length(unique_RTs), unique_RTs)
+cat("sample rate is approximately", (length(unique_RTs)/3)*2, "samples per second")
+```
+
+**To make this observation precise, we look at the interval between 500ms and 1000ms where the most data was collected. We pool together all RTs from all participants in all conditions, record the unique values, and sort them from lowest to highest. This reveals a clear 'binning' pattern, with rounding error or tolerance leading to three values in each bin (1ms above and below the central value). There were 14 bins (with 3 unique values each) between 500ms and 100ms, which we extrapolate to a sampling rate of 28 samples per second.**
 
 Sklar et al. did two manipulation checks. Subjective - asking participants whether they saw the primes - and objective - asking them to report the parity of the primes (even or odd) to find out if they could actually read the primes when they tried. Examine both the unconscious and conscious manipulation checks (this information is stored in subinfo). What do you see? Are they related to one another?
 
 ```{r} 
+qplot(objective.test, subjective.test,  data = d)
+log_fit = glm(subjective.test ~ objective.test, family = binomial, data = d)
+summary(log_fit)
+xr = seq(.3, 1, .05)    # possible values of Responsible
+yc = predict(log_fit, data.frame(objective.test = xr), type = 'response')
+logit.data <- data.frame(xr,yc)
+ggplot(d, aes(x=objective.test, y=subjective.test)) +
+    geom_rect(xmin = -0.1, ymin = -0.1, xmax = .6, ymax = .1, fill = 'red') +
+  geom_point() +
+  geom_line(data = logit.data, aes(x = xr, y = yc)) 
 ```
+
+**We ran a logistic regression predicting the probability of subjectively seeing the primes from performance on an objective 2AFC task about their parity. We find that people who reported subjectively seeing the primes were also more likely to objectively do well on the 2AFC test about primes. $b = 9.36, t(6467) = 37.1, p < 0.001$ **
 
 OK, let's turn back to the measure and implement Sklar et al.'s exclusion criterion. You need to have said you couldn't see (subjective test) and also be not significantly above chance on the objective test (< .6 correct). Call your new data frame `ds`.
 
 ```{r}
+ds <- d %>% 
+  filter(subjective.test == 0 & objective.test < .6)
+cat("excluded", length(unique(d$subid)) - length(unique(ds$subid)), "out of ",
+    length(unique(d$subid)))
 ```
 
 Sklar et al.'s analysis
 -----------------------
 
-Sklar et al. show a plot of a "facilitation effect" - the time to respond to incongruent primes minus the time to respond to congruent primes. They then show plot this difference score for the subtraction condition and for the two presentation times they tested. Try to reproduce this analysis.
+Sklar et al. show a plot of a "facilitation effect" - the time to respond to incongruent primes minus the time to respond to congruent primes. They then plot this difference score for the subtraction condition and for the two presentation times they tested. Try to reproduce this analysis.
 
 HINT: first take averages within subjects, then compute your error bars across participants, using the `sem` function (defined above). 
 
 ```{r}
+RT_congruent <- ds %>% 
+  filter(congruent == "yes") %>% 
+  group_by(subid, operand, presentation.time) %>% 
+  summarise(congruent_mean = mean(RT, na.rm = T))
+RT_incongruent <- ds %>% 
+  filter(congruent == "no") %>%
+  group_by(subid, operand, presentation.time) %>% 
+  summarise(incongruent_mean = mean(RT, na.rm = T))
+RT_sum <- right_join(RT_congruent, RT_incongruent) %>%
+  mutate(diff_mean = incongruent_mean - congruent_mean) %>%
+  group_by(presentation.time, operand) %>%
+  mutate(error = sem(diff_mean)) %>%
+  select(subid, presentation.time, operand, error, diff_mean) %>%
+  summarize(error = mean(error), 
+            overall_mean = mean(diff_mean, na.rm = T))
+head(RT_sum)
 ```
 
 Now plot this summary, giving more or less the bar plot that Sklar et al. gave (though I would keep operation as a variable here. Make sure you get some error bars on there (e.g. `geom_errorbar` or `geom_linerange`). 
 
 ```{r}
+d <- (ggplot(RT_sum, aes(x = operand, y = overall_mean, 
+                         fill = presentation.time))
+      + geom_bar(stat = "identity", position = "dodge")
+      + geom_errorbar(aes(ymax = overall_mean + error, 
+                          ymin=overall_mean - error),
+                      position = position_dodge(width=0.9),
+                      width = 0.25)
+      + ylab("Facilitation (ms)")
+      + scale_fill_discrete(name="Presentation Duration"))
+d
 ```
 
 What do you see here? How close is it to what Sklar et al. report? Do the error bars match? How do you interpret these data? 
 
+**The "subtraction" part of our graph is numerically identical to the one presented by Sklar et al, and our interpretation of this result is the same: there is a greater facilitation effect for shorter display durations than longer display durations in the subtraction condition. We also note some differences in presentation:**
+
+1) **Note that our error bars appear much larger. Upon further inspection, this can be attributed to what they mean by "SEM." Typically, this means the "standard error of the mean" (i.e. $\bar{x} \pm 1 SE$, which is what we plotted), but they appear to have plotted the interval containing exactly one standard error.**
+
+2) **The tick mark labels on their $y$-axis show three (redundant) decimal places, making the numbers look bigger.**
+
+3) **They decided not to plot results for the 'addition' condition rather than including it in the plot.**
+
+**Overall, following remarks made by Andrew Gelman and others on experimenter degrees of freedom, we must express some skepticism about the interpretation offered by the authors. If an effect was found in the addition but not the subtraction condition, or in both conditions, would other justifications have been offered? If the effect were reversed such that longer presentation durations led to greater facilitation, would the authors be able to justify this as well? What if only one or the other of the manipulation checks were used, or the threshold in the objective test were moved down? Since the actual size of the effect is quite small (as seen from the error bars), further work seems to be needed in justifying these decisions.**
+
 Challenge problem: verify Sklar et al.'s claim about the relationship between RT and the objective manipulation check.
 
-```{r}
-```
+**Didn't get around to this**
 
 Your own analysis
 -----------------
 
 Show us what you would do with these data, operating from first principles. What's the fairest plot showing a test of Sklar et al.'s original hypothesis that people can do arithmetic "non-consciously"?
 
+**If arithmetic could be done 'non-consciously', we wouldn't necessarily expect presentation time or operand to matter. We would just want to know whether or not there was a significant facilitation effect across the board.**
+
 ```{r}
+RT_sum2 <- right_join(RT_congruent, RT_incongruent) %>%
+  mutate(diff_mean = incongruent_mean - congruent_mean) %>%
+  group_by(subid) %>%
+  summarize(overall_mean = mean(diff_mean, na.rm = T)) %>%
+  mutate(error = sem(overall_mean)) 
+
+pop_mean = mean(RT_sum2$overall_mean)
+error = mean(RT_sum2$error)
+d <- (ggplot(RT_sum2, aes(x = overall_mean))
+      + geom_rect(aes(xmin=pop_mean - 2*error, 
+                xmax=pop_mean + 2*error, 
+                ymin=0, ymax=Inf), 
+            fill = 'red', alpha = 0.1)
+      + geom_histogram()
+      + geom_vline(xintercept = pop_mean)
+)
+d
 ```
+
+**We plot a histogram of each participant's average facilitation effect across conditions, and show the approximate 95% confidence interval ($\bar{x} \pm 2SE$) for the facilitation effect estimate. It is not clear from the graph whether it is significant -- the confidence interval includes 0 -- but it is certainly trending in the direction of the claim for non-conscious arithmetic**
 
 Challenge problem: Do you find any statistical support for Sklar et al.'s findings?
 
+**We simply run a t-test to check whether the distribution of individual facilitation effects is different from 0**
+
 ```{r}
+t.test(RT_sum2$overall_mean)
 ```
+
+**We find that the facilitation effect is marginally greater than 0 ($m = 5.37, t(16) = 1.84, p = 0.084$), but not significant. Sklar et al.'s finding are based on various ways of slicing these data into subsets which are significantly different from other subsets, but the fact that there is the overall facilitation effect is small (5ms) and only marginally significant shows that whatever non-conscious processes contribute to the way we do arithmetic are sensitive to a variety of other factors (including at least presentation time and operand). This same conclusion is given by the authors at the end of their results: "What the specific conditions are under which addition and subtraction equations are nonconsciously solved turns out to be a complex issue that must be left for future investigations."**
