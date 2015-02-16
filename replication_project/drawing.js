@@ -28,7 +28,7 @@ drawGrid = function(game, occludedList){
 
 drawObjects = function(game) {
     var i;
-    _.map(game.objects, function(obj) {
+    _.map(game.objects, function(obj) { 
         game.ctx.drawImage(obj.img, obj.x, obj.y, obj.width, obj.height)
     })
 }

@@ -33,6 +33,7 @@ counter = 0
 // with the coordinates of the click, which this function reads and
 // applies.
 game_server.server_onMessage = function(client,message) {
+    console.log("received message: " + message)
     //Cut the message up into sub components
     var message_parts = message.split('.');
     //The first is always the type of message
@@ -48,14 +49,22 @@ game_server.server_onMessage = function(client,message) {
         obj.x = parseInt(message_parts[2])
         obj.y = parseInt(message_parts[3])
         _.map(all, function(p) {
-            p.player.instance.emit( 'objMove', {i: message_parts[1], x: message_parts[2], y: message_parts[3]})
+            p.player.instance.emit('objMove', {i: message_parts[1], x: message_parts[2], y: message_parts[3]})
         })
     } else if (message_type == 'chatMessage') {
-        var msg = message_parts[1].replace(/-/g,'.')
+        var date = message_parts[1]
+        var msg = message_parts[2].replace(/-/g,'.')
+        console.log(client.role)
+        if(client.game.player_count == 2)
+            client.game.gamecore.messageStream.write(date + ',' + client.role + ',"' + msg + '"\n')
         _.map(all, function(p){
             p.player.instance.emit( 'chatMessage', {user: client.userid, msg: msg})})
-    } else if (message_type == 's') {
-        target.speed = message_parts[1].replace(/-/g,'.');;
+    } else if (message_type == 'update_mouse') {
+        var date = message_parts[1]
+        var x = message_parts[2]
+        var y = message_parts[3]
+        client.game.gamecore.mouseDataStream.write(String(date + ',' + x + ',' + y ) + "\n",
+            function (err) {if(err) throw err;});    
     } else if (message_type == "h") { // Receive message when browser focus shifts
         target.visible = message_parts[1];
     } 
@@ -77,19 +86,33 @@ game_server.findGame = function(player) {
             var game = this.games[gameid];
             var gamecore = game.gamecore;
             if(game.player_count < gamecore.players_threshold) { 
-               joined_a_game = true;
+                joined_a_game = true;
+                
                 // player instances are array of actual client handles
                 game.player_instances.push({
                     id: player.userid, 
                     player: player
                 });
                 game.player_count++;
+                
                 // players are array of player objects
                 game.gamecore.players.push({
                     id: player.userid, 
                     player: new game_player(gamecore,player)
                 });
 
+                // Establish write streams
+                var d = new Date();
+                var start_time = d.getFullYear() + '-' + d.getMonth() + 1 + '-' + d.getDate() + '-' + d.getHours() + '-' + d.getMinutes() + '-' + d.getSeconds() + '-' + d.getMilliseconds()
+                var name = start_time + '_' + game.id;
+                var mouse_f = "data/mouse/" + name + ".csv"
+                var message_f = "data/message/" + name + ".csv"
+                fs.writeFile(mouse_f, "time, mouseX, mouseY\n", function (err) {if(err) throw err;})
+                game.gamecore.mouseDataStream = fs.createWriteStream(mouse_f, {'flags' : 'a'});
+                fs.writeFile(message_f, "time, sender, contents\n", function (err) {if(err) throw err;})
+                game.gamecore.messageStream = fs.createWriteStream(message_f, {'flags' : 'a'});
+                console.log('game ' + game.id + ' starting with ' + game.player_count + ' players...')
+    
                 // Attach game to player so server can look at it later
                 player.game = game;
                 player.role = 'agent';
@@ -134,7 +157,6 @@ game_server.createGame = function(player) {
         player_count: 1             
     };
     
-    
     //Create a new game core instance (defined in game.core.js)
     game.gamecore = new game_core(game);
 
@@ -142,37 +164,18 @@ game_server.createGame = function(player) {
     game.gamecore.game_id = gameID;
     game.gamecore.players_threshold = players_threshold
     game.gamecore.player_count = 1
-
-    // Set up the filesystem variable we'll use later, and write headers
-    // var game_f = "data/waiting_games/" + name + ".csv"
-    // var latency_f = "data/waiting_latencies/" + name + ".csv"
     
-    // game.gamecore.fs = fs;
-    
-    // fs.writeFile(game_f, "pid,tick,active,x_pos,y_pos,velocity,angle,bg_val,total_points\n", function (err) {if(err) throw err;})
-    // game.gamecore.waitingDataStream = fs.createWriteStream(game_f, {'flags' : 'a'});
-    // fs.writeFile(latency_f, "pid,tick,latency\n", function (err) {if(err) throw err;})
-    // game.gamecore.waitingLatencyStream = fs.createWriteStream(latency_f, {'flags' : 'a'});
-    
-    // tell the player that they have joined a game
-    // The client will parse this message in the "client_onMessage" function
-    // in game.client.js, which redirects to other functions based on the command
-
+    // assign role
     player.game = game;
     player.role = 'director';
     player.send('s.join.' + game.gamecore.players.length + '.' + player.role)
     this.log('player ' + player.userid + ' created a game with id ' + player.game.id);
-    //Start updating the game loop on the server
 
     // add to game collection
     this.games[ game.id ] = game;
     this.game_count++;
     
-    var game_server = this
-   
     game.gamecore.server_send_update()
-
-    //return it
     return game;
 }; 
 
@@ -204,30 +207,6 @@ game_server.endGame = function(gameid, userid) {
         this.log('that game was not found!');
     }   
 }; 
-
-    
-// When the threshold is exceeded, this gets called
-game_server.startGame = function(game) {
-
-    game.active = true;
-    
-    var d = new Date();
-    var start_time = d.getFullYear() + '-' + d.getMonth() + 1 + '-' + d.getDate() + '-' + d.getHours() + '-' + d.getMinutes() + '-' + d.getSeconds() + '-' + d.getMilliseconds()
-    
-    var name = start_time + '_' + game.id;
-    
-    var game_f = "data/games/" + name + ".csv"
-    var latency_f = "data/latencies/" + name + ".csv"
-    
-    // fs.writeFile(game_f, "pid,tick,active,x_pos,y_pos,velocity,angle,bg_val,total_points\n", function (err) {if(err) throw err;})
-    // game.gamecore.gameDataStream = fs.createWriteStream(game_f, {'flags' : 'a'});
-    // fs.writeFile(latency_f, "pid,tick,latency\n", function (err) {if(err) throw err;})
-    // game.gamecore.latencyStream = fs.createWriteStream(latency_f, {'flags' : 'a'});
-
-    console.log('game ' + game.id + ' starting with ' + game.player_count + ' players...')
-    
-    game.gamecore.server_newgame(); 
-};
 
 //A simple wrapper for logging so we can toggle it,
 //and augment it for clarity.

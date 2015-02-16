@@ -47,6 +47,7 @@ client_onserverupdate_received = function(data){
 
     // Update client versions of variables with data received from
     // server_send_update function in game.core.js
+    console.log(data.players)
     if(data.players) {
         _.map(_.zip(data.players, game.players),
             function(z){
@@ -60,7 +61,6 @@ client_onserverupdate_received = function(data){
             imgObj.onload = function(){game.ctx.drawImage(imgObj, obj.x, obj.y, obj.width, obj.height)}
             return _.extend(obj, {img: imgObj})
         })
-        console.log(game.objects)
     }
     game.game_started = data.gs;
     game.players_threshold = data.pt;
@@ -146,7 +146,7 @@ client_connect_to_server = function(game) {
 
     // Tell server when client types something in the chatbox
     $('form').submit(function(){
-        var msg = 'chatMessage.' + $('#chatbox').val();
+        var msg = 'chatMessage.' + Date.now() + '.' + $('#chatbox').val();
         game.socket.send(msg);
         $('#chatbox').val('');
         return false;
@@ -196,8 +196,14 @@ client_onjoingame = function(num_players, role) {
 
     // Update w/ role (can only move stuff if agent)
     $('#header').append(role);
-    if(role === "agent")
+    if(role === "agent") {
+        $('#viewport').mousemove(function(event){
+            var x = event.pageX;
+            var y = event.pageY;
+            game.socket.send('update_mouse.' + Date.now() + '.' + Math.floor(x) + '.' + Math.floor(y));
+        });
         game.viewport.addEventListener("mousedown", mouseDownListener, false);
+    }
 }; 
 
 /*
@@ -255,22 +261,21 @@ function mouseUpListener(evt) {
 }
 
 function mouseMoveListener(evt) {
-    var posX;
-    var posY;
-    var shapeRad = game.objects[dragIndex].rad;
-    var minX = shapeRad;
-    var maxX = game.viewport.width - shapeRad;
-    var minY = shapeRad;
-    var maxY = game.viewport.height - shapeRad;
+    // prevent from dragging offscreen
+    var minX = 25;
+    var maxX = game.viewport.width - game.objects[dragIndex].width - 25;
+    var minY = 25;
+    var maxY = game.viewport.height - game.objects[dragIndex].height - 25;
+
     //getting mouse position correctly 
     var bRect = game.viewport.getBoundingClientRect();
     mouseX = (evt.clientX - bRect.left)*(game.viewport.width/bRect.width);
     mouseY = (evt.clientY - bRect.top)*(game.viewport.height/bRect.height);
 
     //clamp x and y positions to prevent object from dragging outside of canvas
-    posX = mouseX - dragHoldX;
+    var posX = mouseX - dragHoldX;
     posX = (posX < minX) ? minX : ((posX > maxX) ? maxX : posX);
-    posY = mouseY - dragHoldY;
+    var posY = mouseY - dragHoldY;
     posY = (posY < minY) ? minY : ((posY > maxY) ? maxY : posY);
 
     game.objects[dragIndex].x = Math.round(posX);

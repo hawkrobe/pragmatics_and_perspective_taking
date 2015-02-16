@@ -122,66 +122,6 @@ game_core.prototype.getGridCell = function (x, y) {
     }
 }
 
-// SERVER FUNCTIONS
-
-// Every second, we print out a bunch of information to a file in a
-// "data" directory. We keep EVERYTHING so that we
-// can analyze the data to an arbitrary precision later on.
-// game_core.prototype.writeData = function() {
-//     var local_game = this;
-//     _.map(local_game.get_active_players(), function(p) {
-// 	var player_angle = p.player.angle;
-// 	if (player_angle < 0) 
-// 	    player_angle = parseInt(player_angle, 10) + 360;
-// 	//also, keyboard inputs,  list of players in visibility radius?
-// 	var line = String(p.id) + ',';
-// 	line += String(local_game.game_clock) + ',';
-// 	line += p.player.visible + ',';
-// 	line += p.player.pos.x +',';
-// 	line += p.player.pos.y +',';
-// 	line += p.player.speed +',';
-// 	line += player_angle +',';
-// 	line += p.player.curr_background +',';
-// 	line += p.player.total_points.fixed(2) ;
-// 	if(local_game.game_started) {
-// 	    local_game.gameDataStream.write(String(line) + "\n",
-// 					    function (err) {if(err) throw err;});
-// 	} else {
-// 	    local_game.waitingDataStream.write(String(line) + "\n",
-// 					    function (err) {if(err) throw err;});
-// 	}
-//     })
-// };
-
-// This is a really important function -- it gets called when a round
-// has been completed, and updates the database with how much money
-// people have made so far. This way, if somebody gets disconnected or
-// something, we'll still know what to pay them.
-game_core.prototype.server_newgame = function() {
-    var local_gamecore = this;
-    
-    //Tell clients about it so they can call their newgame procedure (which does countdown)
-    _.map(local_gamecore.get_active_players(), function(p) {
-	p.player.instance.send('s.begin_game.')})
-
-    // Launch game after countdown;
-    setTimeout(function(){
-        local_gamecore.game_started = true;
-	local_gamecore.game_clock = 0;
-//        _.map(local_gamecore.get_active_players(), function(p) {
-//	    p.player.speed = local_gamecore.min_speed});
-    }, 3000);
-};
-
-// This gets called every iteration of a new game to reset positions
-game_core.prototype.server_reset_positions = function() {
-    var local_gamecore = this;
-    _.map(local_gamecore.get_active_players(), function(p) {
-        p.player.pos = get_random_center_position(local_gamecore.world);
-        p.player.angle = get_random_angle(local_gamecore.world);
-    })
-}; 
-
 game_core.prototype.server_send_update = function(){
     //Make a snapshot of the current state, for updating the clients
     var local_game = this;
@@ -189,19 +129,19 @@ game_core.prototype.server_send_update = function(){
     // Add info about all players
     var player_packet = _.map(local_game.players, function(p){
         return {id: p.id,
-            role : p.role,
             player: null}
         })
+
     var state = {
             gs : this.game_started,                      // true when game's started
             pt : this.players_threshold,
             pc : this.player_count,
         };
     _.extend(state, {players: player_packet})
-    console.log(this.objects)
     _.extend(state, {objects: this.objects})
     //Send the snapshot to the players
     this.state = state;
+    console.log(state)
     _.map(local_game.get_active_players(), function(p){
         p.player.instance.emit( 'onserverupdate', state)})
 };

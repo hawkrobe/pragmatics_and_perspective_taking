@@ -13,8 +13,9 @@
 	[x] don't allow director to move objects
 	[] correct and record error if player makes one
 [] write data to file
-	[] time stamped messages to one file (when it happens)
-	[] mouse positions and object locations to another file (every 100ms or something)
+	[x] time stamped messages to one file (when it happens)
+	[x] mouse positions to another file
+	[] write object set ID and instruction number also?
 [] draw things 
 	[x] draw grid
 	[x] draw jpgs from file
