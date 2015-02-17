@@ -7,7 +7,6 @@ drawGrid = function(game, occludedList){
     //padding around grid
     var p = 25;
 
-    console.log(cw, ch)
     //grid width and height
     var bw = cw - (p*2) ;
     var bh = ch - (p*2) ;

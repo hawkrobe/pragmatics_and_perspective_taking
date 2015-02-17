@@ -17,6 +17,7 @@
 var game = {};
 // A window global for our id, which we can use to look ourselves up
 var my_id = null;
+var my_role = null;
 // Keeps track of whether player is paying attention...
 var visible;
 var dragging;
@@ -54,7 +55,9 @@ client_onserverupdate_received = function(data){
                 z[1].id = z[0].id
             })
     }
-    if (game.objects != data.objects) {
+    console.log(my_role)
+    console.log(game.objects)
+    if ((game.objects != data.objects && my_role == 'director') || game.objects.length == 0) {
         game.objects = _.map(data.objects, function(obj) {
             var imgObj = new Image()
             imgObj.src = obj.url
@@ -128,7 +131,6 @@ window.onload = function(){
     game.viewport.width = game.world.width;
     game.viewport.height = game.world.height;
 
-
     //Fetch the rendering contexts
     game.ctx = game.viewport.getContext('2d');
 
@@ -172,7 +174,6 @@ client_connect_to_server = function(game) {
     //When we connect, we are not 'connected' until we have a server id
     //and are placed in a game by the server. The server sends us a message for that.
     game.socket.on('connect', function(){}.bind(game));
-
     //Sent when we are disconnected (network, server down, etc)
     game.socket.on('disconnect', client_ondisconnect.bind(game));
     //Sent each tick of the server simulation. This is our authoritive update
@@ -196,6 +197,7 @@ client_onjoingame = function(num_players, role) {
 
     // Update w/ role (can only move stuff if agent)
     $('#header').append(role);
+    my_role = role;
     if(role === "agent") {
         $('#viewport').mousemove(function(event){
             var x = event.pageX;
@@ -221,7 +223,6 @@ function mouseDownListener(evt) {
     mouseX = (evt.clientX - bRect.left)*(game.viewport.width/bRect.width);
     mouseY = (evt.clientY - bRect.top)*(game.viewport.height/bRect.height);
 
-    console.log([mouseX, mouseY])
     //find which shape was clicked
     for (i=0; i < game.numObjects; i++) {
         if  (hitTest(game.objects[i], mouseX, mouseY)) {
@@ -278,8 +279,12 @@ function mouseMoveListener(evt) {
     var posY = mouseY - dragHoldY;
     posY = (posY < minY) ? minY : ((posY > maxY) ? maxY : posY);
 
-    game.objects[dragIndex].x = Math.round(posX);
-    game.objects[dragIndex].y = Math.round(posY);
+    // Update object locally
+    var obj = game.objects[dragIndex]
+    obj.x = Math.round(posX);
+    obj.y = Math.round(posY);
+//    obj.img.onload = function(){game.ctx.drawImage(obj.img, obj.x, obj.y, obj.width, obj.height)}
+
     game.socket.send("objMove." + dragIndex + "." + Math.round(posX) + "." + Math.round(posY))
     drawScreen(game);
 }
@@ -287,10 +292,6 @@ function mouseMoveListener(evt) {
 function hitTest(shape,mx,my) {
     var dx = mx - shape.x;
     var dy = my - shape.y;
-    console.log([dx,dy])
-    console.log([shape.width, shape.height])
-    console.log("condition 1: " + (dx < shape.width))
-    console.log("condition 2: " + (dy < shape.height))
     return (0 < dx) && (dx < shape.width) && (0 < dy) && (dy < shape.height)
 }
 
