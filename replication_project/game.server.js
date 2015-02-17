@@ -48,8 +48,8 @@ game_server.server_onMessage = function(client,message) {
         var obj = client.game.gamecore.objects[message_parts[1]]
         obj.x = parseInt(message_parts[2])
         obj.y = parseInt(message_parts[3])
-        _.map(all, function(p) {
-            p.player.instance.emit('objMove', {i: message_parts[1], x: message_parts[2], y: message_parts[3]})
+        _.map(others, function(p) {
+          p.player.instance.emit('objMove', {i: message_parts[1], x: message_parts[2], y: message_parts[3]})
         })
     } else if (message_type == 'chatMessage') {
         var date = message_parts[1]
