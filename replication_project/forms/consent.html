@@ -17,8 +17,9 @@
     <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="theme.css" rel="stylesheet">
+    <!-- <link href="cocolab-style.css" rel="stylesheet" type="text/css"/> -->
 
+    <link href="theme.css" rel="stylesheet"/>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -38,44 +39,43 @@
         <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"><span class="sr-only">1% Complete</span></div>
       </div>
 
-      <div class="page-header">
-        <h3>MIT Computational Cognitive Science Lab</h3>
+      <div style="text-align: center; margin-left: auto; margin-right: auto">
+	<img src="images/cocologo.png" width="200px" length="200px" alt="Stanford CoCoLab" id="cocologo"></img>
       </div>
+      
+      <div class="page-header" style="text-align: center">
+        <h3>Stanford CoCoLab</h3>
+      </div><!--<p id="cocolab">Stanford CoCoLab: Questions and Answers</p> -->
+      
+      <div class="well" style="width: 500px; margin: 0 auto"> 
+	<p align="left" id="instruct-text">The actions of asking and
+	answering questions play an important role in our everyday
+	social interactions. It's not always clear why someone is asking a question, but we have strong intuitions about what counts as a 'good question' or 'good answer'.
+      
+      <p align="left" id="instruct-text">In this HIT, you will play a guessing game that tests these intuitions. There are two parts. In one part, you will play the role of the guesser, then you will play the role of the helper. It should take 5 or 6 minutes. Please pay attention and think carefully before responding! Thank you!</p>
 
-      <div class="well">
-        <p>In this HIT, you will be asked to read a set of
-        instructions that describe a particular scenario, and you will
-        then be asked to perform a simple task relating to that
-        scenario.</p>
-
-        <p>There will also be comprehension and attention checks.
-        Participants who do not answer these checks correctly cannot
-        be approved.  In order to get credit for this HIT, you must
-        read all the questions fully and answer honestly.</p>
-	
-	<p>
-	You may only complete this HIT once. If you complete this HIT
-	multiple times, you will be rejected.
-	  </p>
-	</div>
-
-      <div class="well">
-	  <p>This HIT is part of a MIT scientific research
-	  project. Your decision to complete this HIT is
-	  voluntary. There is no way for us to identify you. The only
-	  information we will have, in addition to your responses, is
-	  the time at which you completed the survey. The results of
-	  the research may be presented at scientific meetings or
-	  published in scientific journals. Clicking on the 'SUBMIT'
-	  button on the bottom of this page indicates that you are at
-	  least 18 years of age, and agree to complete this HIT
-	  voluntarily.</p>
-	</div>
+      </div>
 
       <p>
         <center><button id="agree" type="button" class="btn btn-sm btn-primary">SUBMIT</button></center>
 	<noscript><strong>JavaScript must be enabled to start.</strong></noscript>
       </p>
+      <hr>
+      
+      <u><p id="legal">Legal information:</p></u>
+
+      <p id="legal">By answering the following questions, you are
+      participating in a study being performed by cognitive scientists
+      in the Stanford Department of Psychology. If you have questions
+      about this research, please contact <b> Robert Hawkins</b>
+      at <b><a href="mailto://rxdh@stanford.edu">rxdh@stanford.edu</a> </b>
+      or Noah Goodman, at ngoodman@stanford.edu. You must be at least
+      18 years old to participate. Your participation in this research
+      is voluntary. You may decline to answer any or all of the
+      following questions. You may decline further participation, at
+      any time, without adverse consequences. Your anonymity is
+      assured; the researchers who have requested your participation
+      will not receive any personal information about you.</p>
 
       </div> <!-- show -->
 
@@ -91,16 +91,14 @@
     <!-- <script src="unique.js" type="text/javascript"></script> -->
     <script src="//uniqueturker.myleott.com/lib.js" type="text/javascript"></script>
     <script type="text/javascript">
-      // Source: http://uniqueturker.myleott.com/
       (function(){
-      var ut_id = "877510a4c60408c921959e889f70ebde";
+      var ut_id = "437b927ce01d56a46b8fba65b038bdbb";
       if (UTWorkerLimitReached(ut_id)) {
-        document.getElementById('mturk_form').style.display = 'none';
-        document.getElementById('show').innerHTML = "</br><div class='well'><p>You have already completed the maximum number of HITs allowed by this requester. Please click 'Return HIT' to avoid any impact on your approval rating.</p></div>";
+      document.getElementById('mturk_form').style.display = 'none';
+      document.getElementsByTagName('body')[0].innerHTML = "You have already completed the maximum number of HITs allowed by this requester. Please click 'Return HIT' to avoid any impact on your approval rating.";
       }
       })();
     </script>
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
