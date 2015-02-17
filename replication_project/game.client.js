@@ -57,13 +57,15 @@ client_onserverupdate_received = function(data){
     }
     console.log(my_role)
     console.log(game.objects)
-    if ((game.objects != data.objects && my_role == 'director') || game.objects.length == 0) {
+    if ((game.objects != data.objects && my_role == 'director') || 
+	game.objects.length == 0) {
         game.objects = _.map(data.objects, function(obj) {
             var imgObj = new Image()
             imgObj.src = obj.url
             imgObj.onload = function(){game.ctx.drawImage(imgObj, obj.x, obj.y, obj.width, obj.height)}
             return _.extend(obj, {img: imgObj})
         })
+        drawScreen(game)
     }
     game.game_started = data.gs;
     game.players_threshold = data.pt;
@@ -71,7 +73,7 @@ client_onserverupdate_received = function(data){
     game.waiting_remaining = data.wr;
 
 //    console.log(game.objects)
-    drawScreen(game)
+
 }; 
 
 // This is where clients parse socket.io messages from the server. If
