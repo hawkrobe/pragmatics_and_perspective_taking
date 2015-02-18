@@ -2,12 +2,12 @@
 	[x] chat box in focus
 	[x] message box that scrolls
 	[x] put chat box at bottom of message panel
-[] Allow moving objects
+[x] Allow moving objects
 	[x] update across participants
 	[x] attach object locations to game
-	[] make dragging smoother 
+	[x] make dragging smoother 
 	    [x] pre-load images
-	    [] ignore server updates while dragging (to prevent image from 'jumping' briefly to old positions)
+	    [x] ignore server updates while dragging (to prevent image from 'jumping' briefly to old positions)
 [] separate out agent/director roles
 	[] give director the instruction prompt
 	    [x] load in from external file 
@@ -27,7 +27,11 @@
 	[] draw actual objects from paper (once Keysar replies)
 	[] draw bag? Draw item going into bag? Reveal item on mouse-over?
 [x] build wrapper (i.e. just need to insert text)	    
-	[] write instructions
+	[x] write instructions
 	[] write exit survey
-	[] write qualification quiz
+	[x] write qualification quiz
+	    [] fix comprehension check to catch 'empty' responses
+	[] fix instruction image to reflect real game!
 [] end game if one player disconnects (vs. re-filling their spot)
+[] show message when first player joins like "WAITING FOR OTHER PLAYER TO JOIN..."
+   [] blink tab when they do join to get attention?

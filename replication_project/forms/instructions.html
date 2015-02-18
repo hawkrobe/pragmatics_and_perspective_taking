@@ -37,151 +37,145 @@
         <h1>Instructions</h1>
       </div>
       
-      <p><strong>IMPORTANT: Please return this HIT if you have already
-      played this game.  Your HIT will not be approved if you have
-      played before, and you will be compromising the integrity of the
-      results we are obtaining from other participants.</strong></p>
+      <div class="well" style="width:800px; margin: 0 auto">
 
-      <p>After finishing the instructions, you will enter a waiting
-      room for a game.  Some games require multiple participants, so
-      you may have to wait for other players to join before the game
-      will start. You will receive a bonus at a constant rate of 12
-      cents per minute in the waiting room as long as you stay
-      active. <strong>The maximum time you will spend in the waiting
-      room is five minutes.</strong> </p>
+	<p> In this experiment, we'll be playing a communication
+	game. The game has two roles, which will be assigned
+	randomly. Since you will not know which role you will play
+	until the game starts, you will be responsible for
+	understanding the responsibilities and goals of both
+	roles. When you enter the game, you will see a display like
+	the following: </p>
 
-      <p>Once the game starts, you will see a screen that looks much
-      like the following:</p>
-
-      <p>
-      <center><img src="gameplay.png" alt="Example gameplay" style="width:304px;height:260px"></center>
-	  </p>
-
-      <p>
-	You will be in control of the blue triangle.  When you are not
-	holding down any keys, you will move at a slow speed.
-	<strong>Holding down space bar will increase your speed.  The
-	left and right arrow keys will control the direction of your
-	movement.</strong>
-      </p>
-      </p>
-	You will have a score at each point in the game, indicated by
-	the percentage shown at the top of the page.  Each location in
-	the game area is associated with a certain score.
-	<strong>Your goal is to locate yourself in high scoring
-	locations for as long as possible.</strong> <strong>You will
-	receive a cash bonus based on your cumulative score in the
-	game.</strong> The scores of locations will change over time,
-	so you will have to continuously be ready to move around to
-	maximize your bonus.
-      </p>
-      
 	<p>
-	  You will also be able to see the other participants who are
-	  currently playing in your game.  These players can also see
-	  you.  <strong>The score at any particular location at any
-	  particular point in time is the same for all players, and
-	  there is no competition between players.</strong>
+	  <center><img src="gameplay.png" alt="Example gameplay" style="width:304px;height:260px"></center>
 	</p>
 
-      <p><strong>After the game ends, you will receive a survey code
-      to submit with your HIT.  You must submit the code exactly as
-      shown to receive your bonus.</strong></p> 
-      
-      <p><strong>IMPORTANT: If you exit the game window or are
-      otherwise detected as inactive in the waiting room or in the
-      game, you will be removed from the game and your HIT may not be
-      approved.  In order to remain active, you must stay off the
-      walls in the game.</strong> When you are touching a wall, your
-      score will become a red "0%".</p>
+	<p> On the right side of the screen, you will see a grid
+	filled with various objects. On the left side of the screen,
+	you will see a chat window that you can use to communicate
+	with the other player. </p> 
 
-      <p>Players occasionally face bugs during gameplay.  In the rare
-      case that you think you are experiencing unexpected game
-      behavior and you are not removed from the game automatically
-      after a short time, please make a note of your current URL, take
-	a screenshot, and message me.</p>
+	<p> If you are the "director", the grid will be marked to
+	indicate how the objects inside are to be moved.  You'll have
+	to give instructions to the other player telling them how to
+	move the objects. You are responsible for instructing to move
+	the items so that they reach the final positions that are
+	shown in the picture. Be sure to give your instructions as
+	clearly as you possibly could. </p>
 
+	<p> If you are the "matcher", your job will be to follow the
+	director's instructions as best as you can. You will follow
+	these instructions by clicking and dragging items from one
+	cell of the grid to another. To understand your behavior, we
+	will be recording the location of your mouse within the
+	grid. We will also be recording the messages both of you
+	send.</p>
+
+	<p> An important point for both players to keep in mind is
+	that <strong> some cells are occluded </strong>. When the
+	background of a cell is white, <strong> the director will not
+	know what is behind it </strong>. If you are the matcher, you
+	must pay close attention to the fact that the director will
+	not be able to see the items in the occluded slots. </p>
+
+	<p> Before we start, there are 3 more things we'd like you to
+	keep in mind. </p>
+	  
+	<ol>
+	  <li> During each round, please talk only about the game. Try
+	    not to talk about the objects except as needed to move
+	    them around the grid. </li>
+	  <li> About half of the director's instructions will be
+	  scripted. They will appear in the chat box and must be
+	  sent unaltered. </li>
+	  <li> If you are the matcher, you will click to put a
+	    certain object from each grid into a brown bag, and then,
+	    with the item still in the bag, put it back in the slot
+	    where it belongs. </li>
+	</ol>
+
+	There will be 8 different grids with different items.
+	
+      </div>
       <div class="page-header">
         <h3>Comprehension Quiz</h3>
       </div>
 
-      <form name="quiz" method="post" action="test_form.php">
-
+      <div class="well" style="width:800px; margin: 0 auto">
 	</br>
-	Your goal in this game is to
+	The director's goal in this game is to
 	  </br>
-	<input type="radio" name="goal" value="no"> Find areas with low scores
+	  <input type="radio" name="dgoal" value="yes"> Communicate instructions clearly
 	  </br>
-	    <input type="radio" name="goal" value="yes"> Find areas with high scores
-	  </br>
-
-	</br>
-	    The areas with the highest scores
-	  </br>
-	<input type="radio" name="loc" value="no"> Are always in the same location
-	  </br>
-	    <input type="radio" name="loc" value="yes"> May change locations
+	  <input type="radio" name="dgoal" value="no"> Move objects to the correct locations
 	  </br>
 
 
 	</br>
-	When you are not pressing any buttons, you will
+	The matcher's goal in this game is to 
       </br>
-	<input type="radio" name="none" value="no"> Not move at all
-	  </br>
-	    <input type="radio" name="none" value="yes"> Move at a slow speed
-	  </br>
-	    <input type="radio" name="none" value="no"> Move at a fast speed
-	  </br>
-
-
-	</br>
-	By holding down space bar you will
+      <input type="radio" name="mgoal" value="no"> Communicate instructions clearly
       </br>
-	<input type="radio" name="speed" value="yes"> Increase your speed
-	  </br>
-	    <input type="radio" name="speed" value="no"> Decrease your speed
-	  </br>
-
-	</br>
-	To change direction you can use
+      <input type="radio" name="mgoal" value="yes"> Move objects to the correct locations
       </br>
-	<input type="radio" name="dir" value="yes"> The left and right arrow keys
-	  </br>
-	    <input type="radio" name="dir" value="no"> The up and down arrow keys
-	  </br>
 
-	</br>
-	If you are at the same location as another player you will
+      
       </br>
-	<input type="radio" name="comp" value="no"> Receive less of a bonus compared to if no one else was there
+	If a square in the grid is white, it means
 	  </br>
-	<input type="radio" name="comp" value="yes"> Receive the same as you would if no one else was there
+	  <input type="radio" name="occ" value="no"> The matcher <strong> cannot </strong> see the object behind it
 	  </br>
+	  <input type="radio" name="occ" value="yes"> The director <strong> cannot </strong> see the object behind it
+	  </br>
+	    <input type="radio" name="occ" value="no"> The director <strong> can </strong> see the object behind it
+	  </br>
+	  
 
-	</br>
-	The score at a particular location at a particular point in
-	time
+	</br> To move an object, the matcher must
       </br>
-	<input type="radio" name="diff" value="yes"> Is the same for all players
+	<input type="radio" name="move" value="yes"> Click and drag it
 	  </br>
-	    <input type="radio" name="diff" value="no">  May be different for different players
+	    <input type="radio" name="move" value="no"> Use their keyboard to select the destination
 	  </br>
 
-	</br>
-	Have you participated in this study before? </br>
-	<input type="radio" name="completed" value="yes"> Yes
+	  </br> 
+	  At the end of a round
+         </br>
+	<input type="radio" name="comp" value="no"> Some objects stay the same
 	  </br>
-	    <input type="radio" name="completed" value="no"> No
+	  <input type="radio" name="comp" value="yes"> All of the objects are replaced by new objects in new locations
 	  </br>
-	    </br>
-	<input type="submit" value="Submit"> 
+	  
+          </br>
+	  Have you participated in this study before? </br>
+	  <input type="radio" name="completed" value="yes"> Yes
+          </br>
+	  <input type="radio" name="completed" value="no"> No
+          </br>
+
+	  </br>
+	  <input id="quiz_submit" type="submit" value="Submit"> 
 		  </br>
 		  </br>
-      </form>
 
     </div> <!-- /container -->
-
+      </div>
+    <script type="text/javascript">
+      document.getElementById("quiz_submit").onclick = function () {
+        var ans1 = $('input[name="comp"]:checked').val();
+        var ans2 = $('input[name="move"]:checked').val();
+        var ans3 = $('input[name="mgoal"]:checked').val();
+        var ans4 = $('input[name="dgoal"]:checked').val();
+        var ans5 = $('input[name="occ"]:checked').val();
+        if(ans1 == "yes" && ans2 == "yes" && ans3 == "yes" && 
+           ans4 == "yes" && ans5 == "yes") {
+          location.replace("./pass.html");
+        } else {
+          location.replace("./fail.html");
+        }
+      };
+    </script>
     
     <script src="./validate-form.js"></script>
 
