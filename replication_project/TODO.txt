@@ -35,3 +35,7 @@
 [] end game if one player disconnects (vs. re-filling their spot)
 [] show message when first player joins like "WAITING FOR OTHER PLAYER TO JOIN..."
    [] blink tab when they do join to get attention?
+[] Change "You are the agent" to "you are the matcher"
+[] have agent position mouse before every instruction... 
+    [] little green light that tells director they're okay to go?
+
