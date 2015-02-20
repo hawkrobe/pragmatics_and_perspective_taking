@@ -54,7 +54,6 @@ game_server.server_onMessage = function(client,message) {
     } else if (message_type == 'chatMessage') {
         var date = message_parts[1]
         var msg = message_parts[2].replace(/-/g,'.')
-        console.log(client.role)
         if(client.game.player_count == 2)
             client.game.gamecore.messageStream.write(date + ',' + client.role + ',"' + msg + '"\n')
         _.map(all, function(p){
@@ -115,7 +114,7 @@ game_server.findGame = function(player) {
     
                 // Attach game to player so server can look at it later
                 player.game = game;
-                player.role = 'agent';
+                player.role = 'matcher';
 
                 // notify new player that they're joining game
                 player.send('s.join.' + gamecore.players.length + '.' + player.role)

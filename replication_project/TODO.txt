@@ -14,6 +14,7 @@
 	    [] overlay arrows on director screen
 	    [] make interface for 'scripted' instructions
 	[x] don't allow director to move objects
+	[x] Tell players "You are the director" and "you are the matcher"
 	[] correct and record error if player makes one
 [x] write data to file
 	[x] time stamped messages to one file 
@@ -35,7 +36,6 @@
 [] end game if one player disconnects (vs. re-filling their spot)
 [] show message when first player joins like "WAITING FOR OTHER PLAYER TO JOIN..."
    [] blink tab when they do join to get attention?
-[] Change "You are the agent" to "you are the matcher"
 [] have agent position mouse before every instruction... 
     [] little green light that tells director they're okay to go?
 

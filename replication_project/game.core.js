@@ -42,7 +42,7 @@ var game_core = function(game_instance){
     this.num_rounds = 8;
 
     if(this.server) {
-        this.objects = this.makeObjects(1)
+        this.objects = this.makeObjectSets()[0].objects
         console.log(this.objects)
         this.players = [{
             id: this.instance.player_instances[0].id, 
@@ -99,16 +99,77 @@ game_core.prototype.get_active_players = function() {
         return p.player ? p : null}), null)
 };
 
-// Takes an objectSetID (between 0 and 8), and returns the corresponding set of objects to be drawn
-game_core.prototype.makeObjects = function (objectSetID) {
-    // if objectSetID == 1 ... objects = ... 
-    var local_this = this;
-    return _.map(objectSet.objects[objectSetID], function(obj) {
-        var gridCell = local_this.getGridCell(obj.initialCell[0], obj.initialCell[1])
-        return _.extend(obj, 
-            {x: gridCell.centerX - (obj.width/2),
-             y: gridCell.centerY - (obj.height/2)})
+var sampleConditionOrder = function() {
+    var orderList = []
+    var options = ['exp', 'base']
+    _.map(_.range(8), function(i){
+        var candidate = _.sample(options)
+        console.log(candidate)
+        // If already two in a row...
+        if (_.every(orderList.slice(-2), function(v) {return v === candidate})) {
+            orderList.push(_.filter(options, function(v) {return v != candidate})[0])
+        } else {
+            orderList.push(candidate)
+        }
     })
+    return orderList
+}
+
+var cartesianProductOf = function(listOfLists) {
+    return _.reduce(listOfLists, function(a, b) {
+        return _.flatten(_.map(a, function(x) {
+            return _.map(b, function(y) {
+                return x.concat([y]);
+            });
+        }), true);
+    }, [ [] ]);
+};
+
+var getLocations = function(numObjects) {
+    var possibilities = cartesianProductOf([_.range(1, 5), _.range(1, 5)])
+
+    function getRandomFromBucket() {
+        var randomIndex = Math.floor(Math.random()*possibilities.length);
+        return possibilities.splice(randomIndex, 1)[0];
+    }
+
+    return _.map(_.range(numObjects), function(v) {
+        return getRandomFromBucket()
+    })
+}
+
+// Randomizes objects in the way given by Keysar et al (2003)
+game_core.prototype.makeObjectSets = function () {
+    // 1) Choose order of experimental & baseline (no more than 2 in a row)
+    var local_this = this;
+    var conditionOrder = sampleConditionOrder()
+
+    // 2) Assign target & distractor based on condition
+    var itemList = _.shuffle(objectSet.criticalItems)
+    var trialList = _.map(_.range(8), function(i) {
+        var condition = conditionOrder[i];
+        var item = itemList[i];
+        var other = condition === "exp" ? item['distractor'] : item['alt']
+        var target = _.extend(item['target'], {target: true})
+        var objects = item.hasOwnProperty('additional') ? [target, other, item['additional']] : [target,other]
+        return _.extend(_.omit(itemList[i], ['distractor', 'alt', 'target', 'additional']), 
+            {condition: condition,
+             objects: objects}
+            )})
+
+    // 3. assign random initial locations
+    var local_this = this;
+    _.map(trialList, function(v) {
+        var locs = getLocations(v.objects.length)
+        _.map(_.zip(v.objects, locs), function(pair) {
+            var obj = pair[0]
+            var gridCell = local_this.getGridCell(pair[1][0], pair[1][1])
+            obj.x = gridCell.centerX - obj.width/2
+            obj.y = gridCell.centerY - obj.height/2
+        })
+    })
+    console.log(trialList)
+    return trialList
 }
 
 // maps a grid location to the exact pixel coordinates
