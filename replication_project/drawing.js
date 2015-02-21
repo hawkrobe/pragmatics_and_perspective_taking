@@ -31,6 +31,14 @@ var drawObjects = function(game) {
     })
 }
 
+var drawInstructions = function(game) {
+    var origin = game.getGridCell(1,1)
+    var dest = game.getGridCell(1,2)
+    drawArrow(game, origin.centerX, origin.centerY, dest.centerX, dest.centerY, 50)
+    console.log("calling instructions")
+    console.log(game.instructions)
+}
+
 var drawScreen = function(game, player) {
     //bg
     game.ctx.fillStyle = "#000000";
@@ -49,14 +57,6 @@ var drawScreen = function(game, player) {
         game.ctx.textAlign = 'center';
         game.ctx.fillText(player.message, game.world.width/2, game.world.height/2);
     }
-}
-
-var drawInstructions = function(game) {
-    var origin = game.getGridCell(1,1)
-    var dest = game.getGridCell(1,2)
-    drawArrow(game, origin.centerX, origin.centerY, dest.centerX, dest.centerY, 50)
-    console.log("calling instructions")
-    console.log(game.instructions)
 }
 
 var drawArrow=function(game,x1,y1,x2,y2,d) {
@@ -87,7 +87,7 @@ var drawArrow=function(game,x1,y1,x2,y2,d) {
   // calculate the angle of the line
   var lineangle=Math.atan2(y2-y1,x2-x1);
   // h is the line length of a side of the arrow head
-  var angle = Math.PI/8
+  var angle = Math.PI/8 
   var h=Math.abs(d/Math.cos(angle));
 
   var angle1=lineangle+Math.PI+angle;

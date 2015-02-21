@@ -183,25 +183,11 @@ game_server.createGame = function(player) {
 game_server.endGame = function(gameid, userid) {
     var thegame = this.games [ gameid ];
     if(thegame) {
-        //if the game has more than one player, it's fine -- let the others keep playing, but let them know
-        var player_metric = (thegame.active 
-			     ? thegame.gamecore.get_active_players().length 
-			     : thegame.player_count)
-        console.log("removing... game has " + player_metric + " players")
-        if(player_metric > 1) {
-            var i = _.indexOf(thegame.gamecore.players, _.findWhere(thegame.gamecore.players, {id: userid}))
-            thegame.gamecore.players[i].player = null;
-
-            // If the game hasn't started yet, allow more players to fill their place. after it starts, don't.
-            if (!thegame.active) {
-                thegame.player_count--;
-                thegame.gamecore.player_count = thegame.player_count;
-            }
-        } else {
-            delete this.games[gameid];
-            this.game_count--;
-            this.log('game removed. there are now ' + this.game_count + ' games' );
-        }
+        _.map(thegame.gamecore.get_others(userid), function(p) {
+            p.player.instance.send('s.end');})
+        delete this.games[gameid];
+        this.game_count--;
+        this.log('game removed. there are now ' + this.game_count + ' games' );
     } else {
         this.log('that game was not found!');
     }   

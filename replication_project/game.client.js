@@ -58,7 +58,6 @@ client_onserverupdate_received = function(data){
     if (game.objects.length == 0) { //(game.objects != data.objects && my_role == 'director') || 
         game.objects = _.map(data.objects, function(obj) {
             var imgObj = new Image()
-            console.log(obj)
             imgObj.src = obj.url
             imgObj.onload = function(){
                 game.ctx.drawImage(imgObj, obj.x, obj.y, obj.width, obj.height)

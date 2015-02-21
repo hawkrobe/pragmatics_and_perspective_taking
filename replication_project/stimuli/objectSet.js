@@ -58,7 +58,7 @@ var criticalItems = [
 		distractor: bottomBlock,
 		alt: stapler
 	},{
-		instructions: ["cassetteTape down"],	
+		instructions: ["cassetteTape down"],
 		criticalInstruction: "cassetteTape",
 		target: cassetteTape,
 		distractor: rollOfTape,

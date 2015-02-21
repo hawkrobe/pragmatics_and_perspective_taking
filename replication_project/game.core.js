@@ -38,9 +38,10 @@ var game_core = function(game_instance){
     //Dimensions of world -- Used in collision detection, etc.
     this.world = {width : 600, height : 600};  // 160cm * 3
     this.round_num = 0;
-    this.objects = [];
+    this.instruction_num = 0;
     this.num_rounds = 8;
-
+    this.objects = [];
+    this.instructions = []
     if(this.server) {
         this.trialList = this.makeTrialList()
         this.objects = this.trialList[this.round_num].objects
@@ -100,7 +101,6 @@ var sampleConditionOrder = function() {
     var options = ['exp', 'base']
     _.map(_.range(8), function(i){
         var candidate = _.sample(options)
-        console.log(candidate)
         // If already two in a row...
         if (_.every(orderList.slice(-2), function(v) {return v === candidate})) {
             orderList.push(_.filter(options, function(v) {return v != candidate})[0])
@@ -166,7 +166,6 @@ game_core.prototype.makeTrialList = function () {
             obj.y = gridCell.centerY - obj.height/2
         })
     })
-    console.log(trialList)
     return trialList
 }
 
@@ -204,7 +203,6 @@ game_core.prototype.server_send_update = function(){
 
     //Send the snapshot to the players
     this.state = state;
-    console.log(state)
     _.map(local_game.get_active_players(), function(p){
         p.player.instance.emit( 'onserverupdate', state)})
 };
