@@ -1,8 +1,8 @@
 // Indexed by object set ID
 
-var sunGlasses = {url: 'stimuli/sunglasses.jpg', width: 80, height: 50}
+var sunGlasses = {url: 'stimuli/sunglasses.jpg', width: 130, height: 65}
 var glassesCase = {url: 'stimuli/glassesCase.jpg', width : 80, height: 80}
-var soccerBall = {url: 'stimuli/soccerBall.jpg', width: 80, height: 80}
+var soccerBall = {url: 'stimuli/soccerBall.jpg', width: 100, height: 100}
 
 var topBlock = {url: 'stimuli/topBlock.jpg', width: 80, height: 50}
 var bottomBlock = {url: 'stimuli/bottomBlock.jpg', width: 80, height: 80}
@@ -12,9 +12,9 @@ var cassetteTape = {url: 'stimuli/cassetteTape.jpg', width: 87.5, height: 55,}
 var rollOfTape = {url: 'stimuli/rollOfTape.jpg', width: 83, height: 83}
 var battery = {url: 'stimuli/battery.jpg', width: 50, height: 80}
 
-var largeMeasuringCup = {url: 'stimuli/largeMeasuringCup.jpg', width : 80, height: 80}
-var mediumMeasuringCup = {url: 'stimuli/mediumMeasuringCup.jpg', width : 80, height: 80}
-var smallMeasuringCup = {url: 'stimuli/smallMeasuringCup.jpg', width : 80, height: 80}
+var largeMeasuringCup = {url: 'stimuli/largeMeasuringCup.jpg', width : 150, height: 150}
+var mediumMeasuringCup = {url: 'stimuli/mediumMeasuringCup.jpg', width : 100, height: 100}
+var smallMeasuringCup = {url: 'stimuli/smallMeasuringCup.jpg', width : 60, height: 60}
 var umbrella = {url: 'stimuli/umbrella.jpg', width: 80, height: 80}
 
 var roundBrush = {url: 'stimuli/roundBrush.jpg', width: 80, height: 80}
@@ -27,7 +27,7 @@ var brain = {url: 'stimuli/brain.jpg', width: 80, height:80}
 
 var smallCandle = {url: 'stimuli/smallCandle.jpg', width:80, height: 80}
 var mediumCandle = {url: 'stimuli/mediumCandle.jpg', width:80, height: 80}
-var largeCandle = {url: 'stimuli/largeCandle.jpg', width:80, height: 80}
+var largeCandle = {url: 'stimuli/largeCandle.jpg', width:100, height: 100}
 var flower = {url: 'stimuli/flower.jpg', width: 80, height: 80}
 
 var computerMouse = {url: 'stimuli/computerMouse.jpg', width:80, height: 80}
