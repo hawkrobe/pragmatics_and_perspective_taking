@@ -72,7 +72,8 @@ client_onserverupdate_received = function(data){
     game.waiting_remaining = data.wr;
 
 //    console.log(game.objects)
-    drawScreen(game)
+
+    drawScreen(game, game.get_player(my_id))
 }; 
 
 // This is where clients parse socket.io messages from the server. If
@@ -96,7 +97,7 @@ client_onMessage = function(data) {
         case 'end' :
 	       // Redirect to exit survey
           console.log("received end message...")
-          var URL = 'http://projects.csail.mit.edu/ci/turk/forms/end.html?id=' + my_id;
+          var URL = 'http://web.stanford.edu/~rxdh/psych254/replication_project/forms/end.html?id=' + my_id;
           window.location.replace(URL); break;
         case 'alert' : // Not in database, so you can't play...
             alert('You did not enter an ID'); 
@@ -169,7 +170,7 @@ client_connect_to_server = function(game) {
     game.socket.on('objMove', function(data){
         game.objects[data.i].x = data.x;
         game.objects[data.i].y = data.y;
-        drawScreen(game)
+        drawScreen(game, game.get_player(my_id))
     })
 
     //When we connect, we are not 'connected' until we have a server id
@@ -199,6 +200,8 @@ client_onjoingame = function(num_players, role) {
     // Update w/ role (can only move stuff if agent)
     $('#header').append(role);
     my_role = role;
+    game.get_player(my_id).message = 'Waiting for other player to connect...';
+
     if(role === "matcher") {
         $('#viewport').mousemove(function(event){
             var x = event.pageX;
@@ -287,7 +290,7 @@ function mouseMoveListener(evt) {
 //    obj.img.onload = function(){game.ctx.drawImage(obj.img, obj.x, obj.y, obj.width, obj.height)}
 
     game.socket.send("objMove." + dragIndex + "." + Math.round(posX) + "." + Math.round(posY))
-    drawScreen(game);
+    drawScreen(game, game.get_player(my_id));
 }
 
 function hitTest(shape,mx,my) {

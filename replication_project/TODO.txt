@@ -25,7 +25,7 @@
 	[x] draw jpgs from file
 	[x] initialize things in correct places
 	[] indicate occluded cells in a salient way
-	[] draw actual objects from paper (once Keysar replies)
+	[x] draw actual objects from paper (once Keysar replies)
 	[] draw bag? Draw item going into bag? Reveal item on mouse-over?
 [x] build wrapper (i.e. just need to insert text)	    
 	[x] write instructions
@@ -33,9 +33,10 @@
 	[x] write qualification quiz
 	    [] fix comprehension check to catch 'empty' responses
 	[] fix instruction image to reflect real game!
-[] end game if one player disconnects (vs. re-filling their spot)
-[] show message when first player joins like "WAITING FOR OTHER PLAYER TO JOIN..."
+[] join/leave logistics
+   [x] show message when first player joins like "WAITING FOR OTHER PLAYER TO JOIN..."
    [] blink tab when they do join to get attention?
+   [] end game if one player disconnects (vs. re-filling their spot)
 [] have agent position mouse before every instruction... 
     [] little green light that tells director they're okay to go?
 

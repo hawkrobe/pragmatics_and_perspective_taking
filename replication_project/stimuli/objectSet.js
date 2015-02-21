@@ -1,12 +1,12 @@
 // Indexed by object set ID
 
 var sunGlasses = {url: 'stimuli/sunglasses.jpg', width: 130, height: 65}
-var glassesCase = {url: 'stimuli/glassesCase.jpg', width : 100, height: 107}
+var glassesCase = {url: 'stimuli/glassesCase.png', width : 100, height: 107}
 var soccerBall = {url: 'stimuli/soccerBall.jpg', width: 100, height: 100}
 
-var topBlock = {url: 'stimuli/topBlock.jpg', width: 80, height: 50}
+var topBlock = {url: 'stimuli/topBlock.jpg', width: 80, height: 80}
 var bottomBlock = {url: 'stimuli/bottomBlock.jpg', width: 80, height: 80}
-var stapler = {url: 'stimuli/stapler.jpg'}
+var stapler = {url: 'stimuli/stapler.jpg',width: 80, height: 80}
 
 var cassetteTape = {url: 'stimuli/cassetteTape.jpg', width: 87.5, height: 55,}
 var rollOfTape = {url: 'stimuli/rollOfTape.jpg', width: 83, height: 83}

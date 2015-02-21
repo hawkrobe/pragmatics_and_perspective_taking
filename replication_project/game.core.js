@@ -199,7 +199,10 @@ game_core.prototype.server_send_update = function(){
             pc : this.player_count,
         };
     _.extend(state, {players: player_packet})
-    _.extend(state, {objects: this.objects})
+    if(player_packet.length == 2) {
+        _.extend(state, {objects: this.objects})
+    }
+    
     //Send the snapshot to the players
     this.state = state;
     console.log(state)

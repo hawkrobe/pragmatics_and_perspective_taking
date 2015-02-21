@@ -31,12 +31,20 @@ drawObjects = function(game) {
         game.ctx.drawImage(obj.img, obj.x, obj.y, obj.width, obj.height)
     })
 }
-
-    
-drawScreen = function(game) {
+  
+drawScreen = function(game, player) {
     //bg
     game.ctx.fillStyle = "#000000";
     game.ctx.fillRect(0,0,game.viewport.width,game.viewport.height);
-    drawGrid(game);
-    drawObjects(game);       
+    if (game.players.length == 2) {
+        drawGrid(game);
+        drawObjects(game);       
+    } else {
+        console.log("drawing message?")
+        // Draw message in center (for countdown, e.g.)
+        game.ctx.font = "bold 23pt Helvetica";
+        game.ctx.fillStyle = 'red';
+        game.ctx.textAlign = 'center';
+        game.ctx.fillText(player.message, game.world.width/2, game.world.height/2);
+    }
 }
