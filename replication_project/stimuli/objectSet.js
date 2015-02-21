@@ -1,7 +1,7 @@
 // Indexed by object set ID
 
 var sunGlasses = {url: 'stimuli/sunglasses.jpg', width: 130, height: 65}
-var glassesCase = {url: 'stimuli/glassesCase.jpg', width : 80, height: 80}
+var glassesCase = {url: 'stimuli/glassesCase.jpg', width : 100, height: 107}
 var soccerBall = {url: 'stimuli/soccerBall.jpg', width: 100, height: 100}
 
 var topBlock = {url: 'stimuli/topBlock.jpg', width: 80, height: 50}
