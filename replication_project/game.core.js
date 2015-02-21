@@ -37,13 +37,14 @@ var game_core = function(game_instance){
 
     //Dimensions of world -- Used in collision detection, etc.
     this.world = {width : 600, height : 600};  // 160cm * 3
-    this.numObjects = 2;
+    this.round_num = 0;
     this.objects = [];
     this.num_rounds = 8;
 
     if(this.server) {
-        this.objects = this.makeObjectSets()[0].objects
-        console.log(this.objects)
+        this.trialList = this.makeTrialList()
+        this.objects = this.trialList[this.round_num].objects
+        this.instructions = this.trialList[this.round_num].instructions
         this.players = [{
             id: this.instance.player_instances[0].id, 
             player: new game_player(this,this.instance.player_instances[0].player)
@@ -65,11 +66,6 @@ var game_player = function( game_instance, player_instance) {
     this.message = '';
     this.id = '';
 }; 
-
-/* The player class
-        A simple class to maintain state of a player on screen,
-        as well as to draw that state when required.
-*/
 
 // server side we set some classes to global types, so that
 // it can use them in other files (specifically, game.server.js)
@@ -125,6 +121,7 @@ var cartesianProductOf = function(listOfLists) {
     }, [ [] ]);
 };
 
+// Returns random set of unique grid locations
 var getLocations = function(numObjects) {
     var possibilities = cartesianProductOf([_.range(1, 5), _.range(1, 5)])
 
@@ -139,7 +136,7 @@ var getLocations = function(numObjects) {
 }
 
 // Randomizes objects in the way given by Keysar et al (2003)
-game_core.prototype.makeObjectSets = function () {
+game_core.prototype.makeTrialList = function () {
     // 1) Choose order of experimental & baseline (no more than 2 in a row)
     var local_this = this;
     var conditionOrder = sampleConditionOrder()
@@ -154,10 +151,11 @@ game_core.prototype.makeObjectSets = function () {
         var objects = item.hasOwnProperty('additional') ? [target, other, item['additional']] : [target,other]
         return _.extend(_.omit(itemList[i], ['distractor', 'alt', 'target', 'additional']), 
             {condition: condition,
+             instructions: item.instructions,
              objects: objects}
             )})
 
-    // 3. assign random initial locations
+    // 3. assign random initial locations (probably won't want to do this in the real exp.)
     var local_this = this;
     _.map(trialList, function(v) {
         var locs = getLocations(v.objects.length)
@@ -199,10 +197,11 @@ game_core.prototype.server_send_update = function(){
             pc : this.player_count,
         };
     _.extend(state, {players: player_packet})
+    _.extend(state, {instructions: this.instructions})
     if(player_packet.length == 2) {
         _.extend(state, {objects: this.objects})
     }
-    
+
     //Send the snapshot to the players
     this.state = state;
     console.log(state)

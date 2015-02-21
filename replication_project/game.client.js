@@ -48,30 +48,30 @@ client_onserverupdate_received = function(data){
 
     // Update client versions of variables with data received from
     // server_send_update function in game.core.js
-    console.log(data.players)
     if(data.players) {
         _.map(_.zip(data.players, game.players),
             function(z){
                 z[1].id = z[0].id
             })
     }
-    console.log(my_role)
-    console.log(game.objects)
-    if ((game.objects != data.objects && my_role == 'director') || game.objects.length == 0) {
+
+    if (game.objects.length == 0) { //(game.objects != data.objects && my_role == 'director') || 
         game.objects = _.map(data.objects, function(obj) {
             var imgObj = new Image()
             console.log(obj)
             imgObj.src = obj.url
-            imgObj.onload = function(){game.ctx.drawImage(imgObj, obj.x, obj.y, obj.width, obj.height)}
+            imgObj.onload = function(){
+                game.ctx.drawImage(imgObj, obj.x, obj.y, obj.width, obj.height)
+                if(my_role == "director") drawInstructions(game)
+            }
             return _.extend(obj, {img: imgObj})
         })
     }
+
+    game.instructions = data.instructions
     game.game_started = data.gs;
     game.players_threshold = data.pt;
     game.player_count = data.pc;
-    game.waiting_remaining = data.wr;
-
-//    console.log(game.objects)
 
     drawScreen(game, game.get_player(my_id))
 }; 
@@ -200,6 +200,7 @@ client_onjoingame = function(num_players, role) {
     // Update w/ role (can only move stuff if agent)
     $('#header').append(role);
     my_role = role;
+    game.get_player(my_id).role = my_role;
     game.get_player(my_id).message = 'Waiting for other player to connect...';
 
     if(role === "matcher") {
@@ -228,7 +229,7 @@ function mouseDownListener(evt) {
     mouseY = (evt.clientY - bRect.top)*(game.viewport.height/bRect.height);
 
     //find which shape was clicked
-    for (i=0; i < game.numObjects; i++) {
+    for (i=0; i < game.objects.length; i++) {
         if  (hitTest(game.objects[i], mouseX, mouseY)) {
             dragging = true;
             if (i > highestIndex) {

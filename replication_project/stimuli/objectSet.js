@@ -52,13 +52,13 @@ var criticalItems = [
 		distractor: glassesCase,
 		alt: soccerBall
 	},{
-		instructions: ["topBlock up"]
+		instructions: ["topBlock up"],
 		criticalInstruction: "topBlock",
 		target: topBlock,
 		distractor: bottomBlock,
 		alt: stapler
 	},{
-		instructions: ["cassetteTape down"]
+		instructions: ["cassetteTape down"],	
 		criticalInstruction: "cassetteTape",
 		target: cassetteTape,
 		distractor: rollOfTape,
