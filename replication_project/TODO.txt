@@ -9,10 +9,10 @@
 	    [x] pre-load images
 	    [x] ignore server updates while dragging (to prevent image from 'jumping' briefly to old positions)
 [] separate out agent/director roles
-	[] give director the instruction prompt
+	[x] give director the instruction prompt
 	    [] hardcode instruction set in file (about 4 per grid)
 	       [] make sure they're consistent w/ initial positions	       
-	    [] overlay arrows on director screen
+	    [x] overlay arrows on director screen
 	       [] hard-code in easy-to-parse way, e.g. "<objectName> <direction>"
 	    [] make interface for 'scripted' instructions
 	       [] hardcode which ones are scripted in object file
@@ -41,7 +41,7 @@
 [] join/leave logistics
    [x] show message when first player joins like "WAITING FOR OTHER PLAYER TO JOIN..."
    [] blink tab when they do join to get attention?
-   [] end game if one player disconnects (vs. re-filling their spot)
+   [x] end game if one player disconnects (vs. re-filling their spot)
 [] have agent position mouse before every instruction... 
     [] little green light that tells director they're okay to go?
 
