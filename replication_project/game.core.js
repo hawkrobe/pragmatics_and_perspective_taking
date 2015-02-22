@@ -37,15 +37,17 @@ var game_core = function(game_instance){
 
     //Dimensions of world -- Used in collision detection, etc.
     this.world = {width : 600, height : 600};  // 160cm * 3
-    this.round_num = 0;
-    this.instruction_num = 0;
-    this.num_rounds = 8;
+    this.roundNum = 0;
+    this.instructionNum = -1;
+    this.numRounds = 8;
     this.objects = [];
     this.instructions = []
+    this.currentDestination = [];
     if(this.server) {
         this.trialList = this.makeTrialList()
-        this.objects = this.trialList[this.round_num].objects
-        this.instructions = this.trialList[this.round_num].instructions
+        this.objects = this.trialList[this.roundNum].objects
+        this.instructions = this.trialList[this.roundNum].instructions
+        this.newInstruction()
         this.players = [{
             id: this.instance.player_instances[0].id, 
             player: new game_player(this,this.instance.player_instances[0].player)
@@ -95,6 +97,28 @@ game_core.prototype.get_active_players = function() {
     return _.without(_.map(this.players, function(p){
         return p.player ? p : null}), null)
 };
+
+game_core.prototype.newInstruction = function() {
+    this.instructionNum += 1;
+    var instruction = this.instructions[this.instructionNum]
+    var item = instruction.split(' ')[0]
+    var dir = instruction.split(' ')[1]
+    var object = _.find(this.objects, function(obj) { return obj.name == item })
+    var dest;
+    switch(dir) {
+        case "down" :
+            dest = [object.gridX, object.gridY + 1]; break;
+        case "up" :
+            dest = [object.gridX, object.gridY - 1]; break;
+        case "left" :
+            dest = [object.gridX - 1, object.gridY]; break;
+        case "right" :
+            dest = [object.gridX + 1, object.gridY]; break;
+    }
+    this.currentDestination = dest;
+    console.log([instruction, dest])
+    this.server_send_update()
+}
 
 var sampleConditionOrder = function() {
     var orderList = []
@@ -161,9 +185,11 @@ game_core.prototype.makeTrialList = function () {
         var locs = getLocations(v.objects.length)
         _.map(_.zip(v.objects, locs), function(pair) {
             var obj = pair[0]
-            var gridCell = local_this.getGridCell(pair[1][0], pair[1][1])
-            obj.x = gridCell.centerX - obj.width/2
-            obj.y = gridCell.centerY - obj.height/2
+            var gridCell = local_this.getPixelFromCell(pair[1][0], pair[1][1])
+            obj.gridX = pair[1][0]
+            obj.gridY = pair[1][1]
+            obj.trueX = gridCell.centerX - obj.width/2
+            obj.trueY = gridCell.centerY - obj.height/2
         })
     })
     return trialList
@@ -171,13 +197,21 @@ game_core.prototype.makeTrialList = function () {
 
 // maps a grid location to the exact pixel coordinates
 // for x = 1,2,3,4; y = 1,2,3,4
-game_core.prototype.getGridCell = function (x, y) {
+game_core.prototype.getPixelFromCell = function (x, y) {
     return {
         centerX: 25 + 68.75 + 137.5 * (x - 1),
         centerY: 25 + 68.75 + 137.5 * (y - 1),
         width: 137.5,
         height: 137.5
     }
+}
+
+// maps a raw pixel coordinate to to the exact pixel coordinates
+// for x = 1,2,3,4; y = 1,2,3,4
+game_core.prototype.getCellFromPixel = function (mx, my) {
+    var cellX = Math.floor((mx - 25) / 137.5) + 1
+    var cellY = Math.floor((my - 25) / 137.5) + 1
+    return [cellX, cellY]
 }
 
 game_core.prototype.server_send_update = function(){
@@ -194,6 +228,8 @@ game_core.prototype.server_send_update = function(){
             gs : this.game_started,                      // true when game's started
             pt : this.players_threshold,
             pc : this.player_count,
+            curr_dest : this.currentDestination,
+            instructionNum : this.instructionNum,
         };
     _.extend(state, {players: player_packet})
     _.extend(state, {instructions: this.instructions})

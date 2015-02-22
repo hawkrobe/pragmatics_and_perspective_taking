@@ -60,14 +60,16 @@ client_onserverupdate_received = function(data){
             var imgObj = new Image()
             imgObj.src = obj.url
             imgObj.onload = function(){
-                game.ctx.drawImage(imgObj, obj.x, obj.y, obj.width, obj.height)
+                game.ctx.drawImage(imgObj, obj.trueX, obj.trueY, obj.width, obj.height)
                 if(my_role == "director") drawInstructions(game)
             }
             return _.extend(obj, {img: imgObj})
         })
     }
 
+    game.currentDestination = data.curr_dest;
     game.instructions = data.instructions
+    game.instructionNum = data.instructionNum;
     game.game_started = data.gs;
     game.players_threshold = data.pt;
     game.player_count = data.pc;
@@ -167,8 +169,8 @@ client_connect_to_server = function(game) {
 
     // Draw objects when someone else moves them
     game.socket.on('objMove', function(data){
-        game.objects[data.i].x = data.x;
-        game.objects[data.i].y = data.y;
+        game.objects[data.i].trueX = data.x;
+        game.objects[data.i].trueY = data.y;
         drawScreen(game, game.get_player(my_id))
     })
 
@@ -233,8 +235,8 @@ function mouseDownListener(evt) {
             dragging = true;
             if (i > highestIndex) {
                 //We will pay attention to the point on the object where the mouse is "holding" the object:
-                dragHoldX = mouseX - game.objects[i].x;
-                dragHoldY = mouseY - game.objects[i].y;
+                dragHoldX = mouseX - game.objects[i].trueX;
+                dragHoldY = mouseY - game.objects[i].trueY;
                 highestIndex = i;
                 dragIndex = i;
             }
@@ -256,10 +258,37 @@ function mouseDownListener(evt) {
     return false;
 }
 
-function mouseUpListener(evt) {
+function mouseUpListener(evt) {    
     game.viewport.addEventListener("mousedown", mouseDownListener, false);
     window.removeEventListener("mouseup", mouseUpListener, false);
     if (dragging) {
+        var bRect = game.viewport.getBoundingClientRect();
+        dropX = (evt.clientX - bRect.left)*(game.viewport.width/bRect.width);
+        dropY = (evt.clientY - bRect.top)*(game.viewport.height/bRect.height);
+        var obj = game.objects[dragIndex]
+        var cell = game.getCellFromPixel(dropX, dropY)
+        if (_.isEqual(cell, game.currentDestination)) {
+            console.log("match!")
+            obj.gridX = cell[0]
+            obj.gridY = cell[1]
+            obj.trueX = game.getPixelFromCell(cell[0], cell[1]).centerX - obj.width/2
+            obj.trueY = game.getPixelFromCell(cell[0], cell[1]).centerY - obj.height/2
+            game.socket.send("correctDrop")
+
+            // if(game.instructionNum === game.instructions.length) {
+            //     game.newRound()
+            // }
+        } else {
+            // send error message 
+            // log error
+            // move item back to original location
+            obj.trueX = game.getPixelFromCell(obj.gridX, obj.gridY).centerX - obj.width/2
+            obj.trueY = game.getPixelFromCell(obj.gridX, obj.gridY).centerY - obj.height/2
+
+        }
+        // Tell server where you dropped it
+        game.socket.send("objMove." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY))
+        drawScreen(game, game.get_player(my_id))
         dragging = false;
         window.removeEventListener("mousemove", mouseMoveListener, false);
     }
@@ -285,17 +314,17 @@ function mouseMoveListener(evt) {
 
     // Update object locally
     var obj = game.objects[dragIndex]
-    obj.x = Math.round(posX);
-    obj.y = Math.round(posY);
-//    obj.img.onload = function(){game.ctx.drawImage(obj.img, obj.x, obj.y, obj.width, obj.height)}
+    obj.trueX = Math.round(posX);
+    obj.trueY = Math.round(posY);
 
+    // Tell server about it
     game.socket.send("objMove." + dragIndex + "." + Math.round(posX) + "." + Math.round(posY))
     drawScreen(game, game.get_player(my_id));
 }
 
 function hitTest(shape,mx,my) {
-    var dx = mx - shape.x;
-    var dy = my - shape.y;
+    var dx = mx - shape.trueX;
+    var dy = my - shape.trueY;
     return (0 < dx) && (dx < shape.width) && (0 < dy) && (dy < shape.height)
 }
 

@@ -10,31 +10,37 @@ var drawGrid = function(game, occludedList){
     var bw = cw - (p*2) ;
     var bh = ch - (p*2) ;
 
+    // vertical lines
     for (var x = 0; x <= bw; x += Math.floor((cw - 2*p) / 4)) {
         game.ctx.moveTo(0.5 + x + p, p);
-        game.ctx.lineTo(0.5 + x + p, bh + p);
-    }
+        game.ctx.lineTo(0.5 + x + p, bh + p);}
 
+    // horizontal lines
     for (var x = 0; x <= bh; x += Math.floor((ch - 2*p) / 4)) {
         game.ctx.moveTo(p, 0.5 + x + p);
-        game.ctx.lineTo(bw + p, 0.5 + x + p);
-    }
+        game.ctx.lineTo(bw + p, 0.5 + x + p);}
+
     game.ctx.lineWidth = 1;
     game.ctx.strokeStyle = "white";
     game.ctx.stroke();
 }
 
 var drawObjects = function(game) {
-    var i;
     _.map(game.objects, function(obj) { 
-        game.ctx.drawImage(obj.img, obj.x, obj.y, obj.width, obj.height)
+        game.ctx.drawImage(obj.img, obj.trueX, obj.trueY, obj.width, obj.height)
     })
 }
 
 var drawInstructions = function(game) {
-    var origin = game.getGridCell(1,1)
-    var dest = game.getGridCell(1,2)
-    drawArrow(game, origin.centerX, origin.centerY, dest.centerX, dest.centerY, 50)
+    console.log(game.instructionNum)
+    var instruction = game.instructions[game.instructionNum]
+    var item = instruction.split(' ')[0]
+    var dir = instruction.split(' ')[1]
+    var object = _.find(game.objects, function(obj) { return obj.name == item })
+    var origin = game.getPixelFromCell(object.gridX,object.gridY)
+    var dest = game.getPixelFromCell(game.currentDestination[0], game.currentDestination[1])
+    drawArrow(game, origin.centerX, origin.centerY, 
+              dest.centerX, dest.centerY, 50)
     console.log("calling instructions")
     console.log(game.instructions)
 }
@@ -46,11 +52,9 @@ var drawScreen = function(game, player) {
     if (game.players.length == 2) {
         drawGrid(game);
         drawObjects(game);   
-        console.log(player.role)
         if(player.role == "director")
             drawInstructions(game)
     } else {
-        console.log("drawing message?")
         // Draw message in center (for countdown, e.g.)
         game.ctx.font = "bold 23pt Helvetica";
         game.ctx.fillStyle = 'red';
@@ -115,6 +119,7 @@ var drawHead = function(game,x0,y0,x1,y1,x2,y2){
   game.ctx.moveTo(x0,y0);
   game.ctx.lineTo(x1,y1);
   game.ctx.lineTo(x2,y2);
+
   //filled head, add the bottom as a quadraticCurveTo curve and fill
   var cpx=(x0+x1+x2)/3;
   var cpy=(y0+y1+y2)/3;

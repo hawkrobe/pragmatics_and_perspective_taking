@@ -36,37 +36,44 @@ game_server.server_onMessage = function(client,message) {
     console.log("received message: " + message)
     //Cut the message up into sub components
     var message_parts = message.split('.');
+
     //The first is always the type of message
     var message_type = message_parts[0];
-    //console.log("received message: " + message)
+
     //Extract important variables
     var all = client.game.gamecore.get_active_players();
     var target = client.game.gamecore.get_player(client.userid);
     var others = client.game.gamecore.get_others(client.userid);
-    if(message_type == 'objMove') {    // Client is changing angle
-        console.log(message_parts)
-        var obj = client.game.gamecore.objects[message_parts[1]]
-        obj.x = parseInt(message_parts[2])
-        obj.y = parseInt(message_parts[3])
-        _.map(others, function(p) {
-          p.player.instance.emit('objMove', {i: message_parts[1], x: message_parts[2], y: message_parts[3]})
-        })
-    } else if (message_type == 'chatMessage') {
-        var date = message_parts[1]
-        var msg = message_parts[2].replace(/-/g,'.')
-        if(client.game.player_count == 2)
-            client.game.gamecore.messageStream.write(date + ',' + client.role + ',"' + msg + '"\n')
-        _.map(all, function(p){
-            p.player.instance.emit( 'chatMessage', {user: client.userid, msg: msg})})
-    } else if (message_type == 'update_mouse') {
-        var date = message_parts[1]
-        var x = message_parts[2]
-        var y = message_parts[3]
-        client.game.gamecore.mouseDataStream.write(String(date + ',' + x + ',' + y ) + "\n",
-            function (err) {if(err) throw err;});    
-    } else if (message_type == "h") { // Receive message when browser focus shifts
-        target.visible = message_parts[1];
-    } 
+    switch(message_type) {
+        case 'objMove' :    // Client is changing angle
+            var obj = client.game.gamecore.objects[message_parts[1]]
+            obj.trueX = parseInt(message_parts[2])
+            obj.trueY = parseInt(message_parts[3])
+            _.map(others, function(p) {
+              p.player.instance.emit('objMove', {i: message_parts[1], x: message_parts[2], y: message_parts[3]})
+            })
+            break;
+        case 'correctDrop' :
+            client.game.gamecore.newInstruction(); break;
+        case 'chatMessage' :
+            var date = message_parts[1]
+            var msg = message_parts[2].replace(/-/g,'.')
+            if(client.game.player_count == 2)
+                client.game.gamecore.messageStream.write(date + ',' + client.role + ',"' + msg + '"\n')
+            _.map(all, function(p){
+                p.player.instance.emit( 'chatMessage', {user: client.userid, msg: msg})})
+            break;
+        case 'update_mouse' :
+            var date = message_parts[1]
+            var x = message_parts[2]
+            var y = message_parts[3]
+            client.game.gamecore.mouseDataStream.write(String(date + ',' + x + ',' + y ) + "\n",
+                function (err) {if(err) throw err;}); 
+            break;
+        case 'h' : // Receive message when browser focus shifts
+            target.visible = message_parts[1];
+            break;
+        }
 };
 
 /* 

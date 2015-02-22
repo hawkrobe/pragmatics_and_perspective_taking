@@ -1,6 +1,6 @@
 // Indexed by object set ID
 
-var sunGlasses = {url: 'stimuli/sunglasses.jpg', name: "sunglasses", 
+var sunGlasses = {url: 'stimuli/sunglasses.jpg', name: "sunGlasses", 
 	scriptedInstruction: "the glasses", width: 130, height: 65}
 var glassesCase = {url: 'stimuli/glassesCase.png', name: "glassesCase", width : 100, height: 107}
 var soccerBall = {url: 'stimuli/soccerBall.jpg', name: "soccerBall", width: 100, height: 100}
