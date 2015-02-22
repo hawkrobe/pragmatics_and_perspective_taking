@@ -55,7 +55,13 @@ client_onserverupdate_received = function(data){
             })
     }
 
-    if (game.objects.length == 0) { //(game.objects != data.objects && my_role == 'director') || 
+    var dataNames = _.map(data.objects, 
+        function(e){ return e.name})
+    var localNames = _.map(game.objects,
+        function(e){return e.name})
+    console.log(dataNames)
+    console.log(localNames)
+    if (game.objects.length == 0 || !_.isEqual(dataNames, localNames)) { //(game.objects != data.objects && my_role == 'director') || 
         game.objects = _.map(data.objects, function(obj) {
             var imgObj = new Image()
             imgObj.src = obj.url
@@ -74,6 +80,8 @@ client_onserverupdate_received = function(data){
     game.players_threshold = data.pt;
     game.player_count = data.pc;
 
+    console.log("new objects are... ")
+    console.log(game.objects)
     drawScreen(game, game.get_player(my_id))
 }; 
 
@@ -274,13 +282,8 @@ function mouseUpListener(evt) {
             obj.trueX = game.getPixelFromCell(cell[0], cell[1]).centerX - obj.width/2
             obj.trueY = game.getPixelFromCell(cell[0], cell[1]).centerY - obj.height/2
             game.socket.send("correctDrop")
-
-            // if(game.instructionNum === game.instructions.length) {
-            //     game.newRound()
-            // }
         } else {
-            // send error message 
-            // log error
+            // TODO: send error message to server (where it logs error)
             // move item back to original location
             obj.trueX = game.getPixelFromCell(obj.gridX, obj.gridY).centerX - obj.width/2
             obj.trueY = game.getPixelFromCell(obj.gridX, obj.gridY).centerY - obj.height/2

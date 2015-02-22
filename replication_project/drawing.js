@@ -34,6 +34,7 @@ var drawObjects = function(game) {
 var drawInstructions = function(game) {
     console.log(game.instructionNum)
     var instruction = game.instructions[game.instructionNum]
+    console.log()
     var item = instruction.split(' ')[0]
     var dir = instruction.split(' ')[1]
     var object = _.find(game.objects, function(obj) { return obj.name == item })
@@ -41,8 +42,6 @@ var drawInstructions = function(game) {
     var dest = game.getPixelFromCell(game.currentDestination[0], game.currentDestination[1])
     drawArrow(game, origin.centerX, origin.centerY, 
               dest.centerX, dest.centerY, 50)
-    console.log("calling instructions")
-    console.log(game.instructions)
 }
 
 var drawScreen = function(game, player) {

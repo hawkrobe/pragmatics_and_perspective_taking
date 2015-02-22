@@ -37,7 +37,7 @@ var game_core = function(game_instance){
 
     //Dimensions of world -- Used in collision detection, etc.
     this.world = {width : 600, height : 600};  // 160cm * 3
-    this.roundNum = 0;
+    this.roundNum = -1;
     this.instructionNum = -1;
     this.numRounds = 8;
     this.objects = [];
@@ -45,9 +45,7 @@ var game_core = function(game_instance){
     this.currentDestination = [];
     if(this.server) {
         this.trialList = this.makeTrialList()
-        this.objects = this.trialList[this.roundNum].objects
-        this.instructions = this.trialList[this.roundNum].instructions
-        this.newInstruction()
+        this.newRound()
         this.players = [{
             id: this.instance.player_instances[0].id, 
             player: new game_player(this,this.instance.player_instances[0].player)
@@ -97,6 +95,15 @@ game_core.prototype.get_active_players = function() {
     return _.without(_.map(this.players, function(p){
         return p.player ? p : null}), null)
 };
+
+game_core.prototype.newRound = function() {
+    console.log("new round!")
+    this.roundNum += 1;
+    this.objects = this.trialList[this.roundNum].objects
+    this.instructions = this.trialList[this.roundNum].instructions
+    this.instructionNum = -1;
+    this.newInstruction()
+}
 
 game_core.prototype.newInstruction = function() {
     this.instructionNum += 1;
@@ -166,13 +173,13 @@ game_core.prototype.makeTrialList = function () {
     var conditionOrder = sampleConditionOrder()
 
     // 2) Assign target & distractor based on condition
-    var itemList = _.shuffle(objectSet.criticalItems)
+    var itemList = objectSet.criticalItems//_.shuffle(objectSet.criticalItems)
     var trialList = _.map(_.range(8), function(i) {
         var condition = conditionOrder[i];
         var item = itemList[i];
         var other = condition === "exp" ? item['distractor'] : item['alt']
         var target = _.extend(item['target'], {target: true})
-        var objects = item.hasOwnProperty('additional') ? [target, other, item['additional']] : [target,other]
+        var objects = item.otherObjects.concat([target, other])
         return _.extend(_.omit(itemList[i], ['distractor', 'alt', 'target', 'additional']), 
             {condition: condition,
              instructions: item.instructions,
@@ -185,9 +192,15 @@ game_core.prototype.makeTrialList = function () {
         var locs = getLocations(v.objects.length)
         _.map(_.zip(v.objects, locs), function(pair) {
             var obj = pair[0]
-            var gridCell = local_this.getPixelFromCell(pair[1][0], pair[1][1])
-            obj.gridX = pair[1][0]
-            obj.gridY = pair[1][1]
+            if(obj.hasOwnProperty('initialLoc')){
+                var gridCell = local_this.getPixelFromCell(obj.initialLoc[1], obj.initialLoc[0])
+                obj.gridX = obj.initialLoc[1]
+                obj.gridY = obj.initialLoc[0]
+            } else {
+                var gridCell = local_this.getPixelFromCell(pair[1][0], pair[1][1])
+                obj.gridX = pair[1][0]
+                obj.gridY = pair[1][1]
+            }
             obj.trueX = gridCell.centerX - obj.width/2
             obj.trueY = gridCell.centerY - obj.height/2
         })

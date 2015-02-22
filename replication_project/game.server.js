@@ -54,7 +54,12 @@ game_server.server_onMessage = function(client,message) {
             })
             break;
         case 'correctDrop' :
-            client.game.gamecore.newInstruction(); break;
+            if(client.game.gamecore.instructionNum + 1 < client.game.gamecore.instructions.length) {
+                client.game.gamecore.newInstruction();
+            } else {
+                client.game.gamecore.newRound()
+            }
+            break;
         case 'chatMessage' :
             var date = message_parts[1]
             var msg = message_parts[2].replace(/-/g,'.')
