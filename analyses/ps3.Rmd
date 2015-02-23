@@ -1,0 +1,140 @@
+---
+title: 'Psych 254 W15 PS #3'
+author: "Mike Frank"
+date: "February 22, 2015"
+output: html_document
+---
+
+This is problem set #3, in which we want you to integrate your knowledge of data wrangling with some basic simulation skills and some linear modeling.
+
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+
+Part 1: Basic simulation and NHST
+=================================
+
+Let's start by convincing ourselves that t-tests have the appropriate false positive rate. Run 10,000 t-tests with standard, normally-distributed data from a made up 30-person, single-measurement experiment (the command for sampling from a normal distribution is `rnorm`). What's the mean number of "significant" results?
+
+First do this using a `for` loop.
+
+```{r}
+```
+
+Next, do this using the `replicate` function:
+
+```{r}
+```
+
+Ok, that was a bit boring. Let's try something moderately more interesting - let's implement a p-value sniffing simulation, in the style of Simons, Nelson, & Simonsohn (2011).
+
+Consider this scenario: you have done an experiment, again with 30 participants (one observation each, just for simplicity). The question is whether their performance is above chance. You aren't going to check the p-value every trial, but let's say you run 30 - then if the p-value is within the range p < .25 and p > .05, you optionally run 30 more and add those data, then test again. But if the original p value is < .05, you call it a day, and if the original is > .25, you also stop.  
+
+First, write a function that implements this sampling regime.
+
+```{r}
+double.sample <- function () {
+}
+```
+
+Now call this function 10k times and find out what happens. 
+
+```{r}
+```
+
+Is there an inflation of false positives? How bad is it?
+
+Now modify this code so that you can investigate this "double the sample" rule in a bit more depth. Let's see what happens when you double the sample ANY time p > .05 (not just when p < .25), or when you do it only if p < .5 or < .75. How do these choices affect the false positive rate?
+
+HINT: Try to do this by making the function `double.sample` take the upper p value as an argument, so that you can pass this through dplyr.
+
+HINT 2: You may need more samples. Find out by looking at how the results change from run to run.
+
+```{r}
+```
+
+What do you conclude on the basis of this simulation? How bad is this kind of data-dependent policy?
+
+
+Part 2: The Linear Model
+========================
+
+2A: Basic Linear Modeling
+-------------------------
+
+Let's use the `ToothGrowth` dataset, on guineapig teeth based on orange juice
+and vitamin C. This is super simple. (Try `?ToothGrowth`).
+
+First plot the data, we'll use `qplot` to understand how `len` (tooth length) depends on `dose` (amount of Vitamin C) and `supp` (delivery method).
+
+```{r}
+```
+
+So now you see what's going on. 
+
+Next, always make a histogram of the DV before making a linear model! This reveals the distribution and can be helpful in choosing your model type.
+
+```{r}
+```
+
+Now make a linear model of tooth lengths using `lm`. Try making one with main effects and interactions and another with just main  effects. Make sure to assign them to variables so that you can get them later.
+
+```{r}
+```
+
+Now try taking out the intercept, using a -1 term in the formula. what does this do?
+
+```{r}
+```
+
+Thought question: Take a moment to interpret the coefficients of the model. 
+Q1 - What are the units?
+Q2 - How does the interaction relate to the plot?
+Q3 - Should there be an interaction in the model? What does it mean? How important is it?
+
+Now make predictions from the model you like the best. What should happen with
+doses of 0, 1.5, 2.5, and 10 under both supplements? 
+
+HINT: use the `predict` function ...
+
+HINT 2: you will have to make a dataframe to do the prediction with, so use something like `data.frame(dose=...)`.
+
+```{r}
+```
+
+Now plot the residuals from the original model. How do they look?
+HINT: `?resid`
+
+```{r}
+```
+
+
+BONUS: test them for normality of distribution using a quantile-quantile plot.
+
+HINT: `?qqplot` and `?qqnorm`
+
+```{r}
+```
+
+
+2B: Exploratory Linear Modeling
+-------------------------------
+
+What the heck is going on? Load data from Frank, Vul, Saxe (2011, Infancy), a study in which we measured infants' looking to hands in moving scenes. There were infants from 3 months all the way to about two years, and there were two movie conditions (`Faces_Medium`, in which kids played on a white background, and `Faces_Plus`, in which the backgrounds were more complex and the people in the videos were both kids and adults). Forgive our bad naming conventions.
+
+Try to figure out what the most reasonable linear model of the data is.
+
+```{r}
+d <- read.csv("../data/FVS2011-hands.csv")
+
+```
+
+Plot that model on the same plot as the data.
+
+HINT: you can do this either using `predict` or (if you are feeling confident of your understanding of the models) using the built-in linear models in `ggplot`'s `geom_smooth`. 
+
+```{r}
+```
+
+What do you conclude from this pattern of data?
