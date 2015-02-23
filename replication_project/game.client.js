@@ -25,8 +25,8 @@ var dragging;
 client_ondisconnect = function(data) {
     // Redirect to exit survey
     console.log("server booted")
-    // var URL = 'http://projects.csail.mit.edu/ci/turk/forms/end.html?id=' + my_id;
-    // window.location.replace(URL);
+    var URL = 'http://projects.csail.mit.edu/ci/turk/forms/end.html?id=' + my_id;
+    window.location.replace(URL);
 };
 
 
