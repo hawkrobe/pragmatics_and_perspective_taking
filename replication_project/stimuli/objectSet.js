@@ -9,7 +9,7 @@ var sunGlasses = {
 	scriptedInstruction: "the glasses"}
 var glassesCase = {
 	url: 'stimuli/glassesCase.png', name: "glassesCase", width : 100, height: 107,
-	instruction: "", initialLoc: [1,4]}
+	instruction: "", initialLoc: [2,2]}
 var soccerBall = {
 	url: 'stimuli/soccerBall.jpg', name: "soccerBall", width: 100, height: 100,
 	instruction: "", initialLoc: glassesCase.initialLoc}
@@ -29,7 +29,7 @@ var watch = {
 // BLOCK 2
 var middleBlock = {
 	url: 'stimuli/middleBlock.png', name: "middleBlock", width: 80, height: 80,
-	instruction: "middleBlock down", initialLoc: [3,2],
+	instruction: "middleBlock left", initialLoc: [3,2],
 	scriptedInstruction: "the bottom block", }
 var bottomBlock = {
 	url: 'stimuli/bottomBlock.jpg', name: "bottomBlock", width: 80, height: 80,
@@ -48,12 +48,12 @@ var wrench = {
 	instruction: "wrench left", initialLoc: [1,3]}
 var coffeeMug = {
 	url: 'stimuli/coffeeMug.png', name: 'coffeeMug', width: 130, height: 122,
-	instruction: "coffeeMug down", initialLoc: [2,1]}
+	instruction: "coffeeMug right", initialLoc: [2,1]}
 
 // BLOCK 3
 var cassetteTape = {
 	url: 'stimuli/cassetteTape.jpg', name: "cassetteTape",  width: 87.5, height: 55,
-	instruction: "cassetteTape left", initialLoc: [1,3],
+	instruction: "cassetteTape down", initialLoc: [1,3],
 	scriptedInstruction: "the tape",}
 var rollOfTape = {
 	url: 'stimuli/rollOfTape.jpg', name: "rollOfTape", width: 83, height: 83,
@@ -69,7 +69,7 @@ var butterfly = {
 	instruction: "", initialLoc: [4,4]}
 var barOfSoap = {
 	url: 'stimuli/barOfSoap.jpg', name: 'barOfSoap', width: 130, height: 130,
-	instruction: "barOfSoap up", initialLoc: [3,4]}
+	instruction: "barOfSoap left", initialLoc: [3,4]}
 var knife = {url: 'stimuli/knife.png', name: 'knife', width: 130, height: 130,
 	instruction: "knife down", initialLoc: [3,3]}
 
@@ -93,7 +93,7 @@ var chair = {
 	instruction: "chair left", initialLoc: [2,4]}
 var waterBottle = {
 	url: 'stimuli/waterBottle.png', name: 'waterBottle', width: 43, height: 130,
-	instruction: "waterBottle right", initialLoc: [4,1]}
+	instruction: "waterBottle right", initialLoc: [2,1]}
 var carrot = {
 	url: 'stimuli/carrot.png', name: 'carrot', width: 130, height: 77,
 	instruction: "carrot up", initialLoc: [4,2] } 
@@ -182,7 +182,7 @@ var magnet = {
 
 var computerMouse = {
 	url: 'stimuli/computerMouse.png', name: "computerMouse", width:130, height: 112,
-	instruction: "computerMouse left", initialLoc: [3,3],
+	instruction: "computerMouse up", initialLoc: [3,3],
 	scriptedInstruction: "the mouse", }
 var toyMouse = {
 	url: 'stimuli/toyMouse.png', name: "toyMouse", width:130, height: 109,
@@ -221,8 +221,8 @@ var criticalItems = [
 		alt: stapler,
 		otherObjects: [binoculars, wrench, topBlock, coffeeMug]
 	},{
-		instructions: [scissors.instruction, barOfSoap.instruction,
-		               knife.instruction, cassetteTape.instruction],
+		instructions: [scissors.instruction, knife.instruction,
+		                barOfSoap.instruction, cassetteTape.instruction],
 		criticalInstruction: "cassetteTape",
 		target: cassetteTape,
 		distractor: rollOfTape,
