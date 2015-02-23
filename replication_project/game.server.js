@@ -47,6 +47,7 @@ game_server.server_onMessage = function(client,message) {
     switch(message_type) {
         case 'objMove' :    // Client is changing angle
             var obj = client.game.gamecore.objects[message_parts[1]]
+            console.log("moving " + obj.name)
             obj.trueX = parseInt(message_parts[2])
             obj.trueY = parseInt(message_parts[3])
             _.map(others, function(p) {
@@ -54,6 +55,13 @@ game_server.server_onMessage = function(client,message) {
             })
             break;
         case 'correctDrop' :
+            var obj = client.game.gamecore.objects[message_parts[1]]
+            console.log("dropping " + obj.name)
+            obj.trueX = parseInt(message_parts[2])
+            obj.trueY = parseInt(message_parts[3])
+            _.map(others, function(p) {
+                p.player.instance.emit('objMove', {i: message_parts[1], x: message_parts[2], y: message_parts[3]})
+            })
             if(client.game.gamecore.instructionNum + 1 < client.game.gamecore.instructions.length) {
                 client.game.gamecore.newInstruction();
             } else {

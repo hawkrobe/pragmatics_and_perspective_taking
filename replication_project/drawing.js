@@ -10,6 +10,8 @@ var drawGrid = function(game, occludedList){
     var bw = cw - (p*2) ;
     var bh = ch - (p*2) ;
 
+    game.ctx.beginPath();
+
     // vertical lines
     for (var x = 0; x <= bw; x += Math.floor((cw - 2*p) / 4)) {
         game.ctx.moveTo(0.5 + x + p, p);
@@ -21,7 +23,32 @@ var drawGrid = function(game, occludedList){
         game.ctx.lineTo(bw + p, 0.5 + x + p);}
 
     game.ctx.lineWidth = 1;
-    game.ctx.strokeStyle = "white";
+    game.ctx.strokeStyle = "black";
+    game.ctx.stroke();
+
+    // occluded cells...
+    drawOccludedCell(4,4)
+    drawOccludedCell(2,2)
+    drawOccludedCell(2,3)
+    drawOccludedCell(3,1)
+    drawOccludedCell(1,4)
+}
+
+var drawOccludedCell = function(x, y) {
+    var cell = game.getPixelFromCell(y,x)
+    var topLeft = [cell.centerX - cell.width/2, cell.centerY - cell.height/2]
+    var topRight = [cell.centerX + cell.width/2, topLeft[1]]
+    var bottomLeft = [topLeft[0], cell.centerY + cell.height/2]
+    var bottomRight = [topRight[0], bottomLeft[1]]
+    game.ctx.beginPath();
+    game.ctx.moveTo(topLeft[0], topLeft[1])
+    game.ctx.lineTo(topRight[0], topRight[1])
+    game.ctx.lineTo(bottomRight[0], bottomRight[1])
+    game.ctx.lineTo(bottomLeft[0], bottomLeft[1])
+    game.ctx.lineTo(topLeft[0], topLeft[1])
+    game.ctx.fillStyle = '#000000';
+    game.ctx.fill();
+    game.ctx.strokeStyle = '#FFFFFF'
     game.ctx.stroke();
 }
 
@@ -32,9 +59,7 @@ var drawObjects = function(game) {
 }
 
 var drawInstructions = function(game) {
-    console.log(game.instructionNum)
     var instruction = game.instructions[game.instructionNum]
-    console.log()
     var item = instruction.split(' ')[0]
     var dir = instruction.split(' ')[1]
     var object = _.find(game.objects, function(obj) { return obj.name == item })
@@ -46,7 +71,7 @@ var drawInstructions = function(game) {
 
 var drawScreen = function(game, player) {
     //bg
-    game.ctx.fillStyle = "#000000";
+    game.ctx.fillStyle = "#FFFFFF";
     game.ctx.fillRect(0,0,game.viewport.width,game.viewport.height);
     if (game.players.length == 2) {
         drawGrid(game);
@@ -113,7 +138,7 @@ var drawHead = function(game,x0,y0,x1,y1,x2,y2){
   var twoPI=2*Math.PI;
 
   // all cases do this.
-  game.ctx.save();
+//  game.ctx.save();
   game.ctx.beginPath();
   game.ctx.moveTo(x0,y0);
   game.ctx.lineTo(x1,y1);
@@ -125,5 +150,5 @@ var drawHead = function(game,x0,y0,x1,y1,x2,y2){
   game.ctx.quadraticCurveTo(cpx,cpy,x0,y0);
   game.ctx.fillStyle = '#FF0000';
   game.ctx.fill();
-  game.ctx.restore();
+//  game.ctx.restore();
 };

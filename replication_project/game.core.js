@@ -101,6 +101,8 @@ game_core.prototype.newRound = function() {
     this.roundNum += 1;
     this.objects = this.trialList[this.roundNum].objects
     this.instructions = this.trialList[this.roundNum].instructions
+    console.log(this.roundNum)
+    console.log(this.instructions)
     this.instructionNum = -1;
     this.newInstruction()
 }
@@ -108,6 +110,7 @@ game_core.prototype.newRound = function() {
 game_core.prototype.newInstruction = function() {
     this.instructionNum += 1;
     var instruction = this.instructions[this.instructionNum]
+    console.log(instruction)
     var item = instruction.split(' ')[0]
     var dir = instruction.split(' ')[1]
     var object = _.find(this.objects, function(obj) { return obj.name == item })
@@ -122,14 +125,19 @@ game_core.prototype.newInstruction = function() {
         case "right" :
             dest = [object.gridX + 1, object.gridY]; break;
     }
+    var local_game = this;
+    // _.map(local_game.get_active_players(), function(p){
+    //     p.player.instance.emit('newDestination', {objects: local_game.objects, dest : dest});
+    // })
+
     this.currentDestination = dest;
-    console.log([instruction, dest])
     this.server_send_update()
 }
 
 var sampleConditionOrder = function() {
     var orderList = []
-    var options = ['exp', 'base']
+    var options = ['exp', 'base'] 
+
     _.map(_.range(8), function(i){
         var candidate = _.sample(options)
         // If already two in a row...
@@ -173,14 +181,14 @@ game_core.prototype.makeTrialList = function () {
     var conditionOrder = sampleConditionOrder()
 
     // 2) Assign target & distractor based on condition
-    var itemList = objectSet.criticalItems//_.shuffle(objectSet.criticalItems)
+    var itemList = JSON.parse(JSON.stringify(objectSet.criticalItems));//_.shuffle(objectSet.criticalItems)
     var trialList = _.map(_.range(8), function(i) {
         var condition = conditionOrder[i];
         var item = itemList[i];
         var other = condition === "exp" ? item['distractor'] : item['alt']
         var target = _.extend(item['target'], {target: true})
         var objects = item.otherObjects.concat([target, other])
-        return _.extend(_.omit(itemList[i], ['distractor', 'alt', 'target', 'additional']), 
+        return _.extend(_.omit(itemList[i], ['distractor', 'alt', 'target']), 
             {condition: condition,
              instructions: item.instructions,
              objects: objects}
@@ -205,6 +213,7 @@ game_core.prototype.makeTrialList = function () {
             obj.trueY = gridCell.centerY - obj.height/2
         })
     })
+    console.log(trialList[1].objects)
     return trialList
 }
 

@@ -25,8 +25,8 @@ var dragging;
 client_ondisconnect = function(data) {
     // Redirect to exit survey
     console.log("server booted")
-	var URL = 'http://projects.csail.mit.edu/ci/turk/forms/end.html?id=' + my_id;
-    window.location.replace(URL);
+    // var URL = 'http://projects.csail.mit.edu/ci/turk/forms/end.html?id=' + my_id;
+    // window.location.replace(URL);
 };
 
 
@@ -59,19 +59,26 @@ client_onserverupdate_received = function(data){
         function(e){ return e.name})
     var localNames = _.map(game.objects,
         function(e){return e.name})
-    console.log(dataNames)
-    console.log(localNames)
     if (game.objects.length == 0 || !_.isEqual(dataNames, localNames)) { //(game.objects != data.objects && my_role == 'director') || 
         game.objects = _.map(data.objects, function(obj) {
             var imgObj = new Image()
             imgObj.src = obj.url
             imgObj.onload = function(){
-                game.ctx.drawImage(imgObj, obj.trueX, obj.trueY, obj.width, obj.height)
-                if(my_role == "director") drawInstructions(game)
+                game.ctx.drawImage(imgObj, parseInt(obj.trueX), parseInt(obj.trueY), obj.width, obj.height)
+               if(my_role == "director") 
+                   drawScreen(game, game.get_player(my_id))
             }
-            return _.extend(obj, {img: imgObj})
+            return _.extend(_.omit(obj, ['trueX', 'trueY']),
+                {img: imgObj, trueX : obj.trueX, trueY : obj.trueY})
         })
     }
+//    } else {
+        _.map(game.objects, function(obj) {
+            data_obj = _.find(data.objects, function(o) {return o.name == obj.name})
+            obj.trueX = data_obj.trueX;
+            obj.trueY = data_obj.trueY;
+        })
+    // }
 
     game.currentDestination = data.curr_dest;
     game.instructions = data.instructions
@@ -79,9 +86,11 @@ client_onserverupdate_received = function(data){
     game.game_started = data.gs;
     game.players_threshold = data.pt;
     game.player_count = data.pc;
-
-    console.log("new objects are... ")
+    console.log("official objects data")
+    console.log(data.objects)
+    console.log("updated objects info to...")
     console.log(game.objects)
+
     drawScreen(game, game.get_player(my_id))
 }; 
 
@@ -219,6 +228,12 @@ client_onjoingame = function(num_players, role) {
             game.socket.send('update_mouse.' + Date.now() + '.' + Math.floor(x) + '.' + Math.floor(y));
         });
         game.viewport.addEventListener("mousedown", mouseDownListener, false);
+    } else {
+        game.socket.on('newDestination', function(data){
+            game.currentDestination = data.dest;
+            game.objects = data.objects;
+            drawScreen(game, game.get_player(my_id))
+        })
     }
 }; 
 
@@ -275,23 +290,23 @@ function mouseUpListener(evt) {
         dropY = (evt.clientY - bRect.top)*(game.viewport.height/bRect.height);
         var obj = game.objects[dragIndex]
         var cell = game.getCellFromPixel(dropX, dropY)
-        if (_.isEqual(cell, game.currentDestination)) {
-            console.log("match!")
+        if (_.isEqual(obj.name, game.instructions[game.instructionNum].split(' ')[0])
+            && _.isEqual(cell, game.currentDestination)) {
+            // center it
             obj.gridX = cell[0]
             obj.gridY = cell[1]
             obj.trueX = game.getPixelFromCell(cell[0], cell[1]).centerX - obj.width/2
             obj.trueY = game.getPixelFromCell(cell[0], cell[1]).centerY - obj.height/2
-            game.socket.send("correctDrop")
+            game.socket.send("correctDrop." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY))
         } else {
             // TODO: send error message to server (where it logs error)
             // move item back to original location
             obj.trueX = game.getPixelFromCell(obj.gridX, obj.gridY).centerX - obj.width/2
             obj.trueY = game.getPixelFromCell(obj.gridX, obj.gridY).centerY - obj.height/2
-
+            game.socket.send("objMove." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY))
         }
         // Tell server where you dropped it
-        game.socket.send("objMove." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY))
-        drawScreen(game, game.get_player(my_id))
+       drawScreen(game, game.get_player(my_id))
         dragging = false;
         window.removeEventListener("mousemove", mouseMoveListener, false);
     }
