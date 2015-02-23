@@ -24,7 +24,7 @@ var barrel = {
 	instruction: "barrel down", initialLoc : [2,4]}
 var watch = {
 	url: 'stimuli/watch.png', name: 'watch', width: 130, height: 84,
-	instruction: "", initialLoc: [1,1]}
+	instruction: "", initialLoc: [3,1]}
 
 // BLOCK 2
 var middleBlock = {
@@ -70,43 +70,138 @@ var butterfly = {
 var barOfSoap = {
 	url: 'stimuli/barOfSoap.jpg', name: 'barOfSoap', width: 130, height: 130,
 	instruction: "barOfSoap up", initialLoc: [3,4]}
-var knife = {url: 'stimuli/knife.jpg', name: 'knife', width: 130, height: 130,
+var knife = {url: 'stimuli/knife.png', name: 'knife', width: 130, height: 130,
 	instruction: "knife down", initialLoc: [3,3]}
 
-var mediumMeasuringCup = {url: 'stimuli/mediumMeasuringCup.jpg', name: "mediumMeasuringCup", width : 100, height: 100,
-	instruction: "mediumMeasuringCup left", 
+// BLOCK 4
+
+var mediumMeasuringCup = {
+	url: 'stimuli/mediumMeasuringCup.png', name: "mediumMeasuringCup", width : 110, height: 87,
+	instruction: "mediumMeasuringCup down", initialLoc : [3,3],
 	scriptedInstruction: "the large measuring cup"}
 var largeMeasuringCup = {
-	url: 'stimuli/largeMeasuringCup.jpg', name: "largeMeasuringCup", width : 150, height: 150,
-	instructions: ""}
-var smallMeasuringCup = {url: 'stimuli/smallMeasuringCup.jpg', name: "smallMeasuringCup", width : 60, height: 60}
-var umbrella = {url: 'stimuli/umbrella.jpg', name: "umbrella", width: 80, height: 80}
-var chair = {url: 'stimuli/chair.jpg', name: 'chair', width: 87, height: 130}
+	url: 'stimuli/largeMeasuringCup.png', name: "largeMeasuringCup", width : 130, height: 85,
+	instruction: "", initialLoc : [3,1]}
+var umbrella = {
+	url: 'stimuli/umbrella.png', name: "umbrella", width: 130, height: 112,
+	instruction: "", initialLoc : [3,1]}
+var smallMeasuringCup = {
+	url: 'stimuli/smallMeasuringCup.png', name: "smallMeasuringCup", width : 55, height: 70,
+	instruction: "", initialLoc : [1,3]}
+var chair = {
+	url: 'stimuli/chair.png', name: 'chair', width: 79, height: 130,
+	instruction: "chair left", initialLoc: [2,4]}
+var waterBottle = {
+	url: 'stimuli/waterBottle.png', name: 'waterBottle', width: 43, height: 130,
+	instruction: "waterBottle right", initialLoc: [4,1]}
+var carrot = {
+	url: 'stimuli/carrot.png', name: 'carrot', width: 130, height: 77,
+	instruction: "carrot up", initialLoc: [4,2] } 
 
-var roundBrush = {url: 'stimuli/roundBrush.jpg', name: "roundBrush", 
-	scriptedInstruction: "the brush", width: 80, height: 80}
-var hairBrush = {url: 'stimuli/hairBrush.jpg', name: "hairBrush", width :80, height:80}
-var skate = {url: 'stimuli/skate.jpg', name: "skate", width: 80, height: 80}
-var dalmatian = {url: 'stimuli/dalmatian.jpg', name: "dalmatian", width: 130, height: 120}
+// BLOCK 5
 
-var boardEraser = {url: 'stimuli/boardEraser.jpg', name: "boardEraser", 
-    scriptedInstruction: "the eraser", width:80, height: 80}
-var pencilEraser = {url: 'stimuli/pencilEraser.jpg', name: "pencilEraser", width:80, height: 80}
-var brain = {url: 'stimuli/brain.jpg', name: "brain", width: 80, height:80}
-var dollar = {url: 'stimuli/dollar.jpg', name: 'dollar', width: 130, height: 54}
+var roundBrush = {
+	url: 'stimuli/roundBrush.png', name: "roundBrush", width: 104, height: 130,
+	instruction: "roundBrush left", initialLoc: [3,3],
+	scriptedInstruction: "the brush", }
+var hairBrush = {
+	url: 'stimuli/hairBrush.png', name: "hairBrush", width :130, height:109,
+	instruction: "", initialLoc: [2,2],}
+var skate = {
+	url: 'stimuli/skate.png', name: "skate", width: 130, height: 130,
+	instruction: "", initialLoc: [2,2]}
+var dalmatian = {
+	url: 'stimuli/dalmatian.png', name: "dalmatian", width: 130, height: 120,
+	instruction: "", initialLoc: [1,1]}
+var headphones = {
+	url: 'stimuli/headphones.png', name: "headphones", width: 100, height: 100,
+	instruction: "headphones left", initialLoc: [3,4]}
+var book = {
+	url: 'stimuli/book.png', name: 'book', width: 130, height: 101,
+	instruction: "book right", initialLoc: [1,2]}
+var ring = {
+	url: 'stimuli/ring.png', name: 'ring', width: 104, height: 110,
+	instruction: "", initialLoc: [4,1]}
+var basketball = {
+	url: 'stimuli/basketball.png', name: 'basketball', width: 130, height: 130,
+	instruction: "basketball down", initialLoc: [1,4]}
 
-var smallCandle = {url: 'stimuli/smallCandle.jpg', name: "smallCandle", 
-	scriptedInstruction: "the small candle", width:80, height: 80}
-var mediumCandle = {url: 'stimuli/mediumCandle.jpg', name: "mediumCandle", width:80, height: 80}
-var largeCandle = {url: 'stimuli/largeCandle.jpg', name: "largeCandle", width:100, height: 100}
-var flower = {url: 'stimuli/flower.jpg', name: "flower", width: 80, height: 80}
-var panda = {url: 'stimuli/panda.jpg', name: "panda", width: 104, height:130}
+// BLOCK 6
 
-var computerMouse = {url: 'stimuli/computerMouse.jpg', name: "computerMouse", 
-	scriptedInstruction: "the mouse", width:80, height: 80}
-var toyMouse = {url: 'stimuli/toyMouse.jpg', name: "toyMouse", width:80, height: 80}
-var camera = {url: 'stimuli/camera.jpg', name: "camera", width:80, height: 80}
-var piano = {url: 'stimuli/piano.jpg', name: 'piano', width: 101, height: 130}
+var boardEraser = {
+	url: 'stimuli/boardEraser.png', name: "boardEraser", width:130, height: 71,
+	instruction: "boardEraser up", initialLoc: [4,2],
+    scriptedInstruction: "the eraser", }
+var pencilEraser = {
+	url: 'stimuli/pencilEraser.png', name: "pencilEraser", width:130, height: 58,
+	instruction: "", initialLoc: [2,2]}
+var brain = {
+	url: 'stimuli/brain.png', name: "brain", width: 130, height:104,
+	instruction: "", initialLoc: [2,2]}
+var dollar = {
+	url: 'stimuli/dollar.jpg', name: 'dollar', width: 130, height: 54,
+	instruction: "dollar right", initialLoc: [3,3]}
+var feather = {
+	url: 'stimuli/feather.png', name: 'feather', width: 130, height: 98,
+	instruction: "feather left", initialLoc: [4,3]}
+var tennisBall = {
+	url: 'stimuli/tennisBall.png', name: 'tennisBall', width: 100, height: 100,
+	instruction: "", initialLoc: [2,3]}
+var banana = {
+	url: 'stimuli/banana.png', name: 'banana', width: 130, height: 61,
+	instruction: "banana up", initialLoc: [3,4]}
+
+// BLOCK 7
+
+var mediumCandle = {
+	url: 'stimuli/mediumCandle.png', name: "mediumCandle", width: 107, height: 130,
+	instruction: "mediumCandle down", initialLoc: [1,1],
+	scriptedInstruction: "the small candle"}
+var smallCandle = {
+	url: 'stimuli/smallCandle.png', name: "smallCandle", width:100, height: 83,
+	instruction: "", initialLoc: [3,1]}
+var flower = {
+	url: 'stimuli/flower.png', name: "flower", width: 130, height: 97.5,
+	instruction: "", initialLoc: [3,1]}
+var largeCandle = {
+	url: 'stimuli/largeCandle.png', name: "largeCandle", width:114, height: 130,
+	instruction: "", initialLoc: [4,3]}
+var pandaToy = {
+	url: 'stimuli/pandaToy.png', name: "pandaToy", width: 104, height:130,
+	instruction: "pandaToy down", initialLoc: [1,3]}
+var handcuffs = {
+	url: 'stimuli/handcuffs.png', name:'handcuffs', width: 130, height: 73,
+	instruction: "handcuffs down", initialLoc: [2,4]}
+var magnet = {
+	url: 'stimuli/magnet.png', name: 'magnet', width: 130, height: 108,
+	instruction: "magnet down", initialLoc: [3,2]}
+
+
+
+// BLOCK 8
+
+var computerMouse = {
+	url: 'stimuli/computerMouse.png', name: "computerMouse", width:130, height: 112,
+	instruction: "computerMouse left", initialLoc: [3,3],
+	scriptedInstruction: "the mouse", }
+var toyMouse = {
+	url: 'stimuli/toyMouse.png', name: "toyMouse", width:130, height: 109,
+	instruction: "", initialLoc: [3,1]}
+var camera = {
+	url: 'stimuli/camera.png', name: "camera", width:130, height: 100,
+	instruction: "", initialLoc: [3,1]}
+var piano = {
+	url: 'stimuli/piano.png', name: 'piano', width: 102, height: 130,
+	instruction: "piano left", initialLoc: [4,2]}
+var comb = {
+	url: 'stimuli/comb.png', name: 'comb', width: 130, height: 80,
+	instruction: "comb up", initialLoc: [2,1]}
+var key = {
+	url: 'stimuli/key.png', name: 'key', width: 88, height: 130,
+	instruction: "", initialLoc: [2,2]}
+var castIronPan = {
+	url: 'stimuli/castIronPan.png', name: 'castIronPan', width: 130, height: 62,
+	instruction: "castIronPan up", initialLoc: [4,3]}
 
 var criticalItems = [
 	{
@@ -134,40 +229,45 @@ var criticalItems = [
 		alt: battery,
 		otherObjects: [scissors, butterfly, barOfSoap, knife]
 	},{
-		instructions: ["mediumMeasuringCup right"], 
+		instructions: [carrot.instruction, mediumMeasuringCup.instruction,
+		               waterBottle.instruction, chair.instruction],
 		criticalInstruction: "mediumMeasuringCup",
 		target: mediumMeasuringCup,
 		distractor: largeMeasuringCup,
 		alt: umbrella,
-		otherObjects: [chair, smallMeasuringCup]
+		otherObjects: [chair, smallMeasuringCup, carrot, waterBottle]
 	},{
-		instructions: ["roundBrush down"], 
+		instructions: [basketball.instruction, roundBrush.instruction, headphones.instruction, 
+		                book.instruction], 
 		criticalInstruction: "roundBrush",
 		target: roundBrush,
 		distractor: hairBrush,
 		alt: skate,
-		otherObjects: [dalmatian]
+		otherObjects: [basketball, dalmatian, headphones, book, ring]
 	},{
-		instructions: ["boardEraser up"], 		
+		instructions: [banana.instruction, dollar.instruction, 
+		               boardEraser.instruction, feather.instruction], 		
 		criticalInstruction: "boardEraser",
 		target: boardEraser,
 		distractor: pencilEraser,
 		alt: brain,
-		otherObjects: [dollar]
+		otherObjects: [dollar, feather, tennisBall, banana]
 	},{
-		instructions: ["mediumCandle right"], 
+		instructions: [magnet.instruction, handcuffs.instruction, 
+		               pandaToy.instruction, mediumCandle.instruction], 
 		criticalInstruction: "mediumCandle",
 		target: mediumCandle,
 		distractor: smallCandle,
 		alt: flower,
-		otherObjects: [panda, largeCandle]
+		otherObjects: [pandaToy, largeCandle, handcuffs, magnet]
 	},{
-		instructions: ["computerMouse left"], 
+		instructions: [comb.instruction, computerMouse.instruction, 
+		               castIronPan.instruction, piano.instruction], 
 		criticalInstruction: "computerMouse",
 		target: computerMouse,
 		distractor: toyMouse,
 		alt: camera,
-		otherObjects: [piano]
+		otherObjects: [piano , comb, key, castIronPan]
 }]
 
 

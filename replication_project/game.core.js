@@ -98,13 +98,18 @@ game_core.prototype.get_active_players = function() {
 
 game_core.prototype.newRound = function() {
     console.log("new round!")
-    this.roundNum += 1;
-    this.objects = this.trialList[this.roundNum].objects
-    this.instructions = this.trialList[this.roundNum].instructions
     console.log(this.roundNum)
-    console.log(this.instructions)
-    this.instructionNum = -1;
-    this.newInstruction()
+    if(this.roundNum == this.numRounds - 1) {
+        var local_game = this;
+        _.map(local_game.get_active_players(), function(p){
+            p.player.instance.send('s.end')})
+    } else {
+        this.roundNum += 1;
+        this.objects = this.trialList[this.roundNum].objects
+        this.instructions = this.trialList[this.roundNum].instructions
+        this.instructionNum = -1;
+        this.newInstruction()
+    }
 }
 
 game_core.prototype.newInstruction = function() {
@@ -181,7 +186,7 @@ game_core.prototype.makeTrialList = function () {
     var conditionOrder = sampleConditionOrder()
 
     // 2) Assign target & distractor based on condition
-    var itemList = JSON.parse(JSON.stringify(objectSet.criticalItems));//_.shuffle(objectSet.criticalItems)
+    var itemList = _.shuffle(objectSet.criticalItems)//objectSet.criticalItems));//
     var trialList = _.map(_.range(8), function(i) {
         var condition = conditionOrder[i];
         var item = itemList[i];
