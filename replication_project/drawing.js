@@ -1,4 +1,6 @@
-var drawGrid = function(game, occludedList){
+var occludedList = [[4,4], [2,2], [2,3], [3,1], [1,4]];
+
+var drawGrid = function(game){
     //size of canvas
     var cw = game.viewport.width;
     var ch = game.viewport.height;
@@ -27,14 +29,15 @@ var drawGrid = function(game, occludedList){
     game.ctx.stroke();
 
     // occluded cells...
-    drawOccludedCell(4,4)
-    drawOccludedCell(2,2)
-    drawOccludedCell(2,3)
-    drawOccludedCell(3,1)
-    drawOccludedCell(1,4)
+    for(var i = 0; i < occludedList.length; i++) {
+      var cell = occludedList[i]
+      console.log(cell)
+      drawOccludedCell(cell[0],cell[1])
+    }
 }
 
 var drawOccludedCell = function(x, y) {
+  console.log("occluding")
     var cell = game.getPixelFromCell(y,x)
     var topLeft = [cell.centerX - cell.width/2, cell.centerY - cell.height/2]
     var topRight = [cell.centerX + cell.width/2, topLeft[1]]
@@ -52,9 +55,18 @@ var drawOccludedCell = function(x, y) {
     game.ctx.stroke();
 }
 
-var drawObjects = function(game) {
+var containsCell = function(cellList, cell) {
+  return _.some(cellList, function(compCell) {
+    return _.isEqual(cell, compCell);
+  })
+}
+
+var drawObjects = function(game, player) {
     _.map(game.objects, function(obj) { 
-        game.ctx.drawImage(obj.img, obj.trueX, obj.trueY, obj.width, obj.height)
+        if(player.role == "matcher")
+          game.ctx.drawImage(obj.img, obj.trueX, obj.trueY, obj.width, obj.height)
+        else if(!containsCell(occludedList, [obj.gridY, obj.gridX]))
+          game.ctx.drawImage(obj.img, obj.trueX, obj.trueY, obj.width, obj.height)
     })
 }
 
@@ -75,9 +87,11 @@ var drawScreen = function(game, player) {
     game.ctx.fillRect(0,0,game.viewport.width,game.viewport.height);
     if (game.players.length == 2) {
         drawGrid(game);
-        drawObjects(game);   
-        if(player.role == "director")
-            drawInstructions(game)
+        drawObjects(game, player);   
+        if(player.role == "director"){
+          drawGrid(game);
+          drawInstructions(game)
+        }
     } else {
         // Draw message in center (for countdown, e.g.)
         game.ctx.font = "bold 23pt Helvetica";

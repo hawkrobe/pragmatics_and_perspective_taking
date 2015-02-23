@@ -21,7 +21,7 @@ if( typeof _ === 'undefined' ) {
     if( has_require ) {
         _ = require('underscore')
     }
-    else throw new Error('mymodule requires underscore, see http://underscorejs.org');
+    else throw new ('mymodule requires underscore, see http://underscorejs.org');
 }
 
 var game_core = function(game_instance){

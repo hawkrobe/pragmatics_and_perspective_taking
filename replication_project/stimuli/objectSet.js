@@ -124,7 +124,7 @@ var ring = {
 	instruction: "", initialLoc: [4,1]}
 var basketball = {
 	url: 'stimuli/basketball.png', name: 'basketball', width: 130, height: 130,
-	instruction: "basketball down", initialLoc: [1,4]}
+	instruction: "basketball down", initialLoc: [1,3]}
 
 // BLOCK 6
 
