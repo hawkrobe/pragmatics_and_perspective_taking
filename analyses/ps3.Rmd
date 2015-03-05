@@ -20,6 +20,18 @@ Let's start by convincing ourselves that t-tests have the appropriate false posi
 First do this using a `for` loop.
 
 ```{r}
+sigCount = 0
+numSamples = 10000
+for(i in 1:N) {
+  sample1 = rnorm(30)
+  sample2 = rnorm(30)
+  stat = t.test(sample1, sample2)
+  if(stat$p.value < 0.05) {
+    sigCount = sigCount + 1;
+  }
+}
+rate <- sigCount 
+print(sigCount)
 ```
 
 Next, do this using the `replicate` function:
