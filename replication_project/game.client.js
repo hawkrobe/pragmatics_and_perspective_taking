@@ -181,7 +181,8 @@ client_connect_to_server = function(game) {
 
     // Update messages log when other players send chat
     game.socket.on('chatMessage', function(data){
-        var source = data.user === my_id ? "You" : "Your partner"
+        var otherRole = my_role === "director" ? "Matcher" : "Director"
+        var source = data.user === my_id ? "You" : otherRole
         var col = source === "You" ? "#363636" : "#707070"
         $('#messages').append($('<li style="padding: 5px 10px; background: ' + col + '">').text(source + ": " + data.msg));
         $('#messages').stop().animate({
@@ -221,7 +222,12 @@ client_onjoingame = function(num_players, role) {
         game.players.unshift({id: null, player: new game_player(game)})});
 
     // Update w/ role (can only move stuff if agent)
-    $('#header').append(role);
+    $('#header').append(role + '.');
+    if(role === "director") {
+        $('#instructs').append("Type instructions for the matcher to move the object in the direction of the arrow!")
+    } else {
+        $('#instructs').append("Click and drag objects to follow the director's instructions.")
+    }
     my_role = role;
     game.get_player(my_id).role = my_role;
     game.get_player(my_id).message = 'Waiting for other player to connect...';
