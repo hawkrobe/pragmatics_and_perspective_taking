@@ -31,13 +31,11 @@ var drawGrid = function(game){
     // occluded cells...
     for(var i = 0; i < occludedList.length; i++) {
       var cell = occludedList[i]
-//      console.log(cell)
       drawOccludedCell(cell[0],cell[1])
     }
 }
 
 var drawOccludedCell = function(x, y) {
-//  console.log("occluding")
     var cell = game.getPixelFromCell(y,x)
     var topLeft = [cell.centerX - cell.width/2, cell.centerY - cell.height/2]
     var topRight = [cell.centerX + cell.width/2, topLeft[1]]

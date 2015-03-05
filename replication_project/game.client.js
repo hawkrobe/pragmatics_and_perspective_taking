@@ -86,8 +86,6 @@ client_onserverupdate_received = function(data){
     game.currentDestination = data.curr_dest;
     game.scriptedInstruction = data.scriptedInstruction;
 
-    console.log(game.scriptedInstruction)
-
     game.instructions = data.instructions
     game.instructionNum = data.instructionNum;
     game.game_started = data.gs;
@@ -129,6 +127,9 @@ client_onMessage = function(data) {
             client_onjoingame(num_players, commands[3]); break;
         case 'add_player' : // New player joined... Need to add them to our list.
             console.log("adding player" + commanddata)
+            if(hidden === 'hidden') {
+                flashTitle("GO!")
+            }
             game.players.push({id: commanddata, player: new game_player(game)}); break;
         case 'begin_game' :
             client_newgame(); break;
@@ -381,3 +382,27 @@ function onchange (evt) {
     game.socket.send("h." + document.body.className);
 };
 
+(function () {
+
+    var original = document.title;
+    var timeout;
+
+    window.flashTitle = function (newMsg, howManyTimes) {
+        function step() {
+            document.title = (document.title == original) ? newMsg : original;
+            if (visible === "hidden") {
+                timeout = setTimeout(step, 500);
+            } else {
+                document.title = original;
+            }
+        };
+        cancelFlashTitle(timeout);
+        step();
+    };
+
+    window.cancelFlashTitle = function (timeout) {
+        clearTimeout(timeout);
+        document.title = original;
+    };
+
+}());

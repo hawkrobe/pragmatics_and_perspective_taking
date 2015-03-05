@@ -254,8 +254,6 @@ game_core.prototype.server_send_update = function(){
             player: null}
         })
 
-    console.log("sending:", this.scriptedInstruction)
-
     var state = {
             gs : this.game_started,                      // true when game's started
             pt : this.players_threshold,
