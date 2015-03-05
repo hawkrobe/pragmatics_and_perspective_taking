@@ -33,7 +33,7 @@ counter = 0
 // with the coordinates of the click, which this function reads and
 // applies.
 game_server.server_onMessage = function(client,message) {
-    console.log("received message: " + message)
+//    console.log("received message: " + message)
     //Cut the message up into sub components
     var message_parts = message.split('.');
 
@@ -47,7 +47,7 @@ game_server.server_onMessage = function(client,message) {
     switch(message_type) {
         case 'objMove' :    // Client is changing angle
             var obj = client.game.gamecore.objects[message_parts[1]]
-            console.log("moving " + obj.name)
+//            console.log("moving " + obj.name)
             obj.trueX = parseInt(message_parts[2])
             obj.trueY = parseInt(message_parts[3])
             _.map(others, function(p) {
@@ -56,7 +56,7 @@ game_server.server_onMessage = function(client,message) {
             break;
         case 'correctDrop' :
             var obj = client.game.gamecore.objects[message_parts[1]]
-            console.log("dropping " + obj.name)
+//            console.log("dropping " + obj.name)
             obj.trueX = parseInt(message_parts[2])
             obj.trueY = parseInt(message_parts[3])
             _.map(others, function(p) {
@@ -130,7 +130,7 @@ game_server.findGame = function(player) {
                 game.gamecore.mouseDataStream = fs.createWriteStream(mouse_f, {'flags' : 'a'});
                 fs.writeFile(message_f, "time, sender, contents\n", function (err) {if(err) throw err;})
                 game.gamecore.messageStream = fs.createWriteStream(message_f, {'flags' : 'a'});
-                console.log('game ' + game.id + ' starting with ' + game.player_count + ' players...')
+//                console.log('game ' + game.id + ' starting with ' + game.player_count + ' players...')
     
                 // Attach game to player so server can look at it later
                 player.game = game;

@@ -25,7 +25,7 @@ var dragging;
 client_ondisconnect = function(data) {
     // Redirect to exit survey
     console.log("server booted")
-    var URL = 'http://projects.csail.mit.edu/ci/turk/forms/end.html?id=' + my_id;
+    var URL = 'http://web.stanford.edu/~rxdh/psych254/replication_project/forms/end.html?id=' + my_id;
     window.location.replace(URL);
 };
 
@@ -59,10 +59,13 @@ client_onserverupdate_received = function(data){
         function(e){ return e.name})
     var localNames = _.map(game.objects,
         function(e){return e.name})
-    if (game.objects.length == 0 || !_.isEqual(dataNames, localNames)) { //(game.objects != data.objects && my_role == 'director') || 
+
+    // If your objects are out-of-date (i.e. if there's a new round), update them
+    if (game.objects.length == 0 || !_.isEqual(dataNames, localNames)) { 
         game.objects = _.map(data.objects, function(obj) {
             var imgObj = new Image()
             imgObj.src = obj.url
+            // Set it up to load properly
             imgObj.onload = function(){
                 game.ctx.drawImage(imgObj, parseInt(obj.trueX), parseInt(obj.trueY), obj.width, obj.height)
                if(my_role == "director") 
@@ -72,25 +75,26 @@ client_onserverupdate_received = function(data){
                 {img: imgObj, trueX : obj.trueX, trueY : obj.trueY})
         })
     }
-//    } else {
-        _.map(game.objects, function(obj) {
-            data_obj = _.find(data.objects, function(o) {return o.name == obj.name})
-            obj.trueX = data_obj.trueX;
-            obj.trueY = data_obj.trueY;
-        })
-    // }
+
+    // Update local object positions
+    _.map(game.objects, function(obj) {
+        data_obj = _.find(data.objects, function(o) {return o.name == obj.name})
+        obj.trueX = data_obj.trueX;
+        obj.trueY = data_obj.trueY;
+    })
 
     game.currentDestination = data.curr_dest;
+    game.scriptedInstruction = data.scriptedInstruction;
+
+    console.log(game.scriptedInstruction)
+
     game.instructions = data.instructions
     game.instructionNum = data.instructionNum;
     game.game_started = data.gs;
     game.players_threshold = data.pt;
     game.player_count = data.pc;
-    console.log("official objects data")
-    console.log(data.objects)
-    console.log("updated objects info to...")
-    console.log(game.objects)
 
+    // Draw all this new stuff
     drawScreen(game, game.get_player(my_id))
 }; 
 
@@ -191,7 +195,7 @@ client_connect_to_server = function(game) {
         drawScreen(game, game.get_player(my_id))
     })
 
-    //When we connect, we are not 'connected' until we have a server id
+    //When we connect, we are not 'connected' until we have an id
     //and are placed in a game by the server. The server sends us a message for that.
     game.socket.on('connect', function(){}.bind(game));
     //Sent when we are disconnected (network, server down, etc)
@@ -228,12 +232,6 @@ client_onjoingame = function(num_players, role) {
             game.socket.send('update_mouse.' + Date.now() + '.' + Math.floor(x) + '.' + Math.floor(y));
         });
         game.viewport.addEventListener("mousedown", mouseDownListener, false);
-    } else {
-        game.socket.on('newDestination', function(data){
-            game.currentDestination = data.dest;
-            game.objects = data.objects;
-            drawScreen(game, game.get_player(my_id))
-        })
     }
 }; 
 

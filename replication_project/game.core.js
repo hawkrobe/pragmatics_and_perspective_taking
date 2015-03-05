@@ -115,10 +115,14 @@ game_core.prototype.newRound = function() {
 game_core.prototype.newInstruction = function() {
     this.instructionNum += 1;
     var instruction = this.instructions[this.instructionNum]
-    console.log(instruction)
     var item = instruction.split(' ')[0]
     var dir = instruction.split(' ')[1]
     var object = _.find(this.objects, function(obj) { return obj.name == item })
+    this.scriptedInstruction = (object.hasOwnProperty('scriptedInstruction') ?
+        object.scriptedInstruction :
+        "none")
+    console.log(this.scriptedInstruction)
+
     var dest;
     switch(dir) {
         case "down" :
@@ -218,7 +222,6 @@ game_core.prototype.makeTrialList = function () {
             obj.trueY = gridCell.centerY - obj.height/2
         })
     })
-    console.log(trialList[1].objects)
     return trialList
 }
 
@@ -251,13 +254,17 @@ game_core.prototype.server_send_update = function(){
             player: null}
         })
 
+    console.log("sending:", this.scriptedInstruction)
+
     var state = {
             gs : this.game_started,                      // true when game's started
             pt : this.players_threshold,
             pc : this.player_count,
             curr_dest : this.currentDestination,
+            scriptedInstruction : this.scriptedInstruction,
             instructionNum : this.instructionNum,
         };
+
     _.extend(state, {players: player_packet})
     _.extend(state, {instructions: this.instructions})
     if(player_packet.length == 2) {
