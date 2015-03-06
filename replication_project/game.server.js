@@ -65,6 +65,8 @@ game_server.server_onMessage = function(client,message) {
             })
             break;
         case 'ready!' :
+            console.log("instruction num:", client.game.gamecore.instructionNum)
+            
             if(client.game.gamecore.instructionNum + 1 < client.game.gamecore.instructions.length) {
                 client.game.gamecore.newInstruction();
             } else {
@@ -146,6 +148,11 @@ game_server.findGame = function(player) {
                 _.map(gamecore.get_others(player.userid), 
                     function(p){p.player.instance.send( 's.add_player.' + player.userid)})
                 gamecore.server_send_update()
+
+                _.map(gamecore.get_active_players(), function(p) {
+                    p.player.instance.send("s.waiting")
+                })
+
                 gamecore.player_count = game.player_count;
             }
         }

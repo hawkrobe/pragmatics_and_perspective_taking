@@ -37,7 +37,7 @@ var game_core = function(game_instance){
 
     //Dimensions of world -- Used in collision detection, etc.
     this.world = {width : 600, height : 600};  // 160cm * 3
-    this.roundNum = -1;
+    this.roundNum = 0;
     this.instructionNum = -1;
     this.numRounds = 8;
     this.objects = [];
@@ -45,11 +45,11 @@ var game_core = function(game_instance){
     this.currentDestination = [];
     if(this.server) {
         this.trialList = this.makeTrialList()
-        this.newRound()
         this.players = [{
             id: this.instance.player_instances[0].id, 
             player: new game_player(this,this.instance.player_instances[0].player)
         }];
+        this.server_send_update()
     } else {
         this.players = [{
             id: null, 
@@ -113,17 +113,13 @@ game_core.prototype.newRound = function() {
     }
 }
 
-game_core.prototype.newInstruction = function() {
-    this.instructionNum += 1;
-    var instruction = this.instructions[this.instructionNum]
+game_core.prototype.setScriptAndDir = function(instruction) {
     var item = instruction.split(' ')[0]
     var dir = instruction.split(' ')[1]
     var object = _.find(this.objects, function(obj) { return obj.name == item })
     this.scriptedInstruction = (object.hasOwnProperty('scriptedInstruction') ?
         object.scriptedInstruction :
         "none")
-    console.log(this.scriptedInstruction)
-
     var dest;
     switch(dir) {
         case "down" :
@@ -135,12 +131,13 @@ game_core.prototype.newInstruction = function() {
         case "right" :
             dest = [object.gridX + 1, object.gridY]; break;
     }
-    var local_game = this;
-    // _.map(local_game.get_active_players(), function(p){
-    //     p.player.instance.emit('newDestination', {objects: local_game.objects, dest : dest});
-    // })
-
     this.currentDestination = dest;
+}
+
+game_core.prototype.newInstruction = function() {
+    this.instructionNum += 1;
+    var instruction = this.instructions[this.instructionNum]
+    this.setScriptAndDir(instruction)
     this.server_send_update()
 }
 

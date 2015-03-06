@@ -84,6 +84,7 @@ var drawObjects = function(game, player) {
 
 var drawInstructions = function(game) {
     var instruction = game.instructions[game.instructionNum]
+
     var item = instruction.split(' ')[0]
     var dir = instruction.split(' ')[1]
     var object = _.find(game.objects, function(obj) { return obj.name == item })
@@ -101,16 +102,6 @@ var drawScreen = function(game, player) {
     //bg
     game.ctx.fillStyle = "#FFFFFF";
     game.ctx.fillRect(0,0,game.viewport.width,game.viewport.height);
-    if (game.players.length == 2) {
-        drawGrid(game);
-        drawObjects(game, player);   
-        if(player.role == "director"){
-          drawGrid(game);
-          drawInstructions(game)
-        }
-        else {
-        }
-    }
     if (player.message) {
         // Draw message in center (for countdown, e.g.)
         game.ctx.font = "bold 23pt Helvetica";
@@ -122,6 +113,13 @@ var drawScreen = function(game, player) {
           25);
         if(player.role == "matcher")
           drawClickPoint(game);
+    } else {
+        drawGrid(game);
+        drawObjects(game, player);   
+        if(player.role == "director"){
+          drawGrid(game);
+          drawInstructions(game)
+        }
     }
 }
 

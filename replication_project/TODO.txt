@@ -16,8 +16,8 @@
 	    [x] overlay arrows on director screen
 	       [x] hard-code in easy-to-parse way, e.g. "<objectName> <direction>"
 	    [x] correct error if player makes one
-	[] change title at top to directions
-	[] change "your partner: " to "director/matcher"
+	[x] change title at top to directions
+	[x] change "your partner: " to "director/matcher"
 	[x] don't allow director to move objects
 	[x] Tell players "You are the director" and "you are the matcher"
 [x] make interface for 'scripted' instructions
@@ -41,11 +41,11 @@
 	[] write exit survey
 	[x] write qualification quiz
 	    [] fix comprehension check to catch 'empty' responses
-	[] fix instruction image to reflect real game!
-[] join/leave logistics
+	[x] fix instruction image to reflect real game!
+[x] join/leave logistics
    [x] show message when first player joins like "WAITING FOR OTHER PLAYER TO JOIN..."
-   [] blink tab when they do join to get attention?
+   [x] blink tab when they do join to get attention?
    [x] end game if one player disconnects (vs. re-filling their spot)
-[] have agent position mouse before every instruction... 
-    [] little green light that tells director they're okay to go?
+[x] have agent position mouse before every instruction... 
+    [x] little green light that tells director they're okay to go?
 

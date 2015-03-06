@@ -69,8 +69,8 @@ client_onserverupdate_received = function(data){
             // Set it up to load properly
             imgObj.onload = function(){
                 game.ctx.drawImage(imgObj, parseInt(obj.trueX), parseInt(obj.trueY), obj.width, obj.height)
-               if(my_role == "director") 
-                   drawScreen(game, game.get_player(my_id))
+//                if(my_role == "director") 
+                    drawScreen(game, game.get_player(my_id))
             }
             return _.extend(_.omit(obj, ['trueX', 'trueY']),
                 {img: imgObj, trueX : obj.trueX, trueY : obj.trueY})
@@ -144,6 +144,7 @@ client_onMessage = function(data) {
             client_newgame(); break;
 
         case 'waiting' :
+            console.log("waiting!")
             if(my_role == "director") {
                 game.get_player(my_id).message = 'Waiting for matcher to re-position mouse...';
             } else {
