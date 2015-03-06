@@ -24,7 +24,15 @@ global.window = global.document = global;
 require('./game.core.js');
 utils = require('./utils.js');
 
-counter = 0
+var moveObject = function(client, i, x, y) {
+    var obj = client.game.gamecore.objects[i]
+    var others = client.game.gamecore.get_others(client.userid);
+    obj.trueX = parseInt(x)
+    obj.trueY = parseInt(y)
+    _.map(others, function(p) {
+      p.player.instance.emit('objMove', {i: i, x: x, y: y})
+  })
+}
 
 // This is the function where the server parses and acts on messages
 // sent from 'clients' aka the browsers of people playing the
@@ -41,62 +49,46 @@ game_server.server_onMessage = function(client,message) {
     var message_type = message_parts[0];
 
     //Extract important variables
-    var all = client.game.gamecore.get_active_players();
-    var target = client.game.gamecore.get_player(client.userid);
-    var others = client.game.gamecore.get_others(client.userid);
+    var gc = client.game.gamecore
+    var all = gc.get_active_players();
+    var target = gc.get_player(client.userid);
+    var others = gc.get_others(client.userid);
     switch(message_type) {
         case 'objMove' :    // Client is changing angle
-            var obj = client.game.gamecore.objects[message_parts[1]]
-            obj.trueX = parseInt(message_parts[2])
-            obj.trueY = parseInt(message_parts[3])
-            _.map(others, function(p) {
-              p.player.instance.emit('objMove', {i: message_parts[1], x: message_parts[2], y: message_parts[3]})
-            })
+            moveObject(client, message_parts[1], message_parts[2], message_parts[3])
             break;
 
         case 'correctDrop' :
-            var obj = client.game.gamecore.objects[message_parts[1]]
-            obj.trueX = parseInt(message_parts[2])
-            obj.trueY = parseInt(message_parts[3])
-            _.map(others, function(p) {
-                p.player.instance.emit('objMove', {i: message_parts[1], x: message_parts[2], y: message_parts[3]})
-            })           
-            _.map(all, function(p) {
-                p.player.instance.send("s.waiting.correct")
-            })
+            moveObject(client, message_parts[1], message_parts[2], message_parts[3])
+            _.map(all, function(p) {p.player.instance.send("s.waiting.correct")})
+            gc.paused = true;
             break;
 
         case 'incorrectDrop' :
-            var obj = client.game.gamecore.objects[message_parts[1]]
-            obj.trueX = parseInt(message_parts[2])
-            obj.trueY = parseInt(message_parts[3])
-            _.map(others, function(p) {
-                p.player.instance.emit('objMove', {i: message_parts[1], x: message_parts[2], y: message_parts[3]})
-            })   
+            moveObject(client, message_parts[1], message_parts[2], message_parts[3])
             // write error to file
-            client.game.gamecore.errorStream.write(date + ',' + client.role + 
-                ',' + parseInt(message_parts[4]) + ',' + parseInt(message_parts[5]) + '\n')
-            // Make them reposition mouse and tell them they were wrong
-            _.map(all, function(p) {
-                p.player.instance.send("s.waiting.incorrect")
-            })
-
+            gc.errorStream.write(message_parts[6] + 
+                + ',' + gc.objects[message_parts[1]].name + "," 
+                + parseInt(message_parts[4]) + ',' + parseInt(message_parts[5]) + '\n')
+            gc.paused = true;
+            _.map(all, function(p) {p.player.instance.send("s.waiting.incorrect") })
             break;
 
         case 'ready' :
+            gc.paused = false;
             if(message_parts[1] === "incorrect")
-                client.game.gamecore.instructionNum -= 1
+                gc.instructionNum -= 1
             if(client.game.gamecore.instructionNum + 1 < client.game.gamecore.instructions.length) 
-                client.game.gamecore.newInstruction();
+                gc.newInstruction();
             else
-                client.game.gamecore.newRound();
+                gc.newRound();
             break;
 
         case 'chatMessage' :
             var date = message_parts[1]
             var msg = message_parts[2].replace(/-/g,'.')
             if(client.game.player_count == 2)
-                client.game.gamecore.messageStream.write(date + ',' + client.role + ',"' + msg + '"\n')
+                gc.messageStream.write(date + ',' + client.role + ',"' + msg + '"\n')
             _.map(all, function(p){
                 p.player.instance.emit( 'chatMessage', {user: client.userid, msg: msg})})
             break;
@@ -105,8 +97,19 @@ game_server.server_onMessage = function(client,message) {
             var date = message_parts[1]
             var x = message_parts[2]
             var y = message_parts[3]
-            client.game.gamecore.mouseDataStream.write(String(date + ',' + x + ',' + y ) + "\n",
-                function (err) {if(err) throw err;}); 
+            var roundNum = gc.roundNum
+            var instructionNum = gc.instructionNum
+            if(!gc.paused) {
+                console.log(gc.currentDestination)
+                var destinationPixel = gc.getPixelFromCell(gc.currentDestination[0],
+                    gc.currentDestination[1])
+                console.log(destinationPixel)
+                var line = String(date + ',' + 
+                    gc.trialList[roundNum].objectSet + ',' + 
+                    gc.instructions[instructionNum] + ',' + 
+                    destinationPixel.centerX + ',' + destinationPixel.centerY + ',' + x + ',' + y ) + "\n"
+                gc.mouseDataStream.write(line, function (err) {if(err) throw err;}); 
+            }
             break;
 
         case 'h' : // Receive message when browser focus shifts
@@ -156,7 +159,7 @@ game_server.findGame = function(player) {
                 fs.writeFile(mouse_f, "time, mouseX, mouseY\n", function (err) {if(err) throw err;})
                 game.gamecore.mouseDataStream = fs.createWriteStream(mouse_f, {'flags' : 'a'});
 
-                fs.writeFile(error_f, "time, sender, gridX, gridY\n", function (err) {if(err) throw err;})
+                fs.writeFile(error_f, "time, object, gridX, gridY\n", function (err) {if(err) throw err;})
                 game.gamecore.errorStream = fs.createWriteStream(error_f, {'flags' : 'a'});
 
                 fs.writeFile(message_f, "time, sender, contents\n", function (err) {if(err) throw err;})

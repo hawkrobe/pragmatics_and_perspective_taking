@@ -258,9 +258,10 @@ client_onjoingame = function(num_players, role) {
 
     if(role === "matcher") {
         $('#viewport').mousemove(function(event){
-            var x = event.pageX;
-            var y = event.pageY;
-            game.socket.send('update_mouse.' + Date.now() + '.' + Math.floor(x) + '.' + Math.floor(y));
+            var bRect = game.viewport.getBoundingClientRect();
+            mouseX = (event.clientX - bRect.left)*(game.viewport.width/bRect.width);
+            mouseY = (event.clientY - bRect.top)*(game.viewport.height/bRect.height);
+            game.socket.send('update_mouse.' + Date.now() + '.' + Math.floor(mouseX) + '.' + Math.floor(mouseY));
         });
         game.viewport.addEventListener("mousedown", mouseDownListener, false);
     }
@@ -349,7 +350,7 @@ function mouseUpListener(evt) {
             obj.trueY = game.getPixelFromCell(obj.gridX, obj.gridY).centerY - obj.height/2
             game.get_player(my_id).message = "Error!"
             game.socket.send("incorrectDrop." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY) 
-                + "." + cell[0] + "." + cell[1])
+                + "." + cell[0] + "." + cell[1] + "." + Date.now())
         }
         // Tell server where you dropped it
        drawScreen(game, game.get_player(my_id))

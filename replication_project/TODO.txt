@@ -48,5 +48,5 @@
 	[x] time stamped messages to one file 
 	[x] mouse positions to another file
 	[x] record errors (send message to server)
-	[] write object to file w/ error (w/ round & fix data)
+	[x] write object to file w/ error (w/ round & fix data)
 	[] write object set ID and instruction ID to mouse position file w/ mouse (once Keysar replies)

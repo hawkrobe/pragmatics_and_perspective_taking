@@ -40,6 +40,7 @@ var game_core = function(game_instance){
     this.roundNum = 0;
     this.instructionNum = -1;
     this.numRounds = 8;
+    this.paused = true;
     this.objects = [];
     this.instructions = []
     this.currentDestination = [];
