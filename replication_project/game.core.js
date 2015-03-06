@@ -99,6 +99,7 @@ game_core.prototype.get_active_players = function() {
 game_core.prototype.newRound = function() {
     console.log("new round!")
     console.log(this.roundNum)
+
     if(this.roundNum == this.numRounds - 1) {
         var local_game = this;
         _.map(local_game.get_active_players(), function(p){

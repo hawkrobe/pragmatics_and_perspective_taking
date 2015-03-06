@@ -35,6 +35,20 @@ var drawGrid = function(game){
     }
 }
 
+var drawClickPoint = function(game) {
+  var centerX = game.viewport.width / 2;
+  var centerY = game.viewport.height / 2;
+  var radius = 8;
+
+  game.ctx.beginPath();
+  game.ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+  game.ctx.fillStyle = 'green';
+  game.ctx.fill();
+  game.ctx.lineWidth = 3;
+  game.ctx.strokeStyle = '#003300';
+  game.ctx.stroke();
+}
+
 var drawOccludedCell = function(x, y) {
     var cell = game.getPixelFromCell(y,x)
     var topLeft = [cell.centerX - cell.width/2, cell.centerY - cell.height/2]
@@ -94,14 +108,53 @@ var drawScreen = function(game, player) {
           drawGrid(game);
           drawInstructions(game)
         }
-    } else {
+        else {
+        }
+    }
+    if (player.message) {
         // Draw message in center (for countdown, e.g.)
         game.ctx.font = "bold 23pt Helvetica";
         game.ctx.fillStyle = 'red';
         game.ctx.textAlign = 'center';
-        game.ctx.fillText(player.message, game.world.width/2, game.world.height/2);
+        wrapText(game, player.message, 
+          game.world.width/2, game.world.height/4,
+          game.world.width*4/5,
+          25);
+        if(player.role == "matcher")
+          drawClickPoint(game);
     }
 }
+
+function wrapText(game, text, x, y, maxWidth, lineHeight) {
+  var cars = text.split("\n");
+  game.ctx.fillStyle = 'white'
+  game.ctx.fillRect(0, 0, game.viewport.width, game.viewport.height);
+  game.ctx.fillStyle = 'red'
+
+  for (var ii = 0; ii < cars.length; ii++) {
+
+    var line = "";
+    var words = cars[ii].split(" ");
+
+    for (var n = 0; n < words.length; n++) {
+      var testLine = line + words[n] + " ";
+      var metrics = game.ctx.measureText(testLine);
+      var testWidth = metrics.width;
+
+      if (testWidth > maxWidth) {
+        game.ctx.fillText(line, x, y);
+        line = words[n] + " ";
+        y += lineHeight;
+      }
+      else {
+        line = testLine;
+      }
+    }
+    game.ctx.fillText(line, x, y);
+    y += lineHeight;
+  }
+}
+
 
 var drawArrow=function(game,x1,y1,x2,y2,d) {
   // Ceason pointed to a problem when x1 or y1 were a string, and concatenation

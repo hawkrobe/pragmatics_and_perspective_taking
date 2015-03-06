@@ -21,6 +21,7 @@ var my_role = null;
 // Keeps track of whether player is paying attention...
 var visible;
 var dragging;
+var waiting;
 
 client_ondisconnect = function(data) {
     // Redirect to exit survey
@@ -51,7 +52,7 @@ client_onserverupdate_received = function(data){
     if(data.players) {
         _.map(_.zip(data.players, game.players),
             function(z){
-                z[1].id = z[0].id
+                z[1].id = z[0].id;
             })
     }
 
@@ -83,6 +84,9 @@ client_onserverupdate_received = function(data){
         obj.trueY = data_obj.trueY;
     })
 
+    if(data.players.length > 1) 
+        game.get_player(my_id).message = ""
+
     game.currentDestination = data.curr_dest;
     game.scriptedInstruction = data.scriptedInstruction;
 
@@ -93,6 +97,7 @@ client_onserverupdate_received = function(data){
     game.player_count = data.pc;
 
     // Draw all this new stuff
+    console.log(game.get_player(my_id))
     drawScreen(game, game.get_player(my_id))
 }; 
 
@@ -119,24 +124,35 @@ client_onMessage = function(data) {
           console.log("received end message...")
           var URL = 'http://web.stanford.edu/~rxdh/psych254/replication_project/forms/end.html?id=' + my_id;
           window.location.replace(URL); break;
+
         case 'alert' : // Not in database, so you can't play...
             alert('You did not enter an ID'); 
             window.location.replace('http://nodejs.org'); break;
+
         case 'join' : //join a game requested
             var num_players = commanddata;
             client_onjoingame(num_players, commands[3]); break;
+
         case 'add_player' : // New player joined... Need to add them to our list.
             console.log("adding player" + commanddata)
             if(hidden === 'hidden') {
                 flashTitle("GO!")
             }
             game.players.push({id: commanddata, player: new game_player(game)}); break;
+
         case 'begin_game' :
             client_newgame(); break;
-        case 'blink' : //blink title
-            flashTitle("GO!");  break;
-        }        
-        break; 
+
+        case 'waiting' :
+            if(my_role == "director") {
+                game.get_player(my_id).message = 'Waiting for matcher to re-position mouse...';
+            } else {
+                game.get_player(my_id).message = 'Good job! \n Click on the circle in the center\n and wait for instructions.';
+                waiting = true;
+            }
+            drawScreen(game, game.get_player(my_id))
+            break;
+        }
     } 
 }; 
 
@@ -228,9 +244,12 @@ client_onjoingame = function(num_players, role) {
     } else {
         $('#instructs').append("Click and drag objects to follow the director's instructions.")
     }
+
     my_role = role;
     game.get_player(my_id).role = my_role;
-    game.get_player(my_id).message = 'Waiting for other player to connect...';
+
+    if(num_players == 1)
+        game.get_player(my_id).message = 'Waiting for other player to connect...';
 
     if(role === "matcher") {
         $('#viewport').mousemove(function(event){
@@ -256,6 +275,15 @@ function mouseDownListener(evt) {
     var bRect = game.viewport.getBoundingClientRect();
     mouseX = (evt.clientX - bRect.left)*(game.viewport.width/bRect.width);
     mouseY = (evt.clientY - bRect.top)*(game.viewport.height/bRect.height);
+
+    // if waiting flag is active, check if center was clicked
+    if(waiting) {
+        if((Math.pow(mouseX - game.viewport.width/2, 2) + Math.pow(mouseY - game.viewport.height/2, 2))
+            <= Math.pow(8, 2)) {
+            game.get_player(my_id).message = ""
+            game.socket.send("ready!")
+        }
+    }
 
     //find which shape was clicked
     for (i=0; i < game.objects.length; i++) {
