@@ -92,10 +92,13 @@ var drawInstructions = function(game) {
     var dest = game.getPixelFromCell(game.currentDestination[0], game.currentDestination[1])
     drawArrow(game, origin.centerX, origin.centerY, 
               dest.centerX, dest.centerY, 50)
-    if(game.scriptedInstruction != "none")
+    if(game.scriptedInstruction != "none") {
+      $('#chatbox').attr("disabled", "disabled"); 
       $('#chatbox').val(game.scriptedInstruction);
-    else 
+    } else {
+      $('#chatbox').removeAttr("disabled");
       $('#chatbox').val("")
+    }
 }
 
 var drawScreen = function(game, player) {

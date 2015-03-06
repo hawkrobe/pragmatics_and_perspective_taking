@@ -337,7 +337,7 @@ function mouseUpListener(evt) {
         var cell = game.getCellFromPixel(dropX, dropY)
         console.log(cell)
         console.log([obj.gridX, obj.gridY])
-        // If you were dragging the right object... And dragged it to the correct location...
+        // If you were dragging the correct object... And dragged it to the correct location...
         if (_.isEqual(obj.name, game.instructions[game.instructionNum].split(' ')[0])
             && _.isEqual(cell, game.currentDestination)) {
             // center it
@@ -346,14 +346,14 @@ function mouseUpListener(evt) {
             obj.trueX = game.getPixelFromCell(cell[0], cell[1]).centerX - obj.width/2
             obj.trueY = game.getPixelFromCell(cell[0], cell[1]).centerY - obj.height/2
             game.socket.send("correctDrop." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY))
+        // If you didn't drag it beyond cell bounds, snap it back w/o comment
         } else if (obj.gridX == cell[0] && obj.gridY == cell[1]) {
             console.log("here!")
             obj.trueX = game.getPixelFromCell(obj.gridX, obj.gridY).centerX - obj.width/2
             obj.trueY = game.getPixelFromCell(obj.gridX, obj.gridY).centerY - obj.height/2
-//            game.get_player(my_id).message = "Error!"
             game.socket.send("objMove." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY))
+        // If you moved the incorrect object or went to the incorrect location, pause game to readjust mouse
         } else {
-            // move item back to original location
             obj.trueX = game.getPixelFromCell(obj.gridX, obj.gridY).centerX - obj.width/2
             obj.trueY = game.getPixelFromCell(obj.gridX, obj.gridY).centerY - obj.height/2
             game.get_player(my_id).message = "Error!"

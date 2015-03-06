@@ -22,7 +22,8 @@
 	[x] Tell players "You are the director" and "you are the matcher"
 [x] make interface for 'scripted' instructions
 	[x] hardcode which ones are scripted in object file
-	[x] stick the message in the text box -- prevent them from modifying it???
+	[x] stick the message in the text box 
+	    [x] prevent them from modifying it???
 [x] draw things 
 	[x] draw grid
 	[x] draw jpgs from file
@@ -37,7 +38,7 @@
    [x] blink tab when they do join to get attention?
    [x] end game if one player disconnects (vs. re-filling their spot)
 [x] have agent position mouse before every instruction... 
-    [x] little green light that tells director they're okay to go?
+    [x] green light that tells director they're okay to go?
 [x] build wrapper (i.e. just need to insert text)	    
     [] revise instructions
     [] write exit survey
@@ -49,4 +50,4 @@
 	[x] mouse positions to another file
 	[x] record errors (send message to server)
 	[x] write object to file w/ error (w/ round & fix data)
-	[] write object set ID and instruction ID to mouse position file w/ mouse (once Keysar replies)
+	[x] write object set ID and instruction ID to mouse position file w/ mouse
