@@ -37,7 +37,7 @@ var game_core = function(game_instance){
 
     //Dimensions of world -- Used in collision detection, etc.
     this.world = {width : 600, height : 600};  // 160cm * 3
-    this.roundNum = 0;
+    this.roundNum = -1;
     this.instructionNum = -1;
     this.numRounds = 8;
     this.paused = true;
@@ -46,6 +46,7 @@ var game_core = function(game_instance){
     this.currentDestination = [];
     if(this.server) {
         this.trialList = this.makeTrialList()
+        console.log(_.map(this.trialList, function(t){return t.objects}))
         this.players = [{
             id: this.instance.player_instances[0].id, 
             player: new game_player(this,this.instance.player_instances[0].player)
@@ -145,16 +146,21 @@ game_core.prototype.newInstruction = function() {
 var sampleConditionOrder = function() {
     var orderList = []
     var options = ['exp', 'base'] 
-
-    _.map(_.range(8), function(i){
-        var candidate = _.sample(options)
-        // If already two in a row...
-        if (_.every(orderList.slice(-2), function(v) {return v === candidate})) {
-            orderList.push(_.filter(options, function(v) {return v != candidate})[0])
-        } else {
-            orderList.push(candidate)
-        }
-    })
+    while (orderList.length < 8
+        || !(_.every(orderList.concat().sort().slice(0,4), function(v) {return v === "base"})
+            && _.every(orderList.concat().sort().slice(4,8), function(v) {return v === "exp"}))) {
+        orderList = []
+        _.map(_.range(8), function(i){
+            var candidate = _.sample(options)
+            // If already two in a row...
+            if (_.every(orderList.slice(-2), function(v) {return v === candidate})) {
+                orderList.push(_.filter(options, function(v) {return v != candidate})[0])
+            } else {
+                orderList.push(candidate)
+            }
+        })
+        console.log(orderList)
+    }
     return orderList
 }
 
@@ -189,7 +195,7 @@ game_core.prototype.makeTrialList = function () {
     var conditionOrder = sampleConditionOrder()
 
     // 2) Assign target & distractor based on condition
-    var itemList = _.shuffle(objectSet.criticalItems)//objectSet.criticalItems));//
+    var itemList = _.shuffle(objectSet.criticalItems) //objectSet.criticalItems;
     var trialList = _.map(_.range(8), function(i) {
         var condition = conditionOrder[i];
         var item = itemList[i];
@@ -201,6 +207,8 @@ game_core.prototype.makeTrialList = function () {
              instructions: item.instructions,
              objects: objects}
             )})
+
+    console.log(conditionOrder)
 
     // 3. assign random initial locations (probably won't want to do this in the real exp.)
     var local_this = this;
