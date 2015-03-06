@@ -46,7 +46,6 @@ var game_core = function(game_instance){
     this.currentDestination = [];
     if(this.server) {
         this.trialList = this.makeTrialList()
-        console.log(_.map(this.trialList, function(t){return t.objects}))
         this.players = [{
             id: this.instance.player_instances[0].id, 
             player: new game_player(this,this.instance.player_instances[0].player)

@@ -295,18 +295,18 @@ function mouseDownListener(evt) {
             }
             waiting = false
         }
-    }
-
-    //find which shape was clicked
-    for (i=0; i < game.objects.length; i++) {
-        if  (hitTest(game.objects[i], mouseX, mouseY)) {
-            dragging = true;
-            if (i > highestIndex) {
-                //We will pay attention to the point on the object where the mouse is "holding" the object:
-                dragHoldX = mouseX - game.objects[i].trueX;
-                dragHoldY = mouseY - game.objects[i].trueY;
-                highestIndex = i;
-                dragIndex = i;
+    } else {
+        //find which shape was clicked
+        for (i=0; i < game.objects.length; i++) {
+            if  (hitTest(game.objects[i], mouseX, mouseY)) {
+                dragging = true;
+                if (i > highestIndex) {
+                    //We will pay attention to the point on the object where the mouse is "holding" the object:
+                    dragHoldX = mouseX - game.objects[i].trueX;
+                    dragHoldY = mouseY - game.objects[i].trueY;
+                    highestIndex = i;
+                    dragIndex = i;
+                }
             }
         }
     }
@@ -335,6 +335,9 @@ function mouseUpListener(evt) {
         dropY = (evt.clientY - bRect.top)*(game.viewport.height/bRect.height);
         var obj = game.objects[dragIndex]
         var cell = game.getCellFromPixel(dropX, dropY)
+        console.log(cell)
+        console.log([obj.gridX, obj.gridY])
+        // If you were dragging the right object... And dragged it to the correct location...
         if (_.isEqual(obj.name, game.instructions[game.instructionNum].split(' ')[0])
             && _.isEqual(cell, game.currentDestination)) {
             // center it
@@ -343,8 +346,13 @@ function mouseUpListener(evt) {
             obj.trueX = game.getPixelFromCell(cell[0], cell[1]).centerX - obj.width/2
             obj.trueY = game.getPixelFromCell(cell[0], cell[1]).centerY - obj.height/2
             game.socket.send("correctDrop." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY))
+        } else if (obj.gridX == cell[0] && obj.gridY == cell[1]) {
+            console.log("here!")
+            obj.trueX = game.getPixelFromCell(obj.gridX, obj.gridY).centerX - obj.width/2
+            obj.trueY = game.getPixelFromCell(obj.gridX, obj.gridY).centerY - obj.height/2
+//            game.get_player(my_id).message = "Error!"
+            game.socket.send("objMove." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY))
         } else {
-            // TODO: send error message to server (where it logs error)
             // move item back to original location
             obj.trueX = game.getPixelFromCell(obj.gridX, obj.gridY).centerX - obj.width/2
             obj.trueY = game.getPixelFromCell(obj.gridX, obj.gridY).centerY - obj.height/2
@@ -353,7 +361,7 @@ function mouseUpListener(evt) {
                 + "." + cell[0] + "." + cell[1] + "." + Date.now())
         }
         // Tell server where you dropped it
-       drawScreen(game, game.get_player(my_id))
+        drawScreen(game, game.get_player(my_id))
         dragging = false;
         window.removeEventListener("mousemove", mouseMoveListener, false);
     }
