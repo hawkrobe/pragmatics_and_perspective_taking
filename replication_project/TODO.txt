@@ -22,11 +22,7 @@
 	[x] Tell players "You are the director" and "you are the matcher"
 [x] make interface for 'scripted' instructions
 	[x] hardcode which ones are scripted in object file
-[x] write data to file
-	[x] time stamped messages to one file 
-	[x] mouse positions to another file
-	[] record errors (send message to server)	
-	[] write object set ID and instruction ID to mouse position file w/ mouse (once Keysar replies)
+	[x] stick the message in the text box -- prevent them from modifying it???
 [x] draw things 
 	[x] draw grid
 	[x] draw jpgs from file
@@ -36,16 +32,21 @@
 	    [x] ACTUALLY occlude things
 	[x] draw actual objects from paper (once Keysar replies)
 	    [x] find more 'filler' images from internet (about 7 per grid)
-[x] build wrapper (i.e. just need to insert text)	    
-	[x] write instructions
-	[] write exit survey
-	[x] write qualification quiz
-	    [] fix comprehension check to catch 'empty' responses
-	[x] fix instruction image to reflect real game!
 [x] join/leave logistics
    [x] show message when first player joins like "WAITING FOR OTHER PLAYER TO JOIN..."
    [x] blink tab when they do join to get attention?
    [x] end game if one player disconnects (vs. re-filling their spot)
 [x] have agent position mouse before every instruction... 
     [x] little green light that tells director they're okay to go?
-
+[x] build wrapper (i.e. just need to insert text)	    
+    [] revise instructions
+    [] write exit survey
+    [x] write qualification quiz
+     	[] fix comprehension check to catch 'empty' responses and allow retry
+    [] fix instruction image to reflect real game!
+[x] write data to file
+	[x] time stamped messages to one file 
+	[x] mouse positions to another file
+	[x] record errors (send message to server)
+	[] write object to file w/ error (w/ round & fix data)
+	[] write object set ID and instruction ID to mouse position file w/ mouse (once Keysar replies)
