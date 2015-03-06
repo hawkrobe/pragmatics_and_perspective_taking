@@ -1,32 +1,35 @@
-    <?php
+<?php
 
-ob_start();	
+    ob_start();	
 
     // define variables and set to empty values
-    $completed = $dir = $speed = $none = $loc = $comp = $diff = $goal = "";
+    $completed = $occ = $move = $comp = $dgoal = $mgoal = "";
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $completed = $_POST["completed"];
-    $dir = $_POST["dir"];
-    $speed = $_POST["speed"];
-    $none = $_POST["none"];
-    $loc = $_POST["loc"];
-    $comp = $_POST["comp"];
-    $diff = $_POST["diff"];
-    $goal = $_POST["goal"];
+      $completed = $_POST["completed"];
+      $comp = $_POST["comp"];
+      $move = $_POST["move"];
+      $occ = $_POST["occ"];
+      $mgoal = $_POST["mgoal"];
+      $dgoal = $_POST["dgoal"];
     }
 
-    if(($completed != "yes" && $completed != "no") ||  ($dir != "yes" && $dir != "no") ||  ($speed != "yes" && $speed != "no") ||  ($none != "yes" && $none != "no") || ($loc != "yes" && $loc != "no") ||  ($goal != "yes" && $goal != "no") || ($comp != "yes" && $comp != "no") || ($diff != "yes" && $diff != "no")){
-echo '<meta http-equiv="refresh" content="0;url=http://projects.csail.mit.edu/ci/turk/forms/fail.html">';
-      } else {
+   if(($completed != "yes" && $completed != "no") 
+      || ($occ != "yes" && $occ != "no") 
+      ||  ($move != "yes" && $move != "no") 
+      ||  ($mgoal != "yes" && $mgoal != "no") 
+      || ($comp != "yes" && $comp != "no") 
+      || ($dgoal != "yes" && $dgoal != "no")){
+     echo 'a';//'<meta http-equiv="refresh" content="0;url=web.stanford.edu/~rxdh/psych254/replication_project/forms/fail.html">';
+    } else {
       if ($completed == "yes") {
-echo '<meta http-equiv="refresh" content="0;url=http://projects.csail.mit.edu/ci/turk/forms/notwice.html">';
+	echo 'a'//'<meta http-equiv="refresh" content="0;url=web.stanford.edu/~rxdh/psych254/replication_project/forms/notwice.html">';
       } else {
-      if ($dir == "no" || $speed == "no" || $none == "no" || $loc  == "no" || $goal == "no" || $diff == "no" || $goal == "no" || $comp == "no") {
-echo '<meta http-equiv="refresh" content="0;url=http://projects.csail.mit.edu/ci/turk/forms/fail.html">';
-      } else {
-echo '<meta http-equiv="refresh" content="0;url=http://projects.csail.mit.edu/ci/turk/forms/pass.html">';
+	if ($occ == "no" || $move  == "no" || $mgoal == "no" || $dgoal == "no" || $comp == "no") {
+	  echo 'a'//'<meta http-equiv="refresh" content="0;url=web.stanford.edu/~rxdh/psych254/replication_project/forms/fail.html">';
+	} else {
+	  echo 'a'//'<meta http-equiv="refresh" content="0;url=web.stanford.edu/~rxdh/psych254/replication_project/forms/pass.html">';
+	}
       }
-      }
-      }
-    ?>
+    }
+?>

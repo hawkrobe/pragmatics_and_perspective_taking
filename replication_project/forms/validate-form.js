@@ -5,7 +5,7 @@ function validateForm() {
         location.replace("./notwice.html");
     } else {
 	var count = 0
-	var qs = Array('dir', 'speed', 'none', 'loc', 'comp', 'diff', 'goal');
+	var qs = Array('move', 'occ', 'mgoal', 'dgoal', 'comp');
 	var as = Array(qs.length);
 	for (i = 0; i < qs.length; i++) { 
 	    as[i] = document.forms["quiz"][qs[i]].value;
