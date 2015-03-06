@@ -71,7 +71,7 @@ var butterfly = {
 	url: 'stimuli/butterfly.png', name: 'butterfly', width: 130, height: 112,
 	instruction: "", initialLoc: [4,4]}
 var barOfSoap = {
-	url: 'stimuli/barOfSoap.jpg', name: 'barOfSoap', width: 130, height: 130,
+	url: 'stimuli/barOfSoap.png', name: 'barOfSoap', width: 130, height: 130,
 	instruction: "barOfSoap left", initialLoc: [3,4],
 	scriptedInstruction: "move the soap to the left"}
 
