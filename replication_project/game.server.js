@@ -53,6 +53,7 @@ game_server.server_onMessage = function(client,message) {
               p.player.instance.emit('objMove', {i: message_parts[1], x: message_parts[2], y: message_parts[3]})
             })
             break;
+
         case 'correctDrop' :
             var obj = client.game.gamecore.objects[message_parts[1]]
             obj.trueX = parseInt(message_parts[2])
@@ -61,18 +62,36 @@ game_server.server_onMessage = function(client,message) {
                 p.player.instance.emit('objMove', {i: message_parts[1], x: message_parts[2], y: message_parts[3]})
             })           
             _.map(all, function(p) {
-                p.player.instance.send("s.waiting")
+                p.player.instance.send("s.waiting.correct")
             })
             break;
-        case 'ready!' :
-            console.log("instruction num:", client.game.gamecore.instructionNum)
-            
-            if(client.game.gamecore.instructionNum + 1 < client.game.gamecore.instructions.length) {
-                client.game.gamecore.newInstruction();
-            } else {
-                client.game.gamecore.newRound();
-            }
+
+        case 'incorrectDrop' :
+            var obj = client.game.gamecore.objects[message_parts[1]]
+            obj.trueX = parseInt(message_parts[2])
+            obj.trueY = parseInt(message_parts[3])
+            _.map(others, function(p) {
+                p.player.instance.emit('objMove', {i: message_parts[1], x: message_parts[2], y: message_parts[3]})
+            })   
+            // write error to file
+            client.game.gamecore.errorStream.write(date + ',' + client.role + 
+                ',' + parseInt(message_parts[4]) + ',' + parseInt(message_parts[5]) + '\n')
+            // Make them reposition mouse and tell them they were wrong
+            _.map(all, function(p) {
+                p.player.instance.send("s.waiting.incorrect")
+            })
+
             break;
+
+        case 'ready' :
+            if(message_parts[1] === "incorrect")
+                client.game.gamecore.instructionNum -= 1
+            if(client.game.gamecore.instructionNum + 1 < client.game.gamecore.instructions.length) 
+                client.game.gamecore.newInstruction();
+            else
+                client.game.gamecore.newRound();
+            break;
+
         case 'chatMessage' :
             var date = message_parts[1]
             var msg = message_parts[2].replace(/-/g,'.')
@@ -81,6 +100,7 @@ game_server.server_onMessage = function(client,message) {
             _.map(all, function(p){
                 p.player.instance.emit( 'chatMessage', {user: client.userid, msg: msg})})
             break;
+
         case 'update_mouse' :
             var date = message_parts[1]
             var x = message_parts[2]
@@ -88,6 +108,7 @@ game_server.server_onMessage = function(client,message) {
             client.game.gamecore.mouseDataStream.write(String(date + ',' + x + ',' + y ) + "\n",
                 function (err) {if(err) throw err;}); 
             break;
+
         case 'h' : // Receive message when browser focus shifts
             target.visible = message_parts[1];
             break;
@@ -131,8 +152,13 @@ game_server.findGame = function(player) {
                 var name = start_time + '_' + game.id;
                 var mouse_f = "data/mouse/" + name + ".csv"
                 var message_f = "data/message/" + name + ".csv"
+                var error_f = "data/error/" + name + ".csv"
                 fs.writeFile(mouse_f, "time, mouseX, mouseY\n", function (err) {if(err) throw err;})
                 game.gamecore.mouseDataStream = fs.createWriteStream(mouse_f, {'flags' : 'a'});
+
+                fs.writeFile(error_f, "time, sender, gridX, gridY\n", function (err) {if(err) throw err;})
+                game.gamecore.errorStream = fs.createWriteStream(error_f, {'flags' : 'a'});
+
                 fs.writeFile(message_f, "time, sender, contents\n", function (err) {if(err) throw err;})
                 game.gamecore.messageStream = fs.createWriteStream(message_f, {'flags' : 'a'});
 //                console.log('game ' + game.id + ' starting with ' + game.player_count + ' players...')

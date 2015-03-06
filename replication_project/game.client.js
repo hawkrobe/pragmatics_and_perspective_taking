@@ -20,6 +20,7 @@ var my_id = null;
 var my_role = null;
 // Keeps track of whether player is paying attention...
 var visible;
+var incorrect;
 var dragging;
 var waiting;
 
@@ -144,11 +145,14 @@ client_onMessage = function(data) {
             client_newgame(); break;
 
         case 'waiting' :
-            console.log("waiting!")
+            var type = commanddata;
+            game.get_player(my_id).message = type ? type + " move!\n" : ""
+            if(type == 'incorrect')
+                incorrect = true;
             if(my_role == "director") {
-                game.get_player(my_id).message = 'Waiting for matcher to re-position mouse...';
+                game.get_player(my_id).message += 'Waiting for matcher to re-position mouse...';
             } else {
-                game.get_player(my_id).message = 'Good job! \n Click on the circle in the center\n and wait for instructions.';
+                game.get_player(my_id).message += 'Please click on the circle in the center and wait for the director to give you instructions.';
                 waiting = true;
             }
             drawScreen(game, game.get_player(my_id))
@@ -282,7 +286,13 @@ function mouseDownListener(evt) {
         if((Math.pow(mouseX - game.viewport.width/2, 2) + Math.pow(mouseY - game.viewport.height/2, 2))
             <= Math.pow(8, 2)) {
             game.get_player(my_id).message = ""
-            game.socket.send("ready!")
+            if (incorrect) {
+                game.socket.send("ready.incorrect")
+                incorrect = false;
+            } else {
+                game.socket.send("ready")
+            }
+            waiting = false
         }
     }
 
@@ -337,7 +347,9 @@ function mouseUpListener(evt) {
             // move item back to original location
             obj.trueX = game.getPixelFromCell(obj.gridX, obj.gridY).centerX - obj.width/2
             obj.trueY = game.getPixelFromCell(obj.gridX, obj.gridY).centerY - obj.height/2
-            game.socket.send("objMove." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY))
+            game.get_player(my_id).message = "Error!"
+            game.socket.send("incorrectDrop." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY) 
+                + "." + cell[0] + "." + cell[1])
         }
         // Tell server where you dropped it
        drawScreen(game, game.get_player(my_id))
