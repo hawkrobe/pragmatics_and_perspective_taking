@@ -4,7 +4,7 @@
 
 // BLOCK 1
 var sunGlasses = {
-	url: 'stimuli/sunglasses.png', name: "sunGlasses", width: 130, height: 65,
+	url: 'stimuli/sunGlasses.png', name: "sunGlasses", width: 130, height: 65,
 	instruction: "sunGlasses right", initialLoc : [3,2],
 	scriptedInstruction: "move the glasses to the right"}
 var glassesCase = {
