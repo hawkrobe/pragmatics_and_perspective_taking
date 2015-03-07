@@ -44,9 +44,9 @@
 	randomly. Since you will not know which role you will play
 	until the game starts, you will be responsible for
 	understanding the responsibilities and goals of both
-	roles. 
+	roles.  </p>
 
-	If you are the first person to arrive in a game, you must wait
+	  <p> If you are the first person to arrive in a game, you must wait
 	shortly for another player to join. Once both players have
 	joined the game, you will see a display like the
 	following: </p>
@@ -59,6 +59,8 @@
 	will see a grid filled with various objects. On the left side
 	of the screen, labeled "Chatbox", you will see a chat window
 	that you can use to communicate with the other player. </p>
+	
+	<h3> Director instructions </h3>
 
 	<p> If you are the "director", the grid will be marked to
 	indicate how the objects inside are to be moved.  You'll have
@@ -71,8 +73,10 @@
 	umbrella to the right. </p>
 
 	<p>
-	  <center><img src="../stimuli/director_view.jpg" alt="director view" style="width:300px;height:320px"></center>
+	  <center><img src="images/director_view.jpg" alt="director view" style="width:300px;height:320px"></center>
 	</p>
+
+	<h3> Matcher instructions </h3>
 
 	<p> If you are the "matcher", your job will be to follow the
 	director's instructions as best as you can. You will follow
@@ -80,22 +84,29 @@
 	cell of the grid to another. To understand your behavior, we
 	will be recording the location of your mouse within the
 	grid. For this reason, we will ask you to click on a circle in
-	the center of the grid between instructions or if you make an
-	incorrect move. This screen will look like the following: </p>
+	the center of the grid at the beginning of the game, between
+	instructions, or if you make an incorrect move. This screen
+	will look like the following: </p>
 
 	<p>
-	  <center><img src="../stimuli/director_view.jpg" alt="director view" style="width:300px;height:320px"></center>
+	  <center><img src="images/clickInTheCircle.jpg" alt="director view" style="width:600px;height:290px"></center>
 	</p>	
 
- We will also be recording the messages both of
-	you send.</p>
+	<h3> Hidden objects </h3>
 
 	<p> An important point for both players to keep in mind is
-	that <strong> some cells are occluded </strong>. When the
-	background of a cell is white, <strong> the director will not
-	know what is behind it </strong>. If you are the matcher, you
+	that <strong> some cells are hidden to the director </strong>. When the
+	background of a cell is black, <strong> the director will not
+	know what is behind it, if anything </strong>. If you are the matcher, you
 	must pay close attention to the fact that the director will
-	not be able to see the items in the occluded slots. </p>
+	not be able to see the items in the occluded slots. To illustrate, here are the 2 views side-by-side: </p>
+
+	<p>
+	    <center>
+	      <img src="images/director_view.jpg" alt="director view" style="width:300px;height:320px"> 
+	      <img src="images/matcher_view.jpg" alt="matcher view" style="width:300px;height:320px">
+	    </center>
+	</p>
 
 	<p> Before we start, there are 3 more things we'd like you to
 	keep in mind. </p>
@@ -103,17 +114,13 @@
 	<ol>
 	  <li> During each round, please talk only about the game. Try
 	    not to talk about the objects except as needed to move
-	    them around the grid. </li>
-	  <li> About half of the director's instructions will be
+	    them around the grid. We will be recording the messages you send. </li>
+	  <li> A random set of the director's instructions will be
 	  scripted. They will appear in the chat box and must be
 	  sent unaltered. </li>
-	  <li> If you are the matcher, you will click to put a
-	    certain object from each grid into a brown bag, and then,
-	    with the item still in the bag, put it back in the slot
-	    where it belongs. </li>
 	</ol>
 
-	There will be 8 different grids with different items.
+	There will be 8 different grids with totally different items in different locations. There will be four instructions per grid.
 	
       </div>
       <div class="page-header">
@@ -140,7 +147,7 @@
 
       
       </br>
-	If a square in the grid is white, it means
+	If a square in the grid is black, it means
 	  </br>
 	  <input type="radio" name="occ" value="no"> The matcher <strong> cannot </strong> see the object behind it
 	  </br>
@@ -150,20 +157,20 @@
 	  </br>
 	  
 
-	</br> To move an object, the matcher must
+      </br> To move an object, the matcher must
       </br>
 	<input type="radio" name="move" value="yes"> Click and drag it
 	  </br>
 	    <input type="radio" name="move" value="no"> Use their keyboard to select the destination
-	  </br>
+       </br>
 
-	  </br> 
-	  At the end of a round
-         </br>
-	<input type="radio" name="comp" value="no"> Some objects stay the same
-	  </br>
-	  <input type="radio" name="comp" value="yes"> All of the objects are replaced by new objects in new locations
-	  </br>
+       </br> 
+       At the end of a round
+       </br>
+       <input type="radio" name="comp" value="no"> Some objects stay the same
+       </br>
+       <input type="radio" name="comp" value="yes"> All of the objects are replaced by new objects in new locations
+       </br>
 	  
           </br>
 	  Have you participated in this study before? </br>
@@ -176,10 +183,11 @@
 	  <input id="quiz_submit" type="submit" value="Submit"> 
 		  </br>
 		  </br>
-
+	<div class="error" style="display:none"> Ooops! Looks like you made a mistake. You have one more try. </div>
     </div> <!-- /container -->
       </div>
     <script type="text/javascript">
+      var counter = 0;
       document.getElementById("quiz_submit").onclick = function () {
         var ans1 = $('input[name="comp"]:checked').val();
         var ans2 = $('input[name="move"]:checked').val();
@@ -189,8 +197,11 @@
         if(ans1 == "yes" && ans2 == "yes" && ans3 == "yes" && 
            ans4 == "yes" && ans5 == "yes") {
           location.replace("./pass.html");
-        } else {
+        } else if(counter == 1) {
           location.replace("./fail.html");
+        } else {
+          $('.error').show()
+          counter += 1;
         }
       };
     </script>
