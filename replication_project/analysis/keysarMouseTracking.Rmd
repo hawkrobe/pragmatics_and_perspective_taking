@@ -1,0 +1,10 @@
+---
+title: "KeysarMouseTracking.csv"
+output: html_document
+---
+
+```{r}
+setwd('~/Repos/psych254/replication_project/analysis/')
+mouseD = read.csv('finalMouseData.csv')
+errorD = read.csv('finalErrorData.csv')
+```
