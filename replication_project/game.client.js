@@ -198,6 +198,8 @@ client_connect_to_server = function(game) {
         if($('#chatbox').val() != '') {
             game.socket.send(msg);
             $('#chatbox').val('');
+            // If you just sent a scripted instruction, get rid of it!
+            game.scriptedInstruction = "none";
         }
         return false;
     });

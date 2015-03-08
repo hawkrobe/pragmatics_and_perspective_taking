@@ -95,9 +95,11 @@ var drawInstructions = function(game) {
     if(game.scriptedInstruction != "none") {
       $('#chatbox').attr("disabled", "disabled"); 
       $('#chatbox').val(game.scriptedInstruction);
+      $('#chatbutton').focus()
     } else {
       $('#chatbox').removeAttr("disabled");
       $('#chatbox').val("")
+      $('#chatbox').focus()
     }
 }
 
