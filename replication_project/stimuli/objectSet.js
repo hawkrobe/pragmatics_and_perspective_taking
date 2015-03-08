@@ -18,11 +18,11 @@ var saxophone = {
 	instruction: "saxophone left", initialLoc: [4,2], critical : "filler",}
 var airplane = {
 	url: 'stimuli/airplane.jpg', name: 'airplane', width: 130, height: 60,
-	instruction: "airplane right", initialLoc : [1,2],critical : "filler",
-	scriptedInstruction: "move the airplane to the right"}
+	instruction: "airplane right", initialLoc : [1,2],critical : "filler",}
 var barrel = {
 	url: 'stimuli/barrel.png', name: 'barrel', width: 87, height: 130,
-	instruction: "barrel down", initialLoc : [2,4], critical : "filler",}
+	instruction: "barrel down", initialLoc : [2,4], critical : "filler",
+	scriptedInstruction: "move the barrel down"}
 var watch = {
 	url: 'stimuli/watch.png', name: 'watch', width: 130, height: 84,
 	instruction: "", initialLoc: [3,1], critical : "filler",}
@@ -71,8 +71,7 @@ var butterfly = {
 	instruction: "", initialLoc: [4,4],critical : "filler"}
 var barOfSoap = {
 	url: 'stimuli/barOfSoap.png', name: 'barOfSoap', width: 130, height: 88.4,
-	instruction: "barOfSoap left", initialLoc: [3,4], critical : "filler",
-	scriptedInstruction: "move the soap to the left"}
+	instruction: "barOfSoap left", initialLoc: [3,4], critical : "filler",}
 var knife = {url: 'stimuli/knife.png', name: 'knife', width: 130, height: 130,
 	instruction: "knife down", initialLoc: [3,3],critical : "filler",
 	scriptedInstruction: "move the knife down"}
@@ -209,8 +208,7 @@ var key = {
 	instruction: "", initialLoc: [2,2],critical : "filler",}
 var castIronPan = {
 	url: 'stimuli/castIronPan.png', name: 'castIronPan', width: 130, height: 62,
-	instruction: "castIronPan up", initialLoc: [4,3],critical : "filler",
-	scriptedInstruction: "move the cast iron pan up"}
+	instruction: "castIronPan up", initialLoc: [4,3],critical : "filler"}
 
 var criticalItems = [
 	{
