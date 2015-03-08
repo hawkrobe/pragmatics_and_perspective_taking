@@ -115,8 +115,8 @@ game_server.server_onMessage = function(client,message) {
                 } else {
                     var critical = 1;
                     var distractor = _.find(gc.objects, function(obj) { return obj.critical == "distractor" })
-                    var distractorX = distractor.trueX
-                    var distractorY = distractor.trueY
+                    var distractorX = distractor.trueX + distractor.width/2
+                    var distractorY = distractor.trueY + distractor.height/2
                 }
 
                 var objX = object.trueX + object.width/2
