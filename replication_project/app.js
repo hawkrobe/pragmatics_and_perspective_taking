@@ -58,9 +58,11 @@ io.on('connection', function (client) {
     var query = require('url').parse(client.handshake.headers.referer, true).query;
     if( !(query.id && query.id in global_player_set) ) {
         if(query.id) {
-            global_player_set[query.id] = true
-	           var id = query.id; // use id from query string if exists
-            } else {
+            console.log("got id")
+            global_player_set[query.id] = true;
+            // use id from query string if exists
+            var id = query.id; 
+        } else {
             var id = utils.UUID();
         }
         if(valid_id(id)) {
