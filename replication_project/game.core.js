@@ -104,7 +104,7 @@ game_core.prototype.newRound = function() {
     if(this.roundNum == this.numRounds - 1) {
         var local_game = this;
         _.map(local_game.get_active_players(), function(p){
-            p.player.instance.send('s.end')})
+            p.player.instance.disconnect()})//send('s.end')})
     } else {
         this.roundNum += 1;
         this.objects = this.trialList[this.roundNum].objects
