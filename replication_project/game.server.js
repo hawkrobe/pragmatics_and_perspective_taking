@@ -50,6 +50,7 @@ game_server.server_onMessage = function(client,message) {
 
     //Extract important variables
     var gc = client.game.gamecore
+    var id = gc.instance.id.slice(0,6)
     var all = gc.get_active_players();
     var target = gc.get_player(client.userid);
     var others = gc.get_others(client.userid);
@@ -65,11 +66,8 @@ game_server.server_onMessage = function(client,message) {
             break;
 
         case 'incorrectDrop' :
+            writeData(client, "error", message_parts)
             moveObject(client, message_parts[1], message_parts[2], message_parts[3])
-            // write error to file
-            gc.errorStream.write(message_parts[6] + 
-                + ',' + gc.objects[message_parts[1]].name + "," 
-                + parseInt(message_parts[4]) + ',' + parseInt(message_parts[5]) + '\n')
             gc.paused = true;
             _.map(all, function(p) {p.player.instance.send("s.waiting.incorrect") })
             break;
@@ -85,31 +83,19 @@ game_server.server_onMessage = function(client,message) {
             break;
 
         case 'chatMessage' :
-            var date = message_parts[1]
+            //write data to file
+            if(client.game.player_count == 2) 
+                writeData(client, "message", message_parts)
+            // Update others
             var msg = message_parts[2].replace(/-/g,'.')
-            if(client.game.player_count == 2)
-                gc.messageStream.write(date + ',' + client.role + ',"' + msg + '"\n')
             _.map(all, function(p){
                 p.player.instance.emit( 'chatMessage', {user: client.userid, msg: msg})})
             break;
 
         case 'update_mouse' :
-            var date = message_parts[1]
-            var x = message_parts[2]
-            var y = message_parts[3]
-            var roundNum = gc.roundNum
-            var instructionNum = gc.instructionNum
-            if(!gc.paused) {
-                console.log(gc.currentDestination)
-                var destinationPixel = gc.getPixelFromCell(gc.currentDestination[0],
-                    gc.currentDestination[1])
-                console.log(destinationPixel)
-                var line = String(date + ',' + 
-                    gc.trialList[roundNum].objectSet + ',' + 
-                    gc.instructions[instructionNum] + ',' + 
-                    destinationPixel.centerX + ',' + destinationPixel.centerY + ',' + x + ',' + y ) + "\n"
-                gc.mouseDataStream.write(line, function (err) {if(err) throw err;}); 
-            }
+            // write data to file
+            if(!gc.paused) 
+                writeData(client, "mouse", message_parts)
             break;
 
         case 'h' : // Receive message when browser focus shifts
@@ -117,6 +103,59 @@ game_server.server_onMessage = function(client,message) {
             break;
         }
 };
+
+var writeData = function(client, type, message_parts) {
+    var gc = client.game.gamecore
+    var condition = gc.trialList[gc.roundNum].condition
+    var objectSet = gc.trialList[gc.roundNum].objectSet
+    var object_name = gc.instructions[gc.instructionNum].split(' ')[0]
+    var object = _.find(gc.objects, function(obj) { return obj.name == object_name })
+    var critical = object.critical === "filler" ? 0 : 1
+    var id = gc.instance.id.slice(0,6)
+    switch(type) {
+        case "mouse" :
+            var date = message_parts[1]
+            var x = message_parts[2]
+            var y = message_parts[3]
+            if(object.critical === "filler") {
+                var distractorX = "none"
+                var distractorY = "none"
+            } else {
+                var distractor = _.find(gc.objects, function(obj) { return obj.critical == "distractor" })
+                var distractorX = distractor.trueX + distractor.width/2
+                var distractorY = distractor.trueY + distractor.height/2
+            }
+
+            var objX = object.trueX + object.width/2
+            var objY = object.trueY + object.height/2
+
+            var line = String(id + ',' + date + ',' + condition + ',' + critical + ',' + 
+                objectSet + ',' + objX + ',' + objY + ',' +
+                distractorX + ',' + distractorY + ',' + x + ',' + y ) + "\n"
+            console.log("mouse:" + line)
+            gc.mouseDataStream.write(line, function (err) {if(err) throw err;}); 
+            break;
+        case "message" :
+            var date = message_parts[1]
+            var msg = message_parts[2].replace(/-/g,'.')
+            var line = (id + ',' + date + ',' + condition + ',' + critical + ',' +
+                objectSet + ',' + client.role + ',"' + msg + '"\n')
+            console.log("message:" + line)
+            gc.messageStream.write(line);
+            break;
+        case "error" :
+            var trueItem = gc.instructions[gc.instructionNum].split(' ')[0]
+            var line = (id + ',' + String(message_parts[6]) + ',' + condition + ',' 
+                        + critical + ',' + objectSet + ',' + trueItem + ',' 
+                        + gc.objects[message_parts[1]].name + ','
+                        + parseInt(gc.currentDestination[0]) + ',' 
+                        + parseInt(gc.currentDestination[1]) + ','
+                        + parseInt(message_parts[4]) + ',' + parseInt(message_parts[5]) + '\n')
+            console.log("incorrect: ", line);
+            gc.errorStream.write(line)
+            break;
+    }
+}
 
 /* 
    The following functions should not need to be modified for most purposes
@@ -154,15 +193,15 @@ game_server.findGame = function(player) {
                 var start_time = d.getFullYear() + '-' + d.getMonth() + 1 + '-' + d.getDate() + '-' + d.getHours() + '-' + d.getMinutes() + '-' + d.getSeconds() + '-' + d.getMilliseconds()
                 var name = start_time + '_' + game.id;
                 var mouse_f = "data/mouse/" + name + ".csv"
-                var message_f = "data/message/" + name + ".csv"
-                var error_f = "data/error/" + name + ".csv"
-                fs.writeFile(mouse_f, "time, mouseX, mouseY\n", function (err) {if(err) throw err;})
+                fs.writeFile(mouse_f, "gameid, time, condition, critical, objectSet, targetX, targetY, distractorX, distractorY, mouseX, mouseY\n", function (err) {if(err) throw err;})
                 game.gamecore.mouseDataStream = fs.createWriteStream(mouse_f, {'flags' : 'a'});
 
-                fs.writeFile(error_f, "time, object, gridX, gridY\n", function (err) {if(err) throw err;})
+                var error_f = "data/error/" + name + ".csv"
+                fs.writeFile(error_f, "gameid, time, condition, critical, objectSet, intendedObj, actualObj, intendedX, intendedY, actualX, actualY\n", function (err) {if(err) throw err;})
                 game.gamecore.errorStream = fs.createWriteStream(error_f, {'flags' : 'a'});
 
-                fs.writeFile(message_f, "time, sender, contents\n", function (err) {if(err) throw err;})
+                var message_f = "data/message/" + name + ".csv"
+                fs.writeFile(message_f, "gameid, time, condition, critical, objectSet, sender, contents\n", function (err) {if(err) throw err;})
                 game.gamecore.messageStream = fs.createWriteStream(message_f, {'flags' : 'a'});
 //                console.log('game ' + game.id + ' starting with ' + game.player_count + ' players...')
     

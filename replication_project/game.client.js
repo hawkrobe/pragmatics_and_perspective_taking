@@ -195,8 +195,12 @@ client_connect_to_server = function(game) {
     // Tell server when client types something in the chatbox
     $('form').submit(function(){
         var msg = 'chatMessage.' + Date.now() + '.' + $('#chatbox').val();
-        game.socket.send(msg);
-        $('#chatbox').val('');
+        if($('#chatbox').val() != '') {
+            game.socket.send(msg);
+            $('#chatbox').val('');
+            // If you just sent a scripted instruction, get rid of it!
+            game.scriptedInstruction = "none";
+        }
         return false;
     });
 
@@ -250,12 +254,14 @@ client_onjoingame = function(num_players, role) {
         $('#instructs').append("Click and drag objects to follow the director's instructions.")
     }
 
+    // set role locally
     my_role = role;
     game.get_player(my_id).role = my_role;
 
     if(num_players == 1)
         game.get_player(my_id).message = 'Waiting for other player to connect...';
 
+    // set mouse-tracking event handler
     if(role === "matcher") {
         $('#viewport').mousemove(function(event){
             var bRect = game.viewport.getBoundingClientRect();
@@ -330,6 +336,7 @@ function mouseUpListener(evt) {
     game.viewport.addEventListener("mousedown", mouseDownListener, false);
     window.removeEventListener("mouseup", mouseUpListener, false);
     if (dragging) {
+        // Set up the right variables
         var bRect = game.viewport.getBoundingClientRect();
         dropX = (evt.clientX - bRect.left)*(game.viewport.width/bRect.width);
         dropY = (evt.clientY - bRect.top)*(game.viewport.height/bRect.height);
@@ -337,6 +344,7 @@ function mouseUpListener(evt) {
         var cell = game.getCellFromPixel(dropX, dropY)
         console.log(cell)
         console.log([obj.gridX, obj.gridY])
+        
         // If you were dragging the correct object... And dragged it to the correct location...
         if (_.isEqual(obj.name, game.instructions[game.instructionNum].split(' ')[0])
             && _.isEqual(cell, game.currentDestination)) {
@@ -346,12 +354,14 @@ function mouseUpListener(evt) {
             obj.trueX = game.getPixelFromCell(cell[0], cell[1]).centerX - obj.width/2
             obj.trueY = game.getPixelFromCell(cell[0], cell[1]).centerY - obj.height/2
             game.socket.send("correctDrop." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY))
+        
         // If you didn't drag it beyond cell bounds, snap it back w/o comment
         } else if (obj.gridX == cell[0] && obj.gridY == cell[1]) {
             console.log("here!")
             obj.trueX = game.getPixelFromCell(obj.gridX, obj.gridY).centerX - obj.width/2
             obj.trueY = game.getPixelFromCell(obj.gridX, obj.gridY).centerY - obj.height/2
             game.socket.send("objMove." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY))
+        
         // If you moved the incorrect object or went to the incorrect location, pause game to readjust mouse
         } else {
             obj.trueX = game.getPixelFromCell(obj.gridX, obj.gridY).centerX - obj.width/2

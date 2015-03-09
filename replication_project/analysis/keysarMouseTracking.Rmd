@@ -1,0 +1,44 @@
+---
+title: "KeysarMouseTracking.csv"
+output: html_document
+---
+
+```{r}
+setwd('~/Repos/psych254/replication_project/analysis/')
+mouseD = read.csv('realMouseData.csv')
+errorD = read.csv('realErrorData.csv')
+messageD = read.csv('realMessageData.csv')
+str(mouseD)
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+d <- mouseD %>% 
+  filter(critical == 1) %>% 
+  group_by(objectSet) %>%
+  mutate(begTargetX = first(targetX),
+         begTargetY = first(targetY),
+         begDistrX = first(as.numeric(levels(distractorX))[distractorX]),
+         begDistrY = first(as.numeric(levels(distractorY))[distractorY]))
+  
+d$new_labels = as.factor(sapply(X = d$objectSet, 
+                              FUN = function(v) {return(paste("Item", v))}))
+
+g <- (ggplot(d, aes(x = mouseX, y = mouseY, color = condition)) +
+      geom_vline(xintercept = c(0, 150,300,450, 600)) +
+      geom_hline(yintercept = c(0, 150,300,450, 600)) +
+      geom_point() +
+      geom_point(aes(x = begTargetX, y = begTargetY, size = 10), 
+                 shape = 4, color = "black", show_guide = FALSE) +
+      geom_point(aes(x = begDistrX, y = begDistrY, size = 10),
+                 shape = 4, color = "blue", show_guide = FALSE) + 
+      theme(panel.grid.major = element_blank(), 
+            panel.grid.minor = element_blank()) +
+      xlim(0, 600) +
+      ylim(0, 600) +
+      theme(aspect.ratio = 1) +
+      facet_wrap(~ new_labels, nrow = 2))
+g
+```

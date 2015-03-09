@@ -24,6 +24,9 @@
 	[x] hardcode which ones are scripted in object file
 	[x] stick the message in the text box 
 	    [x] prevent them from modifying it???
+	[] don't refill the text box after they send something... 
+	[] Put autofocus on box so enter key works?
+	[x] don't let people send empty strings?
 [x] draw things 
 	[x] draw grid
 	[x] draw jpgs from file
@@ -34,17 +37,19 @@
 	[x] draw actual objects from paper (once Keysar replies)
 	    [x] find more 'filler' images from internet (about 7 per grid)
 [x] join/leave logistics
+   [] error entering from mturk? Error handling query string id?
    [x] show message when first player joins like "WAITING FOR OTHER PLAYER TO JOIN..."
    [x] blink tab when they do join to get attention?
    [x] end game if one player disconnects (vs. re-filling their spot)
 [x] have agent position mouse before every instruction... 
     [x] green light that tells director they're okay to go?
+    [x]
 [x] build wrapper (i.e. just need to insert text)	    
-    [] revise instructions
+    [x] revise instructions
     [] write exit survey
     [x] write qualification quiz
-     	[] fix comprehension check to catch 'empty' responses and allow retry
-    [] fix instruction image to reflect real game!
+     	[x] fix comprehension check to catch 'empty' responses and allow retry
+    [x] fix instruction image to reflect real game!
 [x] write data to file
 	[x] time stamped messages to one file 
 	[x] mouse positions to another file
