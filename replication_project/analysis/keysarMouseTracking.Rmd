@@ -14,6 +14,8 @@ library(dplyr)
 library(ggplot2)
 ```
 
+This is the general plot
+
 ```{r}
 d <- mouseD %>% 
   filter(critical == 1) %>% 
@@ -33,7 +35,7 @@ g <- (ggplot(d, aes(x = mouseX, y = mouseY, color = condition)) +
       geom_point(aes(x = begTargetX, y = begTargetY, size = 10), 
                  shape = 4, color = "black", show_guide = FALSE) +
       geom_point(aes(x = begDistrX, y = begDistrY, size = 10),
-                 shape = 4, color = "blue", show_guide = FALSE) + 
+                 shape = 4, color = "grey50", show_guide = FALSE) + 
       theme(panel.grid.major = element_blank(), 
             panel.grid.minor = element_blank()) +
       xlim(0, 600) +

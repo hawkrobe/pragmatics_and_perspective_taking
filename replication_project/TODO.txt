@@ -24,8 +24,8 @@
 	[x] hardcode which ones are scripted in object file
 	[x] stick the message in the text box 
 	    [x] prevent them from modifying it???
-	[] don't refill the text box after they send something... 
-	[] Put autofocus on box so enter key works?
+	[x] don't refill the text box after they send something... 
+	[x] Put autofocus on box so enter key works?
 	[x] don't let people send empty strings?
 [x] draw things 
 	[x] draw grid
