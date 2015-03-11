@@ -195,7 +195,8 @@ game_core.prototype.makeTrialList = function () {
     var conditionOrder = sampleConditionOrder()
 
     // 2) Assign target & distractor based on condition
-    var itemList = _.shuffle(objectSet.criticalItems) //objectSet.criticalItems;
+    critItems = JSON.parse(JSON.stringify(objectSet.criticalItems))
+    var itemList = _.shuffle(critItems) //objectSet.criticalItems;
     var trialList = _.map(_.range(8), function(i) {
         var condition = conditionOrder[i];
         var item = itemList[i];
