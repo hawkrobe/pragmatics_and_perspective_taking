@@ -86,7 +86,7 @@ game_server.server_onMessage = function(client,message) {
 
         case 'chatMessage' :
             //write data to file
-            if(client.game.player_count == 2) 
+            if(client.game.player_count == 2 && !gc.paused) 
                 writeData(client, "message", message_parts)
             // Update others
             var msg = message_parts[2].replace(/-/g,'.')
