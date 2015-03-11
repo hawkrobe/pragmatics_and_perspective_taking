@@ -7,25 +7,10 @@
       <div class="panel-heading"><strong>Instructions</strong></div>
 
       <div class="panel-body">
-	<p>In this HIT, you will play a communication game with another turker. One
-	of you will <i>give</i> directions about how to move objects
-	around a grid, and the other will follow these
-	directions. Before starting the game, you will be given
-	further instructions and must pass a short quiz testing your
-	understanding of the instructions. It should take about 10
-	minutes, including the time it takes to read instructions and
-	wait for another turker. </p>
 
-	<p>Select the link below to access this study. First you will
-	read some instructions, then after taking a short
-	comprehension quiz about these instructions, you will be
-	redirected to the game. At the end of the game, you will
-	receive a code to paste into the box below to receive credit
-	for participating.</p>
+	<p> I sent you an email with a code. If you put it in below, you will receive compensation for your participation </p>
 
-	<p> Once in the game, please do not refresh your page! </p>
-
-	<p><strong>Make sure to leave this window open as you complete the game. </strong>When you are finished, you will return to this page to paste the code into the box.</p>
+	<p> Thank you for your valuable work, and let me know if any problems remain. </p>
       </div>
     </div>
     <!-- End Instruction -->
@@ -33,16 +18,8 @@
     <table>
       <tbody>
 	<tr>
-	  <td><strong>Study link:</strong></td>
-	  <td><a href="http://web.stanford.edu/~rxdh/psych254/replication_project/forms/consent.html" style="target-new: tab;" target="_blank">Start!</a></td>
-	</tr>
-	<tr>
 	  <td><strong>Provide the code here:</strong></td>
 	  <td style="vertical-align: middle;"><input class="form-control" id="surveycode" name="surveycode" placeholder="e.g. 5872-dd5b23c4-f1c6-433c-9de2-50ad90b5953f" type="text" /></td>
-	</tr>
-	<tr>
-	  <td><strong>Any comments?</strong></td>
-	  <td style="vertical-align: middle;"><div style="height:100px"><textarea class="form-control" style="height:100px" id="message" name="message"></textarea></div></td>
 	</tr>
       </tbody>
     </table>
@@ -54,12 +31,8 @@
     <input type="hidden" id="assignmentId" name="assignmentId" value="<%=assignmentId %>">
     <input type="hidden" id="code" name="code" value="">
     <input type="hidden" id="comments" name="comments" value="">
-
+    <input id="submitButton" type="submit" name="Submit" value="Submit to MTurk" style="display: none;">
   </form>
-
-    <button type="button" id="submitButton" value="Submit to MTurk" onclick="submissionFunc()" style="display: none;"> Submit to MTurk! </button>
-
-  <div> <p id="error" style="display: none"> This code is incorrect -- please try again </p> </div>
   
   <script>
     var urlParams;
@@ -77,19 +50,9 @@
         $("#submitButton").show()
         document.getElementById("assignmentId").value = urlParams.assignmentId;
         document.getElementById("mturk_form").action = urlParams.turkSubmitTo + "/mturk/externalSubmit"; 
+        $("#submitButton").prop("disabled", false)
     }
     
-    var submissionFunc = function() {
-        var surveyVal = $("#surveycode").val()
-        if(surveyVal.length == 41) {
-            $("#comments").val($("#message").val())
-            console.log($("#comments").val())
-            document.forms["mturk_form"].submit();
-        } else {
-            $("#error").show()
-        }
-    }
-
   </script>
 
 </section>
