@@ -6,7 +6,7 @@
 var sunGlasses = {
 	url: 'stimuli/sunGlasses.png', name: "sunGlasses", width: 130, height: 65,
 	instruction: "sunGlasses right", initialLoc : [4,3], critical : "target",
-	scriptedInstruction: "move the glasses to the right"}
+	scriptedInstruction: "move the glasses one space to the right"}
 var glassesCase = {
 	url: 'stimuli/glassesCase.png', name: "glassesCase", width : 100, height: 107,
 	instruction: "", initialLoc: [3,1], critical : "distractor",}
@@ -22,7 +22,7 @@ var airplane = {
 var barrel = {
 	url: 'stimuli/barrel.png', name: 'barrel', width: 87, height: 130,
 	instruction: "barrel down", initialLoc : [2,4], critical : "filler",
-	scriptedInstruction: "move the barrel down"}
+	scriptedInstruction: "move the barrel down by one space"}
 var watch = {
 	url: 'stimuli/watch.png', name: 'watch', width: 130, height: 84,
 	instruction: "", initialLoc: [2,2], critical : "filler",}
@@ -31,7 +31,7 @@ var watch = {
 var middleBlock = {
 	url: 'stimuli/middleBlock.png', name: "middleBlock", width: 80, height: 80,
 	instruction: "middleBlock left", initialLoc: [3,4],
-	scriptedInstruction: "move the bottom block to the left", critical : "target"}
+	scriptedInstruction: "move the bottom block one space to the left", critical : "target"}
 var bottomBlock = {
 	url: 'stimuli/bottomBlock.jpg', name: "bottomBlock", width: 80, height: 80,
 	instruction: "", initialLoc: [4,4], critical : "distractor"}
@@ -44,7 +44,7 @@ var topBlock = {
 var binoculars = {
 	url: 'stimuli/binoculars.jpg', name: 'binoculars', width: 100, height: 100,
 	instruction: "binoculars right", initialLoc: [4,1], critical : "filler",
-	scriptedInstruction: "move the binoculars to the right"}
+	scriptedInstruction: "move the binoculars one space to the right"}
 var wrench = {
 	url: 'stimuli/wrench.png', name: 'wrench', width: 130, height: 33,
 	instruction: "wrench left", initialLoc: [1,3], critical : "filler",}
@@ -56,7 +56,7 @@ var coffeeMug = {
 var cassetteTape = {
 	url: 'stimuli/cassetteTape.jpg', name: "cassetteTape",  width: 87.5, height: 55,
 	instruction: "cassetteTape down", initialLoc: [1,3], critical : "target",
-	scriptedInstruction: "move the the tape down",}
+	scriptedInstruction: "move the tape down by one space",}
 var rollOfTape = {
 	url: 'stimuli/rollOfTape.jpg', name: "rollOfTape", width: 83, height: 83,
 	instruction: "", initialLoc: [1,4], critical : "distractor"}
@@ -74,14 +74,14 @@ var barOfSoap = {
 	instruction: "barOfSoap left", initialLoc: [3,4], critical : "filler",}
 var knife = {url: 'stimuli/knife.png', name: 'knife', width: 130, height: 130,
 	instruction: "knife down", initialLoc: [3,3],critical : "filler",
-	scriptedInstruction: "move the knife down"}
+	scriptedInstruction: "move the knife down one space"}
 
 // BLOCK 4
 
 var mediumMeasuringCup = {
 	url: 'stimuli/mediumMeasuringCup.png', name: "mediumMeasuringCup", width : 110, height: 87,
 	instruction: "mediumMeasuringCup down", initialLoc : [3,4], critical : "target",
-	scriptedInstruction: "move the large measuring cup down"}
+	scriptedInstruction: "move the large measuring cup down one space"}
 var largeMeasuringCup = {
 	url: 'stimuli/largeMeasuringCup.png', name: "largeMeasuringCup", width : 130, height: 85,
 	instruction: "", initialLoc : [3,1], critical : "distractor",}
@@ -100,14 +100,14 @@ var waterBottle = {
 var carrot = {
 	url: 'stimuli/carrot.png', name: 'carrot', width: 130, height: 77,
 	instruction: "carrot up", initialLoc: [4,2],critical : "filler",
-	scriptedInstruction: "move the carrot up"} 
+	scriptedInstruction: "move the carrot up one space"} 
 
 // BLOCK 5
 
 var roundBrush = {
 	url: 'stimuli/roundBrush.png', name: "roundBrush", width: 104, height: 130,
 	instruction: "roundBrush left", initialLoc: [4,3], critical : "target",
-	scriptedInstruction: "move the brush to the left", }
+	scriptedInstruction: "move the brush one space to the left", }
 var hairBrush = {
 	url: 'stimuli/hairBrush.png', name: "hairBrush", width :130, height:109,
 	instruction: "", initialLoc: [1,4],critical : "distractor",}
@@ -123,7 +123,7 @@ var headphones = {
 var book = {
 	url: 'stimuli/book.png', name: 'book', width: 130, height: 101,
 	instruction: "book right", initialLoc: [1,2], critical : "filler",
-	scriptedInstruction: "move the book to the right"}
+	scriptedInstruction: "move the book one space to the right"}
 var ring = {
 	url: 'stimuli/ring.png', name: 'ring', width: 104, height: 110,
 	instruction: "", initialLoc: [4,1],critical : "filler",}
@@ -136,7 +136,7 @@ var basketball = {
 var boardEraser = {
 	url: 'stimuli/boardEraser.png', name: "boardEraser", width:130, height: 71,
 	instruction: "boardEraser up", initialLoc: [4,2],critical : "target",
-    scriptedInstruction: "move the eraser up", }
+    scriptedInstruction: "move the eraser up by one space", }
 var pencilEraser = {
 	url: 'stimuli/pencilEraser.png', name: "pencilEraser", width:130, height: 58,
 	instruction: "", initialLoc: [3,1],critical : "distractor",}
@@ -155,14 +155,14 @@ var tennisBall = {
 var banana = {
 	url: 'stimuli/banana.png', name: 'banana', width: 130, height: 61,
 	instruction: "banana up", initialLoc: [3,4],critical : "filler",
-	scriptedInstruction: "move the banana up"}
+	scriptedInstruction: "move the banana up by one space"}
 
 // BLOCK 7
 
 var mediumCandle = {
 	url: 'stimuli/mediumCandle.png', name: "mediumCandle", width: 107, height: 130,
 	instruction: "mediumCandle down", initialLoc: [1,1],critical : "target",
-	scriptedInstruction: "move the small candle down"}
+	scriptedInstruction: "move the small candle down by one space"}
 var smallCandle = {
 	url: 'stimuli/smallCandle.png', name: "smallCandle", width:100, height: 83,
 	instruction: "", initialLoc: [3,1],critical : "distractor",}
@@ -181,7 +181,7 @@ var handcuffs = {
 var magnet = {
 	url: 'stimuli/magnet.png', name: 'magnet', width: 130, height: 108,
 	instruction: "magnet down", initialLoc: [3,2],critical : "filler",
-	scriptedInstruction: "move the magnet down"}
+	scriptedInstruction: "move the magnet down by one space"}
 
 
 
@@ -190,7 +190,7 @@ var magnet = {
 var computerMouse = {
 	url: 'stimuli/computerMouse.png', name: "computerMouse", width:130, height: 112,
 	instruction: "computerMouse up", initialLoc: [3,4],critical : "target",
-	scriptedInstruction: "move the mouse up", }
+	scriptedInstruction: "move the mouse up by one space", }
 var toyMouse = {
 	url: 'stimuli/toyMouse.png', name: "toyMouse", width:130, height: 109,
 	instruction: "", initialLoc: [3,1],critical : "distractor",}
