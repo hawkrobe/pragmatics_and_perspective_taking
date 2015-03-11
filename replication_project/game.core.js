@@ -40,6 +40,7 @@ var game_core = function(game_instance){
     this.roundNum = -1;
     this.instructionNum = -1;
     this.numRounds = 8;
+    this.attemptNum = 0; // Increments whenever someone makes a mistake
     this.paused = true;
     this.objects = [];
     this.instructions = []

@@ -5,30 +5,49 @@ output: html_document
 
 ```{r}
 setwd('~/Repos/psych254/replication_project/analysis/')
-mouseD = read.csv('realMouseData.csv')
-errorD = read.csv('realErrorData.csv')
-messageD = read.csv('realMessageData.csv')
+mouseD = read.csv('pilotBMouse.csv')
+errorD = read.csv('pilotBError.csv')
+messageD = read.csv('pilotBMessages.csv')
 str(mouseD)
 library(tidyr)
 library(dplyr)
 library(ggplot2)
 ```
 
-This is the general plot
+Set up data
 
 ```{r}
-d <- mouseD %>% 
+
+mD <- messageD %>% 
+  mutate(messageStamp = time) %>%
+  select(gameid, condition, critical, objectSet,sender,contents,messageStamp) %>%
+  distinct(gameid,contents)
+
+joined <- (right_join(mouseD, mD, by = c("gameid", "condition", "objectSet", 
+                                  "critical")))
+
+dUnfilt <- joined %>%
+  filter(critical == 1) %>%
+  group_by(objectSet)
+
+d <- joined %>% 
   filter(critical == 1) %>% 
   group_by(objectSet) %>%
+  filter(time > messageStamp) #%>%
   mutate(begTargetX = first(targetX),
-         begTargetY = first(targetY),
-         begDistrX = first(as.numeric(levels(distractorX))[distractorX]),
-         begDistrY = first(as.numeric(levels(distractorY))[distractorY]))
-  
+         begTargetY = 600-first(targetY),
+         distractorX = as.factor(distractorX),
+         distractorY = as.factor(distractorY)) %>%
+  mutate(begDistrX = first(as.numeric(levels(distractorX))[distractorX]),
+         begDistrY = 600-first(as.numeric(levels(distractorY))[distractorY]))
+```
+
+
+```{r}
 d$new_labels = as.factor(sapply(X = d$objectSet, 
                               FUN = function(v) {return(paste("Item", v))}))
 
-g <- (ggplot(d, aes(x = mouseX, y = mouseY, color = condition)) +
+g <- (ggplot(d, aes(x = mouseX, y = 600-mouseY, color = condition)) +
       geom_vline(xintercept = c(0, 150,300,450, 600)) +
       geom_hline(yintercept = c(0, 150,300,450, 600)) +
       geom_point() +
