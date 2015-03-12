@@ -80,7 +80,8 @@ mD <- messageD %>%
   filter(!(gameid %in% bannedIDs)) %>%
   filter(attemptNum == 0) %>%
   filter(sender == "director") %>%
-  mutate(messageStamp = time) %>%
+  group_by(gameid, objectSet, instructionNum) %>%
+  mutate(messageStamp = first(time)) %>%
   select(gameid, condition, attemptNum, instructionNum, critical, objectSet,sender,contents,messageStamp) %>%
   distinct(gameid,contents)
 
@@ -96,7 +97,7 @@ dUnfilt <- joined %>%
 d <- joined %>% 
   filter(critical == 1) %>% 
   group_by(objectSet, condition) %>%
-  filter(time > messageStamp) %>%
+#  filter(time > messageStamp) #%>%
   mutate(mouseY = 600 - mouseY) %>%
   mutate(targetY = 600 - targetY) %>%
   mutate(begTargetX = first(targetX),
@@ -108,14 +109,18 @@ d <- joined %>%
    filter(targetX == begTargetX) %>%
    filter(targetY == begTargetY) %>%
    filter(distractorX == begDistrX) %>%
-   filter(distractorY == begDistrY)
+   filter(distractorY == begDistrY) 
 
 ```
 
 Compute hover time statistics
 
 ```{r}
-heatMap <- d %>%
+
+sem <- function(x) {sd(x, na.rm = T) / sqrt(length(x))}
+ci95 <- function(x) {sem(x) * 1.96}
+
+heatMapForLM <- d %>%
   group_by(gameid, objectSet) %>%
   mutate(inTargetSquare = as.numeric(mouseX > targetX - 75 
                                      & mouseX < targetX + 75
@@ -125,12 +130,55 @@ heatMap <- d %>%
                                          & mouseX < distractorX + 75
                                          & mouseY > distractorY - 75
                                          & mouseY < distractorY + 75)) %>%
-  group_by(condition) %>%
-  summarise(dPercent = sum(inDistractorSquare) / n(),
-            tPercent = sum(inTargetSquare) / n())
+  group_by(gameid, condition) %>%
+  summarise(distractor = sum(inDistractorSquare) / n(),
+         target = sum(inTargetSquare) / n()) %>%
+  gather(cellType, percent, distractor, target) 
+
+heatMapForLM
+# 
+#   group_by(condition) %>%
+#   summarise(distractorError = sem(distractor),
+#             targetError = sem(target),
+#             distractor = mean(distractor),
+#             target = mean(target)) %>% 
+#   gather(errorCellType, error, distractorError, targetError)
             #&& mouseY > targetY + 75
                                      #&& mouseY < targetY - 75))
-heatMap
+t1 <- lm(percent ~ condition * cellType, data = heatMapForLM)
+summary(t1)
+```
+
+Plot it? 
+
+```{r}
+heatMapForPlot <- d %>%
+  group_by(gameid, objectSet) %>%
+  mutate(inTargetSquare = as.numeric(mouseX > targetX - 75 
+                                     & mouseX < targetX + 75
+                                     & mouseY > targetY - 75
+                                    & mouseY < targetY + 75)) %>%
+  mutate(inDistractorSquare = as.numeric(mouseX > distractorX - 75
+                                         & mouseX < distractorX + 75
+                                         & mouseY > distractorY - 75
+                                         & mouseY < distractorY + 75)) %>%
+  group_by(gameid, condition) %>%
+  summarize(distractor = sum(inDistractorSquare) / n(),
+         target = sum(inTargetSquare) / n()) %>%
+  gather(cellType, percent, distractor, target) %>%
+  group_by(condition, cellType) %>%
+  summarize(error = sem(percent),
+            percent = mean(percent)) 
+  
+heatMapForPlot
+
+g <- (ggplot(heatMapForPlot, aes(x = condition, y = percent, group = cellType,
+                                  color = cellType)) 
+      + geom_line(aes(linetype = cellType), size = 2)
+      + geom_errorbar(aes(ymax = percent + error, 
+                          ymin = percent - error), size =2 ,
+                      width = 0.1))
+g
 ```
 
 
