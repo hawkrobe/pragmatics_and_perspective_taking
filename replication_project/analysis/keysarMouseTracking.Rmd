@@ -5,9 +5,6 @@ output: html_document
 
 ```{r}
 setwd('~/Repos/psych254/replication_project/analysis/')
-# mouseD = read.csv('pilotBMouse.csv')
-# errorD = read.csv('pilotBError.csv')
-# messageD = read.csv('pilotBMessages.csv')
 mouseD = read.csv('fullSampleMouse.csv')
 errorD = read.csv('fullSampleError.csv')
 messageD = read.csv('fullSampleMessage.csv')
@@ -27,6 +24,7 @@ nonCriticalMistakes <- errorD %>%
   filter(attemptNum == 0) %>% 
   group_by(gameid) %>%
   tally() %>%
+  # implement exclusion criteria of errors on >~10% of non-critical trials
   filter(n >= 2)
 
 bannedIDs <- nonCriticalMistakes$gameid
@@ -165,15 +163,7 @@ heatMapForLM <- d %>%
   gather(cellType, percent, distractor, target) 
 
 heatMapForLM
-# 
-#   group_by(condition) %>%
-#   summarise(distractorError = sem(distractor),
-#             targetError = sem(target),
-#             distractor = mean(distractor),
-#             target = mean(target)) %>% 
-#   gather(errorCellType, error, distractorError, targetError)
-            #&& mouseY > targetY + 75
-                                     #&& mouseY < targetY - 75))
+
 t1 <- lm(percent ~ condition * cellType, data = heatMapForLM)
 summary(t1)
 ```
@@ -210,25 +200,25 @@ g <- (ggplot(heatMapForPlot, aes(x = condition, y = percent, group = cellType,
 g
 ```
 
-
+Very noisy (unfinished) plot of all mouse-movements
 
 ```{r}
-heatMap$new_labels = as.factor(sapply(X = heatMap$objectSet, 
-                              FUN = function(v) {return(paste("Item", v))}))
-
-g <- (ggplot(heatMap, aes(x = mouseX, y = mouseY, color = condition)) +
-      geom_vline(xintercept = c(0, 150,300,450, 600)) +
-      geom_hline(yintercept = c(0, 150,300,450, 600)) +
-      geom_point() +
-      geom_point(aes(x = begTargetX, y = begTargetY), size = 20,
-                 shape = 4, color = "black", show_guide = FALSE) +
-      geom_point(aes(x = begDistrX, y = begDistrY), size = 20,
-                 shape = 4, color = "grey50", show_guide = FALSE) + 
-      theme(panel.grid.major = element_blank(), 
-            panel.grid.minor = element_blank()) +
-      xlim(0, 600) +
-      ylim(0, 600) +
-      theme(aspect.ratio = 1) +
-      facet_wrap(~ new_labels, nrow = 2))
-g
+# heatMapForPlot$new_labels = as.factor(sapply(X = heatMapForPlot$objectSet, 
+#                               FUN = function(v) {return(paste("Item", v))}))
+# 
+# g <- (ggplot(heatMapForPlot, aes(x = mouseX, y = mouseY, color = condition)) +
+#       geom_vline(xintercept = c(0, 150,300,450, 600)) +
+#       geom_hline(yintercept = c(0, 150,300,450, 600)) +
+#       geom_point() +
+#       geom_point(aes(x = begTargetX, y = begTargetY), size = 20,
+#                  shape = 4, color = "black", show_guide = FALSE) +
+#       geom_point(aes(x = begDistrX, y = begDistrY), size = 20,
+#                  shape = 4, color = "grey50", show_guide = FALSE) + 
+#       theme(panel.grid.major = element_blank(), 
+#             panel.grid.minor = element_blank()) +
+#       xlim(0, 600) +
+#       ylim(0, 600) +
+#       theme(aspect.ratio = 1) +
+#       facet_wrap(~ new_labels, nrow = 2))
+# g
 ```
