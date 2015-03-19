@@ -142,7 +142,7 @@ var pencilEraser = {
 	instruction: "", initialLoc: [3,1],critical : "distractor",}
 var brain = {
 	url: 'stimuli/brain.png', name: "brain", width: 130, height:104,
-	instruction: "", initialLoc: [2,2],critical : "distractor",}
+	instruction: "", initialLoc: [3,1],critical : "distractor",}
 var dollar = {
 	url: 'stimuli/dollar.jpg', name: 'dollar', width: 130, height: 54,
 	instruction: "dollar right", initialLoc: [3,3],critical : "filler",}
