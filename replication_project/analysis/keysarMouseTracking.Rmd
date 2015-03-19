@@ -38,7 +38,6 @@ Make error table
 eD <- errorD %>%
   filter(!(gameid %in% bannedIDs)) %>%
   filter(critical == 1) %>%
-  filter(!(objectSet %in% c(2, 6,7))) %>%
   filter(attemptNum == 0) %>%
   group_by(gameid, condition) %>%
   tally() %>%
@@ -47,6 +46,21 @@ eD <- errorD %>%
   summarise(atLeastOnce = length(n)/14, 
             atLeastTwice = sum(cond2)/14)
 eD
+
+# To illustrate how much a few items are driving the effect, we exclude three items 
+# where more than 60% of participants made errors.
+excludedED <- errorD %>%
+  filter(!(gameid %in% bannedIDs)) %>%
+  filter(critical == 1) %>%
+  filter(!(objectSet %in% c(2, 6, 7))) %>%
+  filter(attemptNum == 0) %>%
+  group_by(gameid, condition) %>%
+  tally() %>%
+  mutate(cond2 = as.numeric(n >= 2)) %>%
+  group_by(condition) %>%
+  summarise(atLeastOnce = length(n)/14, 
+            atLeastTwice = sum(cond2)/14)
+excludedED
 ```
 
 When we look at errors per item, we have to remember that not all items had the same number of participants in the experimental condition.
