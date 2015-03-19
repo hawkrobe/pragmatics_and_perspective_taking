@@ -38,6 +38,7 @@ Make error table
 eD <- errorD %>%
   filter(!(gameid %in% bannedIDs)) %>%
   filter(critical == 1) %>%
+  filter(!(objectSet %in% c(2, 6,7))) %>%
   filter(attemptNum == 0) %>%
   group_by(gameid, condition) %>%
   tally() %>%
@@ -48,6 +49,20 @@ eD <- errorD %>%
 eD
 ```
 
+When we look at errors per item, we have to remember that not all items had the same number of participants in the experimental condition.
+
+```{r}
+numPlayersPerCondition = mouseD %>% 
+  filter(!(gameid %in% bannedIDs)) %>% 
+  filter(critical == 1) %>% 
+  filter(attemptNum == 0) %>% 
+  group_by(gameid, condition, objectSet) %>% 
+  summarize() %>% 
+  group_by(condition, objectSet) %>% 
+  summarize(total = n()) %>% 
+  filter(condition == "exp")
+```
+
 Follow-up: are all critical items equal?
 
 ```{r}
@@ -56,10 +71,10 @@ itemInequalities <- errorD %>%
   filter(critical == 1) %>%
   filter(attemptNum == 0) %>%
   filter(condition == "exp") %>%
-  mutate(objectSet = paste("Item", objectSet)) %>%
   group_by(objectSet) %>%
   tally() %>%
-  transmute(errorCount = n, correctCount = 14-n)
+  right_join(numPlayersPerCondition, by = c('objectSet')) %>%
+  transmute(errorCount = n, correctCount = total - n)
 
 t(itemInequalities)
 t <- chisq.test(itemInequalities)
