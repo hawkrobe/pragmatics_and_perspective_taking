@@ -22,22 +22,25 @@ First do this using a `for` loop.
 ```{r}
 sigCount = 0
 numSamples = 10000
-for(i in 1:N) {
-  sample1 = rnorm(30)
-  sample2 = rnorm(30)
-  stat = t.test(sample1, sample2)
+for(i in 1:numSamples) {
+  fakeSample = rnorm(30)
+  stat = t.test(fakeSample)
   if(stat$p.value < 0.05) {
     sigCount = sigCount + 1;
   }
 }
-rate <- sigCount 
-print(sigCount)
+print(sigCount / numSamples)
 ```
 
 Next, do this using the `replicate` function:
 
 ```{r}
+numSamples = 10000
+testRes <- replicate(numSamples, t.test(rnorm(30))$p.value < .05)
+cat("false positive rate:", sum(testRes)/numSamples)
 ```
+
+**Using both methods, we find a false positive rate of about 0.05! In other words, if the null hypothesis is true and there is no effect, we'll still report one about 5% of the time. This is our alpha value (in decision-theoretic terms). As the number of samples increases, we'll converge to this rate exactly. **
 
 Ok, that was a bit boring. Let's try something moderately more interesting - let's implement a p-value sniffing simulation, in the style of Simons, Nelson, & Simonsohn (2011).
 
@@ -46,16 +49,29 @@ Consider this scenario: you have done an experiment, again with 30 participants 
 First, write a function that implements this sampling regime.
 
 ```{r}
-double.sample <- function () {
+double.sample <- function (maxP) {
+  fakeSample1 = rnorm(30)
+  test1p = t.test(fakeSample1)$p.value
+  if(test1p >= maxP || test1p < .05) {
+    return (test1p < 0.05)
+  } else {
+    fakeSample2 = rnorm(30)
+    test2p = t.test(c(fakeSample1, fakeSample2))$p.value
+    return (test2p < 0.05)
+  }
 }
 ```
 
 Now call this function 10k times and find out what happens. 
 
 ```{r}
+numSamples = 10000
+sum(replicate(numSamples, double.sample(.25)))/numSamples
 ```
 
 Is there an inflation of false positives? How bad is it?
+
+**There is indeed an inflation of false positives: we find false positives about 7% of the times instead of 5% as before**
 
 Now modify this code so that you can investigate this "double the sample" rule in a bit more depth. Let's see what happens when you double the sample ANY time p > .05 (not just when p < .25), or when you do it only if p < .5 or < .75. How do these choices affect the false positive rate?
 
@@ -64,9 +80,16 @@ HINT: Try to do this by making the function `double.sample` take the upper p val
 HINT 2: You may need more samples. Find out by looking at how the results change from run to run.
 
 ```{r}
+numSamples = 10000
+d <- data.frame(caps = c(.05, .25, .5, .75, 1)) %>%
+  group_by(caps) %>%
+  mutate(falseAlarm = sum(replicate(numSamples, double.sample(caps)))/numSamples)
+d
 ```
 
 What do you conclude on the basis of this simulation? How bad is this kind of data-dependent policy?
+
+**Inflation continues to grow up to about 9% in the worse-case (when you always run 30 more trials after observing $p>0.05$). This means you will be about twice as likely to incorrectly report a significant finding when no effect exists. This is pretty bad. ** 
 
 
 Part 2: The Linear Model
@@ -81,6 +104,8 @@ and vitamin C. This is super simple. (Try `?ToothGrowth`).
 First plot the data, we'll use `qplot` to understand how `len` (tooth length) depends on `dose` (amount of Vitamin C) and `supp` (delivery method).
 
 ```{r}
+data(ToothGrowth)
+qplot(y = len, x = dose, color = supp, data = ToothGrowth)
 ```
 
 So now you see what's going on. 
@@ -88,23 +113,41 @@ So now you see what's going on.
 Next, always make a histogram of the DV before making a linear model! This reveals the distribution and can be helpful in choosing your model type.
 
 ```{r}
+qplot(len, data = ToothGrowth)
 ```
+
+** We see that length has a rather wide distribution, possibly multimodal. It is likely a mixture of different distributions, which we can investigate in our linear model.**
 
 Now make a linear model of tooth lengths using `lm`. Try making one with main effects and interactions and another with just main  effects. Make sure to assign them to variables so that you can get them later.
 
 ```{r}
+mainEffectModel <- lm(len ~ dose + supp, data = ToothGrowth)
+summary(mainEffectModel)
+interactionModel <- lm(len ~ dose * supp, data = ToothGrowth)
+summary(interactionModel)
+anova(mainEffectModel, interactionModel, test="Chisq")
 ```
+
+**We see that both dose and supplement are significant in the main effects model, and that the interaction between them is significant in the interactive model.**
 
 Now try taking out the intercept, using a -1 term in the formula. what does this do?
 
 ```{r}
+mainEffectModel <- lm(len ~ -1 + dose + supp, data = ToothGrowth)
+summary(mainEffectModel)
+interactionModel <- lm(len ~ -1 + dose * supp, data = ToothGrowth)
+summary(interactionModel)
 ```
+
+**This did not affect the interaction coefficient, but it added a level of the supplement factor** 
 
 Thought question: Take a moment to interpret the coefficients of the model. 
 Q1 - What are the units?
+**The coefficient in front of dose is the average slope of the line if the two supplement groups were collapsed together. The coefficients in front of the dose groups are the numbers added to this baseline dose at each level to get their respective group means.**
 Q2 - How does the interaction relate to the plot?
+**In the plot, we saw that the slope across doses is steeper for VC supplement than OJ supplement. This is the interaction our model is picking up on.** 
 Q3 - Should there be an interaction in the model? What does it mean? How important is it?
-
+**Yes, a nested model comparison shows that the interactive model accounts for a significantly higher proportion of the variance than the additive model, $\chi^2(1) =  88.92, p = 0.02$.**
 Now make predictions from the model you like the best. What should happen with
 doses of 0, 1.5, 2.5, and 10 under both supplements? 
 
@@ -113,14 +156,21 @@ HINT: use the `predict` function ...
 HINT 2: you will have to make a dataframe to do the prediction with, so use something like `data.frame(dose=...)`.
 
 ```{r}
+newD = data.frame(dose=rep(c(0,1.5,2.5,10),2), supp = c(rep('OJ', 4), rep('VC', 4)))
+newD
+newD$predictions = predict(interactionModel, newD)
+newD
+ggplot(newD, aes(x = dose, y = predictions, color = supp)) + geom_line()
 ```
 
 Now plot the residuals from the original model. How do they look?
 HINT: `?resid`
 
 ```{r}
+plot(resid(interactionModel))
 ```
 
+**Not bad! No clear trends, but also quite a bit of variability**
 
 BONUS: test them for normality of distribution using a quantile-quantile plot.
 
