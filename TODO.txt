@@ -1,0 +1,58 @@
+[x] Real-time messaging
+	[x] chat box in focus
+	[x] message box that scrolls
+	[x] put chat box at bottom of message panel
+[x] Allow moving objects
+	[x] update across participants
+	[x] attach object locations to game
+	[x] make dragging smoother 
+	    [x] pre-load images
+	    [x] ignore server updates while dragging (to prevent image from 'jumping' briefly to old positions)
+[x] separate out agent/director roles
+	[x] give director the instruction prompt
+	    [x] hardcode instruction set in file (about 4 per grid)
+	       [x] make sure they're consistent w/ initial positions	       
+	       [x] make sure instruction is consistent w/ both interpretations
+	    [x] overlay arrows on director screen
+	       [x] hard-code in easy-to-parse way, e.g. "<objectName> <direction>"
+	    [x] correct error if player makes one
+	[x] change title at top to directions
+	[x] change "your partner: " to "director/matcher"
+	[x] don't allow director to move objects
+	[x] Tell players "You are the director" and "you are the matcher"
+[x] make interface for 'scripted' instructions
+	[x] hardcode which ones are scripted in object file
+	[x] stick the message in the text box 
+	    [x] prevent them from modifying it???
+	[x] don't refill the text box after they send something... 
+	[x] Put autofocus on box so enter key works?
+	[x] don't let people send empty strings?
+[x] draw things 
+	[x] draw grid
+	[x] draw jpgs from file
+	[x] initialize things in correct places
+	    [x] hardcode initial locations in objectSets.js (no evidence of randomization in paper)
+	[x] indicate occluded cells in a salient way
+	    [x] ACTUALLY occlude things
+	[x] draw actual objects from paper (once Keysar replies)
+	    [x] find more 'filler' images from internet (about 7 per grid)
+[x] join/leave logistics
+   [] error entering from mturk? Error handling query string id?
+   [x] show message when first player joins like "WAITING FOR OTHER PLAYER TO JOIN..."
+   [x] blink tab when they do join to get attention?
+   [x] end game if one player disconnects (vs. re-filling their spot)
+[x] have agent position mouse before every instruction... 
+    [x] green light that tells director they're okay to go?
+    [x]
+[x] build wrapper (i.e. just need to insert text)	    
+    [x] revise instructions
+    [] write exit survey
+    [x] write qualification quiz
+     	[x] fix comprehension check to catch 'empty' responses and allow retry
+    [x] fix instruction image to reflect real game!
+[x] write data to file
+	[x] time stamped messages to one file 
+	[x] mouse positions to another file
+	[x] record errors (send message to server)
+	[x] write object to file w/ error (w/ round & fix data)
+	[x] write object set ID and instruction ID to mouse position file w/ mouse
