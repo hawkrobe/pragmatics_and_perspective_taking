@@ -7,7 +7,7 @@ Local demo (from scratch)
 
 2. On Mac or Linux, use the Terminal to navigate to the location where you want to create your project, and enter 
    ```
-   git clone https://github.com/hawkrobe/couzin_replication.git
+   git clone https://github.com/hawkrobe/keysar_replication.git
    ```
    at the command line to create a local copy of this repository. On Windows, run this command in the shell you installed in the previous step.
 
