@@ -1,0 +1,162 @@
+% arara: pdflatex
+% arara: bibtex
+% arara: pdflatex
+% arara: pdflatex
+% 
+% Annual Cognitive Science Conference
+% Sample LaTeX Paper -- Proceedings Format
+% 
+
+% Original : Ashwin Ram (ashwin@cc.gatech.edu)       04/01/1994
+% Modified : Johanna Moore (jmoore@cs.pitt.edu)      03/17/1995
+% Modified : David Noelle (noelle@ucsd.edu)          03/15/1996
+% Modified : Pat Langley (langley@cs.stanford.edu)   01/26/1997
+% Latex2e corrections by Ramin Charles Nakisa        01/28/1997 
+% Modified : Tina Eliassi-Rad (eliassi@cs.wisc.edu)  01/31/1998
+% Modified : Trisha Yannuzzi (trisha@ircs.upenn.edu) 12/28/1999 (in process)
+% Modified : Mary Ellen Foster (M.E.Foster@ed.ac.uk) 12/11/2000
+% Modified : Ken Forbus                              01/23/2004
+% Modified : Eli M. Silk (esilk@pitt.edu)            05/24/2005
+% Modified : Niels Taatgen (taatgen@cmu.edu)         10/24/2006
+% Modified : David Noelle (dnoelle@ucmerced.edu)     11/19/2014
+
+%% Change "letterpaper" in the following line to "a4paper" if you must.
+ 
+\documentclass[10pt,letterpaper]{article}
+ 
+\usepackage{hyperref}
+\usepackage{cogsci}
+\usepackage{pslatex}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{apacite}
+\usepackage{color}
+\usepackage{todonotes}
+\usepackage{dsfont}
+\usepackage{textcomp}
+
+\definecolor{Red}{RGB}{255,0,0}
+\newcommand{\red}[1]{\textcolor{Red}{#1}}
+
+\newcommand{\jd}[1]{\green{$^*$}\marginpar{\footnotesize{JD: \green{#1}}}}
+
+\newcommand{\subsubsubsection}[1]{{\em #1}}
+\newcommand{\eref}[1]{(\ref{#1})}
+\newcommand{\tableref}[1]{Table \ref{#1}}
+\newcommand{\figref}[1]{Figure \ref{#1}}
+\newcommand{\appref}[1]{Appendix \ref{#1}}
+\newcommand{\sectionref}[1]{Section \ref{#1}}
+
+\title{?}
+ 
+\author{{\large \bf Robert X.~D.~Hawkins, Noah D.~Goodman}\\
+  \{rxdh,ngoodman\}@stanford.edu\\
+  Department of Psychology, 450 Serra Mall \\
+  Stanford, CA 94305 USA}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+?
+
+\textbf{Keywords:} 
+?
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+Humans can accurately and intelligently reason about the mental states of other humans. Among other things, this ability -- called \emph{theory of mind} \cite{PremackWoodruff78_ChimpanzeeToM} -- allows us to infer the underlying beliefs and intentions that motivate others' actions, and to use these inferences to predict future actions \cite{BakerSaxeTenenbaum09_ActionUnderstandingInversePlanning}. Most children acquire this ability by age six \cite{WimmerPerner83_BeliefsAboutBeliefs, WellmanCrossWatson01_ToMMetaAnalysis} and it serves as an important landmark in the developmental trajectory of intuitive theories \cite{GopnikWellman12_ReconstructingConstructivism}.
+
+While theory of mind use often appears to be automatic and effortless, Keysar and colleagues \cite{KeysarBarr___Brauner00_TakingPerspective, KeysarLinBarr03_LimitsOnTheoryOfMindUse, LinKeysarEpley10_ReflexivelyMindblind} have argued that it is actually the opposite, even for adults: we are ``mindblind" by default and only overcome our egocentric biases through an effortful process of perspective-taking. In other words, while adults are \emph{capable} of applying theory of mind reasoning, we do not always apply it reliably. This argument is based on a simple experimental paradigm, where participants played a simple communication game with a confederate. The two players were placed on opposite sides of a $4 \times 4$ grid containing a set of everyday objects. The confederate played the role of `director,' giving instructions about how to move objects around a grid, and the participant played the role of `matcher,' attempting to follow these instructions. For example, the objects in one trial included a medium-sized measuring cup in one location and a smaller measuring cup in another location. The director gave an instruction like `move the large cup up one square,' referring to the medium-sized one. 
+
+Some objects were occluded such that only the matcher could see them, creating an asymmetry in the players' knowledge. To perform accurately, the matcher would need to apply theory of mind and reason about the director?s beliefs. For example, if a much larger measuring cup were placed in an occluded slot and agents failed to account for the director?s beliefs, they might interpret `the large cup' to mean this occluded cup even though the director couldn't possibly know about it. Indeed, \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} found that participants attempted to move the hidden item in 30\% of cases: 71\% of participants attempted to move this hidden item at least once (out of four critical cases) in the experimental condition, compared to 0\% in a control condition where there was no ambiguity over the referent. 46\% of participants reached for the hidden object at least twice. Additionally, eye-tracking data showed that participants considered the hidden item more often and for longer in the experimental condition than the control condition. 
+
+While these results are compelling, the paradigm has been criticized from several different angles. First, in all experiments, the privileged object was a better fit for the referring expression than the one in common ground (e.g. the largest measuring cup vs. the medium measuring cup for ``the large measuring cup"), making the privileged object \emph{a priori} more likely to be the referent. It would be fairer to compare two objects that fit the referring expression equally well \cite{HellerGrodnerTanenhaus08_Perspective}. Second, the viewpoint asymmetry paradigm is somewhat unnatural: common ground is typically built incrementally over the course of an interaction rather than presented all at once, and it is rare for a shared display to differ in perceptual accessibility \cite{HannaTanenhausTrueswell03_CommonGroundPerspective}. Third, none of the experiments reported by Keysar and colleagues included a key comparison condition where the critical item (e.g. the largest measuring cup) was \emph{also} in common ground \cite{BrownSchmidtHanna11_IncrementalPerspectiveTaking}. It would be useful to know whether people referred to the critical item less in the privileged condition than in the full common ground condition, which would put a more positive spin on the results. %Note that none of these criticisms invalidate the paradoxical result that listeners move an occluded object, they just suggest an alternative explanation. Reference disambiguation is probabilistic: common ground and goodness of fit are weighed against one another.
+
+In this paper, we offer a novel pragmatic account of Keysar's results. When both players know that objects are occluded in the display, we note that the speaker is likely to be overinformative. If the listener \emph{expects} the speaker to be overinformative, they will pragmatically pick the \emph{a priori} more likely referent of the referring expression, which in critical trials will be the occluded object. In other words, it is precisely \emph{because} the listener takes the speaker's mental state into consideration that they are tricked by an uncooperative confederate into choosing the wrong item. We began by replicating \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} in a multi-player web experiment, recruiting participants to be both director and matcher instead of using a confederate. Instructions for critical items, as well as a random subset of filler items, remained scripted as in the original study. We then ran the same experiment without scripted items, observing unconstrained director behavior. This minimal pair of experiments demonstrates that listener mistakes are in fact due to the pragmatics of the task, ironically showing that apparent failures of theory of mind are in fact attributable to theory of mind.
+
+\section{Exp.~1: Scripted Replication}
+\label{sec:Exp1}
+
+\subsection{Materials:}
+
+Participants were  4 x 4 slots. Five of the slots were occluded from the director?s perspective, and the remaining 11 were visible to both participant and director. One of these unoccluded slots included an object that was the target, such as a cassette tape box. Another object, such as a roll of tape, was hidden by the participant in a small brown paper bag and placed in an occluded slot. In addition to the intended object and the object in the bag, each array had several unrelated objects. For each grid, there was one ?critical instruction? (e.g. ?move the tape?) in which the director gave an instruction to move a mutually-visible object that could also potentially refer to the object hidden in the bag.
+
+The experiment had eight items, each with a different set of objects and critical instruction. Each item consisted of a series of instructions to move objects around and included one critical instruction. Each item also included one critical pair of objects, one of them the intended object and the other hidden in the bag, such as the cassette tape and the roll of tape.
+
+To collect baseline performance information for each item we added a condition in which the hidden object (e.g. roll of tape) was replaced with an object that did not fit the critical instruction (e.g. a battery). Thus, the `move the tape? instruction appeared after the participant had hidden in the bag either a roll of tape (experimental condition) or a battery (baseline condition). Each participant received half the items in the experimental condition and half in the baseline condition. Items and conditions were counterbalanced across participants. Order of presentation was random, with the provision that no more than two items in the same condition would appear consecutively.
+
+A trained female confederate played the role of the director in order to ensure uniformity of critical instructions across conditions and participants. The confederate was well practiced in playing the role of a naive participant. To create a realistic situation, she indicated having some difficulty with the task, interjected her instructions with hesitations, and made occasional errors with non-critical objects. In addition, the director improvised most of the instructions, except that critical instructions for the target objects were scripted. Indeed, with the exception of one person, none of the participants later reported that they suspected during the experiment that the director was a confederate.?
+
+We will precisely replicate all objects sets, instruction sets, and randomization schemes. However, given the constraints of the web experiment format, there will be several exceptions as well. First, participants cannot be seated across from each other at a table: they will each see their respective views of the 4 x 4 grid on a screen and will communicate via a text box. Second, we will not use a trained confederate, and will instead randomly assign one of the players to the role of the instruction giver. To make sure the critical instructions are still scripted, we will provide a ?send instructions? button for a subset of trials (including some non-critical ones).
+
+\subsection{Procedure}
+
+The original article states:
+
+?The participant and the confederate arrived at the laboratory and the experimenter explained that they would be playing two different roles in a communication game. She then assigned roles, ostensibly randomly, and the participant received the role of the `addressee? while the confederate was assigned the director?s role. At the beginning of each item, the director received a picture of the array of objects with arrows indicating where each object should be moved. The arrows were numbered to specify the order of object movement. The director then used this picture and instructed the participant to rearrange the objects accordingly.
+
+The director?s picture showed her perspective, meaning that only mutually-visible objects appeared on the picture, with the remainder of the slots clearly occluded. This was demonstrated to the participant, and the experimenter also pointed out that the objects in the occluded slots were not part of the game. In addition, before each item began, the experimenter put a large cardboard wall between the confederate and the participant as a visual barrier. Then she handed the participant an object and a brown paper bag and asked the participant to hide the object in the bag and place the bag in one of the occluded slots. The experimenter did not name the object but simply handed it to the participant and referred to it only as `this?. After the participant had hidden the object in the bag and put the bag in the slot, the experimenter removed the barrier and the director started with the instructions.
+
+The experiment began with a practice item to familiarize the participant with the task and to correct any misunderstanding. In order to make absolutely sure that the participant fully appreciated the director?s difference in perspective, the participant and the director switched roles and the participant gave instructions for a second practice item. In this manner there would be no question that the participant understood the information provided in the picture of the array, appreciated that the director could not see hidden objects, and knew that the only objects relevant to the game were the mutually-visible ones. After the role reversal, the participant and the confederate resumed their original roles and the experimenter presented the first item. The experiment proceeded through all eight items, with the director providing instructions and the participant moving the objects. Before each instruction the director said `ready?? at which point the participant looked at the center of the array and answered `ready?. The participant was free to converse with the director, to ask questions and so on.?
+	
+We will follow these procedures precisely, but all the practice items will be moved to a general set of instructions, before players enter the real-time, multi-player environment. Because there will be no experimenter actively administrating the practice trials, we will give a comprehension test to participants before they are assigned to the role of ?director? or ?agent.? In this way, both participants will understand both tasks and appreciate the information asymmetry.
+
+\subsection{Results}
+
+Same or stronger than Keysar, except used mouse-tracking instead of eye-tracking... 
+
+Item-wise analysis
+
+\subsection{Discussion}
+
+\begin{itemize}
+\item quibble with ?moved at least one thing? measure (allows one difficult item to dominate if item-wise differences)
+\item in non-scripted instructions, noticed that people were being overinformative
+\end{itemize}
+        
+\section{Exp.~2: Unscripted Replication}
+\label{sec:Exp2}
+
+\subsection{Methods}
+
+ same as exp 1, except no scripted instructions (i.e. we don?t force the director to say ?tape?)
+ 
+\subsection{Results}
+
+\begin{itemize}
+\item Listener makes fewer mistakes?
+\item Director more overinformative on critical items?
+\end{itemize}
+
+\subsection{Discussion}
+
+\begin{itemize}
+\item scripted instruction unnatural, 
+\item violates listener expectations of overinformativity
+\end{itemize}
+
+\section{General Discussion}
+
+\begin{itemize}
+\item Keysar's results are ironically accounted for by a ToM argument, via pragmatics
+\item Running multi-player control w/o confederate is important to know whether confederate behavior is valid and cooperative
+\end{itemize}
+
+\section{Acknowledgements}
+
+\small We're grateful to Boaz Keysar for providing select materials for our replication. Exp.~1 was originally conducted under the supervision of Michael Frank, with early input from Desmond Ong. This work was supported by ONR grants N00014-13-1-0788 and N00014-13-1-0287,  and a James S. McDonnell Foundation Scholar Award to NDG. RXDH was supported by the Stanford Graduate Fellowship and the National Science Foundation Graduate Research Fellowship under Grant No. DGE-114747. 
+
+\bibliographystyle{apacite}
+
+\setlength{\bibleftmargin}{.125in}
+\setlength{\bibindent}{-\bibleftmargin}
+
+\bibliography{bibs}
+
+
+\end{document}
