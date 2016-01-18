@@ -49,7 +49,7 @@
       </div>
 
       <p>
-        <center><button id="agree" type="button" class="btn btn-sm btn-primary">SUBMIT</button></center>
+        <center><button id="agree" type="button" style="display: none" class="btn btn-sm btn-primary">SUBMIT</button></center>
 	<noscript><strong>JavaScript must be enabled to start.</strong></noscript>
       </p>
       <hr>
@@ -73,12 +73,6 @@
 
     </div> <!-- /container -->
     
-    <script type="text/javascript">
-      document.getElementById("agree").onclick = function () {
-        location.replace("./instructions.html");
-      };
-    </script>
-
     <script type="text/javascript">
       $(document).ready(function () {
         var urlParams;
