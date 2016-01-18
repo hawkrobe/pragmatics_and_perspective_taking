@@ -8,17 +8,23 @@
 */
 
 var 
-    use_db          = false,
+    use_https       = true,
     gameport        = 8888,
+    https           = require('https'),
+    fs              = require('fs'),
     app             = require('express')(),
-    server          = app.listen(gameport),
-    io              = require('socket.io')(server),
-    _               = require('underscore'),
-    fs              = require('fs');
+    _               = require('underscore');
 
-if (use_db) {
-    database        = require(__dirname + "/database"),
-    connection      = database.getConnection();
+try {
+  var privateKey  = fs.readFileSync('/etc/apache2/ssl/private.key'),
+      certificate = fs.readFileSync('/etc/apache2/ssl/ssl.crt'),
+      options     = {key: privateKey, cert: certificate},
+      server      = require('https').createServer(options,app).listen(gameport),
+      io          = require('socket.io')(server);
+} catch (err) {
+  console.log("cannot find SSL certificates; falling back to http");
+  var server      = app.listen(gameport),
+      io          = require('socket.io')(server);
 }
 
 game_server = require('./game.server.js');
@@ -60,7 +66,7 @@ io.on('connection', function (client) {
         if(query.id) {
             console.log("got id")
             global_player_set[query.id] = true;
-            // use id from query string if exists
+            // useid from query string if exists
             var id = query.id; 
         } else {
             var id = utils.UUID();
