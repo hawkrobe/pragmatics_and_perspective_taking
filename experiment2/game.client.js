@@ -26,10 +26,7 @@ var waiting;
 var submitted = false;
 
 var client_ondisconnect = function(data) {
-    // Redirect to exit survey
-    console.log("server booted")
-    var URL = 'http://web.stanford.edu/~rxdh/psych254/replication_project/forms/end.html?id=' + my_id;
-    window.location.replace(URL);
+  submitInfoAndClose();
 };
 
 var submitInfoAndClose = function() {
@@ -133,9 +130,9 @@ client_onMessage = function(data) {
         switch(subcommand) {    
         case 'end' :
 	       // Redirect to exit survey
-          console.log("received end message...")
-          var URL = 'http://web.stanford.edu/~rxdh/psych254/replication_project/forms/end.html?id=' + my_id;
-          window.location.replace(URL); break;
+	  submitInfoAndClose();
+	  console.log("received end message...");
+	  break;
 
         case 'alert' : // Not in database, so you can't play...
             alert('You did not enter an ID'); 
@@ -462,8 +459,8 @@ function dropdownTip(data){
     } else {
       console.log("would have submitted the following :")
       console.log(game.data);
-      var URL = 'http://web.stanford.edu/~rxdh/psych254/replication_project/forms/end.html?id=' + my_id;
-      window.location.replace(URL);
+      // var URL = 'http://web.stanford.edu/~rxdh/psych254/replication_project/forms/end.html?id=' + my_id;
+      // window.location.replace(URL);
     }
     break;
   }
