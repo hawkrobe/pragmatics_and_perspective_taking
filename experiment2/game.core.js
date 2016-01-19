@@ -46,12 +46,22 @@ var game_core = function(game_instance){
     this.instructions = []
     this.currentDestination = [];
     if(this.server) {
-        this.trialList = this.makeTrialList()
-        this.players = [{
-            id: this.instance.player_instances[0].id, 
-            player: new game_player(this,this.instance.player_instances[0].player)
-        }];
-        this.server_send_update()
+      this.trialList = this.makeTrialList()
+      this.players = [{
+        id: this.instance.player_instances[0].id, 
+        player: new game_player(this,this.instance.player_instances[0].player)
+      }];
+      this.data = {
+	id : this.instance.id.slice(0,6),
+	trials : [],
+	catch_trials : [],
+	system : {}, 
+	totalScore : {},
+	subject_information : {
+	  gameID: this.instance.id.slice(0,6)
+	}
+      };
+      this.server_send_update()
     } else {
         this.players = [{
             id: null, 
