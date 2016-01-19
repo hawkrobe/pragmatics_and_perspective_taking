@@ -1,7 +1,0 @@
-gameid, time, condition, critical, objectSet, intendedObj, actualObj, intendedX, intendedY, actualX, actualY
-4528-5,1425931703821,exp,1,4,mediumMeasuringCup,largeMeasuringCup,4,4,1,4
-4528-5,1425931757749,exp,1,8,computerMouse,toyMouse,4,2,1,2
-2212-1,1425955455403,exp,1,5,roundBrush,hairBrush,2,4,3,1
-2212-1,1425955462505,exp,1,5,roundBrush,hairBrush,2,4,3,1
-2212-1,1425955595749,exp,1,3,cassetteTape,rollOfTape,3,2,4,2
-2212-1,1425955599888,exp,1,3,cassetteTape,cassetteTape,3,2,2,1
