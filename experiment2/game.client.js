@@ -101,6 +101,7 @@ client_onserverupdate_received = function(data){
 
     game.instructions = data.instructions
     game.instructionNum = data.instructionNum;
+    game.data = data.dataObj;
     game.game_started = data.gs;
     game.players_threshold = data.pt;
     game.player_count = data.pc;

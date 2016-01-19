@@ -129,9 +129,9 @@ game_core.prototype.setScriptAndDir = function(instruction) {
     var item = instruction.split(' ')[0]
     var dir = instruction.split(' ')[1]
     var object = _.find(this.objects, function(obj) { return obj.name == item })
-    this.scriptedInstruction = (object.hasOwnProperty('scriptedInstruction') ?
-        object.scriptedInstruction :
-        "none")
+    // this.scriptedInstruction = (object.hasOwnProperty('scriptedInstruction') ?
+    //     object.scriptedInstruction :
+    //     "none")
     var dest;
     switch(dir) {
         case "down" :
@@ -276,8 +276,8 @@ game_core.prototype.server_send_update = function(){
             gs : this.game_started,                      // true when game's started
             pt : this.players_threshold,
             pc : this.player_count,
+            dataObj  : this.data,
             curr_dest : this.currentDestination,
-            scriptedInstruction : this.scriptedInstruction,
             instructionNum : this.instructionNum,
         };
 
