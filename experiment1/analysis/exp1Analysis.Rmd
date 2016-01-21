@@ -4,7 +4,7 @@ output: html_document
 ---
 
 ```{r}
-setwd('~/Repos/psych254/replication_project/analysis/')
+setwd('~/Repos/keysar_replication/experiment1/analysis/')
 mouseD = read.csv('fullSampleMouse.csv')
 errorD = read.csv('fullSampleError.csv')
 messageD = read.csv('fullSampleMessage.csv')
@@ -17,6 +17,7 @@ library(ggplot2)
 Set up error data
 
 ```{r}
+numParticipants <- length(unique(mouseD$gameid))
 nonCriticalMistakes <- errorD %>%
   # only look at mistakes on noncritical (filler) items
   filter(critical != 1) %>%
@@ -42,7 +43,8 @@ eD <- errorD %>%
   mutate(cond2 = as.numeric(n >= 2)) %>%
   group_by(condition) %>%
   summarise(atLeastOnce = length(n)/14, 
-            atLeastTwice = sum(cond2)/14)
+            atLeastTwice = sum(cond2)/14,
+            total = sum(n) / (4 * numParticipants))
 eD
 
 # To illustrate how much a few items are driving the effect, we exclude three items 
@@ -152,7 +154,7 @@ heatMapForLM <- d %>%
   mutate(inTargetSquare = as.numeric(mouseX > targetX - 75 
                                      & mouseX < targetX + 75
                                      & mouseY > targetY - 75
-                                    & mouseY < targetY + 75)) %>%
+                                     & mouseY < targetY + 75)) %>%
   mutate(inDistractorSquare = as.numeric(mouseX > distractorX - 75
                                          & mouseX < distractorX + 75
                                          & mouseY > distractorY - 75
@@ -196,8 +198,9 @@ g <- (ggplot(heatMapForPlot, aes(x = condition, y = percent, group = cellType,
       + geom_line(aes(linetype = cellType), size = 2)
       + geom_errorbar(aes(ymax = percent + error, 
                           ymin = percent - error), size =2 ,
-                      width = 0.1))
-g
+                      width = 0.1)
+      + ggtitle("Experiment 1 Hover-Time"))
+ggsave("../../writing/cogsci-submission/images/exp1MouseTracking.pdf")
 ```
 
 Very noisy (unfinished) plot of all mouse-movements
