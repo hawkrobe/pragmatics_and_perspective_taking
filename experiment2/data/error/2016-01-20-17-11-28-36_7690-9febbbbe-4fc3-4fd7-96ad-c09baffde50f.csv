@@ -1,0 +1,5 @@
+gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY
+7690-9,undefined,base,0,4,0,0,carrot,carrot,2,3,1,4
+7690-9,undefined,base,1,4,1,0,mediumMeasuringCup,smallMeasuringCup,4,4,3,2
+7690-9,undefined,exp,1,6,2,0,boardEraser,pencilEraser,2,3,1,2
+7690-9,undefined,exp,1,3,3,0,cassetteTape,rollOfTape,3,2,4,2

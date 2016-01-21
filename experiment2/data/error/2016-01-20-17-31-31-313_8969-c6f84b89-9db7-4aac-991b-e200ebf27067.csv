@@ -1,0 +1,2 @@
+gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY
+8969-c,undefined,base,0,7,0,0,magnet,mediumCandle,2,4,1,2

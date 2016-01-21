@@ -1,0 +1,4 @@
+gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY
+2255-1,undefined,base,0,8,0,0,comb,piano,1,1,2,3
+2255-1,undefined,exp,1,6,2,0,boardEraser,pencilEraser,2,3,1,2
+2255-1,undefined,exp,1,6,2,1,boardEraser,pencilEraser,2,3,1,2
