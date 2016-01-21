@@ -1,0 +1,230 @@
+---
+title: "KeysarMouseTracking.csv"
+output: html_document
+---
+
+```{r}
+setwd('~/Repos/keysar_replication/experiment2/data/')
+mouseD = read.csv('mouse/exp2Mouse.csv')
+errorD = read.csv('error/exp2Error.csv')
+messageD = read.csv('message/exp2Message.csv')
+str(mouseD)
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+```
+
+Set up error data
+
+```{r}
+nonNativeEnglishIDs <- c("0366-3", "8676-f")
+numParticipants <- length(unique(mouseD$gameid))
+nonCriticalMistakes <- errorD %>%
+  # only look at mistakes on noncritical (filler) items
+  filter(critical != 1) %>%
+  # don't want to double-count people for messing the same thing up multiple times
+  filter(attemptNum == 0) %>% 
+  group_by(gameid) %>%
+  tally() %>%
+  # implement exclusion criteria of errors on >~10% of non-critical trials
+  filter(n >= 2)
+
+mistakeIDs <- as.character(nonCriticalMistakes$gameid)
+bannedIDs <- c(mistakeIDs, nonNativeEnglishIDs)
+```
+
+Make error table
+
+```{r}
+eD <- errorD %>%
+  filter(!(gameid %in% mistakeIDs)) %>%
+  filter(!(gameid %in% nonNativeEnglishIDs)) %>%
+  filter(critical == 1) %>%
+  filter(attemptNum == 0) %>%
+  group_by(gameid, condition) %>%
+  tally() %>%
+  mutate(cond2 = as.numeric(n >= 2)) %>%
+  group_by(condition) %>%
+  summarise(atLeastOnce = length(n)/numParticipants, 
+            atLeastTwice = sum(cond2)/numParticipants,
+            total = sum(n) / (4 * numParticipants))
+eD
+
+# To illustrate how much a few items are driving the effect, we exclude three items 
+# where more than 60% of participants made errors.
+excludedED <- errorD %>%
+  filter(!(gameid %in% bannedIDs)) %>%
+  filter(critical == 1) %>%
+  filter(!(objectSet %in% c(5, 6, 8))) %>% # Just 5 & 6?
+  filter(attemptNum == 0) %>%
+  group_by(gameid, condition) %>%
+  tally() %>%
+  mutate(cond2 = as.numeric(n >= 2)) %>%
+  group_by(condition) %>%
+  summarise(atLeastOnce = length(n)/numParticipants, 
+            atLeastTwice = sum(cond2)/numParticipants,
+            total = sum(n) / (4 * numParticipants))
+excludedED
+```
+
+When we look at errors per item, we have to remember that not all items had the same number of participants in the experimental condition.
+
+```{r}
+numPlayersPerCondition = mouseD %>% 
+  filter(!(gameid %in% bannedIDs)) %>% 
+  filter(critical == 1) %>% 
+  filter(attemptNum == 0) %>% 
+  group_by(gameid, condition, objectSet) %>% 
+  summarize() %>% 
+  group_by(condition, objectSet) %>% 
+  summarize(total = n()) %>% 
+  filter(condition == "exp")
+```
+
+Follow-up: are all critical items equal?
+
+```{r}
+itemInequalities <- errorD %>%
+  filter(!(gameid %in% bannedIDs)) %>%
+  filter(critical == 1) %>%
+  filter(attemptNum == 0) %>%
+  filter(condition == "exp") %>%
+  group_by(objectSet) %>%
+  tally() %>%
+  right_join(numPlayersPerCondition, by = c('objectSet')) %>%
+  transmute(errorCount = n, correctCount = total - n)
+
+t(itemInequalities)
+t <- chisq.test(itemInequalities)
+print(t)
+t$expected
+t$observed
+```
+
+Set up mouse/message data
+
+```{r}
+
+mouData <- mouseD %>%
+  filter(!(gameid %in% bannedIDs)) %>%
+  filter(attemptNum == 0)
+
+mD <- messageD %>% 
+  filter(!(gameid %in% bannedIDs)) %>%
+  filter(attemptNum == 0) %>%
+  filter(sender == "director") %>%
+  group_by(gameid, objectSet, instructionNum) %>%
+  mutate(messageStamp = first(time)) %>%
+  select(gameid, condition, attemptNum, instructionNum, critical, objectSet,sender,contents,messageStamp) %>%
+  distinct(gameid,contents)
+
+joined <- (right_join(mouData, mD, by = c("gameid", "condition", "objectSet", 
+                                         "instructionNum", "attemptNum", "critical")))
+```
+
+```{r}
+dUnfilt <- joined %>%
+  filter(critical == 1) %>%
+  group_by(objectSet)
+
+d <- joined %>% 
+  filter(critical == 1) %>% 
+  group_by(objectSet, condition) %>%
+#  filter(time > messageStamp) #%>%
+  mutate(mouseY = 600 - mouseY) %>%
+  mutate(targetY = 600 - targetY) %>%
+  mutate(begTargetX = first(targetX),
+         begTargetY = first(targetY),
+         distractorX = as.numeric(levels(distractorX))[distractorX],
+         distractorY = 600 - as.numeric(levels(distractorY))[distractorY]) %>%
+   mutate(begDistrX = first(distractorX),
+          begDistrY = first(distractorY)) %>%
+   filter(targetX == begTargetX) %>%
+   filter(targetY == begTargetY) %>%
+   filter(distractorX == begDistrX) %>%
+   filter(distractorY == begDistrY) 
+
+```
+
+Compute hover time statistics
+
+```{r}
+
+sem <- function(x) {sd(x, na.rm = T) / sqrt(length(x))}
+ci95 <- function(x) {sem(x) * 1.96}
+
+heatMapForLM <- d %>%
+  group_by(gameid, objectSet) %>%
+  mutate(inTargetSquare = as.numeric(mouseX > targetX - 75 
+                                     & mouseX < targetX + 75
+                                     & mouseY > targetY - 75
+                                    & mouseY < targetY + 75)) %>%
+  mutate(inDistractorSquare = as.numeric(mouseX > distractorX - 75
+                                         & mouseX < distractorX + 75
+                                         & mouseY > distractorY - 75
+                                         & mouseY < distractorY + 75)) %>%
+  group_by(gameid, condition) %>%
+  summarise(distractor = sum(inDistractorSquare) / n(),
+         target = sum(inTargetSquare) / n()) %>%
+  gather(cellType, percent, distractor, target) 
+
+heatMapForLM
+
+t1 <- lm(percent ~ condition * cellType, data = heatMapForLM)
+summary(t1)
+```
+
+Plot it? 
+
+```{r}
+heatMapForPlot <- d %>%
+  group_by(gameid, objectSet) %>%
+  mutate(inTargetSquare = as.numeric(mouseX > targetX - 75 
+                                     & mouseX < targetX + 75
+                                     & mouseY > targetY - 75
+                                    & mouseY < targetY + 75)) %>%
+  mutate(inDistractorSquare = as.numeric(mouseX > distractorX - 75
+                                         & mouseX < distractorX + 75
+                                         & mouseY > distractorY - 75
+                                         & mouseY < distractorY + 75)) %>%
+  group_by(gameid, condition) %>%
+  summarize(distractor = sum(inDistractorSquare) / n(),
+         target = sum(inTargetSquare) / n()) %>%
+  gather(cellType, percent, distractor, target) %>%
+  group_by(condition, cellType) %>%
+  summarize(error = sem(percent),
+            percent = mean(percent)) 
+  
+heatMapForPlot
+
+g <- (ggplot(heatMapForPlot, aes(x = condition, y = percent, group = cellType,
+                                  color = cellType)) 
+      + geom_line(aes(linetype = cellType), size = 2)
+      + geom_errorbar(aes(ymax = percent + error, 
+                          ymin = percent - error), size =2 ,
+                      width = 0.1))
+g
+```
+
+Very noisy (unfinished) plot of all mouse-movements
+
+```{r}
+# heatMapForPlot$new_labels = as.factor(sapply(X = heatMapForPlot$objectSet, 
+#                               FUN = function(v) {return(paste("Item", v))}))
+# 
+# g <- (ggplot(heatMapForPlot, aes(x = mouseX, y = mouseY, color = condition)) +
+#       geom_vline(xintercept = c(0, 150,300,450, 600)) +
+#       geom_hline(yintercept = c(0, 150,300,450, 600)) +
+#       geom_point() +
+#       geom_point(aes(x = begTargetX, y = begTargetY), size = 20,
+#                  shape = 4, color = "black", show_guide = FALSE) +
+#       geom_point(aes(x = begDistrX, y = begDistrY), size = 20,
+#                  shape = 4, color = "grey50", show_guide = FALSE) + 
+#       theme(panel.grid.major = element_blank(), 
+#             panel.grid.minor = element_blank()) +
+#       xlim(0, 600) +
+#       ylim(0, 600) +
+#       theme(aspect.ratio = 1) +
+#       facet_wrap(~ new_labels, nrow = 2))
+# g
+```
