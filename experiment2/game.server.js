@@ -136,9 +136,8 @@ var writeData = function(client, type, message_parts) {
             var line = String(id + ',' + date + ',' + condition + ',' + critical + ',' + 
                 objectSet + ',' + instructionNum + ',' + attemptNum + ',' + objX + ',' + objY + ',' +
                 distractorX + ',' + distractorY + ',' + x + ',' + y ) + "\n"
-            console.log("mouse:" + line)
-            gc.mouseDataStream.write(line, function (err) {if(err) throw err;}); 
-            break;
+                gc.mouseDataStream.write(line, function (err) {if(err) throw err;}); 
+                break;
         case "message" :
             var date = Date.now();
             var msg = message_parts[1].replace(/-/g,'.')
@@ -169,74 +168,68 @@ var writeData = function(client, type, message_parts) {
 // This is the important function that pairs people up into 'rooms'
 // all independent of one another.
 game_server.findGame = function(player) {
-    this.log('looking for a game. We have : ' + this.game_count);
-    //if there are any games created, add this player to it!
-    if(this.game_count) {
-       var joined_a_game = false;
-        for (var gameid in this.games) {
-            if(!this.games.hasOwnProperty(gameid)) continue;
-            var game = this.games[gameid];
-            var gamecore = game.gamecore;
-            if(game.player_count < gamecore.players_threshold) { 
-                joined_a_game = true;
-                
-                // player instances are array of actual client handles
-                game.player_instances.push({
-                    id: player.userid, 
-                    player: player
-                });
-                game.player_count++;
-                
-                // players are array of player objects
-                game.gamecore.players.push({
-                    id: player.userid, 
-                    player: new game_player(gamecore,player)
-                });
+  this.log('looking for a game. We have : ' + this.game_count);
+  //if there are any games created, add this player to it!
+  var joined_a_game = false;
+  for (var gameid in this.games) {
+    var game = this.games[gameid];
+    var gamecore = game.gamecore;
+    if(game.player_count < gamecore.players_threshold) { 
+      joined_a_game = true;
+      
+      // player instances are array of actual client handles
+      game.player_count++;
+      game.player_instances.push({
+        id: player.userid, 
+        player: player
+      });
+      
+      // players are array of player objects
+      game.gamecore.players.push({
+        id: player.userid, 
+        player: new game_player(gamecore,player)
+      });
 
-                // Establish write streams
-                var d = new Date();
-                var start_time = d.getFullYear() + '-' + d.getMonth() + 1 + '-' + d.getDate() + '-' + d.getHours() + '-' + d.getMinutes() + '-' + d.getSeconds() + '-' + d.getMilliseconds()
-                var name = start_time + '_' + game.id;
-                var mouse_f = "data/mouse/" + name + ".csv"
-                fs.writeFile(mouse_f, "gameid, time, condition, critical, objectSet, instructionNum, attemptNum, targetX, targetY, distractorX, distractorY, mouseX, mouseY\n", function (err) {if(err) throw err;})
-                game.gamecore.mouseDataStream = fs.createWriteStream(mouse_f, {'flags' : 'a'});
+      // Establish write streams
+      var d = new Date();
+      var start_time = d.getFullYear() + '-' + d.getMonth() + 1 + '-' + d.getDate() + '-' + d.getHours() + '-' + d.getMinutes() + '-' + d.getSeconds() + '-' + d.getMilliseconds();
+      var name = start_time + '_' + game.id;
+      var mouse_f = "data/mouse/" + name + ".csv";
+      fs.writeFile(mouse_f, "gameid, time, condition, critical, objectSet, instructionNum, attemptNum, targetX, targetY, distractorX, distractorY, mouseX, mouseY\n", function (err) {if(err) throw err;});
+      game.gamecore.mouseDataStream = fs.createWriteStream(mouse_f, {'flags' : 'a'});
 
-                var error_f = "data/error/" + name + ".csv"
-                fs.writeFile(error_f, "gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY\n", function (err) {if(err) throw err;})
-                game.gamecore.errorStream = fs.createWriteStream(error_f, {'flags' : 'a'});
+      var error_f = "data/error/" + name + ".csv";
+      fs.writeFile(error_f, "gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY\n", function (err) {if(err) throw err;});
+      game.gamecore.errorStream = fs.createWriteStream(error_f, {'flags' : 'a'});
 
-                var message_f = "data/message/" + name + ".csv"
-                fs.writeFile(message_f, "gameid, time, condition, critical, objectSet, instructionNum, attemptNum, sender, contents\n", function (err) {if(err) throw err;})
-                game.gamecore.messageStream = fs.createWriteStream(message_f, {'flags' : 'a'});
-//                console.log('game ' + game.id + ' starting with ' + game.player_count + ' players...')
-    
-                // Attach game to player so server can look at it later
-                player.game = game;
-                player.role = 'matcher';
+      var message_f = "data/message/" + name + ".csv";
+      fs.writeFile(message_f, "gameid, time, condition, critical, objectSet, instructionNum, attemptNum, sender, contents\n", function (err) {if(err) throw err;});
+      game.gamecore.messageStream = fs.createWriteStream(message_f, {'flags' : 'a'});
+      //                console.log('game ' + game.id + ' starting with ' + game.player_count + ' players...')
+      
+      // Attach game to player so server can look at it later
+      player.game = game;
+      player.role = 'matcher';
 
-                // notify new player that they're joining game
-                player.send('s.join.' + gamecore.players.length + '.' + player.role)
+      // notify new player that they're joining game
+      player.send('s.join.' + gamecore.players.length + '.' + player.role);
 
-                // notify existing players that someone new is joining
-                _.map(gamecore.get_others(player.userid), 
-                    function(p){p.player.instance.send( 's.add_player.' + player.userid)})
-                gamecore.server_send_update()
+      // notify existing players that someone new is joining
+      _.map(gamecore.get_others(player.userid), function(p){
+	p.player.instance.send( 's.add_player.' + player.userid);
+      });
+      gamecore.server_send_update();
 
-                _.map(gamecore.get_active_players(), function(p) {
-                    p.player.instance.send("s.waiting")
-                })
+      _.map(gamecore.get_active_players(), function(p) {
+        p.player.instance.send("s.waiting");
+      });
 
-                gamecore.player_count = game.player_count;
-            }
-        }
-        if(!joined_a_game) { // if we didn't join a game, we must create one
-            this.createGame(player);
-        }
+      gamecore.player_count = game.player_count;
     }
-    else { 
-        //no games? create one!
-        this.createGame(player);
-    }
+  }
+  if(!joined_a_game) { // if we didn't join a game, we must create one
+    this.createGame(player);
+  }
 }; 
 
 // Will run when first player connects
