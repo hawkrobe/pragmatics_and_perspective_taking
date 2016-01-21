@@ -72,14 +72,13 @@ io.on('connection', function (client) {
     }
     console.log("id is " + id);
     if(valid_id(id)) {
-      console.log("user connecting...")
       initialize(query, client, id);
     }
   }
 });
 
 var valid_id = function(id) {
-  return id.length == 14 || id.length == 41;
+  return id.length == 14 || id.length == 13 || id.length == 41;
 };
 
 var initialize = function(query, client, id) {                        
