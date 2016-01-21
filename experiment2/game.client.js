@@ -375,7 +375,6 @@ function mouseUpListener(evt) {
         } else {
             obj.trueX = game.getPixelFromCell(obj.gridX, obj.gridY).centerX - obj.width/2
             obj.trueY = game.getPixelFromCell(obj.gridX, obj.gridY).centerY - obj.height/2
-            game.get_player(my_id).message = "Error!"
             game.socket.send("incorrectDrop." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY) 
 			     + "." + cell[0] + "." + cell[1]);
         }

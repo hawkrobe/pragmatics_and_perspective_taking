@@ -1,0 +1,6 @@
+gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY
+7865-e,undefined,exp,1,8,1,0,computerMouse,toyMouse,4,2,1,2
+7865-e,undefined,exp,1,1,1,0,sunGlasses,airplane,4,4,4,1
+7865-e,undefined,exp,1,4,1,0,mediumMeasuringCup,largeMeasuringCup,4,4,1,4
+7865-e,undefined,base,0,6,1,0,dollar,banana,4,3,4,1
+7865-e,undefined,base,0,6,1,1,dollar,banana,4,3,4,1
