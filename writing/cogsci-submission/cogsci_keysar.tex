@@ -104,20 +104,20 @@ The experiment was composed of eight items, with each item using a different set
 We collected baseline performance for each condition by replacing the hidden alternative (e.g. a roll of tape) with an object that did not fit the critical instruction (e.g. a battery). We also used the same unambiguous replacements as \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse}. Each participant received half the items in the experimental condition and half in the baseline condition. The assignment of items to conditions was randomized across participants, and the order of conditions was randomized under the constraint that the same condition would not be used on more than two consecutive items. All object sets, object placements, and corresponding instruction sets were the same for all participants.
 
 These materials differ from those used by \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} in a few ways. First, participants were not seated across from each other at a table: they each saw a views of the 4 x 4 grid on screen and communicated via a text box. Second, we did not use a trained confederate. We randomly assigned one of the players to the role of the instruction giver, and maintained the original wording by scripting a subset of their instructions. Finally, the hidden object was not placed in a bag, in which respect our design more closely resembles \citeA{KeysarBarr___Brauner00_TakingPerspective}.
+
 \begin{table*}
 \begin{center}
-\begin{tabular}{ p{2cm} | r | r |  r | r | r | r}
-& \multicolumn{2}{c|}{\% attempted at least once} & \multicolumn{2}{c|}{\% attempted at least twice} & \multicolumn{2}{c}{\% of total cases}\\
+\begin{tabular}{ p{2cm} | r | r |  r || r | r | r || r | r | r}
+& \multicolumn{3}{c||}{\% attempted at least once} & \multicolumn{3}{c||}{\% attempted at least twice} & \multicolumn{3}{c}{\% of total cases}\\
 \hline
-& Original & Replication & Original & Replication & Original & Replication \\
-Experimental & 71 & 93 & 46 & 64 & 30 & 37 \\
-Baseline & 0 & 14 & 0 & 0 & 0 & 3 \\
+& Orig. & Exp. 1 & Exp. 2 & Orig. & Exp. 1 & Exp. 2 & Orig. & Exp. 1 & Exp. 2  \\
+Experimental & 71 & 93 & 60 & 46 & 64 & 36 & 30 & 37 & 26\\
+Baseline & 0 & 14 & 14 & 0 & 0 & 0 & 0 & 3 & 4\\
 \end{tabular}
-\caption{Side-by-side comparison of error rates in \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} and our replication. The first column shows the percentage of \emph{participants} attempting to move the occluded distractor at least one of the four possible cases. The second column shows the percentage attempting to move it at least twice. The third column shows the percentage of \emph{all experimental trials} that the participant actually tried to move the occluded object. \todo[inline]{Big caption maybe unnecessary}}
-\label{table:exp1}
+\caption{Side-by-side comparison of error rates in \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} and our two replications. The first section shows the percentage of \emph{participants} attempting to move the occluded distractor at least one of the four possible cases. The second section shows the percentage attempting to move it at least twice. The third section shows the percentage of \emph{all experimental trials} that the participant actually tried to move the occluded object. \todo[inline]{Big caption maybe unnecessary. Anything else to include in this table? Maybe Keysar et al, 2000, which reported \% of total cases, or our Exp. 2 results if you remove the two most difficult items? There, errors drop quite a lot.}}
+\label{table:mainResults}
 \end{center}
 \end{table*}
-
 
 \subsection{Procedure}
 
@@ -127,9 +127,9 @@ To collect clean mouse-tracking data, we began every instruction by asking the m
 
 \subsection{Results}
 
-Using the error rates on critical items, we compare our behavioral results with those from from \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} in Table \ref{table:exp1}. We find that 93\% of participants attempted to move a hidden object at least once in the Experiment condition, out of four possible items, compared to only 14\% in the baseline condition. This is similar to the effect observed by the authors in the original study, which found 71\% and 0\%. Our errors were larger across the board, perhaps due to the interface and the Turk population, but the gap between the two is roughly the same size.
+Using the error rates on critical items, we compare our behavioral results with those from from \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} in Table \ref{table:mainResults}. We find that 93\% of participants attempted to move a hidden object at least once in the Experiment condition, out of four possible items, compared to only 14\% in the baseline condition. This is similar to the effect observed by the authors in the original study, which found 71\% and 0\%. Our errors were larger across the board, perhaps due to the interface and the Turk population, but the gap between the two is roughly the same size.
 
-Next, we examine whether there are differences in error rates across items. In Table \ref{table:itemWiseExp1}, we break down the pattern of errors by item. Because our randomization procedure undersampled the experimental condition for several items, a chi-squared test is inappropriate. Using Fisher's exact test, we cannot reject the null hypothesis of independence ($p = 0.13$). Still, we note that several conditions have much higher error rates than others -- for example, 75\% of participants in the experimental condition of item 6 made an error (the ``whiteboard eraser'' vs. the ``pencil eraser'') while only 17\% of participants in item 8 made an error (the ``computer mouse'' vs. the ``toy mouse''). 
+Next, we examine whether there are differences in error rates across items. In Table \ref{table:exp1ItemWise}, we break down the pattern of errors by item. Because our randomization procedure undersampled the experimental condition for several items, a chi-squared test is inappropriate. Using Fisher's exact test, we cannot reject the null hypothesis of independence ($p = 0.13$). Still, we note that several conditions have much higher error rates than others -- for example, 75\% of participants in the experimental condition of item 6 made an error (the ``whiteboard eraser'' vs. the ``pencil eraser'') while only 17\% of participants in item 8 made an error (the ``computer mouse'' vs. the ``toy mouse''). 
 
 Finally, as a proxy for the eye-tracking analyses reported by \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse}, we conducted a mouse-tracking analysis. We define the decision window as the span of time between the point when the matcher received their instruction message and when they started moving an object. If it took them multiple attempts to move the correct object, we restricted our analysis to the first attempt. We took the set of all mouse position samples in the decision window (collected approximately every 15ms), and measured what proportion were located inside the cell containing the target vs. the cell containing the distractor.  We had to exclude an additional 3 participants for this analysis, because the timestamps for director and matcher did not align and we could not establish the decision window properly.
 
@@ -143,7 +143,7 @@ We found that there is an interaction between cell type and condition on the per
 \# correct & 5 & 3 & 1 & 8 & 2 & 2 & 4 & 6 \\
 \end{tabular}
 \caption{Item-wise error analysis}
-\label{table:exp1}
+\label{table:exp1ItemWise}
 \end{center}
 \end{table*}
 
@@ -157,57 +157,76 @@ We found that there is an interaction between cell type and condition on the per
 
 \subsection{Discussion}
 
-\begin{itemize}
-\item quibble with ?moved at least one thing? measure (allows one difficult item to dominate if item-wise differences)
-\item in non-scripted instructions, noticed that people were being overinformative
-\end{itemize}
-        
-We noticed several difference between our study and \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} that prevented a direct replication. The primary difference between our study and the original is the fact that it will be run online with participants connected via a virtual environment, instead of face-to-face in a room. A related difference is our decision not to use a confederate. In general, studies using confederates are difficult to replicate exactly and are impractical to run online. We are aware that this change (while keeping scripted instructions, which were the primary justification for the confederate) may lead to additional variation across groups. It is also known that textual communication (via our instant messaging interface) can differ from verbal communication (as in the original study). Finally, the way people attempt to move things in our virtual environment may be different from how people attempt to move things in the lab, and we cannot eye-tracking data to back up our analysis, as the original paper did.
+In both raw patterns of error and mouse-tracking metrics, we successfully replicated the findings of \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse}. Participants frequently attempted to move the occluded alternative when it matched the target referential expression, even though the director couldn't possibly have been referring to it. Furthermore, the matcher tended to spend more time hovering their cursor over the occluded cell, and less time hovering over the target object, in ambiguous experimental trials than in baseline trials with no ambiguity. Both of these results support Keysar's claim that adults do not reliably deploy theory of mind reasoning when it is called for.
 
+Still, in running this replication as a multi-player web experiment, we observed two particularly interesting features in the data. First, our analysis of item-level differences shows that the dependent variable highlighted in the original study (i.e. ``percentage of participants who moved the critical item at least once'') is somewhat problematic. It could look like 100\% of participants made errors even if they all made those errors on one particularly difficult item. Indeed, if we exclude the three `hard' items where over 60\% of participants in the experimental condition made errors, this dependent variable drops from 93\% to only 43\% of participants. This suggests that the ``at least one error'' DV is not appropriate in settings with high variability across items and that we might want to be more careful about controlling for this variability, perhaps by first measuring salience and ambiguity without the occlusion aspect of the paradigm.
 
+Second, because half of the instructions were unscripted, we were able to observe natural production of referential descriptions for a number of fillers. Informally, we noted a tendency toward over-informativity. Instead of ``move the stuffed animal down'', they'll say ``move the stuffed pa'nda bear down.'' Or, instead of saying ``move the plane to the right,'' they'll say ``move the red airplane to the right,'' even though there is only one plane. This suggested that the confederate's scripted instructions were in some sense uncooperative and counter to the matcher's expectations. Perhaps directors were taking the time to make more costly over-informative descriptions because they believed it was contextually relevant: both parties know that there are hidden objects in the environment. If the matcher reasoned in this way and expected the director to be overinformative, then they would be justified in picking the first object that meets the description rather than worrying about occluded cells. We tested this prediction in Exp.~2, where we removed the scripted instructions and allowed speakers to refer to items however they wished. If speakers really are being overinformative, and listeners are correctly expecting this, we should see fewer errors after removing uncooperative scripts.
+
+\begin{table*}
+\begin{center}
+\begin{tabular}{ p{2cm} | r | r |  r | r | r | r | r | r |}
+& Item 1 & Item 2 & Item 3 & Item 4 & Item 5 & Item 6 & Item 7 & Item 8\\\hline
+ \# incorrect & 1 & 1 & 2 & 3 & 9 & 7 & 1 & 5 \\
+ \# correct   & 11&14&10&13&7 &8   &12& 8 \\
+\end{tabular}
+\caption{Item-wise error analysis for experiment 2}
+\label{table:exp2ItemWise}
+\end{center}
+\end{table*}
+
+\begin{figure}[b!]
+\begin{center}
+\includegraphics[scale=.9]{images/exp2MouseTracking.pdf}
+\caption{Mean percentage of time spent hovering over the distractor and target cells in the experimental and baseline conditions. Error bars are 95\% confidence intervals.}
+\label{fig:exp2hover}
+\end{center}
+\end{figure}
 \section{Exp.~2: Unscripted Replication}
 \label{sec:Exp2}
 
-\subsection{Methods}
+\subsection{Participants}
 
- same as exp 1, except no scripted instructions (i.e. we don?t force the director to say ?tape?)
+We recruited 64 participants (32 pairs) from Amazon Mechanical Turk, roughly doubling the sample size from Exp.~1. All participants were from the U.S. Three participants were excluded for making 2 or more errors on non-critical items, and one additional participant was excluded because they were not a native English speaker.
+
+\subsection{Materials \& Procedures}
+
+Everything was the same as Exp.~1, except we did not use scripted messages for critical instructions. 
  
 \subsection{Results}
 
-\begin{itemize}
-\item Listener makes fewer mistakes?
-\item Director more overinformative on critical items?
-\end{itemize}
+Error rates are reported in Table \ref{table:mainResults}, alongside the results from \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} and our direct replication in Exp.~1. Note that error rates for baseline trials are the same as Exp.~1, confirming that participants tend to make more errors in the web version of the experiment. Error rates for experimental trials, however, are lower than the rates reported in \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} and in Exp.~1 \todo[inline]{rdh: need to run a comparison of estimated binomial proportions here}. 
+
+More dramatically, we find that patterns of errors in Exp.~2 diverge significantly from a uniform distribution across items, $\chi^2(7) = 20.1, p = 0.005$. Looking more closely at these patterns, we see that the only items where errors are consistently made are those where the costly over-informative utterance remains ambiguous. For example, in item 5, both the target and distractor are hair brushes: one is round and one is flat. ``Hair brush'' is already a label at the sub-class level. If we remove the two most difficult items (the ``hair brushes'' and the ``erasers''), the total percentage of errors on experimental trials drops from 26\% to 12\% and the percentage of participants making at least one error drops from 60\% to 36\%.
+
+\todo[inline]{rdh: should merge item-wise analyses for Exp. 1 and Exp. 2 into a single table, and actually write out what the targets and distractors are for each items}
+
+When we conducted a mouse-tracking analysis identical to the one reported for Exp.~1, we again found a significant interaction between condition and cell type on hover time, $b = -0.18, t(108) = -5.2, p < 0.001$. However, the effect is attenuated: in experimental trials, participants spend significantly more time hovering over the target than the distractor (see Figure \ref{fig:exp2hover}) whereas in Exp.~1, participants spent roughly the same amount of time hovering over each.
+
+\todo[inline]{rdh: make this analysis more rigorous by explicitly testing the size of the interaction? By testing the diff. in hover-time in target vs. distractor cells after restricting to experimental trials?}
+
+\todo[inline]{rdh: should do a basic analysis of over-informativity... Don't forget about the person who always gave directions like ``start at the third square of the first row and move down one square''}
+
 
 \subsection{Discussion}
 
 \begin{itemize}
-\item scripted instruction unnatural, 
-\item violates listener expectations of overinformativity
+\item people still try to move occluded objects, but they do it less, and that behavior is more confined to a few particularly difficult items.
+\item this happens because the scripted instructions we forced directors to use in Exp.~1 were unnatural and violated listener expectations of overinformativity
+\item the fact that the effect is attenuated in exp. 2 is actually evidence of some theory of mind use (insofar as the director choosing to be overinformative, and the matcher expecting overinformativity constitutes ToM
 \end{itemize}
 
 \section{General Discussion}
 
-First, our analysis of item-level differences shows that the dependent variable used in the original study (i.e. ?percentage of participants who moved the critical item at least once?) is somewhat problematic. It could look like 100% of participants made the errors even if they all made those errors on one particularly difficult item (e.g. the ?bottom? block, where they actually mean the one on the second-to-bottom row). If we exclude the three ?hard? items (2, 6, and 7) where over 60% of participants in the experimental condition made errors, our results look much less strong than Keysar?s. 
+We noticed several differences between our study and \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} that prevented a direct replication. The primary difference between our study and the original is the fact that it will be run online with participants connected via a virtual environment, instead of face-to-face in a room. A related difference is our decision not to use a confederate. In general, studies using confederates are difficult to replicate exactly and are impractical to run online. We are aware that this change (while keeping scripted instructions, which were the primary justification for the confederate) may lead to additional variation across groups. It is also known that textual communication (via our instant messaging interface) can differ from verbal communication (as in the original study). Finally, the way people attempt to move things in our virtual environment may be different from how people attempt to move things in the lab, and we cannot eye-tracking data to back up our analysis, as the original paper did.
 
+Second, it's worth thinking about some ways our online version may differ from the original. The fact that we didn't use a confederate didn't seem to be a problem, given our use of randomly scripted instructions. Similarly, because players could type messages directly to one another, and since the director could watch the matcher moving objects in real-time, it's also fair to say that participants truly believed they were playing with another human being. 
 
+\todo[inline]{rdh: still have some worries about whether people really understood the point of the black squares, even after the quiz (e.g. one person said ``This seems to work wether the space is black or not.'' Note that this would just inflate our errors, so our analysis here is conservative.)}
 
-At least once
-At least twice
-Experiment
-43
-14
-Baseline
-7
-0
+One major concern is our graphical representation of occluded cells. We simply told players that items behind black cells were hidden to the director, and this was a critical question in the quiz that players had to pass before playing, so we know that they were aware of it. But they may forget part-way through the experiment, or don't fully internalize it. In the in-lab version, there was an actual divider between players, so it would have been more salient. This would mean that some errors in our version game aren't due to a failure of perspective-taking, but instead because of a misunderstanding of what the other person's perspective is to begin with. However, this would only bias our estimates of errors toward supporting Keysar's results, making our analysis conservative if anything. 
 
-This suggests that (1) the ?at least one error? DV is not appropriate in settings with high variability across items and (2) we might want to be more careful about controlling for this variability, perhaps by first measuring salience and ambiguity without the occlusion aspect of the paradigm.
-
-Second, it?s worth thinking about some ways our online version may differ from the original. The fact that we didn?t use a confederate didn?t seem to be a problem, given our use of randomly scripted instructions. Similarly, because players could type messages directly to one another, and since the director could watch the matcher moving objects in real-time, it?s also fair to say that participants truly believed they were playing with another human being. 
-
-One major concern is our graphical representation of occluded cells. We simply told players that items behind black cells were hidden to the director, and this was a critical question in the quiz that players had to pass before playing, so we know that they were aware of it. But they may forget part-way through the experiment, or don?t fully internalize it. In the in-lab version, there was an actual divider between players, so it would have been more salient. This would mean that some errors in our version game aren?t due to a failure of perspective-taking, but instead because of a misunderstanding of what the other person?s perspective is to begin with. However, this makes our task 
-
-Running multi-player control w/o confederate is important to know whether confederate behavior is valid and cooperative
+\todo[inline]{rdh: methodological note that running multi-player control w/o confederate is important to know whether confederate behavior is valid and cooperative}
 
 \section{Acknowledgements}
 
