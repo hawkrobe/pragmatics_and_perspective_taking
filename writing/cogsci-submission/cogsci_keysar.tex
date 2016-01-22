@@ -113,19 +113,30 @@ We began by replicating \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} in a mul
 \section{Exp.~1: Scripted Replication}
 \label{sec:Exp1}
 
-\subsection{Participants:}
+\subsection{Participants}
 
 We recruited 34 participants (17 pairs) from Amazon Mechanical Turk. All participants were from the U.S. Three pairs were excluded for making 2 or more errors on non-critical items.
 
-\subsection{Materials:}
+\subsection{Materials \& Procedures}
 
-Pairs of participants -- assigned randomly to `director' and `matcher' roles -- interacted with one another through a real-time web interface, shown in Fig. \ref{fig:interface}. On the left side of the screen, participants could freely type messages to one another; on the right side the screen, players could view a set of objects placed in a 4 x 4 grid. Five of the grid cells were occluded from only the director's perspective, and the remaining 11 were visible to both matcher and director. Six or seven objects were displayed in the grid at a given time. One of these objects was a `target', such as a cassette tape, placed in an unoccluded cell such that both participants could see it. Another object, such as a roll of tape, was placed in an occluded slot such that it was only visible to the matcher. The rest of the objects were unrelated `fillers' placed in random locations. We used the same set of targets and occluded alternatives as \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse}, but we were unable to obtain the filler objects from the original experiment and created our own.
 
-The experiment was composed of eight items, with each item using a different set of objects. Each item included one `critical pair' of objects, one of them the target and the other hidden, such as the cassette tape and the roll of tape. For each item, we gave the director a series of four instructions to move objects around, which were displayed as a series of arrows pointing from some object to an unoccupied cell. One of these instructions was a `critical instruction,' which referred to the target object. For half the instructions, directors were free to communicate however they wished. For the other half, including all the critical instructions, their messages to the matcher were pre-scripted such that we could use the precise wording from \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse}. For example, when giving instructions on how to move the cassette tape, the director would be forced to use the ambiguous utterance ``Move the tape down one square." (That is, in these conditions, the scripted message would automatically appear in the director's chat window, and they would have to click `send' for the experiment to continue.)
+Participants interacted in a real-time, multi-player environment on the web \cite{Hawkins15_RealTimeWebExperiments}. 
+%To deal with participants arriving at unpredictable times, we implemented a waiting room mechanism, where the first person to enter the game environment would see a screen saying ``Waiting for another player..." and the second person would trigger the game to start. 
+Pairs of participants---assigned randomly to `director' and `matcher' roles---interacted with one another through a web interface, shown in Fig. \ref{fig:interface}. On the left side of the screen, participants could freely type messages to one another; on the right side the screen, players could view a set of objects placed in a 4 x 4 grid. Five of the grid cells were occluded from only the director's perspective, and the remaining 11 were visible to both matcher and director. Six or seven objects were displayed in the grid at a given time. One of these objects was a `target', such as a cassette tape, placed in an unoccluded cell such that both participants could see it. Another object, such as a roll of tape, was placed in an occluded slot such that it was only visible to the matcher. The rest of the objects were unrelated `fillers' placed in random locations. We used the same set of targets and occluded alternatives as \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse}, but we were unable to obtain the filler objects from the original experiment and created our own.
+Before entering the game environment, every participant independently passed a short quiz about the task's instructions, ensuring that they understood the interface. Among other items on the quiz, we verified that both participants understood that items behind black cells were only visible to the matcher. 
+
+The experiment was composed of eight items, with each item using a different set of objects. Each item included one `critical pair' of objects, one of them the target and the other hidden, such as the cassette tape and the roll of tape. For each item, we gave the director a series of four instructions to move objects around, which were displayed as a series of arrows pointing from some object to an unoccupied cell. 
+To collect clean mouse-tracking data, we began every instruction by asking the matcher to click a small circle in the center of the grid. After this small circle was clicked, the director was allowed to communicate the next instruction and we started recording from the matcher's mouse. 
+One of the instructions was a `critical instruction,' which referred to the target object.
+For half the instructions, directors were free to communicate however they wished. For the other half, including all the critical instructions, their messages to the matcher were pre-scripted such that we could use the precise wording from \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse}. For example, when giving instructions on how to move the cassette tape, the director would be forced to use the ambiguous utterance ``Move the tape down one square." (That is, in these conditions, the scripted message would automatically appear in the director's chat window, and they would have to click `send' for the experiment to continue.)
 
 We collected baseline performance for each condition by replacing the hidden alternative (e.g.~a roll of tape) with an object that did not fit the critical instruction (e.g. a battery); we used the same unambiguous replacements as \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse}. Each participant received half the items in the experimental condition and half in the baseline condition. The assignment of items to conditions was randomized across participants, and the order of conditions was randomized under the constraint that the same condition would not be used on more than two consecutive items. All object sets, object placements, and corresponding instruction sets were the same for all participants.
 
-These materials differ from those used by \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} in three ways. First, participants were not seated across from each other at a table: they each saw a views of the 4 x 4 grid on screen and communicated via a text box. Second, we did not use a trained confederate. We randomly assigned one of the players to the role of the instruction giver, and maintained the original wording by scripting a subset of their instructions. Finally, the hidden object was not placed in a bag, in which respect our design more closely resembles \citeA{KeysarBarr___Brauner00_TakingPerspective}.
+This paradigm differs from those used by \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} in three primary ways. First, participants were not seated across from each other at a table: they each saw a views of the 4 x 4 grid on screen and communicated via a text box. Second, we did not use a trained confederate. We randomly assigned one of the players to the role of the instruction giver, and maintained the original wording by scripting a subset of their instructions. Finally, the hidden object was not placed in a bag, in which respect our design more closely resembles \citeA{KeysarBarr___Brauner00_TakingPerspective}.
+
+%The experiment proceeded through all eight items, with the director providing instructions and the participant moving the objects. Except for instructions with scripted messages, the participants were free to use the chat box for questions, small talk, or whatever else.
+
+
 
 \begin{table*}
 \begin{center}
@@ -141,13 +152,6 @@ Baseline & 0 & 14 & 14 & 0 & 0 & 0 & 0 & 3 & 4\\
 \end{center}
 \end{table*}
 
-\subsection{Procedure}
-
-\ndg{methods and procedures can be merged into one section...}
-
-Participants interacted in a real-time, multi-player environment on the web \cite{Hawkins15_RealTimeWebExperiments}. Before entering this environment, every participant independently passed a short quiz about the task's instructions, ensuring that they understood the interface. Among other items on the quiz, we verified that both participants understood that items behind black cells were only visible to the matcher. To deal with participants arriving at unpredictable times, we implemented a waiting room mechanism, where the first person to enter the game environment would see a screen saying ``Waiting for another player..." and the second person would trigger the game to start. 
-
-To collect clean mouse-tracking data, we began every instruction by asking the matcher to click a small circle in the center of the grid. After this small circle was clicked, the director was allowed to communicate the next instruction and we started recording from the matcher's mouse. The experiment proceeded through all eight items, with the director providing instructions and the participant moving the objects. Except for instructions with scripted messages, the participants were free to use the chat box for questions, small talk, or whatever else.
 
 \subsection{Results and discussion}
 
