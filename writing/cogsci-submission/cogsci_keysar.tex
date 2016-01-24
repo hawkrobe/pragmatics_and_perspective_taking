@@ -33,6 +33,7 @@
 \usepackage{color}
 \usepackage{todonotes}
 \usepackage{dsfont}
+\usepackage{array}
 \usepackage{textcomp}
 
 \definecolor{Red}{RGB}{255,0,0}
@@ -72,14 +73,24 @@
 \section{Introduction}
 \label{sec:intro}
 
+\begin{figure*}[t!]
+\begin{center}
+\includegraphics[scale = .35]{images/overall_view.jpg}
+\end{center}
+\vspace{-.25cm}
+\caption{Interface used in the reported experiments. Objects behind the black squares were hidden from the director. \todo[inline]{TODO: Use images from tape condition, add extra panel to show matcher view.}}
+\label{fig:interface}
+\end{figure*}
+
 Humans can accurately and intelligently reason about the mental states of other humans. Among other things, this ability -- called \emph{theory of mind} \cite{PremackWoodruff78_ChimpanzeeToM} -- allows us to infer the underlying beliefs and intentions that motivate others' actions, and to use these inferences to predict future actions \cite{BakerSaxeTenenbaum09_ActionUnderstandingInversePlanning}. Children acquire this ability by at least age six \cite{WimmerPerner83_BeliefsAboutBeliefs, WellmanCrossWatson01_ToMMetaAnalysis} and it serves as an important landmark in the developmental trajectory of intuitive theory use \cite{GopnikWellman12_ReconstructingConstructivism}.
 %
 While theory of mind use often appears to be automatic and effortless, Keysar and colleagues \cite{KeysarBarr___Brauner00_TakingPerspective, KeysarLinBarr03_LimitsOnTheoryOfMindUse, LinKeysarEpley10_ReflexivelyMindblind} have argued that it is actually the opposite, even for adults: we are ``mindblind" by default and only overcome our egocentric biases through an effortful process of perspective-taking. In other words, while adults are \emph{capable} of applying theory of mind reasoning, we do not always apply it reliably. 
+
 In this paper we argue that the apparent failures this view is based on are in fact successes for sophisticated social reasoning. 
 In particular, we argue that critical utterances used by Keysar and colleagues are \emph{uncooperative}: they are less informative than what a speaker would actually produce in that situation; listeners expect these more informative utterances, and interpret the actual utterances accordingly---resulting in ``errors''.
 
 The argument of Keysar and colleagues is based on an elegant experimental paradigm, where participants played a simple communication game with a confederate. The two players were placed on opposite sides of a $4 \times 4$ grid containing a set of everyday objects.
-\ndg{it'd be nice to have a grid illustrating one of the conditions to refer to here...}
+\todo[inline]{Refer to updated Fig.~1 with both director screen and matcher screen }
 The confederate played the role of `director,' giving instructions about how to move objects around a grid, and the participant played the role of `matcher,' attempting to follow these instructions. For example, the objects in one trial included a medium-sized measuring cup in one location and a smaller measuring cup in another location. The director gave an instruction like `move the large cup up one square,' referring to the medium-sized one. 
 Some objects were occluded such that only the matcher could see them, creating an asymmetry in the players' knowledge. To perform accurately on critical trials, the matcher would need to apply theory of mind to reason about the director's beliefs. For example, imagine a much larger measuring cup were placed in an occluded slot: if a participant failed to account for the director's (partial) knowledge, she might interpret `the large cup' to mean this occluded cup (which the director couldn't possibly know about). 
 Indeed, \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} found that participants attempted to move the hidden item in 30\% of cases: 71\% of participants attempted to move this hidden item at least once (out of four critical cases) in the experimental condition, compared to 0\% in a control condition where there was no ambiguity over the referent. 
@@ -101,14 +112,19 @@ We began by replicating \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} in a mul
 
 \ndg{intro can probably be compressed some if needed.}
 
-\begin{figure*}
+\begin{table*}
 \begin{center}
-\includegraphics[scale = .35]{images/overall_view.jpg}
+\begin{tabular}{ p{2cm} | r | r |  r || r | r | r || r | r | r}
+& \multicolumn{3}{c||}{\% attempted at least once} & \multicolumn{3}{c||}{\% attempted at least twice} & \multicolumn{3}{c}{\% of total cases}\\
+\hline
+& Orig. & Exp. 1 & Exp. 2 & Orig. & Exp. 1 & Exp. 2 & Orig. & Exp. 1 & Exp. 2  \\
+Experimental & 71 & 93 & 60 & 46 & 64 & 36 & 30 & 37 & 26\\
+Baseline & 0 & 14 & 14 & 0 & 0 & 0 & 0 & 3 & 4\\
+\end{tabular}
+\caption{Side-by-side comparison of error rates in \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} and our two replications. The first section shows the percentage of \emph{participants} attempting to move the occluded distractor at least one of the four possible cases. The second section shows the percentage attempting to move it at least twice. The third section shows the percentage of \emph{all experimental trials} that the participant actually tried to move the occluded object. \todo[inline]{Big caption maybe unnecessary. Anything else to include in this table? Maybe Keysar et al, 2000, which reported \% of total cases, or our Exp. 2 results if you remove the two most difficult items? There, errors drop quite a lot.}}
+\label{table:mainResults}
 \end{center}
-\vspace{-.25cm}
-\caption{Interface used in the reported experiments. Objects behind the black squares were hidden from the director.}
-\label{fig:interface}
-\end{figure*}
+\end{table*}
 
 \section{Exp.~1: Scripted Replication}
 \label{sec:Exp1}
@@ -130,28 +146,37 @@ To collect clean mouse-tracking data, we began every instruction by asking the m
 One of the instructions was a `critical instruction,' which referred to the target object.
 For half the instructions, directors were free to communicate however they wished. For the other half, including all the critical instructions, their messages to the matcher were pre-scripted such that we could use the precise wording from \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse}. For example, when giving instructions on how to move the cassette tape, the director would be forced to use the ambiguous utterance ``Move the tape down one square." (That is, in these conditions, the scripted message would automatically appear in the director's chat window, and they would have to click `send' for the experiment to continue.)
 
-We collected baseline performance for each condition by replacing the hidden alternative (e.g.~a roll of tape) with an object that did not fit the critical instruction (e.g. a battery); we used the same unambiguous replacements as \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse}. Each participant received half the items in the experimental condition and half in the baseline condition. The assignment of items to conditions was randomized across participants, and the order of conditions was randomized under the constraint that the same condition would not be used on more than two consecutive items. All object sets, object placements, and corresponding instruction sets were the same for all participants.
+We collected baseline performance for each condition by replacing the hidden alternative (e.g.~a roll of tape) with an object that did not fit the critical instruction (e.g.~a battery); we used the same unambiguous replacements as \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse}. Each participant received half the items in the experimental condition and half in the baseline condition. The assignment of items to conditions was randomized across participants, and the order of conditions was randomized under the constraint that the same condition would not be used on more than two consecutive items. All object sets, object placements, and corresponding instruction sets were the same for all participants.
 
 This paradigm differs from those used by \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} in three primary ways. First, participants were not seated across from each other at a table: they each saw a views of the 4 x 4 grid on screen and communicated via a text box. Second, we did not use a trained confederate. We randomly assigned one of the players to the role of the instruction giver, and maintained the original wording by scripting a subset of their instructions. Finally, the hidden object was not placed in a bag, in which respect our design more closely resembles \citeA{KeysarBarr___Brauner00_TakingPerspective}.
 
 %The experiment proceeded through all eight items, with the director providing instructions and the participant moving the objects. Except for instructions with scripted messages, the participants were free to use the chat box for questions, small talk, or whatever else.
-
-
-
 \begin{table*}
 \begin{center}
-\begin{tabular}{ p{2cm} | r | r |  r || r | r | r || r | r | r}
-& \multicolumn{3}{c||}{\% attempted at least once} & \multicolumn{3}{c||}{\% attempted at least twice} & \multicolumn{3}{c}{\% of total cases}\\
-\hline
-& Orig. & Exp. 1 & Exp. 2 & Orig. & Exp. 1 & Exp. 2 & Orig. & Exp. 1 & Exp. 2  \\
-Experimental & 71 & 93 & 60 & 46 & 64 & 36 & 30 & 37 & 26\\
-Baseline & 0 & 14 & 14 & 0 & 0 & 0 & 0 & 3 & 4\\
+\begin{tabular}{ m{1.5cm} | m{1.5cm} | m{1.5cm} |  r | m{1.6cm} | m{1.4cm} | m{1.3cm} | m{1.3cm} | m{1.5cm} |}
+& Item 1 & Item 2 & Item 3 & Item 4 & Item 5 & Item 6 & Item 7 & Item 8\\\hline
+instruction & ``glasses'' & ``bottom block'' & ``tape'' & ``large measuring cup'' & ``brush'' & ``eraser'' & ``small candle'' & ``mouse'' \\\hline
+target & sunglasses & block (3rd row) & cassette & medium cup & round hairbrush & board eraser & medium candle & computer mouse \\\hline
+hidden distractor & glasses case & block (4th row) & scotch-tape & large cup & flat \,\,\,hairbrush & pencil eraser & small candle & toy mouse \\\hline
+ \# incorrect & 1 & 1 & 2 & 3 & 9 & 7 & 1 & 5 \\
+ \# correct   & 11&14&10&13&7 &8   &12& 8 \\
 \end{tabular}
-\caption{Side-by-side comparison of error rates in \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} and our two replications. The first section shows the percentage of \emph{participants} attempting to move the occluded distractor at least one of the four possible cases. The second section shows the percentage attempting to move it at least twice. The third section shows the percentage of \emph{all experimental trials} that the participant actually tried to move the occluded object. \todo[inline]{Big caption maybe unnecessary. Anything else to include in this table? Maybe Keysar et al, 2000, which reported \% of total cases, or our Exp. 2 results if you remove the two most difficult items? There, errors drop quite a lot.}}
-\label{table:mainResults}
+\caption{Item-wise error analysis for experiment 2}
+\label{table:exp2ItemWise}
 \end{center}
 \end{table*}
 
+\begin{table*}
+\begin{center}
+\begin{tabular}{ p{2cm} | r | r |  r | r | r | r | r | r |}
+& Item 1 & Item 2 & Item 3 & Item 4 & Item 5 & Item 6 & Item 7 & Item 8\\\hline
+\# incorrect & 1 & 5 & 1 & 3 & 2 &6 & 6 & 1 \\ 
+\# correct & 5 & 3 & 1 & 8 & 2 & 2 & 4 & 6 \\
+\end{tabular}
+\caption{Item-wise error analysis}
+\label{table:exp1ItemWise}
+\end{center}
+\end{table*}
 
 \subsection{Results and discussion}
 
@@ -176,25 +201,6 @@ That is, the scripted instructions used by the director for critical trials may 
 We tested this prediction in Exp.~2, where we removed the scripted instructions and allowed speakers to refer to items however they wished.
 By the reasoning above we expect to see more precise descriptions by unscripted directors and fewer errors by matchers in the critical trials.
 
-\begin{table*}
-\begin{center}
-\begin{tabular}{ p{2cm} | r | r |  r | r | r | r | r | r |}
-& Item 1 & Item 2 & Item 3 & Item 4 & Item 5 & Item 6 & Item 7 & Item 8\\\hline
-\# incorrect & 1 & 5 & 1 & 3 & 2 &6 & 6 & 1 \\ 
-\# correct & 5 & 3 & 1 & 8 & 2 & 2 & 4 & 6 \\
-\end{tabular}
-\caption{Item-wise error analysis}
-\label{table:exp1ItemWise}
-\end{center}
-\end{table*}
-
-\begin{figure}[b!]
-\begin{center}
-\includegraphics[scale=.8]{images/exp1MouseTracking.pdf}
-\caption{Mean percentage of time spent hovering over the distractor and target cells in the experimental and baseline conditions. Error bars are 95\% confidence intervals.}
-\label{fig:exp1hover}
-\end{center}
-\end{figure}
 
 %\subsection{Discussion}
 %
@@ -205,28 +211,6 @@ By the reasoning above we expect to see more precise descriptions by unscripted 
 %our analysis of item-level differences shows that the dependent variable highlighted in the original study (i.e. ``percentage of participants who moved the critical item at least once'') is somewhat problematic. It could look like 100\% of participants made errors even if they all made those errors on one particularly difficult item. Indeed, if we exclude the three `hard' items where over 60\% of participants in the experimental condition made errors, this dependent variable drops from 93\% to only 43\% of participants. This suggests that the ``at least one error'' DV is not appropriate in settings with high variability across items and that we might want to be more careful about controlling for this variability, perhaps by first measuring salience and ambiguity without the occlusion aspect of the paradigm.
 
 %Second, because half of the instructions were unscripted, we were able to observe natural production of referential descriptions for a number of fillers. Informally, we noted a tendency toward over-informativity. Instead of ``move the stuffed animal down'', they'll say ``move the stuffed pa'nda bear down.'' Or, instead of saying ``move the plane to the right,'' they'll say ``move the red airplane to the right,'' even though there is only one plane. This suggested that the confederate's scripted instructions were in some sense uncooperative and counter to the matcher's expectations. Perhaps directors were taking the time to make more costly over-informative descriptions because they believed it was contextually relevant: both parties know that there are hidden objects in the environment. If the matcher reasoned in this way and expected the director to be overinformative, then they would be justified in picking the first object that meets the description rather than worrying about occluded cells. We tested this prediction in Exp.~2, where we removed the scripted instructions and allowed speakers to refer to items however they wished. If speakers really are being overinformative, and listeners are correctly expecting this, we should see fewer errors after removing uncooperative scripts.
-
-\begin{table*}
-\begin{center}
-\begin{tabular}{ p{2cm} | r | r |  r | r | r | r | r | r |}
-& Item 1 & Item 2 & Item 3 & Item 4 & Item 5 & Item 6 & Item 7 & Item 8\\\hline
- \# incorrect & 1 & 1 & 2 & 3 & 9 & 7 & 1 & 5 \\
- \# correct   & 11&14&10&13&7 &8   &12& 8 \\
-\end{tabular}
-\caption{Item-wise error analysis for experiment 2}
-\label{table:exp2ItemWise}
-\end{center}
-\end{table*}
-
-\begin{figure}[b!]
-\begin{center}
-\includegraphics[scale=.9]{images/exp2MouseTracking.pdf}
-\caption{Mean percentage of time spent hovering over the distractor and target cells in the experimental and baseline conditions. Error bars are 95\% confidence intervals.}
-\label{fig:exp2hover}
-\end{center}
-\end{figure}
-\section{Exp.~2: Unscripted Replication}
-\label{sec:Exp2}
 
 \subsection{Participants}
 
@@ -248,9 +232,27 @@ When we conducted a mouse-tracking analysis identical to the one reported for Ex
 
 \todo[inline]{rdh: make this analysis more rigorous by explicitly testing the size of the interaction? By testing the diff. in hover-time in target vs. distractor cells after restricting to experimental trials?}
 
-\todo[inline]{rdh: should do a basic analysis of over-informativity... Don't forget about the person who always gave directions like ``start at the third square of the first row and move down one square''}
+Next, we test whether these reductions in error rate and hover-time interference are in fact due to different speaker behavior. Two coders were given the list of messages that directors sent to convey instructions for critical items, blind to condition. The coders determined (1) whether or not the label used by the speaker fit the hidden distractor and (2) whether or not the label used by the director was more or less precise than the scripted label used in Exp.~1. Inter-rater reliability was relatively high, with $r=0.82$ for distractor fit and $r=0.69$ for the precision comparison. Binary rater decisions were averaged to form a single distractor fit score for each message, and a single precision score.
 
+We found that the referring expressions speakers used to convey critical instructions only fit the distractor 53\% of the time, compared to the scripted message in Exp.~1, which fit the distractor 100\% of the time. Furthermore, 47\% of these referring expressions were rated to be more precise than the corresponding scripted instruction used in Exp.\~1. As expected, there's a strong negative relationship between the precision of the label and whether it might apply to the hidden distractor, $r = -0.73$. Finally, we test whether the speaker's choice of label accounts for variability in error rates across different items. We find that error rates are higher when the speaker's label fits the hidden distractor $b = 0.79, t(5) = 2.8, p = 0.36$ \todo[inline]{rdh: this isn't the right regression... I did it on the aggregated scores, and it should really be done on the raw subject-by-subject data. It's just a bit tricky to join the error data and the message data.}
 
+\begin{figure}[b!]
+\begin{center}
+\includegraphics[scale=.75]{images/exp2MouseTracking.pdf}
+\caption{Mean percentage of time spent hovering over the distractor and target cells in the experimental and baseline conditions. Error bars are 95\% confidence intervals.}
+\label{fig:exp2hover}
+\end{center}
+\end{figure}
+\section{Exp.~2: Unscripted Replication}
+\label{sec:Exp2}
+
+\begin{figure}[b!]
+\begin{center}
+\includegraphics[scale=.75]{images/exp1MouseTracking.pdf}
+\caption{Mean percentage of time spent hovering over the distractor and target cells in the experimental and baseline conditions. Error bars are 95\% confidence intervals.}
+\label{fig:exp1hover}
+\end{center}
+\end{figure}
 \subsection{Discussion}
 
 \begin{itemize}
