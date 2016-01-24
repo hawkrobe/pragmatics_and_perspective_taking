@@ -212,6 +212,9 @@ By the reasoning above we expect to see more precise descriptions by unscripted 
 
 %Second, because half of the instructions were unscripted, we were able to observe natural production of referential descriptions for a number of fillers. Informally, we noted a tendency toward over-informativity. Instead of ``move the stuffed animal down'', they'll say ``move the stuffed pa'nda bear down.'' Or, instead of saying ``move the plane to the right,'' they'll say ``move the red airplane to the right,'' even though there is only one plane. This suggested that the confederate's scripted instructions were in some sense uncooperative and counter to the matcher's expectations. Perhaps directors were taking the time to make more costly over-informative descriptions because they believed it was contextually relevant: both parties know that there are hidden objects in the environment. If the matcher reasoned in this way and expected the director to be overinformative, then they would be justified in picking the first object that meets the description rather than worrying about occluded cells. We tested this prediction in Exp.~2, where we removed the scripted instructions and allowed speakers to refer to items however they wished. If speakers really are being overinformative, and listeners are correctly expecting this, we should see fewer errors after removing uncooperative scripts.
 
+\section{Exp.~2: Unscripted Replication}
+\label{sec:Exp2}
+
 \subsection{Participants}
 
 We recruited 64 participants (32 pairs) from Amazon Mechanical Turk, roughly doubling the sample size from Exp.~1. All participants were from the U.S. Three participants were excluded for making 2 or more errors on non-critical items, and one additional participant was excluded because they were not a native English speaker.
@@ -232,9 +235,10 @@ When we conducted a mouse-tracking analysis identical to the one reported for Ex
 
 \todo[inline]{rdh: make this analysis more rigorous by explicitly testing the size of the interaction? By testing the diff. in hover-time in target vs. distractor cells after restricting to experimental trials?}
 
-Next, we test whether these reductions in error rate and hover-time interference are in fact due to different speaker behavior. Two coders were given the list of messages that directors sent to convey instructions for critical items, blind to condition. The coders determined (1) whether or not the label used by the speaker fit the hidden distractor and (2) whether or not the label used by the director was more or less precise than the scripted label used in Exp.~1. Inter-rater reliability was relatively high, with $r=0.82$ for distractor fit and $r=0.69$ for the precision comparison. Binary rater decisions were averaged to form a single distractor fit score for each message, and a single precision score.
+Next, we test whether these reductions in error rate and hover-time interference are in fact due to different speaker behavior. Two coders were given the list of messages that directors sent to convey instructions for critical items, blind to condition. The coders determined (1) whether or not the label used by the speaker fit the hidden distractor and (2) whether or not the label used by the director was more or less precise than the scripted label used in Exp.~1. Inter-rater reliability was relatively high, with $r=0.82$ for distractor fit and $r=0.69$ for the precision comparison. \ndg{r is not right measure of agreement for binary coding -- \%agreement or kappa?} Binary rater decisions were averaged to form a single distractor fit score for each message, and a single precision score.
 
-We found that the referring expressions speakers used to convey critical instructions only fit the distractor 53\% of the time, compared to the scripted message in Exp.~1, which fit the distractor 100\% of the time. Furthermore, 47\% of these referring expressions were rated to be more precise than the corresponding scripted instruction used in Exp.\~1. As expected, there's a strong negative relationship between the precision of the label and whether it might apply to the hidden distractor, $r = -0.73$. Finally, we test whether the speaker's choice of label accounts for variability in error rates across different items. We find that error rates are higher when the speaker's label fits the hidden distractor $b = 0.79, t(5) = 2.8, p = 0.36$ \todo[inline]{rdh: this isn't the right regression... I did it on the aggregated scores, and it should really be done on the raw subject-by-subject data. It's just a bit tricky to join the error data and the message data.}
+We found that the referring expressions speakers used to convey critical instructions only fit the distractor 53\% of the time, compared to the scripted message in Exp.~1, which fit the distractor 100\% of the time. Furthermore, 47\% of these referring expressions were rated to be more precise than the corresponding scripted instruction used in Exp.~1. \ndg{was remaining 53\% rated as scripted more precise or mostly `can't tell'?} As expected, there's a strong negative relationship between the precision of the label and whether it might apply to the hidden distractor, $r = -0.73$. Finally, we test whether the speaker's choice of label accounts for variability in error rates across different items. We find that error rates are higher when the speaker's label fits the hidden distractor $b = 0.79, t(5) = 2.8, p = 0.36$ \todo[inline]{rdh: this isn't the right regression... I did it on the aggregated scores, and it should really be done on the raw subject-by-subject data. It's just a bit tricky to join the error data and the message data.}
+\ndg{also it's not clear what that analysis is, or how it tells us about the item effects...}
 
 \begin{figure}[b!]
 \begin{center}
@@ -243,8 +247,6 @@ We found that the referring expressions speakers used to convey critical instruc
 \label{fig:exp2hover}
 \end{center}
 \end{figure}
-\section{Exp.~2: Unscripted Replication}
-\label{sec:Exp2}
 
 \begin{figure}[b!]
 \begin{center}
