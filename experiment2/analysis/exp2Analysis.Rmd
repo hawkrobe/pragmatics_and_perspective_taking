@@ -5,20 +5,21 @@ output: html_document
 
 ```{r}
 setwd('~/Repos/keysar_replication/experiment2/data/')
-mouseD = read.csv('mouse/exp2Mouse.csv')
-errorD = read.csv('error/exp2Error.csv')
-messageD = read.csv('message/exp2Message.csv')
-str(mouseD)
+preMouseDExp2 = read.csv('mouse/exp2Mouse.csv')
+preErrorDExp2 = read.csv('error/exp2Error.csv')
+preMessageDExp2 = read.csv('message/exp2Message.csv')
 library(tidyr)
 library(dplyr)
 library(ggplot2)
+library(lme4)
+library(lmerTest)
 ```
 
 Set up error data
 
 ```{r}
 nonNativeEnglishIDs <- c("0366-3", "8676-f")
-nonCriticalMistakes <- errorD %>%
+nonCriticalMistakes <- preErrorDExp2 %>%
   # only look at mistakes on noncritical (filler) items
   filter(critical != 1) %>%
   # don't want to double-count people for messing the same thing up multiple times
@@ -29,48 +30,59 @@ nonCriticalMistakes <- errorD %>%
   filter(n >= 2)
 
 mistakeIDs <- as.character(nonCriticalMistakes$gameid)
-bannedIDs <- unique(c(mistakeIDs, nonNativeEnglishIDs))
-numParticipants <- length(unique(mouseD$gameid)) - length(bannedIDs)
+bannedIDsExp2 <- unique(c(mistakeIDs, nonNativeEnglishIDs))
+numParticipantsExp2 <- (length(unique(preMouseDExp2$gameid)) -
+                        length(bannedIDsExp2))
+```
+
+Remove banned ids from data
+
+```{r}
+errorDExp2 <- preErrorDExp2 %>%
+  filter(!(gameid %in% bannedIDsExp2))
+mouseDExp2 <- preMouseDExp2 %>%
+  filter(!(gameid %in% bannedIDsExp2))
+messageDExp2 <- preMessageDExp2 %>%
+  filter(!(gameid %in% bannedIDsExp2))
 ```
 
 Make error table
 
 ```{r}
-eD <- errorD %>%
-  filter(!(gameid %in% bannedIDs)) %>%
-  filter(critical == 1) %>%
+eDExp2 <- errorDExp2 %>%
   filter(attemptNum == 0) %>%
   group_by(gameid, condition) %>%
-  tally() %>%
-  mutate(cond2 = as.numeric(n >= 2)) %>%
+  summarize(n = sum(criticalError)) %>%
+  mutate(cond1 = as.numeric(n >= 1)) %>%
+  mutate(cond2 = as.numeric(n >= 2)) #
+
+errorTableExp2 <- eDExp2 %>%
   group_by(condition) %>%
-  summarise(atLeastOnce = length(n)/numParticipants, 
-            atLeastTwice = sum(cond2)/numParticipants,
-            total = sum(n) / (4 * numParticipants))
-eD
+  summarise(atLeastOnce = sum(cond1)/numParticipantsExp2, 
+            atLeastTwice = sum(cond2)/numParticipantsExp2,
+            total = sum(n) / (4 * numParticipantsExp2))
+errorTableExp2
 
 # To illustrate how much a few items are driving the effect, we exclude three items 
 # where more than 60% of participants made errors.
-excludedED <- errorD %>%
-  filter(!(gameid %in% bannedIDs)) %>%
-  filter(critical == 1) %>%
-  filter(!(objectSet %in% c(5, 6))) %>% # Just 5 & 6?
+excludedEDExp2 <- errorDExp2 %>%
   filter(attemptNum == 0) %>%
+  filter(!(objectSet %in% c(5, 6))) %>% # Just 5 & 6?
   group_by(gameid, condition) %>%
-  tally() %>%
+  summarize(n = sum(criticalError)) %>%
+  mutate(cond1 = as.numeric(n >= 1)) %>%
   mutate(cond2 = as.numeric(n >= 2)) %>%
   group_by(condition) %>%
-  summarise(atLeastOnce = length(n)/numParticipants, 
-            atLeastTwice = sum(cond2)/numParticipants,
-            total = sum(n) / (4 * numParticipants))
-excludedED
+  summarise(atLeastOnce = sum(cond1)/numParticipantsExp2, 
+            atLeastTwice = sum(cond2)/numParticipantsExp2,
+            total = sum(n) / (4 * numParticipantsExp2))
+excludedEDExp2
 ```
 
 When we look at errors per item, we have to remember that not all items had the same number of participants in the experimental condition.
 
 ```{r}
-numPlayersPerCondition = mouseD %>% 
-  filter(!(gameid %in% bannedIDs)) %>% 
+numPlayersPerConditionExp2 = mouseDExp2 %>% 
   filter(critical == 1) %>% 
   filter(attemptNum == 0) %>% 
   group_by(gameid, condition, objectSet) %>% 
@@ -83,53 +95,144 @@ numPlayersPerCondition = mouseD %>%
 Follow-up: are all critical items equal?
 
 ```{r}
-itemInequalities <- errorD %>%
-  filter(!(gameid %in% bannedIDs)) %>%
-  filter(critical == 1) %>%
-  filter(attemptNum == 0) %>%
+itemInequalitiesExp2 <- errorDExp2 %>%
   filter(condition == "exp") %>%
+  filter(criticalError == 1) %>%
+  filter(attemptNum == 0) %>%
   group_by(objectSet) %>%
   tally() %>%
-  right_join(numPlayersPerCondition, by = c('objectSet')) %>%
-  transmute(errorCount = n, correctCount = total - n)
+  right_join(numPlayersPerConditionExp2, by = c('objectSet')) %>%
+  mutate(objectSet = objectSet,
+         errorCount = n, 
+         correctCount = total - n) %>%
+  mutate(errorRate = errorCount / (errorCount + correctCount)) %>%
+  select(objectSet, errorCount, correctCount, errorRate, total)
 
-t(itemInequalities)
-t <- chisq.test(itemInequalities)
-print(t)
-t$expected
-t$observed
+itemInequalitiesExp2[1,2:4] = c(0, itemInequalitiesExp2[1,]$total, 0)
+
+itemWiseTestExp2 <- chisq.test(itemInequalitiesExp2[-c(1,4,5)])
+print(itemWiseTestExp2)
 ```
 
-Set up mouse/message data
+Follow-up:
+
+Did error rates go down significantly?
+
 
 ```{r}
+exp1NumErrors = eDExp1 %>% 
+  filter(condition == "exp") %>% 
+  group_by(condition) %>%
+  summarize(numErrors = sum(n))
+exp2NumErrors = eDExp2 %>% 
+  filter(condition == "exp") %>% 
+  group_by(condition) %>%
+  summarize(numErrors = sum(n))
 
-mouData <- mouseD %>%
-  filter(!(gameid %in% bannedIDs)) %>%
+exp1TotalPossible = 4 * numParticipantsExp1
+exp2TotalPossible = 4 * numParticipantsExp2
+
+numErrors = c(exp1NumErrors$numErrors, exp2NumErrors$numErrors)
+totalPossible = c(exp1TotalPossible, exp2TotalPossible)
+prop.test(numErrors, totalPossible)
+
+# Diff from keysar (2003)?
+keysarNumErrors = 45
+keysarTotalPossible = 4 * 38
+numErrors = c(keysarNumErrors, exp2NumErrors$numErrors)
+totalPossible = c(keysarTotalPossible, exp2TotalPossible)
+prop.test(numErrors, totalPossible)
+```
+
+
+Set up message data
+-------------------
+
+Need to join the coder ratings... 
+
+```{r}
+messageCoding1 <- read.csv("../analysis/messageCoding1.csv")
+messageCoding2 <- read.csv("../analysis/messageCoding2.csv")
+relevantProperties <- c("gameid", "attemptNum", "condition", "critical",
+                        "objectSet", "sender", "instructionNum")
+overinformativeCodes <- messageCoding1 %>% 
+  left_join(messageCoding2, by = relevantProperties) %>%
+  filter(!(gameid %in% bannedIDsExp2)) %>%
+  mutate(contents = contents.x, time = time.x) %>%
+  select(gameid, attemptNum, condition, critical, objectSet, sender, 
+         instructionNum, contents, time, targetCode1, distractCode1,
+         altCode1, overCode1, targetCode2, distractCode2, altCode2,
+         overCode2) %>%
+  mutate(avgAltCode = (altCode1 + altCode2)/2,
+         avgTargetCode = (targetCode1 + targetCode2)/2,
+         avgDistractCode = (distractCode1 + distractCode2)/2,
+         avgOverCode = (overCode1 + overCode2)/2)
+
+# How often are the descriptions more informative than orig?
+mean(overinformativeCodes$avgOverCode)
+
+# How often do the descriptions apply to the hidden object?
+mean(overinformativeCodes$avgDistractCode)
+
+# Does overinformativity perfectly avoid picking distractor?
+cor(overinformativeCodes$avgDistractCode, overinformativeCodes$avgOverCode)
+
+# Inter-rater reliability
+kappa2(cbind(overinformativeCodes$distractCode1, overinformativeCodes$distractCode2))
+kappa2(cbind(overinformativeCodes$overCode1, overinformativeCodes$overCode2))
+```
+
+Want to show whether precision helps avoid errors (mixed model?)
+
+First, we join the error data with the critical item coding data.
+
+```{r}
+criticalErrors = errorDExp2 %>% 
+  filter(attemptNum == 0)%>% 
+  filter(criticalError == 1) 
+itemWiseCodes <- overinformativeCodes %>% 
+  left_join(criticalErrors, by = c("gameid", "condition", "critical", 
+                                   "objectSet", "instructionNum",
+                                   "attemptNum")) %>%
+  select(gameid, objectSet, avgDistractCode, avgOverCode, 
+         criticalError) %>%
+  mutate(criticalError = ifelse(is.na(criticalError),0,1))
+
+mmRes <- glmer(criticalError ~ avgOverCode + avgDistractCode +  (1 | objectSet),
+      data = itemWiseCodes, family = binomial)
+
+summary(mmRes)
+```
+
+Set up mouse data
+
+```{r}
+mouDataExp2 <- mouseDExp2 %>%
   filter(attemptNum == 0)
 
-mD <- messageD %>% 
-  filter(!(gameid %in% bannedIDs)) %>%
+mDExp2 <- messageDExp2 %>% 
   filter(attemptNum == 0) %>%
   filter(sender == "director") %>%
   group_by(gameid, objectSet, instructionNum) %>%
   mutate(messageStamp = first(time)) %>%
-  select(gameid, condition, attemptNum, instructionNum, critical, objectSet,sender,contents,messageStamp) %>%
+  select(gameid, condition, attemptNum, instructionNum, critical, 
+         objectSet,sender,contents,messageStamp) %>%
   distinct(gameid,contents)
 
-joined <- (right_join(mouData, mD, by = c("gameid", "condition", "objectSet", 
+joinedExp2 <- (right_join(mouDataExp2, mDExp2, by = c("gameid", "condition",
+                                                      "objectSet", 
                                          "instructionNum", "attemptNum", "critical")))
 ```
 
 ```{r}
-dUnfilt <- joined %>%
+dUnfiltExp2 <- joinedExp2 %>%
   filter(critical == 1) %>%
   group_by(objectSet)
 
-d <- joined %>% 
+dExp2 <- joinedExp2 %>% 
   filter(critical == 1) %>% 
   group_by(objectSet, condition) %>%
-#  filter(time > messageStamp) #%>%
+  filter(time > messageStamp) %>%
   mutate(mouseY = 600 - mouseY) %>%
   mutate(targetY = 600 - targetY) %>%
   mutate(begTargetX = first(targetX),
@@ -152,7 +255,7 @@ Compute hover time statistics
 sem <- function(x) {sd(x, na.rm = T) / sqrt(length(x))}
 ci95 <- function(x) {sem(x) * 1.96}
 
-heatMapForLM <- d %>%
+heatMapForLMExp2 <- dExp2 %>%
   group_by(gameid, objectSet) %>%
   mutate(inTargetSquare = as.numeric(mouseX > targetX - 75 
                                      & mouseX < targetX + 75
@@ -167,16 +270,16 @@ heatMapForLM <- d %>%
          target = sum(inTargetSquare) / n()) %>%
   gather(cellType, percent, distractor, target) 
 
-heatMapForLM
+heatMapForLMExp2
 
-t1 <- lm(percent ~ condition * cellType, data = heatMapForLM)
+t1 <- lm(percent ~ condition * cellType, data = heatMapForLMExp2)
 summary(t1)
 ```
 
 Plot it? 
 
 ```{r}
-heatMapForPlot <- d %>%
+heatMapForPlotExp2 <- dExp2 %>%
   group_by(gameid, objectSet) %>%
   mutate(inTargetSquare = as.numeric(mouseX > targetX - 75 
                                      & mouseX < targetX + 75
@@ -194,18 +297,46 @@ heatMapForPlot <- d %>%
   summarize(error = sem(percent),
             percent = mean(percent)) 
   
-heatMapForPlot
+heatMapForPlotExp2
 
-g <- (ggplot(heatMapForPlot, aes(x = condition, y = percent, group = cellType,
-                                  color = cellType)) 
+g <- (ggplot(heatMapForPlotExp2, aes(x = condition, y = percent, 
+                                     group = cellType, color = cellType)) 
       + geom_line(aes(linetype = cellType), size = 2)
       + geom_errorbar(aes(ymax = percent + error, 
                           ymin = percent - error), size =2 ,
-                      width = 0.1))
+                      width = 0.1)
+     + ylim(0, .45)
+      + ggtitle("Experiment 2 Hover-Time"))
 g
+ggsave("../../writing/cogsci-submission/images/exp2MouseTracking.pdf")
 ```
 
-Very noisy (unfinished) plot of all mouse-movements
+Compare mouse data from Exp1 w/ mouse data from Exp2:
+
+```{r}
+combinedHeatMap = rbind(heatMapForLMExp1 %>%
+                          mutate(exp = "Exp.1") %>% 
+                          filter(condition == "exp"),
+                        heatMapForLMExp2 %>% 
+                          mutate(exp = "Exp.2") %>%
+                          filter(condition == "exp"))
+combinedHeatMapForPlot <- combinedHeatMap %>%
+  group_by(cellType, exp) %>%
+  summarize(error = sem(percent),
+            percent = mean(percent)) 
+
+g <- (ggplot(combinedHeatMapForPlot, aes(x = cellType, y = percent, 
+                                  group = exp, color = exp)) 
+      + geom_line(aes(linetype = exp), size = 2)
+      + geom_errorbar(aes(ymax = percent + error, 
+                          ymin = percent - error), size =2 ,
+                          width = 0.1)
+      + ylim(0, .45)
+      + ggtitle("Experiment 2 Hover-Time"))
+g
+combinedRes = lm(percent ~ exp * cellType, data = combinedHeatMap)
+summary(combinedRes)
+```
 
 ```{r}
 # heatMapForPlot$new_labels = as.factor(sapply(X = heatMapForPlot$objectSet, 
