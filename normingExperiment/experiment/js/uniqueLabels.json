@@ -1,0 +1,290 @@
+[
+    {
+        "label": "glasses",
+        "objectSet": "1"
+    },
+    {
+        "label": "black sunglasses",
+        "objectSet": "1"
+    },
+    {
+        "label": "sunglasses",
+        "objectSet": "1"
+    },
+    {
+        "label": "shades",
+        "objectSet": "1"
+    },
+    {
+        "label": "B block",
+        "objectSet": "2"
+    },
+    {
+        "label": "toy block",
+        "objectSet": "2"
+    },
+    {
+        "label": "blue block",
+        "objectSet": "2"
+    },
+    {
+        "label": "B cube",
+        "objectSet": "2"
+    },
+    {
+        "label": "child's blue block",
+        "objectSet": "2"
+    },
+    {
+        "label": "alphabet block",
+        "objectSet": "2"
+    },
+    {
+        "label": "B box",
+        "objectSet": "2"
+    },
+    {
+        "label": "block",
+        "objectSet": "2"
+    },
+    {
+        "label": "block with the blue writing",
+        "objectSet": "2"
+    },
+    {
+        "label": "B",
+        "objectSet": "2"
+    },
+    {
+        "label": "block with the B",
+        "objectSet": "2"
+    },
+    {
+        "label": "the bluish block with a B",
+        "objectSet": "2"
+    },
+    {
+        "label": "letter block",
+        "objectSet": "2"
+    },
+    {
+        "label": "block toy",
+        "objectSet": "2"
+    },
+    {
+        "label": "block left",
+        "objectSet": "2"
+    },
+    {
+        "label": "blue B block",
+        "objectSet": "2"
+    },
+    {
+        "label": "tape",
+        "objectSet": "3"
+    },
+    {
+        "label": "cassette",
+        "objectSet": "3"
+    },
+    {
+        "label": "cassette tape",
+        "objectSet": "3"
+    },
+    {
+        "label": "clear audiocassette",
+        "objectSet": "3"
+    },
+    {
+        "label": "large measure cup",
+        "objectSet": "4"
+    },
+    {
+        "label": "pyrex measuring cup",
+        "objectSet": "4"
+    },
+    {
+        "label": "pyrex",
+        "objectSet": "4"
+    },
+    {
+        "label": "measuring cup",
+        "objectSet": "4"
+    },
+    {
+        "label": "big measuring cup",
+        "objectSet": "4"
+    },
+    {
+        "label": "measuring cup with handle",
+        "objectSet": "4"
+    },
+    {
+        "label": "measure cup",
+        "objectSet": "4"
+    },
+    {
+        "label": "measuring thing",
+        "objectSet": "4"
+    },
+    {
+        "label": "pyrex thing",
+        "objectSet": "4"
+    },
+    {
+        "label": "pyrex cup",
+        "objectSet": "4"
+    },
+    {
+        "label": "pyrex measuring cup (with the handle)",
+        "objectSet": "4"
+    },
+    {
+        "label": "measuring cup with the holder",
+        "objectSet": "4"
+    },
+    {
+        "label": "large measuring glass ... the pyrex",
+        "objectSet": "4"
+    },
+    {
+        "label": "large cup",
+        "objectSet": "4"
+    },
+    {
+        "label": "larger measuring cup",
+        "objectSet": "4"
+    },
+    {
+        "label": "large measuring cup",
+        "objectSet": "4"
+    },
+    {
+        "label": "measurement cup ... the large one with red letters",
+        "objectSet": "4"
+    },
+    {
+        "label": "cup",
+        "objectSet": "4"
+    },
+    {
+        "label": "large pyrex measuring cup",
+        "objectSet": "4"
+    },
+    {
+        "label": "pyrex measuring cup (the one with the handle)",
+        "objectSet": "4"
+    },
+    {
+        "label": "brush",
+        "objectSet": "5"
+    },
+    {
+        "label": "hair curler",
+        "objectSet": "5"
+    },
+    {
+        "label": "brown brush",
+        "objectSet": "5"
+    },
+    {
+        "label": "hairbrush",
+        "objectSet": "5"
+    },
+    {
+        "label": "comb",
+        "objectSet": "5"
+    },
+    {
+        "label": "haircomb",
+        "objectSet": "5"
+    },
+    {
+        "label": "round hairbrush",
+        "objectSet": "5"
+    },
+    {
+        "label": "eraser",
+        "objectSet": "6"
+    },
+    {
+        "label": "expo eraser",
+        "objectSet": "6"
+    },
+    {
+        "label": "erase",
+        "objectSet": "6"
+    },
+    {
+        "label": "dry eraser",
+        "objectSet": "6"
+    },
+    {
+        "label": "eraser expo",
+        "objectSet": "6"
+    },
+    {
+        "label": "expo",
+        "objectSet": "6"
+    },
+    {
+        "label": "expo block",
+        "objectSet": "6"
+    },
+    {
+        "label": "white out",
+        "objectSet": "6"
+    },
+    {
+        "label": "black eraser",
+        "objectSet": "6"
+    },
+    {
+        "label": "candle",
+        "objectSet": "7"
+    },
+    {
+        "label": "lit candle",
+        "objectSet": "7"
+    },
+    {
+        "label": "red candle",
+        "objectSet": "7"
+    },
+    {
+        "label": "red candle/holder",
+        "objectSet": "7"
+    },
+    {
+        "label": "candlestick",
+        "objectSet": "7"
+    },
+    {
+        "label": "red candlestick",
+        "objectSet": "7"
+    },
+    {
+        "label": "mouse",
+        "objectSet": "8"
+    },
+    {
+        "label": "silver mouse",
+        "objectSet": "8"
+    },
+    {
+        "label": "computer mouse",
+        "objectSet": "8"
+    },
+    {
+        "label": "grey mouse",
+        "objectSet": "8"
+    },
+    {
+        "label": "bottom block",
+        "objectSet": 2
+    },
+    {
+        "label": "small candle",
+        "objectSet": 7
+    }
+]
