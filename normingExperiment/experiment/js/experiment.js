@@ -25,7 +25,11 @@ function make_slides(f) {
       this.init_sliders();
       exp.sliderPost = {};
       var contextsentence = "How well does <strong>"+this.stim.label+"</strong> apply to this object?";
-      var objimagehtml = '<img src="'+this.stim.object.url+'" style="height:190px;">';
+      if(stim.context == "isolated") {
+	var objimagehtml = '<img src="'+this.stim.object.url+'" style="height:190px;">';
+      } else {
+	var objimagehtml = '<img src="'+this.stim.object.contextURL+'" style="height:190px;">';
+      }
       $("#contextsentence").html(contextsentence);
       $("#objectimage").html(objimagehtml);
       console.log(this);
@@ -53,6 +57,7 @@ function make_slides(f) {
         "response" : exp.sliderPost,
 	"objectSet" : this.stim.objectSet,
 	"referent" : this.stim.referent,
+	"context" : this.stim.context,
 	"rt" : Date.now() - _s.trial_start
       });
     },

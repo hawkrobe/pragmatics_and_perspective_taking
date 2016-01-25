@@ -318,9 +318,11 @@ var stimList = function() {
   var middleBlock = {
     url: 'js/stimuli/middleBlock.png', name: "middleBlock", width: 80, height: 80,
     instruction: "middleBlock left", initialLoc: [3,4],
+    contextURL: 'js/stimuli/middleBlockContext.png',
     scriptedInstruction: "move the bottom block one space to the left", critical : "target"}
   var bottomBlock = {
     url: 'js/stimuli/bottomBlock.jpg', name: "bottomBlock", width: 80, height: 80,
+    contextURL: 'js/stimuli/bottomBlockContext.png',
     instruction: "", initialLoc: [4,4], critical : "distractor"}
   var stapler = {
     url: 'js/stimuli/stapler.jpg', name: "stapler", width: 80, height: 80,
@@ -366,11 +368,13 @@ var stimList = function() {
   // BLOCK 4
 
   var mediumMeasuringCup = {
-    url: 'js/stimuli/mediumMeasuringCup.png', name: "mediumMeasuringCup", width : 110, height: 87,
+    url: 'js/stimuli/mediumMeasuringCup.png', name: "mediumMeasuringCup", width : 110,
+    height: 87, contextURL: 'js/stimuli/mediumCupContext.png',
     instruction: "mediumMeasuringCup down", initialLoc : [3,4], critical : "target",
     scriptedInstruction: "move the large measuring cup down one space"}
   var largeMeasuringCup = {
-    url: 'js/stimuli/largeMeasuringCup.png', name: "largeMeasuringCup", width : 130, height: 85,
+    url: 'js/stimuli/largeMeasuringCup.png', name: "largeMeasuringCup", width : 130,
+    height: 85, contextURL: 'js/stimuli/largeCupContext.png',
     instruction: "", initialLoc : [3,1], critical : "distractor",}
   var umbrella = {
     url: 'js/stimuli/umbrella.png', name: "umbrella", width: 130, height: 112,
@@ -449,9 +453,11 @@ var stimList = function() {
   var mediumCandle = {
     url: 'js/stimuli/mediumCandle.png', name: "mediumCandle", width: 107, height: 130,
     instruction: "mediumCandle down", initialLoc: [1,1],critical : "target",
+    contextURL: 'js/stimuli/mediumCandleContext.png',
     scriptedInstruction: "move the small candle down by one space"};
   var smallCandle = {
     url: 'js/stimuli/smallCandle.png', name: "smallCandle", width:100, height: 83,
+    contextURL: 'js/stimuli/smallCandleContext.png',
     instruction: "", initialLoc: [3,1],critical : "distractor",};
   var flower = {
     url: 'js/stimuli/flower.png', name: "flower", width: 130, height: 97.5,
@@ -573,12 +579,20 @@ var stimList = function() {
     }];
 
   var referents = ["target", "distractor"];
-
+  var contexts = ["isolated", "comparison"];
+  
   var stimList = _.flatten(_.map(uniqueLabels, function(labelObj) {
     return _.map(referents, function(referent) {
       var relevantObject = criticalItems[Number(labelObj.objectSet) - 1][referent];
-      return {label: labelObj.label, objectSet : labelObj.objectSet,
-	      referent: referent, object : relevantObject};
+      if(_.contains([2, 4, 7], labelObj.objectSet)) {
+	return _.map(contexts, function(context) {
+	  return {label: labelObj.label, objectSet : labelObj.objectSet,
+		  referent: referent, object : relevantObject, context: context};
+	});
+      } else {
+	return {label: labelObj.label, objectSet : labelObj.objectSet,
+		referent: referent, object : relevantObject, context: "isolated"};
+      }
     });
   }));
 
