@@ -5,10 +5,9 @@ output: html_document
 
 ```{r}
 setwd('~/Repos/keysar_replication/experiment1/analysis/')
-mouseD = read.csv('fullSampleMouse.csv')
-errorD = read.csv('fullSampleError.csv')
-messageD = read.csv('fullSampleMessage.csv')
-str(mouseD)
+preMouseDExp1 = read.csv('fullSampleMouse.csv')
+preErrorDExp1 = read.csv('fullSampleError.csv')
+preMessageDExp1 = read.csv('fullSampleMessage.csv')
 library(tidyr)
 library(dplyr)
 library(ggplot2)
@@ -17,8 +16,7 @@ library(ggplot2)
 Set up error data
 
 ```{r}
-numParticipants <- length(unique(mouseD$gameid))
-nonCriticalMistakes <- errorD %>%
+nonCriticalMistakes <- preErrorDExp1 %>%
   # only look at mistakes on noncritical (filler) items
   filter(critical != 1) %>%
   # don't want to double-count people for messing the same thing up multiple times
@@ -28,46 +26,60 @@ nonCriticalMistakes <- errorD %>%
   # implement exclusion criteria of errors on >~10% of non-critical trials
   filter(n >= 2)
 
-bannedIDs <- nonCriticalMistakes$gameid
+bannedIDsExp1 <- nonCriticalMistakes$gameid
+numParticipantsExp1 <- (length(unique(preMouseDExp1$gameid)) -
+                        length(bannedIDsExp1))
+
+```
+
+Remove banned ids from data
+
+```{r}
+errorDExp1 <- preErrorDExp1 %>%
+  filter(!(gameid %in% bannedIDsExp1))
+mouseDExp1 <- preMouseDExp1 %>%
+  filter(!(gameid %in% bannedIDsExp1))
+messageDExp1 <- preMessageDExp1 %>%
+  filter(!(gameid %in% bannedIDsExp1))
 ```
 
 Make error table
 
 ```{r}
-eD <- errorD %>%
-  filter(!(gameid %in% bannedIDs)) %>%
-  filter(critical == 1) %>%
+eDExp1 <- errorDExp1 %>%
   filter(attemptNum == 0) %>%
   group_by(gameid, condition) %>%
-  tally() %>%
-  mutate(cond2 = as.numeric(n >= 2)) %>%
+  summarize(n = sum(criticalError)) %>%
+  mutate(cond1 = as.numeric(n >= 1)) %>%
+  mutate(cond2 = as.numeric(n >= 2)) 
+
+errorTableExp1 <- eDExp1 %>% 
   group_by(condition) %>%
-  summarise(atLeastOnce = length(n)/14, 
-            atLeastTwice = sum(cond2)/14,
-            total = sum(n) / (4 * numParticipants))
-eD
+  summarise(atLeastOnce = sum(cond1)/numParticipantsExp1, 
+            atLeastTwice = sum(cond2)/numParticipantsExp1,
+            total = sum(n) / (4 * numParticipantsExp1))
+errorTableExp1
 
 # To illustrate how much a few items are driving the effect, we exclude three items 
 # where more than 60% of participants made errors.
-excludedED <- errorD %>%
-  filter(!(gameid %in% bannedIDs)) %>%
-  filter(critical == 1) %>%
-  filter(!(objectSet %in% c(2, 6, 7))) %>%
+excludedEDExp1 <- errorDExp1 %>%
   filter(attemptNum == 0) %>%
+  filter(!(objectSet %in% c(2, 6, 7))) %>% # Just 5 & 6?
   group_by(gameid, condition) %>%
-  tally() %>%
+  summarize(n = sum(criticalError)) %>%
+  mutate(cond1 = as.numeric(n >= 1)) %>%
   mutate(cond2 = as.numeric(n >= 2)) %>%
   group_by(condition) %>%
-  summarise(atLeastOnce = length(n)/14, 
-            atLeastTwice = sum(cond2)/14)
-excludedED
+  summarise(atLeastOnce = sum(cond1)/numParticipantsExp1, 
+            atLeastTwice = sum(cond2)/numParticipantsExp1,
+            total = sum(n) / (4 * numParticipantsExp1))
+excludedEDExp1
 ```
 
 When we look at errors per item, we have to remember that not all items had the same number of participants in the experimental condition.
 
 ```{r}
-numPlayersPerCondition = mouseD %>% 
-  filter(!(gameid %in% bannedIDs)) %>% 
+numPlayersPerConditionExp1 = mouseDExp1 %>% 
   filter(critical == 1) %>% 
   filter(attemptNum == 0) %>% 
   group_by(gameid, condition, objectSet) %>% 
@@ -80,33 +92,31 @@ numPlayersPerCondition = mouseD %>%
 Follow-up: are all critical items equal?
 
 ```{r}
-itemInequalities <- errorD %>%
-  filter(!(gameid %in% bannedIDs)) %>%
-  filter(critical == 1) %>%
-  filter(attemptNum == 0) %>%
+itemInequalitiesExp1 <- errorDExp1 %>%
   filter(condition == "exp") %>%
+  filter(criticalError == 1) %>%
+  filter(attemptNum == 0) %>%
   group_by(objectSet) %>%
   tally() %>%
-  right_join(numPlayersPerCondition, by = c('objectSet')) %>%
-  transmute(errorCount = n, correctCount = total - n)
+  right_join(numPlayersPerConditionExp1, by = c('objectSet')) %>%
+  mutate(objectSet = objectSet,
+         errorCount = n, 
+         correctCount = total - n) %>%
+  mutate(errorRate = errorCount / (errorCount + correctCount)) %>%
+  select(objectSet, errorCount, correctCount, errorRate, total)
+itemInequalitiesExp1[1,2:4] = c(0, itemInequalitiesExp1[1,]$total, 0)
 
-t(itemInequalities)
-t <- chisq.test(itemInequalities)
-print(t)
-t$expected
-t$observed
+itemWiseTestExp1 <- chisq.test(itemInequalitiesExp1[-c(1,4,5)])
+print(itemWiseTestExp1)
 ```
 
 Set up mouse/message data
 
 ```{r}
-
-mouData <- mouseD %>%
-  filter(!(gameid %in% bannedIDs)) %>%
+mouDataExp1 <- mouseDExp1 %>%
   filter(attemptNum == 0)
 
-mD <- messageD %>% 
-  filter(!(gameid %in% bannedIDs)) %>%
+mDExp1 <- messageDExp1 %>% 
   filter(attemptNum == 0) %>%
   filter(sender == "director") %>%
   group_by(gameid, objectSet, instructionNum) %>%
@@ -114,19 +124,19 @@ mD <- messageD %>%
   select(gameid, condition, attemptNum, instructionNum, critical, objectSet,sender,contents,messageStamp) %>%
   distinct(gameid,contents)
 
-joined <- (right_join(mouData, mD, by = c("gameid", "condition", "objectSet", 
+joinedExp1 <- (right_join(mouDataExp1, mDExp1, by = c("gameid", "condition", "objectSet", 
                                          "instructionNum", "attemptNum", "critical")))
 ```
 
 ```{r}
-dUnfilt <- joined %>%
+dUnfiltExp1 <- joinedExp1 %>%
   filter(critical == 1) %>%
   group_by(objectSet)
 
-d <- joined %>% 
+dExp1 <- joinedExp1 %>% 
   filter(critical == 1) %>% 
   group_by(objectSet, condition) %>%
-#  filter(time > messageStamp) #%>%
+  filter(time > messageStamp) %>%
   mutate(mouseY = 600 - mouseY) %>%
   mutate(targetY = 600 - targetY) %>%
   mutate(begTargetX = first(targetX),
@@ -149,7 +159,7 @@ Compute hover time statistics
 sem <- function(x) {sd(x, na.rm = T) / sqrt(length(x))}
 ci95 <- function(x) {sem(x) * 1.96}
 
-heatMapForLM <- d %>%
+heatMapForLMExp1 <- dExp1 %>%
   group_by(gameid, objectSet) %>%
   mutate(inTargetSquare = as.numeric(mouseX > targetX - 75 
                                      & mouseX < targetX + 75
@@ -164,16 +174,16 @@ heatMapForLM <- d %>%
          target = sum(inTargetSquare) / n()) %>%
   gather(cellType, percent, distractor, target) 
 
-heatMapForLM
+heatMapForLMExp1
 
-t1 <- lm(percent ~ condition * cellType, data = heatMapForLM)
+t1 <- lm(percent ~ condition * cellType, data = heatMapForLMExp1)
 summary(t1)
 ```
 
 Plot it? 
 
 ```{r}
-heatMapForPlot <- d %>%
+heatMapForPlotExp1 <- dExp1 %>%
   group_by(gameid, objectSet) %>%
   mutate(inTargetSquare = as.numeric(mouseX > targetX - 75 
                                      & mouseX < targetX + 75
@@ -191,15 +201,17 @@ heatMapForPlot <- d %>%
   summarize(error = sem(percent),
             percent = mean(percent)) 
   
-heatMapForPlot
+heatMapForPlotExp1
 
-g <- (ggplot(heatMapForPlot, aes(x = condition, y = percent, group = cellType,
+g <- (ggplot(heatMapForPlotExp1, aes(x = condition, y = percent, group = cellType,
                                   color = cellType)) 
       + geom_line(aes(linetype = cellType), size = 2)
       + geom_errorbar(aes(ymax = percent + error, 
                           ymin = percent - error), size =2 ,
                       width = 0.1)
+      + ylim(0,.45)
       + ggtitle("Experiment 1 Hover-Time"))
+g
 ggsave("../../writing/cogsci-submission/images/exp1MouseTracking.pdf")
 ```
 
