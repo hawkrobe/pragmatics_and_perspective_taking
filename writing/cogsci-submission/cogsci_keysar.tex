@@ -218,25 +218,7 @@ We recruited 64 participants (32 pairs) from Amazon Mechanical Turk, roughly dou
 
 Everything was the same as Exp.~1, except we did not use scripted messages for critical instructions. 
  
-\subsection{Results}
-
-Error rates are reported in Table \ref{table:mainResults}, alongside the results from \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} and our scripted replication in Exp.~1. Participants never moved the hidden object in the baseline condition, and total error rates for experimental trials are significantly lower than the rates found in Exp.~1, $\chi^2(1) = 5.35, p = 0.02$.
-
-More dramatically, we find that patterns of errors in Exp.~2 diverge significantly from a uniform distribution across items, $\chi^2(7) = 24.8, p < 0.001$. Looking more closely at these patterns, we see that the only items where errors are consistently made are those where the costly over-informative utterance remains ambiguous. For example, in item 5, both the target and distractor are hair brushes: one is round and one is flat. ``Hair brush'' is already a label at the sub-class level. If we remove the two most difficult items (the ``hair brushes'' and the ``erasers''), the total percentage of errors on experimental trials drops from 26\% to 10\% and the percentage of participants making at least one error drops from 60\% to 32\%.
-
-When we conducted a mouse-tracking analysis identical to the one reported for Exp.~1, we again found a significant interaction between condition and cell type on hover time, $b = -0.18, t(108) = -5.2, p < 0.001$. However, the effect is attenuated: in experimental trials, participants spend significantly more time hovering over the target than the distractor (see Figure \ref{fig:exp2hover}) whereas in Exp.~1, participants spent roughly the same amount of time hovering over each.
-
-\todo[inline]{rdh: I don't think we have enough power to show a difference between mean hover-times in the two experiments -- the first experiment just didn't have a big enough sample (the psych254 class budget was a pretty hard constraint). Might be able to get more power by doing mixed model like below, or by calculating the times more precisely (currently, just count number of mouse movement events in time window, which probably adds a lot of noise).}
-
-Next, we test whether these reductions in error rate and hover-time interference are in fact due to different speaker behavior. Two coders were given the list of messages that directors sent to convey instructions for critical items, blind to condition. The coders determined (1) whether or not the label used by the speaker fit the hidden distractor and (2) whether or not the label used by the director was more or less precise than the scripted label used in Exp.~1. Inter-rater reliability was relatively high, with Cohen's $\kappa=0.82$ for distractor fit and $\kappa=0.67$ for the precision comparison. Binary rater decisions were averaged to form a single distractor fit score for each message, and a single precision score.
-
-We found that the referring expressions speakers used to convey critical instructions only fit the distractor 53\% of the time, compared to the scripted message in Exp.~1, which (by definition) fit the distractor 100\% of the time. 
-\todo[inline]{Except that `glasses' one, which doesn't really apply to a glasses case. I'm now pretty sure that this is the fault of the picture I picked (an \emph{open} glasses case rather than a closed one\dots which was dumb in retrospect) Maybe I should re-run analyses without that item, just in case?} 
-Furthermore, 47\% of these referring expressions were rated to be more precise than the corresponding scripted instruction used in Exp.~1. \ndg{was remaining 53\% rated as scripted more precise or mostly `can't tell'?} As expected, there's a strong negative relationship between the precision of the label and whether it might apply to the hidden distractor, $r = -0.73$. Finally, we used a mixed effects logistic regression model to estimate the effect of distractor fit and precision on the probability of making an error on critical trials. We included random intercepts for the eight items. We find that participants are significantly more likely to make an error when the label applies to the distractor, $b = 3.15, z = 2.93, p = 0.003$, but that precision has no effect, $p = 0.96$. 
-
-
-
-\begin{figure}[b!]
+ \begin{figure}[b!]
 \begin{center}
 \includegraphics[scale=.75]{images/exp1MouseTracking.pdf}
 \caption{Mean percentage of time spent hovering over the distractor and target cells in the experimental and baseline conditions. Error bars are 95\% confidence intervals.}
@@ -247,8 +229,32 @@ Furthermore, 47\% of these referring expressions were rated to be more precise t
 \begin{figure}[b!]
 \begin{center}
 \includegraphics[scale=.75]{images/exp2MouseTracking.pdf}
-\caption{Mean percentage of time spent hovering over the distractor and target cells in the experimental and baseline conditions. Error bars are 95\% confidence intervals.}
+\caption{Mean percentage of time spent hovering over the distractor and target cells in the experimental and baseline conditions. Error bars are 95\% confidence intervals. \todo[inline]{TODO: Collapse mouse-tracking plots to a single figure}}
 \label{fig:exp2hover}
+\end{center}
+\end{figure}
+
+\subsection{Results}
+
+Error rates are reported in Table \ref{table:mainResults}, alongside the results from \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} and our scripted replication in Exp.~1. Participants never moved the hidden object in the baseline condition, and total error rates for experimental trials are significantly lower than the rates found in Exp.~1, $\chi^2(1) = 5.35, p = 0.02$.
+
+More dramatically, we find that patterns of errors in Exp.~2 diverge significantly from a uniform distribution across items, $\chi^2(7) = 24.8, p < 0.001$. Looking more closely at these patterns, we see that the only items where errors are consistently made are those where the costly over-informative utterance remains ambiguous. For example, in item 5, both the target and distractor are hair brushes: one is round and one is flat. ``Hair brush'' is already a label at the sub-class level. If we remove the two most difficult items (the ``hair brushes'' and the ``erasers''), the total percentage of errors on experimental trials drops from 26\% to 10\% and the percentage of participants making at least one error drops from 60\% to 32\%.
+
+When we conducted a mouse-tracking analysis identical to the one reported for Exp.~1, we again found a significant interaction between condition and cell type on hover time, $b = -0.18, t(108) = -5.2, p < 0.001$. However, the effect appears to be attenuated: in experimental trials, participants spend significantly more time hovering over the target than the distractor (see Figure \ref{fig:exp2hover}) whereas in Exp.~1, participants spent roughly the same amount of time hovering over each. Due to the relatively small sample size of Exp.~1, however, we do not have the power to show this effect statistically.
+
+Next, we test whether these improvements in performance are in fact due to different speaker behavior. We recruited twenty raters on Amazon Mechanical Turk, who provided ratings for how well the 71 unique labels used by speakers across both experiments (including scripted labels) fit the target and hidden distractor objects. Their responses were given on a slider with endpoints labeled ``not at all'' and ``perfectly.''  Inter-rater reliability was relatively high, with intra-class correlation coefficient of $0.6$ (95\% CI = $[0.54, 0.66]$).
+
+In a mixed model including random intercepts for raters and items, we found a significant crossover interaction of experiment and referent on mean fitness rating, $b = -0.33, t = 32, p < 0.001$. In Exp.~1, the scripted label fit the hidden distractor better than the target, but the ordering reversed in Exp.~2: the unconstrained labels fit the target much better and the hidden distractor much worse (see Fig. \ref{fig:fitnessInteraction}).
+
+Finally, we used a mixed effects logistic regression model to estimate the effect of distractor fit and speaker constraints on the probability of making an error on critical trials. We included random intercepts for game and item ids, and an interaction term for label fitness and label referent. We find a significant interaction of referent and fitness ratings on error rates: matchers are significantly more likely to make an error when the label fits the distractor more and the target less, $b =-1.39, z = -8.16, p < 0.001$. Additionally, participants were significantly less likely to produce errors in Exp.~2 than Exp.~1, $b = -2.10, z = -2.38, p = 0.017$.
+
+\todo[inline]{what else should these mixed models do? Should I just use mean rating rather than every turker's ratings? Feels like using $20\times$ the degrees of freedom is wrong, somehow.  Would be nice to see if they could account for item-wise effects explicitly somehow? Like the ``bottom block'' thing which was confusable in Exp.~1 but not Exp.~2.}
+
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[scale=.18]{images/fitnessInteraction.jpeg}
+\caption{Mean fitness ratings provided by judges on Amazon Mechanical Turk. Error bars are bootstrapped 95\% confidence intervals.}
+\label{fig:fitnessInteraction}
 \end{center}
 \end{figure}
 
@@ -260,9 +266,7 @@ Furthermore, 47\% of these referring expressions were rated to be more precise t
 
 \section{General Discussion}
 
-Removing constraints on the speaker produced a dramatic reduction in overall matcher errors and systematic variation in error rates across items. How did unscripted speaker behavior differ from scripted behavior such that these effects emerged? We found that unscripted speakers systematically tended to produce more precise, costly referring expressions than their scripted counterparts -- for example, ``the clear audiocassette'' when there was only one ``tape'' in the speaker's display. These precise labels were less likely to fit the hidden distractor, and therefore less likely to lead to a matcher error.
-
-A key point 
+Removing constraints on the speaker produced a dramatic reduction in overall matcher errors and systematic variation in error rates across items. We found that unscripted speakers systematically tended to produce more precise, costly referring expressions than their scripted counterparts -- for example, ``the clear audiocassette'' when there was only one ``tape'' in the speaker's display. These precise labels were less likely to fit the hidden distractor, and therefore less likely to lead to a matcher error.
 
 We noticed several differences between our study and \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} that prevented a direct replication. The primary difference between our study and the original is the fact that it will be run online with participants connected via a virtual environment, instead of face-to-face in a room. A related difference is our decision not to use a confederate. In general, studies using confederates are difficult to replicate exactly and are impractical to run online. We are aware that this change (while keeping scripted instructions, which were the primary justification for the confederate) may lead to additional variation across groups. It is also known that textual communication (via our instant messaging interface) can differ from verbal communication (as in the original study). Finally, the way people attempt to move things in our virtual environment may be different from how people attempt to move things in the lab, and we cannot eye-tracking data to back up our analysis, as the original paper did.
 
