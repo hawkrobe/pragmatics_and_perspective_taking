@@ -158,7 +158,7 @@ var stimList = function() {
     },
     {
       "label": "large measuring cup",
-      "objectSet": "4"
+      "objectSet": 4
     },
     {
       "label": "measurement cup ... the large one with red letters",
