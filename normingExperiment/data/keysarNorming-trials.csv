@@ -1,0 +1,3001 @@
+workerid,rt,objectSet,label,referent,context,slideNumber,response
+0,6537,4,measuring cup,target,isolated,2,0.97
+0,2459,3,cassette,distractor,isolated,3,0.02
+0,5630,1,shades,distractor,isolated,4,0.57
+0,2564,5,hairbrush,distractor,isolated,5,0.98
+0,3132,6,eraser expo,distractor,isolated,6,0.97
+0,3276,5,brown brush,target,isolated,7,0.97
+0,1704,3,tape,target,isolated,8,0.98
+0,2202,6,erase,target,isolated,9,0.98
+0,4640,2,bottom block,distractor,isolated,10,0.62
+0,3726,6,dry eraser,distractor,isolated,11,1
+0,2345,6,white out,distractor,isolated,12,0.01
+0,2811,2,letter block,distractor,isolated,13,0.99
+0,3058,5,haircomb,target,isolated,14,0.8
+0,3358,4,large measuring cup,distractor,comparison,15,0.98
+0,7776,2,blue B block,distractor,isolated,16,0.17
+0,1973,6,eraser,target,isolated,17,0.92
+0,1631,6,erase,distractor,isolated,18,0.98
+0,1849,1,sunglasses,target,isolated,19,0.98
+0,2420,2,child&quotechars blue block,distractor,isolated,20,0.12
+0,12165,2,the bluish block with a B,distractor,isolated,21,0.08
+0,1991,4,larger measuring cup,distractor,isolated,22,0.97
+0,3132,2,B box,target,isolated,23,0.97
+0,4378,4,pyrex,distractor,isolated,24,0.51
+0,2023,5,haircomb,distractor,isolated,25,0.95
+0,1920,5,round hairbrush,target,isolated,26,0.98
+0,2567,2,block,target,isolated,27,0.98
+0,1739,4,cup,distractor,isolated,28,1
+0,3091,4,large measuring glass ... the pyrex,target,isolated,29,0.98
+0,2208,7,candle,distractor,isolated,30,0.99
+0,1790,4,measure cup,distractor,isolated,31,0.98
+0,1412,2,B block,target,isolated,32,0.98
+0,3401,4,larger measuring cup,target,isolated,33,0.98
+0,1781,4,cup,target,isolated,34,0.99
+0,1778,4,big measuring cup,distractor,isolated,35,0.98
+0,6540,5,comb,distractor,isolated,36,0.97
+0,2033,7,lit candle,target,isolated,37,0.99
+0,2847,4,large measuring cup,target,comparison,38,0.99
+0,2088,1,shades,target,isolated,39,0.98
+0,1658,4,measuring thing,target,isolated,40,0.98
+0,1433,6,dry eraser,target,isolated,41,0.97
+0,1735,3,cassette tape,distractor,isolated,42,0.02
+0,2068,2,B block,distractor,isolated,43,0.03
+0,5446,7,small candle,distractor,isolated,44,1
+0,1498,3,cassette tape,target,isolated,45,0.99
+0,2334,7,candlestick,distractor,isolated,46,0.51
+0,2070,5,brown brush,distractor,isolated,47,0.05
+0,3893,4,measuring cup,distractor,isolated,48,0.95
+0,3218,7,small candle,target,comparison,49,0.8
+0,4066,4,pyrex measuring cup (with the handle),distractor,isolated,50,0.48
+0,2646,5,round hairbrush,distractor,isolated,51,0.03
+0,3618,2,bottom block,distractor,comparison,52,0.94
+0,3048,7,red candlestick,distractor,isolated,53,0.06
+0,3974,6,expo eraser,target,isolated,54,0.99
+0,2818,6,expo block,target,isolated,55,0.06
+0,2819,8,mouse,target,isolated,56,0.96
+0,2751,4,pyrex measuring cup,target,isolated,57,0.98
+0,2236,2,block,target,isolated,58,0.98
+0,2969,1,black sunglasses,distractor,isolated,59,0.51
+0,1519,4,pyrex thing,distractor,isolated,60,0.95
+0,1716,3,clear audiocassette,distractor,isolated,61,0.02
+0,2288,4,measuring cup with the holder,distractor,isolated,62,0.96
+0,2338,6,expo,target,isolated,63,0.99
+0,2615,3,cassette,target,isolated,64,0.92
+0,1519,2,B,target,isolated,65,0.94
+0,2812,5,hair curler,target,isolated,66,0.38
+0,2056,2,blue block,target,isolated,67,0.98
+0,1574,7,red candle,target,isolated,68,0.97
+0,1786,6,white out,target,isolated,69,0.29
+0,2352,2,the bluish block with a B,target,isolated,70,0.98
+0,38677,5,hair curler,distractor,isolated,71,0.21
+0,2998,2,block with the B,target,isolated,72,0.99
+0,1310,4,large cup,target,isolated,73,0.98
+0,2328,5,comb,target,isolated,74,0.74
+0,1300,5,hairbrush,target,isolated,75,0.96
+0,1746,2,block with the blue writing,target,isolated,76,0.99
+0,2482,2,toy block,distractor,isolated,77,0.94
+0,1472,1,glasses,distractor,isolated,78,0.58
+0,1490,4,large measuring cup,target,isolated,79,0.98
+0,1348,1,black sunglasses,target,isolated,80,0.97
+0,1562,4,measuring cup with the holder,target,isolated,81,0.95
+0,1424,4,pyrex cup,distractor,isolated,82,0.98
+0,1431,4,pyrex thing,target,isolated,83,0.94
+0,1706,4,measuring cup with handle,target,isolated,84,0.97
+0,1884,6,eraser expo,target,isolated,85,0.96
+0,1422,2,block,distractor,isolated,86,0.96
+0,1938,5,brush,distractor,isolated,87,0.97
+0,1848,8,mouse,distractor,isolated,88,0.97
+0,1446,2,child&quotechars blue block,target,isolated,89,0.99
+0,4082,4,large measure cup,target,isolated,90,0.98
+0,2400,7,red candle,distractor,isolated,91,0.5
+0,1448,2,blue B block,target,isolated,92,0.99
+0,2652,7,small candle,target,isolated,93,0.98
+0,1828,4,pyrex,target,isolated,94,0.98
+0,1300,2,letter block,target,isolated,95,1
+0,1452,4,large measure cup,distractor,isolated,96,0.98
+0,1314,4,large measuring glass ... the pyrex,distractor,isolated,97,0.99
+0,2498,2,alphabet block,distractor,isolated,98,0.96
+0,1889,2,block toy,distractor,isolated,99,0.95
+0,2366,7,candle,target,isolated,100,0.97
+0,5364,4,pyrex measuring cup (the one with the handle),distractor,isolated,101,0.98
+0,3107,4,pyrex measuring cup (the one with the handle),target,isolated,102,0.99
+0,1700,1,glasses,target,isolated,103,0.99
+0,2522,7,small candle,distractor,comparison,104,0.99
+0,1470,2,B cube,target,isolated,105,0.99
+0,2848,6,expo block,distractor,isolated,106,0.22
+0,3184,8,computer mouse,distractor,isolated,107,0.07
+0,2793,2,bottom block,target,comparison,108,0.92
+0,1809,4,big measuring cup,target,isolated,109,0.99
+0,1878,4,large cup,distractor,isolated,110,0.96
+0,1585,2,block toy,target,isolated,111,0.97
+0,3032,4,measurement cup ... the large one with red letters,distractor,isolated,112,0.98
+0,2670,6,eraser,distractor,isolated,113,0.96
+0,12492,1,sunglasses,distractor,isolated,114,0.49
+0,2570,2,blue block,distractor,isolated,115,0.97
+0,2863,8,computer mouse,target,isolated,116,0.94
+0,2546,6,expo,distractor,isolated,117,0.28
+0,1826,4,measuring thing,distractor,isolated,118,0.98
+0,8294,2,block with the B,distractor,isolated,119,0.07
+0,2480,6,black eraser,target,isolated,120,0.99
+0,3599,8,silver mouse,target,isolated,121,0.97
+0,1692,8,grey mouse,target,isolated,122,0.99
+0,1491,4,measure cup,target,isolated,123,0.96
+0,2278,2,B box,distractor,isolated,124,0.08
+0,1912,2,block,distractor,isolated,125,0.99
+0,1644,2,toy block,target,isolated,126,0.98
+0,1736,5,brush,target,isolated,127,0.98
+0,1504,4,large pyrex measuring cup,target,isolated,128,0.96
+0,2949,8,grey mouse,distractor,isolated,129,0.98
+0,2353,7,red candle/holder,distractor,isolated,130,0.21
+0,1713,6,black eraser,distractor,isolated,131,0.23
+0,2512,4,pyrex cup,target,isolated,132,0.99
+0,3241,2,B cube,distractor,isolated,133,0.04
+0,2429,7,red candle/holder,target,isolated,134,0.96
+0,1777,4,pyrex measuring cup,distractor,isolated,135,0.99
+0,2020,6,expo eraser,distractor,isolated,136,0.17
+0,2113,8,silver mouse,distractor,isolated,137,0.98
+0,2548,2,B,distractor,isolated,138,0.09
+0,2098,3,tape,distractor,isolated,139,0.99
+0,2380,3,clear audiocassette,target,isolated,140,0.97
+0,2230,4,large pyrex measuring cup,distractor,isolated,141,0.99
+0,2110,4,pyrex measuring cup (with the handle),target,isolated,142,0.97
+0,2615,4,measurement cup ... the large one with red letters,target,isolated,143,0.99
+0,2802,7,lit candle,distractor,isolated,144,0.97
+0,1537,4,large measuring cup,distractor,isolated,145,0.97
+0,2471,2,block with the blue writing,distractor,isolated,146,0.99
+0,2086,7,red candlestick,target,isolated,147,0.96
+0,4162,2,bottom block,target,isolated,148,0.97
+0,2898,4,measuring cup with handle,distractor,isolated,149,0.96
+0,1816,7,candlestick,target,isolated,150,0.97
+0,2563,2,alphabet block,target,isolated,151,0.99
+1,7564,2,block with the blue writing,distractor,isolated,2,0.88
+1,3102,7,lit candle,target,isolated,3,0.8
+1,4179,4,pyrex measuring cup (the one with the handle),distractor,isolated,4,0.93
+1,2986,4,big measuring cup,target,isolated,5,0.61
+1,7852,8,computer mouse,distractor,isolated,6,0
+1,5224,4,measurement cup ... the large one with red letters,distractor,isolated,7,0.59
+1,4727,8,grey mouse,target,isolated,8,0.84
+1,5310,5,round hairbrush,distractor,isolated,9,0.66
+1,2697,4,measure cup,distractor,isolated,10,0.6
+1,2842,4,measuring cup with the holder,target,isolated,11,0.63
+1,2410,7,red candle/holder,target,isolated,12,0.58
+1,2603,4,large cup,distractor,isolated,13,0.37
+1,2757,2,B block,distractor,isolated,14,0.49
+1,3967,3,tape,distractor,isolated,15,0.61
+1,2950,2,the bluish block with a B,distractor,isolated,16,0.51
+1,2952,3,clear audiocassette,target,isolated,17,0.55
+1,2857,6,erase,target,isolated,18,0.36
+1,8110,7,red candlestick,distractor,isolated,19,0.03
+1,4861,1,glasses,distractor,isolated,20,0.42
+1,2717,2,letter block,target,isolated,21,0.52
+1,1722,7,candle,target,isolated,22,0.49
+1,1803,4,large measuring glass ... the pyrex,distractor,isolated,23,0.49
+1,3351,6,expo eraser,target,isolated,24,0.63
+1,2573,6,dry eraser,target,isolated,25,0.53
+1,1645,4,measuring cup with handle,target,isolated,26,0.43
+1,1597,2,block,distractor,isolated,27,0.57
+1,2555,5,comb,distractor,isolated,28,0.22
+1,2206,7,candlestick,target,isolated,29,0.58
+1,1801,2,B cube,distractor,isolated,30,0.49
+1,2831,4,pyrex measuring cup,distractor,isolated,31,0.47
+1,3837,7,red candle/holder,distractor,isolated,32,0.02
+1,2529,2,block with the B,distractor,isolated,33,0.53
+1,2606,8,silver mouse,target,isolated,34,0.71
+1,2059,6,expo,target,isolated,35,0.58
+1,1650,4,cup,distractor,isolated,36,0.53
+1,4034,3,clear audiocassette,distractor,isolated,37,0.06
+1,2461,4,large measure cup,distractor,isolated,38,0.47
+1,2788,4,big measuring cup,distractor,isolated,39,0.53
+1,2157,4,pyrex cup,distractor,isolated,40,0.55
+1,1642,2,blue B block,distractor,isolated,41,0.53
+1,6916,7,small candle,target,comparison,42,0.66
+1,3005,7,candle,distractor,isolated,43,0.69
+1,1933,4,pyrex measuring cup (the one with the handle),target,isolated,44,0.53
+1,3605,5,haircomb,target,isolated,45,0.21
+1,3007,2,alphabet block,distractor,isolated,46,0.65
+1,2990,2,B block,target,isolated,47,0.5
+1,2823,3,tape,target,isolated,48,0.49
+1,2080,6,expo block,target,isolated,49,0.51
+1,2570,4,pyrex,distractor,isolated,50,0.51
+1,4031,2,bottom block,target,isolated,51,0.26
+1,2088,4,large measure cup,target,isolated,52,0.5
+1,1776,2,child&quotechars blue block,target,isolated,53,0.51
+1,1713,4,large measuring cup,target,isolated,54,0.51
+1,1715,2,B,distractor,isolated,55,0.54
+1,3182,7,red candle,target,isolated,56,0.62
+1,3144,2,blue block,distractor,isolated,57,0.29
+1,4626,2,bottom block,target,comparison,58,0.64
+1,3255,2,block,target,isolated,59,0.73
+1,3963,2,B,target,isolated,60,0.62
+1,1970,4,larger measuring cup,target,isolated,61,0.49
+1,2656,5,round hairbrush,target,isolated,62,0.5
+1,3264,3,cassette tape,distractor,isolated,63,0.02
+1,1678,2,block,target,isolated,64,0.52
+1,3591,6,white out,distractor,isolated,65,0.02
+1,2647,1,glasses,target,isolated,66,0.63
+1,2334,2,block toy,target,isolated,67,0.62
+1,2869,2,alphabet block,target,isolated,68,0.51
+1,2213,4,large cup,target,isolated,69,0.53
+1,3558,5,hair curler,distractor,isolated,70,0.04
+1,2821,4,pyrex measuring cup (with the handle),target,isolated,71,0.5
+1,5603,6,expo,distractor,isolated,72,0.01
+1,2504,2,toy block,distractor,isolated,73,0.52
+1,2513,2,bottom block,distractor,comparison,74,0.51
+1,4636,7,lit candle,distractor,isolated,75,0.82
+1,12116,7,small candle,target,isolated,76,0.56
+1,2675,2,the bluish block with a B,target,isolated,77,0.56
+1,1532,5,comb,target,isolated,78,0.4
+1,1628,2,blue B block,target,isolated,79,0.47
+1,1629,4,measuring thing,distractor,isolated,80,0.5
+1,1566,4,pyrex measuring cup,target,isolated,81,0.5
+1,2054,1,sunglasses,distractor,isolated,82,0.5
+1,2198,5,brush,target,isolated,83,0.59
+1,2063,2,child&quotechars blue block,distractor,isolated,84,0.7
+1,1775,2,blue block,target,isolated,85,0.48
+1,1464,6,black eraser,distractor,isolated,86,0.43
+1,1667,3,cassette tape,target,isolated,87,0.53
+1,2788,6,eraser,target,isolated,88,0.73
+1,3528,8,mouse,distractor,isolated,89,0.67
+1,3555,4,large pyrex measuring cup,target,isolated,90,0.44
+1,2119,1,shades,distractor,isolated,91,0.53
+1,1498,6,black eraser,target,isolated,92,0.51
+1,1795,4,measurement cup ... the large one with red letters,target,isolated,93,0.51
+1,3217,2,B box,distractor,isolated,94,0.12
+1,2699,6,expo block,distractor,isolated,95,0.06
+1,3424,3,cassette,distractor,isolated,96,0.02
+1,2921,5,brown brush,target,isolated,97,0.52
+1,3061,5,brown brush,distractor,isolated,98,0.02
+1,2046,2,block,distractor,isolated,99,0.74
+1,3529,7,small candle,distractor,isolated,100,0.62
+1,2302,4,measuring thing,target,isolated,101,0.52
+1,1439,4,pyrex cup,target,isolated,102,0.5
+1,1569,2,B box,target,isolated,103,0.49
+1,2047,4,cup,target,isolated,104,0.49
+1,1441,1,black sunglasses,distractor,isolated,105,0.51
+1,1843,5,hairbrush,distractor,isolated,106,0.54
+1,1618,1,shades,target,isolated,107,0.55
+1,1257,5,hair curler,target,isolated,108,0.57
+1,2035,4,large measuring glass ... the pyrex,target,isolated,109,0.58
+1,2079,7,red candlestick,target,isolated,110,0.6
+1,2907,2,letter block,distractor,isolated,111,0.58
+1,1348,4,measuring cup with handle,distractor,isolated,112,0.41
+1,1365,2,toy block,target,isolated,113,0.49
+1,2159,8,silver mouse,distractor,isolated,114,0.61
+1,3126,6,eraser expo,target,isolated,115,0.66
+1,1599,4,measuring cup,distractor,isolated,116,0.56
+1,3320,1,black sunglasses,target,isolated,117,0.69
+1,2962,5,haircomb,distractor,isolated,118,0.29
+1,3096,4,larger measuring cup,distractor,isolated,119,0.47
+1,1304,6,expo eraser,distractor,isolated,120,0.55
+1,1865,4,large measuring cup,distractor,comparison,121,0.53
+1,2119,2,block toy,distractor,isolated,122,0.5
+1,9053,5,brush,distractor,isolated,123,0.71
+1,1689,6,white out,target,isolated,124,0.65
+1,2971,3,cassette,target,isolated,125,0.75
+1,3488,7,candlestick,distractor,isolated,126,0.23
+1,2253,7,red candle,distractor,isolated,127,0.49
+1,1343,2,block with the B,target,isolated,128,0.49
+1,2378,6,eraser,distractor,isolated,129,0.49
+1,1375,6,erase,distractor,isolated,130,0.49
+1,1437,7,small candle,distractor,comparison,131,0.52
+1,3136,8,computer mouse,target,isolated,132,0.74
+1,4224,5,hairbrush,target,isolated,133,0.73
+1,2578,2,B cube,target,isolated,134,0.74
+1,3748,6,dry eraser,distractor,isolated,135,0.24
+1,1711,4,pyrex thing,distractor,isolated,136,0.52
+1,2145,4,large measuring cup,target,comparison,137,0.48
+1,1403,4,measuring cup with the holder,distractor,isolated,138,0.52
+1,1429,4,measure cup,target,isolated,139,0.52
+1,1622,1,sunglasses,target,isolated,140,0.51
+1,1574,4,pyrex thing,target,isolated,141,0.51
+1,1470,4,large pyrex measuring cup,distractor,isolated,142,0.5
+1,1785,2,bottom block,distractor,isolated,143,0.5
+1,2427,8,mouse,target,isolated,144,0.51
+1,1977,4,pyrex,target,isolated,145,0.58
+1,1637,4,pyrex measuring cup (with the handle),distractor,isolated,146,0.62
+1,1324,4,measuring cup,target,isolated,147,0.66
+1,2422,8,grey mouse,distractor,isolated,148,0.75
+1,1551,6,eraser expo,distractor,isolated,149,0.52
+1,2180,2,block with the blue writing,target,isolated,150,0.52
+1,2083,4,large measuring cup,distractor,isolated,151,0.53
+2,10717,4,large measuring glass ... the pyrex,distractor,isolated,2,0.61
+2,4287,4,measuring cup,distractor,isolated,3,0.94
+2,3653,2,letter block,distractor,isolated,4,0.92
+2,7210,5,comb,target,isolated,5,1
+2,2454,4,large pyrex measuring cup,distractor,isolated,6,1
+2,2620,5,brush,distractor,isolated,7,0.85
+2,2701,7,lit candle,target,isolated,8,0.94
+2,2532,4,measure cup,target,isolated,9,0.88
+2,2482,4,large measuring cup,distractor,isolated,10,0.99
+2,3991,4,large cup,target,isolated,11,0.66
+2,2613,3,cassette tape,target,isolated,12,0.89
+2,3397,6,eraser expo,target,isolated,13,0.65
+2,3936,6,erase,target,isolated,14,0.59
+2,2578,7,lit candle,distractor,isolated,15,0.85
+2,1925,4,large measure cup,distractor,isolated,16,1
+2,2037,6,erase,distractor,isolated,17,0.6
+2,4200,7,red candle/holder,target,isolated,18,0.79
+2,4657,6,white out,target,isolated,19,0
+2,3624,2,child&quotechars blue block,distractor,isolated,20,0.14
+2,4439,2,B box,target,isolated,21,0.05
+2,1987,5,hairbrush,target,isolated,22,0.91
+2,2929,2,block with the blue writing,target,isolated,23,0.81
+2,5104,2,the bluish block with a B,distractor,isolated,24,0.35
+2,3019,5,brown brush,target,isolated,25,0.73
+2,3832,4,large measuring cup,target,comparison,26,0.73
+2,11417,5,haircomb,target,isolated,27,0.57
+2,4258,2,blue block,distractor,isolated,28,0.18
+2,6615,3,cassette,target,isolated,29,0.83
+2,4308,7,small candle,target,isolated,30,0.55
+2,2710,2,block,distractor,isolated,31,0.79
+2,2771,4,pyrex measuring cup,target,isolated,32,0.86
+2,4568,4,large measuring cup,target,isolated,33,0.86
+2,4417,2,bottom block,distractor,comparison,34,0.52
+2,5243,6,eraser expo,distractor,isolated,35,0.49
+2,3048,6,dry eraser,distractor,isolated,36,0.36
+2,3486,3,clear audiocassette,target,isolated,37,0.79
+2,7863,7,small candle,target,comparison,38,0.68
+2,5651,4,pyrex measuring cup (with the handle),target,isolated,39,0.93
+2,3634,2,B,distractor,isolated,40,0.07
+2,2126,7,candle,target,isolated,41,0.8
+2,3805,7,small candle,distractor,comparison,42,0.87
+2,3186,2,child&quotechars blue block,target,isolated,43,0.87
+2,3773,8,mouse,distractor,isolated,44,0.98
+2,3782,8,grey mouse,target,isolated,45,0.97
+2,4649,4,cup,target,isolated,46,0.71
+2,3783,6,expo block,target,isolated,47,0.38
+2,3941,2,alphabet block,distractor,isolated,48,1
+2,9910,4,pyrex measuring cup (the one with the handle),distractor,isolated,49,0.66
+2,2691,4,larger measuring cup,distractor,isolated,50,0.96
+2,4010,2,blue block,target,isolated,51,0.9
+2,9314,2,B box,distractor,isolated,52,0
+2,4865,4,pyrex,distractor,isolated,53,0.53
+2,3872,7,candlestick,target,isolated,54,0.79
+2,4417,7,red candle/holder,distractor,isolated,55,0.27
+2,4023,2,block toy,target,isolated,56,0.88
+2,5778,4,pyrex measuring cup (with the handle),distractor,isolated,57,0.63
+2,3991,2,letter block,target,isolated,58,0.92
+2,3635,2,B,target,isolated,59,0.56
+2,2224,7,red candlestick,target,isolated,60,0.9
+2,4678,6,expo eraser,target,isolated,61,0.98
+2,3366,6,eraser,distractor,isolated,62,0.9
+2,2702,5,brown brush,distractor,isolated,63,0.17
+2,2919,2,blue B block,distractor,isolated,64,0.15
+2,2811,2,bottom block,target,isolated,65,0.35
+2,2293,6,expo,target,isolated,66,0.49
+2,1808,4,big measuring cup,distractor,isolated,67,0.6
+2,2662,6,white out,distractor,isolated,68,0
+2,2005,6,dry eraser,target,isolated,69,0.66
+2,1907,2,block,target,isolated,70,0.75
+2,3962,1,sunglasses,distractor,isolated,71,0.26
+2,3010,2,block with the B,target,isolated,72,0.91
+2,2394,1,glasses,distractor,isolated,73,0.15
+2,2729,4,pyrex thing,target,isolated,74,0.72
+2,1746,2,B block,target,isolated,75,0.85
+2,3336,4,large measuring glass ... the pyrex,target,isolated,76,0.61
+2,3672,4,measuring cup with the holder,target,isolated,77,0.81
+2,3078,6,black eraser,distractor,isolated,78,0.14
+2,7469,5,hair curler,target,isolated,79,0.46
+2,3385,4,large cup,distractor,isolated,80,0.52
+2,3901,2,toy block,target,isolated,81,0.94
+2,3965,2,block toy,distractor,isolated,82,1
+2,6257,4,large measure cup,target,isolated,83,0.9
+2,2654,4,measuring thing,target,isolated,84,0.71
+2,2211,2,B block,distractor,isolated,85,0.09
+2,2016,4,cup,distractor,isolated,86,0.56
+2,1906,4,pyrex measuring cup (the one with the handle),target,isolated,87,0.61
+2,3087,4,measurement cup ... the large one with red letters,distractor,isolated,88,0.4
+2,3646,2,block with the blue writing,distractor,isolated,89,0.94
+2,4515,4,large measuring cup,distractor,comparison,90,0.59
+2,5461,2,toy block,distractor,isolated,91,0.92
+2,28217,8,silver mouse,distractor,isolated,92,0.54
+2,3245,2,block with the B,distractor,isolated,93,0.03
+2,4210,6,expo block,distractor,isolated,94,0.04
+2,2928,4,larger measuring cup,target,isolated,95,0.73
+2,2474,4,pyrex,target,isolated,96,0.79
+2,2761,8,computer mouse,target,isolated,97,0.97
+2,2952,1,black sunglasses,target,isolated,98,1
+2,1568,4,large pyrex measuring cup,target,isolated,99,0.82
+2,2292,4,measure cup,distractor,isolated,100,0.91
+2,1995,4,pyrex cup,distractor,isolated,101,0.55
+2,2801,8,grey mouse,distractor,isolated,102,0.45
+2,2902,2,bottom block,distractor,isolated,103,0.31
+2,2085,3,tape,target,isolated,104,0.79
+2,2938,3,clear audiocassette,distractor,isolated,105,0
+2,2789,3,cassette tape,distractor,isolated,106,0
+2,3563,8,computer mouse,distractor,isolated,107,0.24
+2,1948,4,measuring thing,distractor,isolated,108,0.73
+2,3586,4,measuring cup with the holder,distractor,isolated,109,0.79
+2,3455,5,haircomb,distractor,isolated,110,0.75
+2,2409,4,pyrex measuring cup,distractor,isolated,111,0.5
+2,3033,8,silver mouse,target,isolated,112,0.92
+2,3265,7,candlestick,distractor,isolated,113,0.38
+2,1908,4,measuring cup with handle,target,isolated,114,0.78
+2,2434,3,tape,distractor,isolated,115,0.93
+2,4991,2,blue B block,target,isolated,116,0.9
+2,2849,2,block,target,isolated,117,0.9
+2,2697,4,pyrex cup,target,isolated,118,0.84
+2,2226,4,big measuring cup,target,isolated,119,0.75
+2,2065,5,brush,target,isolated,120,0.77
+2,3098,1,glasses,target,isolated,121,0.92
+2,2732,5,comb,distractor,isolated,122,0.62
+2,2390,2,the bluish block with a B,target,isolated,123,0.86
+2,5194,5,round hairbrush,distractor,isolated,124,0.54
+2,2391,1,black sunglasses,distractor,isolated,125,0.24
+2,2534,7,red candle,distractor,isolated,126,0.14
+2,5501,6,black eraser,target,isolated,127,0.61
+2,3048,7,red candle,target,isolated,128,0.74
+2,2881,1,shades,target,isolated,129,0.84
+2,2521,2,block,distractor,isolated,130,0.9
+2,2978,4,measurement cup ... the large one with red letters,target,isolated,131,0.87
+2,8230,2,B cube,distractor,isolated,132,0.16
+2,2749,4,measuring cup with handle,distractor,isolated,133,0.83
+2,3249,5,round hairbrush,target,isolated,134,0.87
+2,4418,7,small candle,distractor,isolated,135,0.7
+2,2224,6,expo,distractor,isolated,136,0.09
+2,2547,5,hair curler,distractor,isolated,137,0.08
+2,1705,8,mouse,target,isolated,138,0.86
+2,2205,3,cassette,distractor,isolated,139,0.03
+2,3046,7,candle,distractor,isolated,140,0.65
+2,3397,4,pyrex thing,distractor,isolated,141,0.49
+2,2174,6,eraser,target,isolated,142,0.61
+2,2537,1,shades,distractor,isolated,143,0.13
+2,2944,2,bottom block,target,comparison,144,0.17
+2,2124,1,sunglasses,target,isolated,145,0.94
+2,2227,2,B cube,target,isolated,146,0.7
+2,2391,7,red candlestick,distractor,isolated,147,0.17
+2,2562,6,expo eraser,distractor,isolated,148,0.12
+2,2136,5,hairbrush,distractor,isolated,149,0.6
+2,1963,2,alphabet block,target,isolated,150,0.93
+2,1679,4,measuring cup,target,isolated,151,0.93
+3,154249,2,B box,distractor,isolated,2,0.31
+3,5068,4,larger measuring cup,target,isolated,3,0.75
+3,4199,4,pyrex cup,target,isolated,4,0.9
+3,5289,4,pyrex,distractor,isolated,5,0.56
+3,19670,8,mouse,target,isolated,6,0.9
+3,4168,7,small candle,target,comparison,7,0.9
+3,3539,2,the bluish block with a B,target,isolated,8,0.78
+3,3248,8,computer mouse,distractor,isolated,9,0.18
+3,1749,5,comb,target,isolated,10,0.92
+3,7177,6,erase,distractor,isolated,11,0.78
+3,2232,6,eraser,distractor,isolated,12,0.94
+3,4164,7,lit candle,distractor,isolated,13,0.87
+3,3650,4,large pyrex measuring cup,distractor,isolated,14,0.68
+3,8894,4,measuring cup with handle,target,isolated,15,0.88
+3,3930,4,measuring cup,distractor,isolated,16,0.63
+3,3899,4,large measuring cup,target,comparison,17,0.86
+3,4110,7,candle,target,isolated,18,0.77
+3,3512,4,pyrex measuring cup (the one with the handle),target,isolated,19,0.9
+3,31167,4,measuring cup with handle,distractor,isolated,20,0.75
+3,2713,6,expo block,distractor,isolated,21,0.6
+3,1904,5,hair curler,distractor,isolated,22,0.8
+3,2225,2,B cube,target,isolated,23,0.71
+3,2485,2,block,distractor,isolated,24,0.74
+3,2538,7,lit candle,target,isolated,25,0.85
+3,4061,4,measuring thing,distractor,isolated,26,0.34
+3,1881,2,letter block,target,isolated,27,0.76
+3,4548,2,block with the B,distractor,isolated,28,0.11
+3,2659,4,measuring cup,target,isolated,29,0.81
+3,2314,2,block toy,target,isolated,30,0.9
+3,2597,8,silver mouse,distractor,isolated,31,0.45
+3,2975,2,child&quotechars blue block,distractor,isolated,32,0.64
+3,19152,4,large measure cup,target,isolated,33,0.87
+3,2603,7,red candlestick,distractor,isolated,34,0.01
+3,1817,4,pyrex measuring cup (with the handle),distractor,isolated,35,0.84
+3,2466,8,grey mouse,target,isolated,36,0.81
+3,2451,4,cup,target,isolated,37,0.56
+3,1771,2,toy block,target,isolated,38,0.84
+3,21925,2,block with the B,target,isolated,39,0.79
+3,3080,2,bottom block,distractor,comparison,40,0.87
+3,1970,5,hair curler,target,isolated,41,0.86
+3,3085,6,eraser,target,isolated,42,0.9
+3,3524,1,glasses,target,isolated,43,0.91
+3,3741,4,large pyrex measuring cup,target,isolated,44,0.91
+3,6220,3,cassette tape,target,isolated,45,0.87
+3,1776,2,blue B block,distractor,isolated,46,0.92
+3,2355,2,child&quotechars blue block,target,isolated,47,0.93
+3,1882,2,B block,target,isolated,48,0.8
+3,2215,2,B cube,distractor,isolated,49,0.13
+3,2981,6,eraser expo,target,isolated,50,0.93
+3,2382,4,large cup,target,isolated,51,0.77
+3,2464,1,shades,distractor,isolated,52,0.29
+3,1915,5,haircomb,distractor,isolated,53,0.67
+3,1845,6,dry eraser,target,isolated,54,0.75
+3,3659,5,round hairbrush,distractor,isolated,55,0.49
+3,2315,4,large measuring cup,distractor,isolated,56,0.83
+3,4981,4,pyrex measuring cup (the one with the handle),distractor,isolated,57,0.59
+3,5074,4,big measuring cup,target,isolated,58,0.7
+3,2910,1,shades,target,isolated,59,0.9
+3,2054,2,B box,target,isolated,60,0.93
+3,3779,6,eraser expo,distractor,isolated,61,0.77
+3,3908,7,red candle/holder,distractor,isolated,62,0.06
+3,2602,5,brown brush,distractor,isolated,63,0.13
+3,1860,7,red candle,target,isolated,64,0.75
+3,3127,6,black eraser,distractor,isolated,65,0.19
+3,3114,2,block toy,distractor,isolated,66,0.77
+3,2240,2,B,target,isolated,67,0.83
+3,4201,4,large measure cup,distractor,isolated,68,0.86
+3,4395,3,clear audiocassette,target,isolated,69,0.84
+3,3590,4,large measuring cup,distractor,comparison,70,0.86
+3,1912,4,measure cup,target,isolated,71,0.79
+3,1960,7,candlestick,target,isolated,72,0.87
+3,2312,4,measuring thing,target,isolated,73,0.62
+3,3588,6,erase,target,isolated,74,0.28
+3,1834,5,hairbrush,distractor,isolated,75,0.83
+3,1881,4,larger measuring cup,distractor,isolated,76,0.91
+3,1750,6,expo eraser,target,isolated,77,0.7
+3,3242,3,clear audiocassette,distractor,isolated,78,0.03
+3,5501,8,grey mouse,distractor,isolated,79,0.89
+3,2056,2,alphabet block,distractor,isolated,80,0.83
+3,1919,6,expo block,target,isolated,81,0.91
+3,2281,1,black sunglasses,distractor,isolated,82,0.22
+3,3408,4,measuring cup with the holder,target,isolated,83,0.79
+3,2731,8,mouse,distractor,isolated,84,0.82
+3,3094,2,block,target,isolated,85,0.87
+3,5334,2,the bluish block with a B,distractor,isolated,86,0.02
+3,3397,2,block,distractor,isolated,87,0.94
+3,1930,4,pyrex cup,distractor,isolated,88,0.8
+3,1936,1,glasses,distractor,isolated,89,0.13
+3,1703,5,brush,distractor,isolated,90,0.78
+3,3296,4,measurement cup ... the large one with red letters,distractor,isolated,91,0.14
+3,3320,3,tape,distractor,isolated,92,0.82
+3,1423,2,blue block,target,isolated,93,0.88
+3,2031,4,pyrex thing,target,isolated,94,0.87
+3,3001,2,B block,distractor,isolated,95,0.08
+3,2320,6,white out,distractor,isolated,96,0.06
+3,2942,8,computer mouse,target,isolated,97,0.89
+3,2566,6,expo,target,isolated,98,0.85
+3,2121,1,black sunglasses,target,isolated,99,0.94
+3,1972,4,cup,distractor,isolated,100,0.6
+3,1742,2,letter block,distractor,isolated,101,0.78
+3,2360,2,bottom block,distractor,isolated,102,0.2
+3,4576,4,large measuring glass ... the pyrex,distractor,isolated,103,0.77
+3,2655,2,block with the blue writing,target,isolated,104,0.9
+3,2465,4,pyrex measuring cup,target,isolated,105,0.75
+3,3459,7,small candle,target,isolated,106,0.56
+3,1586,5,haircomb,target,isolated,107,0.74
+3,1848,8,silver mouse,target,isolated,108,0.93
+3,2283,7,red candle,distractor,isolated,109,0.12
+3,2097,5,round hairbrush,target,isolated,110,0.13
+3,2271,6,expo eraser,distractor,isolated,111,0.8
+3,2017,3,cassette,target,isolated,112,0.81
+3,1855,4,large measuring cup,target,isolated,113,0.94
+3,6766,2,bottom block,target,comparison,114,0.31
+3,2398,2,blue B block,target,isolated,115,0.81
+3,1433,6,expo,distractor,isolated,116,0.8
+3,1533,4,large cup,distractor,isolated,117,0.8
+3,2375,7,red candle/holder,target,isolated,118,0.98
+3,1966,5,comb,distractor,isolated,119,0.8
+3,2762,2,block with the blue writing,distractor,isolated,120,0.61
+3,1825,3,cassette,distractor,isolated,121,0.06
+3,3145,2,toy block,distractor,isolated,122,0.68
+3,2157,7,small candle,distractor,isolated,123,0.78
+3,1682,3,tape,target,isolated,124,0.83
+3,1405,7,candle,distractor,isolated,125,0.78
+3,1328,2,block,target,isolated,126,0.79
+3,1591,4,big measuring cup,distractor,isolated,127,0.84
+3,1893,6,white out,target,isolated,128,0.3
+3,1545,2,bottom block,target,isolated,129,0.33
+3,3404,4,large measuring glass ... the pyrex,target,isolated,130,0.78
+3,2272,4,pyrex measuring cup,distractor,isolated,131,0.56
+3,1805,1,sunglasses,target,isolated,132,0.94
+3,2202,3,cassette tape,distractor,isolated,133,0.23
+3,2873,7,small candle,distractor,comparison,134,0.82
+3,3632,6,dry eraser,distractor,isolated,135,0.21
+3,38856,2,B,distractor,isolated,136,0.07
+3,2509,5,brush,target,isolated,137,0.8
+3,1680,4,measuring cup with the holder,distractor,isolated,138,0.86
+3,2216,2,alphabet block,target,isolated,139,0.86
+3,2324,4,measurement cup ... the large one with red letters,target,isolated,140,0.83
+3,3294,4,pyrex measuring cup (with the handle),target,isolated,141,0.8
+3,1982,1,sunglasses,distractor,isolated,142,0.19
+3,1785,4,measure cup,distractor,isolated,143,0.86
+3,1690,7,candlestick,distractor,isolated,144,0.84
+3,1761,5,hairbrush,target,isolated,145,0.83
+3,2039,4,pyrex thing,distractor,isolated,146,0.33
+3,1937,6,black eraser,target,isolated,147,0.86
+3,2139,5,brown brush,target,isolated,148,0.82
+3,1838,4,pyrex,target,isolated,149,0.84
+3,1989,7,red candlestick,target,isolated,150,0.86
+3,2688,2,blue block,distractor,isolated,151,0.59
+4,21086,4,pyrex measuring cup (the one with the handle),distractor,isolated,2,0.97
+4,10927,4,large measuring cup,distractor,comparison,3,0.81
+4,11488,2,toy block,distractor,isolated,4,0.77
+4,7216,7,candle,target,isolated,5,0.98
+4,11576,7,red candle/holder,distractor,isolated,6,0.14
+4,20857,8,silver mouse,distractor,isolated,7,0.05
+4,3975,2,alphabet block,distractor,isolated,8,0.99
+4,9039,5,brush,target,isolated,9,0.01
+4,4912,4,large measuring cup,target,isolated,10,0.74
+4,7943,2,block with the blue writing,distractor,isolated,11,0.81
+4,4591,7,candle,distractor,isolated,12,0.99
+4,8607,1,sunglasses,distractor,isolated,13,0.15
+4,5623,2,toy block,target,isolated,14,0.86
+4,4840,6,black eraser,distractor,isolated,15,0.16
+4,4769,4,pyrex cup,target,isolated,16,1
+4,6455,3,cassette,target,isolated,17,0.96
+4,3440,2,blue B block,target,isolated,18,0.9
+4,5041,2,block toy,distractor,isolated,19,0.66
+4,4199,7,red candlestick,distractor,isolated,20,0.22
+4,3671,4,large cup,distractor,isolated,21,0.86
+4,5409,2,bottom block,target,isolated,22,0.55
+4,3801,6,eraser,distractor,isolated,23,0.85
+4,10663,1,shades,target,isolated,24,0
+4,4807,1,glasses,target,isolated,25,0.74
+4,5090,2,blue B block,distractor,isolated,26,0.21
+4,2934,1,black sunglasses,distractor,isolated,27,0.24
+4,3480,4,large measuring cup,distractor,isolated,28,0.85
+4,4462,5,hairbrush,target,isolated,29,0.91
+4,2359,2,child&quotechars blue block,distractor,isolated,30,0.84
+4,6489,6,expo eraser,distractor,isolated,31,0.19
+4,4344,5,round hairbrush,distractor,isolated,32,0.09
+4,4207,6,expo,distractor,isolated,33,0.21
+4,11640,3,cassette tape,target,isolated,34,0.85
+4,5775,4,measuring cup with handle,target,isolated,35,0.89
+4,6233,7,small candle,distractor,comparison,36,0.79
+4,7122,8,mouse,target,isolated,37,0.88
+4,10414,2,the bluish block with a B,distractor,isolated,38,0.23
+4,9159,2,bottom block,distractor,comparison,39,0.32
+4,3247,7,small candle,distractor,isolated,40,0.73
+4,3265,1,sunglasses,target,isolated,41,0.77
+4,9433,6,expo eraser,target,isolated,42,0.99
+4,7429,4,measure cup,distractor,isolated,43,0.81
+4,5208,2,blue block,target,isolated,44,0.57
+4,8471,4,pyrex cup,distractor,isolated,45,0.25
+4,35384,5,haircomb,target,isolated,46,0.86
+4,4360,3,tape,distractor,isolated,47,0.85
+4,2374,4,measure cup,target,isolated,48,0.79
+4,3279,2,letter block,target,isolated,49,0.56
+4,3688,2,the bluish block with a B,target,isolated,50,0.76
+4,3855,8,grey mouse,target,isolated,51,0.95
+4,6146,8,silver mouse,target,isolated,52,0.73
+4,3534,4,pyrex measuring cup (with the handle),target,isolated,53,0.98
+4,23479,2,bottom block,target,comparison,54,0.61
+4,3999,7,lit candle,target,isolated,55,0.81
+4,2697,6,dry eraser,target,isolated,56,0.22
+4,3439,3,cassette,distractor,isolated,57,0.04
+4,4721,2,bottom block,distractor,isolated,58,0.5
+4,1974,4,measuring cup,distractor,isolated,59,0.83
+4,3888,6,erase,distractor,isolated,60,0.7
+4,5321,4,pyrex measuring cup,distractor,isolated,61,0.29
+4,3655,3,tape,target,isolated,62,0.72
+4,3407,4,measuring thing,target,isolated,63,0.76
+4,3432,5,hair curler,distractor,isolated,64,0.88
+4,3185,6,expo,target,isolated,65,0.97
+4,5455,4,large pyrex measuring cup,distractor,isolated,66,0.5
+4,2256,4,pyrex measuring cup (the one with the handle),target,isolated,67,0.95
+4,4791,4,measuring cup with handle,distractor,isolated,68,0.85
+4,2400,2,letter block,distractor,isolated,69,0.6
+4,3816,1,black sunglasses,target,isolated,70,0.83
+4,3015,4,large measuring glass ... the pyrex,target,isolated,71,0.97
+4,2232,2,block,distractor,isolated,72,0.55
+4,6993,2,B,distractor,isolated,73,0.13
+4,3799,5,hairbrush,distractor,isolated,74,0.73
+4,2759,2,alphabet block,target,isolated,75,0.7
+4,7176,4,measurement cup ... the large one with red letters,distractor,isolated,76,0.43
+4,3272,3,clear audiocassette,distractor,isolated,77,0.03
+4,5905,4,cup,distractor,isolated,78,0.73
+4,3239,2,B box,target,isolated,79,0.64
+4,3288,6,eraser,target,isolated,80,0.75
+4,3320,4,larger measuring cup,target,isolated,81,0.8
+4,5575,6,white out,distractor,isolated,82,0.22
+4,2744,7,candlestick,distractor,isolated,83,0.68
+4,4080,3,clear audiocassette,target,isolated,84,0.86
+4,3215,6,black eraser,target,isolated,85,0.75
+4,5399,8,computer mouse,distractor,isolated,86,0.01
+4,2681,5,comb,distractor,isolated,87,0.7
+4,4615,2,B block,distractor,isolated,88,0.43
+4,2392,4,pyrex thing,target,isolated,89,0.8
+4,4711,8,computer mouse,target,isolated,90,0.97
+4,6625,6,expo block,target,isolated,91,0.82
+4,3664,5,brown brush,distractor,isolated,92,0.78
+4,5071,4,large measuring glass ... the pyrex,distractor,isolated,93,0.45
+4,3320,2,B cube,distractor,isolated,94,0.12
+4,2584,7,lit candle,distractor,isolated,95,0.75
+4,2761,2,block toy,target,isolated,96,0.3
+4,4056,4,cup,target,isolated,97,0.79
+4,3783,4,big measuring cup,target,isolated,98,0.79
+4,2696,7,candlestick,target,isolated,99,0.86
+4,4664,1,glasses,distractor,isolated,100,0.04
+4,4481,5,hair curler,target,isolated,101,0.86
+4,2703,6,expo block,distractor,isolated,102,0.25
+4,2128,5,brush,distractor,isolated,103,0.81
+4,2104,7,red candle/holder,target,isolated,104,0.78
+4,3393,3,cassette tape,distractor,isolated,105,0.03
+4,1816,4,measuring cup,target,isolated,106,0.8
+4,1824,4,large cup,target,isolated,107,0.81
+4,2272,5,brown brush,target,isolated,108,0.85
+4,2135,5,haircomb,distractor,isolated,109,0.8
+4,3448,4,pyrex measuring cup,target,isolated,110,0.91
+4,3239,4,larger measuring cup,distractor,isolated,111,0.83
+4,3584,2,block,target,isolated,112,0.5
+4,4456,6,eraser expo,target,isolated,113,0.93
+4,3111,4,pyrex,distractor,isolated,114,0.26
+4,2880,2,B block,target,isolated,115,0.49
+4,3112,2,block with the B,distractor,isolated,116,0.26
+4,2064,2,child&quotechars blue block,target,isolated,117,0.52
+4,2952,2,block,target,isolated,118,0.52
+4,2409,5,round hairbrush,target,isolated,119,0.76
+4,8838,4,big measuring cup,distractor,isolated,120,0.79
+4,3776,6,eraser expo,distractor,isolated,121,0.17
+4,2960,2,blue block,distractor,isolated,122,0.5
+4,3902,7,red candle,target,isolated,123,0.99
+4,4624,6,dry eraser,distractor,isolated,124,0.24
+4,2744,5,comb,target,isolated,125,0.7
+4,2071,2,B box,distractor,isolated,126,0.28
+4,3719,7,small candle,target,isolated,127,0.53
+4,3177,2,block with the blue writing,target,isolated,128,0.86
+4,3528,1,shades,distractor,isolated,129,0.3
+4,2168,4,large measure cup,target,isolated,130,0.73
+4,2175,2,block with the B,target,isolated,131,0.56
+4,5584,4,measuring thing,distractor,isolated,132,0.72
+4,3793,4,pyrex measuring cup (with the handle),distractor,isolated,133,0.55
+4,2039,4,large measure cup,distractor,isolated,134,0.81
+4,2999,2,B cube,target,isolated,135,0.5
+4,2159,2,B,target,isolated,136,0.49
+4,7152,4,measuring cup with the holder,target,isolated,137,0.8
+4,1897,7,red candlestick,target,isolated,138,0.99
+4,3208,2,block,distractor,isolated,139,0.5
+4,3567,6,erase,target,isolated,140,0.57
+4,1904,6,white out,target,isolated,141,0.69
+4,2463,7,red candle,distractor,isolated,142,0
+4,2600,4,pyrex thing,distractor,isolated,143,0.07
+4,6976,8,mouse,distractor,isolated,144,0.96
+4,2671,8,grey mouse,distractor,isolated,145,0.78
+4,7536,4,large measuring cup,target,comparison,146,0.74
+4,2536,4,pyrex,target,isolated,147,0.96
+4,4232,4,measurement cup ... the large one with red letters,target,isolated,148,0.97
+4,6335,4,measuring cup with the holder,distractor,isolated,149,0.96
+4,4288,7,small candle,target,comparison,150,0.23
+4,4465,4,large pyrex measuring cup,target,isolated,151,0.96
+5,4055,1,shades,target,isolated,2,1
+5,2909,2,toy block,distractor,isolated,3,1
+5,3431,5,brown brush,distractor,isolated,4,0.4
+5,2232,3,cassette,target,isolated,5,1
+5,4149,2,B,distractor,isolated,6,0
+5,2851,2,B block,target,isolated,7,1
+5,2168,8,silver mouse,target,isolated,8,1
+5,4336,6,erase,distractor,isolated,9,0.94
+5,3707,2,B box,target,isolated,10,1
+5,2509,7,candle,target,isolated,11,1
+5,2138,7,red candlestick,target,isolated,12,1
+5,2052,4,measuring cup,target,isolated,13,1
+5,5355,4,pyrex thing,distractor,isolated,14,0.49
+5,2695,2,blue block,distractor,isolated,15,0.25
+5,3708,2,bottom block,target,isolated,16,0.19
+5,5329,7,red candle,distractor,isolated,17,0.09
+5,4330,1,shades,distractor,isolated,18,0
+5,16651,5,hairbrush,target,isolated,19,1
+5,2362,4,big measuring cup,target,isolated,20,0.92
+5,3614,5,comb,target,isolated,21,0.48
+5,2114,4,big measuring cup,distractor,isolated,22,1
+5,3108,3,cassette,distractor,isolated,23,0
+5,3419,2,block with the B,target,isolated,24,1
+5,3506,4,pyrex measuring cup (with the handle),distractor,isolated,25,1
+5,2959,2,B cube,target,isolated,26,1
+5,2106,7,candlestick,target,isolated,27,1
+5,1718,4,pyrex thing,target,isolated,28,0.58
+5,5548,6,expo block,distractor,isolated,29,0
+5,2332,7,candle,distractor,isolated,30,1
+5,3528,3,tape,distractor,isolated,31,1
+5,3504,6,black eraser,target,isolated,32,0.83
+5,3854,4,measuring thing,target,isolated,33,0.64
+5,2875,4,cup,target,isolated,34,0.22
+5,3801,4,larger measuring cup,target,isolated,35,0.46
+5,2532,6,eraser expo,target,isolated,36,0.74
+5,2564,5,hair curler,distractor,isolated,37,0
+5,2625,1,black sunglasses,distractor,isolated,38,0
+5,3426,8,silver mouse,distractor,isolated,39,0.72
+5,2930,4,pyrex measuring cup (with the handle),target,isolated,40,1
+5,2651,8,mouse,target,isolated,41,1
+5,2284,3,clear audiocassette,distractor,isolated,42,0
+5,2651,2,child&quotechars blue block,target,isolated,43,1
+5,2183,4,measuring cup with the holder,distractor,isolated,44,1
+5,3085,2,block toy,distractor,isolated,45,1
+5,4080,4,pyrex,target,isolated,46,0.89
+5,3070,2,B cube,distractor,isolated,47,0
+5,2137,4,pyrex cup,distractor,isolated,48,1
+5,6815,4,pyrex measuring cup (the one with the handle),distractor,isolated,49,1
+5,3474,2,blue B block,target,isolated,50,1
+5,2222,1,black sunglasses,target,isolated,51,1
+5,2300,4,larger measuring cup,distractor,isolated,52,1
+5,1818,7,lit candle,target,isolated,53,1
+5,1849,4,large measuring cup,distractor,isolated,54,1
+5,2806,4,pyrex measuring cup,target,isolated,55,1
+5,3310,2,alphabet block,distractor,isolated,56,1
+5,2534,5,brush,target,isolated,57,1
+5,2758,2,B,target,isolated,58,0.23
+5,8408,2,bottom block,distractor,comparison,59,1
+5,4554,5,comb,distractor,isolated,60,0.14
+5,2052,1,sunglasses,target,isolated,61,1
+5,1981,6,expo,target,isolated,62,0.69
+5,4351,2,letter block,target,isolated,63,1
+5,4454,6,white out,target,isolated,64,0
+5,1786,3,cassette tape,distractor,isolated,65,0
+5,4073,4,large measuring glass ... the pyrex,target,isolated,66,0.8
+5,4982,2,block with the B,distractor,isolated,67,0
+5,2246,4,pyrex cup,target,isolated,68,1
+5,2275,3,cassette tape,target,isolated,69,1
+5,3164,6,erase,target,isolated,70,0.83
+5,2278,6,expo block,target,isolated,71,1
+5,4367,4,measure cup,target,isolated,72,1
+5,3365,4,large cup,target,isolated,73,0.75
+5,2198,6,expo eraser,target,isolated,74,1
+5,2542,8,computer mouse,distractor,isolated,75,0
+5,3902,2,block,distractor,isolated,76,1
+5,1896,4,measuring cup,distractor,isolated,77,1
+5,2215,1,glasses,distractor,isolated,78,0
+5,2379,4,measure cup,distractor,isolated,79,1
+5,3154,4,pyrex measuring cup (the one with the handle),target,isolated,80,1
+5,3584,2,block toy,target,isolated,81,1
+5,1788,4,large measuring cup,target,isolated,82,1
+5,3970,6,eraser expo,distractor,isolated,83,0.08
+5,2584,2,child&quotechars blue block,distractor,isolated,84,0
+5,2182,7,small candle,target,isolated,85,1
+5,3030,2,the bluish block with a B,target,isolated,86,1
+5,2083,7,red candle/holder,target,isolated,87,1
+5,2254,2,B block,distractor,isolated,88,0
+5,2766,8,computer mouse,target,isolated,89,1
+5,2916,5,brown brush,target,isolated,90,0.47
+5,2291,4,measuring cup with handle,target,isolated,91,1
+5,2247,8,grey mouse,distractor,isolated,92,1
+5,4475,2,bottom block,distractor,isolated,93,0.39
+5,1982,3,clear audiocassette,target,isolated,94,1
+5,4478,2,block with the blue writing,distractor,isolated,95,1
+5,1950,7,red candle,target,isolated,96,1
+5,2037,2,blue block,target,isolated,97,1
+5,1958,4,large cup,distractor,isolated,98,1
+5,2814,4,measuring thing,distractor,isolated,99,0.79
+5,5510,7,red candle/holder,distractor,isolated,100,0
+5,2322,2,block with the blue writing,target,isolated,101,1
+5,3714,2,letter block,distractor,isolated,102,1
+5,3420,4,cup,distractor,isolated,103,0.74
+5,4328,4,measuring cup with handle,distractor,isolated,104,1
+5,3336,6,dry eraser,distractor,isolated,105,0.43
+5,24492,6,expo eraser,distractor,isolated,106,0.14
+5,3966,5,haircomb,target,isolated,107,0.82
+5,3649,4,large measure cup,distractor,isolated,108,1
+5,18218,2,alphabet block,target,isolated,109,1
+5,2821,4,large pyrex measuring cup,target,isolated,110,1
+5,9290,4,measuring cup with the holder,target,isolated,111,0.9
+5,8154,4,large measuring cup,target,comparison,112,0.39
+5,5253,4,large measuring cup,distractor,comparison,113,1
+5,4546,6,eraser,target,isolated,114,0.91
+5,5722,1,sunglasses,distractor,isolated,115,0
+5,3156,2,block,target,isolated,116,1
+5,5137,4,large measure cup,target,isolated,117,0.89
+5,4453,5,brush,distractor,isolated,118,1
+5,208694,5,round hairbrush,target,isolated,119,1
+5,2307,2,B box,distractor,isolated,120,0
+5,1957,4,pyrex measuring cup,distractor,isolated,121,1
+5,3552,5,round hairbrush,distractor,isolated,122,0.09
+5,2098,2,block,target,isolated,123,1
+5,1812,7,lit candle,distractor,isolated,124,1
+5,3714,7,candlestick,distractor,isolated,125,0.06
+5,1724,4,large pyrex measuring cup,distractor,isolated,126,1
+5,3412,8,grey mouse,target,isolated,127,0.92
+5,4531,2,bottom block,target,comparison,128,0
+5,2268,4,large measuring glass ... the pyrex,distractor,isolated,129,1
+5,2496,6,black eraser,distractor,isolated,130,0
+5,5370,6,eraser,distractor,isolated,131,1
+5,47511,7,small candle,distractor,isolated,132,1
+5,2162,4,pyrex,distractor,isolated,133,0.8
+5,2526,2,blue B block,distractor,isolated,134,0
+5,1796,2,toy block,target,isolated,135,1
+5,1662,2,block,distractor,isolated,136,1
+5,9118,4,measurement cup ... the large one with red letters,distractor,isolated,137,0
+5,4112,8,mouse,distractor,isolated,138,1
+5,3435,7,small candle,target,comparison,139,0
+5,2682,6,dry eraser,target,isolated,140,1
+5,1826,5,hairbrush,distractor,isolated,141,1
+5,2100,6,white out,distractor,isolated,142,0
+5,12971,3,tape,target,isolated,143,0.71
+5,5978,7,red candlestick,distractor,isolated,144,0
+5,6387,5,hair curler,target,isolated,145,0.32
+5,2766,6,expo,distractor,isolated,146,0.01
+5,9212,7,small candle,distractor,comparison,147,1
+5,2580,5,haircomb,distractor,isolated,148,0.64
+5,3732,1,glasses,target,isolated,149,0.87
+5,2728,2,the bluish block with a B,distractor,isolated,150,0
+5,3016,4,measurement cup ... the large one with red letters,target,isolated,151,1
+6,3713,5,brown brush,distractor,isolated,2,0.37
+6,2697,2,letter block,target,isolated,3,0.78
+6,2099,2,block,target,isolated,4,1
+6,2326,4,pyrex measuring cup (with the handle),distractor,isolated,5,1
+6,3715,3,cassette tape,distractor,isolated,6,0
+6,2515,2,toy block,distractor,isolated,7,1
+6,2664,7,small candle,distractor,comparison,8,0.23
+6,6823,4,measurement cup ... the large one with red letters,distractor,isolated,9,0.32
+6,2855,2,the bluish block with a B,target,isolated,10,0.9
+6,2608,2,the bluish block with a B,distractor,isolated,11,0
+6,3562,6,expo,target,isolated,12,0.34
+6,1749,7,red candle,distractor,isolated,13,0.22
+6,2382,7,lit candle,distractor,isolated,14,0.96
+6,2108,7,small candle,target,isolated,15,0.54
+6,2836,4,pyrex measuring cup (the one with the handle),target,isolated,16,0.88
+6,138109,5,comb,target,isolated,17,0.38
+6,2948,4,cup,target,isolated,18,0.05
+6,4834,4,large measuring cup,target,isolated,19,0.57
+6,4745,4,pyrex measuring cup (with the handle),target,isolated,20,0.91
+6,2041,2,alphabet block,distractor,isolated,21,0.84
+6,1895,4,pyrex thing,distractor,isolated,22,0.51
+6,2198,6,expo block,distractor,isolated,23,0.03
+6,1835,4,pyrex thing,target,isolated,24,0.42
+6,2051,2,B box,distractor,isolated,25,0.04
+6,2216,3,cassette tape,target,isolated,26,0.96
+6,2062,7,candlestick,distractor,isolated,27,0.16
+6,2167,6,white out,distractor,isolated,28,0.04
+6,2256,2,B block,distractor,isolated,29,0.03
+6,31141,8,silver mouse,distractor,isolated,30,0.85
+6,2206,5,round hairbrush,target,isolated,31,0.96
+6,2463,6,dry eraser,distractor,isolated,32,0.04
+6,2252,2,child&quotechars blue block,distractor,isolated,33,0.49
+6,1970,4,large pyrex measuring cup,target,isolated,34,0.58
+6,1935,7,red candlestick,distractor,isolated,35,0.04
+6,2243,6,expo block,target,isolated,36,0.4
+6,2071,2,block toy,target,isolated,37,0.93
+6,4078,2,bottom block,target,comparison,38,0.1
+6,2321,3,tape,distractor,isolated,39,0.81
+6,2526,4,large pyrex measuring cup,distractor,isolated,40,0.67
+6,1925,7,candlestick,target,isolated,41,0.9
+6,2272,2,block with the blue writing,distractor,isolated,42,0.91
+6,2524,2,blue B block,target,isolated,43,0.92
+6,2212,8,computer mouse,distractor,isolated,44,0.02
+6,2536,6,eraser expo,target,isolated,45,0.88
+6,2249,4,measuring cup,distractor,isolated,46,0.89
+6,2464,2,bottom block,distractor,comparison,47,0.82
+6,2048,3,cassette,distractor,isolated,48,0.06
+6,2484,4,measuring thing,target,isolated,49,0.53
+6,2014,5,haircomb,target,isolated,50,0.36
+6,1485,2,B block,target,isolated,51,0.79
+6,1597,6,expo,distractor,isolated,52,0.11
+6,1563,2,child&quotechars blue block,target,isolated,53,0.8
+6,1631,2,B box,target,isolated,54,0.87
+6,1895,4,cup,distractor,isolated,55,0.07
+6,1660,4,measure cup,distractor,isolated,56,0.76
+6,2032,6,eraser,distractor,isolated,57,0.98
+6,1852,2,block with the blue writing,target,isolated,58,0.87
+6,1691,2,block with the B,target,isolated,59,0.88
+6,1754,2,alphabet block,target,isolated,60,0.94
+6,2030,8,grey mouse,distractor,isolated,61,0.66
+6,2177,4,measuring cup with handle,target,isolated,62,0.8
+6,2185,5,hair curler,distractor,isolated,63,0.06
+6,2316,5,hairbrush,distractor,isolated,64,0.18
+6,2695,5,hairbrush,target,isolated,65,0.47
+6,2016,3,cassette,target,isolated,66,1
+6,1772,4,measuring thing,distractor,isolated,67,0.74
+6,1906,6,dry eraser,target,isolated,68,0.96
+6,2073,6,erase,target,isolated,69,0.44
+6,1878,1,sunglasses,target,isolated,70,0.92
+6,2373,1,glasses,target,isolated,71,0.71
+6,2723,1,black sunglasses,distractor,isolated,72,0.09
+6,2080,4,measuring cup with handle,distractor,isolated,73,0.78
+6,2674,5,comb,distractor,isolated,74,0.73
+6,2841,8,grey mouse,target,isolated,75,0.59
+6,2210,2,block,distractor,isolated,76,0.82
+6,2795,4,large measuring cup,distractor,comparison,77,0.26
+6,2058,3,clear audiocassette,distractor,isolated,78,0
+6,3156,4,measuring cup with the holder,target,isolated,79,0.49
+6,1999,7,lit candle,target,isolated,80,0.67
+6,2368,3,clear audiocassette,target,isolated,81,0.89
+6,2527,8,mouse,distractor,isolated,82,0.96
+6,2404,2,B cube,distractor,isolated,83,0.07
+6,4393,4,pyrex,distractor,isolated,84,0.4
+6,1784,2,block,distractor,isolated,85,0.83
+6,2223,2,block,target,isolated,86,0.85
+6,1648,4,larger measuring cup,distractor,isolated,87,0.69
+6,1803,4,pyrex cup,distractor,isolated,88,0.34
+6,1607,1,black sunglasses,target,isolated,89,0.82
+6,2121,4,larger measuring cup,target,isolated,90,0.61
+6,2206,2,block with the B,distractor,isolated,91,0.11
+6,2374,4,large measure cup,distractor,isolated,92,0.62
+6,2069,6,white out,target,isolated,93,0.04
+6,2162,6,black eraser,distractor,isolated,94,0.1
+6,2494,7,red candle,target,isolated,95,0.8
+6,2612,1,glasses,distractor,isolated,96,0.06
+6,2142,1,shades,distractor,isolated,97,0.13
+6,2025,2,bottom block,target,isolated,98,0.45
+6,2041,5,round hairbrush,distractor,isolated,99,0.39
+6,2817,5,brown brush,target,isolated,100,0.54
+6,2061,5,brush,target,isolated,101,0.63
+6,1644,8,silver mouse,target,isolated,102,0.75
+6,5251,6,black eraser,target,isolated,103,0.51
+6,1886,4,measuring cup,target,isolated,104,0.66
+6,2262,1,shades,target,isolated,105,0.76
+6,2012,4,large measuring glass ... the pyrex,target,isolated,106,0.59
+6,3172,2,B,target,isolated,107,0.37
+6,151164,6,eraser,target,isolated,108,0.84
+6,2675,1,sunglasses,distractor,isolated,109,0.1
+6,1579,4,pyrex,target,isolated,110,0.58
+6,3310,4,large measuring glass ... the pyrex,distractor,isolated,111,0.26
+6,1867,3,tape,target,isolated,112,0.9
+6,5182,4,pyrex measuring cup (the one with the handle),distractor,isolated,113,0.45
+6,2004,4,measuring cup with the holder,distractor,isolated,114,0.75
+6,2126,2,blue block,target,isolated,115,0.89
+6,2563,4,measurement cup ... the large one with red letters,target,isolated,116,0.75
+6,2222,6,eraser expo,distractor,isolated,117,0.02
+6,2534,7,small candle,distractor,isolated,118,0.97
+6,1861,4,big measuring cup,target,isolated,119,0.67
+6,1809,5,haircomb,distractor,isolated,120,0.39
+6,2169,2,block toy,distractor,isolated,121,0.78
+6,2543,6,expo eraser,target,isolated,122,0.94
+6,2236,4,measure cup,target,isolated,123,0.76
+6,1786,4,large measuring cup,distractor,isolated,124,0.64
+6,1970,5,brush,distractor,isolated,125,0.69
+6,1771,6,expo eraser,distractor,isolated,126,0
+6,1825,2,letter block,distractor,isolated,127,0.8
+6,1417,4,large cup,target,isolated,128,0.65
+6,1650,4,large cup,distractor,isolated,129,0.58
+6,3431,7,red candle/holder,target,isolated,130,0.78
+6,1678,7,candle,distractor,isolated,131,0.64
+6,3489,6,erase,distractor,isolated,132,0.57
+6,2124,2,blue B block,distractor,isolated,133,0
+6,2354,2,B,distractor,isolated,134,0
+6,1639,8,mouse,target,isolated,135,0.67
+6,1375,4,big measuring cup,distractor,isolated,136,0.53
+6,2051,2,bottom block,distractor,isolated,137,0.07
+6,1839,7,red candle/holder,distractor,isolated,138,0
+6,2460,4,pyrex cup,target,isolated,139,0.93
+6,1825,4,large measure cup,target,isolated,140,0.68
+6,3081,2,toy block,target,isolated,141,0.92
+6,2544,7,red candlestick,target,isolated,142,0.85
+6,2200,7,small candle,target,comparison,143,0.68
+6,2169,4,pyrex measuring cup,distractor,isolated,144,0.31
+6,3203,2,B cube,target,isolated,145,0.74
+6,2116,7,candle,target,isolated,146,0.85
+6,2520,4,large measuring cup,target,comparison,147,0.52
+6,2197,2,blue block,distractor,isolated,148,0.2
+6,1443,4,pyrex measuring cup,target,isolated,149,0.64
+6,2434,5,hair curler,target,isolated,150,0.16
+6,2306,8,computer mouse,target,isolated,151,0.96
+7,7769,4,pyrex cup,target,isolated,2,0.81
+7,12016,6,eraser expo,distractor,isolated,3,0.36
+7,11038,2,B,target,isolated,4,0.31
+7,7675,8,mouse,distractor,isolated,5,0.76
+7,5314,5,comb,target,isolated,6,0.11
+7,4851,5,hairbrush,distractor,isolated,7,1
+7,9429,4,measuring thing,target,isolated,8,1
+7,17396,2,the bluish block with a B,target,isolated,9,1
+7,4247,7,red candlestick,target,isolated,10,1
+7,7326,2,bottom block,target,isolated,11,0.22
+7,7215,4,measurement cup ... the large one with red letters,distractor,isolated,12,0.48
+7,8151,2,B block,target,isolated,13,0.9
+7,7206,2,blue B block,distractor,isolated,14,0.31
+7,5018,2,B,distractor,isolated,15,0
+7,6406,2,bottom block,distractor,isolated,16,0.24
+7,9435,4,cup,target,isolated,17,0.83
+7,7274,6,expo,target,isolated,18,0.79
+7,5444,2,the bluish block with a B,distractor,isolated,19,0.15
+7,7810,6,expo eraser,distractor,isolated,20,0.47
+7,5481,8,computer mouse,target,isolated,21,1
+7,3547,4,large cup,distractor,isolated,22,0.84
+7,5211,3,tape,target,isolated,23,0.76
+7,5071,7,red candle,target,isolated,24,1
+7,16393,4,pyrex cup,distractor,isolated,25,0.66
+7,10271,2,alphabet block,distractor,isolated,26,1
+7,5096,8,grey mouse,distractor,isolated,27,0.9
+7,3642,4,large measuring cup,target,isolated,28,1
+7,4444,1,sunglasses,distractor,isolated,29,0.06
+7,3316,8,grey mouse,target,isolated,30,0.87
+7,4612,6,black eraser,distractor,isolated,31,0.16
+7,7157,2,child&quotechars blue block,target,isolated,32,1
+7,3667,2,toy block,distractor,isolated,33,1
+7,3097,5,haircomb,target,isolated,34,0.15
+7,11491,4,pyrex,distractor,isolated,35,0.85
+7,2946,4,measuring cup,distractor,isolated,36,1
+7,3348,2,alphabet block,target,isolated,37,1
+7,6965,4,pyrex measuring cup (the one with the handle),distractor,isolated,38,1
+7,4280,4,pyrex thing,distractor,isolated,39,1
+7,2890,4,measure cup,distractor,isolated,40,1
+7,3174,5,haircomb,distractor,isolated,41,0.15
+7,8949,2,B box,target,isolated,42,0.52
+7,5545,6,black eraser,target,isolated,43,0.74
+7,3669,4,larger measuring cup,distractor,isolated,44,1
+7,3992,4,measuring cup,target,isolated,45,1
+7,5913,5,hair curler,target,isolated,46,0.22
+7,4009,7,small candle,target,isolated,47,1
+7,7170,4,larger measuring cup,target,isolated,48,1
+7,4479,6,white out,distractor,isolated,49,0
+7,19140,4,measuring cup with the holder,distractor,isolated,50,0.79
+7,3630,4,pyrex measuring cup (with the handle),target,isolated,51,1
+7,3803,7,lit candle,target,isolated,52,1
+7,4097,1,shades,target,isolated,53,1
+7,3489,4,measuring cup with handle,target,isolated,54,1
+7,2771,4,big measuring cup,target,isolated,55,1
+7,3411,5,hairbrush,target,isolated,56,1
+7,4207,4,large measuring glass ... the pyrex,target,isolated,57,1
+7,7079,2,B cube,target,isolated,58,0.8
+7,5906,7,small candle,target,comparison,59,1
+7,3758,2,block,target,isolated,60,1
+7,4488,4,pyrex measuring cup,target,isolated,61,1
+7,3097,4,big measuring cup,distractor,isolated,62,1
+7,3075,4,large pyrex measuring cup,target,isolated,63,1
+7,4068,4,pyrex thing,target,isolated,64,1
+7,3343,4,large measuring cup,distractor,isolated,65,1
+7,19488,8,computer mouse,distractor,isolated,66,0
+7,3748,2,block,distractor,isolated,67,1
+7,3223,2,toy block,target,isolated,68,1
+7,3113,5,comb,distractor,isolated,69,0.12
+7,7050,6,erase,distractor,isolated,70,0.8
+7,5430,1,black sunglasses,distractor,isolated,71,0.04
+7,6528,2,bottom block,distractor,comparison,72,1
+7,6033,8,mouse,target,isolated,73,0.9
+7,3769,2,letter block,target,isolated,74,1
+7,3690,6,expo eraser,target,isolated,75,1
+7,3284,4,measuring cup with handle,distractor,isolated,76,1
+7,4750,6,eraser expo,target,isolated,77,0.66
+7,3270,6,expo,distractor,isolated,78,0
+7,5588,2,block with the B,distractor,isolated,79,0.33
+7,3633,4,measure cup,target,isolated,80,1
+7,3567,4,large pyrex measuring cup,distractor,isolated,81,1
+7,6887,4,large measuring glass ... the pyrex,distractor,isolated,82,0.76
+7,2967,2,blue block,target,isolated,83,1
+7,6720,7,red candle,distractor,isolated,84,0.25
+7,3152,7,candle,target,isolated,85,1
+7,3009,5,hair curler,distractor,isolated,86,0.09
+7,8828,5,brown brush,distractor,isolated,87,1
+7,10367,2,blue B block,target,isolated,88,1
+7,10133,5,brush,distractor,isolated,89,1
+7,4948,3,cassette,target,isolated,90,1
+7,12994,7,candlestick,distractor,isolated,91,0.35
+7,10473,4,pyrex measuring cup,distractor,isolated,92,1
+7,3847,7,red candle/holder,target,isolated,93,1
+7,3905,3,tape,distractor,isolated,94,1
+7,3939,2,block toy,distractor,isolated,95,1
+7,9155,8,silver mouse,target,isolated,96,0.87
+7,5329,2,bottom block,target,comparison,97,0.08
+7,3629,3,cassette,distractor,isolated,98,0
+7,6034,7,small candle,distractor,isolated,99,1
+7,5796,2,B box,distractor,isolated,100,0.35
+7,3445,6,dry eraser,target,isolated,101,1
+7,4182,2,B cube,distractor,isolated,102,0.19
+7,4031,7,red candle/holder,distractor,isolated,103,0.15
+7,4572,6,expo block,distractor,isolated,104,0
+7,4524,4,large measuring cup,distractor,comparison,105,1
+7,5937,6,dry eraser,distractor,isolated,106,0.12
+7,3475,7,lit candle,distractor,isolated,107,1
+7,3514,1,glasses,target,isolated,108,0.84
+7,4073,2,block with the blue writing,distractor,isolated,109,1
+7,6616,5,round hairbrush,distractor,isolated,110,0.25
+7,5231,6,expo block,target,isolated,111,0.69
+7,5464,3,clear audiocassette,target,isolated,112,1
+7,3296,7,candle,distractor,isolated,113,1
+7,6027,1,shades,distractor,isolated,114,0.11
+7,4103,2,block with the B,target,isolated,115,1
+7,3896,7,small candle,distractor,comparison,116,1
+7,3421,5,round hairbrush,target,isolated,117,1
+7,13537,2,blue block,distractor,isolated,118,0.92
+7,5914,6,eraser,target,isolated,119,0.76
+7,3159,5,brush,target,isolated,120,1
+7,6917,2,letter block,distractor,isolated,121,1
+7,3620,2,child&quotechars blue block,distractor,isolated,122,0.86
+7,4566,6,white out,target,isolated,123,0
+7,3834,2,block,distractor,isolated,124,1
+7,5758,5,brown brush,target,isolated,125,0.34
+7,3099,7,candlestick,target,isolated,126,1
+7,4017,4,large measuring cup,target,comparison,127,1
+7,3709,3,clear audiocassette,distractor,isolated,128,0
+7,5669,4,measurement cup ... the large one with red letters,target,isolated,129,1
+7,2962,1,sunglasses,target,isolated,130,1
+7,3848,8,silver mouse,distractor,isolated,131,0.79
+7,4140,6,erase,target,isolated,132,0.87
+7,4179,4,cup,distractor,isolated,133,0.88
+7,2653,4,measuring thing,distractor,isolated,134,1
+7,3973,4,large measure cup,target,isolated,135,1
+7,3482,4,pyrex measuring cup (the one with the handle),target,isolated,136,1
+7,3867,2,B block,distractor,isolated,137,0.17
+7,3231,2,block with the blue writing,target,isolated,138,1
+7,4720,4,pyrex,target,isolated,139,0.83
+7,8908,1,glasses,distractor,isolated,140,0.21
+7,3572,7,red candlestick,distractor,isolated,141,0.17
+7,2966,4,large cup,target,isolated,142,0.84
+7,2908,1,black sunglasses,target,isolated,143,1
+7,3155,3,cassette tape,target,isolated,144,1
+7,6093,4,measuring cup with the holder,target,isolated,145,0.81
+7,4282,2,block toy,target,isolated,146,1
+7,3324,6,eraser,distractor,isolated,147,1
+7,4147,3,cassette tape,distractor,isolated,148,0.1
+7,5593,4,pyrex measuring cup (with the handle),distractor,isolated,149,1
+7,3286,4,large measure cup,distractor,isolated,150,1
+7,2857,2,block,target,isolated,151,1
+8,5033,8,grey mouse,distractor,isolated,2,0.8
+8,2604,6,eraser,target,isolated,3,0.64
+8,2804,8,silver mouse,distractor,isolated,4,0.39
+8,2397,7,lit candle,distractor,isolated,5,0.9
+8,2632,6,eraser,distractor,isolated,6,0.85
+8,3524,6,dry eraser,target,isolated,7,0.87
+8,3504,4,pyrex measuring cup (with the handle),distractor,isolated,8,0.94
+8,4739,3,clear audiocassette,distractor,isolated,9,0.03
+8,3270,2,block,target,isolated,10,0.8
+8,2857,2,block with the blue writing,distractor,isolated,11,0.94
+8,2356,8,computer mouse,target,isolated,12,0.96
+8,4652,4,large measuring glass ... the pyrex,target,isolated,13,0.83
+8,2493,4,measuring cup,target,isolated,14,0.7
+8,3201,4,larger measuring cup,distractor,isolated,15,0.71
+8,2994,4,measuring cup with handle,target,isolated,16,0.79
+8,3796,4,measurement cup ... the large one with red letters,target,isolated,17,0.72
+8,3334,4,measurement cup ... the large one with red letters,distractor,isolated,18,0.27
+8,2384,2,alphabet block,target,isolated,19,0.87
+8,2517,4,cup,target,isolated,20,0.29
+8,3319,2,B cube,target,isolated,21,0.41
+8,4022,2,letter block,distractor,isolated,22,0.49
+8,2658,4,pyrex,distractor,isolated,23,0.25
+8,3022,3,tape,target,isolated,24,0.42
+8,2800,4,large pyrex measuring cup,distractor,isolated,25,0.58
+8,3697,2,B cube,distractor,isolated,26,0.2
+8,2142,4,larger measuring cup,target,isolated,27,0.59
+8,2457,7,red candlestick,target,isolated,28,0.86
+8,2274,5,brush,distractor,isolated,29,0.85
+8,3434,1,shades,distractor,isolated,30,0.17
+8,2626,2,B box,target,isolated,31,0.33
+8,2395,8,mouse,target,isolated,32,0.52
+8,3172,6,expo eraser,target,isolated,33,0.84
+8,4467,4,large measuring cup,distractor,comparison,34,0.65
+8,2476,5,haircomb,target,isolated,35,0.78
+8,2476,4,pyrex thing,target,isolated,36,0.49
+8,1746,4,measure cup,distractor,isolated,37,0.71
+8,2094,2,block,target,isolated,38,0.48
+8,2407,7,red candlestick,distractor,isolated,39,0.14
+8,1961,2,blue B block,target,isolated,40,0.69
+8,2506,2,B block,distractor,isolated,41,0.23
+8,2373,5,brush,target,isolated,42,0.8
+8,2606,7,lit candle,target,isolated,43,0.73
+8,2356,1,glasses,distractor,isolated,44,0.36
+8,2214,4,measuring thing,distractor,isolated,45,0.57
+8,2453,6,erase,target,isolated,46,0.42
+8,3857,2,the bluish block with a B,distractor,isolated,47,0.15
+8,2716,7,candlestick,target,isolated,48,0.74
+8,2140,2,toy block,target,isolated,49,0.72
+8,2256,6,black eraser,target,isolated,50,0.73
+8,2460,2,the bluish block with a B,target,isolated,51,0.68
+8,2611,6,expo eraser,distractor,isolated,52,0.22
+8,1882,4,measuring cup,distractor,isolated,53,0.73
+8,2563,4,pyrex measuring cup (the one with the handle),target,isolated,54,0.76
+8,1906,4,big measuring cup,target,isolated,55,0.71
+8,3410,4,pyrex measuring cup (the one with the handle),distractor,isolated,56,0.78
+8,2476,4,cup,distractor,isolated,57,0.31
+8,3784,4,measuring cup with handle,distractor,isolated,58,0.62
+8,2325,1,shades,target,isolated,59,0.75
+8,2076,2,blue block,target,isolated,60,0.74
+8,2039,6,expo,distractor,isolated,61,0.11
+8,1778,4,large cup,target,isolated,62,0.8
+8,2120,7,red candle/holder,target,isolated,63,0.87
+8,2303,3,cassette,distractor,isolated,64,0.12
+8,2221,2,child&quotechars blue block,target,isolated,65,0.8
+8,2008,7,small candle,distractor,isolated,66,0.87
+8,1748,6,eraser expo,target,isolated,67,0.79
+8,1905,2,toy block,distractor,isolated,68,0.7
+8,2126,5,brown brush,target,isolated,69,0.68
+8,2069,6,dry eraser,distractor,isolated,70,0.14
+8,2193,2,blue B block,distractor,isolated,71,0.08
+8,1927,4,large measure cup,target,isolated,72,0.83
+8,1904,4,measure cup,target,isolated,73,0.61
+8,2350,7,candlestick,distractor,isolated,74,0.32
+8,3246,4,pyrex cup,distractor,isolated,75,0.54
+8,2057,3,cassette tape,distractor,isolated,76,0.05
+8,2356,2,block,distractor,isolated,77,0.5
+8,3415,7,small candle,target,comparison,78,0.65
+8,2348,4,large measuring cup,target,comparison,79,0.64
+8,2016,4,large measure cup,distractor,isolated,80,0.73
+8,2648,2,blue block,distractor,isolated,81,0.3
+8,2378,5,comb,target,isolated,82,0.26
+8,6734,2,B box,distractor,isolated,83,0.16
+8,2038,2,letter block,target,isolated,84,0.71
+8,2054,8,silver mouse,target,isolated,85,0.78
+8,3272,3,clear audiocassette,target,isolated,86,0.78
+8,1696,4,large measuring cup,distractor,isolated,87,0.71
+8,1944,5,round hairbrush,target,isolated,88,0.71
+8,1683,4,pyrex measuring cup,target,isolated,89,0.75
+8,1886,4,measuring cup with the holder,distractor,isolated,90,0.71
+8,3329,5,hair curler,target,isolated,91,0.34
+8,2159,4,pyrex measuring cup (with the handle),target,isolated,92,0.76
+8,2971,8,computer mouse,distractor,isolated,93,0.09
+8,3370,2,B,distractor,isolated,94,0.07
+8,4099,5,hair curler,distractor,isolated,95,0.12
+8,2591,2,block with the blue writing,target,isolated,96,0.75
+8,1971,4,large pyrex measuring cup,target,isolated,97,0.75
+8,2592,4,measuring thing,target,isolated,98,0.48
+8,2878,6,eraser expo,distractor,isolated,99,0.14
+8,2036,1,sunglasses,target,isolated,100,0.88
+8,2322,8,mouse,distractor,isolated,101,0.65
+8,1943,7,candle,target,isolated,102,0.75
+8,2372,1,black sunglasses,target,isolated,103,0.62
+8,2038,4,measuring cup with the holder,target,isolated,104,0.74
+8,2005,2,alphabet block,distractor,isolated,105,0.67
+8,1936,7,red candle,target,isolated,106,0.85
+8,2206,4,large cup,distractor,isolated,107,0.46
+8,2054,6,white out,distractor,isolated,108,0.03
+8,2014,4,big measuring cup,distractor,isolated,109,0.73
+8,2466,3,cassette,target,isolated,110,0.7
+8,2263,2,block,distractor,isolated,111,0.62
+8,2142,4,pyrex measuring cup,distractor,isolated,112,0.76
+8,2147,4,pyrex cup,target,isolated,113,0.75
+8,2088,2,block toy,distractor,isolated,114,0.64
+8,2481,6,erase,distractor,isolated,115,0.36
+8,1975,5,hairbrush,target,isolated,116,0.78
+8,2030,5,round hairbrush,distractor,isolated,117,0.27
+8,2571,6,expo block,distractor,isolated,118,0.18
+8,2124,4,pyrex,target,isolated,119,0.4
+8,2499,2,block with the B,target,isolated,120,0.85
+8,2578,4,large measuring glass ... the pyrex,distractor,isolated,121,0.69
+8,8066,5,haircomb,distractor,isolated,122,0.78
+8,6171,1,glasses,target,isolated,123,0.66
+8,3789,2,block toy,target,isolated,124,0.73
+8,2029,4,pyrex thing,distractor,isolated,125,0.5
+8,3000,8,grey mouse,target,isolated,126,0.55
+8,2049,7,red candle,distractor,isolated,127,0.09
+8,2260,7,candle,distractor,isolated,128,0.84
+8,1929,3,cassette tape,target,isolated,129,0.86
+8,2611,3,tape,distractor,isolated,130,0.86
+8,2823,2,bottom block,target,isolated,131,0.55
+8,2071,7,small candle,target,isolated,132,0.69
+8,2119,5,brown brush,distractor,isolated,133,0.67
+8,2440,1,sunglasses,distractor,isolated,134,0.49
+8,2558,2,bottom block,distractor,comparison,135,0.78
+8,2025,4,large measuring cup,target,isolated,136,0.76
+8,2833,1,black sunglasses,distractor,isolated,137,0.27
+8,1834,5,hairbrush,distractor,isolated,138,0.87
+8,2721,7,small candle,distractor,comparison,139,0.88
+8,2144,6,black eraser,distractor,isolated,140,0.03
+8,2018,2,B block,target,isolated,141,0.49
+8,1986,5,comb,distractor,isolated,142,0.18
+8,4153,2,bottom block,target,comparison,143,0.38
+8,3339,6,expo block,target,isolated,144,0.48
+8,2310,6,expo,target,isolated,145,0.42
+8,2746,2,block with the B,distractor,isolated,146,0.15
+8,2310,7,red candle/holder,distractor,isolated,147,0.04
+8,2419,6,white out,target,isolated,148,0.05
+8,3088,2,child&quotechars blue block,distractor,isolated,149,0.49
+8,2428,2,bottom block,distractor,isolated,150,0.47
+8,2500,2,B,target,isolated,151,0.36
+9,13694,3,clear audiocassette,target,isolated,2,1
+9,6112,4,measure cup,distractor,isolated,3,0.98
+9,4072,3,cassette,distractor,isolated,4,0.01
+9,18240,4,pyrex measuring cup (with the handle),distractor,isolated,5,0.68
+9,7528,2,block,target,isolated,6,0.99
+9,17024,6,expo,target,isolated,7,0.5
+9,4776,6,dry eraser,target,isolated,8,0.99
+9,8496,7,small candle,target,isolated,9,0.64
+9,5800,6,white out,target,isolated,10,0
+9,6716,1,black sunglasses,distractor,isolated,11,0
+9,6172,4,large measure cup,distractor,isolated,12,1
+9,4352,3,tape,distractor,isolated,13,1
+9,5040,4,pyrex cup,target,isolated,14,1
+9,6728,6,erase,distractor,isolated,15,0.8
+9,9568,7,red candle/holder,distractor,isolated,16,0
+9,8760,4,pyrex measuring cup (the one with the handle),distractor,isolated,17,0.46
+9,10656,2,blue B block,distractor,isolated,18,0.06
+9,3856,8,computer mouse,target,isolated,19,0.99
+9,6288,6,erase,target,isolated,20,0.94
+9,6376,4,pyrex measuring cup (the one with the handle),target,isolated,21,1
+9,5552,2,B box,distractor,isolated,22,0
+9,10144,7,red candle,distractor,isolated,23,0.11
+9,5592,6,eraser expo,distractor,isolated,24,0
+9,6039,2,letter block,target,isolated,25,0.99
+9,3328,2,toy block,distractor,isolated,26,0.99
+9,4544,1,glasses,target,isolated,27,0.99
+9,17009,4,larger measuring cup,target,isolated,28,0.42
+9,3232,2,block,distractor,isolated,29,0.99
+9,3559,6,eraser,distractor,isolated,30,1
+9,3616,7,lit candle,distractor,isolated,31,0.99
+9,6472,7,red candle,target,isolated,32,0.87
+9,3008,2,toy block,target,isolated,33,0.99
+9,8504,5,haircomb,distractor,isolated,34,0.11
+9,4728,6,white out,distractor,isolated,35,0
+9,3424,4,measuring cup,distractor,isolated,36,0.99
+9,8192,4,pyrex thing,distractor,isolated,37,0
+9,8392,5,comb,target,isolated,38,0.02
+9,9248,4,cup,distractor,isolated,39,0.85
+9,8448,4,large cup,distractor,isolated,40,0.96
+9,3536,7,candle,distractor,isolated,41,0.99
+9,6568,4,large measuring glass ... the pyrex,distractor,isolated,42,0
+9,4048,7,candle,target,isolated,43,1
+9,6600,4,cup,target,isolated,44,1
+9,7448,2,child&quotechars blue block,distractor,isolated,45,0.02
+9,7008,2,bottom block,target,isolated,46,0
+9,7616,4,pyrex cup,distractor,isolated,47,0.02
+9,3809,2,alphabet block,target,isolated,48,0.98
+9,18975,4,big measuring cup,target,isolated,49,0.92
+9,4064,1,shades,target,isolated,50,0.99
+9,6304,8,mouse,distractor,isolated,51,0.98
+9,3784,6,black eraser,target,isolated,52,0.99
+9,4720,5,haircomb,target,isolated,53,0.04
+9,4672,4,large measuring cup,target,isolated,54,0.86
+9,5600,7,candlestick,target,isolated,55,1
+9,4160,4,pyrex,distractor,isolated,56,0
+9,3993,6,black eraser,distractor,isolated,57,0
+9,14975,5,hair curler,target,isolated,58,0.27
+9,2768,6,expo block,distractor,isolated,59,0
+9,3768,8,computer mouse,distractor,isolated,60,0
+9,4616,4,measuring thing,target,isolated,61,1
+9,5360,6,dry eraser,distractor,isolated,62,0
+9,3992,1,black sunglasses,target,isolated,63,1
+9,7024,2,child&quotechars blue block,target,isolated,64,0.36
+9,3472,7,red candlestick,distractor,isolated,65,0
+9,4512,2,block with the B,distractor,isolated,66,0
+9,13472,8,silver mouse,distractor,isolated,67,0.36
+9,3632,2,B cube,distractor,isolated,68,0
+9,4288,8,silver mouse,target,isolated,69,1
+9,3176,2,B block,distractor,isolated,70,0
+9,3799,5,round hairbrush,target,isolated,71,1
+9,4417,7,small candle,distractor,isolated,72,1
+9,6248,1,glasses,distractor,isolated,73,0
+9,4007,4,measuring cup with handle,distractor,isolated,74,1
+9,10224,2,bottom block,distractor,isolated,75,0.41
+9,14024,6,expo block,target,isolated,76,0.68
+9,3720,5,brush,distractor,isolated,77,1
+9,6288,4,larger measuring cup,distractor,isolated,78,0.75
+9,6056,7,red candle/holder,target,isolated,79,1
+9,8976,2,the bluish block with a B,target,isolated,80,0.68
+9,4144,4,pyrex,target,isolated,81,1
+9,11016,4,measuring cup with the holder,distractor,isolated,82,0.12
+9,6392,6,expo eraser,target,isolated,83,1
+9,11216,4,measure cup,target,isolated,84,1
+9,3272,4,measuring cup,target,isolated,85,1
+9,11384,4,large measuring cup,target,comparison,86,0.79
+9,6088,5,hairbrush,distractor,isolated,87,1
+9,4416,2,block with the B,target,isolated,88,1
+9,4496,4,measuring thing,distractor,isolated,89,1
+9,4784,4,pyrex measuring cup,target,isolated,90,1
+9,4328,5,comb,distractor,isolated,91,0.03
+9,9536,7,small candle,target,comparison,92,0
+9,7680,4,large pyrex measuring cup,target,isolated,93,0.86
+9,4568,7,small candle,distractor,comparison,94,1
+9,7432,2,bottom block,distractor,comparison,95,1
+9,3736,8,mouse,target,isolated,96,1
+9,12040,2,blue B block,target,isolated,97,0.66
+9,4472,5,hairbrush,target,isolated,98,1
+9,4792,8,grey mouse,distractor,isolated,99,1
+9,4432,2,blue block,distractor,isolated,100,0
+9,8936,2,B cube,target,isolated,101,1
+9,5760,2,B,target,isolated,102,1
+9,4712,3,cassette tape,distractor,isolated,103,0
+9,4264,2,the bluish block with a B,distractor,isolated,104,0
+9,3728,6,expo,distractor,isolated,105,0
+9,7064,4,large measuring cup,distractor,comparison,106,0.94
+9,4032,3,clear audiocassette,distractor,isolated,107,0
+9,3216,6,expo eraser,distractor,isolated,108,0
+9,4920,3,tape,target,isolated,109,1
+9,4448,7,lit candle,target,isolated,110,1
+9,3688,2,alphabet block,distractor,isolated,111,1
+9,5424,2,bottom block,target,comparison,112,0
+9,6768,5,round hairbrush,distractor,isolated,113,0
+9,6944,4,large measuring glass ... the pyrex,target,isolated,114,1
+9,4544,4,pyrex measuring cup (with the handle),target,isolated,115,1
+9,3272,2,letter block,distractor,isolated,116,1
+9,7784,8,grey mouse,target,isolated,117,0.78
+9,3728,2,block toy,target,isolated,118,1
+9,4847,4,measurement cup ... the large one with red letters,target,isolated,119,1
+9,3497,4,pyrex thing,target,isolated,120,1
+9,3359,3,cassette tape,target,isolated,121,1
+9,4728,4,big measuring cup,distractor,isolated,122,1
+9,5672,2,B box,target,isolated,123,0
+9,3377,2,block toy,distractor,isolated,124,1
+9,2592,2,block,target,isolated,125,1
+9,3319,2,blue block,target,isolated,126,0.26
+9,8912,6,eraser expo,target,isolated,127,0.47
+9,5424,4,measurement cup ... the large one with red letters,distractor,isolated,128,0
+9,3952,4,large measuring cup,distractor,isolated,129,1
+9,3912,6,eraser,target,isolated,130,1
+9,3136,2,B block,target,isolated,131,1
+9,3280,7,red candlestick,target,isolated,132,1
+9,5256,4,large measure cup,target,isolated,133,0.91
+9,4584,4,measuring cup with handle,target,isolated,134,1
+9,3136,1,sunglasses,distractor,isolated,135,0
+9,3944,5,brown brush,distractor,isolated,136,0
+9,4224,2,block with the blue writing,target,isolated,137,1
+9,4056,2,block with the blue writing,distractor,isolated,138,1
+9,3760,1,sunglasses,target,isolated,139,1
+9,4704,4,large pyrex measuring cup,distractor,isolated,140,0
+9,4960,4,large cup,target,isolated,141,1
+9,2760,2,block,distractor,isolated,142,1
+9,3624,7,candlestick,distractor,isolated,143,0
+9,7864,4,measuring cup with the holder,target,isolated,144,0.23
+9,3016,3,cassette,target,isolated,145,1
+9,5744,5,hair curler,distractor,isolated,146,0.27
+9,4233,2,B,distractor,isolated,147,0
+9,4671,4,pyrex measuring cup,distractor,isolated,148,0
+9,3856,1,shades,distractor,isolated,149,0
+9,2848,5,brown brush,target,isolated,150,1
+9,2760,5,brush,target,isolated,151,1
+10,3400,2,the bluish block with a B,distractor,isolated,2,0.51
+10,672,6,black eraser,distractor,isolated,3,0.72
+10,569,8,silver mouse,target,isolated,4,0.28
+10,607,2,B,target,isolated,5,0.54
+10,1281,2,B box,target,isolated,6,0.32
+10,676,5,brush,target,isolated,7,0.78
+10,634,8,silver mouse,distractor,isolated,8,0.84
+10,609,7,candle,distractor,isolated,9,0.67
+10,509,4,cup,distractor,isolated,10,0.45
+10,497,2,block toy,distractor,isolated,11,0.52
+10,2102,5,hairbrush,target,isolated,12,0.83
+10,440,2,B box,distractor,isolated,13,0.73
+10,314,7,red candle,target,isolated,14,0.36
+10,446,2,bottom block,distractor,isolated,15,0.62
+10,598,2,alphabet block,target,isolated,16,0.67
+10,462,4,big measuring cup,target,isolated,17,0.49
+10,318,4,pyrex cup,distractor,isolated,18,0.77
+10,750,8,grey mouse,target,isolated,19,0.72
+10,331,4,measuring cup with the holder,distractor,isolated,20,0.4
+10,1019,4,pyrex measuring cup (the one with the handle),distractor,isolated,21,0.37
+10,623,6,expo,target,isolated,22,0.56
+10,468,4,large pyrex measuring cup,distractor,isolated,23,0.63
+10,515,4,large measure cup,target,isolated,24,0.74
+10,464,4,large measuring glass ... the pyrex,distractor,isolated,25,0.77
+10,472,1,black sunglasses,distractor,isolated,26,0.37
+10,510,3,tape,target,isolated,27,0.34
+10,526,1,shades,target,isolated,28,0.31
+10,436,2,bottom block,target,comparison,29,0.69
+10,791,5,comb,distractor,isolated,30,0.26
+10,301,4,measure cup,target,isolated,31,0.69
+10,1759,1,glasses,distractor,isolated,32,0.28
+10,590,7,candlestick,target,isolated,33,0.51
+10,440,1,sunglasses,distractor,isolated,34,0.4
+10,361,2,block with the B,distractor,isolated,35,0.28
+10,809,4,measuring thing,distractor,isolated,36,0.56
+10,877,5,hair curler,distractor,isolated,37,0.66
+10,672,6,white out,distractor,isolated,38,0.27
+10,308,7,small candle,distractor,isolated,39,0.38
+10,883,4,measure cup,distractor,isolated,40,0.59
+10,943,4,measuring cup,target,isolated,41,0.33
+10,720,6,dry eraser,distractor,isolated,42,0.41
+10,367,2,block with the blue writing,target,isolated,43,0.48
+10,543,4,pyrex measuring cup (with the handle),target,isolated,44,0.59
+10,1024,4,large pyrex measuring cup,target,isolated,45,0.53
+10,475,4,big measuring cup,distractor,isolated,46,0.27
+10,717,7,red candle/holder,distractor,isolated,47,0.55
+10,1206,2,blue block,target,isolated,48,0.48
+10,1238,4,measuring cup with handle,distractor,isolated,49,0.17
+10,1153,7,candle,target,isolated,50,0.71
+10,2747,4,large measuring cup,target,comparison,51,0.73
+10,11767,3,cassette,distractor,isolated,52,0.32
+10,675,4,pyrex measuring cup,target,isolated,53,0.83
+10,367,2,child&quotechars blue block,distractor,isolated,54,0.79
+10,649,5,round hairbrush,target,isolated,55,0.24
+10,376,6,eraser,target,isolated,56,0.33
+10,609,4,measuring cup,distractor,isolated,57,0.69
+10,337,1,black sunglasses,target,isolated,58,0.84
+10,300,2,B block,target,isolated,59,0.65
+10,311,3,cassette tape,target,isolated,60,0.32
+10,250,1,glasses,target,isolated,61,0.37
+10,224,5,comb,target,isolated,62,0.67
+10,213,8,computer mouse,target,isolated,63,0.83
+10,198,4,pyrex cup,target,isolated,64,0.87
+10,197,2,block,target,isolated,65,0.86
+10,222,4,large measure cup,distractor,isolated,66,0.56
+10,183,6,expo eraser,target,isolated,67,0.44
+10,202,5,haircomb,distractor,isolated,68,0.64
+10,166,7,candlestick,distractor,isolated,69,0.85
+10,185,2,B cube,distractor,isolated,70,0.8
+10,168,4,measuring cup with handle,target,isolated,71,0.84
+10,213,4,large measuring cup,distractor,comparison,72,0.95
+10,916,2,toy block,target,isolated,73,0.28
+10,185,3,cassette,target,isolated,74,0.72
+10,2487,8,mouse,distractor,isolated,75,0.87
+10,604,4,large measuring cup,target,isolated,76,0.26
+10,827,7,red candlestick,target,isolated,77,0.75
+10,702,4,pyrex measuring cup (the one with the handle),target,isolated,78,0.37
+10,255,5,brown brush,distractor,isolated,79,0.79
+10,493,2,blue B block,distractor,isolated,80,0.38
+10,515,4,measurement cup ... the large one with red letters,target,isolated,81,0.77
+10,212,5,brown brush,target,isolated,82,0.82
+10,171,2,B,distractor,isolated,83,0.74
+10,165,4,measuring thing,target,isolated,84,0.78
+10,157,2,letter block,distractor,isolated,85,0.85
+10,184,2,child&quotechars blue block,target,isolated,86,0.81
+10,192,6,dry eraser,target,isolated,87,0.49
+10,477,3,clear audiocassette,target,isolated,88,0.32
+10,518,7,red candlestick,distractor,isolated,89,0.69
+10,474,5,hairbrush,distractor,isolated,90,0.37
+10,507,4,pyrex,distractor,isolated,91,0.72
+10,372,1,sunglasses,target,isolated,92,0.78
+10,1378,6,eraser expo,target,isolated,93,0.63
+10,253,4,cup,target,isolated,94,0.28
+10,174,1,shades,distractor,isolated,95,0.29
+10,391,2,B block,distractor,isolated,96,0.27
+10,822,6,eraser,distractor,isolated,97,0.63
+10,218,7,small candle,distractor,comparison,98,0.69
+10,222,4,pyrex measuring cup (with the handle),distractor,isolated,99,0.7
+10,778,7,small candle,target,isolated,100,0.31
+10,665,7,lit candle,target,isolated,101,0.36
+10,228,7,lit candle,distractor,isolated,102,0.5
+10,358,5,hair curler,target,isolated,103,0.79
+10,183,4,larger measuring cup,target,isolated,104,0.77
+10,184,6,white out,target,isolated,105,0.76
+10,179,3,cassette tape,distractor,isolated,106,0.66
+10,694,8,computer mouse,distractor,isolated,107,0.45
+10,348,4,pyrex measuring cup,distractor,isolated,108,0.27
+10,413,2,block with the B,target,isolated,109,0.29
+10,380,5,round hairbrush,distractor,isolated,110,0.83
+10,1138,6,black eraser,target,isolated,111,0.34
+10,525,6,expo block,distractor,isolated,112,0.22
+10,1664,2,block with the blue writing,distractor,isolated,113,0.19
+10,1929,2,block toy,target,isolated,114,0.78
+10,192,4,pyrex thing,distractor,isolated,115,0.73
+10,171,4,large measuring cup,distractor,isolated,116,0.71
+10,675,4,measurement cup ... the large one with red letters,distractor,isolated,117,0.33
+10,875,4,pyrex thing,target,isolated,118,0.25
+10,652,4,pyrex,target,isolated,119,0.73
+10,224,3,tape,distractor,isolated,120,0.72
+10,160,4,large cup,distractor,isolated,121,0.65
+10,184,7,small candle,target,comparison,122,0.55
+10,519,2,toy block,distractor,isolated,123,0.46
+10,246,7,red candle/holder,target,isolated,124,0.32
+10,209,2,block,distractor,isolated,125,0.35
+10,290,6,expo,distractor,isolated,126,0.44
+10,201,2,alphabet block,distractor,isolated,127,0.74
+10,173,2,bottom block,target,isolated,128,0.69
+10,207,2,letter block,target,isolated,129,0.63
+10,523,2,bottom block,distractor,comparison,130,0.3
+10,928,6,erase,distractor,isolated,131,0.75
+10,206,7,red candle,distractor,isolated,132,0.73
+10,171,4,large measuring glass ... the pyrex,target,isolated,133,0.7
+10,264,8,grey mouse,distractor,isolated,134,0.51
+10,1221,4,measuring cup with the holder,target,isolated,135,0.77
+10,202,6,expo block,target,isolated,136,0.71
+10,189,5,haircomb,target,isolated,137,0.68
+10,431,2,block,distractor,isolated,138,0.65
+10,241,4,larger measuring cup,distractor,isolated,139,0.25
+10,251,2,blue B block,target,isolated,140,0.29
+10,1612,6,eraser expo,distractor,isolated,141,0.85
+10,369,6,expo eraser,distractor,isolated,142,0.27
+10,425,2,the bluish block with a B,target,isolated,143,0.25
+10,1453,2,blue block,distractor,isolated,144,0.22
+10,431,4,large cup,target,isolated,145,0.67
+10,236,8,mouse,target,isolated,146,0.19
+10,219,2,block,target,isolated,147,0.18
+10,229,5,brush,distractor,isolated,148,0.12
+10,1130,2,B cube,target,isolated,149,0.16
+10,724,6,erase,target,isolated,150,0.19
+10,336,3,clear audiocassette,distractor,isolated,151,0.66
+11,11669,2,the bluish block with a B,distractor,isolated,2,0.5
+11,4552,5,brown brush,distractor,isolated,3,0.61
+11,3263,4,measuring cup,distractor,isolated,4,0.97
+11,2512,4,pyrex cup,target,isolated,5,0.99
+11,5424,4,measurement cup ... the large one with red letters,target,isolated,6,0.88
+11,6225,2,bottom block,target,isolated,7,0.63
+11,2992,4,measure cup,target,isolated,8,0.86
+11,4087,4,large pyrex measuring cup,distractor,isolated,9,0.72
+11,2376,7,small candle,target,isolated,10,0.81
+11,3552,3,clear audiocassette,target,isolated,11,0.91
+11,3736,4,measuring cup with the holder,distractor,isolated,12,0.82
+11,3584,5,round hairbrush,distractor,isolated,13,0.61
+11,4976,4,large measure cup,target,isolated,14,0.82
+11,4840,3,cassette tape,distractor,isolated,15,0.2
+11,2712,4,larger measuring cup,target,isolated,16,0.81
+11,3273,4,pyrex,target,isolated,17,0.93
+11,3374,5,round hairbrush,target,isolated,18,0.95
+11,3513,6,white out,distractor,isolated,19,0.14
+11,2887,4,measuring thing,target,isolated,20,0.86
+11,3912,6,eraser expo,distractor,isolated,21,0.52
+11,3423,4,measuring cup,target,isolated,22,0.98
+11,2320,7,lit candle,distractor,isolated,23,0.96
+11,4072,4,pyrex cup,distractor,isolated,24,0.54
+11,3504,6,white out,target,isolated,25,0.16
+11,27017,4,large measuring glass ... the pyrex,target,isolated,26,0.85
+11,2960,2,block toy,distractor,isolated,27,0.95
+11,2568,4,pyrex measuring cup,target,isolated,28,1
+11,2472,3,tape,distractor,isolated,29,0.95
+11,3001,2,bottom block,distractor,comparison,30,0.86
+11,4249,2,the bluish block with a B,target,isolated,31,0.86
+11,2503,2,B block,target,isolated,32,0.95
+11,2831,4,pyrex,distractor,isolated,33,0.58
+11,3641,6,expo eraser,distractor,isolated,34,0.61
+11,1760,5,brush,target,isolated,35,0.92
+11,3280,4,pyrex measuring cup (the one with the handle),target,isolated,36,0.99
+11,2696,3,tape,target,isolated,37,0.67
+11,2240,1,black sunglasses,target,isolated,38,0.91
+11,2520,6,black eraser,distractor,isolated,39,0.28
+11,3944,6,expo block,target,isolated,40,0.63
+11,1807,5,brown brush,target,isolated,41,0.79
+11,2737,2,blue block,target,isolated,42,0.74
+11,2560,7,candlestick,distractor,isolated,43,0.59
+11,1632,4,large cup,distractor,isolated,44,0.82
+11,2816,2,B box,distractor,isolated,45,0.22
+11,2576,4,large pyrex measuring cup,target,isolated,46,1
+11,4544,5,haircomb,target,isolated,47,0.55
+11,2776,7,red candle/holder,distractor,isolated,48,0.26
+11,2337,6,erase,distractor,isolated,49,0.86
+11,3375,7,small candle,distractor,comparison,50,0.91
+11,127202,7,small candle,distractor,isolated,51,0.8
+11,23633,3,cassette,distractor,isolated,52,0.2
+11,2825,4,pyrex measuring cup (the one with the handle),distractor,isolated,53,0.66
+11,2703,6,expo,distractor,isolated,54,0.12
+11,2985,2,block with the B,distractor,isolated,55,0.42
+11,2934,2,letter block,distractor,isolated,56,0.89
+11,2265,8,grey mouse,target,isolated,57,0.94
+11,3199,4,measuring cup with the holder,target,isolated,58,0.81
+11,2538,8,grey mouse,distractor,isolated,59,0.8
+11,1863,2,alphabet block,target,isolated,60,0.91
+11,4720,1,sunglasses,distractor,isolated,61,0.08
+11,3201,2,block with the blue writing,distractor,isolated,62,0.95
+11,2022,8,computer mouse,target,isolated,63,0.95
+11,1767,4,cup,target,isolated,64,0.76
+11,1608,2,block,distractor,isolated,65,0.76
+11,2625,4,large measure cup,distractor,isolated,66,0.83
+11,1664,4,big measuring cup,target,isolated,67,0.9
+11,2448,7,candle,target,isolated,68,0.93
+11,2503,2,block with the blue writing,target,isolated,69,0.9
+11,56643,4,measurement cup ... the large one with red letters,distractor,isolated,70,0.2
+11,3247,4,large measuring cup,distractor,comparison,71,0.8
+11,12161,2,block,distractor,isolated,72,0.79
+11,2136,7,red candlestick,target,isolated,73,0.98
+11,4779,5,comb,target,isolated,74,0.25
+11,1966,4,big measuring cup,distractor,isolated,75,0.85
+11,2959,2,child&quotechars blue block,distractor,isolated,76,0.66
+11,3751,4,pyrex measuring cup (with the handle),distractor,isolated,77,0.83
+11,2665,2,B cube,target,isolated,78,0.74
+11,2736,8,computer mouse,distractor,isolated,79,0.13
+11,2264,1,glasses,distractor,isolated,80,0.08
+11,2920,2,bottom block,distractor,isolated,81,0.27
+11,2560,1,glasses,target,isolated,82,0.88
+11,3976,5,hair curler,distractor,isolated,83,0.14
+11,25168,3,clear audiocassette,distractor,isolated,84,0.07
+11,3401,8,mouse,target,isolated,85,0.75
+11,2056,3,cassette tape,target,isolated,86,0.87
+11,2760,7,red candlestick,distractor,isolated,87,0.23
+11,1647,4,large measuring cup,distractor,isolated,88,0.89
+11,2304,2,child&quotechars blue block,target,isolated,89,0.75
+11,2016,7,red candle,distractor,isolated,90,0.13
+11,2352,4,measuring cup with handle,target,isolated,91,0.86
+11,5400,2,bottom block,target,comparison,92,0.27
+11,8112,4,pyrex measuring cup (with the handle),target,isolated,93,0.92
+11,5711,2,blue B block,target,isolated,94,0.84
+11,4442,7,lit candle,target,isolated,95,0.89
+11,3015,2,B block,distractor,isolated,96,0.42
+11,14849,6,dry eraser,target,isolated,97,0.72
+11,4135,4,pyrex thing,distractor,isolated,98,0.57
+11,2583,4,large cup,target,isolated,99,0.76
+11,11873,2,toy block,distractor,isolated,100,0.72
+11,2375,4,measure cup,distractor,isolated,101,0.87
+11,9313,2,B,distractor,isolated,102,0.19
+11,3368,5,hairbrush,target,isolated,103,0.83
+11,2624,7,red candle/holder,target,isolated,104,0.89
+11,8080,4,pyrex measuring cup,distractor,isolated,105,0.65
+11,3568,2,B box,target,isolated,106,0.17
+11,21513,6,expo eraser,target,isolated,107,0.93
+11,5056,2,blue B block,distractor,isolated,108,0.2
+11,3007,7,small candle,target,comparison,109,0.5
+11,2464,1,sunglasses,target,isolated,110,0.95
+11,2992,2,B,target,isolated,111,0.69
+11,2425,6,black eraser,target,isolated,112,0.83
+11,1799,2,toy block,target,isolated,113,0.81
+11,3193,5,comb,distractor,isolated,114,0.14
+11,2623,6,expo block,distractor,isolated,115,0.09
+11,1719,4,cup,distractor,isolated,116,0.7
+11,2800,3,cassette,target,isolated,117,0.8
+11,27186,2,block,target,isolated,118,0.68
+11,2144,4,larger measuring cup,distractor,isolated,119,0.87
+11,2400,4,pyrex thing,target,isolated,120,0.8
+11,7247,4,large measuring glass ... the pyrex,distractor,isolated,121,0.56
+11,4179,1,shades,target,isolated,122,0.76
+11,2534,6,eraser expo,target,isolated,123,0.94
+11,3097,6,expo,target,isolated,124,0.65
+11,3024,2,B cube,distractor,isolated,125,0.13
+11,1799,4,measuring cup with handle,distractor,isolated,126,0.83
+11,3088,6,dry eraser,distractor,isolated,127,0.11
+11,2184,6,eraser,target,isolated,128,0.88
+11,2720,5,hair curler,target,isolated,129,0.12
+11,2127,8,silver mouse,target,isolated,130,0.7
+11,2088,2,blue block,distractor,isolated,131,0.4
+11,2432,2,block,target,isolated,132,0.72
+11,2056,2,block toy,target,isolated,133,0.82
+11,1817,4,large measuring cup,target,isolated,134,0.87
+11,3007,8,silver mouse,distractor,isolated,135,0.32
+11,2441,7,candlestick,target,isolated,136,0.75
+11,4944,1,black sunglasses,distractor,isolated,137,0.12
+11,2808,5,brush,distractor,isolated,138,0.72
+11,1671,1,shades,distractor,isolated,139,0.11
+11,2104,5,haircomb,distractor,isolated,140,0.26
+11,2217,6,erase,target,isolated,141,0.71
+11,2120,2,letter block,target,isolated,142,0.79
+11,2328,4,large measuring cup,target,comparison,143,0.86
+11,2576,5,hairbrush,distractor,isolated,144,0.94
+11,2087,7,red candle,target,isolated,145,0.99
+11,1719,7,candle,distractor,isolated,146,1
+11,1976,2,alphabet block,distractor,isolated,147,0.81
+11,1896,6,eraser,distractor,isolated,148,0.93
+11,1752,4,measuring thing,distractor,isolated,149,0.82
+11,2225,8,mouse,distractor,isolated,150,0.91
+11,3392,2,block with the B,target,isolated,151,0.78
+12,16747,3,cassette tape,target,isolated,2,1
+12,16721,2,child&quotechars blue block,target,isolated,3,0.78
+12,15362,3,cassette tape,distractor,isolated,4,0.26
+12,8962,7,candle,target,isolated,5,0.9
+12,10524,2,B,distractor,isolated,6,0.08
+12,6662,5,brush,target,isolated,7,1
+12,8514,6,eraser,distractor,isolated,8,1
+12,9793,2,block with the blue writing,distractor,isolated,9,0.94
+12,10966,2,alphabet block,distractor,isolated,10,0.83
+12,4591,2,block,distractor,isolated,11,1
+12,13309,6,erase,target,isolated,12,0.79
+12,5303,4,pyrex measuring cup,target,isolated,13,1
+12,9570,6,white out,distractor,isolated,14,0.17
+12,12414,2,bottom block,distractor,comparison,15,0.48
+12,8550,6,black eraser,distractor,isolated,16,0.31
+12,7388,3,tape,target,isolated,17,0.88
+12,5277,4,measuring cup,distractor,isolated,18,1
+12,6550,7,candle,distractor,isolated,19,1
+12,7647,2,B block,target,isolated,20,0.78
+12,7437,2,B,target,isolated,21,0.69
+12,5243,5,round hairbrush,target,isolated,22,1
+12,8934,2,B box,target,isolated,23,0.45
+12,10166,6,expo block,target,isolated,24,0.36
+12,4137,7,lit candle,distractor,isolated,25,1
+12,8533,8,grey mouse,distractor,isolated,26,0.84
+12,4967,6,expo eraser,target,isolated,27,1
+12,7415,4,pyrex cup,distractor,isolated,28,0.5
+12,6005,6,expo block,distractor,isolated,29,0
+12,8523,7,small candle,distractor,comparison,30,0.8
+12,4325,5,comb,distractor,isolated,31,1
+12,4626,5,hairbrush,target,isolated,32,1
+12,11031,4,pyrex measuring cup (with the handle),distractor,isolated,33,0.67
+12,10277,7,red candle/holder,distractor,isolated,34,0.12
+12,7416,4,big measuring cup,target,isolated,35,0.74
+12,8303,2,child&quotechars blue block,distractor,isolated,36,0.4
+12,8005,2,block with the B,target,isolated,37,0.82
+12,11108,8,grey mouse,target,isolated,38,0.87
+12,17606,3,clear audiocassette,target,isolated,39,0.94
+12,4921,6,eraser expo,distractor,isolated,40,0
+12,8176,2,the bluish block with a B,distractor,isolated,41,0.09
+12,7228,2,block,target,isolated,42,1
+12,4316,6,eraser,target,isolated,43,1
+12,3830,3,tape,distractor,isolated,44,1
+12,5812,1,shades,target,isolated,45,0.63
+12,4608,6,expo,distractor,isolated,46,0
+12,6534,5,brown brush,target,isolated,47,0.49
+12,7509,5,haircomb,distractor,isolated,48,0.94
+12,4314,4,measuring thing,distractor,isolated,49,0.81
+12,4598,6,black eraser,target,isolated,50,1
+12,7887,3,cassette,target,isolated,51,0.93
+12,4590,4,pyrex cup,target,isolated,52,1
+12,3651,4,large cup,target,isolated,53,0.78
+12,3748,8,computer mouse,target,isolated,54,1
+12,7330,2,B cube,distractor,isolated,55,0.06
+12,3983,7,lit candle,target,isolated,56,1
+12,7145,2,block,target,isolated,57,1
+12,11012,4,pyrex,distractor,isolated,58,0.53
+12,6455,2,blue block,target,isolated,59,0.75
+12,7579,4,large measure cup,distractor,isolated,60,0.89
+12,4853,2,bottom block,distractor,isolated,61,0.09
+12,7927,6,eraser expo,target,isolated,62,0.93
+12,4038,4,measuring cup,target,isolated,63,1
+12,8990,4,pyrex thing,distractor,isolated,64,0.49
+12,5645,4,larger measuring cup,distractor,isolated,65,0.83
+12,7946,5,hair curler,distractor,isolated,66,0.11
+12,11353,4,large measuring cup,target,comparison,67,0.55
+12,12998,2,block with the blue writing,target,isolated,68,0.71
+12,5417,2,letter block,target,isolated,69,0.82
+12,8597,1,shades,distractor,isolated,70,0.06
+12,5663,5,hair curler,target,isolated,71,0.07
+12,3961,1,sunglasses,target,isolated,72,1
+12,4894,2,toy block,target,isolated,73,1
+12,5441,4,measuring cup with handle,distractor,isolated,74,1
+12,3725,3,cassette,distractor,isolated,75,0
+12,6629,4,pyrex measuring cup (with the handle),target,isolated,76,1
+12,4066,4,cup,distractor,isolated,77,0.9
+12,7592,2,blue B block,target,isolated,78,0.94
+12,4528,6,erase,distractor,isolated,79,0.82
+12,8600,2,blue block,distractor,isolated,80,0.38
+12,8717,7,red candlestick,distractor,isolated,81,0.15
+12,5779,8,mouse,distractor,isolated,82,0.79
+12,4904,4,pyrex,target,isolated,83,0.93
+12,6635,1,glasses,distractor,isolated,84,0.12
+12,5861,1,glasses,target,isolated,85,0.94
+12,3657,2,alphabet block,target,isolated,86,0.75
+12,4966,2,bottom block,target,isolated,87,0.37
+12,10074,4,measuring cup with the holder,distractor,isolated,88,0.66
+12,5338,4,pyrex measuring cup (the one with the handle),target,isolated,89,1
+12,6568,5,round hairbrush,distractor,isolated,90,0.15
+12,6441,4,measure cup,target,isolated,91,0.89
+12,7723,1,sunglasses,distractor,isolated,92,0.05
+12,3310,1,black sunglasses,distractor,isolated,93,0.04
+12,7007,7,red candle/holder,target,isolated,94,0.92
+12,5042,2,block toy,distractor,isolated,95,0.97
+12,4375,6,expo,target,isolated,96,0.69
+12,3806,6,dry eraser,target,isolated,97,1
+12,3593,4,cup,target,isolated,98,0.71
+12,4991,5,brown brush,distractor,isolated,99,0.12
+12,5472,3,clear audiocassette,distractor,isolated,100,0
+12,5830,5,haircomb,target,isolated,101,0.29
+12,10980,2,block with the B,distractor,isolated,102,0.06
+12,8214,2,letter block,distractor,isolated,103,0.88
+12,5857,4,large measuring cup,distractor,comparison,104,1
+12,5068,6,white out,target,isolated,105,0.19
+12,7770,4,pyrex thing,target,isolated,106,0.8
+12,4220,4,large cup,distractor,isolated,107,0.92
+12,3528,2,toy block,distractor,isolated,108,0.88
+12,8502,1,black sunglasses,target,isolated,109,0.81
+12,8205,7,small candle,target,isolated,110,0.49
+12,5122,2,B block,distractor,isolated,111,0.08
+12,10539,4,measuring cup with the holder,target,isolated,112,0.75
+12,4129,5,comb,target,isolated,113,0.08
+12,8756,7,candlestick,distractor,isolated,114,0.22
+12,7321,4,measurement cup ... the large one with red letters,distractor,isolated,115,0.17
+12,6589,7,candlestick,target,isolated,116,0.82
+12,3920,4,measure cup,distractor,isolated,117,1
+12,5487,2,bottom block,target,comparison,118,0.06
+12,4956,4,measuring thing,target,isolated,119,0.73
+12,8663,4,large measuring glass ... the pyrex,distractor,isolated,120,0.41
+12,5194,4,large pyrex measuring cup,target,isolated,121,0.83
+12,8809,5,hairbrush,distractor,isolated,122,0.63
+12,5326,4,pyrex measuring cup,distractor,isolated,123,0.51
+12,5035,4,large measuring cup,distractor,isolated,124,0.86
+12,3246,4,big measuring cup,distractor,isolated,125,0.94
+12,4153,4,larger measuring cup,target,isolated,126,0.68
+12,5895,8,silver mouse,distractor,isolated,127,0.58
+12,7444,8,computer mouse,distractor,isolated,128,0.06
+12,7688,4,large measuring glass ... the pyrex,target,isolated,129,0.88
+12,7298,7,red candle,target,isolated,130,0.95
+12,4666,7,small candle,distractor,isolated,131,0.98
+12,3768,4,large measure cup,target,isolated,132,0.83
+12,5835,5,brush,distractor,isolated,133,0.53
+12,3466,7,red candle,distractor,isolated,134,0.1
+12,3411,2,block,distractor,isolated,135,0.99
+12,4559,8,silver mouse,target,isolated,136,0.89
+12,5873,7,red candlestick,target,isolated,137,0.94
+12,5526,2,the bluish block with a B,target,isolated,138,0.92
+12,7118,7,small candle,target,comparison,139,0.43
+12,5720,4,large pyrex measuring cup,distractor,isolated,140,0.51
+12,4111,2,B box,distractor,isolated,141,0.01
+12,3207,4,large measuring cup,target,isolated,142,0.81
+12,7641,6,dry eraser,distractor,isolated,143,0.49
+12,9460,2,block toy,target,isolated,144,1
+12,5815,8,mouse,target,isolated,145,0.92
+12,4115,4,measuring cup with handle,target,isolated,146,1
+12,4687,2,blue B block,distractor,isolated,147,0.08
+12,9129,2,B cube,target,isolated,148,0.64
+12,5575,4,measurement cup ... the large one with red letters,target,isolated,149,0.93
+12,5567,4,pyrex measuring cup (the one with the handle),distractor,isolated,150,0.52
+12,3465,6,expo eraser,distractor,isolated,151,0.01
+13,9226,2,bottom block,distractor,isolated,2,0.63
+13,3374,1,black sunglasses,target,isolated,3,0.88
+13,8561,4,large measuring glass ... the pyrex,target,isolated,4,1
+13,2839,5,brush,distractor,isolated,5,1
+13,5544,2,block toy,target,isolated,6,1
+13,5263,2,the bluish block with a B,distractor,isolated,7,0
+13,18671,4,pyrex measuring cup,distractor,isolated,8,1
+13,3969,4,measuring cup,distractor,isolated,9,1
+13,3496,4,large measuring cup,target,isolated,10,0.9
+13,4750,7,lit candle,distractor,isolated,11,1
+13,1977,4,large pyrex measuring cup,distractor,isolated,12,1
+13,4606,6,expo eraser,target,isolated,13,1
+13,2385,2,alphabet block,distractor,isolated,14,1
+13,1617,5,haircomb,distractor,isolated,15,1
+13,7391,6,eraser expo,distractor,isolated,16,0
+13,3715,5,hair curler,distractor,isolated,17,0
+13,3732,7,candle,target,isolated,18,1
+13,2472,6,black eraser,distractor,isolated,19,0
+13,2103,2,letter block,distractor,isolated,20,1
+13,2113,4,large cup,distractor,isolated,21,0.68
+13,3136,6,erase,distractor,isolated,22,0.53
+13,2023,6,white out,target,isolated,23,0
+13,2271,2,B cube,target,isolated,24,0.82
+13,1936,5,round hairbrush,distractor,isolated,25,0
+13,3664,1,black sunglasses,distractor,isolated,26,0
+13,5824,4,large measuring cup,target,comparison,27,0.81
+13,2177,4,large cup,target,isolated,28,0.6
+13,5000,1,glasses,target,isolated,29,0.56
+13,4617,2,B box,distractor,isolated,30,0
+13,4120,6,expo,target,isolated,31,0.55
+13,3470,8,grey mouse,target,isolated,32,0.87
+13,2465,4,larger measuring cup,distractor,isolated,33,0.69
+13,3391,6,dry eraser,distractor,isolated,34,0
+13,2929,5,hairbrush,target,isolated,35,1
+13,2719,2,B,target,isolated,36,0.54
+13,2103,2,child&quotechars blue block,distractor,isolated,37,0.6
+13,2367,4,measuring cup with handle,target,isolated,38,1
+13,2354,4,pyrex cup,distractor,isolated,39,0.88
+13,1607,5,round hairbrush,target,isolated,40,1
+13,2999,3,clear audiocassette,distractor,isolated,41,0
+13,3474,3,tape,target,isolated,42,0.65
+13,5687,4,measurement cup ... the large one with red letters,target,isolated,43,0.91
+13,1975,8,computer mouse,target,isolated,44,1
+13,4239,2,blue B block,distractor,isolated,45,0
+13,3489,2,block toy,distractor,isolated,46,1
+13,3296,4,pyrex measuring cup,target,isolated,47,1
+13,2655,7,red candlestick,target,isolated,48,1
+13,1784,8,mouse,target,isolated,49,1
+13,1711,2,toy block,distractor,isolated,50,1
+13,1472,7,candlestick,target,isolated,51,1
+13,2239,1,sunglasses,distractor,isolated,52,0
+13,1985,4,measure cup,distractor,isolated,53,0.89
+13,2631,2,blue block,distractor,isolated,54,0.64
+13,1472,6,eraser expo,target,isolated,55,1
+13,2288,4,pyrex measuring cup (with the handle),target,isolated,56,1
+13,2777,4,pyrex thing,distractor,isolated,57,0.59
+13,1784,2,alphabet block,target,isolated,58,1
+13,4152,4,large measuring cup,distractor,comparison,59,1
+13,2383,2,B,distractor,isolated,60,0
+13,2280,4,big measuring cup,distractor,isolated,61,1
+13,2103,7,red candle,distractor,isolated,62,0
+13,2793,2,child&quotechars blue block,target,isolated,63,0.78
+13,1862,2,B block,target,isolated,64,1
+13,2217,4,large measuring glass ... the pyrex,distractor,isolated,65,1
+13,3054,3,cassette tape,distractor,isolated,66,0
+13,2985,1,shades,distractor,isolated,67,0
+13,7347,2,bottom block,distractor,comparison,68,0.91
+13,2741,3,cassette,target,isolated,69,1
+13,1856,7,red candle,target,isolated,70,1
+13,1302,5,brush,target,isolated,71,1
+13,3025,2,block with the blue writing,distractor,isolated,72,0.67
+13,3048,4,measuring thing,target,isolated,73,0.21
+13,2119,7,candlestick,distractor,isolated,74,0
+13,1904,1,sunglasses,target,isolated,75,1
+13,1874,7,lit candle,target,isolated,76,1
+13,2478,3,tape,distractor,isolated,77,0.83
+13,4167,7,small candle,target,comparison,78,0
+13,2513,4,measure cup,target,isolated,79,1
+13,2357,2,B cube,distractor,isolated,80,0
+13,2088,4,measuring cup with handle,distractor,isolated,81,1
+13,2352,8,grey mouse,distractor,isolated,82,0.72
+13,2744,5,comb,distractor,isolated,83,1
+13,1927,8,computer mouse,distractor,isolated,84,0
+13,3104,7,red candlestick,distractor,isolated,85,0
+13,8886,4,measurement cup ... the large one with red letters,distractor,isolated,86,1
+13,1873,8,silver mouse,target,isolated,87,1
+13,2625,7,candle,distractor,isolated,88,1
+13,1431,4,large pyrex measuring cup,target,isolated,89,1
+13,2016,6,expo eraser,distractor,isolated,90,0
+13,2840,2,block with the blue writing,target,isolated,91,0.85
+13,1696,3,cassette,distractor,isolated,92,0
+13,2008,4,larger measuring cup,target,isolated,93,0.91
+13,1623,4,pyrex measuring cup (with the handle),distractor,isolated,94,1
+13,1440,5,hairbrush,distractor,isolated,95,1
+13,1376,3,cassette tape,target,isolated,96,1
+13,2000,6,dry eraser,target,isolated,97,1
+13,1465,4,pyrex cup,target,isolated,98,1
+13,2271,4,measuring thing,distractor,isolated,99,0.19
+13,1888,4,measuring cup,target,isolated,100,1
+13,1751,5,hair curler,target,isolated,101,0
+13,1713,8,silver mouse,distractor,isolated,102,1
+13,1682,6,white out,distractor,isolated,103,0
+13,1877,4,big measuring cup,target,isolated,104,0.9
+13,1656,4,pyrex measuring cup (the one with the handle),distractor,isolated,105,1
+13,2785,2,block,distractor,isolated,106,0.84
+13,3041,6,eraser,target,isolated,107,0.91
+13,5214,4,large measure cup,distractor,isolated,108,1
+13,2128,6,expo block,target,isolated,109,0
+13,2960,6,erase,target,isolated,110,0.6
+13,1568,1,shades,target,isolated,111,1
+13,3257,2,blue B block,target,isolated,112,1
+13,3854,7,small candle,distractor,comparison,113,1
+13,4577,5,haircomb,target,isolated,114,1
+13,2951,2,bottom block,target,isolated,115,0.55
+13,1881,8,mouse,distractor,isolated,116,1
+13,3463,4,pyrex thing,target,isolated,117,0.55
+13,1503,2,B block,distractor,isolated,118,0
+13,13241,2,the bluish block with a B,target,isolated,119,0.83
+13,3791,7,small candle,target,isolated,120,0.7
+13,1784,4,pyrex,target,isolated,121,0.63
+13,2017,2,block,distractor,isolated,122,0.79
+13,1569,4,cup,target,isolated,123,0.66
+13,2438,7,small candle,distractor,isolated,124,0.88
+13,1561,6,expo,distractor,isolated,125,0
+13,1991,3,clear audiocassette,target,isolated,126,1
+13,1512,4,cup,distractor,isolated,127,0.8
+13,1888,2,block,target,isolated,128,0.89
+13,1616,4,large measuring cup,distractor,isolated,129,1
+13,1527,6,expo block,distractor,isolated,130,0
+13,3067,2,letter block,target,isolated,131,0.78
+13,2429,4,pyrex measuring cup (the one with the handle),target,isolated,132,1
+13,3730,2,bottom block,target,comparison,133,0
+13,2623,5,brown brush,target,isolated,134,1
+13,1448,4,measuring cup with the holder,distractor,isolated,135,1
+13,1488,2,toy block,target,isolated,136,1
+13,1439,5,brown brush,distractor,isolated,137,1
+13,4177,2,blue block,target,isolated,138,1
+13,4103,2,block with the B,target,isolated,139,1
+13,2711,6,eraser,distractor,isolated,140,0.89
+13,1991,2,block,target,isolated,141,0.78
+13,2066,7,red candle/holder,target,isolated,142,1
+13,1669,2,block with the B,distractor,isolated,143,0
+13,1834,7,red candle/holder,distractor,isolated,144,0
+13,1822,4,large measure cup,target,isolated,145,0.85
+13,3160,5,comb,target,isolated,146,1
+13,3409,6,black eraser,target,isolated,147,0.91
+13,2966,4,pyrex,distractor,isolated,148,0.7
+13,1792,1,glasses,distractor,isolated,149,0
+13,3119,4,measuring cup with the holder,target,isolated,150,0.98
+13,2024,2,B box,target,isolated,151,0.83
+14,11066,8,computer mouse,distractor,isolated,2,0.24
+14,8032,4,pyrex,distractor,isolated,3,0.64
+14,6855,4,large measuring cup,target,isolated,4,0.99
+14,6746,1,sunglasses,distractor,isolated,5,0.31
+14,6968,6,expo,distractor,isolated,6,0
+14,4398,5,brown brush,target,isolated,7,0.99
+14,6575,4,large measuring cup,target,comparison,8,0.99
+14,4123,2,B,target,isolated,9,0.99
+14,4035,3,clear audiocassette,target,isolated,10,1
+14,4854,2,alphabet block,distractor,isolated,11,1
+14,5041,1,sunglasses,target,isolated,12,1
+14,3986,3,tape,distractor,isolated,13,1
+14,3637,3,cassette tape,target,isolated,14,0.99
+14,7273,4,pyrex measuring cup (the one with the handle),distractor,isolated,15,0.57
+14,6053,4,measurement cup ... the large one with red letters,distractor,isolated,16,0.43
+14,4482,8,mouse,distractor,isolated,17,1
+14,4045,2,toy block,distractor,isolated,18,0.99
+14,3638,4,pyrex thing,target,isolated,19,0.99
+14,4286,4,pyrex measuring cup (with the handle),target,isolated,20,1
+14,6115,4,large measure cup,distractor,isolated,21,1
+14,4675,4,large cup,target,isolated,22,0.6
+14,5233,2,B block,distractor,isolated,23,0.24
+14,3883,8,grey mouse,target,isolated,24,1
+14,3634,5,comb,distractor,isolated,25,0.99
+14,5098,2,B,distractor,isolated,26,0
+14,18965,4,measuring cup,distractor,isolated,27,1
+14,5491,4,pyrex measuring cup (with the handle),distractor,isolated,28,0.28
+14,3125,5,brush,target,isolated,29,1
+14,8311,2,child&quotechars blue block,distractor,isolated,30,0.57
+14,3206,4,measuring cup,target,isolated,31,0.99
+14,5264,7,candlestick,distractor,isolated,32,0.64
+14,3827,7,lit candle,distractor,isolated,33,0.99
+14,5395,7,candle,target,isolated,34,1
+14,3776,2,alphabet block,target,isolated,35,1
+14,415612,7,small candle,distractor,comparison,36,0.61
+14,5585,4,pyrex measuring cup,target,isolated,37,1
+14,5803,6,white out,distractor,isolated,38,0
+14,4597,2,block with the blue writing,distractor,isolated,39,0.99
+14,3377,4,pyrex cup,target,isolated,40,0.99
+14,3107,3,tape,target,isolated,41,1
+14,3056,7,small candle,distractor,isolated,42,1
+14,3848,2,blue block,distractor,isolated,43,0.37
+14,3735,8,computer mouse,target,isolated,44,1
+14,26318,4,larger measuring cup,distractor,isolated,45,0.99
+14,3411,4,large measuring glass ... the pyrex,target,isolated,46,0.99
+14,4539,7,red candlestick,target,isolated,47,1
+14,4111,4,pyrex cup,distractor,isolated,48,0.32
+14,3649,4,measuring thing,target,isolated,49,0.99
+14,4470,2,child&quotechars blue block,target,isolated,50,0.99
+14,4238,5,brown brush,distractor,isolated,51,1
+14,3830,4,large pyrex measuring cup,distractor,isolated,52,0.34
+14,5852,4,measure cup,target,isolated,53,1
+14,3507,7,red candle,target,isolated,54,1
+14,5763,4,pyrex measuring cup (the one with the handle),target,isolated,55,1
+14,4430,4,pyrex measuring cup,distractor,isolated,56,0.3
+14,5033,4,large measuring glass ... the pyrex,distractor,isolated,57,0.39
+14,5988,2,blue B block,distractor,isolated,58,0.01
+14,3625,7,lit candle,target,isolated,59,0.99
+14,32460,6,eraser,distractor,isolated,60,1
+14,5475,2,block,target,isolated,61,0.99
+14,6461,4,cup,target,isolated,62,0.99
+14,4231,3,cassette,distractor,isolated,63,0
+14,3405,1,glasses,target,isolated,64,1
+14,4061,4,measuring cup with the holder,target,isolated,65,1
+14,5073,1,shades,distractor,isolated,66,0
+14,3780,6,eraser expo,target,isolated,67,1
+14,4880,7,red candle/holder,target,isolated,68,0.99
+14,3360,5,brush,distractor,isolated,69,1
+14,4491,2,bottom block,distractor,comparison,70,1
+14,3449,6,expo,target,isolated,71,1
+14,2979,6,expo block,target,isolated,72,0.99
+14,21869,4,large cup,distractor,isolated,73,0.99
+14,3599,8,silver mouse,distractor,isolated,74,0.99
+14,3910,5,hair curler,target,isolated,75,1
+14,3320,5,haircomb,target,isolated,76,0.99
+14,3652,2,block with the blue writing,target,isolated,77,1
+14,4504,7,red candle,distractor,isolated,78,0.32
+14,4304,5,haircomb,distractor,isolated,79,0.99
+14,3755,1,shades,target,isolated,80,1
+14,4734,2,toy block,target,isolated,81,0.99
+14,6288,4,larger measuring cup,target,isolated,82,1
+14,5170,3,cassette,target,isolated,83,0.99
+14,5060,4,large pyrex measuring cup,target,isolated,84,1
+14,3294,2,letter block,target,isolated,85,1
+14,5770,4,measuring cup with the holder,distractor,isolated,86,1
+14,3493,5,round hairbrush,target,isolated,87,1
+14,5094,4,big measuring cup,target,isolated,88,0.99
+14,3815,8,mouse,target,isolated,89,1
+14,3204,1,glasses,distractor,isolated,90,0.22
+14,4690,2,bottom block,target,comparison,91,0.56
+14,2797,7,red candlestick,distractor,isolated,92,0.38
+14,4114,7,red candle/holder,distractor,isolated,93,0.15
+14,4258,6,expo block,distractor,isolated,94,0
+14,10317,7,candle,distractor,isolated,95,1
+14,4072,5,comb,target,isolated,96,0
+14,3630,2,B cube,distractor,isolated,97,0.22
+14,4436,3,cassette tape,distractor,isolated,98,0
+14,5897,4,measurement cup ... the large one with red letters,target,isolated,99,1
+14,6869,8,grey mouse,distractor,isolated,100,1
+14,4415,5,hair curler,distractor,isolated,101,0
+14,4253,5,hairbrush,distractor,isolated,102,0.99
+14,5616,6,black eraser,distractor,isolated,103,0.28
+14,2843,6,dry eraser,target,isolated,104,1
+14,4598,2,B box,distractor,isolated,105,0.01
+14,3506,1,black sunglasses,target,isolated,106,1
+14,3503,6,expo eraser,target,isolated,107,0.99
+14,4138,6,expo eraser,distractor,isolated,108,0.18
+14,7572,5,round hairbrush,distractor,isolated,109,0.34
+14,6467,2,block with the B,target,isolated,110,0.99
+14,22483,2,letter block,distractor,isolated,111,0.99
+14,3287,2,block toy,target,isolated,112,1
+14,5350,1,black sunglasses,distractor,isolated,113,0
+14,7775,4,measure cup,distractor,isolated,114,0.99
+14,5642,2,block with the B,distractor,isolated,115,0.2
+14,7853,4,large measuring cup,distractor,comparison,116,0.72
+14,3248,2,the bluish block with a B,distractor,isolated,117,0.31
+14,3677,2,B block,target,isolated,118,1
+14,7263,4,measuring cup with handle,target,isolated,119,0.99
+14,7450,4,cup,distractor,isolated,120,0.73
+14,3564,7,small candle,target,isolated,121,0.67
+14,3718,6,eraser,target,isolated,122,0.99
+14,3778,3,clear audiocassette,distractor,isolated,123,0
+14,3113,7,candlestick,target,isolated,124,0.76
+14,3408,2,block,target,isolated,125,0.99
+14,4522,4,large measuring cup,distractor,isolated,126,1
+14,5311,2,block toy,distractor,isolated,127,1
+14,9828,5,hairbrush,target,isolated,128,1
+14,6771,4,measuring thing,distractor,isolated,129,0.99
+14,3207,2,B cube,target,isolated,130,1
+14,4692,6,white out,target,isolated,131,0
+14,4986,6,dry eraser,distractor,isolated,132,0.28
+14,5954,4,measuring cup with handle,distractor,isolated,133,1
+14,3937,4,pyrex thing,distractor,isolated,134,0.31
+14,3408,4,large measure cup,target,isolated,135,1
+14,4358,6,eraser expo,distractor,isolated,136,0.28
+14,3237,6,erase,target,isolated,137,0.99
+14,3617,2,B box,target,isolated,138,0.99
+14,3821,2,block,distractor,isolated,139,0.99
+14,6496,7,small candle,target,comparison,140,0.66
+14,3609,8,silver mouse,target,isolated,141,1
+14,6728,2,bottom block,distractor,isolated,142,0.21
+14,4997,2,the bluish block with a B,target,isolated,143,0.99
+14,2967,4,pyrex,target,isolated,144,0.99
+14,4002,2,blue B block,target,isolated,145,0.99
+14,3671,2,bottom block,target,isolated,146,0.27
+14,3641,6,erase,distractor,isolated,147,0.99
+14,4263,2,block,distractor,isolated,148,1
+14,3237,2,blue block,target,isolated,149,0.78
+14,3383,4,big measuring cup,distractor,isolated,150,0.99
+14,3953,6,black eraser,target,isolated,151,1
+15,6791,4,big measuring cup,distractor,isolated,2,0.98
+15,4369,4,measure cup,target,isolated,3,1
+15,2706,4,pyrex cup,target,isolated,4,1
+15,4243,4,pyrex measuring cup (the one with the handle),target,isolated,5,1
+15,3678,6,white out,target,isolated,6,0
+15,2937,2,B block,distractor,isolated,7,0
+15,2600,5,haircomb,distractor,isolated,8,0
+15,2964,2,block with the B,target,isolated,9,1
+15,3223,2,toy block,distractor,isolated,10,1
+15,2708,4,pyrex thing,distractor,isolated,11,0.5
+15,2700,8,mouse,distractor,isolated,12,1
+15,2512,5,comb,target,isolated,13,0
+15,5125,6,expo eraser,distractor,isolated,14,1
+15,3734,4,measure cup,distractor,isolated,15,1
+15,2573,4,measuring cup,distractor,isolated,16,1
+15,3432,8,computer mouse,target,isolated,17,1
+15,4774,7,small candle,target,comparison,18,1
+15,2976,4,larger measuring cup,distractor,isolated,19,1
+15,3914,6,expo,target,isolated,20,0.31
+15,3362,4,measuring thing,distractor,isolated,21,0.19
+15,2599,3,tape,distractor,isolated,22,1
+15,2775,4,cup,target,isolated,23,0.19
+15,4462,2,child&quotechars blue block,target,isolated,24,0.14
+15,3110,8,grey mouse,target,isolated,25,0.5
+15,2772,6,eraser,distractor,isolated,26,1
+15,2988,2,block toy,target,isolated,27,0
+15,2533,3,cassette tape,distractor,isolated,28,0
+15,2298,5,comb,distractor,isolated,29,0
+15,4661,6,dry eraser,distractor,isolated,30,0.39
+15,2240,5,hair curler,distractor,isolated,31,0
+15,3012,4,big measuring cup,target,isolated,32,1
+15,2402,2,alphabet block,distractor,isolated,33,1
+15,2701,3,clear audiocassette,distractor,isolated,34,0
+15,2575,5,brush,distractor,isolated,35,1
+15,2441,8,mouse,target,isolated,36,1
+15,2619,2,B box,target,isolated,37,0
+15,2877,4,pyrex,target,isolated,38,0.14
+15,4218,4,large measure cup,target,isolated,39,0.84
+15,2377,8,computer mouse,distractor,isolated,40,0
+15,3460,4,large measuring glass ... the pyrex,target,isolated,41,0.75
+15,2327,4,large cup,distractor,isolated,42,0.1
+15,2500,2,blue block,distractor,isolated,43,0
+15,2621,6,expo eraser,target,isolated,44,1
+15,2308,7,red candlestick,target,isolated,45,1
+15,4965,5,brown brush,target,isolated,46,0.71
+15,2991,2,letter block,target,isolated,47,0.73
+15,2899,7,small candle,distractor,isolated,48,1
+15,3245,2,block,distractor,isolated,49,0.86
+15,3239,2,bottom block,target,comparison,50,0
+15,2534,6,eraser,target,isolated,51,1
+15,2415,4,large measuring cup,distractor,isolated,52,1
+15,2273,3,clear audiocassette,target,isolated,53,1
+15,2419,4,measuring cup with handle,target,isolated,54,1
+15,2159,3,cassette tape,target,isolated,55,1
+15,2801,2,B,target,isolated,56,0.02
+15,2071,8,silver mouse,target,isolated,57,1
+15,2309,4,pyrex measuring cup,distractor,isolated,58,1
+15,3911,2,the bluish block with a B,distractor,isolated,59,0.01
+15,3772,4,measuring cup with the holder,distractor,isolated,60,0.12
+15,3521,2,B box,distractor,isolated,61,0
+15,3434,2,block with the blue writing,target,isolated,62,1
+15,4040,1,shades,target,isolated,63,1
+15,2847,4,larger measuring cup,target,isolated,64,0.77
+15,2743,5,round hairbrush,target,isolated,65,1
+15,3547,2,B block,target,isolated,66,0.54
+15,2023,4,pyrex cup,distractor,isolated,67,0.72
+15,3471,2,blue B block,target,isolated,68,0.14
+15,5386,1,black sunglasses,distractor,isolated,69,0.01
+15,3962,2,block,target,isolated,70,0.54
+15,2349,6,dry eraser,target,isolated,71,1
+15,2965,6,erase,target,isolated,72,0
+15,2742,4,measuring thing,target,isolated,73,0.14
+15,2602,7,small candle,target,isolated,74,1
+15,3937,3,tape,target,isolated,75,0.26
+15,2938,4,large measure cup,distractor,isolated,76,0.88
+15,2210,6,expo block,distractor,isolated,77,0
+15,2244,7,candlestick,target,isolated,78,1
+15,3310,2,block with the B,distractor,isolated,79,0
+15,2064,1,black sunglasses,target,isolated,80,1
+15,1938,3,cassette,distractor,isolated,81,0
+15,3052,7,red candlestick,distractor,isolated,82,0
+15,3111,4,measuring cup with handle,distractor,isolated,83,1
+15,2528,7,candle,target,isolated,84,1
+15,3497,4,measuring cup with the holder,target,isolated,85,0.67
+15,2460,6,erase,distractor,isolated,86,0
+15,2537,4,large pyrex measuring cup,distractor,isolated,87,1
+15,2439,2,bottom block,distractor,isolated,88,0
+15,2387,2,child&quotechars blue block,distractor,isolated,89,0
+15,2376,6,white out,distractor,isolated,90,0
+15,2268,7,candlestick,distractor,isolated,91,0
+15,2374,4,pyrex,distractor,isolated,92,0.5
+15,2157,2,block,target,isolated,93,0.48
+15,2867,4,pyrex measuring cup (with the handle),distractor,isolated,94,1
+15,3213,4,large measuring cup,distractor,comparison,95,1
+15,2846,7,red candle/holder,target,isolated,96,1
+15,2214,6,expo,distractor,isolated,97,0
+15,2214,6,eraser expo,distractor,isolated,98,0
+15,3462,4,cup,distractor,isolated,99,0.12
+15,2091,1,shades,distractor,isolated,100,0
+15,2688,4,pyrex thing,target,isolated,101,0.14
+15,3119,8,silver mouse,distractor,isolated,102,0
+15,2340,7,lit candle,target,isolated,103,1
+15,2566,4,large pyrex measuring cup,target,isolated,104,1
+15,2887,7,small candle,distractor,comparison,105,1
+15,2244,5,brush,target,isolated,106,1
+15,2970,2,letter block,distractor,isolated,107,0.18
+15,2271,2,bottom block,target,isolated,108,0
+15,2473,5,haircomb,target,isolated,109,0
+15,2452,1,glasses,target,isolated,110,1
+15,2942,6,expo block,target,isolated,111,0
+15,2059,5,hairbrush,distractor,isolated,112,1
+15,3498,2,the bluish block with a B,target,isolated,113,1
+15,2767,5,round hairbrush,distractor,isolated,114,0
+15,3006,5,brown brush,distractor,isolated,115,1
+15,2314,2,toy block,target,isolated,116,1
+15,2077,2,block,distractor,isolated,117,0.46
+15,2875,2,blue B block,distractor,isolated,118,0
+15,3558,4,measurement cup ... the large one with red letters,target,isolated,119,1
+15,2389,1,sunglasses,target,isolated,120,1
+15,2445,5,hair curler,target,isolated,121,0
+15,2313,1,glasses,distractor,isolated,122,0
+15,2184,2,alphabet block,target,isolated,123,1
+15,2298,2,block toy,distractor,isolated,124,0
+15,2455,7,red candle,target,isolated,125,1
+15,2139,2,B cube,distractor,isolated,126,0
+15,2860,4,pyrex measuring cup (with the handle),target,isolated,127,1
+15,2505,4,large cup,target,isolated,128,0.1
+15,2221,1,sunglasses,distractor,isolated,129,0
+15,2071,4,large measuring cup,target,isolated,130,1
+15,2979,6,eraser expo,target,isolated,131,0
+15,2069,7,candle,distractor,isolated,132,1
+15,2083,7,red candle,distractor,isolated,133,0
+15,2624,8,grey mouse,distractor,isolated,134,1
+15,3250,4,large measuring glass ... the pyrex,distractor,isolated,135,0.6
+15,2442,7,lit candle,distractor,isolated,136,1
+15,2895,2,bottom block,distractor,comparison,137,0
+15,3215,2,blue block,target,isolated,138,0
+15,3134,4,pyrex measuring cup (the one with the handle),distractor,isolated,139,1
+15,2284,4,pyrex measuring cup,target,isolated,140,1
+15,2349,6,black eraser,distractor,isolated,141,0
+15,2399,7,red candle/holder,distractor,isolated,142,0
+15,2756,2,B cube,target,isolated,143,0
+15,3997,4,measurement cup ... the large one with red letters,distractor,isolated,144,0
+15,2222,5,hairbrush,target,isolated,145,1
+15,2200,2,B,distractor,isolated,146,0
+15,3410,6,black eraser,target,isolated,147,1
+15,4282,4,measuring cup,target,isolated,148,1
+15,2408,3,cassette,target,isolated,149,1
+15,2876,2,block with the blue writing,distractor,isolated,150,1
+15,2465,4,large measuring cup,target,comparison,151,1
+16,7435,2,alphabet block,target,isolated,2,0.57
+16,3602,3,tape,target,isolated,3,0.87
+16,3447,5,hair curler,distractor,isolated,4,0.3
+16,1970,6,dry eraser,distractor,isolated,5,0.89
+16,4609,2,B block,distractor,isolated,6,0.14
+16,4163,3,clear audiocassette,target,isolated,7,0.96
+16,6946,7,small candle,target,comparison,8,0.91
+16,5754,4,large measure cup,distractor,isolated,9,0.93
+16,3215,4,measure cup,distractor,isolated,10,0.84
+16,3936,5,round hairbrush,target,isolated,11,0.97
+16,2564,2,block with the B,target,isolated,12,0.96
+16,5844,6,expo,target,isolated,13,0.62
+16,4251,4,large measuring glass ... the pyrex,distractor,isolated,14,0.77
+16,3950,3,cassette,distractor,isolated,15,0.03
+16,7457,2,block with the blue writing,target,isolated,16,0.78
+16,3356,2,block,target,isolated,17,0.85
+16,3417,3,cassette tape,target,isolated,18,0.95
+16,3480,4,larger measuring cup,distractor,isolated,19,0.82
+16,4152,4,pyrex,distractor,isolated,20,0.29
+16,5204,2,B box,target,isolated,21,0.45
+16,2438,4,large cup,distractor,isolated,22,0.58
+16,4099,7,small candle,distractor,isolated,23,0.97
+16,5042,4,measuring thing,distractor,isolated,24,0.33
+16,5206,4,large cup,target,isolated,25,0.57
+16,21094,4,large measuring cup,target,comparison,26,0.64
+16,2641,3,cassette tape,distractor,isolated,27,0
+16,3919,7,small candle,target,isolated,28,0.77
+16,4201,4,pyrex measuring cup (with the handle),distractor,isolated,29,0.78
+16,17593,5,brush,distractor,isolated,30,0.85
+16,7794,2,block,distractor,isolated,31,0.75
+16,5913,2,B,distractor,isolated,32,0.01
+16,3204,2,B,target,isolated,33,0.4
+16,3593,4,large measuring cup,distractor,isolated,34,0.69
+16,5176,7,red candle/holder,distractor,isolated,35,0.1
+16,2638,4,pyrex cup,target,isolated,36,0.88
+16,2652,4,big measuring cup,target,isolated,37,0.8
+16,1984,3,clear audiocassette,distractor,isolated,38,0
+16,2945,7,red candle/holder,target,isolated,39,0.96
+16,3418,2,bottom block,target,isolated,40,0.37
+16,4452,8,grey mouse,distractor,isolated,41,0.93
+16,2725,6,eraser expo,target,isolated,42,0.8
+16,2971,6,dry eraser,target,isolated,43,0.8
+16,4067,8,mouse,target,isolated,44,0.95
+16,3070,7,candle,distractor,isolated,45,0.8
+16,2810,2,toy block,distractor,isolated,46,0.93
+16,3399,5,brown brush,distractor,isolated,47,0.23
+16,21965,5,round hairbrush,distractor,isolated,48,0.28
+16,3514,2,the bluish block with a B,distractor,isolated,49,0.13
+16,2688,5,brush,target,isolated,50,0.75
+16,1983,4,cup,distractor,isolated,51,0.79
+16,3308,6,erase,distractor,isolated,52,0.68
+16,1704,7,red candlestick,target,isolated,53,0.88
+16,3043,4,large measuring cup,distractor,comparison,54,0.67
+16,2399,4,pyrex measuring cup,target,isolated,55,0.89
+16,2018,2,toy block,target,isolated,56,0.89
+16,3481,2,bottom block,target,comparison,57,0.28
+16,3767,4,measuring cup with the holder,target,isolated,58,0.66
+16,2361,8,silver mouse,target,isolated,59,0.92
+16,5361,1,shades,target,isolated,60,0.8
+16,2731,4,pyrex thing,target,isolated,61,0.37
+16,2215,4,cup,target,isolated,62,0.63
+16,2883,2,bottom block,distractor,comparison,63,0.21
+16,2737,5,hair curler,target,isolated,64,0.15
+16,2956,2,alphabet block,distractor,isolated,65,0.72
+16,2097,2,letter block,distractor,isolated,66,0.76
+16,4321,7,lit candle,target,isolated,67,0.95
+16,8013,6,black eraser,target,isolated,68,0.85
+16,3073,5,comb,distractor,isolated,69,0.19
+16,1769,4,large pyrex measuring cup,target,isolated,70,0.77
+16,2059,4,pyrex measuring cup (with the handle),target,isolated,71,0.86
+16,2381,5,hairbrush,distractor,isolated,72,0.83
+16,4700,1,black sunglasses,distractor,isolated,73,0.04
+16,3548,1,shades,distractor,isolated,74,0.04
+16,4024,4,pyrex measuring cup (the one with the handle),target,isolated,75,0.79
+16,4071,2,B cube,target,isolated,76,0.71
+16,5488,2,blue B block,distractor,isolated,77,0.21
+16,1874,4,measuring cup with handle,distractor,isolated,78,0.73
+16,2203,8,mouse,distractor,isolated,79,0.93
+16,3450,4,measurement cup ... the large one with red letters,distractor,isolated,80,0.25
+16,2483,6,expo,distractor,isolated,81,0.14
+16,6994,2,blue block,distractor,isolated,82,0.27
+16,2006,8,computer mouse,distractor,isolated,83,0.09
+16,4473,4,pyrex measuring cup (the one with the handle),distractor,isolated,84,0.25
+16,2034,1,glasses,distractor,isolated,85,0.01
+16,1614,7,candle,target,isolated,86,0.89
+16,2699,6,expo block,distractor,isolated,87,0.04
+16,1967,4,measuring cup,distractor,isolated,88,0.84
+16,2225,2,blue block,target,isolated,89,0.57
+16,1799,7,candlestick,target,isolated,90,0.92
+16,2264,8,grey mouse,target,isolated,91,0.97
+16,3682,4,pyrex,target,isolated,92,0.68
+16,2062,7,candlestick,distractor,isolated,93,0.28
+16,2437,3,tape,distractor,isolated,94,0.87
+16,1918,6,eraser,distractor,isolated,95,0.95
+16,1503,4,measuring thing,target,isolated,96,0.77
+16,1506,4,large measuring cup,target,isolated,97,0.83
+16,2246,5,comb,target,isolated,98,0.09
+16,1868,7,red candle,target,isolated,99,0.94
+16,2063,7,red candlestick,distractor,isolated,100,0.06
+16,1992,6,eraser,target,isolated,101,0.78
+16,3797,8,silver mouse,distractor,isolated,102,0.57
+16,2890,7,small candle,distractor,comparison,103,0.92
+16,2365,2,block toy,distractor,isolated,104,0.75
+16,2611,4,pyrex cup,distractor,isolated,105,0.36
+16,2073,7,red candle,distractor,isolated,106,0.28
+16,2126,4,measure cup,target,isolated,107,0.55
+16,2200,4,measuring cup with the holder,distractor,isolated,108,0.67
+16,3110,6,black eraser,distractor,isolated,109,0.07
+16,2904,4,measurement cup ... the large one with red letters,target,isolated,110,0.73
+16,3747,4,larger measuring cup,target,isolated,111,0.79
+16,4343,2,B block,target,isolated,112,0.64
+16,3477,4,pyrex measuring cup,distractor,isolated,113,0.37
+16,2988,5,haircomb,target,isolated,114,0.12
+16,3320,4,large pyrex measuring cup,distractor,isolated,115,0.42
+16,2547,2,block toy,target,isolated,116,0.72
+16,2289,2,the bluish block with a B,target,isolated,117,0.79
+16,2330,4,measuring cup,target,isolated,118,0.82
+16,1701,2,bottom block,distractor,isolated,119,0.69
+16,2493,6,expo eraser,target,isolated,120,0.84
+16,2833,4,pyrex thing,distractor,isolated,121,0.22
+16,3037,1,sunglasses,target,isolated,122,0.94
+16,2362,2,block,target,isolated,123,0.76
+16,2442,7,lit candle,distractor,isolated,124,0.95
+16,2940,5,haircomb,distractor,isolated,125,0.08
+16,2917,6,erase,target,isolated,126,0.32
+16,2509,2,block with the blue writing,distractor,isolated,127,0.79
+16,2985,2,B box,distractor,isolated,128,0.17
+16,2774,6,expo block,target,isolated,129,0.28
+16,2076,1,glasses,target,isolated,130,0.87
+16,2419,6,white out,target,isolated,131,0.06
+16,1867,4,large measure cup,target,isolated,132,0.72
+16,1323,2,block,distractor,isolated,133,0.77
+16,2761,5,brown brush,target,isolated,134,0.75
+16,1801,8,computer mouse,target,isolated,135,0.96
+16,1709,1,black sunglasses,target,isolated,136,0.95
+16,2342,5,hairbrush,target,isolated,137,0.94
+16,2000,2,B cube,distractor,isolated,138,0.1
+16,1983,6,eraser expo,distractor,isolated,139,0
+16,3415,2,child&quotechars blue block,distractor,isolated,140,0.42
+16,1788,4,large measuring glass ... the pyrex,target,isolated,141,0.71
+16,2072,1,sunglasses,distractor,isolated,142,0
+16,1307,2,child&quotechars blue block,target,isolated,143,0.72
+16,1847,4,measuring cup with handle,target,isolated,144,0.78
+16,1406,2,blue B block,target,isolated,145,0.72
+16,1817,4,big measuring cup,distractor,isolated,146,0.59
+16,2006,3,cassette,target,isolated,147,0.91
+16,3124,6,white out,distractor,isolated,148,0.1
+16,2684,6,expo eraser,distractor,isolated,149,0.02
+16,2637,2,block with the B,distractor,isolated,150,0.15
+16,2230,2,letter block,target,isolated,151,0.79
+17,3717,1,sunglasses,distractor,isolated,2,0.61
+17,2146,5,hairbrush,distractor,isolated,3,1
+17,1994,2,blue B block,target,isolated,4,0.81
+17,3780,2,block with the B,distractor,isolated,5,0
+17,1706,8,mouse,distractor,isolated,6,0.96
+17,2085,4,large cup,target,isolated,7,0.91
+17,2755,8,mouse,target,isolated,8,0.93
+17,1749,8,computer mouse,target,isolated,9,1
+17,1844,6,white out,distractor,isolated,10,0
+17,1685,5,hair curler,distractor,isolated,11,0
+17,1436,2,blue block,distractor,isolated,12,0.84
+17,1568,6,expo,target,isolated,13,0.79
+17,4871,2,B cube,target,isolated,14,0.98
+17,2457,4,large measuring cup,target,comparison,15,0.98
+17,1669,1,glasses,distractor,isolated,16,0.86
+17,1965,2,bottom block,distractor,comparison,17,0.94
+17,1752,6,erase,target,isolated,18,0.83
+17,4313,6,black eraser,distractor,isolated,19,0
+17,2638,4,larger measuring cup,distractor,isolated,20,0.99
+17,1628,7,small candle,distractor,isolated,21,0.88
+17,2385,6,expo eraser,distractor,isolated,22,0
+17,1282,2,block toy,distractor,isolated,23,0.89
+17,1469,8,silver mouse,distractor,isolated,24,0.77
+17,3488,3,cassette tape,distractor,isolated,25,0
+17,1424,7,lit candle,target,isolated,26,0.95
+17,1804,6,eraser,target,isolated,27,1
+17,2483,4,measuring thing,distractor,isolated,28,0.78
+17,2509,1,shades,target,isolated,29,0.97
+17,2421,4,large measure cup,distractor,isolated,30,1
+17,1374,7,lit candle,distractor,isolated,31,0.84
+17,2011,5,round hairbrush,distractor,isolated,32,0.01
+17,1685,4,large measuring cup,distractor,comparison,33,1
+17,2334,7,candle,distractor,isolated,34,0.98
+17,1216,4,pyrex,distractor,isolated,35,0.97
+17,1328,6,dry eraser,target,isolated,36,1
+17,3262,1,black sunglasses,distractor,isolated,37,0.16
+17,1427,5,comb,distractor,isolated,38,1
+17,1876,2,B block,distractor,isolated,39,0.49
+17,2320,5,hairbrush,target,isolated,40,1
+17,1966,6,erase,distractor,isolated,41,0.78
+17,1308,7,candlestick,target,isolated,42,0.93
+17,859,4,measure cup,distractor,isolated,43,0.71
+17,3601,4,large measuring glass ... the pyrex,distractor,isolated,44,0.89
+17,1982,4,pyrex measuring cup (the one with the handle),target,isolated,45,0.98
+17,1253,4,large measure cup,target,isolated,46,0.95
+17,2233,2,bottom block,distractor,isolated,47,0.03
+17,1155,7,red candle/holder,distractor,isolated,48,0.86
+17,1832,1,shades,distractor,isolated,49,0.72
+17,1846,4,measuring cup with handle,distractor,isolated,50,0.97
+17,2107,2,the bluish block with a B,target,isolated,51,0.88
+17,3169,6,dry eraser,distractor,isolated,52,0
+17,1398,4,big measuring cup,target,isolated,53,0.97
+17,1075,4,measure cup,target,isolated,54,0.99
+17,1032,4,pyrex,target,isolated,55,1
+17,2332,4,pyrex thing,target,isolated,56,0.98
+17,1742,3,tape,target,isolated,57,0.94
+17,2249,2,bottom block,target,isolated,58,0
+17,2792,6,eraser expo,distractor,isolated,59,0
+17,1811,2,B,distractor,isolated,60,0
+17,2280,2,child&quotechars blue block,target,isolated,61,0.81
+17,1404,8,grey mouse,distractor,isolated,62,0.94
+17,1556,2,blue block,target,isolated,63,0.76
+17,1348,2,block with the blue writing,target,isolated,64,0.87
+17,3383,4,cup,target,isolated,65,0.74
+17,2142,2,block,distractor,isolated,66,1
+17,2020,8,computer mouse,distractor,isolated,67,0
+17,3110,4,measurement cup ... the large one with red letters,target,isolated,68,0.97
+17,5916,7,small candle,target,comparison,69,0.1
+17,2593,4,large pyrex measuring cup,distractor,isolated,70,1
+17,10174,7,candlestick,distractor,isolated,71,0.86
+17,2447,7,red candle/holder,target,isolated,72,1
+17,1322,4,measuring cup with handle,target,isolated,73,0.91
+17,1263,7,red candlestick,target,isolated,74,0.95
+17,1231,4,pyrex measuring cup (the one with the handle),distractor,isolated,75,1
+17,1436,3,clear audiocassette,target,isolated,76,1
+17,1700,4,cup,distractor,isolated,77,0.77
+17,2968,7,candle,target,isolated,78,1
+17,3506,2,bottom block,target,comparison,79,0
+17,1402,4,pyrex cup,target,isolated,80,1
+17,2024,4,large measuring glass ... the pyrex,target,isolated,81,1
+17,4482,4,pyrex thing,distractor,isolated,82,1
+17,1279,2,block toy,target,isolated,83,0.9
+17,1368,4,pyrex measuring cup (with the handle),target,isolated,84,0.95
+17,1503,3,tape,distractor,isolated,85,1
+17,1264,3,cassette tape,target,isolated,86,1
+17,1361,7,small candle,target,isolated,87,0.52
+17,1112,4,measurement cup ... the large one with red letters,distractor,isolated,88,0.77
+17,1539,4,pyrex cup,distractor,isolated,89,1
+17,1391,5,haircomb,distractor,isolated,90,1
+17,2564,2,B,target,isolated,91,0.59
+17,1850,7,red candle,distractor,isolated,92,0
+17,1196,4,big measuring cup,distractor,isolated,93,1
+17,1085,4,measuring cup,distractor,isolated,94,1
+17,1824,2,B box,target,isolated,95,0.87
+17,2011,2,block with the blue writing,distractor,isolated,96,0.96
+17,3676,5,brown brush,target,isolated,97,0.13
+17,1500,3,cassette,distractor,isolated,98,0
+17,2461,2,block,target,isolated,99,0.89
+17,1410,6,expo,distractor,isolated,100,0
+17,2180,4,large cup,distractor,isolated,101,1
+17,3070,6,black eraser,target,isolated,102,0.8
+17,20532,3,cassette,target,isolated,103,1
+17,1429,2,toy block,target,isolated,104,0.83
+17,1391,2,block with the B,target,isolated,105,0.88
+17,2053,6,eraser expo,target,isolated,106,0.78
+17,1604,5,brown brush,distractor,isolated,107,0
+17,1324,4,measuring cup,target,isolated,108,0.97
+17,1457,2,blue B block,distractor,isolated,109,0
+17,1095,2,alphabet block,target,isolated,110,1
+17,982,1,sunglasses,target,isolated,111,1
+17,1061,5,haircomb,target,isolated,112,0.99
+17,972,4,large measuring cup,distractor,isolated,113,1
+17,1394,3,clear audiocassette,distractor,isolated,114,0
+17,1143,2,block,distractor,isolated,115,1
+17,1189,2,toy block,distractor,isolated,116,0.9
+17,1719,6,expo block,target,isolated,117,0
+17,1633,2,B cube,distractor,isolated,118,0
+17,1308,4,large measuring cup,target,isolated,119,1
+17,1655,2,child&quotechars blue block,distractor,isolated,120,1
+17,1567,2,B box,distractor,isolated,121,0
+17,1756,5,round hairbrush,target,isolated,122,0.96
+17,1489,4,pyrex measuring cup,distractor,isolated,123,0.96
+17,2029,4,pyrex measuring cup,target,isolated,124,1
+17,1880,4,larger measuring cup,target,isolated,125,1
+17,1874,5,brush,distractor,isolated,126,0.98
+17,1424,6,eraser,distractor,isolated,127,1
+17,2382,6,expo block,distractor,isolated,128,0
+17,1168,7,red candle,target,isolated,129,1
+17,1128,4,large pyrex measuring cup,target,isolated,130,1
+17,1297,5,brush,target,isolated,131,0.46
+17,1947,7,red candlestick,distractor,isolated,132,0
+17,1631,2,alphabet block,distractor,isolated,133,0.89
+17,2447,7,small candle,distractor,comparison,134,1
+17,1961,6,white out,target,isolated,135,0
+17,1879,8,grey mouse,target,isolated,136,1
+17,1318,4,measuring cup with the holder,target,isolated,137,1
+17,2736,2,letter block,target,isolated,138,0.99
+17,1031,1,glasses,target,isolated,139,1
+17,1389,1,black sunglasses,target,isolated,140,1
+17,1149,4,measuring thing,target,isolated,141,1
+17,1438,4,measuring cup with the holder,distractor,isolated,142,0.8
+17,1882,2,the bluish block with a B,distractor,isolated,143,0.01
+17,1727,5,hair curler,target,isolated,144,0.8
+17,1487,8,silver mouse,target,isolated,145,0.88
+17,1402,2,letter block,distractor,isolated,146,1
+17,2584,6,expo eraser,target,isolated,147,1
+17,1974,5,comb,target,isolated,148,1
+17,1523,4,pyrex measuring cup (with the handle),distractor,isolated,149,0.93
+17,3374,2,B block,target,isolated,150,0.88
+17,1274,2,block,target,isolated,151,1
+18,8957,6,expo block,distractor,isolated,2,0
+18,4854,7,lit candle,target,isolated,3,1
+18,3991,1,shades,target,isolated,4,0.83
+18,17777,2,bottom block,distractor,comparison,5,0.49
+18,3056,7,red candlestick,distractor,isolated,6,0
+18,9726,4,large measuring cup,distractor,isolated,7,0.87
+18,3963,6,expo eraser,target,isolated,8,1
+18,1926,8,mouse,target,isolated,9,1
+18,2119,4,large measuring glass ... the pyrex,distractor,isolated,10,1
+18,8093,6,expo eraser,distractor,isolated,11,0.25
+18,2148,3,cassette tape,target,isolated,12,1
+18,7965,4,pyrex cup,target,isolated,13,0.69
+18,4240,5,haircomb,distractor,isolated,14,1
+18,2911,6,erase,target,isolated,15,0.35
+18,1686,3,tape,distractor,isolated,16,1
+18,1556,5,brush,distractor,isolated,17,1
+18,4003,2,B cube,distractor,isolated,18,0.15
+18,2229,4,pyrex,distractor,isolated,19,0
+18,5356,2,B cube,target,isolated,20,0.79
+18,3533,3,tape,target,isolated,21,0.77
+18,9039,7,small candle,target,comparison,22,1
+18,4173,6,erase,distractor,isolated,23,0.24
+18,3261,2,alphabet block,distractor,isolated,24,1
+18,4097,4,cup,distractor,isolated,25,0.29
+18,2581,7,small candle,target,isolated,26,1
+18,6078,4,pyrex measuring cup (with the handle),distractor,isolated,27,0.2
+18,1811,8,grey mouse,target,isolated,28,1
+18,4178,2,the bluish block with a B,target,isolated,29,1
+18,1926,7,lit candle,distractor,isolated,30,1
+18,2721,6,dry eraser,distractor,isolated,31,0
+18,1751,6,white out,distractor,isolated,32,0
+18,3643,4,large measure cup,target,isolated,33,0.71
+18,6908,8,silver mouse,distractor,isolated,34,0.48
+18,1963,5,comb,distractor,isolated,35,1
+18,8153,6,eraser expo,target,isolated,36,0.56
+18,3228,2,bottom block,target,isolated,37,0.11
+18,3011,4,measuring thing,distractor,isolated,38,0.56
+18,3064,2,block toy,target,isolated,39,0.82
+18,5046,5,hair curler,target,isolated,40,0.84
+18,2501,4,pyrex cup,distractor,isolated,41,0
+18,1522,7,red candlestick,target,isolated,42,1
+18,1298,8,silver mouse,target,isolated,43,1
+18,4770,4,larger measuring cup,distractor,isolated,44,0.65
+18,5178,2,child&quotechars blue block,target,isolated,45,0.86
+18,1680,4,large measuring glass ... the pyrex,target,isolated,46,1
+18,2079,7,candle,distractor,isolated,47,1
+18,4931,5,brown brush,distractor,isolated,48,0.14
+18,1751,2,block,target,isolated,49,1
+18,1671,6,eraser,distractor,isolated,50,1
+18,5608,2,blue B block,distractor,isolated,51,0.11
+18,2719,6,expo block,target,isolated,52,0.09
+18,13501,4,measurement cup ... the large one with red letters,target,isolated,53,0.66
+18,2618,2,B box,distractor,isolated,54,0.09
+18,3253,6,expo,target,isolated,55,0.36
+18,2520,1,glasses,target,isolated,56,0.9
+18,5944,4,measurement cup ... the large one with red letters,distractor,isolated,57,0
+18,2759,4,large cup,distractor,isolated,58,0.64
+18,2676,2,block,target,isolated,59,0.84
+18,1829,8,mouse,distractor,isolated,60,1
+18,3559,2,alphabet block,target,isolated,61,0.55
+18,6498,2,bottom block,target,comparison,62,0
+18,2247,1,black sunglasses,target,isolated,63,1
+18,2390,6,expo,distractor,isolated,64,0
+18,3373,7,red candle/holder,target,isolated,65,1
+18,2970,4,pyrex thing,distractor,isolated,66,0
+18,2088,6,dry eraser,target,isolated,67,1
+18,6238,4,pyrex measuring cup (with the handle),target,isolated,68,0.72
+18,2132,7,red candle/holder,distractor,isolated,69,0
+18,2427,4,large measure cup,distractor,isolated,70,0.65
+18,2856,2,block toy,distractor,isolated,71,0.76
+18,3332,6,black eraser,distractor,isolated,72,0.05
+18,2805,1,shades,distractor,isolated,73,0
+18,4430,4,pyrex thing,target,isolated,74,0.43
+18,2903,2,block,distractor,isolated,75,1
+18,1969,3,clear audiocassette,distractor,isolated,76,0
+18,8209,5,round hairbrush,target,isolated,77,0.52
+18,2123,6,white out,target,isolated,78,0
+18,2439,2,toy block,target,isolated,79,0.99
+18,2593,4,pyrex measuring cup,target,isolated,80,0.69
+18,3164,2,B block,distractor,isolated,81,0.1
+18,3300,2,block with the B,target,isolated,82,0.86
+18,2248,5,round hairbrush,distractor,isolated,83,0
+18,2828,7,small candle,distractor,comparison,84,1
+18,2384,3,cassette,target,isolated,85,1
+18,2560,4,measuring cup with handle,target,isolated,86,0.7
+18,2909,1,glasses,distractor,isolated,87,0.38
+18,1684,1,sunglasses,target,isolated,88,1
+18,1745,3,cassette,distractor,isolated,89,0
+18,4530,2,block with the blue writing,target,isolated,90,0.67
+18,3358,5,brown brush,target,isolated,91,0.72
+18,6341,2,B box,target,isolated,92,0.45
+18,10279,2,blue B block,target,isolated,93,0.83
+18,2844,2,B,target,isolated,94,0.63
+18,5551,4,pyrex measuring cup,distractor,isolated,95,0.07
+18,2775,4,measuring cup with the holder,target,isolated,96,0.66
+18,2375,4,large measuring cup,target,isolated,97,0.67
+18,2843,7,small candle,distractor,isolated,98,1
+18,2387,2,bottom block,distractor,isolated,99,0
+18,3276,4,large measuring cup,target,comparison,100,0.73
+18,6119,4,pyrex measuring cup (the one with the handle),distractor,isolated,101,0.08
+18,1949,7,candlestick,target,isolated,102,1
+18,3120,4,measuring thing,target,isolated,103,0.54
+18,2867,4,measuring cup with handle,distractor,isolated,104,0.68
+18,2632,4,measure cup,target,isolated,105,0.69
+18,1741,4,big measuring cup,target,isolated,106,0.68
+18,3397,4,large pyrex measuring cup,distractor,isolated,107,0.12
+18,3167,2,letter block,distractor,isolated,108,1
+18,2476,2,block with the B,distractor,isolated,109,0.14
+18,3263,4,measuring cup,distractor,isolated,110,0.68
+18,3954,6,eraser,target,isolated,111,0.89
+18,2055,2,toy block,distractor,isolated,112,1
+18,6592,5,hairbrush,target,isolated,113,1
+18,2464,5,hair curler,distractor,isolated,114,0
+18,2256,2,B,distractor,isolated,115,0.01
+18,2680,4,large measuring cup,distractor,comparison,116,0.77
+18,5962,4,cup,target,isolated,117,0
+18,5454,4,measuring cup with the holder,distractor,isolated,118,0.65
+18,1788,7,red candle,distractor,isolated,119,0
+18,3816,7,candlestick,distractor,isolated,120,0.16
+18,3118,4,larger measuring cup,target,isolated,121,0.66
+18,2997,2,child&quotechars blue block,distractor,isolated,122,0.33
+18,3607,4,pyrex measuring cup (the one with the handle),target,isolated,123,0.71
+18,2467,2,blue block,distractor,isolated,124,0.43
+18,1582,3,cassette tape,distractor,isolated,125,0
+18,2853,7,red candle,target,isolated,126,1
+18,3748,5,brush,target,isolated,127,1
+18,3589,4,measure cup,distractor,isolated,128,0.67
+18,12201,4,large cup,target,isolated,129,0.25
+18,2905,4,large pyrex measuring cup,target,isolated,130,0.68
+18,3116,1,sunglasses,distractor,isolated,131,0.19
+18,2119,5,comb,target,isolated,132,0.79
+18,6592,6,black eraser,target,isolated,133,0.89
+18,2537,2,letter block,target,isolated,134,0.79
+18,2409,2,B block,target,isolated,135,0.86
+18,1586,7,candle,target,isolated,136,1
+18,5571,2,block with the blue writing,distractor,isolated,137,0.73
+18,5710,8,grey mouse,distractor,isolated,138,0.84
+18,3129,5,haircomb,target,isolated,139,0.79
+18,2203,1,black sunglasses,distractor,isolated,140,0
+18,2638,8,computer mouse,distractor,isolated,141,1
+18,1912,4,measuring cup,target,isolated,142,0.71
+18,3739,6,eraser expo,distractor,isolated,143,0.14
+18,1694,3,clear audiocassette,target,isolated,144,1
+18,1543,8,computer mouse,target,isolated,145,1
+18,2919,4,pyrex,target,isolated,146,0.32
+18,2118,2,block,distractor,isolated,147,1
+18,1864,2,blue block,target,isolated,148,0.79
+18,3610,2,the bluish block with a B,distractor,isolated,149,0.11
+18,1751,4,big measuring cup,distractor,isolated,150,0.69
+18,3080,5,hairbrush,distractor,isolated,151,1
+19,9669,6,expo eraser,target,isolated,2,1
+19,10733,4,pyrex measuring cup,distractor,isolated,3,0.77
+19,3652,2,child&quotechars blue block,target,isolated,4,0.75
+19,8056,2,B box,distractor,isolated,5,0.21
+19,2815,6,dry eraser,target,isolated,6,1
+19,2297,4,measuring cup,distractor,isolated,7,1
+19,3714,1,glasses,distractor,isolated,8,0.2
+19,2097,8,computer mouse,target,isolated,9,1
+19,3198,4,large pyrex measuring cup,target,isolated,10,1
+19,2187,4,big measuring cup,target,isolated,11,1
+19,3555,7,red candlestick,distractor,isolated,12,0.18
+19,1969,2,B block,distractor,isolated,13,0.19
+19,6028,4,larger measuring cup,distractor,isolated,14,0.79
+19,2307,7,candlestick,target,isolated,15,1
+19,6613,8,silver mouse,distractor,isolated,16,0.58
+19,3854,2,B cube,target,isolated,17,0.77
+19,1704,8,mouse,distractor,isolated,18,1
+19,3790,6,eraser expo,target,isolated,19,0.66
+19,4712,4,measurement cup ... the large one with red letters,target,isolated,20,0.67
+19,2689,2,block,target,isolated,21,0.76
+19,4999,4,measuring cup with the holder,target,isolated,22,1
+19,1890,2,block toy,target,isolated,23,0.97
+19,2481,4,pyrex measuring cup (with the handle),distractor,isolated,24,1
+19,5087,2,B,distractor,isolated,25,0.2
+19,3134,1,glasses,target,isolated,26,0.69
+19,1720,3,tape,distractor,isolated,27,1
+19,2972,4,pyrex thing,target,isolated,28,0.48
+19,2619,6,black eraser,target,isolated,29,0.65
+19,2010,6,erase,distractor,isolated,30,1
+19,3422,2,B,target,isolated,31,0.71
+19,3279,6,expo block,target,isolated,32,0.25
+19,4724,5,round hairbrush,distractor,isolated,33,0.27
+19,1605,7,candle,target,isolated,34,1
+19,4256,4,pyrex measuring cup,target,isolated,35,0.74
+19,2701,5,round hairbrush,target,isolated,36,0.4
+19,2250,1,sunglasses,distractor,isolated,37,0.17
+19,1736,2,blue block,target,isolated,38,0.98
+19,2732,3,cassette tape,distractor,isolated,39,0
+19,2382,6,white out,target,isolated,40,0
+19,1995,4,large measuring cup,distractor,isolated,41,1
+19,4177,4,large measure cup,distractor,isolated,42,0.81
+19,1855,4,measuring thing,distractor,isolated,43,0.5
+19,3716,4,large measuring cup,target,comparison,44,0.56
+19,2549,4,larger measuring cup,target,isolated,45,0.62
+19,2298,4,measuring cup with handle,target,isolated,46,1
+19,3404,4,pyrex thing,distractor,isolated,47,0.29
+19,2870,4,cup,distractor,isolated,48,1
+19,4150,4,pyrex,target,isolated,49,1
+19,2386,2,B cube,distractor,isolated,50,0.18
+19,2037,4,measure cup,distractor,isolated,51,1
+19,1727,2,toy block,distractor,isolated,52,1
+19,4034,2,blue block,distractor,isolated,53,0.2
+19,2512,2,blue B block,distractor,isolated,54,0.17
+19,2351,4,measuring thing,target,isolated,55,0.52
+19,1755,3,clear audiocassette,distractor,isolated,56,0
+19,2045,2,blue B block,target,isolated,57,1
+19,3437,6,eraser,target,isolated,58,0.48
+19,1669,4,big measuring cup,distractor,isolated,59,1
+19,1780,4,large measuring cup,target,isolated,60,1
+19,2246,7,candle,distractor,isolated,61,1
+19,1719,7,red candlestick,target,isolated,62,1
+19,2120,4,large pyrex measuring cup,distractor,isolated,63,1
+19,1627,8,mouse,target,isolated,64,1
+19,4608,4,large measuring glass ... the pyrex,distractor,isolated,65,0.45
+19,3822,2,letter block,distractor,isolated,66,1
+19,2851,4,large cup,distractor,isolated,67,1
+19,2324,6,erase,target,isolated,68,0.51
+19,1795,4,large cup,target,isolated,69,1
+19,2218,1,shades,target,isolated,70,1
+19,2586,6,dry eraser,distractor,isolated,71,0
+19,3314,3,clear audiocassette,target,isolated,72,1
+19,2273,7,lit candle,target,isolated,73,1
+19,4972,4,pyrex cup,distractor,isolated,74,0.52
+19,2705,2,letter block,target,isolated,75,1
+19,1956,8,computer mouse,distractor,isolated,76,0
+19,2176,4,measuring cup,target,isolated,77,1
+19,1433,4,pyrex,distractor,isolated,78,0.49
+19,2667,2,block with the B,distractor,isolated,79,0.02
+19,2505,5,haircomb,distractor,isolated,80,1
+19,3547,2,block,distractor,isolated,81,1
+19,2120,3,cassette tape,target,isolated,82,1
+19,1753,1,black sunglasses,target,isolated,83,1
+19,2152,4,pyrex measuring cup (the one with the handle),target,isolated,84,1
+19,2117,7,red candle/holder,distractor,isolated,85,0
+19,2170,3,cassette,distractor,isolated,86,0
+19,1793,6,expo,distractor,isolated,87,0
+19,1959,2,block toy,distractor,isolated,88,0
+19,8978,4,large measuring cup,distractor,comparison,89,0.82
+19,7576,7,red candle,distractor,isolated,90,0
+19,2319,7,small candle,distractor,isolated,91,1
+19,1994,5,brush,distractor,isolated,92,1
+19,1552,2,B block,target,isolated,93,1
+19,1353,4,large measure cup,target,isolated,94,1
+19,2407,7,candlestick,distractor,isolated,95,1
+19,2281,4,measurement cup ... the large one with red letters,distractor,isolated,96,0
+19,2524,2,bottom block,distractor,isolated,97,0
+19,2889,2,the bluish block with a B,target,isolated,98,1
+19,1782,2,bottom block,target,isolated,99,0
+19,4268,8,grey mouse,distractor,isolated,100,0.78
+19,1673,1,shades,distractor,isolated,101,0
+19,2266,1,sunglasses,target,isolated,102,1
+19,3635,7,small candle,distractor,comparison,103,1
+19,2155,5,hairbrush,target,isolated,104,1
+19,3580,7,small candle,target,comparison,105,0.52
+19,1820,2,block with the B,target,isolated,106,1
+19,4142,5,hair curler,target,isolated,107,1
+19,2275,2,child&quotechars blue block,distractor,isolated,108,1
+19,1785,2,block with the blue writing,distractor,isolated,109,1
+19,3419,2,bottom block,distractor,comparison,110,0
+19,2977,2,alphabet block,target,isolated,111,0.51
+19,2499,3,tape,target,isolated,112,0.51
+19,2985,2,block,distractor,isolated,113,1
+19,1767,5,hairbrush,distractor,isolated,114,1
+19,1464,8,silver mouse,target,isolated,115,1
+19,2288,2,alphabet block,distractor,isolated,116,1
+19,1682,2,bottom block,target,comparison,117,0
+19,5279,5,haircomb,target,isolated,118,0.5
+19,1672,5,comb,target,isolated,119,0.51
+19,3998,2,B box,target,isolated,120,0.25
+19,1700,5,comb,distractor,isolated,121,0.5
+19,2074,4,measure cup,target,isolated,122,1
+19,2037,6,expo block,distractor,isolated,123,0
+19,4546,2,block with the blue writing,target,isolated,124,1
+19,2600,4,pyrex cup,target,isolated,125,1
+19,1932,6,white out,distractor,isolated,126,0
+19,5090,4,measuring cup with handle,distractor,isolated,127,1
+19,2714,2,toy block,target,isolated,128,1
+19,2587,5,brown brush,target,isolated,129,0.17
+19,2316,5,brown brush,distractor,isolated,130,0.08
+19,2511,6,eraser,distractor,isolated,131,1
+19,2124,6,eraser expo,distractor,isolated,132,0
+19,3285,6,expo,target,isolated,133,0
+19,2085,7,red candle,target,isolated,134,1
+19,1828,6,black eraser,distractor,isolated,135,0
+19,2155,8,grey mouse,target,isolated,136,1
+19,1918,4,large measuring glass ... the pyrex,target,isolated,137,1
+19,2183,5,hair curler,distractor,isolated,138,0
+19,1867,1,black sunglasses,distractor,isolated,139,0
+19,2621,7,red candle/holder,target,isolated,140,1
+19,1734,4,pyrex measuring cup (with the handle),target,isolated,141,1
+19,2255,6,expo eraser,distractor,isolated,142,0
+19,1479,4,cup,target,isolated,143,1
+19,2295,2,the bluish block with a B,distractor,isolated,144,0
+19,2569,5,brush,target,isolated,145,0.29
+19,1654,2,block,target,isolated,146,1
+19,2316,4,measuring cup with the holder,distractor,isolated,147,1
+19,1703,7,lit candle,distractor,isolated,148,1
+19,2464,4,pyrex measuring cup (the one with the handle),distractor,isolated,149,0.25
+19,7903,7,small candle,target,isolated,150,0.51
+19,2383,3,cassette,target,isolated,151,1
