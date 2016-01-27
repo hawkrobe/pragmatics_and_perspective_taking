@@ -151,35 +151,63 @@ Set up message data
 Need to join the coder ratings... 
 
 ```{r}
-messageCoding1 <- read.csv("../analysis/messageCoding1.csv")
-messageCoding2 <- read.csv("../analysis/messageCoding2.csv")
-relevantProperties <- c("gameid", "attemptNum", "condition", "critical",
-                        "objectSet", "sender", "instructionNum")
-overinformativeCodes <- messageCoding1 %>% 
-  left_join(messageCoding2, by = relevantProperties) %>%
+library(boot)
+turkerRatings <- read.csv("../../normingExperiment/data/keysarNorming-trials.csv")
+relevantProperties <- c("objectSet", "label")
+
+criticalMessagesExp1 <- read.csv("../analysis/messagesExp1.csv") %>%
+  left_join(turkerRatings, by = relevantProperties) %>%
+  mutate(exp = "Exp.1")
+criticalMessagesExp2 <- read.csv("../analysis/messagesExp2.csv") %>%
+  right_join(turkerRatings, by = relevantProperties) %>%
+  mutate(exp = "Exp.2")
+
+overinformativeCodes <- rbind(criticalMessagesExp1, criticalMessagesExp2) %>%
   filter(!(gameid %in% bannedIDsExp2)) %>%
-  mutate(contents = contents.x, time = time.x) %>%
-  select(gameid, attemptNum, condition, critical, objectSet, sender, 
-         instructionNum, contents, time, targetCode1, distractCode1,
-         altCode1, overCode1, targetCode2, distractCode2, altCode2,
-         overCode2) %>%
-  mutate(avgAltCode = (altCode1 + altCode2)/2,
-         avgTargetCode = (targetCode1 + targetCode2)/2,
-         avgDistractCode = (distractCode1 + distractCode2)/2,
-         avgOverCode = (overCode1 + overCode2)/2)
+  filter(!(gameid %in% bannedIDsExp1))
 
-# How often are the descriptions more informative than orig?
-mean(overinformativeCodes$avgOverCode)
+summary(lmer(response ~ exp * referent + (1 | workerid) + (1 | objectSet), data = overinformativeCodes))
+  
+stat = function(data, indices) {
+  d <- data[indices,]
+  applicability = d %>%   
+    group_by(exp, referent) %>%
+    summarize(m = mean(response))
+  print(applicability)
+  return(applicability$m)
+}
 
-# How often do the descriptions apply to the hidden object?
-mean(overinformativeCodes$avgDistractCode)
+res = boot(data = overinformativeCodes, statistic = stat, R = 1000)
+Exp1DistrCI = boot.ci(res, type = "basic", index=1)
+Exp1targetCI = boot.ci(res, type = "basic", index=2)
+Exp2DistrCI = boot.ci(res, type = "basic", index=3)
+Exp2targetCI = boot.ci(res, type = "basic", index=4)
 
-# Does overinformativity perfectly avoid picking distractor?
-cor(overinformativeCodes$avgDistractCode, overinformativeCodes$avgOverCode)
+plottingDF = data.frame(referent = c("distractor", "target", "distractor", "target"),
+                        exp = c("Exp.1", "Exp.1", "Exp.2", "Exp.2"),
+                        response = res$t0,
+                        lowerCI = c(Exp1DistrCI$basic[1,4], Exp1targetCI$basic[1,4],
+                                    Exp2DistrCI$basic[1,4], Exp2targetCI$basic[1,4]),
+                        upperCI = c(Exp1DistrCI$basic[1,5], Exp1targetCI$basic[1,5],
+                                    Exp2DistrCI$basic[1,5], Exp2targetCI$basic[1,5]))
+dodge <- position_dodge(width=0.9)
+ggplot(plottingDF, aes(x = exp, y = response, fill = referent)) +
+  geom_bar(stat = "identity", position = dodge) +
+  geom_errorbar(aes(ymin = lowerCI, ymax = upperCI), position = dodge, width = 0.25) +
+  theme_bw() +
+  ylab("mean fitness of label")
+ggsave("../../writing/cogsci-submission/images/fitnessInteraction.jpeg")
 
-# Inter-rater reliability
-kappa2(cbind(overinformativeCodes$distractCode1, overinformativeCodes$distractCode2))
-kappa2(cbind(overinformativeCodes$overCode1, overinformativeCodes$overCode2))
+# spread out data, so each row is a label, and each column is a turker
+wideRatings = turkerRatings %>% 
+  group_by(workerid, label, referent) %>% 
+  summarize(m = mean(response)) %>% 
+  spread(workerid, m) 
+
+# Interrater reliability
+icc(wideRatings[,-c(1,2)],
+    model = "twoway", type = "agreement")
+
 ```
 
 Want to show whether precision helps avoid errors (mixed model?)
@@ -187,18 +215,24 @@ Want to show whether precision helps avoid errors (mixed model?)
 First, we join the error data with the critical item coding data.
 
 ```{r}
-criticalErrors = errorDExp2 %>% 
+criticalErrorsExp1 = errorDExp1 %>%
+  filter(attemptNum == 0) %>%
+  filter(criticalError == 1) %>%
+  mutate(exp = "Exp.1") %>%
+  select(gameid, objectSet, exp, criticalError)
+criticalErrorsExp2 = errorDExp2 %>% 
   filter(attemptNum == 0)%>% 
-  filter(criticalError == 1) 
+  filter(criticalError == 1) %>%
+  mutate(exp = "Exp.2") %>%
+  select(gameid, objectSet, exp, criticalError)
+
+criticalErrors = rbind(criticalErrorsExp1, criticalErrorsExp2)
+
 itemWiseCodes <- overinformativeCodes %>% 
-  left_join(criticalErrors, by = c("gameid", "condition", "critical", 
-                                   "objectSet", "instructionNum",
-                                   "attemptNum")) %>%
-  select(gameid, objectSet, avgDistractCode, avgOverCode, 
-         criticalError) %>%
+  left_join(criticalErrors, by = c("gameid", "objectSet", "exp")) %>%
   mutate(criticalError = ifelse(is.na(criticalError),0,1))
 
-mmRes <- glmer(criticalError ~ avgOverCode + avgDistractCode +  (1 | objectSet),
+mmRes <- glmer(criticalError ~ response * referent +  exp + (1 | objectSet),
       data = itemWiseCodes, family = binomial)
 
 summary(mmRes)
