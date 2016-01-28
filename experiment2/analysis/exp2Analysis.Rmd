@@ -4,6 +4,11 @@ output: html_document
 ---
 
 ```{r}
+setwd('~/Repos/keysar_replication/experiment1/analysis/')
+preMouseDExp1 = read.csv('fullSampleMouse.csv')
+preErrorDExp1 = read.csv('fullSampleError.csv')
+preMessageDExp1 = read.csv('fullSampleMessage.csv')
+
 setwd('~/Repos/keysar_replication/experiment2/data/')
 preMouseDExp2 = read.csv('mouse/exp2Mouse.csv')
 preErrorDExp2 = read.csv('error/exp2Error.csv')
@@ -18,6 +23,21 @@ library(lmerTest)
 Set up error data
 
 ```{r}
+nonCriticalMistakes <- preErrorDExp1 %>%
+  # only look at mistakes on noncritical (filler) items
+  filter(critical != 1) %>%
+  # don't want to double-count people for messing the same thing up multiple times
+  filter(attemptNum == 0) %>% 
+  group_by(gameid) %>%
+  tally() %>%
+  # implement exclusion criteria of errors on >~10% of non-critical trials
+  filter(n >= 2)
+
+bannedIDsExp1 <- nonCriticalMistakes$gameid
+numParticipantsExp1 <- (length(unique(preMouseDExp1$gameid)) -
+                        length(bannedIDsExp1))
+
+
 nonNativeEnglishIDs <- c("0366-3", "8676-f")
 nonCriticalMistakes <- preErrorDExp2 %>%
   # only look at mistakes on noncritical (filler) items
@@ -38,6 +58,13 @@ numParticipantsExp2 <- (length(unique(preMouseDExp2$gameid)) -
 Remove banned ids from data
 
 ```{r}
+errorDExp1 <- preErrorDExp1 %>%
+  filter(!(gameid %in% bannedIDsExp1))
+mouseDExp1 <- preMouseDExp1 %>%
+  filter(!(gameid %in% bannedIDsExp1))
+messageDExp1 <- preMessageDExp1 %>%
+  filter(!(gameid %in% bannedIDsExp1))
+
 errorDExp2 <- preErrorDExp2 %>%
   filter(!(gameid %in% bannedIDsExp2))
 mouseDExp2 <- preMouseDExp2 %>%
@@ -152,6 +179,7 @@ Need to join the coder ratings...
 
 ```{r}
 library(boot)
+library(irr)
 turkerRatings <- read.csv("../../normingExperiment/data/keysarNorming-trials.csv")
 relevantProperties <- c("objectSet", "label")
 
@@ -159,21 +187,22 @@ criticalMessagesExp1 <- read.csv("../analysis/messagesExp1.csv") %>%
   left_join(turkerRatings, by = relevantProperties) %>%
   mutate(exp = "Exp.1")
 criticalMessagesExp2 <- read.csv("../analysis/messagesExp2.csv") %>%
-  right_join(turkerRatings, by = relevantProperties) %>%
+  left_join(turkerRatings, by = relevantProperties) %>%
   mutate(exp = "Exp.2")
 
 overinformativeCodes <- rbind(criticalMessagesExp1, criticalMessagesExp2) %>%
   filter(!(gameid %in% bannedIDsExp2)) %>%
   filter(!(gameid %in% bannedIDsExp1))
 
-summary(lmer(response ~ exp * referent + (1 | workerid) + (1 | objectSet), data = overinformativeCodes))
+View(overinformativeCodes)
+summary(lmer(response ~ exp * referent + (1 | workerid) + (1 | objectSet), 
+             data = overinformativeCodes))
   
 stat = function(data, indices) {
   d <- data[indices,]
   applicability = d %>%   
     group_by(exp, referent) %>%
     summarize(m = mean(response))
-  print(applicability)
   return(applicability$m)
 }
 
@@ -231,10 +260,10 @@ criticalErrors = rbind(criticalErrorsExp1, criticalErrorsExp2)
 itemWiseCodes <- overinformativeCodes %>% 
   left_join(criticalErrors, by = c("gameid", "objectSet", "exp")) %>%
   mutate(criticalError = ifelse(is.na(criticalError),0,1))
-
-mmRes <- glmer(criticalError ~ response * referent +  exp + (1 | objectSet),
+View(itemWiseCodes)
+mmRes <- glmer(criticalError ~ response * referent +  exp + (1 | objectSet) + (1 | gameid),
       data = itemWiseCodes, family = binomial)
-
+plot(allEffects(mmRes))
 summary(mmRes)
 ```
 
@@ -259,10 +288,6 @@ joinedExp2 <- (right_join(mouDataExp2, mDExp2, by = c("gameid", "condition",
 ```
 
 ```{r}
-dUnfiltExp2 <- joinedExp2 %>%
-  filter(critical == 1) %>%
-  group_by(objectSet)
-
 dExp2 <- joinedExp2 %>% 
   filter(critical == 1) %>% 
   group_by(objectSet, condition) %>%
@@ -279,7 +304,7 @@ dExp2 <- joinedExp2 %>%
    filter(targetY == begTargetY) %>%
    filter(distractorX == begDistrX) %>%
    filter(distractorY == begDistrY) 
-
+View(dExp2)
 ```
 
 Compute hover time statistics
@@ -325,7 +350,7 @@ heatMapForPlotExp2 <- dExp2 %>%
                                          & mouseY < distractorY + 75)) %>%
   group_by(gameid, condition) %>%
   summarize(distractor = sum(inDistractorSquare) / n(),
-         target = sum(inTargetSquare) / n()) %>%
+            target = sum(inTargetSquare) / n()) %>%
   gather(cellType, percent, distractor, target) %>%
   group_by(condition, cellType) %>%
   summarize(error = sem(percent),
@@ -350,18 +375,18 @@ Compare mouse data from Exp1 w/ mouse data from Exp2:
 ```{r}
 combinedHeatMap = rbind(heatMapForLMExp1 %>%
                           mutate(exp = "Exp.1") %>% 
-                          filter(condition == "exp"),
+                          filter(cellType == "target"),
                         heatMapForLMExp2 %>% 
                           mutate(exp = "Exp.2") %>%
-                          filter(condition == "exp"))
+                          filter(cellType == "target"))
 combinedHeatMapForPlot <- combinedHeatMap %>%
-  group_by(cellType, exp) %>%
+  group_by(condition, exp) %>%
   summarize(error = sem(percent),
             percent = mean(percent)) 
 
-g <- (ggplot(combinedHeatMapForPlot, aes(x = cellType, y = percent, 
-                                  group = exp, color = exp)) 
-      + geom_line(aes(linetype = exp), size = 2)
+g <- (ggplot(combinedHeatMapForPlot, aes(x = exp, y = percent, 
+                                  group = condition, color = condition)) 
+      + geom_line(aes(linetype = condition), size = 2)
       + geom_errorbar(aes(ymax = percent + error, 
                           ymin = percent - error), size =2 ,
                           width = 0.1)
