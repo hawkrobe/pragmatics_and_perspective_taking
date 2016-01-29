@@ -242,7 +242,7 @@ Everything was the same as Exp.~1, except we did not use scripted messages for c
 
 Error rates are reported in Table \ref{table:mainResults}, alongside the results from \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse} and our scripted replication in Exp.~1. Participants never moved the hidden object in the baseline condition, and total error rates for experimental trials are significantly lower than the rates found in Exp.~1, $\chi^2(1) = 5.35, p = 0.02$.
 
-More dramatically, we find that patterns of errors in Exp.~2 diverge significantly from a uniform distribution across items, $\chi^2(7) = 24.8, p < 0.001$. Looking more closely at these patterns, we see that the only items where errors are consistently made are those where the costly over-informative utterance remains ambiguous. For example, in item 5, both the target and distractor are hair brushes: one is round and one is flat. ``Hair brush'' is already a label at the sub-class level. If we remove the two most difficult items (the ``hair brushes'' and the ``erasers''), the total percentage of errors on experimental trials drops from 24\% to 10\% and the percentage of participants making at least one error drops from 61\% to 32\%.
+We find that patterns of errors in Exp.~2 diverge significantly from a uniform distribution across items, $\chi^2(7) = 24.8, p < 0.001$. Looking more closely at these patterns, we see that the only items where errors are consistently made are those where the more precise utterances used remain ambiguous. For example, in item 5, both the target and distractor are hair brushes: one is round and one is flat. ``Hair brush'' is already a label at the sub-class level. If we remove the two most difficult items (the ``hair brushes'' and the ``erasers''), the total percentage of errors on experimental trials drops from 24\% to 10\% and the percentage of participants making at least one error drops from 61\% to 32\%.
 
 \todo[inline]{rdh: I don't like these mouse-tracking analyses -- I feel like the way I'm computing hover-time is sloppy and might be skewing the results (i.e. counting number of `move' events rather than actually looking at start and end times). So I could spend some time tomorrow coding up the better way\dots}
 When we conducted a mouse-tracking analysis identical to the one reported for Exp.~1, we again found a significant interaction between condition and cell type on hover time, $b = -0.18, t(108) = -5.2, p < 0.001$. However, the effect appears to be attenuated: in experimental trials, participants spend significantly more time hovering over the target than the distractor (see Figure \ref{fig:hover}) whereas in Exp.~1, participants spent roughly the same amount of time hovering over each. Due to the relatively small sample size of Exp.~1, however, we do not have the power to show this effect statistically.
@@ -252,6 +252,8 @@ Next, we test whether these improvements in performance are in fact due to more 
 Does differential informativity of scripted utterances account for the variability across items that we noted in Exp.~1? In Figure \ref{fig:itemLevel}, we compare the item-wise error \% and ratio of target fit to distractor fit. We find a correlation of $r = 0.76$ between these measures for Exp.~1, and a correlation of $r = 0.53$ for Exp.~2. The cross-experiment correlations of error rates from one experiment and label fitness ratios from the other, however, is only $r = 0.07$, suggesting that item-wise variability across the two experiments is driven by relative informativity of speaker utterances. 
 
 After separately establishing that matchers in Exp.~2 make fewer mistakes, that directors produce more informative utterances, and that informativity captures item-wise variability in error rates, we tested the link between these effects: does label informativity generally predict errors on critical trials? We used a mixed effects logistic regression model to estimate the effect of target and distractor fit on the probability of making a critical error in both experiments, including a random intercept for game ID. We found that participants are less likely to make errors when the target fit is higher, $b = -0.8, z = -4.1, p < 0.001$ and more likely to make errors when the distractor fit is higher, $b = 1.7, z = 3.7, p < 0.001$. In a nested model comparison, we found that a model including item as a fixed effect provides a significantly better fit, $\chi^2(7) = 16.4, p = 0.022$. 
+\ndg{remind me (and reader) what this model comparison means?}
+
 
 \begin{figure}[t!]
 \begin{center}
@@ -264,7 +266,9 @@ After separately establishing that matchers in Exp.~2 make fewer mistakes, that 
 \begin{figure}[t!]
 \begin{center}
 \includegraphics[scale=.1]{images/itemwisefitness.jpeg}
-\caption{Item-wise error rates compared with label fitness ratios. Error bars are bootstrapped 95\% confidence intervals for fitness and 95\% highest density intervals for error rates.}
+\caption{Item-wise error rates compared with label fitness ratios. Error bars are bootstrapped 95\% confidence intervals for fitness and 95\% highest density intervals for error rates.
+\ndg{is this expt 1 or 2 data? say ratio is scaled to unit interval in order to compare visually to error rates?}
+}
 \label{fig:itemLevel}
 \end{center}
 \end{figure}
