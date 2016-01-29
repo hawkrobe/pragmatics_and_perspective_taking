@@ -42,7 +42,10 @@
 
 \newcommand{\jd}[1]{\green{$^*$}\marginpar{\footnotesize{JD: \green{#1}}}}
 \definecolor{Green}{RGB}{10,200,100}
+\definecolor{Red}{RGB}{200,10,100}
+
 \newcommand{\ndg}[1]{\textcolor{Green}{[ndg: #1]}}
+\newcommand{\rdh}[1]{\textcolor{Red}{[rdh: #1]}}
 
 
 \newcommand{\subsubsubsection}[1]{{\em #1}}
@@ -205,11 +208,10 @@ By the reasoning above we expect to see more precise descriptions by unscripted 
 
 %Second, because half of the instructions were unscripted, we were able to observe natural production of referential descriptions for a number of fillers. Informally, we noted a tendency toward over-informativity. Instead of ``move the stuffed animal down'', they'll say ``move the stuffed pa'nda bear down.'' Or, instead of saying ``move the plane to the right,'' they'll say ``move the red airplane to the right,'' even though there is only one plane. This suggested that the confederate's scripted instructions were in some sense uncooperative and counter to the matcher's expectations. Perhaps directors were taking the time to make more costly over-informative descriptions because they believed it was contextually relevant: both parties know that there are hidden objects in the environment. If the matcher reasoned in this way and expected the director to be overinformative, then they would be justified in picking the first object that meets the description rather than worrying about occluded cells. We tested this prediction in Exp.~2, where we removed the scripted instructions and allowed speakers to refer to items however they wished. If speakers really are being overinformative, and listeners are correctly expecting this, we should see fewer errors after removing uncooperative scripts.
 
- \begin{figure}[bt]
+ \begin{figure}[bt!]
 \begin{center}
-\includegraphics[scale=.35]{images/exp1MouseTracking.pdf}
-\includegraphics[scale=.35]{images/exp2MouseTracking.pdf}
-\caption{Mean percentage of time spent hovering over the distractor and target cells in the experimental and baseline conditions for Expt.~1 (left) and Expt.~2 (right). Error bars are 95\% confidence intervals. \ndg{merge figs?}}
+\includegraphics[scale=.8]{images/mousetracking.pdf}
+\caption{Mean percentage of time spent hovering over target cell in the experimental and baseline conditions for Expt.~1 (left) and Expt.~2 (right). Error bars are 95\% confidence intervals.}
 \label{fig:hover}
 \end{center}
 \end{figure}
@@ -245,24 +247,25 @@ More dramatically, we find that patterns of errors in Exp.~2 diverge significant
 \todo[inline]{rdh: I don't like these mouse-tracking analyses -- I feel like the way I'm computing hover-time is sloppy and might be skewing the results (i.e. counting number of `move' events rather than actually looking at start and end times). So I could spend some time tomorrow coding up the better way\dots}
 When we conducted a mouse-tracking analysis identical to the one reported for Exp.~1, we again found a significant interaction between condition and cell type on hover time, $b = -0.18, t(108) = -5.2, p < 0.001$. However, the effect appears to be attenuated: in experimental trials, participants spend significantly more time hovering over the target than the distractor (see Figure \ref{fig:hover}) whereas in Exp.~1, participants spent roughly the same amount of time hovering over each. Due to the relatively small sample size of Exp.~1, however, we do not have the power to show this effect statistically.
 
-Next, we test whether these improvements in performance are in fact due to different speaker behavior. We recruited twenty raters on Amazon Mechanical Turk, who provided ratings for how well the 71 unique labels used by speakers across both experiments (including scripted labels) fit the target and hidden distractor objects. Their responses were given on a slider with endpoints labeled ``not at all'' and ``perfectly.''  Inter-rater reliability was relatively high, with intra-class correlation coefficient of $0.6$ (95\% CI = $[0.54, 0.66]$).
+Next, we test whether these improvements in performance are in fact due to more informative speaker behavior. We recruited twenty judges on Amazon Mechanical Turk, who provided ratings for how well the 71 unique labels used by speakers across both experiments (including scripted labels) fit the target and hidden distractor objects. Their responses were given on a slider with endpoints labeled ``not at all'' and ``perfectly.''  Inter-rater reliability was relatively high, with intra-class correlation coefficient of $0.6$ (95\% CI = $[0.54, 0.66]$). In a mixed model including random intercepts for raters and items, we found a significant crossover interaction of experiment and referent on mean fitness rating (see Fig. \ref{fig:fitnessInteraction}), $b = 0.32, t = 9, p < 0.001$. In Exp.~1, the scripted label fit the hidden distractor just as well as the target, but in Exp.~2, the unconstrained labels fit the target much better and the hidden distractor much worse. In other words, the scripted labels used in Keysar's studies were less informative than speakers normally produce in this scenario.
 
-In a mixed model including random intercepts for raters and items, we found a significant crossover interaction of experiment and referent on mean fitness rating (see Fig. \ref{fig:fitnessInteraction}), $b = 0.34, t = 36.4, p < 0.001$. In Exp.~1, the scripted label fit the hidden distractor better than the target, but the ordering reversed in Exp.~2: the unconstrained labels fit the target much better and the hidden distractor much worse.
-\ndg{i wonder if we can make it clearer why this is important?}
+Does differential informativity of scripted utterances account for the variability across items that we noted in Exp.~1? In Figure \ref{fig:itemLevel}, we compare the item-wise error \% and ratio of target fit to distractor fit. We find a correlation of $r = 0.76$ between these measures for Exp.~1, and a correlation of $r = 0.53$ for Exp.~2. The cross-experiment correlations of error rates from one experiment and label fitness ratios from the other, however, is only $r = 0.07$, suggesting that item-wise variability across the two experiments is driven by relative informativity of speaker utterances. 
 
-Finally, we used a mixed effects logistic regression model to estimate the effect of distractor fit and speaker constraints on the probability of making an error on critical trials. We included random intercepts for game and item ids, and an interaction term for label fitness and label referent. We find a significant interaction of referent and fitness ratings on error rates: matchers are significantly more likely to make an error when the label fits the distractor more and the target less, $b =-1.39, z = -, p < 0.001$. Additionally, participants were significantly less likely to produce errors in Exp.~2 than Exp.~1, $b = -1.38, z = -2.41, p = 0.016$.
-
-\todo[inline]{rdh: I still get confused about which random effects to include\dots does it make sense to include random intercepts for game id and include experiment \# as a predictor when each id only participated in one experiment?}
-
-
-\ndg{maybe do this in a few steps: first, does label fit explain item effects we noted in expt 1? second does it explain remaining errors in expt 2? then do a combined model. what about making a plot that shows the item-wise fits at least for expt 1?}
-
+After separately establishing that matchers in Exp.~2 make fewer mistakes, that directors produce more informative utterances, and that informativity captures item-wise variability in error rates, we tested the link between these effects: does label informativity generally predict errors on critical trials? We used a mixed effects logistic regression model to estimate the effect of target and distractor fit on the probability of making a critical error in both experiments, including a random intercept for game ID. We found that participants are less likely to make errors when the target fit is higher, $b = -0.8, z = -4.1, p < 0.001$ and more likely to make errors when the distractor fit is higher, $b = 1.7, z = 3.7, p < 0.001$. In a nested model comparison, we found that a model including item as a fixed effect provides a significantly better fit, $\chi^2(7) = 16.4, p = 0.022$. 
 
 \begin{figure}[t!]
 \begin{center}
 \includegraphics[scale=.18]{images/fitnessInteraction.jpeg}
 \caption{Mean fitness ratings provided by judges on Amazon Mechanical Turk. Error bars are bootstrapped 95\% confidence intervals.}
 \label{fig:fitnessInteraction}
+\end{center}
+\end{figure}
+
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[scale=.1]{images/itemwisefitness.jpeg}
+\caption{Item-wise error rates compared with label fitness ratios. Error bars are bootstrapped 95\% confidence intervals for fitness and 95\% highest density intervals for error rates.}
+\label{fig:itemLevel}
 \end{center}
 \end{figure}
 
