@@ -20,7 +20,7 @@ library(lme4)
 library(lmerTest)
 ```
 
-Set up error data
+Filter out bad participants
 
 ```{r}
 nonCriticalMistakes <- preErrorDExp1 %>%
@@ -53,11 +53,6 @@ mistakeIDs <- as.character(nonCriticalMistakes$gameid)
 bannedIDsExp2 <- unique(c(mistakeIDs, nonNativeEnglishIDs))
 numParticipantsExp2 <- (length(unique(preMouseDExp2$gameid)) -
                         length(bannedIDsExp2))
-```
-
-Remove banned ids from data
-
-```{r}
 errorDExp1 <- preErrorDExp1 %>%
   filter(!(gameid %in% bannedIDsExp1))
 mouseDExp1 <- preMouseDExp1 %>%
@@ -141,10 +136,7 @@ itemWiseTestExp2 <- chisq.test(itemInequalitiesExp2[-c(1,4,5)])
 print(itemWiseTestExp2)
 ```
 
-Follow-up:
-
-Did error rates go down significantly?
-
+Follow-up: Did error rates go down significantly in Exp. 2?
 
 ```{r}
 exp1NumErrors = eDExp1 %>% 
@@ -161,13 +153,6 @@ exp2TotalPossible = 4 * numParticipantsExp2
 
 numErrors = c(exp1NumErrors$numErrors, exp2NumErrors$numErrors)
 totalPossible = c(exp1TotalPossible, exp2TotalPossible)
-prop.test(numErrors, totalPossible)
-
-# Diff from keysar (2003)?
-keysarNumErrors = 45
-keysarTotalPossible = 4 * 38
-numErrors = c(keysarNumErrors, exp2NumErrors$numErrors)
-totalPossible = c(keysarTotalPossible, exp2TotalPossible)
 prop.test(numErrors, totalPossible)
 ```
 
@@ -190,9 +175,13 @@ criticalMessagesExp2 <- read.csv("../analysis/messagesExp2.csv") %>%
   left_join(turkerRatings, by = relevantProperties) %>%
   mutate(exp = "Exp.2")
 
-overinformativeCodes <- rbind(criticalMessagesExp1, criticalMessagesExp2) %>%
+rawOverinformativeCodes <- rbind(criticalMessagesExp1, criticalMessagesExp2) %>%
   filter(!(gameid %in% bannedIDsExp2)) %>%
-  filter(!(gameid %in% bannedIDsExp1))
+  filter(!(gameid %in% bannedIDsExp1)) 
+
+overinformativeCodes = rawOverinformativeCodes %>%
+  group_by(exp, label, objectSet, workerid, referent) %>%
+  summarize(response = mean(response))
 
 View(overinformativeCodes)
 summary(lmer(response ~ exp * referent + (1 | workerid) + (1 | objectSet), 
@@ -236,7 +225,113 @@ wideRatings = turkerRatings %>%
 # Interrater reliability
 icc(wideRatings[,-c(1,2)],
     model = "twoway", type = "agreement")
+```
 
+Compare item-wise error rates and fitness ratios
+
+```{r}
+library(binom)
+Exp1Errs = itemInequalitiesExp1 %>%
+  mutate(response = errorRate) %>%
+  mutate(condition = "error") %>%
+  do(mutate(., lower = binom.confint(.$errorCount, .$total, 
+                                     method = "bayes")$lower,
+               upper = binom.confint(.$errorCount, .$total, 
+                                     method = "bayes")$upper)) %>%
+  select(objectSet, response, condition, lower, upper)
+
+stat = function(data, indices) {
+  d <- data[indices,]
+  applicability = d %>%   
+    group_by(objectSet) %>%
+    summarize(m = .5 * mean(distractor)/mean(target))
+  return(applicability$m)
+}
+
+Exp1Fitness = overinformativeCodes %>%
+  filter(exp == "Exp.1") %>%
+  spread(referent, response) 
+
+res = boot(data = Exp1Fitness, statistic = stat, R = 1000)
+Exp1PlottingDF = data.frame(response = rep(0, 8),
+                        upper = rep(0,8),
+                        lower = rep(0,8),
+                        objectSet = 1:8,
+                        condition = rep("fitness", 8))
+for (i in 1:8) {
+  ci = boot.ci(res, type = "basic", index=i)
+  Exp1PlottingDF[i,]$response = res$t0[i]
+  Exp1PlottingDF[i,]$lower = ci$basic[4]
+  Exp1PlottingDF[i,]$upper = ci$basic[5]
+}
+
+Exp1ItemwiseForPlot = rbind(Exp1PlottingDF, Exp1Errs)
+g <- (ggplot(Exp1ItemwiseForPlot, aes(x = objectSet, y = response, 
+                                      group = condition, fill = condition))
+  + geom_bar(stat = "identity", position = "dodge")
+  + geom_errorbar(aes(ymax = upper, ymin = lower), 
+                  position = dodge, width = 0.25)
+  + ylab("ratio (scaled)"))
+g
+ggsave("../../writing/cogsci-submission/images/itemWiseFitness.jpeg")
+```
+
+Same thing for Exp 2
+
+```{r}
+library(binom)
+Exp2Errs = itemInequalitiesExp2 %>%
+  mutate(response = errorRate) %>%
+  mutate(condition = "error") %>%
+  do(mutate(., lower = binom.confint(.$errorCount, .$total, 
+                                     method = "bayes")$lower,
+               upper = binom.confint(.$errorCount, .$total, 
+                                     method = "bayes")$upper)) %>%
+  select(objectSet, response, condition, lower, upper)
+
+stat = function(data, indices) {
+  d <- data[indices,]
+  applicability = d %>%   
+    group_by(objectSet) %>%
+    summarize(m = .25 * mean(distractor)/mean(target))
+  return(applicability$m)
+}
+
+Exp2Fitness = overinformativeCodes %>%
+  filter(exp == "Exp.2") %>%
+  spread(referent, response) 
+
+res = boot(data = Exp2Fitness, statistic = stat, R = 1000)
+Exp2PlottingDF = data.frame(response = rep(0, 8),
+                        upper = rep(0,8),
+                        lower = rep(0,8),
+                        objectSet = 1:8,
+                        condition = rep("fitness", 8))
+for (i in 1:8) {
+  ci = boot.ci(res, type = "basic", index=i)
+  Exp2PlottingDF[i,]$response = res$t0[i]
+  Exp2PlottingDF[i,]$lower = ci$basic[4]
+  Exp2PlottingDF[i,]$upper = ci$basic[5]
+}
+
+Exp2ItemwiseForPlot = rbind(Exp2PlottingDF, Exp2Errs)
+g <- (ggplot(Exp2ItemwiseForPlot, aes(x = objectSet, y = response, 
+                                      group = condition, fill = condition))
+  + geom_bar(stat = "identity", position = "dodge")
+  + geom_errorbar(aes(ymax = upper, ymin = lower), 
+                  position = dodge , width = 0.25)
+  + ylab("measure (z-scored)"))
+g
+```
+
+```{r}
+# within exp. correlations high
+cor(Exp1Errs$response, Exp1PlottingDF$response)
+cor(Exp2Errs$response, Exp2PlottingDF$response)
+
+# Cross exp. correlations low
+cor(Exp2Errs$response, Exp1PlottingDF$response)
+cor(Exp1Errs$response, Exp2PlottingDF$response)
 ```
 
 Want to show whether precision helps avoid errors (mixed model?)
@@ -257,14 +352,43 @@ criticalErrorsExp2 = errorDExp2 %>%
 
 criticalErrors = rbind(criticalErrorsExp1, criticalErrorsExp2)
 
-itemWiseCodes <- overinformativeCodes %>% 
+itemWiseCodes <- rawOverinformativeCodes %>% 
   left_join(criticalErrors, by = c("gameid", "objectSet", "exp")) %>%
-  mutate(criticalError = ifelse(is.na(criticalError),0,1))
+  mutate(criticalError = ifelse(is.na(criticalError),0,1)) %>%
+  group_by(gameid, objectSet, referent, criticalError, exp) %>%
+  summarize(meanFitness = mean(response)) %>%
+  spread(referent, meanFitness)
+library(lme4)
 View(itemWiseCodes)
-mmRes <- glmer(criticalError ~ response * referent +  exp + (1 | objectSet) + (1 | gameid),
+mmRes1 <- glmer(criticalError ~ scale(target) + scale(distractor) + (1 | gameid), data = itemWiseCodes, family = binomial)
+summary(mmRes1)
+mmRes2 <- glmer(criticalError ~ scale(target) + scale(distractor) + factor(objectSet) + (1 | gameid),
       data = itemWiseCodes, family = binomial)
-plot(allEffects(mmRes))
-summary(mmRes)
+
+anova(mmRes1, mmRes2)
+
+
+newItemWiseCodes = itemWiseCodes %>% 
+  mutate(modelPreds = exp(predict(mmRes1))/(exp(predict(mmRes1))+1)) %>%
+  group_by(exp, objectSet) %>%
+  summarize(empError = mean(criticalError),
+            modelError = mean(modelPreds))
+
+(ggplot(newItemWiseCodes, aes(x = empError, y = modelError, color = exp)) 
+   + geom_point()
+   + geom_smooth(method = lm))
+
+# Shoudln't worry too much about convergence errors: appear to be false positives
+# https://groups.google.com/forum/#!topic/predicts_project/gVfnVxCSYog
+
+gg <- mmRes2@optinfo$derivs$grad
+hh <- mmRes2@optinfo$derivs$Hessian
+vv <- sqrt(diag(solve(hh/2)))
+print(summary(abs(gg*vv)))
+
+relgrad <- with(mmRes2@optinfo$derivs,solve(Hessian,gradient))
+print(max(abs(relgrad)))
+
 ```
 
 Set up mouse data
@@ -282,9 +406,12 @@ mDExp2 <- messageDExp2 %>%
          objectSet,sender,contents,messageStamp) %>%
   distinct(gameid,contents)
 
-joinedExp2 <- (right_join(mouDataExp2, mDExp2, by = c("gameid", "condition",
-                                                      "objectSet", 
-                                         "instructionNum", "attemptNum", "critical")))
+joinedExp2 <- mouDataExp2 %>%
+  right_join(mDExp2, by = c("gameid", "condition", "objectSet", "instructionNum",
+                            "attemptNum", "critical")) %>%
+  left_join(errorDExp2, by = c("gameid", "condition", "objectSet", "attemptNum",
+                               "instructionNum", "critical"))
+View(joinedExp2)
 ```
 
 ```{r}
@@ -381,19 +508,19 @@ combinedHeatMap = rbind(heatMapForLMExp1 %>%
                           filter(cellType == "target"))
 combinedHeatMapForPlot <- combinedHeatMap %>%
   group_by(condition, exp) %>%
-  summarize(error = sem(percent),
+  summarize(error = ci95(percent),
             percent = mean(percent)) 
 
 g <- (ggplot(combinedHeatMapForPlot, aes(x = exp, y = percent, 
-                                  group = condition, color = condition)) 
-      + geom_line(aes(linetype = condition), size = 2)
+                                  group = condition, fill = condition)) 
+      + geom_bar(position = dodge, stat= "identity")
       + geom_errorbar(aes(ymax = percent + error, 
-                          ymin = percent - error), size =2 ,
-                          width = 0.1)
-      + ylim(0, .45)
-      + ggtitle("Experiment 2 Hover-Time"))
+                          ymin = percent - error), position = dodge,
+                          width = 0.25)
+      + ylim(0, .5)
+      + ggtitle("Decreased hover-time on target"))
 g
-combinedRes = lm(percent ~ exp * cellType, data = combinedHeatMap)
+combinedRes = lm(percent ~ exp * condition, data = combinedHeatMap)
 summary(combinedRes)
 ```
 
