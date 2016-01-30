@@ -183,7 +183,6 @@ overinformativeCodes = rawOverinformativeCodes %>%
   group_by(exp, label, objectSet, workerid, referent) %>%
   summarize(response = mean(response))
 
-View(overinformativeCodes)
 summary(lmer(response ~ exp * referent + (1 | workerid) + (1 | objectSet), 
              data = overinformativeCodes))
   
@@ -212,9 +211,10 @@ dodge <- position_dodge(width=0.9)
 ggplot(plottingDF, aes(x = exp, y = response, fill = referent)) +
   geom_bar(stat = "identity", position = dodge) +
   geom_errorbar(aes(ymin = lowerCI, ymax = upperCI), position = dodge, width = 0.25) +
-  theme_bw() +
-  ylab("mean fitness of label")
-ggsave("../../writing/cogsci-submission/images/fitnessInteraction.jpeg")
+  theme_bw(base_size = 16) +
+  ylab("mean fitness of label") + 
+  ggtitle("Speaker Informativity")
+ggsave("../../writing/cogsci-submission/images/fitnessInteraction.pdf")
 
 # spread out data, so each row is a label, and each column is a turker
 wideRatings = turkerRatings %>% 
@@ -233,7 +233,7 @@ Compare item-wise error rates and fitness ratios
 library(binom)
 Exp1Errs = itemInequalitiesExp1 %>%
   mutate(response = errorRate) %>%
-  mutate(condition = "error") %>%
+  mutate(measure = "error") %>%
   do(mutate(., lower = binom.confint(.$errorCount, .$total, 
                                      method = "bayes")$lower,
                upper = binom.confint(.$errorCount, .$total, 
@@ -257,7 +257,7 @@ Exp1PlottingDF = data.frame(response = rep(0, 8),
                         upper = rep(0,8),
                         lower = rep(0,8),
                         objectSet = 1:8,
-                        condition = rep("fitness", 8))
+                        measure = rep("fitness", 8))
 for (i in 1:8) {
   ci = boot.ci(res, type = "basic", index=i)
   Exp1PlottingDF[i,]$response = res$t0[i]
@@ -267,13 +267,15 @@ for (i in 1:8) {
 
 Exp1ItemwiseForPlot = rbind(Exp1PlottingDF, Exp1Errs)
 g <- (ggplot(Exp1ItemwiseForPlot, aes(x = objectSet, y = response, 
-                                      group = condition, fill = condition))
+                                      group = measure, fill = measure))
   + geom_bar(stat = "identity", position = "dodge")
   + geom_errorbar(aes(ymax = upper, ymin = lower), 
                   position = dodge, width = 0.25)
+  + theme_bw(base_size = 16) 
+  + ggtitle("Exp.1 Item-Wise Error")
   + ylab("ratio (scaled)"))
 g
-ggsave("../../writing/cogsci-submission/images/itemWiseFitness.jpeg")
+ggsave("../../writing/cogsci-submission/images/itemWiseFitness.pdf")
 ```
 
 Same thing for Exp 2
@@ -320,6 +322,7 @@ g <- (ggplot(Exp2ItemwiseForPlot, aes(x = objectSet, y = response,
   + geom_bar(stat = "identity", position = "dodge")
   + geom_errorbar(aes(ymax = upper, ymin = lower), 
                   position = dodge , width = 0.25)
+  + theme_bw(base_size = 16)
   + ylab("measure (z-scored)"))
 g
 ```
@@ -358,25 +361,24 @@ itemWiseCodes <- rawOverinformativeCodes %>%
   group_by(gameid, objectSet, referent, criticalError, exp) %>%
   summarize(meanFitness = mean(response)) %>%
   spread(referent, meanFitness)
+
 library(lme4)
-View(itemWiseCodes)
-mmRes1 <- glmer(criticalError ~ scale(target) + scale(distractor) + (1 | gameid), data = itemWiseCodes, family = binomial)
+mmRes1 <- glmer(criticalError ~ factor(objectSet) + (1 | gameid), data = itemWiseCodes, family = binomial)
 summary(mmRes1)
 mmRes2 <- glmer(criticalError ~ scale(target) + scale(distractor) + factor(objectSet) + (1 | gameid),
       data = itemWiseCodes, family = binomial)
 
 anova(mmRes1, mmRes2)
 
-
-newItemWiseCodes = itemWiseCodes %>% 
-  mutate(modelPreds = exp(predict(mmRes1))/(exp(predict(mmRes1))+1)) %>%
-  group_by(exp, objectSet) %>%
-  summarize(empError = mean(criticalError),
-            modelError = mean(modelPreds))
-
-(ggplot(newItemWiseCodes, aes(x = empError, y = modelError, color = exp)) 
-   + geom_point()
-   + geom_smooth(method = lm))
+# newItemWiseCodes = itemWiseCodes %>% 
+#   mutate(modelPreds = exp(predict(mmRes1))/(exp(predict(mmRes1))+1)) %>%
+#   group_by(exp, objectSet) %>%
+#   summarize(empError = mean(criticalError),
+#             modelError = mean(modelPreds))
+# 
+# (ggplot(newItemWiseCodes, aes(x = empError, y = modelError, color = exp)) 
+#    + geom_point()
+#    + geom_smooth(method = lm))
 
 # Shoudln't worry too much about convergence errors: appear to be false positives
 # https://groups.google.com/forum/#!topic/predicts_project/gVfnVxCSYog
@@ -408,10 +410,9 @@ mDExp2 <- messageDExp2 %>%
 
 joinedExp2 <- mouDataExp2 %>%
   right_join(mDExp2, by = c("gameid", "condition", "objectSet", "instructionNum",
-                            "attemptNum", "critical")) %>%
-  left_join(errorDExp2, by = c("gameid", "condition", "objectSet", "attemptNum",
-                               "instructionNum", "critical"))
-View(joinedExp2)
+                            "attemptNum", "critical")) #%>%
+#   left_join(errorDExp2, by = c("gameid", "condition", "objectSet", "attemptNum",
+#                                "instructionNum", "critical"))
 ```
 
 ```{r}
@@ -431,7 +432,6 @@ dExp2 <- joinedExp2 %>%
    filter(targetY == begTargetY) %>%
    filter(distractorX == begDistrX) %>%
    filter(distractorY == begDistrY) 
-View(dExp2)
 ```
 
 Compute hover time statistics
@@ -456,9 +456,9 @@ heatMapForLMExp2 <- dExp2 %>%
          target = sum(inTargetSquare) / n()) %>%
   gather(cellType, percent, distractor, target) 
 
-heatMapForLMExp2
+heatMapForLMExp2 
 
-t1 <- lm(percent ~ condition * cellType, data = heatMapForLMExp2)
+t1 <- lm(percent ~ condition , data = heatMapForLMExp2 %>% filter(cellType == "target"))
 summary(t1)
 ```
 
@@ -492,6 +492,7 @@ g <- (ggplot(heatMapForPlotExp2, aes(x = condition, y = percent,
                           ymin = percent - error), size =2 ,
                       width = 0.1)
      + ylim(0, .45)
+     + theme_bw(base_size = 16)
       + ggtitle("Experiment 2 Hover-Time"))
 g
 ggsave("../../writing/cogsci-submission/images/exp2MouseTracking.pdf")
@@ -518,8 +519,11 @@ g <- (ggplot(combinedHeatMapForPlot, aes(x = exp, y = percent,
                           ymin = percent - error), position = dodge,
                           width = 0.25)
       + ylim(0, .5)
-      + ggtitle("Decreased hover-time on target"))
+      + theme_bw(base_size = 16)
+      + ggtitle("Target Hover-Time"))
 g
+ggsave("../../writing/cogsci-submission/images/mousetracking.pdf")
+
 combinedRes = lm(percent ~ exp * condition, data = combinedHeatMap)
 summary(combinedRes)
 ```

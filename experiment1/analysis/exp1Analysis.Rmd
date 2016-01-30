@@ -176,7 +176,7 @@ heatMapForLMExp1 <- dExp1 %>%
 
 heatMapForLMExp1
 
-t1 <- lm(percent ~ condition * cellType, data = heatMapForLMExp1)
+t1 <- lm(percent ~ condition, data = heatMapForLMExp1 %>% filter(cellType== "target"))
 summary(t1)
 ```
 
