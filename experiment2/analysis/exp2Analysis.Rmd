@@ -18,6 +18,15 @@ library(dplyr)
 library(ggplot2)
 library(lme4)
 library(lmerTest)
+
+
+d <- d.b %>%
+  mutate(trait = sentence %in% c('Decisive', 'Competitive', 'Self-reliant', 
+                                 'Willing to take risks' , 'Ambitious', 'Daring' , 
+                                 'Adventurous' , 'Courageous')) %>%
+  mutate(traitType = factor(ifelse(trait == TRUE, "Masculine", "Feminine"))) %>%
+  
+
 ```
 
 Filter out bad participants
@@ -71,6 +80,13 @@ messageDExp2 <- preMessageDExp2 %>%
 Make error table
 
 ```{r}
+eDExp1 <- errorDExp1 %>%
+  filter(attemptNum == 0) %>%
+  group_by(gameid, condition) %>%
+  summarize(n = sum(criticalError)) %>%
+  mutate(cond1 = as.numeric(n >= 1)) %>%
+  mutate(cond2 = as.numeric(n >= 2)) 
+
 eDExp2 <- errorDExp2 %>%
   filter(attemptNum == 0) %>%
   group_by(gameid, condition) %>%
@@ -104,6 +120,15 @@ excludedEDExp2
 When we look at errors per item, we have to remember that not all items had the same number of participants in the experimental condition.
 
 ```{r}
+numPlayersPerConditionExp1 = mouseDExp1 %>% 
+  filter(critical == 1) %>% 
+  filter(attemptNum == 0) %>% 
+  group_by(gameid, condition, objectSet) %>% 
+  summarize() %>% 
+  group_by(condition, objectSet) %>% 
+  summarize(total = n()) %>% 
+  filter(condition == "exp")
+
 numPlayersPerConditionExp2 = mouseDExp2 %>% 
   filter(critical == 1) %>% 
   filter(attemptNum == 0) %>% 
@@ -117,6 +142,20 @@ numPlayersPerConditionExp2 = mouseDExp2 %>%
 Follow-up: are all critical items equal?
 
 ```{r}
+itemInequalitiesExp1 <- errorDExp1 %>%
+  filter(condition == "exp") %>%
+  filter(criticalError == 1) %>%
+  filter(attemptNum == 0) %>%
+  group_by(objectSet) %>%
+  tally() %>%
+  right_join(numPlayersPerConditionExp1, by = c('objectSet')) %>%
+  mutate(objectSet = objectSet,
+         errorCount = n, 
+         correctCount = total - n) %>%
+  mutate(errorRate = errorCount / (errorCount + correctCount)) %>%
+  select(objectSet, errorCount, correctCount, errorRate, total)
+itemInequalitiesExp1[1,2:4] = c(0, itemInequalitiesExp1[1,]$total, 0)
+
 itemInequalitiesExp2 <- errorDExp2 %>%
   filter(condition == "exp") %>%
   filter(criticalError == 1) %>%
@@ -231,6 +270,7 @@ Compare item-wise error rates and fitness ratios
 
 ```{r}
 library(binom)
+
 Exp1Errs = itemInequalitiesExp1 %>%
   mutate(response = errorRate) %>%
   mutate(measure = "error") %>%
@@ -238,7 +278,7 @@ Exp1Errs = itemInequalitiesExp1 %>%
                                      method = "bayes")$lower,
                upper = binom.confint(.$errorCount, .$total, 
                                      method = "bayes")$upper)) %>%
-  select(objectSet, response, condition, lower, upper)
+  select(objectSet, response, measure, lower, upper)
 
 stat = function(data, indices) {
   d <- data[indices,]
@@ -266,6 +306,7 @@ for (i in 1:8) {
 }
 
 Exp1ItemwiseForPlot = rbind(Exp1PlottingDF, Exp1Errs)
+
 g <- (ggplot(Exp1ItemwiseForPlot, aes(x = objectSet, y = response, 
                                       group = measure, fill = measure))
   + geom_bar(stat = "identity", position = "dodge")
@@ -396,6 +437,22 @@ print(max(abs(relgrad)))
 Set up mouse data
 
 ```{r}
+mouDataExp1 <- mouseDExp1 %>%
+  filter(attemptNum == 0)
+
+mDExp1 <- messageDExp1 %>% 
+  filter(attemptNum == 0) %>%
+  filter(sender == "director") %>%
+  group_by(gameid, objectSet, instructionNum) %>%
+  mutate(messageStamp = first(time)) %>%
+  select(gameid, condition, attemptNum, instructionNum, critical, 
+         objectSet,sender,contents,messageStamp) %>%
+  distinct(gameid,contents)
+
+joinedExp1 <- mouDataExp1 %>% 
+  right_join(mDExp1, by = c("gameid", "condition", "objectSet", 
+                             "instructionNum", "attemptNum", "critical"))
+
 mouDataExp2 <- mouseDExp2 %>%
   filter(attemptNum == 0)
 
@@ -409,13 +466,25 @@ mDExp2 <- messageDExp2 %>%
   distinct(gameid,contents)
 
 joinedExp2 <- mouDataExp2 %>%
-  right_join(mDExp2, by = c("gameid", "condition", "objectSet", "instructionNum",
-                            "attemptNum", "critical")) #%>%
-#   left_join(errorDExp2, by = c("gameid", "condition", "objectSet", "attemptNum",
-#                                "instructionNum", "critical"))
+  left_join(mDExp2, by = c("gameid", "condition", "objectSet", "attemptNum",
+                               "instructionNum", "critical")) #%>%
 ```
 
 ```{r}
+dExp1 <- joinedExp1 %>% 
+  filter(critical == 1) %>% 
+  group_by(objectSet, condition) %>%
+  filter(time > messageStamp) %>%
+  mutate(mouseY = 600 - mouseY) %>%
+  mutate(targetY = 600 - targetY) %>%
+  mutate(begTargetX = first(targetX),
+         begTargetY = first(targetY)) %>%
+  filter(targetX == begTargetX) %>%
+  filter(targetY == begTargetY) %>%
+  select(gameid, time, messageStamp, condition, 
+         objectSet, instructionNum, targetX, targetY, mouseX, mouseY) %>%
+  mutate(experiment = "Exp.1")
+
 dExp2 <- joinedExp2 %>% 
   filter(critical == 1) %>% 
   group_by(objectSet, condition) %>%
@@ -423,15 +492,12 @@ dExp2 <- joinedExp2 %>%
   mutate(mouseY = 600 - mouseY) %>%
   mutate(targetY = 600 - targetY) %>%
   mutate(begTargetX = first(targetX),
-         begTargetY = first(targetY),
-         distractorX = as.numeric(levels(distractorX))[distractorX],
-         distractorY = 600 - as.numeric(levels(distractorY))[distractorY]) %>%
-   mutate(begDistrX = first(distractorX),
-          begDistrY = first(distractorY)) %>%
+         begTargetY = first(targetY)) %>%
    filter(targetX == begTargetX) %>%
    filter(targetY == begTargetY) %>%
-   filter(distractorX == begDistrX) %>%
-   filter(distractorY == begDistrY) 
+  select(gameid, time, messageStamp, condition, 
+         objectSet, instructionNum, targetX, targetY, mouseX, mouseY) %>%
+  mutate(experiment = "Exp.2")
 ```
 
 Compute hover time statistics
@@ -441,110 +507,78 @@ Compute hover time statistics
 sem <- function(x) {sd(x, na.rm = T) / sqrt(length(x))}
 ci95 <- function(x) {sem(x) * 1.96}
 
-heatMapForLMExp2 <- dExp2 %>%
-  group_by(gameid, objectSet) %>%
+
+intermediateHeatMap <- rbind(dExp1, dExp2) %>%
+  group_by(gameid, objectSet, condition, experiment) %>%
   mutate(inTargetSquare = as.numeric(mouseX > targetX - 75 
                                      & mouseX < targetX + 75
                                      & mouseY > targetY - 75
-                                    & mouseY < targetY + 75)) %>%
-  mutate(inDistractorSquare = as.numeric(mouseX > distractorX - 75
-                                         & mouseX < distractorX + 75
-                                         & mouseY > distractorY - 75
-                                         & mouseY < distractorY + 75)) %>%
-  group_by(gameid, condition) %>%
-  summarise(distractor = sum(inDistractorSquare) / n(),
-         target = sum(inTargetSquare) / n()) %>%
-  gather(cellType, percent, distractor, target) 
+                                     & mouseY < targetY + 75)) %>%
+  filter(inTargetSquare == 1) %>%
+  summarise(messageTime = mean(messageStamp),
+            startTimeInTarget = first(time),
+            endTime = last(time)) 
 
-heatMapForLMExp2 
+combinedHeatMap = intermediateHeatMap %>%
+    group_by(gameid, condition, experiment) %>%
+    summarise(targetHoverPercentage = mean((endTime - startTimeInTarget)/ 
+                                           (endTime - messageTime)))
+View(combinedHeatMap)
 
-t1 <- lm(percent ~ condition , data = heatMapForLMExp2 %>% filter(cellType == "target"))
-summary(t1)
+# Easier to report these as paired t-tests
+percentExp1 <- lmer(targetHoverPercentage ~ condition + (1 | gameid), 
+           data = combinedHeatMap %>% filter(experiment == "Exp.1"))
+summary(percentExp1)
+percentExp2 <- lmer(targetHoverPercentage ~ condition + (1 | gameid), 
+           data = heatMapForLMExp2 %>% filter(experiment == "Exp.2"))
+summary(percentExp2)
+percentExpVs <- lmer(targetHoverPercentage ~ condition * experiment + (1 | gameid),
+                     data = combinedHeatMap)
+summary(percentExpVs)
 ```
 
 Plot it? 
 
 ```{r}
-heatMapForPlotExp2 <- dExp2 %>%
-  group_by(gameid, objectSet) %>%
-  mutate(inTargetSquare = as.numeric(mouseX > targetX - 75 
-                                     & mouseX < targetX + 75
-                                     & mouseY > targetY - 75
-                                    & mouseY < targetY + 75)) %>%
-  mutate(inDistractorSquare = as.numeric(mouseX > distractorX - 75
-                                         & mouseX < distractorX + 75
-                                         & mouseY > distractorY - 75
-                                         & mouseY < distractorY + 75)) %>%
-  group_by(gameid, condition) %>%
-  summarize(distractor = sum(inDistractorSquare) / n(),
-            target = sum(inTargetSquare) / n()) %>%
-  gather(cellType, percent, distractor, target) %>%
-  group_by(condition, cellType) %>%
-  summarize(error = sem(percent),
-            percent = mean(percent)) 
-  
-heatMapForPlotExp2
+stat = function(data, indices) {
+  d <- data[indices,]
+  output = d %>%
+    group_by(condition, experiment) %>%
+    summarise(targetHoverPercentage = mean((endTime - startTimeInTarget)/ 
+                                           (endTime - messageTime)))
+  return(output$targetHoverPercentage)
+}
 
-g <- (ggplot(heatMapForPlotExp2, aes(x = condition, y = percent, 
-                                     group = cellType, color = cellType)) 
-      + geom_line(aes(linetype = cellType), size = 2)
-      + geom_errorbar(aes(ymax = percent + error, 
-                          ymin = percent - error), size =2 ,
-                      width = 0.1)
-     + ylim(0, .45)
-     + theme_bw(base_size = 16)
-      + ggtitle("Experiment 2 Hover-Time"))
-g
-ggsave("../../writing/cogsci-submission/images/exp2MouseTracking.pdf")
-```
+heatMapBoot = boot(data = intermediateHeatMap, statistic = stat, R = 1000)
+Exp1baseCI = boot.ci(heatMapBoot, type = "basic", index=1)
+Exp2baseCI = boot.ci(heatMapBoot, type = "basic", index=2)
+Exp1expCI = boot.ci(heatMapBoot, type = "basic", index=3)
+Exp2expCI = boot.ci(heatMapBoot, type = "basic", index=4)
 
-Compare mouse data from Exp1 w/ mouse data from Exp2:
+plottingDF = data.frame(condition = c("base", "base", "exp", "exp"),
+                        experiment = c("Exp.1", "Exp.2", "Exp.1", "Exp.2"),
+                        response = heatMapBoot$t0,
+                        lowerCI = c(Exp1baseCI$basic[1,4], Exp2baseCI$basic[1,4],
+                                    Exp1expCI$basic[1,4], Exp2expCI$basic[1,4]),
+                        upperCI = c(Exp1baseCI$basic[1,5], Exp2baseCI$basic[1,5],
+                                    Exp1expCI$basic[1,5], Exp2expCI$basic[1,5]))
 
-```{r}
-combinedHeatMap = rbind(heatMapForLMExp1 %>%
-                          mutate(exp = "Exp.1") %>% 
-                          filter(cellType == "target"),
-                        heatMapForLMExp2 %>% 
-                          mutate(exp = "Exp.2") %>%
-                          filter(cellType == "target"))
-combinedHeatMapForPlot <- combinedHeatMap %>%
-  group_by(condition, exp) %>%
-  summarize(error = ci95(percent),
-            percent = mean(percent)) 
 
-g <- (ggplot(combinedHeatMapForPlot, aes(x = exp, y = percent, 
+# heatMapForPlot = combinedHeatMap %>% 
+#   group_by(condition, experiment) %>%
+#   summarize(error = ci95(targetHoverPercentage),
+#             percent = mean(targetHoverPercentage)) 
+
+g <- (ggplot(plottingDF, aes(x = experiment, y = response, 
                                   group = condition, fill = condition)) 
       + geom_bar(position = dodge, stat= "identity")
-      + geom_errorbar(aes(ymax = percent + error, 
-                          ymin = percent - error), position = dodge,
+      + geom_errorbar(aes(ymax = upperCI, 
+                          ymin = lowerCI), position = dodge,
                           width = 0.25)
-      + ylim(0, .5)
+      + ylim(0, .4)
       + theme_bw(base_size = 16)
+      + ylab("% of total decision window")
       + ggtitle("Target Hover-Time"))
 g
 ggsave("../../writing/cogsci-submission/images/mousetracking.pdf")
-
-combinedRes = lm(percent ~ exp * condition, data = combinedHeatMap)
-summary(combinedRes)
-```
-
-```{r}
-# heatMapForPlot$new_labels = as.factor(sapply(X = heatMapForPlot$objectSet, 
-#                               FUN = function(v) {return(paste("Item", v))}))
-# 
-# g <- (ggplot(heatMapForPlot, aes(x = mouseX, y = mouseY, color = condition)) +
-#       geom_vline(xintercept = c(0, 150,300,450, 600)) +
-#       geom_hline(yintercept = c(0, 150,300,450, 600)) +
-#       geom_point() +
-#       geom_point(aes(x = begTargetX, y = begTargetY), size = 20,
-#                  shape = 4, color = "black", show_guide = FALSE) +
-#       geom_point(aes(x = begDistrX, y = begDistrY), size = 20,
-#                  shape = 4, color = "grey50", show_guide = FALSE) + 
-#       theme(panel.grid.major = element_blank(), 
-#             panel.grid.minor = element_blank()) +
-#       xlim(0, 600) +
-#       ylim(0, 600) +
-#       theme(aspect.ratio = 1) +
-#       facet_wrap(~ new_labels, nrow = 2))
-# g
 ```

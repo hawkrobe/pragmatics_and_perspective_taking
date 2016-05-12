@@ -184,8 +184,7 @@ We note that several items have much higher error rates than others -- for examp
 This item-wise variability suggests that the dependent variable highlighted in the original study (i.e. ``percentage of participants who moved the critical item at least once'') is somewhat problematic: it could look like 100\% of participants made errors even if they all made those errors on one particularly difficult item. Indeed, if we exclude the three `hard' items where over 60\% of participants in the experimental condition made errors, this dependent variable drops from 93\% to only 43\% of participants. 
 %This suggests that the ``at least one error'' DV is not appropriate in settings with high variability across items and that we might want to be more careful about controlling for this variability, perhaps by first measuring salience and ambiguity without the occlusion aspect of the paradigm.
 
-As a proxy for the eye-tracking analyses reported by \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse}, we conducted a mouse-tracking analysis. We define the decision window as the span of time between the point when the matcher received their instruction message and when they started moving an object. If it took them multiple attempts to move the correct object, we restricted our analysis to the first attempt. We took the set of all mouse position samples in the decision window (collected approximately every 15ms), and measured what proportion were located inside the cell containing the target.  We had to exclude an additional 3 participants for this analysis, because the timestamps for director and matcher did not align and we could not establish the decision window properly.
-We found that people tended to spend less total time hovering over the target cell on critical experimental trials than on baseline trials, $b = -.11, t(20) = -1.26, p = 0.224$, although perhaps due to an underpowered sample and imprecise measurements\footnote{This analysis includes participants who actually made errors, since the data is too sparse to exclude them.}, this result was not significant (see Fig. \ref{fig:hover}). %accounts for a significant proportion of variance $F(3, 52) = 10.7, p < 0.001$
+As a proxy for the eye-tracking analyses reported by \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse}, we conducted a mouse-tracking analysis. We define the decision window as the span of time between the point when the matcher received their instruction message and when they started moving an object. If it took them multiple attempts to move the correct object, we restricted our analysis to the first attempt. Within the decision window, we computed the total amount of time spent hovering over the cell containing the target and divided by the total length of the decision window to get a measure of the relative time spent considering the target. We had to exclude an additional 3 participants for this analysis, because the timestamps for director and matcher did not align and we could not establish the decision window properly. A paired-samples $t$-test found that people tended to spend less time hovering over the target cell on critical experimental trials than on baseline trials, $t(10) = -2.65, p = 0.02$ (see Fig. \ref{fig:hover}), indicating that the presence of a hidden distractor interfered with participants ability to directly choose the target.\footnote{This analysis includes participants who actually made errors, since the data is too sparse to exclude them.} . %accounts for a significant proportion of variance $F(3, 52) = 10.7, p < 0.001$
 
 By running this replication as a multi-player web experiment we have available an additional source of data beyond the original experiments: half of the instructions were unscripted, providing observations of natural production of referential descriptions for filler items. 
 Informally, we noted a tendency toward additional, possibly unnecessary, precision in descriptions. Instead of ``move the stuffed animal down'', participants said ``move the stuffed panda bear down.'' Or, instead of saying ``move the plane to the right'' when there is only one plane, participants said ``move the red airplane to the right.'' 
@@ -208,10 +207,10 @@ By the reasoning above we expected to see more precise descriptions by unscripte
 
  \begin{figure}[b!]
 \begin{center}
-\includegraphics[scale=.5]{images/mousetracking.pdf}
 \vspace{-.5cm}
-
-\caption{Mean percentage of time spent hovering over target cell in the experimental and baseline conditions for Expt.~1 (left) and Expt.~2 (right). Error bars are 95\% confidence intervals.}
+\includegraphics[scale=.45]{images/mousetracking.pdf}
+\caption{Mean percentage of time spent hovering over target cell in the two conditions for Expt.~1 (left) and Expt.~2 (right). Error bars are boostrapped 95\% confidence intervals.}
+\vspace{-.5cm}
 \label{fig:hover}
 \end{center}
 \end{figure}
@@ -234,13 +233,15 @@ Error rates are reported in Table \ref{table:mainResults}, alongside the results
 
 We find that patterns of errors in Expt.~2 diverge significantly from a uniform distribution across items, $\chi^2(7) = 24.8, p < 0.001$. Looking more closely at these patterns, we see that the only items where errors are consistently made are those where the more precise utterances used remain ambiguous. For example, in item 5, both the target and distractor are hair brushes: one is round and one is flat. Many participants produced the sub-class label ``hair brush,'' which was more precise than the scripted basic-level ``brush'' from Expt.~1, but the two objects were still confusable at the sub-class level. If we remove the two most difficult items (the ``hair brushes'' and the ``erasers''), the total percentage of errors on experimental trials drops from 24\% to 10\% and the percentage of participants making at least one error drops from 61\% to 32\%.
 
-When we conducted a mouse-tracking analysis identical to the one reported for Expt.~1, we again found a decrease in total hover time over the target in experimental vs. baseline trials $b = 0.07, t(54) = -2.1, p = 0.045$, indicating that the presence of a hidden distractor still interfered with participants directly choosing the target. While the effect appears to be slightly attenuated compared to Expt.~1 (see Figure \ref{fig:hover}), there is no significant interaction of experiment and condition on hover time $b = 0.04, t(74) = 0.45, p = 0.657$. Again, given the low sample size in Expt.~1, the noise from error, and the noise from counting samples instead of differences in timestamps, this result is limited.
+When we conducted a mouse-tracking analysis identical to the one reported for Expt.~1, we found no significant decrease in target hover time between experimental and baseline trials $t(27) = 0.89, p = 0.38$. To directly test for differences in hover time patterns across the two experiments, we used a mixed-effects model with a random intercept for game ID and an interaction between condition and experiment on target hover time. We found a marginally significant interaction, $b = 0.09, t = 1.89, p = 0.066$ (see Figure \ref{fig:hover}), providing some evidence that the presence of a hidden distractor no longer interfered target selection in Expt~2.
+
 \begin{figure}[t!]
 \begin{center}
+\vspace{-.25cm}
 \includegraphics[scale=.5]{images/itemwisefitness.pdf}
-\vspace{-.25cm}
-\caption{Item-wise error rates compared with label fitness ratios, for Expt.~1. Fitness ratios are scaled to the unit interval in order to visually compare to error rates. Error bars are bootstrapped 95\% confidence intervals for fitness and 95\% highest density intervals for error rates.}
-\vspace{-.25cm}
+\vspace{-.5cm}
+\caption{Item-wise error rates compared with label fitness ratios, for Expt.~1. Fitness ratios are scaled to the unit interval in order to visually compare to error rates. Error bars are bootstrapped 95\% confidence intervals for fitness and 95\% highest posterior density intervals for error rates.}
+\vspace{-.5cm}
 \label{fig:itemLevel}
 \end{center}
 \end{figure}
@@ -253,6 +254,7 @@ After separately establishing that matchers in Expt.~2 make fewer mistakes, that
 
 \begin{figure}[t!]
 \begin{center}
+\vspace{-.25cm}
 \includegraphics[scale=.5]{images/fitnessInteraction.pdf}
 \vspace{-.25cm}
 \caption{Mean fitness ratings provided by judges on Amazon Mechanical Turk. Error bars are bootstrapped 95\% confidence intervals.}
