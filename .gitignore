@@ -1,5 +1,16 @@
 keysar_replication.sublime*
 *~
+node_modules
 auth.json	
 mturk-and-gmail.txt
+*.synctex.gz
 .DS_Store
+*.bbl
+*.aux
+*.blg
+*.xlsx
+*.log
+*.out
+*.key
+*.RData
+*.Rhistory
