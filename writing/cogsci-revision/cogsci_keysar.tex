@@ -81,12 +81,12 @@ Theory of mind; social cognition; pragmatics
 \begin{center}
 \includegraphics[scale = .37]{images/overall_view.png}
 \end{center}
-\vspace{-.25cm}
+\vspace{-.5cm}
 \caption{Interface used in the reported experiments. Objects behind the black squares were hidden from the director.}
 \label{fig:interface}
 \end{figure*}
 
-Humans can accurately and intelligently reason about the mental states of other humans. Among other things, this ability -- called \emph{theory of mind} \cite{PremackWoodruff78_ChimpanzeeToM} -- allows us to infer the underlying beliefs and intentions that motivate others' actions, and to use these inferences to predict future actions \cite{BakerSaxeTenenbaum09_ActionUnderstandingInversePlanning}. Children acquire this ability by at least age six \cite{WimmerPerner83_BeliefsAboutBeliefs, WellmanCrossWatson01_ToMMetaAnalysis} and it serves as an important landmark in the developmental trajectory of intuitive theory use \cite{GopnikWellman12_ReconstructingConstructivism}.
+Humans can accurately and intelligently reason about the mental states of other humans. Among other things, this ability -- called \emph{theory of mind} \cite{PremackWoodruff78_ChimpanzeeToM} -- allows us to infer the underlying beliefs and intentions that motivate others' actions, and to use these inferences to predict future actions \cite{BakerSaxeTenenbaum09_ActionUnderstandingInversePlanning}. Children acquire this ability by at least age six \cite{WellmanCrossWatson01_ToMMetaAnalysis} and it serves as an important landmark in the developmental trajectory of intuitive theory use \cite{GopnikWellman12_ReconstructingConstructivism}.
 %
 While theory of mind use often appears to be automatic and effortless, Keysar and colleagues \cite{KeysarBarr___Brauner00_TakingPerspective, KeysarLinBarr03_LimitsOnTheoryOfMindUse, LinKeysarEpley10_ReflexivelyMindblind} have argued that it is actually the opposite, even for adults: we are ``mindblind" by default and only overcome our egocentric biases through an effortful process of perspective-taking. In other words, while adults are \emph{capable} of applying theory of mind reasoning, we do not always apply it reliably. 
 
@@ -208,7 +208,7 @@ By the reasoning above we expected to see more precise descriptions by unscripte
  \begin{figure}[b!]
 \begin{center}
 \vspace{-.5cm}
-\includegraphics[scale=.45]{images/mousetracking.pdf}
+\includegraphics[scale=.5]{images/mousetracking.pdf}
 \caption{Mean percentage of time spent hovering over target cell in the two conditions for Expt.~1 (left) and Expt.~2 (right). Error bars are boostrapped 95\% confidence intervals.}
 \vspace{-.5cm}
 \label{fig:hover}
@@ -235,31 +235,31 @@ We find that patterns of errors in Expt.~2 diverge significantly from a uniform 
 
 When we conducted a mouse-tracking analysis identical to the one reported for Expt.~1, we found no significant decrease in target hover time between experimental and baseline trials $t(27) = 0.89, p = 0.38$. To directly test for differences in hover time patterns across the two experiments, we used a mixed-effects model with a random intercept for game ID and an interaction between condition and experiment on target hover time. We found a marginally significant interaction, $b = 0.09, t = 1.89, p = 0.066$ (see Figure \ref{fig:hover}), providing some evidence that the presence of a hidden distractor no longer interfered target selection in Expt~2.
 
-\begin{figure}[t!]
-\begin{center}
-\vspace{-.25cm}
-\includegraphics[scale=.5]{images/itemwisefitness.pdf}
-\vspace{-.5cm}
-\caption{Item-wise error rates compared with label fitness ratios, for Expt.~1. Fitness ratios are scaled to the unit interval in order to visually compare to error rates. Error bars are bootstrapped 95\% confidence intervals for fitness and 95\% highest posterior density intervals for error rates.}
-\vspace{-.5cm}
-\label{fig:itemLevel}
-\end{center}
-\end{figure}
-
-Next, we test whether these improvements in performance are in fact due to more informative speaker behavior. We recruited twenty judges on Amazon Mechanical Turk, who provided ratings for how well the 71 unique labels used by speakers across both experiments (including scripted labels) fit the target and hidden distractor objects. Their responses were given on a slider with endpoints labeled ``not at all'' and ``perfectly.''  Inter-rater reliability was relatively high, with intra-class correlation coefficient of $0.6$ (95\% CI = $[0.54, 0.66]$). In a mixed model including random intercepts for raters and items, we found a significant crossover interaction of experiment and referent on mean fitness rating (see Fig. \ref{fig:fitnessInteraction}), $b = 0.32, t = 9, p < 0.001$. In Expt.~1, the scripted label fit the hidden distractor just as well or better than the target, but in Expt.~2, the unconstrained labels fit the target much better and the hidden distractor much worse. In other words, the scripted labels used in Keysar's studies were less informative than speakers normally produce in this scenario.
-
-Does differential informativity of scripted utterances account for the variability across items that we noted in Expt.~1? In Figure \ref{fig:itemLevel}, we compare the item-wise error \% and ratio of target fit to distractor fit. We find a correlation of $r = 0.76$ between these two measures for Expt.~1, and a correlation of $r = 0.53$ for Expt.~2. Comparing error rates from one experiment with label fitness ratios from the other, however, yields much weaker correlations ($r = 0.07$), suggesting that item-wise variability across the two experiments is driven by relative informativity of speaker utterances. 
-
-After separately establishing that matchers in Expt.~2 make fewer mistakes, that directors in Expt.~2 produce more informative utterances, and that informativity captures item-wise variability in error rates in both experiments, we tested the link between these effects in our aggregated data: does label informativity generally predict errors on critical trials? We used a mixed effects logistic regression model to estimate the effect of target and distractor fit on the probability of making a critical error in both experiments, including a random intercept for game ID. We found that participants are less likely to make errors when the target fit is higher, $b = -0.8, z = -4.1, p < 0.001$ and more likely to make errors when the distractor fit is higher, $b = 1.7, z = 3.7, p < 0.001$. Furthermore, a model including target fit and distractor fit in addition to item-level fixed effects is significantly better than a model including item alone, $\chi^2(2) = 36.2, p < 0.001$, implying that speaker informativity captures residual variance beyond the item-wise effects reported above.
 
 \begin{figure}[t!]
 \begin{center}
 \vspace{-.25cm}
 \includegraphics[scale=.5]{images/fitnessInteraction.pdf}
-\vspace{-.25cm}
+\vspace{-.5cm}
 \caption{Mean fitness ratings provided by judges on Amazon Mechanical Turk. Error bars are bootstrapped 95\% confidence intervals.}
-\vspace{-.25cm}
+\vspace{-.5cm}
 \label{fig:fitnessInteraction}
+\end{center}
+\end{figure}
+
+Next, we test whether these improvements in performance are in fact due to more informative speaker behavior. We recruited twenty judges on Amazon Mechanical Turk, who provided ratings for how well the 71 unique labels used by speakers across both experiments (including scripted labels) fit the target and hidden distractor objects. Their responses were given on a slider with endpoints labeled ``not at all'' and ``perfectly.''  Inter-rater reliability was relatively high, with intra-class correlation coefficient of $0.6$ (95\% CI = $[0.54, 0.66]$). In a mixed model including random intercepts for raters and items, we found a significant crossover interaction of experiment and referent on mean fitness rating (see Fig. \ref{fig:fitnessInteraction}), $b = 0.32, t = 9, p < 0.001$. In Expt.~1, the scripted label fit the hidden distractor just as well or better than the target, but in Expt.~2, the unconstrained labels fit the target much better and the hidden distractor much worse. In other words, the scripted labels used in Keysar's studies were less informative than speakers normally produce in this scenario.
+
+Does differential informativity of scripted utterances account for the variability across items that we noted in Expt.~1? In Figure \ref{fig:itemLevel}, we compare the item-wise error \% and ratio of target fit to distractor fit. We find that across both experiments, participants have significantly higher error \% on items where the speaker's label fits the distractor better than the target, $b = 0.43, t(14) = 3.97, p = 0.001$, capturing a significant portion of variance, $R^2 = .5, F(1,14) = 0.001$. This suggests that item-wise variability across the two experiments is primarily driven by relative informativity of speaker utterances. 
+
+After separately establishing that matchers in Expt.~2 make fewer mistakes, that directors in Expt.~2 produce more informative utterances, and that informativity captures item-wise variability in error rates in both experiments, we tested the link between these effects in our aggregated data: does label informativity generally predict errors on critical trials? We used a mixed effects logistic regression model to estimate the effect of target and distractor fit on the probability of making a critical error in both experiments, including a random intercept for game ID. We found that participants are less likely to make errors when the target fit is higher, $b = -0.8, z = -4.1, p < 0.001$ and more likely to make errors when the distractor fit is higher, $b = 1.7, z = 3.7, p < 0.001$. Furthermore, a model including target fit and distractor fit in addition to item-level fixed effects is significantly better than a model including item alone, $\chi^2(2) = 36.2, p < 0.001$, implying that speaker informativity captures residual variance beyond the item-wise effects reported above.
+\begin{figure}[t!]
+\begin{center}
+\vspace{-.25cm}
+\includegraphics[scale=.55]{images/itemwisefitness.pdf}
+\vspace{-.75cm}
+\caption{Item-wise error rates compared with label fitness ratios, across both experiments. Error bars are bootstrapped 95\% confidence intervals for fitness and 95\% highest posterior density intervals for error rates.}
+\vspace{-.5cm}
+\label{fig:itemLevel}
 \end{center}
 \end{figure}
 
@@ -283,8 +283,8 @@ This suggests that reference disambiguation was driven primarily by \emph{a prio
 However, this does not necessarily imply limitations on theory of mind---if speakers could be expected to naturally provide expressions which apply better to the target, then this behavior would be appropriate.
 % If listeners arrive at this interpretation strategy through pragmatic reasoning, then neglecting the speaker's epistemic state would be rational and also the result of theory of mind use. 
 In Expt.~2, we found that speakers did naturally produce more precise, informative utterances than required and these unconstrained utterances fit the target significantly better than they fit the hidden distractor. 
-For example, no speaker in Expt.~2 produced ``the bottom block,'' which was used as a critical instruction in Expt.~1. Instead, they said ``the bluish block with a B'' or ``block with the blue writing,'' which relied on less confusable perceptual features and thereby decreased error rates. 
-Thus, the errors observed in Expt.~1 can be explained as a result of an uncooperative confederate (speaker)---the experiment set up certain pragmatic expectations through the task context, then deliberately flouted them in critical trials. % Removing constraints on the speaker produced a dramatic reduction in overall matcher errors and systematic variation in error rates across items. We found that unscripted speakers systematically tended to produce more precise, costly referring expressions than their scripted counterparts -- for example, ``the clear audiocassette'' when there was only one ``tape'' in the speaker's display. These precise labels were less likely to fit the hidden distractor, and therefore less likely to lead to a matcher error.
+For example, no speaker in Expt.~2 produced ``the bottom block,'' which was used as a critical instruction in Expt.~1. Instead, they said ``the bluish block with a B'' or ``block with the blue writing,'' which relied on less confusable perceptual features and thereby decreased error rates. While the stimuli 
+Thus, the errors observed in Expt.~1 can be explained as a result of an uncooperative confederate (speaker)---the experiment set up certain pragmatic expectations through the task context, then deliberately flouted them in critical trials. 
 
 The Gricean maxim of quality dictates that cooperative speakers should make their utterance as informative as is required for current purposes, but no more so. If the referring expressions used in Expt.~1 uniquely pick out the target from the speaker's perspective, then why would unscripted speakers in Expt.~2 be more informative than this? 
 %strictly necessary and why would listeners come to expect such ``overinformativity''? 
@@ -293,14 +293,17 @@ Another possibility is that more general dynamics of language are in play.
 Studies of over-informativity in referring expressions have uncovered a general tendency of speakers to provide redundant information.
 This tendency can depend on a number of situational factors, such as the tendency to mention perceptually salient features to speed up the identification process  \cite{KoolenGattGoudbeekKrahmer11_Overspecification}. 
 %In the current task, it seems particularly relevant that both participants knew about the presence of hidden objects, increasing uncertainty about possible distractors and placing additional pressure on the speaker to overspecify. 
-The exact origin is a subject that must be followed up by future research, but it is clear that the tendency of speakers to produce highly informative referring expressions is useful to, and relied on by, listeners.
-Indeed, the remaining errors in Expt.~2 are at least partially due to the lack of availability of more specific expressions. 
-The items on which errors were most likely in Expt.~2 were difficult precisely because the natural utterance was \emph{still} ambiguous: even if the speaker uses ``hairbrush'' instead of the basic-level ``brush,'' for example, the distractor remains a more typical exemplar of the subcategory.
+The exact origin is a subject that must be followed up by future research \cite<e.g.>{GannBarr14_AudienceDesign}, but it is clear that the tendency of speakers to produce highly informative referring expressions is useful to, and relied on by, listeners. 
+%Indeed, the remaining errors in Expt.~2 are at least partially due to the lack of availability of more specific expressions. 
+%The items on which errors were most likely in Expt.~2 were difficult precisely because the natural utterance was \emph{still} ambiguous: even if the speaker uses ``hairbrush'' instead of the basic-level ``brush,'' for example, the distractor remains a more typical exemplar of the subcategory.
+
+This finding is consistent with a recent proposal by \citeA{HellerParisienStevenson16_ProbabilisticWeighing} that referring expressions are interpreted by probabilistically integrating multiple sources of information: when conversational expectations lead participants to expect over-informative utterances, they (rationally) place relatively less weight on features of the environment determining common ground, such as shared perceptual access. Further work in a wider variety of tasks is necessary to pin down the various factors determining the relative weighting of these different sources of information, but we have argued that pragmatics play a crucial role.
+
 
 It is worth noting several significant differences between our study and \citeA{KeysarLinBarr03_LimitsOnTheoryOfMindUse}.
-The primary difference between our study and the original, of course, is that it was run on the web with participants connected through a virtual environment, instead of face-to-face in a room. We believe we addressed the major concern about exploring theory of mind in web experiments -- that participants do not truly believe they are interacting with another human -- by allowing instantaneous, responsive, real-time interaction.  On the other hand, it is known that textual communication, as in our chat box, can differ from face-to-face verbal communication, and there was no way of addressing this. % Directors watched objects move through the actual moment-by-moment mouse trajectories that matchers used to drag them, and matchers saw the actual timing of the messages sent by the director.
+The primary difference between our study and the original, of course, is that it was run on the web with participants connected through a virtual environment, instead of face-to-face in a room. We believe we addressed the major concern about exploring theory of mind in web experiments -- that participants do not truly believe they are interacting with another human -- by allowing instantaneous, responsive, real-time interaction.  On the other hand, it is known that textual communication, as in our chat box, can differ from face-to-face verbal communication. Additionally, aspects of the interface such as the graphical representation of occluded cells may be less intuitive, or require more training, on the web than in the lab. % Directors watched objects move through the actual moment-by-moment mouse trajectories that matchers used to drag them, and matchers saw the actual timing of the messages sent by the director.
 
-A related difference is our decision not to use a confederate. While confederates are useful for reducing variation across instances of the experiment, we see several downsides. Beyond the difficulties of conducting large-scale experiments with confederates, it is difficult to exactly replicate all the subtleties of the confederate's behavior that might influence results. The pair of experiments we report is a reminder that manipulations administered by a trained confederate can interact in unexpected ways with a participant's social and communicative expectations. Regardless of the experimental context, it is illuminating to see how real participants naturally interact.
+A related difference is our decision not to use a confederate. While confederates are useful for reducing variation across instances of the experiment and delivering carefully targeted manipulations, their use may have unexpected consequences. Beyond the difficulties of conducting large-scale experiments with confederates, it is difficult to exactly replicate all the subtleties of the confederate's behavior that might influence results. The pair of experiments we report is a reminder that manipulations administered by a trained confederate can interact in unexpected ways with a participant's social and communicative expectations. Regardless of the experimental context, it is illuminating to see how real participants naturally interact.
 
 %\todo[inline]{rdh: can take out next paragraph if hurting for space...}
 %A final concern is our graphical representation of occluded cells. We told players that items behind black cells were hidden to the director, showed them side-by-side displays of the director and matcher views, and quizzed them on this detail in the short attention check that players had to pass before playing. But they may have forgotten part-way through the experiment, or failed to fully internalize it. In the in-lab version, there was an actual divider between players, so it would have been more salient. We suspect that some subset of errors in our version game aren't due to a failure of perspective-taking, but instead because of a misunderstanding of what the other person's perspective is to begin with. However, this source of errors is held constant across our two experiments, and it would only bias our estimates of errors upward.
