@@ -4,10 +4,10 @@ output: html_document
 ---
 
 ```{r}
-setwd('~/Repos/keysar_replication/experiment1/analysis/')
-preMouseDExp1 = read.csv('fullSampleMouse.csv')
-preErrorDExp1 = read.csv('fullSampleError.csv')
-preMessageDExp1 = read.csv('fullSampleMessage.csv')
+setwd('~/Repos/keysar_replication/experiment1/data/')
+preMouseDExp1 = read.csv('mouse/fullSampleMouse.csv')
+preErrorDExp1 = read.csv('error/fullSampleError.csv')
+preMessageDExp1 = read.csv('message/fullSampleMessage.csv')
 
 setwd('~/Repos/keysar_replication/experiment2/data/')
 preMouseDExp2 = read.csv('mouse/exp2Mouse.csv')
@@ -18,6 +18,7 @@ library(dplyr)
 library(ggplot2)
 library(lme4)
 library(lmerTest)
+library(binom)
 ```
 
 Filter out bad participants
@@ -85,12 +86,16 @@ eDExp2 <- errorDExp2 %>%
   mutate(cond1 = as.numeric(n >= 1)) %>%
   mutate(cond2 = as.numeric(n >= 2)) #
 
+errorTableExp1 <- eDExp1 %>%
+  group_by(condition) %>%
+  summarise(atLeastOnce = sum(cond1)/numParticipantsExp1, 
+            atLeastTwice = sum(cond2)/numParticipantsExp1,
+            total = sum(n) / (4 * numParticipantsExp1))
 errorTableExp2 <- eDExp2 %>%
   group_by(condition) %>%
   summarise(atLeastOnce = sum(cond1)/numParticipantsExp2, 
             atLeastTwice = sum(cond2)/numParticipantsExp2,
             total = sum(n) / (4 * numParticipantsExp2))
-errorTableExp2
 
 # To illustrate how much a few items are driving the effect, we exclude three items 
 # where more than 60% of participants made errors.
@@ -105,7 +110,11 @@ excludedEDExp2 <- errorDExp2 %>%
   summarise(atLeastOnce = sum(cond1)/numParticipantsExp2, 
             atLeastTwice = sum(cond2)/numParticipantsExp2,
             total = sum(n) / (4 * numParticipantsExp2))
-excludedEDExp2
+
+
+errorTableExp1
+errorTableExp2
+
 ```
 
 When we look at errors per item, we have to remember that not all items had the same number of participants in the experimental condition.
@@ -145,7 +154,12 @@ itemInequalitiesExp1 <- errorDExp1 %>%
          correctCount = total - n) %>%
   mutate(errorRate = errorCount / (errorCount + correctCount)) %>%
   select(objectSet, errorCount, correctCount, errorRate, total)
+
+# Replace NAs with true values 
 itemInequalitiesExp1[1,2:4] = c(0, itemInequalitiesExp1[1,]$total, 0)
+
+itemWiseTestExp1 <- chisq.test(itemInequalitiesExp1 %>% select(errorCount,correctCount))
+print(itemWiseTestExp1)
 
 itemInequalitiesExp2 <- errorDExp2 %>%
   filter(condition == "exp") %>%
@@ -160,9 +174,10 @@ itemInequalitiesExp2 <- errorDExp2 %>%
   mutate(errorRate = errorCount / (errorCount + correctCount)) %>%
   select(objectSet, errorCount, correctCount, errorRate, total)
 
+# Replace NAs with true values 
 itemInequalitiesExp2[1,2:4] = c(0, itemInequalitiesExp2[1,]$total, 0)
 
-itemWiseTestExp2 <- chisq.test(itemInequalitiesExp2[-c(1,4,5)])
+itemWiseTestExp2 <- chisq.test(itemInequalitiesExp2 %>% select(errorCount,correctCount))
 print(itemWiseTestExp2)
 ```
 
@@ -260,7 +275,42 @@ icc(wideRatings[,-c(1,2)],
 Compare item-wise error rates and fitness ratios
 
 ```{r}
+
 library(binom)
+
+Exp1Errs = itemInequalitiesExp1 %>%
+  do(mutate(., errorLower = binom.confint(.$errorCount, .$total, 
+                                     method = "bayes")$lower,
+               errorUpper = binom.confint(.$errorCount, .$total, 
+                                     method = "bayes")$upper)) %>%
+  select(objectSet, errorRate, errorLower, errorUpper)
+
+stat = function(data, indices) {
+  d <- data[indices,]
+  applicability = d %>%   
+    group_by(objectSet) %>%
+    summarize(m = mean(distractor)/mean(target))
+  return(applicability$m)
+}
+
+Exp1Fitness = overinformativeCodes %>%
+  filter(exp == "Exp.1") %>%
+  spread(referent, response) 
+
+res = boot(data = Exp1Fitness, statistic = stat, R = 10000)
+Exp1PlottingDF = data.frame(fitness = rep(0, 8),
+                        fitnessUpper = rep(0,8),
+                        fitnessLower = rep(0,8),
+                        objectSet = 1:8)
+for (i in 1:8) {
+  ci = boot.ci(res, type = "basic", index=i)
+  Exp1PlottingDF[i,]$fitness = res$t0[i]
+  Exp1PlottingDF[i,]$fitnessLower = ci$basic[4]
+  Exp1PlottingDF[i,]$fitnessUpper = ci$basic[5]
+}
+
+Exp1ItemwiseForPlot = left_join(Exp1Errs, Exp1PlottingDF, by = c("objectSet"))
+
 binomStat = stat = function(data, indices) {
   d <- data[indices,]
   prop = d %>%   
@@ -306,13 +356,13 @@ Exp2ItemwiseForPlot = left_join(Exp2PlottingDF, Exp2Errs, by = c("objectSet")) %
   rbind(Exp1ItemwiseForPlot %>% mutate(experiment = "Exp. 1"))
 
 g <- (ggplot(Exp2ItemwiseForPlot, aes(x = fitness, y = errorRate))
-  + geom_point(aes(color = experiment))
+  + geom_point(aes(color = experiment), size = 2)
   + geom_errorbarh(aes(xmax = fitnessUpper, xmin = fitnessLower,
                        color = experiment), 
-                  height = 0.01)
+                  height = 0.01, alpha = .5)
   + geom_errorbar(aes(ymax = errorUpper, ymin = errorLower,
                      color = experiment), 
-                width = 0.05)
+                width = 0.05, alpha = .5)
   + geom_smooth(method = "lm",colour="black")
   + theme_bw(base_size = 16)
   + theme(aspect.ratio=1)
@@ -349,36 +399,54 @@ itemWiseCodes <- rawOverinformativeCodes %>%
   mutate(criticalError = ifelse(is.na(criticalError),0,1)) %>%
   group_by(gameid, objectSet, referent, criticalError, exp) %>%
   summarize(meanFitness = mean(response)) %>%
-  spread(referent, meanFitness)
+  spread(referent, meanFitness) %>%
+  ungroup() %>%
+  mutate(objectSetF = factor(objectSet)) %>%
+  mutate(criticalErrorF = factor(criticalError)) %>%
+  mutate(scaledTarget)
+```
 
+```{r}
 library(lme4)
-mmRes1 <- glmer(criticalError ~ factor(objectSet) + (1 | gameid), data = itemWiseCodes, family = binomial)
-summary(mmRes1)
-mmRes2 <- glmer(criticalError ~ scale(target) + scale(distractor) + factor(objectSet) + (1 | gameid),
-      data = itemWiseCodes, family = binomial)
 
+# Note: included objectSetF as *fixed-effect* in cogsci paper, e.g.
+# glmer(criticalError ~ objectSetF + (1 | gameid), data = itemWiseCodes, family = binomial)
+# This is cleaner and helps the model converge better, but doesn't qualitatively change results
+
+mmRes1 <- glmer(criticalError ~ (1 | gameid) + (1 | objectSetF), data = itemWiseCodes, family = binomial)
+mmRes2 <- glmer(criticalError ~ scale(target) + scale(distractor)
+                                + (1 | gameid) + (1 | objectSetF),
+                data = itemWiseCodes, family = binomial)
 anova(mmRes1, mmRes2)
+summary(mmRes2)
 
-# newItemWiseCodes = itemWiseCodes %>% 
-#   mutate(modelPreds = exp(predict(mmRes1))/(exp(predict(mmRes1))+1)) %>%
-#   group_by(exp, objectSet) %>%
-#   summarize(empError = mean(criticalError),
-#             modelError = mean(modelPreds))
-# 
-# (ggplot(newItemWiseCodes, aes(x = empError, y = modelError, color = exp)) 
-#    + geom_point()
-#    + geom_smooth(method = lm))
+pl <- sjp.glmer(mmRes2, type = "ri.slope",facet.grid = FALSE, prnt.plot = F)
+
+targetPlot <- pl$plot[[3]]
+distractorPlot <- pl$plot[[4]]
+
+targetPlot+ 
+  xlab("label fitness for target (scaled)") +
+  ylab("predicted probability of error") +
+  ggtitle("target informativity") + 
+  labs(color="item")
+
+distractorPlot +
+  xlab("label fitness for distractor (scaled)") +
+  ylab("predicted probability of error") +
+  ggtitle("distractor informativity") + 
+  labs(color="item")
 
 # Shoudln't worry too much about convergence errors: appear to be false positives
 # https://groups.google.com/forum/#!topic/predicts_project/gVfnVxCSYog
 
-gg <- mmRes2@optinfo$derivs$grad
-hh <- mmRes2@optinfo$derivs$Hessian
-vv <- sqrt(diag(solve(hh/2)))
-print(summary(abs(gg*vv)))
-
-relgrad <- with(mmRes2@optinfo$derivs,solve(Hessian,gradient))
-print(max(abs(relgrad)))
+# gg <- mmRes2@optinfo$derivs$grad
+# hh <- mmRes2@optinfo$derivs$Hessian
+# vv <- sqrt(diag(solve(hh/2)))
+# print(summary(abs(gg*vv)))
+# 
+# relgrad <- with(mmRes2@optinfo$derivs,solve(Hessian,gradient))
+# print(max(abs(relgrad)))
 
 ```
 
