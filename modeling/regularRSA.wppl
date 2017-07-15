@@ -39,41 +39,32 @@ var uttFitness = function(utt, object) {
 var L0 = cache(function(utt, perceivedContext) {
   return Infer({method: 'enumerate'}, function() {
     var object = uniformDraw(perceivedContext);
-    factor(uttFitness(utt, object))
+    factor(uttFitness(utt, object));
     return object;
-  })
-})
-
-// If experimenter is deceptive, speaker can see everything;
-// if not, speaker has uncertainty over what's behind occluded square
-var S1 = cache(function(target, knownContext) {
-  return Infer({method: 'enumerate'}, function() {
-    var utt = uniformDraw(possibleUtterances);
-    var listener = Infer({method: 'enumerate', model: function() {
-      var obj = sample(Categorical({vs: possibleObjects, ps: repeat(9, function() {return 1/9})}))
-      var possibleListenerView = (knownContext.length < 4 ?
-				  knownContext.concat(obj) :
-				  knownContext);
-      return sample(L0(utt, possibleListenerView));
-    }})
-    factor(alpha * listener.score(target) - uttCost(utt))
-    return utt;
   });
 });
 
-// Listener assigns small prior probability to deceptive experimenter
+var S1 = cache(function(target, knownContext) {
+  return Infer({method: 'enumerate'}, function() {
+    var utt = uniformDraw(possibleUtterances);   
+    factor(alpha * L0(utt, knownContext).score(target) - uttCost(utt));
+    return utt;
+  }); 
+});
+
+// Listener only considers objects speaker can see (model Keysar is arguing against)
 var L2 = cache(function(utt, perceivedContext) {
   var fullObjSet = perceivedContext.shared.concat(perceivedContext.occluded);
   return Infer({method: 'enumerate'}, function() {
-    var object = uniformDraw(fullObjSet);
+    var object = uniformDraw(perceivedContext.shared);    
     var speakerContext = perceivedContext.shared;
     observe(S1(object, speakerContext), utt);
     return object.color + " " + object.type;
-  })
-})
+  });
+});
 
-console.log("speaker utterance to refer to fish")
-viz.table(S1({type: 'fish', color: 'blue'}, exampleContext.shared))
+console.log("speaker utterance to refer to fish");
+viz.table(S1({type: 'fish', color: 'blue'}, exampleContext.shared));
 
-console.log("listener response after hearing (underinformative) 'fish'")
+console.log("listener response after hearing (underinformative) 'fish'");
 viz.table(L2('fish', exampleContext));
