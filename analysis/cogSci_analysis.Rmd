@@ -210,10 +210,10 @@ Need to join the coder ratings...
 ```{r}
 library(boot)
 library(irr)
-turkerRatings <- read.csv("../../normingExperiment/data/keysarNorming-trials.csv")
+turkerRatings <- read.csv("../normingExperiment/data/keysarNorming-trials.csv")
 relevantProperties <- c("objectSet", "label")
 
-criticalMessagesExp1 <- read.csv("../analysis/messagesExp1.csv") %>%
+criticalMessagesExp1 <- read.csv("../experiment1/data/message/analysis/messagesExp1.csv") %>%
   left_join(turkerRatings, by = relevantProperties) %>%
   mutate(exp = "Exp.1")
 criticalMessagesExp2 <- read.csv("../analysis/messagesExp2.csv") %>%
@@ -596,4 +596,58 @@ g <- (ggplot(plottingDF, aes(x = experiment, y = response,
       + ggtitle("Target Hover-Time"))
 g
 ggsave("../../writing/cogsci-revision/images/mousetracking.pdf")
+```
+
+# Vanity plots for talk
+
+```{r}
+library(ggplot2)
+library(ggthemes)
+d.model <- data.frame(x = rep(c('fish', 'blue fish'), 2),
+                      y = c(0.37,0.63,0.73, 0.27),
+                      source = c(rep('with context-uncertainty', 2),
+                                 rep('without context-uncertainty', 2)))
+ggplot(d.model, aes(x=x, y=y, fill = x)) +
+  geom_bar(stat='identity', position = 'dodge') +
+  theme_few() +
+  scale_fill_manual(values = c('red', 'grey')) +
+  facet_wrap(~ source) +
+  ylab("P(u | o)")
+```
+
+```{r}
+d.comp <- data.frame(x = rep(c('experimental', 'baseline'), 2),
+                      y = c(.30, 0, .43, .02),
+                      source = c(rep('original', 2),
+                                 rep('replication', 2)),
+                     error = c(1/sqrt(38*4),1/sqrt(38*4), 
+                               1/sqrt(14 * 4), 1/sqrt(14 * 4)))
+ggplot(d.comp, aes(x=x, y=y, fill = x)) +
+  geom_bar(stat='identity', position = 'dodge') +
+  theme_few() +
+  scale_fill_manual(values = c('red', 'grey')) +
+  geom_errorbar(aes(ymin = y - error, ymax = y + error), width = 0) +
+  facet_wrap(~ source) +
+  ylim(0, 1) +
+  ylab("% total errors")
+```
+
+```{r}
+d.comp <- data.frame(x = rep(c('experimental', 'baseline'), 3),
+                      y = c(.30, 0, .43, .02, .24, 0),
+                      source = ordered(c(rep('original', 2),
+                                 rep('Exp. 1', 2),
+                                 rep('Exp. 2', 2)),
+                                 levels = c('original', 'Exp. 1', 'Exp. 2')),
+                     error = c(1/sqrt(38*4),1/sqrt(38*4), 
+                               1/sqrt(14 * 4), 1/sqrt(14 * 4),
+                               1/sqrt(32*4), 1/sqrt(32*4)))
+ggplot(d.comp, aes(x=x, y=y, fill = x)) +
+  geom_bar(stat='identity', position = 'dodge') +
+  theme_few() +
+  scale_fill_manual(values = c('red', 'grey')) +
+  geom_errorbar(aes(ymin = y - error, ymax = y + error), width = 0) +
+  facet_wrap(~ source) +
+  ylim(0, 1) +
+  ylab("% total errors")
 ```
