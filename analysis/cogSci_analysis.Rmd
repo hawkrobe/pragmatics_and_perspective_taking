@@ -213,10 +213,10 @@ library(irr)
 turkerRatings <- read.csv("../normingExperiment/data/keysarNorming-trials.csv")
 relevantProperties <- c("objectSet", "label")
 
-criticalMessagesExp1 <- read.csv("../experiment1/data/message/analysis/messagesExp1.csv") %>%
+criticalMessagesExp1 <- read.csv("./experiment1/data/processedLabelsExp1.csv") %>%
   left_join(turkerRatings, by = relevantProperties) %>%
   mutate(exp = "Exp.1")
-criticalMessagesExp2 <- read.csv("../analysis/messagesExp2.csv") %>%
+criticalMessagesExp2 <- read.csv("../experiment2/data/processedLabelsExp2.csv") %>%
   left_join(turkerRatings, by = relevantProperties) %>%
   mutate(exp = "Exp.2")
 
@@ -650,4 +650,17 @@ ggplot(d.comp, aes(x=x, y=y, fill = x)) +
   facet_wrap(~ source) +
   ylim(0, 1) +
   ylab("% total errors")
+```
+
+```{r}
+d.model <- data.frame(x = rep(c('red fish', 'blue fish'), 2),
+                      y = c(0.27, 0.73, 0, 1),
+                      source = c(rep('with speaker context-uncertainty', 2),
+                                 rep('without speaker context-uncertainty', 2)))
+ggplot(d.model, aes(x=x, y=y, fill = x)) +
+  geom_bar(stat='identity', position = 'dodge') +
+  theme_few() +
+  scale_fill_manual(values = c('red', 'blue')) +
+  facet_wrap(~ source) +
+  ylab("")
 ```
