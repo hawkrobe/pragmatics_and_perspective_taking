@@ -32,8 +32,8 @@
 
 % TODO: Currently a bit too long (and probably too in the weeds...) 
 \significancestatement{To communicate successfully, speakers must flexibly adapt %the specificity of 
-their utterances to the demands of the current context. In contexts  which other objects are in view of their partnerrying to refer to an object in  , it is helpful to provide additional disambiguating information: for example, saying "cassette tape" instead of the potentially ambiguous ``tape." %A listener who rationally expects such levels of specificity may, in turn, draw surprising inferences when they hear a less specific utterance than the situation demands. 
-We argue that influential arguments for limits on Theory of Mind (ToM) in adults have neglected the nuanced pragmatics of the communication tasks they rest upon. A careful analysis of these pragmatic demands using a rational model of communication suggests a minimal pair of replications which show that apparent failures of visual perspective-taking are in fact successes for sophisticated social reasoning in context.}
+their utterances to the demands of the current context. When they are unsure exactly which objects are in view of their partner, for example, they may provide additional disambiguating information when referring to a particular object: saying "cassette tape" instead of the potentially ambiguous ``tape." %A listener who rationally expects such levels of specificity may, in turn, draw surprising inferences when they hear a less specific utterance than the situation demands. 
+We argue that influential arguments for limits on Theory of Mind (ToM) in adults have neglected the nuanced pragmatics of the communication tasks they rest upon. A careful analysis of pragmatic demands using a rational model of communication suggests a minimal pair of experiments which show that apparent failures of visual perspective-taking are in fact successes for sophisticated social reasoning in context.}
 
 % Please include corresponding author, author contribution and author declaration information
 \authorcontributions{Please provide details of author contributions here.}
@@ -41,10 +41,11 @@ We argue that influential arguments for limits on Theory of Mind (ToM) in adults
 \correspondingauthor{\textsuperscript{2}To whom correspondence should be addressed. E-mail: author.two\@email.com}
 
 % Keywords are not mandatory, but authors are strongly encouraged to provide them. If provided, please include two to five keywords, separated by the pipe symbol, e.g:
-\keywords{Pragmatics $|$ Theory of mind $|$ Social cognition $|$ Replication} 
+\keywords{Theory of mind $|$ Pragmatics $|$ Communication $|$ Social cognition $|$ Replication} 
 
 \begin{abstract}
-Humans are capable of accurately reasoning about other minds, but how ubiquitously do we use this ability in everyday life? Recent theories of language use as recursive social reasoning remain in tension with evidence that adult listeners apparently fail to take their partner's perspective in communication. To reconcile these points of view, we use a computational model of communication under uncertainty to analyze the pragmatic demands of a common theory of mind test.  Through a minimal pair of replications comparing scripted vs. unscripted speakers, we show that scripted confederates used in previous studies are \emph{uncooperative}: they are less informative than what a speaker would actually produce in that situation, thus violating the listener's rational social expectations. This ironically shows that apparent failures of theory of mind are in fact attributable to sophisticated expectations about speaker behavior---that is, to theory of mind. 
+%Humans are capable of accurately reasoning about other minds, but how ubiquitously do we use this ability in everyday life? 
+Recent theories of language use as recursive social reasoning remain in tension with evidence that adult listeners apparently fail to take their partner's perspective in communication. To reconcile these points of view, we use a computational model of communication under uncertainty to analyze the pragmatic demands of a common theory of mind test.  Through a minimal pair of replications comparing scripted vs. unscripted speakers, we show that scripted confederates used in previous studies are \emph{uncooperative}: they are less informative than what a speaker would actually produce in that situation, thus violating the listener's rational social expectations. This ironically shows that apparent failures of theory of mind are in fact attributable to sophisticated expectations about speaker behavior---that is, to theory of mind. 
 \end{abstract}
 
 \dates{This manuscript was compiled on \today}
@@ -60,13 +61,28 @@ Humans are capable of accurately reasoning about other minds, but how ubiquitous
 \thispagestyle{firststyle}
 \ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
 
-Humans can accurately and intelligently reason about the mental states of other humans. Theory of mind \cite{PremackWoodruff78_ChimpanzeeToM} allows us to infer the underlying beliefs and intentions that motivate others' actions, and to use these inferences to predict future actions \cite{BakerSaxeTenenbaum09_ActionUnderstandingInversePlanning}. 
+Our success as a cooperative species depends upon our ability to accurately predict the behavior of other agents. The underlying mental representation we use to make such predictions --- our theory of mind \cite{PremackWoodruff78_ChimpanzeeToM} --- has been increasingly well-understood as a generative model of rational action \cite{KileyHamlinEtAl13_MentalisticCoreSocial, BakerSaxeTenenbaum09_ActionUnderstandingInversePlanning, JaraEttingerEtAl16_NaiveUtilityCalculus, BakerEtAl17_ToMBayesian}. From a young age, we can invert this model to infer another agent's likely mental states given their past behavior, and simulate their future behavior to form sophisticated expectations about how they would act in a range of scenarios \cite{SetohScottBaillargeon16_FalseBelief, ScottBaillargeon17_EarlyToM}. Yet the extent to which theory of mind is deployed in \emph{communication}, an especially ubiquitous and high-stakes site for social interaction, remains controversial. A large body of evidence has demonstrated striking failures of perspective-taking, where listeners appear to be ``mind-blind,'' neglecting the visual access of their partner when interpreting their utterances \cite{KeysarBarr___Brauner00_TakingPerspective, KeysarLinBarr03_LimitsOnTheoryOfMindUse, LinKeysarEpley10_ReflexivelyMindblind}. 
+
+While these failures are compelling evidence against a simple model where theory of mind reasoning is limited to literal perspective-taking, we argue in this paper that the rational models speakers and listeners use to reason about their conversation partners are in fact much richer. Communication abounds with social expectations. We expect our conversation partners to follow common conventions about the meanings of words \cite{Lewis69_Convention, CentolaBaronchelli15_ConventionEmergence}, to update these conventions in light of previous interactions \cite{BrennanClark96_ConceptualPactsConversation}, and to avoid saying things that are confusing or unnecessarily complicated in the current context \cite{Grice75_LogicConversation}.
+
+
+
+
+%The computational mechanisms underlying theory of mind have been increasingly well-understood as accurate predictions about another agent's future actions using a mental model of their beliefs and desires \cite{PremackWoodruff78_ChimpanzeeToM}, so too . 
+
+
+
+%The underlying mechanisms that support our ability to communicate so flexibly and effortlessly? These expectations derive from in internal model of our partner's mind Making these predictions about our partner requires a model of their mind. rich models of someone's beliefs and desires from observing them act in the world, observe someone's behavior, we  infer the beliefs and desires  
+
+% rational models of other minds to infer predict what our friends like (e.g. , Baker, Jara-Ettinger, etc), depends on a mental model of our conversation partner. to predict what they will say or how they will interpret our words. 
+
+%speakers and listeners adapt their language use to their shared history and to the immediate context in rich, intricate ways \cite{Grice75_LogicConversation, Clark96_UsingLanguage}. For instance, in a context where multiple dogs may be salient to the listener, speakers introduce additional modifiers (``spotted dog'') or shift to more specific terms (``Dalmatian'') to disambiguate the one they are trying to refer to \cite{BrennanClark96_ConceptualPactsConversation, GrafEtAl16_BasicLevel}. Listeners, for their part, draw ad-hoc implicatures based on expectations that speakers will give contextually sensitive descriptions \cite{BrehenyKatsosWilliams06_ImplicaturesOnline, StillerGoodmanFrank15_AdHocImplicature} and \dots
+
+%What underlying mechanisms support our ability to communicate so flexibly and effortlessly? 
 %Children acquire this ability by at least age six \cite{WellmanCrossWatson01_ToMMetaAnalysis} and it serves as an important landmark in the developmental trajectory of intuitive theory use \cite{GopnikWellman12_ReconstructingConstructivism}.
 %
 
-Theory of mind is especially critical for communication; speakers refer to the same object in widely different ways depending on the context, and listeners draw inferences---or \emph{implicatures}---from violations of rational behavior. % use specific example
-
-While theory of mind use often appears to be automatic and effortless, Keysar and colleagues \cite{KeysarBarr___Brauner00_TakingPerspective, KeysarLinBarr03_LimitsOnTheoryOfMindUse, LinKeysarEpley10_ReflexivelyMindblind} have argued that it is actually the opposite, even for adults: we are ``mindblind" by default and only overcome our egocentric biases through an effortful process of perspective-taking. In other words, while adults are \emph{capable} of applying theory of mind reasoning, we do not always apply it reliably. 
+% While theory of mind use often appears to be automatic and effortless, Keysar and colleagues \cite{KeysarBarr___Brauner00_TakingPerspective, KeysarLinBarr03_LimitsOnTheoryOfMindUse, LinKeysarEpley10_ReflexivelyMindblind} have argued that it is actually the opposite, even for adults: we are ``mindblind" by default and only overcome our egocentric biases through an effortful process of perspective-taking. In other words, while adults are \emph{capable} of applying theory of mind reasoning, we do not always apply it reliably. 
 
 In this paper we argue that the apparent failures used to support this view are in fact successes for sophisticated social reasoning. In particular, we argue that critical utterances used by Keysar and colleagues are \emph{uncooperative}: they are less informative than what a speaker would actually produce in that situation; listeners who are sensitive to the pragmatics of the situation expect these more informative utterances and produce ``errors'' when their expectations are flouted. 
 
@@ -79,7 +95,7 @@ While these results are compelling, the paradigm has been criticized from few di
 \cite{HellerGrodnerTanenhaus08_Perspective} have pointed out that in many cases, the hidden object was a better fit for the referring expression than the one in common ground (e.g. the hidden roll of tape vs. the cassette tape for ``the tape''), making the hidden object \emph{a priori} more likely to be the referent; it would generally be fairer to compare two objects that fit the referring expression equally well. 
 We validate this argument by empirically measuring relative fit of the expressions to the target and distractor items.
 % Although relative fit was not empirically evaluated prior to our study,
-Moreover, \cite{HannaTanenhausTrueswell03_CommonGroundPerspective} argued that the viewpoint asymmetry paradigm is somewhat unnatural: common ground is typically built incrementally over the course of an interaction rather than presented all at once, and it is rare for a shared display to differ in perceptual accessibility. 
+Moreover, \cite{HannaTanenhausTrueswell03_CommonGroundPerspective, HannaTanenhaus04_PragmaticEffects} argued that the viewpoint asymmetry paradigm is somewhat unnatural: common ground is typically built incrementally over the course of an interaction rather than presented all at once, and it is rare for a shared display to differ in perceptual accessibility. 
 %Third, none of the experiments reported by Keysar and colleagues included a key comparison condition where the critical item (e.g. the roll of tape) was \emph{also} in common ground \cite{BrownSchmidtHanna11_IncrementalPerspectiveTaking}---perhaps people would refer to the critical item less in the privileged condition than in the full common ground condition, which would put a more positive spin on the results. %Note that none of these criticisms invalidate the paradoxical result that listeners move an occluded object, they just suggest an alternative explanation. Reference disambiguation is probabilistic: common ground and goodness of fit are weighed against one another.
 
 In this paper, we offer an additional factor that helps account for Keysar's results. 
@@ -107,6 +123,8 @@ We began by replicating \cite{KeysarLinBarr03_LimitsOnTheoryOfMindUse} in a mult
 Using similar reasoning, \cite{RubioFernandez16_DirectorTaskAttention} showed that listeners became suspicious of what was actually in common ground after hearing overinformative utterances, thus successfully using theory of mind reasoning. 
 
 %% Mention Westra & Carruthers as another critique focusing on pragmatics?
+
+%% Mention neural coordination papers? e.g. Stephens et al 2010, Stolk et al, 2014?
 
 \section*{Referring in an uncertain visual environment}
 
