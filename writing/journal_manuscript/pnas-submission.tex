@@ -61,18 +61,28 @@ Recent theories of language use as recursive social reasoning remain in tension 
 \thispagestyle{firststyle}
 \ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
 
+% Characterize the computational approach to theory of mind we plan to take
+% Point out a gaping hole that could benefit from this approach
 Our success as a cooperative species depends upon our ability to make sense of other agents. 
-A natural solution to this problem is to maintain an internal predictive model of how minds work: how an agent's unobservable mental states give rise to observable actions. 
-With such a model in mind, people can make inferences about an agent's likely mental state given their past behavior and run simulations to form sophisticated expectations about their future behavior. 
+A natural solution to this problem is to maintain an internal predictive model of how minds work: how an agent's unobservable beliefs and desires give rise to observable actions. 
+Armed with a computational theory of mind, people can make inferences about an agent's likely mental state given their past behavior and run simulations to form sophisticated expectations about their future behavior. 
 This theoretical approach to social cognition, where theory of mind reasoning \cite{PremackWoodruff78_ChimpanzeeToM, WellmanCrossWatson01_ToMMetaAnalysis, SetohScottBaillargeon16_FalseBelief, ScottBaillargeon17_EarlyToM} is grounded in an explicit computational model of how other minds work, has been useful for understanding a number of experimental phenomena in both adults and children \cite{KileyHamlinEtAl13_MentalisticCoreSocial, PantelisEtAl14_IntentionInference, BakerSaxeTenenbaum09_ActionUnderstandingInversePlanning, JaraEttingerEtAl16_NaiveUtilityCalculus, BakerEtAl17_ToMBayesian}. 
-Yet our current understanding of theory of mind use in \emph{communication} remains limited. Past efforts have largely focused on a relatively narrow behavioral operationalization of theory of mind as literal perspective-taking about visual access \cite{KeysarBarr___Brauner00_TakingPerspective, KeysarLinBarr03_LimitsOnTheoryOfMindUse, LinKeysarEpley10_ReflexivelyMindblind}. 
+Yet our current understanding of theory of mind use in \emph{communication} remains limited. 
+Theory of mind as applied within communication depends on an accurate model of what a speaker would say, or what a listener would think, in different situations. 
+Past efforts have instead largely focused on a relatively narrow behavioral operationalization of theory of mind as perspective-taking about a partner's visual access \cite{KeysarBarr___Brauner00_TakingPerspective, KeysarLinBarr03_LimitsOnTheoryOfMindUse, LinKeysarEpley10_ReflexivelyMindblind}. 
 
 %While these failures are compelling evidence against a simple model where theory of mind reasoning is limited to literal perspective-taking, 
-We argue in this paper that the mental models speakers and listeners use to reason about their partners in communication are in fact much richer than previously considered. By formalizing and rigorously comparing the predicted behavior of speakers and listeners using different mental models of one another, we show that theory of mind is required to account for communicative behavior in reference games. This approach also allows us to understand the sophisticated pragmatics underlying behavior that, under more naive behavioral measures, appeared to show limits.
+We argue in this paper that the mental models supporting theory of mind use in communication are much richer than past efforts have explored. 
+We consider a class of mental models representing not only a partner's visual access but also Gricean expectations of rationality and cooperativity \cite{Grice75_LogicConversation}: that speakers will avoid saying things that are confusing or unnecessarily complicated given the current context. 
+For example, suppose a friend wants to refer to a nearby Dalmatian. 
+%There are numerous descriptions that would all be literally true, but different expressions are preferred in different contexts.
+If there are no other dogs nearby, we may expect them to use a parsimonious basic-level term like ``dog.''
+When there is potential for confusion, however, we expect them to introduce additional modifiers (``spotted dog'') or shift to more specific terms (``Dalmatian'') to disambiguate the one they are trying to refer to \cite{BrennanClark96_ConceptualPactsConversation, GrafEtAl16_BasicLevel}. When speakers violate these expectations, listeners draw inferences about the intended meaning in order to account for the violation: for example, XXX \cite{XXX, BrehenyKatsosWilliams06_ImplicaturesOnline, StillerGoodmanFrank15_AdHocImplicature}. 
 
-Communication abounds with pragmatic social expectations. We expect our conversation partners to follow common conventions about the meanings of words \cite{Lewis69_Convention, CentolaBaronchelli15_ConventionEmergence}, to update these conventions in light of previous interactions \cite{BrennanClark96_ConceptualPactsConversation}, and to avoid saying things that are confusing or unnecessarily complicated in the current context \cite{Grice75_LogicConversation}.For instance, in a context where multiple dogs may be salient to the listener, speakers introduce additional modifiers (``spotted dog'') or shift to more specific terms (``Dalmatian'') to disambiguate the one they are trying to refer to \cite{BrennanClark96_ConceptualPactsConversation, GrafEtAl16_BasicLevel}. Listeners, for their part, draw ad-hoc implicatures based on expectations that speakers will give contextually sensitive descriptions \cite{BrehenyKatsosWilliams06_ImplicaturesOnline, StillerGoodmanFrank15_AdHocImplicature}
+This intricate dance of expectations has recently been formalized in a probabilistic model of communication as recursive social reasoning. The resulting Rational Speech Act (RSA) framework has successfully described many puzzling pragmatic phenomena, including vagueness \cite{Lassiter}, hyperbole \cite{Kao}, irony \cite{}, metaphor, and overinformativity \cite{Judith}. In the simplest version of this framework, speakers judge the utility of different utterances proportionate to the probability of correct interpretation under an internal model of a listener. Listener, in turn, use their respective internal model of the speaker to reason backward to the most plausible intention \cite{Grice75_LogicConversation,Clark96_UsingLanguage,GoodmanFrank16_RSATiCSFrankGoodman12_PragmaticReasoningLanguageGames, GoodmanStuhlmuller13_KnowledgeImplicature}. 
 
-
+Theory of mind mechanisms are therefore at the very heart of the Rational Speech Act framework, yet they have never been directly compared against egocentric or ``mindblind'' approaches under the same behavioral paradigm. By formalizing and rigorously comparing the predicted behavior of speakers and listeners using mental models of one another, we show that theory of mind is required to account for context-sensitive behavior. In addition to these novel predictions, this approach also allows us to understand the sophisticated pragmatics underlying behavior that, under more naive behavioral measures, apparently reflect failures of theory of mind. %Communication abounds with potential social expectations, and evaluating the extent to which theory of mind is deployed in communication requires considering these expectations \emph{en masse}. 
+While egocentric views of perspective-taking make more clear-cut behavioral predictions, the predictions derived from a computational theory of mind are more varied and complicated but ultimately more accurate.
 
 %The underlying mechanisms that support our ability to communicate so flexibly and effortlessly? 
 
@@ -82,45 +92,29 @@ Communication abounds with pragmatic social expectations. We expect our conversa
 
 % In this paper we argue that the apparent failures used to support this view are in fact successes for sophisticated social reasoning. 
 
-The argument offered by Keysar and colleagues is based on an elegant experimental paradigm, where participants played a simple communication game with a confederate. The two players were placed on opposite sides of a $4 \times 4$ grid containing a set of everyday objects (see Fig. \ref{fig:interface}). The confederate played the role of `director,' giving instructions about how to move objects around a grid, and the participant played the role of `matcher,' attempting to follow these instructions. For example, the objects in one trial included a cassette tape. The director gave an instruction like `move the tape up one square,' referring to the cassette.
-Critically, some objects were occluded such that only the matcher could see them, creating an asymmetry in the players' knowledge. To perform accurately on critical trials, the matcher would need to apply theory of mind to reason about which objects were shared and which were private. 
-For example, imagine a roll of tape were placed in an occluded slot: if a participant failed to account for the director's (partial) knowledge, she might interpret `tape' to mean the occluded roll of tape (which the director couldn't possibly know about). Indeed, \cite{KeysarLinBarr03_LimitsOnTheoryOfMindUse} found that participants attempted to move the hidden item in 30\% of cases: 71\% of participants attempted to move this hidden item at least once (out of four critical cases) in the experimental condition, compared to 0\% in a control condition where there was no ambiguity over the referent. 
-Additionally, eye-tracking data showed that participants considered the hidden item more often and for longer in the experimental condition than the control condition. 
+%The argument offered by Keysar and colleagues is based on an elegant experimental paradigm, where participants played a simple communication game with a confederate. The two players were placed on opposite sides of a $4 \times 4$ grid containing a set of everyday objects (see Fig. \ref{fig:interface}). The confederate played the role of `director,' giving instructions about how to move objects around a grid, and the participant played the role of `matcher,' attempting to follow these instructions. For example, the objects in one trial included a cassette tape. The director gave an instruction like `move the tape up one square,' referring to the cassette.
+%Critically, some objects were occluded such that only the matcher could see them, creating an asymmetry in the players' knowledge. To perform accurately on critical trials, the matcher would need to apply theory of mind to reason about which objects were shared and which were private. 
+%For example, imagine a roll of tape were placed in an occluded slot: if a participant failed to account for the director's (partial) knowledge, she might interpret `tape' to mean the occluded roll of tape (which the director couldn't possibly know about). Indeed, \cite{KeysarLinBarr03_LimitsOnTheoryOfMindUse} found that participants attempted to move the hidden item in 30\% of cases: 71\% of participants attempted to move this hidden item at least once (out of four critical cases) in the experimental condition, compared to 0\% in a control condition where there was no ambiguity over the referent. 
+%Additionally, eye-tracking data showed that participants considered the hidden item more often and for longer in the experimental condition than the control condition. 
 
-While these results are compelling, the paradigm has been criticized from few different angles. 
-\cite{HellerGrodnerTanenhaus08_Perspective} have pointed out that in many cases, the hidden object was a better fit for the referring expression than the one in common ground (e.g. the hidden roll of tape vs. the cassette tape for ``the tape''), making the hidden object \emph{a priori} more likely to be the referent; it would generally be fairer to compare two objects that fit the referring expression equally well. 
-We validate this argument by empirically measuring relative fit of the expressions to the target and distractor items.
-% Although relative fit was not empirically evaluated prior to our study,
-Moreover, \cite{HannaTanenhausTrueswell03_CommonGroundPerspective, HannaTanenhaus04_PragmaticEffects} argued that the viewpoint asymmetry paradigm is somewhat unnatural: common ground is typically built incrementally over the course of an interaction rather than presented all at once, and it is rare for a shared display to differ in perceptual accessibility. 
-%Third, none of the experiments reported by Keysar and colleagues included a key comparison condition where the critical item (e.g. the roll of tape) was \emph{also} in common ground \cite{BrownSchmidtHanna11_IncrementalPerspectiveTaking}---perhaps people would refer to the critical item less in the privileged condition than in the full common ground condition, which would put a more positive spin on the results. %Note that none of these criticisms invalidate the paradoxical result that listeners move an occluded object, they just suggest an alternative explanation. Reference disambiguation is probabilistic: common ground and goodness of fit are weighed against one another.
-
-%In this paper, we offer an additional factor that helps account for Keysar's results. 
-Theory of mind as applied within language understanding depends on an accurate model of what a speaker would say in different situations. Given an utterance, a listener can then reason backward to the most plausible situation \cite{Grice75_LogicConversation,Clark96_UsingLanguage,FrankGoodman12_PragmaticReasoningLanguageGames, GoodmanStuhlmuller13_KnowledgeImplicature}.
-This suggests that we consider whether the utterances produced by the confederate in Keysar's critical conditions were actually what a speaker in that context would be expected to say. 
-If not, then perhaps listeners are making choices that are in fact consistent with a correct pragmatic interpretation of the confederate's (uncooperative) utterance.
-More precisely, when both players know that objects are occluded in the display, the speaker may tend to add additional precision to references in order to avoid confusion. If the listener \emph{expects} the speaker to do this, they will pragmatically pick the \emph{a priori} more likely referent of the referring expression, which in critical trials will be the occluded object. In other words, it is precisely \emph{because} the listener takes the speaker's mental state into consideration that they are tricked by an uncooperative confederate into choosing the wrong item. 
-\begin{table*}
-\begin{center}
-\begin{tabular}{ p{2cm} | r | r |  r || r | r | r || r | r | r}
-& \multicolumn{3}{c||}{\% attempted at least once} & \multicolumn{3}{c||}{\% attempted at least twice} & \multicolumn{3}{c}{\% of total cases}\\
-\hline
-& Orig. & Expt. 1 & Expt. 2 & Orig. & Expt. 1 & Expt. 2 & Orig. & Expt. 1 & Expt. 2  \\
-Experimental & 71 & 93 & 61 & 46 & 57 & 32 & 30 & 43 & 24\\
-Baseline        & 0   & 7   & 0   & 0   & 0   & 0   & 0   & 2   & 0\\
-\end{tabular}
-\caption{Side-by-side comparison of error rates in \cite{KeysarLinBarr03_LimitsOnTheoryOfMindUse} and our two replications. The first two sections show the percentage of \emph{participants} attempting to move the occluded distractor at least once, or twice, of the four possible cases. The third section shows the percentage of \emph{all experimental trials} that the participant actually tried to move the occluded object. }
-\label{table:mainResults}
-\end{center}
-\end{table*}
-
-We began by replicating \cite{KeysarLinBarr03_LimitsOnTheoryOfMindUse} in a multi-player web experiment. We recruited participants to be both director and matcher (instead of using a confederate), but instructions for critical items, as well as a random subset of filler items, remained scripted as in the original study. We replicated the original finding, but noted a tendency of directors to be overinformative in unscripted filler trials. We then ran the same experiment without using any scripted instructions, observing unconstrained director utterances. We found much greater precision in unconstrained director utterances, which match targets much better than distractors, and better performance of the matchers. This minimal pair of experiments demonstrates that listener mistakes are at least partially due to the pragmatics of the task, ironically showing that apparent failures of theory of mind are in fact attributable to sophisticated expectations about speaker behavior---that is, to theory of mind.
-
-%% mention rubio fernandez early?
-Using similar reasoning, \cite{RubioFernandez16_DirectorTaskAttention} showed that listeners became suspicious of what was actually in common ground after hearing overinformative utterances, thus successfully using theory of mind reasoning. 
-
-%% Mention Westra & Carruthers as another critique focusing on pragmatics?
-
-%% Mention neural coordination papers? e.g. Stephens et al 2010, Stolk et al, 2014?
+%This suggests that we consider whether the utterances produced by the confederate in Keysar's critical conditions were actually what a speaker in that context would be expected to say. 
+%If not, then perhaps listeners are making choices that are in fact consistent with a correct pragmatic interpretation of the confederate's (uncooperative) utterance.
+%More precisely, when both players know that objects are occluded in the display, the speaker may tend to add additional precision to references in order to avoid confusion. If the listener \emph{expects} the speaker to do this, they will pragmatically pick the \emph{a priori} more likely referent of the referring expression, which in critical trials will be the occluded object. In other words, it is precisely \emph{because} the listener takes the speaker's mental state into consideration that they are tricked by an uncooperative confederate into choosing the wrong item. 
+%\begin{table*}
+%\begin{center}
+%\begin{tabular}{ p{2cm} | r | r |  r || r | r | r || r | r | r}
+%& \multicolumn{3}{c||}{\% attempted at least once} & \multicolumn{3}{c||}{\% attempted at least twice} & \multicolumn{3}{c}{\% of total cases}\\
+%\hline
+%& Orig. & Expt. 1 & Expt. 2 & Orig. & Expt. 1 & Expt. 2 & Orig. & Expt. 1 & Expt. 2  \\
+%Experimental & 71 & 93 & 61 & 46 & 57 & 32 & 30 & 43 & 24\\
+%Baseline        & 0   & 7   & 0   & 0   & 0   & 0   & 0   & 2   & 0\\
+%\end{tabular}
+%\caption{Side-by-side comparison of error rates in \cite{KeysarLinBarr03_LimitsOnTheoryOfMindUse} and our two replications. The first two sections show the percentage of \emph{participants} attempting to move the occluded distractor at least once, or twice, of the four possible cases. The third section shows the percentage of \emph{all experimental trials} that the participant actually tried to move the occluded object. }
+%\label{table:mainResults}
+%\end{center}
+%\end{table*}
+%
+%We began by replicating \cite{KeysarLinBarr03_LimitsOnTheoryOfMindUse} in a multi-player web experiment. We recruited participants to be both director and matcher (instead of using a confederate), but instructions for critical items, as well as a random subset of filler items, remained scripted as in the original study. We replicated the original finding, but noted a tendency of directors to be overinformative in unscripted filler trials. We then ran the same experiment without using any scripted instructions, observing unconstrained director utterances. We found much greater precision in unconstrained director utterances, which match targets much better than distractors, and better performance of the matchers. This minimal pair of experiments demonstrates that listener mistakes are at least partially due to the pragmatics of the task, ironically showing that apparent failures of theory of mind are in fact attributable to sophisticated expectations about speaker behavior---that is, to theory of mind.
 
 \section*{Referring in an uncertain visual environment}
 
@@ -271,6 +265,13 @@ That is, the scripted instructions used by the director for critical trials may 
 We tested this prediction in Expt.~2, where we removed the scripted instructions and allowed speakers to refer to items however they wished.
 By the reasoning above we expected to see more precise descriptions by unscripted directors and fewer errors by matchers in the critical trials.
 
+% discuss other criticisms of Keysar paradigm?
+While these results are compelling, the paradigm has been criticized from few different angles. 
+\cite{HellerGrodnerTanenhaus08_Perspective} have pointed out that in many cases, the hidden object was a better fit for the referring expression than the one in common ground (e.g. the hidden roll of tape vs. the cassette tape for ``the tape''), making the hidden object \emph{a priori} more likely to be the referent; it would generally be fairer to compare two objects that fit the referring expression equally well. 
+We validate this argument by empirically measuring relative fit of the expressions to the target and distractor items.
+% Although relative fit was not empirically evaluated prior to our study,
+Moreover, \cite{HannaTanenhausTrueswell03_CommonGroundPerspective, HannaTanenhaus04_PragmaticEffects} argued that the viewpoint asymmetry paradigm is somewhat unnatural: common ground is typically built incrementally over the course of an interaction rather than presented all at once, and it is rare for a shared display to differ in perceptual accessibility. 
+%Third, none of the experiments reported by Keysar and colleagues included a key comparison condition where the critical item (e.g. the roll of tape) was \emph{also} in common ground \cite{BrownSchmidtHanna11_IncrementalPerspectiveTaking}---perhaps people would refer to the critical item less in the privileged condition than in the full common ground condition, which would put a more positive spin on the results. %Note that none of these criticisms invalidate the paradoxical result that listeners move an occluded object, they just suggest an alternative explanation. Reference disambiguation is probabilistic: common ground and goodness of fit are weighed against one another.
 
 %\subsection{Discussion}
 %
@@ -322,11 +323,19 @@ The exact origin is a subject that must be followed up by future research \cite[
 
 This finding is consistent with a recent proposal by \cite{HellerParisienStevenson16_ProbabilisticWeighing} that referring expressions are interpreted by probabilistically integrating multiple sources of information: when conversational expectations lead participants to expect over-informative utterances, they (rationally) place relatively less weight on features of the environment determining common ground, such as shared perceptual access. Further work in a wider variety of tasks is necessary to pin down the various factors determining the relative weighting of these different sources of information, but we have argued that pragmatics play a crucial role.
 
+While We expect our conversation partners to follow common conventions about the meanings of words \cite{Lewis69_Convention, CentolaBaronchelli15_ConventionEmergence}, to update these conventions in light of previous interactions \cite{BrennanClark96_ConceptualPactsConversation}, and perhaps most importantly, 
 
 It is worth noting several significant differences between our study and \cite{KeysarLinBarr03_LimitsOnTheoryOfMindUse}.
 The primary difference between our study and the original, of course, is that it was run on the web with participants connected through a virtual environment, instead of face-to-face in a room. We believe we addressed the major concern about exploring theory of mind in web experiments -- that participants do not truly believe they are interacting with another human -- by allowing instantaneous, responsive, real-time interaction.  On the other hand, it is known that textual communication, as in our chat box, can differ from face-to-face verbal communication. Additionally, aspects of the interface such as the graphical representation of occluded cells may be less intuitive, or require more training, on the web than in the lab. % Directors watched objects move through the actual moment-by-moment mouse trajectories that matchers used to drag them, and matchers saw the actual timing of the messages sent by the director.
 
 A related difference is our decision not to use a confederate. While confederates are useful for reducing variation across instances of the experiment and delivering carefully targeted manipulations, their use may have unexpected consequences. Beyond the difficulties of conducting large-scale experiments with confederates, it is difficult to exactly replicate all the subtleties of the confederate's behavior that might influence results. The pair of experiments we report is a reminder that manipulations administered by a trained confederate can interact in unexpected ways with a participant's social and communicative expectations. Regardless of the experimental context, it is illuminating to see how real participants naturally interact.
+
+\todo[inline]{mention rubio fernandez early?}
+Using similar reasoning, \cite{RubioFernandez16_DirectorTaskAttention} showed that listeners became suspicious of what was actually in common ground after hearing overinformative utterances, thus successfully using theory of mind reasoning. 
+
+\todo[inline]{Mention Westra \& Carruthers as another critique focusing on pragmatics?}
+
+\todo[inline]{Mention neural coordination papers? e.g. Stephens et al 2010, Stolk et al, 2014?}
 
 %\todo[inline]{rdh: can take out next paragraph if hurting for space...}
 %A final concern is our graphical representation of occluded cells. We told players that items behind black cells were hidden to the director, showed them side-by-side displays of the director and matcher views, and quizzed them on this detail in the short attention check that players had to pass before playing. But they may have forgotten part-way through the experiment, or failed to fully internalize it. In the in-lab version, there was an actual divider between players, so it would have been more salient. We suspect that some subset of errors in our version game aren't due to a failure of perspective-taking, but instead because of a misunderstanding of what the other person's perspective is to begin with. However, this source of errors is held constant across our two experiments, and it would only bias our estimates of errors upward.
