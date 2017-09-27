@@ -213,7 +213,7 @@ library(irr)
 turkerRatings <- read.csv("../normingExperiment/data/keysarNorming-trials.csv")
 relevantProperties <- c("objectSet", "label")
 
-criticalMessagesExp1 <- read.csv("./experiment1/data/processedLabelsExp1.csv") %>%
+criticalMessagesExp1 <- read.csv("../experiment1/data/processedLabelsExp1.csv") %>%
   left_join(turkerRatings, by = relevantProperties) %>%
   mutate(exp = "Exp.1")
 criticalMessagesExp2 <- read.csv("../experiment2/data/processedLabelsExp2.csv") %>%
@@ -277,7 +277,7 @@ Compare item-wise error rates and fitness ratios
 ```{r}
 
 library(binom)
-
+library(ggthemes)
 Exp1Errs = itemInequalitiesExp1 %>%
   do(mutate(., errorLower = binom.confint(.$errorCount, .$total, 
                                      method = "bayes")$lower,
@@ -364,7 +364,7 @@ g <- (ggplot(Exp2ItemwiseForPlot, aes(x = fitness, y = errorRate))
                      color = experiment), 
                 width = 0.05, alpha = .5)
   + geom_smooth(method = "lm",colour="black")
-  + theme_bw(base_size = 16)
+  + theme_few(base_size = 16)
   + theme(aspect.ratio=1)
   + ylab("Error rate")
   + xlab("Distractor fitness / target fitness"))
@@ -663,4 +663,17 @@ ggplot(d.model, aes(x=x, y=y, fill = x)) +
   scale_fill_manual(values = c('red', 'blue')) +
   facet_wrap(~ source) +
   ylab("")
+```
+
+# Create input for BDA
+
+Create the informativities csv
+
+```{r}
+rbind(read_csv('../data/exp1SpeakerLabels.csv') %>% mutate(exp = 'scripted'),
+      read_csv('../data/exp2SpeakerLabels.csv') %>% mutate(exp = 'unscripted')) %>%
+  mutate(label = str_replace_all(label, fixed(' '), '')) %>%
+  mutate(label = str_replace_all(label, "[[:punct:]]", "")) %>% 
+  mutate(label = str_to_lower(label, locale = "en")) %>%
+  write_csv(path = '../modeling/bdaInput/speakerData.csv')
 ```
