@@ -1,0 +1,286 @@
+{
+  "blacksunglasses": {
+    "distractor_1": 0.143,
+    "target_1": 0.913
+  },
+  "glasses": {
+    "distractor_1": 0.205,
+    "target_1": 0.8235
+  },
+  "shades": {
+    "distractor_1": 0.1725,
+    "target_1": 0.8035
+  },
+  "sunglasses": {
+    "distractor_1": 0.2025,
+    "target_1": 0.9305
+  },
+  "alphabetblock": {
+    "distractor_2": 0.8965,
+    "target_2": 0.837
+  },
+  "b": {
+    "distractor_2": 0.11,
+    "target_2": 0.5755
+  },
+  "bblock": {
+    "distractor_2": 0.174,
+    "target_2": 0.805
+  },
+  "bbox": {
+    "distractor_2": 0.139,
+    "target_2": 0.529
+  },
+  "bcube": {
+    "distractor_2": 0.152,
+    "target_2": 0.71
+  },
+  "block": {
+    "distractor_2": 0.836,
+    "target_2": 0.82175
+  },
+  "blocktoy": {
+    "distractor_2": 0.757,
+    "target_2": 0.817
+  },
+  "blockwiththeb": {
+    "distractor_2": 0.14300000000000002,
+    "target_2": 0.8525
+  },
+  "blockwiththebluewriting": {
+    "distractor_2": 0.865,
+    "target_2": 0.848
+  },
+  "bluebblock": {
+    "distractor_2": 0.1795,
+    "target_2": 0.795
+  },
+  "blueblock": {
+    "distractor_2": 0.3975,
+    "target_2": 0.7275
+  },
+  "bottomblock": {
+    "distractor_2": 0.48,
+    "target_2": 0.29825
+  },
+  "childsblueblock": {
+    "distractor_2": 0.5035,
+    "target_2": 0.7585000000000001
+  },
+  "letterblock": {
+    "distractor_2": 0.8355,
+    "target_2": 0.828
+  },
+  "thebluishblockwithab": {
+    "distractor_2": 0.158,
+    "target_2": 0.836
+  },
+  "toyblock": {
+    "distractor_2": 0.87,
+    "target_2": 0.8765
+  },
+  "cassette": {
+    "distractor_3": 0.0455,
+    "target_3": 0.916
+  },
+  "cassettetape": {
+    "distractor_3": 0.0785,
+    "target_3": 0.904
+  },
+  "clearaudiocassette": {
+    "distractor_3": 0.045,
+    "target_3": 0.8905
+  },
+  "tape": {
+    "distractor_3": 0.912,
+    "target_3": 0.7245
+  },
+  "bigmeasuringcup": {
+    "distractor_4": 0.8155,
+    "target_4": 0.8265
+  },
+  "cup": {
+    "distractor_4": 0.641,
+    "target_4": 0.5945
+  },
+  "largecup": {
+    "distractor_4": 0.7365,
+    "target_4": 0.7015
+  },
+  "largemeasurecup": {
+    "distractor_4": 0.851,
+    "target_4": 0.8375
+  },
+  "largemeasuringcup": {
+    "distractor_4": 0.84725,
+    "target_4": 0.7885
+  },
+  "largemeasuringglassthepyrex": {
+    "distractor_4": 0.643,
+    "target_4": 0.851
+  },
+  "largepyrexmeasuringcup": {
+    "distractor_4": 0.683,
+    "target_4": 0.8545
+  },
+  "largermeasuringcup": {
+    "distractor_4": 0.8085,
+    "target_4": 0.742
+  },
+  "measurecup": {
+    "distractor_4": 0.8585,
+    "target_4": 0.849
+  },
+  "measurementcupthelargeonewithredletters": {
+    "distractor_4": 0.338,
+    "target_4": 0.858
+  },
+  "measuringcup": {
+    "distractor_4": 0.885,
+    "target_4": 0.8665
+  },
+  "measuringcupwithhandle": {
+    "distractor_4": 0.829,
+    "target_4": 0.881
+  },
+  "measuringcupwiththeholder": {
+    "distractor_4": 0.729,
+    "target_4": 0.7725
+  },
+  "measuringthing": {
+    "distractor_4": 0.655,
+    "target_4": 0.6890000000000001
+  },
+  "pyrex": {
+    "distractor_4": 0.5045,
+    "target_4": 0.76
+  },
+  "pyrexcup": {
+    "distractor_4": 0.5650000000000001,
+    "target_4": 0.907
+  },
+  "pyrexmeasuringcup": {
+    "distractor_4": 0.589,
+    "target_4": 0.877
+  },
+  "pyrexmeasuringcuptheonewiththehandle": {
+    "distractor_4": 0.676,
+    "target_4": 0.873
+  },
+  "pyrexmeasuringcupwiththehandle": {
+    "distractor_4": 0.7565,
+    "target_4": 0.8945
+  },
+  "pyrexthing": {
+    "distractor_4": 0.478,
+    "target_4": 0.656
+  },
+  "brownbrush": {
+    "distractor_5": 0.428,
+    "target_5": 0.6745
+  },
+  "brush": {
+    "distractor_5": 0.843,
+    "target_5": 0.789
+  },
+  "comb": {
+    "distractor_5": 0.5295,
+    "target_5": 0.47000000000000003
+  },
+  "haircurler": {
+    "distractor_5": 0.188,
+    "target_5": 0.4605
+  },
+  "hairbrush": {
+    "distractor_5": 0.8245,
+    "target_5": 0.9095
+  },
+  "haircomb": {
+    "distractor_5": 0.622,
+    "target_5": 0.562
+  },
+  "roundhairbrush": {
+    "distractor_5": 0.265,
+    "target_5": 0.7975
+  },
+  "blackeraser": {
+    "distractor_6": 0.1575,
+    "target_6": 0.7895
+  },
+  "dryeraser": {
+    "distractor_6": 0.2675,
+    "target_6": 0.848
+  },
+  "erase": {
+    "distractor_6": 0.6835,
+    "target_6": 0.5785
+  },
+  "eraser": {
+    "distractor_6": 0.9185,
+    "target_6": 0.8160000000000001
+  },
+  "eraserexpo": {
+    "distractor_6": 0.2655,
+    "target_6": 0.7485
+  },
+  "expo": {
+    "distractor_6": 0.116,
+    "target_6": 0.6075
+  },
+  "expoblock": {
+    "distractor_6": 0.0865,
+    "target_6": 0.462
+  },
+  "expoeraser": {
+    "distractor_6": 0.25,
+    "target_6": 0.9135
+  },
+  "whiteout": {
+    "distractor_6": 0.053000000000000005,
+    "target_6": 0.1595
+  },
+  "candle": {
+    "distractor_7": 0.901,
+    "target_7": 0.902
+  },
+  "candlestick": {
+    "distractor_7": 0.4065,
+    "target_7": 0.87
+  },
+  "litcandle": {
+    "distractor_7": 0.9175,
+    "target_7": 0.8965
+  },
+  "redcandle": {
+    "distractor_7": 0.1785,
+    "target_7": 0.8915
+  },
+  "redcandleholder": {
+    "distractor_7": 0.1465,
+    "target_7": 0.891
+  },
+  "redcandlestick": {
+    "distractor_7": 0.1265,
+    "target_7": 0.9259999999999999
+  },
+  "smallcandle": {
+    "distractor_7": 0.86475,
+    "target_7": 0.6275000000000001
+  },
+  "computermouse": {
+    "distractor_8": 0.129,
+    "target_8": 0.958
+  },
+  "greymouse": {
+    "distractor_8": 0.8285,
+    "target_8": 0.857
+  },
+  "mouse": {
+    "distractor_8": 0.9105,
+    "target_8": 0.847
+  },
+  "silvermouse": {
+    "distractor_8": 0.5935,
+    "target_8": 0.8665
+  }
+}
