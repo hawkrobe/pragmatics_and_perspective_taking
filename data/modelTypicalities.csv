@@ -1,0 +1,143 @@
+object,label,m,s
+distractor_1,black sunglasses,0.143,0.16821352345660026
+distractor_1,glasses,0.205,0.22504970211278358
+distractor_1,shades,0.1725,0.21513459679196675
+distractor_1,sunglasses,0.2025,0.1989412767098557
+target_1,black sunglasses,0.913,0.11276897669688751
+target_1,glasses,0.8235,0.17318304888485084
+target_1,shades,0.8035,0.26426213062830345
+target_1,sunglasses,0.9305,0.12124247128009745
+distractor_2,alphabet block,0.8965,0.12491154765209703
+distractor_2,B,0.11,0.19461162403753357
+distractor_2,B block,0.174,0.16806640291704256
+distractor_2,B box,0.139,0.18081394915914623
+distractor_2,B cube,0.152,0.1907492153532872
+distractor_2,block,0.836,0.1864073290074516
+distractor_2,block toy,0.757,0.30642419857720804
+distractor_2,block with the B,0.14300000000000002,0.1524915873434542
+distractor_2,block with the blue writing,0.865,0.19779042603619354
+distractor_2,blue B block,0.1795,0.2248385385583455
+distractor_2,blue block,0.3975,0.2750095692114998
+distractor_2,bottom block,0.48,0.3359487140346551
+distractor_2,child's blue block,0.5035,0.32273950714730326
+distractor_2,letter block,0.8355,0.22115664845962632
+distractor_2,the bluish block with a B,0.158,0.18231262912053597
+distractor_2,toy block,0.87,0.16970562748477142
+target_2,alphabet block,0.837,0.1851343750957808
+target_2,B,0.5755,0.25413371946363406
+target_2,B block,0.805,0.18852613946919375
+target_2,B box,0.529,0.34217416310226706
+target_2,B cube,0.71,0.2697172008253323
+target_2,block,0.82175,0.2007024522993537
+target_2,block toy,0.817,0.25856079403213145
+target_2,block with the B,0.8525,0.19579460236633048
+target_2,block with the blue writing,0.848,0.158067274152162
+target_2,blue B block,0.795,0.24399094029772586
+target_2,blue block,0.7275,0.2673628522006042
+target_2,bottom block,0.29825,0.2758008153425035
+target_2,child's blue block,0.7585000000000001,0.22328351107009553
+target_2,letter block,0.828,0.15422471642993782
+target_2,the bluish block with a B,0.836,0.1881320924524211
+target_2,toy block,0.8765,0.18985520798756084
+distractor_3,cassette,0.0455,0.08172321708380254
+distractor_3,cassette tape,0.0785,0.16010769401940222
+distractor_3,clear audiocassette,0.045,0.14630537638068786
+distractor_3,tape,0.912,0.11227785084099931
+target_3,cassette,0.916,0.10659317643807177
+target_3,cassette tape,0.904,0.1764086165695996
+target_3,clear audiocassette,0.8905,0.17608236708995023
+target_3,tape,0.7245,0.22058474919845972
+distractor_4,big measuring cup,0.8155,0.21614992360323473
+distractor_4,cup,0.641,0.2720468225953218
+distractor_4,large cup,0.7365,0.24866538497388518
+distractor_4,large measure cup,0.851,0.16587566681736435
+distractor_4,large measuring cup,0.84725,0.17660600071112958
+distractor_4,large measuring glass ... the pyrex,0.643,0.2728234439687091
+distractor_4,large pyrex measuring cup,0.683,0.3145439472265237
+distractor_4,larger measuring cup,0.8085,0.19644940422676935
+distractor_4,measure cup,0.8585,0.14172898526115923
+distractor_4,measurement cup ... the large one with red letters,0.338,0.30881096244517575
+distractor_4,measuring cup,0.885,0.1470946705535695
+distractor_4,measuring cup with handle,0.829,0.22543291685111114
+distractor_4,measuring cup with the holder,0.729,0.26629821036219015
+distractor_4,measuring thing,0.655,0.2584060452282924
+distractor_4,pyrex,0.5045,0.25415442881093087
+distractor_4,pyrex cup,0.5650000000000001,0.29525189958834525
+distractor_4,pyrex measuring cup,0.589,0.3313274735617952
+distractor_4,pyrex measuring cup (the one with the handle),0.676,0.30193062988567076
+distractor_4,pyrex measuring cup (with the handle),0.7565,0.2448904158791717
+distractor_4,pyrex thing,0.478,0.29307085545272066
+target_4,big measuring cup,0.8265,0.15280792897587067
+target_4,cup,0.5945,0.3223021629007884
+target_4,large cup,0.7015,0.2288248008273671
+target_4,large measure cup,0.8375,0.1288767260847194
+target_4,large measuring cup,0.7885,0.19527167137356521
+target_4,large measuring glass ... the pyrex,0.851,0.15300154797978527
+target_4,large pyrex measuring cup,0.8545,0.17733331684474266
+target_4,larger measuring cup,0.742,0.17907951776853354
+target_4,measure cup,0.849,0.16460159236935198
+target_4,measurement cup ... the large one with red letters,0.858,0.14566002233029884
+target_4,measuring cup,0.8665,0.17968612985747648
+target_4,measuring cup with handle,0.881,0.1438895775458243
+target_4,measuring cup with the holder,0.7725,0.1896222005656733
+target_4,measuring thing,0.6890000000000001,0.2516241976482096
+target_4,pyrex,0.76,0.2510609068480564
+target_4,pyrex cup,0.907,0.13452059126276622
+target_4,pyrex measuring cup,0.877,0.1512787597711415
+target_4,pyrex measuring cup (the one with the handle),0.873,0.18646574399661325
+target_4,pyrex measuring cup (with the handle),0.8945,0.1476651617681029
+target_4,pyrex thing,0.656,0.2677862462566189
+distractor_5,brown brush,0.428,0.3858497116754138
+distractor_5,brush,0.843,0.2193555153290274
+distractor_5,comb,0.5295,0.3872912001120224
+distractor_5,hair curler,0.188,0.2729873719847823
+distractor_5,hairbrush,0.8245,0.24208469592272866
+distractor_5,haircomb,0.622,0.35926240226916384
+distractor_5,round hairbrush,0.265,0.2531797780234432
+target_5,brown brush,0.6745,0.25936105701268425
+target_5,brush,0.789,0.2753925428031394
+target_5,comb,0.47000000000000003,0.3620846077340139
+target_5,hair curler,0.4605,0.3475701368069472
+target_5,hairbrush,0.9095,0.13504287818085198
+target_5,haircomb,0.562,0.3333656124721735
+target_5,round hairbrush,0.7975,0.2828776004601729
+distractor_6,black eraser,0.1575,0.18327072296124344
+distractor_6,dry eraser,0.2675,0.2829520137854883
+distractor_6,erase,0.6835,0.26131801557328166
+distractor_6,eraser,0.9185,0.13460566188138717
+distractor_6,eraser expo,0.2655,0.3170833362150448
+distractor_6,expo,0.116,0.19914025736968197
+distractor_6,expo block,0.0865,0.14829824146311593
+distractor_6,expo eraser,0.25,0.29029930108514956
+distractor_6,white out,0.053000000000000005,0.08278698092409409
+target_6,black eraser,0.7895,0.1874334969781914
+target_6,dry eraser,0.848,0.22281925646728018
+target_6,erase,0.5785,0.28338694023320277
+target_6,eraser,0.8160000000000001,0.18497225965561775
+target_6,eraser expo,0.7485,0.23508732979805386
+target_6,expo,0.6075,0.2544317714354665
+target_6,expo block,0.462,0.3346891723752998
+target_6,expo eraser,0.9135,0.15411120386881266
+target_6,white out,0.1595,0.25245062049730377
+distractor_7,candle,0.901,0.14063390322693212
+distractor_7,candlestick,0.4065,0.3201031905988738
+distractor_7,lit candle,0.9175,0.12366657209056771
+distractor_7,red candle,0.1785,0.2008737493001381
+distractor_7,red candle/holder,0.1465,0.21668009405087202
+distractor_7,red candlestick,0.1265,0.16918613231710525
+distractor_7,small candle,0.86475,0.18468250649460055
+target_7,candle,0.902,0.13732788270566562
+target_7,candlestick,0.87,0.14534894492040074
+target_7,lit candle,0.8965,0.16167787987880491
+target_7,red candle,0.8915,0.16784312851431746
+target_7,red candle/holder,0.891,0.17489545749570395
+target_7,red candlestick,0.9259999999999999,0.10444842595372382
+target_7,small candle,0.6275000000000001,0.2873374679933345
+distractor_8,computer mouse,0.129,0.23612886758137633
+distractor_8,grey mouse,0.8285,0.15725524005996044
+distractor_8,mouse,0.9105,0.11278647735293539
+distractor_8,silver mouse,0.5935,0.2847025224963584
+target_8,computer mouse,0.958,0.06732482141786467
+target_8,grey mouse,0.857,0.15647767622857495
+target_8,mouse,0.847,0.21754854267738186
+target_8,silver mouse,0.8665,0.17499699245535927
