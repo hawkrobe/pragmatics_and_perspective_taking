@@ -1,0 +1,36 @@
+// simulates model forward with given params/context and prints results to stout:
+// webppl simulate.wppl --require ./refModule/
+
+// choose one of the three versions
+// (M1): egocentric
+// (M2): pure common ground
+// (M3): plainRSA
+// (M4): RSA with context uncertainty
+var globalConfig = {
+  modelVersion: 'plainRSA'
+};
+
+var params = {
+  alpha : 10,              // all models: soft-max optimality (0,20)
+  costWeight : .1,         // all models: relative weight on cost (0,1)
+  typWeight : 1          // how much to stretch empirical typ values
+};
+
+// list of objects in context (target 1st)
+var context = {
+  shared: ['target_2', 'other_1', 'other_2'],
+  occluded: ['distractor_2']
+};
+
+console.log('running model with params:');
+console.log(params);
+console.log('on context:');
+console.log(context);
+
+var speakerModel = initializeModel(extend(params, {
+  lexicon: refModule.constructLexicon()
+})).S1;
+
+var speakerContext = context.shared;
+
+console.log(speakerModel(speakerContext[0], speakerContext));

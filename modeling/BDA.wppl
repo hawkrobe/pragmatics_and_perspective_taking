@@ -1,0 +1,59 @@
+// run using:
+// webppl BDA.wppl --require ./refModule/
+
+// Fix some configuration options
+var globalConfig = {
+  'storePredictives' : false,
+  'outputFileName' : 'testing'
+};
+
+// Load in data & conditions
+var data = refModule.readCSV("./bdaInput/speakerData.csv");
+var conditions = refModule.readCSV("./bdaInput/uniqueConditions.csv");
+
+var modelAnalysis = function() {
+  // Sample params (and eventually model, for model comparison)
+  var params = {
+    alpha : uniform(0, 20),
+    costWeight : uniform(0, 1),
+    typWeight : uniform(0, 1)
+  };
+  var lexicon = refModule.constructLexicon(params);  
+  var speakerModel = initializeModel(extend(params, {lexicon})).S1;
+
+  var score = reduce(function(conditionObj, memo) {
+    // Extract condition information
+    var conditionName = conditionObj.conditionName;
+    var context = {shared: [conditionObj.target, 'other1', 'other2'],
+		   occluded: [conditionObj.distractor]};
+    var speakerContext = context.shared;
+    
+    // Run model
+    var modelOutput = speakerModel(speakerContext[0], speakerContext);
+    
+    // Store predives
+    // if(globalConfig.storePredictives) {
+    //   foreach(modelOutput.support(), function(s){
+    // 	var key = _.values(conditionObj).concat(s);
+    // 	var newPair = _.zipObject([key], [Math.exp(modelOutput.score(s))]);
+    // 	globalStore.predictives = extend(globalStore.predictives, newPair);
+    //   });
+    // }
+    
+    // condition on data
+    var itemData = refModule.getSubset(data, {objectSet: conditionObj.objectSet});
+//    console.log(itemData);
+    return memo + reduce(function(datum, memo) {
+      return modelOutput.score(datum.label) + memo;
+    }, 0, itemData);
+  }, 0, conditions);
+
+  factor(score);
+  return {predictive: globalStore.predictives, params : params};
+};
+
+var outputERP = Infer({method:'MCMC', kernel: 'HMC', samples: 500, lag: 2, burn: 100, verbose: true, model: modelAnalysis});
+
+
+console.log(outputERP);
+// refModule.bayesianErpWriter(outputERP, "./bdaOutput/" + globalConfig.outputFileName);
