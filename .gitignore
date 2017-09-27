@@ -1,10 +1,15 @@
 keysar_replication.sublime*
 *~
+cogsci_keysar.pdf
+pnas-submission.pdf
 node_modules
 auth.json	
 mturk-and-gmail.txt
 *.synctex.gz
 .DS_Store
+*.bst
+*.cls
+*.xwm
 *.bbl
 *.aux
 *.blg
@@ -14,3 +19,4 @@ mturk-and-gmail.txt
 *.key
 *.RData
 *.Rhistory
+.Rproj.user
