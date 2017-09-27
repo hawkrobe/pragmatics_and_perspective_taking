@@ -1,0 +1,48 @@
+var initializeModel = function(params) {
+
+  // Cost of utterance (fixed cost for now...)
+  var uttCost = function(utt) {
+    return utt.split('').length;
+  };
+
+  // Looks up meaning in given lexicon (if exists, use inf; otherwise nuke it
+  var meaning = function(utt, object) {
+    var lexicalEntry = params.lexicon[utt];
+    return _.has(lexicalEntry, object) ? lexicalEntry[object] : -Infinity; 
+  };
+  
+  // Selects among objects in context using lexicon
+  var L0 = cache(function(utt, perceivedContext){
+    return Infer({method:'enumerate', model: function(){
+      var object = uniformDraw(perceivedContext);
+      factor(params.typWeight * meaning(utt,object)); 
+      return object;
+    }});
+  });
+
+  // Selects among utterances given informativity in context and cost of production,
+  // marginalizing over possible noise in perception of context
+  var S1 = function(target, knownContext) {
+    var utts = refModule.possibleUtts(target, params.lexicon);
+    return Infer({method:'enumerate', model: function(){
+      var utt = uniformDraw(utts);
+      var utility = ((1-params.costWeight) * L0(utt, knownContext).score(target)
+		     - params.costWeight * uttCost(utt));
+      factor(params.alpha * utility);
+      return utt;
+    }});
+  };
+
+  // Listener only considers objects speaker can see (model Keysar is arguing against)
+  var L2 = cache(function(utt, perceivedContext) {
+    var fullObjSet = perceivedContext.shared.concat(perceivedContext.occluded);
+    return Infer({method: 'enumerate'}, function() {
+      var object = uniformDraw(perceivedContext.shared);    
+      var speakerContext = perceivedContext.shared;
+      observe(S1(object, speakerContext), utt);
+      return object.color + " " + object.type;
+    });
+  });
+
+  return {S1, L2};
+};
