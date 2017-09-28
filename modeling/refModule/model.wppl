@@ -20,13 +20,28 @@ var initializeModel = function(params) {
     }});
   });
 
+  // change this to just 'omniscience' probability
+  var marginalizeListener = function(utt, object, knownContext) {
+    var possibleObjects = refModule.possibleObjects(object);
+    return Infer({method: 'enumerate', model: function() {
+      var obj = uniformDraw(possibleObjects);
+      var view = params.model === 'plainRSA' ? knownContext : knownContext.concat(obj);
+      console.log(view);
+      console.log(L0(utt, view));
+      return sample(L0(utt, view));
+    }});
+  };
+  
   // Selects among utterances given informativity in context and cost of production,
   // marginalizing over possible noise in perception of context
   var S1 = function(target, knownContext) {
     var utts = refModule.possibleUtts(target, params.lexicon);
     return Infer({method:'enumerate', model: function(){
       var utt = uniformDraw(utts);
-      var utility = ((1-params.costWeight) * L0(utt, knownContext).score(target)
+      var listener = marginalizeListener(utt, target, knownContext);
+      console.log('listener under utt' + utt);
+      console.log(listener)
+      var utility = ((1-params.costWeight) * listener.score(target)
 		     - params.costWeight * uttCost(utt));
       factor(params.alpha * utility);
       return utt;
