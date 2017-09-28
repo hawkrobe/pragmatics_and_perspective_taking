@@ -6,20 +6,17 @@
 // (M2): pure common ground
 // (M3): plainRSA
 // (M4): RSA with context uncertainty
-var globalConfig = {
-  modelVersion: 'plainRSA'
-};
-
 var params = {
+  model: 'noisyRSA',  
   alpha : 10,              // all models: soft-max optimality (0,20)
-  costWeight : .1,         // all models: relative weight on cost (0,1)
+  costWeight : .01,         // all models: relative weight on cost (0,1)
   typWeight : 1          // how much to stretch empirical typ values
 };
 
 // list of objects in context (target 1st)
 var context = {
-  shared: ['target_2', 'other_1', 'other_2'],
-  occluded: ['distractor_2']
+  shared: ['target_3', 'other_1', 'other_2'],
+  occluded: ['distractor_3']
 };
 
 console.log('running model with params:');

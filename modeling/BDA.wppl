@@ -14,11 +14,13 @@ var conditions = refModule.readCSV("./bdaInput/uniqueConditions.csv");
 var modelAnalysis = function() {
   // Sample params (and eventually model, for model comparison)
   var params = {
-    alpha : uniform(0, 20),
-    costWeight : uniform(0, 1),
-    typWeight : uniform(0, 1)
+    model: uniformDraw(['plainRSA', 'noisyRSA']),
+    alpha : uniformDraw([0, 1, 5, 10, 20]),
+    costWeight : uniformDraw([0, .1, .5, 1]),
+    typWeight : 1//uniform([0, 1)
   };
-  var lexicon = refModule.constructLexicon(params);  
+  var lexicon = refModule.constructLexicon(params);
+  
   var speakerModel = initializeModel(extend(params, {lexicon})).S1;
 
   var score = reduce(function(conditionObj, memo) {
@@ -42,17 +44,21 @@ var modelAnalysis = function() {
     
     // condition on data
     var itemData = refModule.getSubset(data, {objectSet: conditionObj.objectSet});
-//    console.log(itemData);
     return memo + reduce(function(datum, memo) {
       return modelOutput.score(datum.label) + memo;
     }, 0, itemData);
   }, 0, conditions);
 
+  console.log(params)
+  console.log(score)
+
   factor(score);
   return {predictive: globalStore.predictives, params : params};
 };
 
-var outputERP = Infer({method:'MCMC', kernel: 'HMC', samples: 500, lag: 2, burn: 100, verbose: true, model: modelAnalysis});
+//var outputERP = Infer({method:'MCMC', kernel: 'HMC', samples: 500, lag: 2, burn: 100, verbose: true, model: modelAnalysis});
+
+var outputERP = Infer({method: 'enumerate', model: modelAnalysis})
 
 
 console.log(outputERP);
