@@ -21,12 +21,11 @@ var possibleUtts = function(target, lexicon) {
   }));
 };
 
-var colors = ["yellow", "orange", "red", "pink", "green",
-              "purple", "white", "blue", "brown", "black"];
-
-var sizes = ["big", "small"];
-
-var types = ["fan", "tv", "desk", "couch", "desk", "chair", "couch"];
+// Note: assumes the only object considered by the listener is the true distractor...
+var possibleObjects = function(target) {
+  var objectSet = target.split('_')[1];
+  return [target, ['distractor', objectSet].join('_')];
+};
 
 var makeArr = function(n, v) {
   return _.repeat(n, v);
@@ -164,7 +163,7 @@ var getRelativeLength = function(params, label) {
 };
 
 module.exports = {
-  possibleUtts,
+  possibleUtts, possibleObjects,
   constructLexicon, powerset, getSubset, 
   bayesianErpWriter, writeERP, writeCSV,
   readCSV, locParse, getRelativeLength,
