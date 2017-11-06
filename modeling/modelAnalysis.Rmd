@@ -1,0 +1,46 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+```
+
+```{r}
+sumlogprob <- function(a, b) {
+  if(a>b) {
+    return(a+log1p(exp(b-a)))
+  } else{
+    return(b+log1p(exp(a-b)))
+  }
+}
+
+params <- read_delim('./bdaOutput/testingParams.csv', delim = ',')
+
+View(params)
+
+modelOutput = params %>%
+  filter(prob != -Inf) %>%
+  group_by(model) %>%
+  summarize(prob = reduce(logLikelihood, sumlogprob) - log(length(logLikelihood)))
+
+print(modelOutput)
+```
+
+
+```{r}
+params %>%
+  group_by(model) %>%
+  #arrange(logLikelihood) %>%
+  filter(logLikelihood == max(logLikelihood))
+
+?arrange
+```
