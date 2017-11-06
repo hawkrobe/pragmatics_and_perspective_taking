@@ -1,17 +1,17 @@
-var initializeModel = function(params) {
+var speakerModel = function(target, context, params) {
 
-  // Cost of utterance (fixed cost for now...)
+  // Cost of utterance
   var uttCost = function(utt) {
     return utt.split('').length;
   };
 
-  // Looks up meaning in given lexicon (if exists, use inf; otherwise nuke it
+  // Looks up meaning in given lexicon (if exists, use inf; otherwise nuke it)
   var meaning = function(utt, object) {
     var lexicalEntry = params.lexicon[utt];
     return _.has(lexicalEntry, object) ? lexicalEntry[object] : -Infinity; 
   };
   
-  // Selects among objects in context using lexicon
+  // Egocentric listener who selects among objects in context using lexicon
   var L0 = cache(function(utt, perceivedContext){
     return Infer({method:'enumerate', model: function(){
       var object = uniformDraw(perceivedContext);
@@ -20,27 +20,38 @@ var initializeModel = function(params) {
     }});
   });
 
-  // change this to just 'omniscience' probability
-  var marginalizeListener = function(utt, object, knownContext) {
-    var possibleObjects = refModule.possibleObjects(object);
-    return Infer({method: 'enumerate', model: function() {
-      var obj = uniformDraw(possibleObjects);
-      var view = params.model === 'plainRSA' ? knownContext : knownContext.concat(obj);
-      console.log(view);
-      console.log(L0(utt, view));
-      return sample(L0(utt, view));
-    }});
-  };
-  
-  // Selects among utterances given informativity in context and cost of production,
-  // marginalizing over possible noise in perception of context
-  var S1 = function(target, knownContext) {
+  // Egocentric speaker who simply trades off pure informativeness in lexicon
+  // and cost of utterance
+  var S0 = cache(function(target, context) {
     var utts = refModule.possibleUtts(target, params.lexicon);
     return Infer({method:'enumerate', model: function(){
       var utt = uniformDraw(utts);
-      var listener = marginalizeListener(utt, target, knownContext);
-      console.log('listener under utt' + utt);
-      console.log(listener)
+      var utility = ((1-params.costWeight) * meaning(utt, target)
+		     - params.costWeight * uttCost(utt));
+      factor(params.alpha * utility);
+      return utt;
+    }});
+  });
+  
+  // should probably insert a few different options here...
+  // e.g. 'paranoid' -- which imagines a bunch of very similar objects to target
+  //      'omniscient' -- where you see the actual object
+  //      'hierarchical' -- where you assume contexts are drawn from distribution
+  var marginalizeListener = function(utt, object, context) {
+    return Infer({method: 'enumerate', model: function() {
+      var omniscient = flip(params.omniscienceProb);
+      var lview = omniscient ? context.shared.concat(context.occluded) : context.shared;
+      return sample(L0(utt, lview));
+    }});
+  };
+  
+  // Selects among utterances given *informativity in context* and cost of production,
+  // possibly marginalizing over possible noise in perception of context
+  var S1 = function(target, context) {
+    var utts = refModule.possibleUtts(target, params.lexicon);
+    return Infer({method:'enumerate', model: function(){
+      var utt = uniformDraw(utts);
+      var listener = marginalizeListener(utt, target, context);
       var utility = ((1-params.costWeight) * listener.score(target)
 		     - params.costWeight * uttCost(utt));
       factor(params.alpha * utility);
@@ -48,6 +59,13 @@ var initializeModel = function(params) {
     }});
   };
 
+  var weightedSpeaker = function(target, context) {
+    return Infer({method:'enumerate', model: function(){
+      var speakerModel = flip(params.perspectiveWeight) ? S0 : S1;
+      return sample(speakerModel(target,context));
+    }});
+  };
+  
   // Listener only considers objects speaker can see (model Keysar is arguing against)
   var L2 = cache(function(utt, perceivedContext) {
     var fullObjSet = perceivedContext.shared.concat(perceivedContext.occluded);
@@ -59,5 +77,11 @@ var initializeModel = function(params) {
     });
   });
 
+  return (params.model == 'egocentric' ? S0(target, context) :
+	  params.model == 'weighted' ? weightedSpeaker(target, context) :
+	  params.model == 'visualAccess' || params.model == 'uncertainRSA' ? S1(target, context) :
+	  console.error('unknown model: ' + params.model));
+
+	  
   return {S1, L2};
 };

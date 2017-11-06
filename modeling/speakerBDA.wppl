@@ -8,21 +8,23 @@ var globalConfig = {
 };
 
 // Load in data & conditions
-var data = refModule.readCSV("./bdaInput/speakerData.csv");
-var conditions = refModule.readCSV("./bdaInput/uniqueConditions.csv");
+var data = refModule.readCSV("./bdaInput/speaker-cassette-only.csv");
+var conditions = refModule.readCSV("./bdaInput/conditions-cassette-only.csv");
 
 var modelAnalysis = function() {
   // Sample params (and eventually model, for model comparison)
+  var model = uniformDraw(['egocentric', 'visualAccess', 'weighted', 'uncertainRSA']);
   var params = {
-    model: uniformDraw(['plainRSA', 'noisyRSA']),
-    alpha : uniformDraw([0, 1, 5, 10, 20]),
-    costWeight : uniformDraw([0, .1, .5, 1]),
-    typWeight : 1//uniform([0, 1)
+    model,
+    alpha : Number.parseFloat(uniformDraw(_.range(.5, 5, 0.1))),
+    costWeight : Number.parseFloat(uniformDraw(_.range(0,0.2,0.01)).toFixed(2)),
+    typWeight : Number.parseFloat(uniformDraw(_.range(.5, 5, .1))),
+    omniscienceProb: (model === 'visualAccess' ? 0 :
+		      Number.parseFloat(uniformDraw(_.range(0, 1, 0.05))))
   };
+  
   var lexicon = refModule.constructLexicon(params);
   
-  var speakerModel = initializeModel(extend(params, {lexicon})).S1;
-
   var score = reduce(function(conditionObj, memo) {
     // Extract condition information
     var conditionName = conditionObj.conditionName;
@@ -31,7 +33,8 @@ var modelAnalysis = function() {
     var speakerContext = context.shared;
     
     // Run model
-    var modelOutput = speakerModel(speakerContext[0], speakerContext);
+    var modelOutput = speakerModel(context.shared[0], context,
+				   extend(params, {lexicon}));
     
     // Store predives
     // if(globalConfig.storePredictives) {
@@ -49,17 +52,19 @@ var modelAnalysis = function() {
     }, 0, itemData);
   }, 0, conditions);
 
-  console.log(params)
-  console.log(score)
+  // console.log(params);
+  // console.log(score);
 
   factor(score);
-  return {predictive: globalStore.predictives, params : params};
+
+  var paramsKey = _.values(params).join(',');
+  return {predictive: globalStore.predictives, params : _.zipObject([paramsKey], [score])};
 };
 
 //var outputERP = Infer({method:'MCMC', kernel: 'HMC', samples: 500, lag: 2, burn: 100, verbose: true, model: modelAnalysis});
 
 var outputERP = Infer({method: 'enumerate', model: modelAnalysis})
 
-
-console.log(outputERP);
-// refModule.bayesianErpWriter(outputERP, "./bdaOutput/" + globalConfig.outputFileName);
+//console.log(outputERP);
+refModule.bayesianErpWriter(outputERP, "./bdaOutput/" + globalConfig.outputFileName);
+console.log('done writing: results in ' + globalConfig.outputFileName);
