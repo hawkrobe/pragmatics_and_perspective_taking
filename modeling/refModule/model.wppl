@@ -77,11 +77,9 @@ var speakerModel = function(target, context, params) {
     });
   });
 
+
   return (params.model == 'egocentric' ? S0(target, context) :
 	  params.model == 'weighted' ? weightedSpeaker(target, context) :
 	  params.model == 'visualAccess' || params.model == 'uncertainRSA' ? S1(target, context) :
 	  console.error('unknown model: ' + params.model));
-
-	  
-  return {S1, L2};
 };

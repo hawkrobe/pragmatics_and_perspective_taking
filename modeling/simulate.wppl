@@ -7,10 +7,11 @@
 // (M3): plainRSA
 // (M4): RSA with context uncertainty
 var params = {
-  model: 'noisyRSA',  
-  alpha : 10,              // all models: soft-max optimality (0,20)
-  costWeight : .01,         // all models: relative weight on cost (0,1)
-  typWeight : 1          // how much to stretch empirical typ values
+  model: 'uncertainRSA',  
+  alpha : 1,              // all models: soft-max optimality (0,20)
+  costWeight : .1,         // all models: relative weight on cost (0,1)
+  typWeight : 10,          // how much to stretch empirical typ values
+  omniscienceProb : 1          // how much to stretch empirical typ values
 };
 
 // list of objects in context (target 1st)
@@ -24,10 +25,8 @@ console.log(params);
 console.log('on context:');
 console.log(context);
 
-var speakerModel = initializeModel(extend(params, {
+var results = speakerModel(context.shared[0], context, extend(params, {
   lexicon: refModule.constructLexicon()
-})).S1;
+}))
 
-var speakerContext = context.shared;
-
-console.log(speakerModel(speakerContext[0], speakerContext));
+console.log(results);

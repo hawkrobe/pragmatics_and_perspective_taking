@@ -2,6 +2,25 @@ var _ = require('lodash');
 var fs = require('fs');
 var babyparse = require('babyparse');
 
+function _logsumexp(a) {
+  var m = Math.max.apply(null, a);
+  var sum = 0;
+  for (var i = 0; i < a.length; ++i) {
+    sum += (a[i] === -Infinity ? 0 : Math.exp(a[i] - m));
+  }
+  return m + Math.log(sum);
+}
+
+var getL0score = function(targetObj, utt, context, params) {
+  var similarities = params.lexicon[utt];
+  var a = [];
+  for(var i=0; i<context.length; i++){
+    a.append(params.simScale * similarities[context[i]]);
+  }
+  return (params.simScale * similarities[targetObj]
+	  - _logsumexp(a));
+};
+
 var powerset = function (set) {
   if (set.length == 0)
     return [[]];
@@ -93,7 +112,7 @@ var writeERP = function(erp, labels, filename, fixed) {
 };
 
 var supportWriter = function(s, p, handle) {
-  var sLst = _.pairs(s);
+  var sLst = _.toPairs(s);
   var l = sLst.length;
 
   for (var i = 0; i < l; i++) {
@@ -108,7 +127,7 @@ var bayesianErpWriter = function(erp, filePrefix) {
 				"value", "prob", "MCMCprob"] + '\n');
 
   var paramFile = fs.openSync(filePrefix + "Params.csv", 'w');
-  fs.writeSync(paramFile, ["parameter", "value", "MCMCprob"] + '\n');
+  fs.writeSync(paramFile, ["model", "alpha", "costWeight", "typWeight", "perspectiveWeight","omniscience", "logLikelihood", "prob"] + '\n');
 
   var supp = erp.support();
   supp.forEach(function(s) {
