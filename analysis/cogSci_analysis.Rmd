@@ -677,3 +677,23 @@ rbind(read_csv('../data/exp1SpeakerLabels.csv') %>% mutate(exp = 'scripted'),
   mutate(label = str_to_lower(label, locale = "en")) %>%
   write_csv(path = '../modeling/bdaInput/speakerData.csv')
 ```
+
+```{r}
+library(ggthemes)
+View(turkerRatings)
+
+d <- turkerRatings %>%
+  filter(objectSet == 3) %>%
+  group_by(label,referent) %>% 
+  mutate(avg = mean(response),
+            med = median(response))
+
+ggplot(d, aes(x = response)) +
+    geom_histogram(binwidth = .1) +
+    geom_vline(aes(xintercept=med)) +
+    facet_grid(label ~ referent) +
+    theme_few() +
+    theme(aspect.ratio = .25, text = element_text(size=8))
+
+ggsave(filename = '~/Downloads/cassette_informativity_ratings.png', height = 5)
+```
