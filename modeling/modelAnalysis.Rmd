@@ -23,14 +23,14 @@ sumlogprob <- function(a, b) {
   }
 }
 
-params <- read_delim('./bdaOutput/testingParams.csv', delim = ',')
+params <- read_csv('./bdaOutput/testingParams.csv', col_types = c('cnnnnnnd'))#, delim = ',')
 
 View(params)
 
 modelOutput = params %>%
-  filter(prob != -Inf) %>%
+  #filter(logLikelihood != -Inf) %>%
   group_by(model) %>%
-  summarize(prob = reduce(logLikelihood, sumlogprob) - log(length(logLikelihood)))
+  summarize(logLikelihood = reduce(logLikelihood, sumlogprob) - log(length(logLikelihood)))
 
 print(modelOutput)
 ```
@@ -42,5 +42,4 @@ params %>%
   #arrange(logLikelihood) %>%
   filter(logLikelihood == max(logLikelihood))
 
-?arrange
 ```
