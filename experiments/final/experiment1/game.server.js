@@ -24,7 +24,6 @@ var moveObject = function(client, i, x, y) {
 };
 
 var onMessage = function(client,message) {
-  console.log('received message' + message);
   //Cut the message up into sub components
   var message_parts = message.split('.');
 
@@ -90,6 +89,7 @@ var dataOutput = function() {
       iterationName: client.game.iterationName,
       gameid: client.game.id,
       time: Date.now(),
+      condition: client.game.condition,
       trialNum : client.game.state.roundNum + 1,
       workerId: client.workerid,
       assignmentId: client.assignmentid,
@@ -139,7 +139,7 @@ var dataOutput = function() {
     'chatMessage' : messageOutput,
     'incorrectDrop' : errorOutput
   };
-};
+}();
 
 module.exports = {
   onMessage : onMessage,

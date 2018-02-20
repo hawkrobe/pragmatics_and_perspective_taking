@@ -19,7 +19,8 @@ var has_require = typeof require !== 'undefined'
 
 if( typeof _ === 'undefined' ) {
     if( has_require ) {
-        _ = require('underscore')
+      _ = require('lodash');
+      utils  = require(__base + 'sharedUtils/sharedUtils.js');
     }
     else throw new ('mymodule requires underscore, see http://underscorejs.org');
 }
@@ -54,6 +55,8 @@ var game_core = function(options){
     this.id = options.id;
     this.player_count = options.player_count;
     this.trialList = this.makeTrialList();
+    this.condition = _.sample(['scripted', 'unscripted']);
+    this.streams = {};
     this.players = [{
       id: options.player_instances[0].id,
       instance: options.player_instances[0].player,
@@ -133,9 +136,11 @@ game_core.prototype.setScriptAndDir = function(instruction) {
   var item = instruction.split(' ')[0];
   var dir = instruction.split(' ')[1];
   var object = _.find(this.objects, function(obj) { return obj.name == item });
-  this.scriptedInstruction = (
-    object.hasOwnProperty('scriptedInstruction') ? object.scriptedInstruction : "none"
-  );
+  if(this.condition == 'scripted' & object.hasOwnProperty('scriptedInstruction')) {
+    this.scriptedInstruction = object.scriptedInstruction;
+  } else {
+    this.scriptedInstruction = "none";
+  }
   var dest;
   switch(dir) {
   case "down" :
@@ -285,17 +290,15 @@ game_core.prototype.server_send_update = function(){
     instructionNum : this.instructionNum
   };
 
-  _.extend(state, {players: player_packet})
-  _.extend(state, {instructions: this.instructions})
+  _.extend(state, {players: player_packet});
+  _.extend(state, {instructions: this.instructions});
   if(player_packet.length == 2) {
-    _.extend(state, {objects: this.objects})
+    _.extend(state, {objects: this.objects});
   }
 
   //Send the snapshot to the players
   this.state = state;
   _.map(local_game.get_active_players(), function(p){
-    p.player.instance.emit( 'onserverupdate', state)})
+    p.player.instance.emit( 'onserverupdate', state);
+  });
 };
-
-// (4.22208334636).fixed(n) will return fixed point value to n places, default n = 3
-Number.prototype.fixed = function(n) { n = n || 3; return parseFloat(this.toFixed(n)); };
