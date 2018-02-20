@@ -1,5 +1,0 @@
-gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY
-8676-f,undefined,base,0,8,0,0,comb,key,1,1,2,1
-8676-f,undefined,base,0,8,3,0,piano,piano,1,4,2,3
-8676-f,undefined,exp,1,5,1,0,roundBrush,hairBrush,2,4,3,1
-8676-f,undefined,exp,1,5,1,1,roundBrush,hairBrush,2,4,3,1

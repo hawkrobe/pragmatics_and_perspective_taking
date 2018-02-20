@@ -1,4 +1,0 @@
-gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY
-5186-6,undefined,exp,1,5,1,0,roundBrush,hairBrush,2,4,3,1
-5186-6,undefined,exp,1,5,1,1,roundBrush,hairBrush,2,4,3,1
-5186-6,undefined,exp,1,5,1,2,roundBrush,hairBrush,2,4,2,1

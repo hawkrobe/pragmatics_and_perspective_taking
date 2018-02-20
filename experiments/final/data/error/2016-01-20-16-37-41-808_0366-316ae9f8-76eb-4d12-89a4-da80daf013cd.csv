@@ -1,3 +1,0 @@
-gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY
-0366-3,undefined,exp,1,6,2,0,boardEraser,pencilEraser,2,3,1,2
-0366-3,undefined,exp,0,1,0,0,airplane,airplane,3,1,1,1

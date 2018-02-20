@@ -1,3 +1,0 @@
-gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY
-8008-1,undefined,exp,1,8,1,0,computerMouse,toyMouse,4,2,1,2
-8008-1,undefined,exp,1,5,1,0,roundBrush,hairBrush,2,4,3,1

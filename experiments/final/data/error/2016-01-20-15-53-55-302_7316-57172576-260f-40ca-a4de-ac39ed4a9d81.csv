@@ -1,5 +1,0 @@
-gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY
-7316-5,undefined,exp,1,8,1,0,computerMouse,toyMouse,4,2,1,2
-7316-5,undefined,exp,0,4,2,0,waterBottle,waterBottle,2,2,0,2
-7316-5,undefined,exp,0,4,2,1,waterBottle,smallMeasuringCup,2,2,2,1
-7316-5,undefined,exp,0,4,2,2,waterBottle,waterBottle,2,2,-1,2

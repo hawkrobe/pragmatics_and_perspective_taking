@@ -1,5 +1,0 @@
-gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY
-2640-6,undefined,exp,1,4,1,0,mediumMeasuringCup,largeMeasuringCup,4,4,1,4
-2640-6,undefined,exp,1,4,1,1,mediumMeasuringCup,chair,4,4,3,2
-2640-6,undefined,exp,1,2,2,0,middleBlock,bottomBlock,3,3,3,4
-2640-6,undefined,exp,1,6,2,0,boardEraser,pencilEraser,2,3,1,2

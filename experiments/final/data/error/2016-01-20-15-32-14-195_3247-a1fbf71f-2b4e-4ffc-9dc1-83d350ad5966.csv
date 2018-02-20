@@ -1,6 +1,0 @@
-gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY
-3247-a,undefined,base,1,8,1,0,computerMouse,computerMouse,4,2,4,4
-3247-a,undefined,exp,1,4,1,0,mediumMeasuringCup,largeMeasuringCup,4,4,1,4
-3247-a,undefined,exp,1,4,1,1,mediumMeasuringCup,smallMeasuringCup,4,4,3,2
-3247-a,undefined,exp,1,5,1,0,roundBrush,hairBrush,2,4,3,1
-3247-a,undefined,exp,1,5,1,1,roundBrush,hairBrush,2,4,3,1
