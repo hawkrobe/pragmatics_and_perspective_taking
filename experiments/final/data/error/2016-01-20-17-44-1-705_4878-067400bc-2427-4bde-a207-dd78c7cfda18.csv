@@ -1,0 +1,3 @@
+gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY
+4878-0,undefined,exp,1,6,2,0,boardEraser,pencilEraser,2,3,1,2
+4878-0,undefined,exp,1,5,1,0,roundBrush,hairBrush,2,4,3,1

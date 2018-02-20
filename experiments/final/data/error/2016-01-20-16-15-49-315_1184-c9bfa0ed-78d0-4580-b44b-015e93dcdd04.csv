@@ -1,0 +1,7 @@
+gameid, time, condition, critical, objectSet, instructionNum, attemptNum, intendedObj, actualObj, intendedX, intendedY, actualX, actualY
+1184-c,undefined,base,1,4,1,0,mediumMeasuringCup,smallMeasuringCup,4,4,3,2
+1184-c,undefined,exp,1,5,1,0,roundBrush,hairBrush,2,4,3,1
+1184-c,undefined,exp,1,8,1,0,computerMouse,toyMouse,4,2,1,2
+1184-c,undefined,base,0,3,0,0,scissors,scissors,2,2,0,2
+1184-c,undefined,base,0,3,0,1,scissors,knife,2,2,2,3
+1184-c,undefined,base,0,3,0,2,scissors,scissors,2,2,1,1
