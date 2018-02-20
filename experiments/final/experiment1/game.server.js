@@ -71,7 +71,7 @@ var onMessage = function(client,message) {
     });
     break;
 
-  case 'update_mouse' :
+  case 'updateMouse' :
     break;
 
   case 'h' : // Receive message when browser focus shifts
@@ -90,12 +90,12 @@ var dataOutput = function() {
       gameid: client.game.id,
       time: Date.now(),
       condition: client.game.condition,
-      trialNum : client.game.state.roundNum + 1,
+      trialNum : client.game.roundNum + 1,
       workerId: client.workerid,
       assignmentId: client.assignmentid,
       targetObject: objectName,
       attemptNum : client.game.attemptNum,
-      condition : client.game.trialList[client.game.roundNum].condition,
+      trialType : client.game.trialList[client.game.roundNum].condition,
       objectSet : client.game.trialList[client.game.roundNum].objectSet,
       instructionNum : client.game.instructionNum,
       critical: object.critical === "filler" ? false : true
