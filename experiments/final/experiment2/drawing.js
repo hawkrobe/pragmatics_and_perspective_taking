@@ -61,7 +61,7 @@ var drawObjects = function(game) {
        !containsCell(game.occlusions, [obj.gridX, obj.gridY])) {
       var imgObj = new Image();
       imgObj.onload = () => {
-	globalGame.ctx.drawImage(imgObj, obj.trueX, obj.trueY,
+	game.ctx.drawImage(imgObj, obj.trueX, obj.trueY,
 				 obj.width, obj.height);
       };
       imgObj.src = obj.url;
@@ -87,19 +87,20 @@ var drawScreen = function(game, player) {
   else {
     drawGrid(game);
     // Preload occlusion images then draw objects afterward
-    drawOcclusions(globalGame);
-    if (globalGame.my_role === globalGame.playerRoleNames.role1) {
-      highlightCell(globalGame, '#000000', x => x.targetStatus == 'target');
+    drawOcclusions(game);
+    if (game.my_role === game.playerRoleNames.role1) {
+      highlightCell(game, '#d15619', x => x.targetStatus == 'target');
     }
   }
 };
 
 var drawOcclusions = function(game) {
-  if(game.occlusions) {
-    globalGame.occlusionImages = [];
-    globalGame.occlusionCount = game.occlusions.length;
+  if(_.isEmpty(game.occlusions)) {
+    drawObjects(game);
+  } else {
+    game.occlusionImages = [];
+    game.occlusionCount = game.occlusions.length;
     _.map(game.occlusions, function(loc) {
-      console.log(loc);
       var cell = game.getPixelFromCell(loc);
       var imgObj = new Image();
       imgObj.onload = occlusionCounter;
