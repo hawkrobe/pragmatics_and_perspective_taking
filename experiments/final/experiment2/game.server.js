@@ -134,7 +134,7 @@ var dataOutput = function() {
   };
 
   var clickedObjOutput = function(client, message_data) {
-    var objects = client.game.trialInfo.currStim;
+    var objects = client.game.trialInfo.currStim.objects;
     var intendedName = getIntendedTargetName(objects);
     var objLocations = _.zipObject(getObjectLocHeaderArray(), getObjectLocs(objects));
     return _.extend(
