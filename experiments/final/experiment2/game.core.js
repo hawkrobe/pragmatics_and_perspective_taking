@@ -63,7 +63,7 @@ var game_core = function(options){
   this.numOcclusions = 2;
   
   // How many rounds do we want people to complete?
-  this.numRounds = 2;
+  this.numRounds = 40;
   this.feedbackDelay = 300;
 
   // This will be populated with the tangram set
@@ -176,12 +176,10 @@ game_core.prototype.makeTrialList = function () {
   var trialList = [];
   this.contextTypeList = [];
   var sequence = this.sampleSequence();
-//  console.log(sequence);
   for (var i = 0; i < this.numRounds; i++) {
     var trialInfo = sequence[i];
     this.contextTypeList.push(trialInfo['trialType']);
     var world = this.sampleTrial(trialInfo['target'], trialInfo['trialType']);
-    // supplement object with useful info
     world.objects = _.map(world.objects, function(obj) {
       var newObj = _.clone(obj);
       var speakerGridCell = that.getPixelFromCell(obj.speakerCoords);
@@ -197,28 +195,35 @@ game_core.prototype.makeTrialList = function () {
   return(trialList);
 };
 
-var designMatrix = {
-  'within' : ['basic']
-};
-
 // Ensure each object appears even number of times, evenly spaced across trial types...?
 game_core.prototype.sampleSequence = function() {
-  var trials = designMatrix[this.condition];
-  var targetRepetitions = this.numRounds / this.objects.length;
+  var trials = _.shuffle(Array(this.numRounds/4).fill(    
+    {context : 'close', occlusions: 'none'}
+  ).concat(Array(this.numRounds/4).fill(
+    {context : 'far', occlusions: 'none'}
+  )).concat(Array(this.numRounds/4).fill(
+    {context : 'close', occlusions: 'irrelevant'}
+  )).concat(Array(this.numRounds/4).fill(
+    {context : 'far', occlusions: 'irrelevant'}
+  )));
+  var targetReps = this.numRounds / this.objects.length;
   var trialTypeSequenceLength = trials.length;
   var that = this;
-  var proposal = _.flattenDeep(_.map(_.range(targetRepetitions / trialTypeSequenceLength), i => {
-    return _.shuffle(_.flatten(_.map(that.objects, function(target) {
-      return _.map(trials, function(trialType) {
-	return {target, trialType};
-      });
-    })));
-  }));
-  if( checkSequence(proposal) ) {
-    return proposal;
-  } else {
-    return this.sampleSequence();
-  }
+  var proposal = _.map(trials, v => {
+    var numObjsOccluded = v.occlusions == 'none' ? 0 : _.sample([1,2]);
+    return {
+      target: _.sample(that.objects),
+      trialType: _.extend(v, {numObjsOccluded})
+    };
+  });
+
+
+      //_.flattenDeep(_.map(_.range(targetReps/trialTypeSequenceLength), i => {
+//      return _.shuffle(_.flatten(_.map(that.objects, function(target) {
+      // return _.map(trials, function(trialType) {
+      // 	return {target, trialType};
+      // });
+  return proposal;
 };
 
 // Want to make sure there are no adjacent targets (e.g. gap is at least 1 apart?)
@@ -254,8 +259,10 @@ function containsCell(cellList, cell) {
 };
 
 game_core.prototype.sampleOcclusions = function(objects, contextType) {
+  console.log(contextType);
   var numObjsOccluded = contextType.numObjsOccluded;
-  var numEmptyOccluded = this.numOcclusions - contextType.numObjsOccluded;
+  var totalOcclusions = contextType.occlusions == 'none' ? 0 : this.numOcclusions;
+  var numEmptyOccluded = totalOcclusions - contextType.numObjsOccluded;
   var target = _.filter(objects, v => v.targetStatus == 'target')[0];
   var distractors = _.filter(objects, v => v.targetStatus == 'distractor');
   var criticalObjs = _.map(_.filter(distractors, v => v.shape == target.shape), 'name');
@@ -289,8 +296,8 @@ game_core.prototype.sampleOcclusions = function(objects, contextType) {
 
 // Randomize number of distractors
 game_core.prototype.sampleDistractors = function(target, type) {
-  var fCond = (type.context === 'close' ? (v) => {return true;} :
-	       type.context === 'far' ?   (v) => {return v.shape != target.shape;} :
+  var fCond = (type.context === 'close' ? (v) => {return v.subID != target.subID;} :
+	       type.context === 'far' ?   (v) => {return v.basic != target.basic;} :
 	       console.log('ERROR: contextType ' + type.context + ' not recognized'));
   var numDistractors = _.sample([2,3,4]);
   var distractors = _.sampleSize(_.filter(this.objects, fCond), numDistractors);
@@ -302,8 +309,7 @@ game_core.prototype.sampleDistractors = function(target, type) {
 
 // take context type as argument
 // TODO: generate full sequence of context types
-game_core.prototype.sampleTrial = function(target, garbage) {
-  var contextType = {context : 'far', occlusions: 'irrelevant', numObjsOccluded:1};
+game_core.prototype.sampleTrial = function(target, contextType) {
   var distractors = this.sampleDistractors(target, contextType);
   var locs = this.sampleStimulusLocs(distractors.concat(target).length);
   var objects = _.map(distractors.concat(target), function(obj, i) {
@@ -317,13 +323,7 @@ game_core.prototype.sampleTrial = function(target, garbage) {
 	gridY: locs.speaker[i][1]}
     });
   });
-  var occlusions = this.sampleOcclusions(objects, contextType)
-  console.log('speaker objs');
-  console.log(_.map(objects, 'speakerCoords'));
-  console.log('speaker occlusions are : ');
-  console.log(occlusions.speakerCoords);
-//  console.log('listener occlusions are : ');
-  
+  var occlusions = this.sampleOcclusions(objects, contextType);  
   return {objects, occlusions};
 };
 
