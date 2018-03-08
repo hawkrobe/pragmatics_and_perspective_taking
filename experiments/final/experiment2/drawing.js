@@ -105,8 +105,8 @@ var drawOcclusions = function(game) {
       var imgObj = new Image();
       imgObj.onload = occlusionCounter;
       imgObj.src = (game.my_role == game.playerRoleNames.role1 ?
-		    './images/mystery.jpg' :
-		    './images/mystery_noQ.jpg');
+		    './images/mystery.png' :
+		    './images/mystery_noQ.png');
       game.occlusionImages.push(_.extend(cell, {img: imgObj}));
     });
   }
