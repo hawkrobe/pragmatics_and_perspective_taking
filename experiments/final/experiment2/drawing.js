@@ -1,6 +1,29 @@
 // drawing.js
 // This file contains functions to draw on the HTML5 canvas
 
+function containsCell(cellList, cell) {
+  return _.some(cellList, function(compCell) {
+    return _.isEqual(cell, [compCell.gridX, compCell.gridY]);
+  });
+};
+
+// called when all images are loaded
+function drawOcclusionImages() {
+  for(var i = 0; i < globalGame.occlusionImages.length; i++) {
+    var obj = globalGame.occlusionImages[i];
+    globalGame.ctx.drawImage(obj.img, obj.upperLeftX, obj.upperLeftY,
+			     obj.width, obj.height);
+  }
+  drawObjects(globalGame);
+}
+
+// common loader keeping track if loads
+function occlusionCounter() {
+  globalGame.occlusionCount--;
+  if (globalGame.occlusionCount === 0)
+    drawOcclusionImages();
+}
+
 // Draws a grid of cells on the canvas (evenly divided
 var drawGrid = function(game){
     //size of canvas
@@ -32,18 +55,18 @@ var drawGrid = function(game){
 };
 
 // Loop through the object list and draw each one in its specified location
-var drawObjects = function(game, player) {
-    _.map(globalGame.objects, function(obj) {
-      // game.ctx.globalCompositeOperation='destination-over';  // draw under highlight
-      var customCoords = globalGame.my_role == "speaker" ? 'speakerCoords' : 'listenerCoords';
-      var trueX = obj[customCoords]['trueX'];
-      var trueY = obj[customCoords]['trueY'];
-      var gridX = obj[customCoords]['gridX'];
-      var gridY = obj[customCoords]['gridY'];
-      // console.log(obj['subordinate'],customCoords,gridX,gridY,trueX,trueY);
-      globalGame.ctx.drawImage(obj.img, trueX, trueY,obj.width, obj.height);
-    });
-
+var drawObjects = function(game) {
+  _.map(game.objects, function(obj) {
+    if(game.my_role == game.playerRoleNames.role2 ||
+       !containsCell(game.occlusions, [obj.gridX, obj.gridY])) {
+      var imgObj = new Image();
+      imgObj.onload = () => {
+	globalGame.ctx.drawImage(imgObj, obj.trueX, obj.trueY,
+				 obj.width, obj.height);
+      };
+      imgObj.src = obj.url;
+    }
+  });
 };
 
 var drawScreen = function(game, player) {
@@ -62,8 +85,29 @@ var drawScreen = function(game, player) {
              50);
   }
   else {
-//    drawGrid(globalGame);
-    drawObjects(globalGame, player);
+    drawGrid(game);
+    // Preload occlusion images then draw objects afterward
+    drawOcclusions(globalGame);
+    if (globalGame.my_role === globalGame.playerRoleNames.role1) {
+      highlightCell(globalGame, '#000000', x => x.targetStatus == 'target');
+    }
+  }
+};
+
+var drawOcclusions = function(game) {
+  if(game.occlusions) {
+    globalGame.occlusionImages = [];
+    globalGame.occlusionCount = game.occlusions.length;
+    _.map(game.occlusions, function(loc) {
+      console.log(loc);
+      var cell = game.getPixelFromCell(loc);
+      var imgObj = new Image();
+      imgObj.onload = occlusionCounter;
+      imgObj.src = (game.my_role == game.playerRoleNames.role1 ?
+		    './images/mystery.jpg' :
+		    './images/mystery_noQ.jpg');
+      game.occlusionImages.push(_.extend(cell, {img: imgObj}));
+    });
   }
 };
 
