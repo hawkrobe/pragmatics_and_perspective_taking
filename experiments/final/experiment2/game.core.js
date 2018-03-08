@@ -73,7 +73,7 @@ var game_core = function(options){
     this.id = options.id;
     this.expName = options.expName;
     this.player_count = options.player_count;
-    this.objects = require('./objects.json');
+    this.objects = require('./images/objects.json');
     this.condition = _.sample(['within']);
     this.trialList = this.makeTrialList();
     this.data = {
@@ -202,18 +202,21 @@ game_core.prototype.sampleSequence = function() {
   ).concat(Array(this.numRounds/4).fill(
     {context : 'far', occlusions: 'none'}
   )).concat(Array(this.numRounds/4).fill(
-    {context : 'close', occlusions: 'irrelevant'}
-  )).concat(Array(this.numRounds/4).fill(
     {context : 'far', occlusions: 'irrelevant'}
+  )).concat(Array(this.numRounds/8).fill(
+    {context : 'close', occlusions: 'irrelevant'}
+  )).concat(Array(this.numRounds/8).fill(
+    {context : 'close', occlusions: 'critical'}
   )));
   var targetReps = this.numRounds / this.objects.length;
   var trialTypeSequenceLength = trials.length;
   var that = this;
   var proposal = _.map(trials, v => {
     var numObjsOccluded = v.occlusions == 'none' ? 0 : _.sample([1,2]);
+    var numDistractors = _.sample([2,3,4]);
     return {
       target: _.sample(that.objects),
-      trialType: _.extend(v, {numObjsOccluded})
+      trialType: _.extend(v, {numObjsOccluded, numDistractors})
     };
   });
 
@@ -244,10 +247,13 @@ var checkSequence = function(proposalList) {
 // For basic/sub conditions, want to make sure there's at least one distractor at the
 // same super/basic level, respectively (otherwise it's a different condition...)
 var checkDistractors = function(distractors, target, contextType) {
-  if(contextType === 'basic') {
-    return !_.isEmpty(_.filter(distractors, ['shape', target.shape]));
-  } else if(contextType === 'sub') {
-    return !_.isEmpty(_.filter(distractors, ['basic', target.basic]));
+  if(contextType === 'close') {
+    return (!_.isEmpty(_.filter(distractors, ['shape', target.shape]))
+	    && (!_.isEmpty(_.filter(distractors, ['color', target.color]))
+		|| !_.isEmpty(_.filter(distractors, ['texture', target.texture]))));
+  } else if(contextType === 'far') {
+    return (!_.isEmpty(_.filter(distractors, ['texture', target.texture]))
+	    || !_.isEmpty(_.filter(distractors, ['color', target.color])));
   } else {
     return true;
   }
@@ -296,11 +302,10 @@ game_core.prototype.sampleOcclusions = function(objects, contextType) {
 
 // Randomize number of distractors
 game_core.prototype.sampleDistractors = function(target, type) {
-  var fCond = (type.context === 'close' ? (v) => {return v.subID != target.subID;} :
-	       type.context === 'far' ?   (v) => {return v.basic != target.basic;} :
+  var fCond = (type.context === 'close' ? (v) => {return v.id != target.id;} :
+	       type.context === 'far' ?   (v) => {return v.shape != target.shape;} :
 	       console.log('ERROR: contextType ' + type.context + ' not recognized'));
-  var numDistractors = _.sample([2,3,4]);
-  var distractors = _.sampleSize(_.filter(this.objects, fCond), numDistractors);
+  var distractors = _.sampleSize(_.filter(this.objects, fCond), type.numDistractors);
   if(checkDistractors(distractors, target, type.context))
     return distractors;
   else
