@@ -28,11 +28,13 @@ var client_onserverupdate_received = function(data){
   }
   
   if (globalGame.roundNum != data.roundNum) {
-    globalGame.objects = _.map(data.trialInfo.currStim, function(obj) {
+    var myCoords = (globalGame.my_role == globalGame.playerRoleNames.role1 ?
+		    'speakerCoords' : 'listenerCoords');
+    
+    globalGame.objects = _.map(data.trialInfo.currStim.objects, function(obj) {
       // Extract the coordinates matching your role &
       // remove the speakerCoords and listenerCoords properties
-      var customCoords = (globalGame.my_role == globalGame.playerRoleNames.role1 ?
-			  obj.speakerCoords : obj.listenerCoords);
+      var customCoords = obj[myCoords];
       var customObj = _.chain(obj)
 	  .omit('speakerCoords', 'listenerCoords')
 	  .extend(obj, {
@@ -42,18 +44,11 @@ var client_onserverupdate_received = function(data){
 	  })
 	  .value();
       
-      var imgObj = new Image(); //initialize object as an image (from HTML5)
-      imgObj.onload = function(){ // Draw image as soon as it loads (this is a callback)
-        globalGame.ctx.drawImage(imgObj, parseInt(customObj.trueX),
-				 parseInt(customObj.trueY),
-				 customObj.width, customObj.height);
-        if (globalGame.my_role === globalGame.playerRoleNames.role1) {
-          highlightCell(globalGame, '#000000', x => x.targetStatus == 'target');
-        }
-      };
-      imgObj.src = customObj.url; // tell client where to find it
-      return _.extend(customObj, {img: imgObj});
+      return _.extend(customObj);
     });
+    console.log(data.trialInfo);
+    globalGame.occlusions = data.trialInfo.currStim.occlusions[myCoords];
+    console.log(globalGame.occlusions);
   };
 
   globalGame.game_started = data.gs;
