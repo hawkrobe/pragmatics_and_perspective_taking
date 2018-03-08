@@ -32,11 +32,11 @@ var game_core = function(options){
 
   // Some config settings
   this.email = 'rxdh@stanford.edu';
-  this.projectName = 'basicLevel';
-  this.experimentName = 'artificialLanguage';
-  this.iterationName = 'experiment1';
+  this.projectName = 'ToM';
+  this.experimentName = 'speakerManipulation';
+  this.iterationName = 'pilot0';
   this.anonymizeCSV = true;
-  this.bonusAmt = 3; // in cents
+  this.bonusAmt = 1; // in cents
   
   // save data to the following locations (allowed: 'csv', 'mongo')
   this.dataStore = ['csv', 'mongo'];
@@ -49,20 +49,21 @@ var game_core = function(options){
   };
 
   //Dimensions of world in pixels and numberof cells to be divided into;
-  this.numHorizontalCells = 2;
-  this.numVerticalCells = 2;
+  this.numHorizontalCells = 3;
+  this.numVerticalCells = 3;
   this.cellDimensions = {height : 600, width : 600}; // in pixels
   this.cellPadding = 0;
   this.world = {
-    height: 600 * 2,
-    width: 600 * 2
+    height: 600 * this.numVerticalCells,
+    width: 600 * this.numHorizontalCells
   };
   
   // Which round are we on (initialize at -1 so that first round is 0-indexed)
   this.roundNum = -1;
-
+  this.numOcclusions = 2;
+  
   // How many rounds do we want people to complete?
-  this.numRounds = 96;
+  this.numRounds = 2;
   this.feedbackDelay = 300;
 
   // This will be populated with the tangram set
@@ -73,9 +74,8 @@ var game_core = function(options){
     this.expName = options.expName;
     this.player_count = options.player_count;
     this.objects = require('./objects.json');
-    this.condition = _.sample(['mixedLower', 'subOnly', 'intermediateOnly']);
+    this.condition = _.sample(['within']);
     this.trialList = this.makeTrialList();
-    this.language = new ArtificialLanguage();
     this.data = {
       id : this.id,
       subject_information : {
@@ -152,9 +152,8 @@ game_core.prototype.newRound = function(delay) {
       localThis.trialInfo = {
 	currStim: localThis.trialList[localThis.roundNum],
 	currContextType: localThis.contextTypeList[localThis.roundNum],
-	labels: localThis.language.vocab,
 	roles: _.zipObject(_.map(localThis.players, p =>p.id),
-			   _.reverse(_.values(localThis.trialInfo.roles)))
+			   _.values(localThis.trialInfo.roles))
       };
       localThis.server_send_update();
     }
@@ -181,26 +180,25 @@ game_core.prototype.makeTrialList = function () {
   for (var i = 0; i < this.numRounds; i++) {
     var trialInfo = sequence[i];
     this.contextTypeList.push(trialInfo['trialType']);
-    var world = this.sampleTrial(trialInfo['target'], trialInfo['trialType']); // Sample a world state
-    // construct trial list (in sets of complete rounds)
-    trialList.push(_.map(world, function(obj) {
+    var world = this.sampleTrial(trialInfo['target'], trialInfo['trialType']);
+    // supplement object with useful info
+    world.objects = _.map(world.objects, function(obj) {
       var newObj = _.clone(obj);
       var speakerGridCell = that.getPixelFromCell(obj.speakerCoords);
       var listenerGridCell = that.getPixelFromCell(obj.listenerCoords);
       newObj.width = that.cellDimensions.width * 3/4;
-      newObj.height = that.cellDimensions.height * 3/4;      
+      newObj.height = that.cellDimensions.height * 3/4;
       _.extend(newObj.speakerCoords, that.coordExtension(newObj, speakerGridCell));
       _.extend(newObj.listenerCoords, that.coordExtension(newObj, listenerGridCell));
       return newObj;
-    }));
+    });
+    trialList.push(world);
   };
   return(trialList);
 };
 
 var designMatrix = {
-  'mixedLower'       : ['sub', 'basic'],
-  'subOnly'          : ['sub'],
-  'intermediateOnly' : ['basic']
+  'within' : ['basic']
 };
 
 // Ensure each object appears even number of times, evenly spaced across trial types...?
@@ -231,6 +229,7 @@ function mapPairwise(arr, func){
   }
   return l;
 }
+
 var checkSequence = function(proposalList) {
   return _.every(mapPairwise(proposalList, function(curr, next) {
     return curr.target.subID !== next.target.subID;
@@ -241,41 +240,91 @@ var checkSequence = function(proposalList) {
 // same super/basic level, respectively (otherwise it's a different condition...)
 var checkDistractors = function(distractors, target, contextType) {
   if(contextType === 'basic') {
-    return !_.isEmpty(_.filter(distractors, ['super', target.super]));
+    return !_.isEmpty(_.filter(distractors, ['shape', target.shape]));
   } else if(contextType === 'sub') {
     return !_.isEmpty(_.filter(distractors, ['basic', target.basic]));
   } else {
     return true;
   }
 };
+function containsCell(cellList, cell) {
+  return _.some(cellList, function(compCell) {
+    return _.isEqual(cell, [compCell.gridX, compCell.gridY]);
+  });
+};
 
-game_core.prototype.sampleDistractors = function(target, contextType) {
-  var fCond = (contextType === 'super' ? (v) => {return v.super != target.super;} :
-	       contextType === 'basic' ? (v) => {return v.basic != target.basic;} :
-	       contextType === 'sub' ?   (v) => {return v.subID != target.subID;} :
-	       console.log('ERROR: contextType ' + contextType + ' not recognized'));
-  var distractors = _.sampleSize(_.filter(this.objects, fCond), 3);
-  if(checkDistractors(distractors, target, contextType))
+game_core.prototype.sampleOcclusions = function(objects, contextType) {
+  var numObjsOccluded = contextType.numObjsOccluded;
+  var numEmptyOccluded = this.numOcclusions - contextType.numObjsOccluded;
+  var target = _.filter(objects, v => v.targetStatus == 'target')[0];
+  var distractors = _.filter(objects, v => v.targetStatus == 'distractor');
+  var criticalObjs = _.map(_.filter(distractors, v => v.shape == target.shape), 'name');
+  var irrelevantObjs = _.map(_.filter(distractors, v => v.shape != target.shape),'name');
+  var occlusions = [];
+  if(contextType.occlusions == 'critical') {
+    var critical = _.sample(criticalObjs);
+    var rest = _.sampleSize(irrelevantObjs, numObjsOccluded - 1);
+    occlusions = occlusions.concat(critical, rest);
+  } else if (contextType.occlusions == 'irrelevant') {
+    occlusions = occlusions.concat(_.sampleSize(irrelevantObjs, numObjsOccluded));
+  }
+  function getLocationsForRole (objsToOcclude, role) {
+    var targetLoc = target[role + 'Coords'];
+    var distractorLocs = _.map(distractors, role + 'Coords');
+    var occLocs = _.map(_.filter(distractors, v =>  _.includes(objsToOcclude, v.name)),
+			role + 'Coords');
+    // Select the rest with empty squares
+    var otherLocs = _.map(_.filter(getAllLocs(), v => {
+      var s = distractorLocs.concat(targetLoc);
+      return !containsCell(s, v);
+    }), v => {
+      return {'gridX' : v[0], 'gridY' : v[1]};
+    });
+    return occLocs.concat(_.sampleSize(otherLocs, numEmptyOccluded));
+  };
+
+  return {speakerCoords : getLocationsForRole(occlusions, 'speaker'),
+	  listenerCoords : getLocationsForRole(occlusions, 'listener')};
+};
+
+// Randomize number of distractors
+game_core.prototype.sampleDistractors = function(target, type) {
+  var fCond = (type.context === 'close' ? (v) => {return true;} :
+	       type.context === 'far' ?   (v) => {return v.shape != target.shape;} :
+	       console.log('ERROR: contextType ' + type.context + ' not recognized'));
+  var numDistractors = _.sample([2,3,4]);
+  var distractors = _.sampleSize(_.filter(this.objects, fCond), numDistractors);
+  if(checkDistractors(distractors, target, type.context))
     return distractors;
   else
-    return this.sampleDistractors(target, contextType);
+    return this.sampleDistractors(target, type);
 };
 
 // take context type as argument
-game_core.prototype.sampleTrial = function(target, contextType) {
+// TODO: generate full sequence of context types
+game_core.prototype.sampleTrial = function(target, garbage) {
+  var contextType = {context : 'far', occlusions: 'irrelevant', numObjsOccluded:1};
   var distractors = this.sampleDistractors(target, contextType);
-  var locs = this.sampleStimulusLocs();
-  return _.map(distractors.concat(target), function(obj, index) {
+  var locs = this.sampleStimulusLocs(distractors.concat(target).length);
+  var objects = _.map(distractors.concat(target), function(obj, i) {
     return _.extend(obj, {
-      targetStatus: index === 3 ? 'target' : 'distractor',
+      targetStatus: i == distractors.concat(target).length - 1 ? 'target' : 'distractor',
       listenerCoords: {
-	gridX: locs.listener[index][0],
-	gridY: locs.listener[index][1]},
+	gridX: locs.listener[i][0],
+	gridY: locs.listener[i][1]},
       speakerCoords: {
-	gridX: locs.speaker[index][0],
-	gridY: locs.speaker[index][1]}
+	gridX: locs.speaker[i][0],
+	gridY: locs.speaker[i][1]}
     });
   });
+  var occlusions = this.sampleOcclusions(objects, contextType)
+  console.log('speaker objs');
+  console.log(_.map(objects, 'speakerCoords'));
+  console.log('speaker occlusions are : ');
+  console.log(occlusions.speakerCoords);
+//  console.log('listener occlusions are : ');
+  
+  return {objects, occlusions};
 };
 
 // maps a grid location to the exact pixel coordinates
@@ -295,9 +344,15 @@ game_core.prototype.getPixelFromCell = function (coords) {
   };
 };
 
-game_core.prototype.sampleStimulusLocs = function() {
-  var listenerLocs = _.shuffle([[1,1], [2,1], [1,2], [2,2]]);
-  var speakerLocs = _.shuffle([[1,1], [2,1], [1,2], [2,2]]);
+function getAllLocs() {
+  return [[1,1], [2,1], [3,1],
+	  [1,2], [2,2], [3,2],
+	  [1,3], [2,3], [3,3]];
+};
+
+game_core.prototype.sampleStimulusLocs = function(numObjects) {
+  var listenerLocs = _.sampleSize(getAllLocs(), numObjects);
+  var speakerLocs = _.sampleSize(getAllLocs(), numObjects);
   return {listener : listenerLocs, speaker : speakerLocs};
 };
 
@@ -328,31 +383,4 @@ game_core.prototype.server_send_update = function(){
   this.state = state;
   _.map(local_game.get_active_players(), function(p){
     p.player.instance.emit( 'onserverupdate', state);});
-};
-
-var ArtificialLanguage = function() {
-  this.vocabSize = 16;
-  this.wordLength = 4;
-  this.possibleVowels = ['a','e','i','o','u'];
-  this.possibleConsonants = ['g','h','k','l','m','n','p','w'];
-  this.vocab = this.sampleVocab();
-};
-
-ArtificialLanguage.prototype.sampleVocab = function() {
-  var vocab = _.map(_.range(this.vocabSize), (wordNum) => {
-    return _.map(_.range(this.wordLength), (charNum) => {
-      var chars = charNum % 2 === 0 ? this.possibleConsonants : this.possibleVowels;
-      return _.sample(chars);
-    }).join('');
-  });
-  return this.verifyVocab(vocab) ? vocab : this.sampleVocab();
-}; 
-
-// Ensure no words have same morpheme in same position
-ArtificialLanguage.prototype.verifyVocab = function(vocab) {
-  var morphemes = _.map(vocab, w => _.map(_.chunk(w.split(''), 2), m => m.join('')));
-  var uniqueMorphemes = _.every(_.zip.apply(_, morphemes), morpheme => {
-    return _.uniq(morpheme).length === vocab.length;
-  });
-  return uniqueMorphemes;
 };
