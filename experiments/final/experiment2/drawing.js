@@ -89,7 +89,7 @@ var drawScreen = function(game, player) {
     // Preload occlusion images then draw objects afterward
     drawOcclusions(game);
     if (game.my_role === game.playerRoleNames.role1) {
-      highlightCell(game, '#d15619', x => x.targetStatus == 'target');
+      highlightCell(game, '#FF8300', x => x.targetStatus == 'target');
     }
   }
 };
