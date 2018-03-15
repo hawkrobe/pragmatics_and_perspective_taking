@@ -83,14 +83,13 @@ var dataOutput = function() {
 
   function getObjectLocs(objects) {
     return _.flatten(_.map(objects, o => {
-      return [o.name, o.speakerCoords.gridX, o.speakerCoords.gridY,
-	      o.listenerCoords.gridX, o.listenerCoords.gridY];
+      return [o.name, o.gridX, o.gridY];
     }));
   }
 
   function getObjectLocHeaderArray() {
     return _.flatten(_.map(_.range(1,5), i => {
-      return _.map(['name', 'speakerX', 'speakerY', 'listenerX', 'listenerY'], v => {
+      return _.map(['name', 'gridX', 'gridY'], v => {
 	return 'object' + i + v;
       });
     }));
@@ -105,68 +104,41 @@ var dataOutput = function() {
       assignmentId: client.assignmentid
     };
   };
-
-  var postTestWordOutput = function(client, message_data) {
-    var target = message_data[1];
-    var selections = message_data.slice(2);
-    var meaningHeader = _.map(client.game.objects, 'name');
-    var meaning = _.map(client.game.objects, obj => _.includes(selections, obj.name));
-    return _.extend(
-      commonOutput(client, message_data),
-      _.zipObject(meaningHeader, meaning), {
-	target,
-	finalRole: client.role
-      });	
-  };
   
-  var postTestObjectOutput = function(client, message_data) {
-    var target = message_data[1];
-    var selections = message_data.slice(2);
-    var meaningHeader = client.game.trialInfo.labels;
-    var meaning = _.map(client.game.trialInfo.labels,
-			label => _.includes(selections, label));
-    return _.extend(
-      commonOutput(client, message_data),
-      _.zipObject(meaningHeader, meaning), {
-	target,
-	finalRole: client.role
-      });	
-  };
-
   var clickedObjOutput = function(client, message_data) {
     var objects = client.game.trialInfo.currStim.objects;
     var intendedName = getIntendedTargetName(objects);
     var objLocations = _.zipObject(getObjectLocHeaderArray(), getObjectLocs(objects));
     return _.extend(
       commonOutput(client, message_data),
+      client.game.trialInfo.currContextType,
       objLocations, {
 	intendedName,
 	clickedName: message_data[1],
 	trialNum : client.game.state.roundNum + 1,	
 	correct: intendedName === message_data[1],
-	condition: client.game.condition,
-	contextType: client.game.trialInfo.currContextType
+	condition: client.game.condition
       }
     );
   };
 
-  var dropOutput = function(client, message_data) {
-    var intendedName = getIntendedTargetName(client.game.trialInfo.currStim);
+  var messageOutput = function(client, message_data) {
+    var intendedName = getIntendedTargetName(client.game.trialInfo.currStim.objects);
     return _.extend(
+      client.game.trialInfo.currStim.currContextType,
       commonOutput(client, message_data), {
 	intendedName,
 	trialNum : client.game.state.roundNum + 1,	
 	text: message_data[1].replace(/~~~/g, '.'),
+	role: client.role,
 	timeFromRoundStart: message_data[2]
       }
     );
   };
 
   return {
-    'drop' : dropOutput,
-    'clickedObj' : clickedObjOutput,
-    'postTest_word' : postTestWordOutput,
-    'postTest_object' : postTestObjectOutput    
+    'chatMessage' : messageOutput,
+    'clickedObj' : clickedObjOutput
   };
 }();
 
