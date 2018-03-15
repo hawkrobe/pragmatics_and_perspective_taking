@@ -28,27 +28,8 @@ var client_onserverupdate_received = function(data){
   }
   
   if (globalGame.roundNum != data.roundNum) {
-    var myCoords = (globalGame.my_role == globalGame.playerRoleNames.role1 ?
-		    'speakerCoords' : 'listenerCoords');
-    
-    globalGame.objects = _.map(data.trialInfo.currStim.objects, function(obj) {
-      // Extract the coordinates matching your role &
-      // remove the speakerCoords and listenerCoords properties
-      var customCoords = obj[myCoords];
-      var customObj = _.chain(obj)
-	  .omit('speakerCoords', 'listenerCoords')
-	  .extend(obj, {
-	    trueX : customCoords.trueX, trueY : customCoords.trueY,
-	    gridX : customCoords.gridX, gridY : customCoords.gridY,
-	    box : customCoords.box
-	  })
-	  .value();
-      
-      return _.extend(customObj);
-    });
-    console.log(data.trialInfo);
-    globalGame.occlusions = data.trialInfo.currStim.occlusions[myCoords];
-    console.log(globalGame.occlusions);
+    globalGame.objects = data.trialInfo.currStim.objects;
+    globalGame.occlusions = data.trialInfo.currStim.occlusions;
   };
 
   globalGame.game_started = data.gs;

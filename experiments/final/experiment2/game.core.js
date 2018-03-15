@@ -181,14 +181,11 @@ game_core.prototype.makeTrialList = function () {
     this.contextTypeList.push(trialInfo['trialType']);
     var world = this.sampleTrial(trialInfo['target'], trialInfo['trialType']);
     world.objects = _.map(world.objects, function(obj) {
-      var newObj = _.clone(obj);
-      var speakerGridCell = that.getPixelFromCell(obj.speakerCoords);
-      var listenerGridCell = that.getPixelFromCell(obj.listenerCoords);
-      newObj.width = that.cellDimensions.width * 3/4;
-      newObj.height = that.cellDimensions.height * 3/4;
-      _.extend(newObj.speakerCoords, that.coordExtension(newObj, speakerGridCell));
-      _.extend(newObj.listenerCoords, that.coordExtension(newObj, listenerGridCell));
-      return newObj;
+      var newObj = _.extend(_.clone(obj), {
+	width: that.cellDimensions.width * 3/4,
+	height: that.cellDimensions.height * 3/4
+      });
+      return _.extend(newObj, that.coordExtension(newObj, that.getPixelFromCell(obj)));
     });
     trialList.push(world);
   };
@@ -265,7 +262,6 @@ function containsCell(cellList, cell) {
 };
 
 game_core.prototype.sampleOcclusions = function(objects, contextType) {
-  console.log(contextType);
   var numObjsOccluded = contextType.numObjsOccluded;
   var totalOcclusions = contextType.occlusions == 'none' ? 0 : this.numOcclusions;
   var numEmptyOccluded = totalOcclusions - contextType.numObjsOccluded;
@@ -273,31 +269,31 @@ game_core.prototype.sampleOcclusions = function(objects, contextType) {
   var distractors = _.filter(objects, v => v.targetStatus == 'distractor');
   var criticalObjs = _.map(_.filter(distractors, v => v.shape == target.shape), 'name');
   var irrelevantObjs = _.map(_.filter(distractors, v => v.shape != target.shape),'name');
-  var occlusions = [];
+  var occs = [];
+
+  // Ensure critical object is covered in critical condition
   if(contextType.occlusions == 'critical') {
     var critical = _.sample(criticalObjs);
     var rest = _.sampleSize(irrelevantObjs, numObjsOccluded - 1);
-    occlusions = occlusions.concat(critical, rest);
+    occs = occs.concat(critical, rest);
   } else if (contextType.occlusions == 'irrelevant') {
-    occlusions = occlusions.concat(_.sampleSize(irrelevantObjs, numObjsOccluded));
+    occs = occs.concat(_.sampleSize(irrelevantObjs, numObjsOccluded));
   }
-  function getLocationsForRole (objsToOcclude, role) {
-    var targetLoc = target[role + 'Coords'];
-    var distractorLocs = _.map(distractors, role + 'Coords');
-    var occLocs = _.map(_.filter(distractors, v =>  _.includes(objsToOcclude, v.name)),
-			role + 'Coords');
-    // Select the rest with empty squares
-    var otherLocs = _.map(_.filter(getAllLocs(), v => {
-      var s = distractorLocs.concat(targetLoc);
-      return !containsCell(s, v);
-    }), v => {
-      return {'gridX' : v[0], 'gridY' : v[1]};
-    });
-    return occLocs.concat(_.sampleSize(otherLocs, numEmptyOccluded));
-  };
-
-  return {speakerCoords : getLocationsForRole(occlusions, 'speaker'),
-	  listenerCoords : getLocationsForRole(occlusions, 'listener')};
+  // Pick empty squares for the rest of the occlusions
+  var targetLoc = {'gridX' : target.gridX, 'gridY' : target.gridY};
+  var distractorLocs = _.map(distractors, v => {
+    return {'gridX' : v.gridX, 'gridY' : v.gridY};
+  });
+  var occLocs = _.map(_.filter(distractors, v => _.includes(occs, v.name)), v => {
+    return {'gridX' : v.gridX, 'gridY' : v.gridY};
+  });
+  var otherLocs = _.map(_.filter(getAllLocs(), v => {
+    var s = distractorLocs.concat(targetLoc);
+    return !containsCell(s, v);
+  }), v => {
+    return {'gridX' : v[0], 'gridY' : v[1]};
+  });
+  return occLocs.concat(_.sampleSize(otherLocs, numEmptyOccluded));
 };
 
 // Randomize number of distractors
@@ -318,14 +314,10 @@ game_core.prototype.sampleTrial = function(target, contextType) {
   var distractors = this.sampleDistractors(target, contextType);
   var locs = this.sampleStimulusLocs(distractors.concat(target).length);
   var objects = _.map(distractors.concat(target), function(obj, i) {
-    return _.extend(obj, {
+    return _.extend(_.clone(obj), {
       targetStatus: i == distractors.concat(target).length - 1 ? 'target' : 'distractor',
-      listenerCoords: {
-	gridX: locs.listener[i][0],
-	gridY: locs.listener[i][1]},
-      speakerCoords: {
-	gridX: locs.speaker[i][0],
-	gridY: locs.speaker[i][1]}
+      gridX: locs[i][0],
+      gridY: locs[i][1]
     });
   });
   var occlusions = this.sampleOcclusions(objects, contextType);  
@@ -334,9 +326,9 @@ game_core.prototype.sampleTrial = function(target, contextType) {
 
 // maps a grid location to the exact pixel coordinates
 // for x = 1,2,3,4; y = 1,2,3,4
-game_core.prototype.getPixelFromCell = function (coords) {
-  var x = coords.gridX;
-  var y = coords.gridY;
+game_core.prototype.getPixelFromCell = function (obj) {
+  var x = obj.gridX;
+  var y = obj.gridY;
   return {
     centerX: (this.cellPadding/2 + this.cellDimensions.width * (x - 1)
         + this.cellDimensions.width / 2),
@@ -356,9 +348,7 @@ function getAllLocs() {
 };
 
 game_core.prototype.sampleStimulusLocs = function(numObjects) {
-  var listenerLocs = _.sampleSize(getAllLocs(), numObjects);
-  var speakerLocs = _.sampleSize(getAllLocs(), numObjects);
-  return {listener : listenerLocs, speaker : speakerLocs};
+  return _.sampleSize(getAllLocs(), numObjects);
 };
 
 game_core.prototype.server_send_update = function(){

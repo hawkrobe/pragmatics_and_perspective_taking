@@ -147,11 +147,10 @@ function drawViewerFeedback(globalGame, scoreDiff, clickedObjName) {
 
 var highlightCell = function(game, color, condition) {
   var targetObjects = _.filter(game.objects, condition);
-  var customCoords = game.my_role == "speaker" ? 'speakerCoords' : 'listenerCoords';
   for (var i = 0; i < targetObjects.length; i++){
-    var coords = targetObjects[i][customCoords];
-    var upperLeftX = game.getPixelFromCell(coords).upperLeftX;
-    var upperLeftY = game.getPixelFromCell(coords).upperLeftY;
+    var obj = targetObjects[i];
+    var upperLeftX = game.getPixelFromCell(obj).upperLeftX;
+    var upperLeftY = game.getPixelFromCell(obj).upperLeftY;
     game.ctx.globalCompositeOperation='source-over';
     if (upperLeftX != null && upperLeftY != null) {
       game.ctx.beginPath();
