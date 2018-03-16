@@ -82,15 +82,17 @@ var sharedSetup = function(game) {
   
   // Tell server when client types something in the chatbox
   $('form').submit(function(){
-    var origMsg = $('#chatbox').val();
-    var timeElapsed = Date.now() - globalGame.typingStartTime;
-    var msg = ['chatMessage', origMsg.replace(/\./g, '~~~'), timeElapsed].join('.');
-    if($('#chatbox').val() != '') {
-      game.socket.send(msg);
-      globalGame.sentTyping = false;
-      $('#chatbox').val('');
+    if(!globalGame.paused) {
+      var origMsg = $('#chatbox').val();
+      var timeElapsed = Date.now() - globalGame.typingStartTime;
+      var msg = ['chatMessage', origMsg.replace(/\./g, '~~~'), timeElapsed].join('.');
+      if($('#chatbox').val() != '') {
+	game.socket.send(msg);
+	globalGame.sentTyping = false;
+	$('#chatbox').val('');
+      }
+      return false;
     }
-    return false;   
   });
 
   game.socket.on('playerTyping', function(data){
@@ -106,27 +108,6 @@ var sharedSetup = function(game) {
     }
   });
   
-  // Update messages log when other players send chat
-  game.socket.on('chatMessage', function(data){
-
-    var otherRole = (globalGame.my_role === game.playerRoleNames.role1 ?
-		     game.playerRoleNames.role2 : game.playerRoleNames.role1);
-    var source = data.user === globalGame.my_id ? "You" : otherRole;
-    // To bar responses until speaker has uttered at least one message
-    if(source !== "You"){
-      globalGame.messageSent = true;
-    }
-    var col = source === "You" ? "#363636" : "#707070";
-    $('.typing-msg').remove();
-    $('#messages')
-      .append($('<li style="padding: 5px 10px; background: ' + col + '">')
-    	      .text(source + ": " + data.msg))
-      .stop(true,true)
-      .animate({
-	scrollTop: $("#messages").prop("scrollHeight")
-      }, 800);
-  });
-
   //so that we can measure the duration of the game
   game.startTime = Date.now();
   

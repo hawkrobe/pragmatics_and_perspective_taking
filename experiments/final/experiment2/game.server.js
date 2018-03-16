@@ -32,20 +32,15 @@ var onMessage = function(client,message) {
   var others = gc.get_others(client.userid);
   switch(message_type) {
 
-  case 'postTest_word' :
-    console.log('received word post test message');
-    break;
-
-  case 'postTest_object' :
-    console.log('received object post test message');
-    break;
-
   case 'chatMessage' :
     if(client.game.player_count == 2 && !gc.paused) {
       var msg = message_parts[1].replace(/~~~/g,'.');
       _.map(all, function(p){
 	p.player.instance.emit( 'chatMessage', {user: client.userid, msg: msg});});
     }
+    break;
+
+  case 'updateMouse' :
     break;
     
   case 'clickedObj' :
@@ -104,7 +99,22 @@ var dataOutput = function() {
       assignmentId: client.assignmentid
     };
   };
-  
+
+  var mouseOutput = function(client, messageData) {
+    var common = commonOutput(client, messageData);
+    //var distractor = _.find(client.game.objects, obj => obj.targetStatus == "distractor");
+    var object = _.find(client.game.trialInfo.currStim.objects,
+			obj => obj.targetStatus == 'target');
+    return _.extend(common, {
+      // distractorX : common.critical ? distractor.trueX + distractor.width/2 : 'none',
+      // distractorY : common.critical ? distractor.trueY + distractor.height/2 : 'none',
+      targetX : object.trueX + object.width/2,
+      targetY : object.trueY + object.height/2,
+      mouseX : messageData[1],
+      mouseY : messageData[2]
+    });
+  };
+
   var clickedObjOutput = function(client, message_data) {
     var objects = client.game.trialInfo.currStim.objects;
     var intendedName = getIntendedTargetName(objects);
@@ -137,6 +147,7 @@ var dataOutput = function() {
   };
 
   return {
+    'updateMouse' : mouseOutput,
     'chatMessage' : messageOutput,
     'clickedObj' : clickedObjOutput
   };

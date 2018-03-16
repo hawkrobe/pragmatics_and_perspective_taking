@@ -46,9 +46,6 @@ var client_onserverupdate_received = function(data){
   // Get rid of "waiting" screen if there are multiple players
   if(data.players.length > 1) {
     $('#messages').empty();
-    $("#chatbox").removeAttr("disabled");
-    $('#chatbox').focus();
-    globalGame.get_player(globalGame.my_id).message = "";
 
     // reset labels
     // Update w/ role (can only move stuff if agent)
@@ -62,6 +59,15 @@ var client_onserverupdate_received = function(data){
 		"<p>to tell the listener which object is the target.</p>");
     } else if(globalGame.my_role === globalGame.playerRoleNames.role2) {
       globalGame.viewport.addEventListener("click", mouseClickListener, false);
+      $('#viewport').mousemove(function(event){
+	var bRect = globalGame.viewport.getBoundingClientRect();
+	var mouseX = (event.clientX-bRect.left)*(globalGame.viewport.width/bRect.width);
+	var mouseY = (event.clientY-bRect.top)*(globalGame.viewport.height/bRect.height);
+	if(!globalGame.paused) {
+	  globalGame.socket.send(['updateMouse', Math.floor(mouseX),
+				  Math.floor(mouseY)].join('.'));
+	}
+      });
       $('#instructs')
 	.empty()
 	.append("<p>After you see the speaker drag a word into the box,</p>" +
@@ -141,6 +147,32 @@ var client_addnewround = function(game) {
 };
 
 var customSetup = function(game) {
+  // Update messages log when other players send chat
+  game.socket.on('chatMessage', function(data){
+    var otherRole = (globalGame.my_role === game.playerRoleNames.role1 ?
+		     game.playerRoleNames.role2 : game.playerRoleNames.role1);
+    var source = data.user === globalGame.my_id ? "You" : otherRole;
+    // Bar responses until speaker has uttered at least one message
+    if(source !== "You"){
+      globalGame.messageSent = true;
+    }
+    var col = source === "You" ? "#363636" : "#707070";
+    $('.typing-msg').remove();
+    $('#messages')
+      .append($('<li style="padding: 5px 10px; background: ' + col + '">')
+    	      .text(source + ": " + data.msg))
+      .stop(true,true)
+      .animate({
+	scrollTop: $("#messages").prop("scrollHeight")
+      }, 800);
+    if(globalGame.my_role == globalGame.playerRoleNames.role2 && globalGame.paused) {
+      var msg = 'Message received! Please click on the circle in the center to continue.'
+      globalGame.get_player(globalGame.my_id).message = msg;
+      drawScreen(globalGame, globalGame.get_player(globalGame.my_id));
+      drawClickPoint(game);
+    }
+  });
+
   // Set up new round on client's browsers after submit round button is pressed.
   // This means clear the chatboxes, update round number, and update score on screen
   game.socket.on('newRoundUpdate', function(data){
@@ -154,6 +186,17 @@ var customSetup = function(game) {
       $('#roundnumber').empty()
         .append("Round\n" + (game.roundNum + 2) + "/" + game.numRounds);
     }
+    // For mouse-tracking, matcher must wait until director sends message
+    if(globalGame.my_role == globalGame.playerRoleNames.role2) {
+      var msg = 'Waiting for your partner to send a message...';
+      globalGame.get_player(globalGame.my_id).message = msg;
+      globalGame.paused = true;
+    } else {
+      $("#chatbox").removeAttr("disabled");
+      $('#chatbox').focus();
+      globalGame.get_player(globalGame.my_id).message = "";
+    }
+    //drawScreen(globalGame, globalGame.get_player(globalGame.my_id));      
   });
 };
 
@@ -164,7 +207,7 @@ var client_onjoingame = function(num_players, role) {
   _.map(_.range(num_players - 1), function(i){
     globalGame.players.unshift({id: null, player: new game_player(globalGame)});
   });
-
+  $("#chatbox").attr("disabled", "disabled");
   if(num_players == 1) {
     this.timeoutID = setTimeout(function() {
       if(_.size(this.urlParams) == 4) {
@@ -176,7 +219,6 @@ var client_onjoingame = function(num_players, role) {
         console.log(this.data);
       }
     }, 1000 * 60 * 15);
-    $("#chatbox").attr("disabled", "disabled");
     globalGame.get_player(globalGame.my_id).message = (
       'Waiting for another player to connect... Please do not refresh the page!'
     );
@@ -194,14 +236,28 @@ function mouseClickListener(evt) {
   var mouseY = Math.floor((evt.clientY - bRect.top)*
 			  (globalGame.viewport.height/bRect.height));
   if (globalGame.messageSent) { // if message was not sent, don't do anything
-    _.forEach(globalGame.objects, function(obj) {
-      if (hitTest(obj, mouseX, mouseY)) {
-	globalGame.messageSent = false;
-        globalGame.socket.send(["clickedObj", obj.name].join('.'));
-      }
-    });
+    if (hitCenter(mouseX, mouseY)) {
+      globalGame.get_player(globalGame.my_id).message = "";
+      globalGame.paused = false;
+      $("#chatbox").removeAttr("disabled");
+      $('#chatbox').focus();
+      drawScreen(globalGame, globalGame.get_player(globalGame.my_id));    
+    } else if(!globalGame.paused) {
+      _.forEach(globalGame.objects, function(obj) {
+	if (hitTest(obj, mouseX, mouseY)) {
+	  globalGame.messageSent = false;
+          globalGame.socket.send(["clickedObj", obj.name].join('.'));
+	}
+      });
+    }
   };
 };
+
+function hitCenter(mouseX, mouseY) {
+  return ((Math.pow(mouseX - globalGame.viewport.width/2, 2) +
+	   Math.pow(mouseY - globalGame.viewport.height/2, 2))
+	  <= Math.pow(25,2));
+}
 
 function hitTest(shape,mx,my) {
   var dx = mx - shape.trueX;
