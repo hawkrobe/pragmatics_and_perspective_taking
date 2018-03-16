@@ -36,7 +36,7 @@ var game_core = function(options){
   this.experimentName = 'speakerManipulation';
   this.iterationName = 'pilot0';
   this.anonymizeCSV = true;
-  this.bonusAmt = 1; // in cents
+  this.bonusAmt = 2; // in cents
   
   // save data to the following locations (allowed: 'csv', 'mongo')
   this.dataStore = ['csv', 'mongo'];
@@ -303,6 +303,7 @@ game_core.prototype.sampleDistractors = function(target, type) {
 	       console.log('ERROR: contextType ' + type.context + ' not recognized'));
   var distractors = _.sampleSize(_.filter(this.objects, fCond), type.numDistractors);
   if(checkDistractors(distractors, target, type.context))
+    // TODO: tag critical distractor for use later
     return distractors;
   else
     return this.sampleDistractors(target, type);
@@ -343,7 +344,7 @@ game_core.prototype.getPixelFromCell = function (obj) {
 
 function getAllLocs() {
   return [[1,1], [2,1], [3,1],
-	  [1,2], [2,2], [3,2],
+	  [1,2],        [3,2],
 	  [1,3], [2,3], [3,3]];
 };
 
