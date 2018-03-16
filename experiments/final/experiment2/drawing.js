@@ -122,36 +122,51 @@ var drawOcclusions = function(game) {
   }
 };
 
-function drawSketcherFeedback(globalGame, scoreDiff, clickedObjName) {
-  // textual feedback
+function drawFeedbackIcon(game, outcome, obj) {
+  var imgObj = new Image();
+  imgObj.src = outcome == 'correct' ? './images/checkmark.png' : './images/xxx.png';
+  imgObj.onload = () => {
+    console.log('drawing');
+    console.log(imgObj);
+    console.log(obj);
+    game.ctx.drawImage(imgObj, obj.trueX + obj.width/4, obj.trueY + obj.height/4,
+		       obj.width/2, obj.height/2);
+  };
+}
+
+function drawSketcherFeedback(game, scoreDiff, clickedObjName) {
+  var clickedObj = _.filter(game.objects, x => x.name == clickedObjName)[0];
   if (scoreDiff > 0) {
-    // visual feedback
-    highlightCell(globalGame, '#19A319', x => x.name == clickedObjName);
+    highlightCell(game, '#19A319', x => x.name == clickedObjName);
+    drawFeedbackIcon(game, 'correct', clickedObj);    
     setTimeout(() => {
       $('#feedback').html('Great job! Your partner correctly identified the target.');
-    }, globalGame.feedbackDelay);
+    }, game.feedbackDelay);
   } else {
-    highlightCell(globalGame, '#C83232', x => x.name == clickedObjName);
+    highlightCell(game, '#C83232', x => x.name == clickedObjName);
+    drawFeedbackIcon(game, 'inccorrect', clickedObj);      
     setTimeout(() => {
       $('#feedback').html('Too bad... Your partner thought the target was the object outlined in ' + 'red'.fontcolor('#C83232').bold() + '.');
-    }, globalGame.feedbackDelay);
+    }, game.feedbackDelay);
   }
 };
 
-function drawViewerFeedback(globalGame, scoreDiff, clickedObjName) {
-  // viewer feedback
-  highlightCell(globalGame, '#000000', x => x.name == clickedObjName);
+function drawViewerFeedback(game, scoreDiff, clickedObjName) {
+  var clickedObj = _.filter(game.objects, x => x.name == clickedObjName)[0];
+  highlightCell(game, '#000000', x => x.name == clickedObjName);
   if (scoreDiff > 0) {
-    highlightCell(globalGame, '#19A319', x => x.targetStatus == 'target');
+    highlightCell(game, '#19A319', x => x.targetStatus == 'target');
+    drawFeedbackIcon(game, 'correct', clickedObj);     
     setTimeout(() => {
       $('#feedback').html('Great job! You correctly identified the target!');
-    }, globalGame.feedbackDelay);
+    }, game.feedbackDelay);
   } else {
-    highlightCell(globalGame, '#C83232', x => x.targetStatus == 'target');
+    highlightCell(game, '#C83232', x => x.targetStatus == 'target');
+    drawFeedbackIcon(game, 'incorrect', clickedObj); 
     setTimeout(() => {
       $('#feedback').html('Sorry... The target was the object outlined in '
 			  + 'red'.fontcolor("#C83232").bold() + '.');
-    }, globalGame.feedbackDelay);
+    }, game.feedbackDelay);
   }
 };
 
