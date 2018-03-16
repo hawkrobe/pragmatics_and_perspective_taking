@@ -76,15 +76,11 @@ var drawScreen = function(game, player) {
 
   // Draw message in center (for countdown, e.g.)
   if (player.message) {
-    game.ctx.font = "bold 40pt Helvetica";
-    game.ctx.fillStyle = 'blue';
-    game.ctx.textAlign = 'center';
     wrapText(game, player.message,
              game.world.width/2, game.world.height/4,
              game.world.width*4/5,
-             50);
-  }
-  else {
+             170);
+  } else {
     drawGrid(game);
     // Preload occlusion images then draw objects afterward
     drawOcclusions(game);
@@ -93,6 +89,20 @@ var drawScreen = function(game, player) {
     }
   }
 };
+
+var drawClickPoint = function(game) {
+  var centerX = game.viewport.width / 2;
+  var centerY = game.viewport.height / 2;
+  var radius = 25;
+
+  game.ctx.beginPath();
+  game.ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+  game.ctx.fillStyle = 'green';
+  game.ctx.fill();
+  game.ctx.lineWidth = 3;
+  game.ctx.strokeStyle = '#003300';
+  game.ctx.stroke();
+}
 
 var drawOcclusions = function(game) {
   if(_.isEmpty(game.occlusions)) {
@@ -173,9 +183,9 @@ var highlightCell = function(game, color, condition) {
 //    * lineHeight: the vertical space you want between lines (in pixels)
 function wrapText(game, text, x, y, maxWidth, lineHeight) {
   var cars = text.split("\n");
-  game.ctx.fillStyle = 'white';
-  game.ctx.fillRect(0, 0, game.viewport.width, game.viewport.height);
-  game.ctx.fillStyle = 'red';
+  game.ctx.font = "bold 80pt Helvetica";
+  game.ctx.textAlign = 'center';
+  game.ctx.fillStyle = 'black';
 
   for (var ii = 0; ii < cars.length; ii++) {
 
