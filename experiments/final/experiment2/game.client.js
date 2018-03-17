@@ -55,7 +55,7 @@ var client_onserverupdate_received = function(data){
       globalGame.viewport.removeEventListener("click", mouseClickListener, false);
       $('#instructs')
 	.empty()
-	.append("<p>Click & drag one word down to the grey box</p>" +
+	.append("<p>Send a message through the chat box</p>" +
 		"<p>to tell the listener which object is the target.</p>");
     } else if(globalGame.my_role === globalGame.playerRoleNames.role2) {
       globalGame.viewport.addEventListener("click", mouseClickListener, false);
@@ -70,7 +70,7 @@ var client_onserverupdate_received = function(data){
       });
       $('#instructs')
 	.empty()
-	.append("<p>After you see the speaker drag a word into the box,</p>" +
+	.append("<p>After you see the speaker's message,</p>" +
 		"<p>click the object they are telling you about.</p>");
     }
   }
