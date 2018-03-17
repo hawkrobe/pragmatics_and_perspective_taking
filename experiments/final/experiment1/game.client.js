@@ -138,6 +138,31 @@ var customSetup = function(game) {
     game.objects[data.i].trueY = data.y;
     drawScreen(game, game.get_player(globalGame.my_id));
   });
+
+  game.socket.on('chatMessage', function(data){
+    var otherRole = (globalGame.my_role === game.playerRoleNames.role1 ?
+		     game.playerRoleNames.role2 : game.playerRoleNames.role1);
+    var source = data.user === globalGame.my_id ? "You" : otherRole;
+    // Bar responses until speaker has uttered at least one message
+    if(source !== "You"){
+      globalGame.messageSent = true;
+    }
+    var col = source === "You" ? "#363636" : "#707070";
+    $('.typing-msg').remove();
+    $('#messages')
+      .append($('<li style="padding: 5px 10px; background: ' + col + '">')
+    	      .text(source + ": " + data.msg))
+      .stop(true,true)
+      .animate({
+	scrollTop: $("#messages").prop("scrollHeight")
+      }, 800);
+    if(globalGame.my_role == globalGame.playerRoleNames.role2 && globalGame.paused) {
+      var msg = 'Message received! Please click on the circle in the center to continue.'
+      globalGame.get_player(globalGame.my_id).message = msg;
+      drawScreen(globalGame, globalGame.get_player(globalGame.my_id));
+      drawClickPoint(game);
+    }
+  });
 };
 
 var client_onjoingame = function(num_players, role) {
