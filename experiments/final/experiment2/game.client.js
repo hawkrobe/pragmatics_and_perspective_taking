@@ -76,6 +76,7 @@ var client_onserverupdate_received = function(data){
   }
     
   // Draw all this new stuff
+  console.log(data.trialInfo);
   drawScreen(globalGame, globalGame.get_player(globalGame.my_id));
 };
 
@@ -256,7 +257,7 @@ function mouseClickListener(evt) {
 function hitCenter(mouseX, mouseY) {
   return ((Math.pow(mouseX - globalGame.viewport.width/2, 2) +
 	   Math.pow(mouseY - globalGame.viewport.height/2, 2))
-	  <= Math.pow(25,2));
+	  <= Math.pow(30,2));
 }
 
 function hitTest(shape,mx,my) {

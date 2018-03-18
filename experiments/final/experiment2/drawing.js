@@ -93,7 +93,7 @@ var drawScreen = function(game, player) {
 var drawClickPoint = function(game) {
   var centerX = game.viewport.width / 2;
   var centerY = game.viewport.height / 2;
-  var radius = 25;
+  var radius = 30;
 
   game.ctx.beginPath();
   game.ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
@@ -126,9 +126,6 @@ function drawFeedbackIcon(game, outcome, obj) {
   var imgObj = new Image();
   imgObj.src = outcome == 'correct' ? './images/checkmark.png' : './images/xxx.png';
   imgObj.onload = () => {
-    console.log('drawing');
-    console.log(imgObj);
-    console.log(obj);
     game.ctx.drawImage(imgObj, obj.trueX + obj.width/4, obj.trueY + obj.height/4,
 		       obj.width/2, obj.height/2);
   };
