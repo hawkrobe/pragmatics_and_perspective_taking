@@ -194,7 +194,7 @@ game_core.prototype.makeTrialList = function () {
 
 // Ensure each object appears even number of times, evenly spaced across trial types...?
 game_core.prototype.sampleSequence = function() {
-  var trials = _.shuffle(Array(this.numRounds/4).fill(    
+  var trials = _.shuffle([].concat(Array(this.numRounds/4).fill(    
     {context : 'close', occlusions: 'none'}
   ).concat(Array(this.numRounds/4).fill(
     {context : 'far', occlusions: 'none'}
@@ -205,15 +205,17 @@ game_core.prototype.sampleSequence = function() {
   )).concat(Array(this.numRounds/8).fill(
     {context : 'close', occlusions: 'critical'}
   )));
+  console.log(trials);
   var targetReps = this.numRounds / this.objects.length;
   var trialTypeSequenceLength = trials.length;
   var that = this;
   var proposal = _.map(trials, v => {
-    var numObjsOccluded = v.occlusions == 'none' ? 0 : _.sample([1,2]);
     var numDistractors = _.sample([2,3,4]);
+    var numObjsOccluded = (v.occlusions == 'none' ? 0 :
+			   _.sample(_.range(1, numDistractors)));
     return {
       target: _.sample(that.objects),
-      trialType: _.extend(v, {numObjsOccluded, numDistractors})
+      trialType: _.extend({}, v, {numObjsOccluded, numDistractors})
     };
   });
 
@@ -245,7 +247,7 @@ var checkSequence = function(proposalList) {
 // same super/basic level, respectively (otherwise it's a different condition...)
 var checkDistractors = function(distractors, target, contextType) {
   if(contextType === 'close') {
-    return (!_.isEmpty(_.filter(distractors, ['shape', target.shape]))
+    return (_.filter(distractors, ['shape', target.shape]).length == 1
 	    && (!_.isEmpty(_.filter(distractors, ['color', target.color]))
 		|| !_.isEmpty(_.filter(distractors, ['texture', target.texture]))));
   } else if(contextType === 'far') {
@@ -267,15 +269,14 @@ game_core.prototype.sampleOcclusions = function(objects, contextType) {
   var numEmptyOccluded = totalOcclusions - contextType.numObjsOccluded;
   var target = _.filter(objects, v => v.targetStatus == 'target')[0];
   var distractors = _.filter(objects, v => v.targetStatus == 'distractor');
-  var criticalObjs = _.map(_.filter(distractors, v => v.shape == target.shape), 'name');
   var irrelevantObjs = _.map(_.filter(distractors, v => v.shape != target.shape),'name');
   var occs = [];
 
   // Ensure critical object is covered in critical condition
   if(contextType.occlusions == 'critical') {
-    var critical = _.sample(criticalObjs);
+    var criticalObj = _.find(distractors, v => v.critical)['name'];
     var rest = _.sampleSize(irrelevantObjs, numObjsOccluded - 1);
-    occs = occs.concat(critical, rest);
+    occs = occs.concat(criticalObj, rest);
   } else if (contextType.occlusions == 'irrelevant') {
     occs = occs.concat(_.sampleSize(irrelevantObjs, numObjsOccluded));
   }
@@ -302,11 +303,15 @@ game_core.prototype.sampleDistractors = function(target, type) {
 	       type.context === 'far' ?   (v) => {return v.shape != target.shape;} :
 	       console.log('ERROR: contextType ' + type.context + ' not recognized'));
   var distractors = _.sampleSize(_.filter(this.objects, fCond), type.numDistractors);
-  if(checkDistractors(distractors, target, type.context))
-    // TODO: tag critical distractor for use later
-    return distractors;
-  else
+  if(checkDistractors(distractors, target, type.context)) {
+    var critical = _.find(distractors, {'shape' : target.shape});
+    return _.map(distractors, v => {
+      var id = type.context == 'close' ? critical.id : 0;
+      return _.extend({}, v, {critical: v.id == id });
+    });
+  } else {
     return this.sampleDistractors(target, type);
+  }
 };
 
 // take context type as argument
@@ -373,7 +378,6 @@ game_core.prototype.server_send_update = function(){
     allObjects: this.objects
   };
   _.extend(state, {players: player_packet});
-  _.extend(state, {instructions: this.instructions});
 
   //Send the snapshot to the players
   this.state = state;

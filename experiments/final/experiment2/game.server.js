@@ -105,9 +105,11 @@ var dataOutput = function() {
     //var distractor = _.find(client.game.objects, obj => obj.targetStatus == "distractor");
     var object = _.find(client.game.trialInfo.currStim.objects,
 			obj => obj.targetStatus == 'target');
-    return _.extend(common, {
-      // distractorX : common.critical ? distractor.trueX + distractor.width/2 : 'none',
-      // distractorY : common.critical ? distractor.trueY + distractor.height/2 : 'none',
+    var critical = _.find(client.game.trialInfo.currStim.objects,
+			  obj => obj.critical);
+    return _.extend({}, common, {
+      distractorX : critical ? critical.trueX + critical.width/2 : 'none',
+      distractorY : critical ? critical.trueY + critical.height/2 : 'none',
       targetX : object.trueX + object.width/2,
       targetY : object.trueY + object.height/2,
       mouseX : messageData[1],
@@ -119,7 +121,7 @@ var dataOutput = function() {
     var objects = client.game.trialInfo.currStim.objects;
     var intendedName = getIntendedTargetName(objects);
     var objLocations = _.zipObject(getObjectLocHeaderArray(), getObjectLocs(objects));
-    return _.extend(
+    return _.extend({},
       commonOutput(client, message_data),
       client.game.trialInfo.currContextType,
       objLocations, {
@@ -134,8 +136,9 @@ var dataOutput = function() {
 
   var messageOutput = function(client, message_data) {
     var intendedName = getIntendedTargetName(client.game.trialInfo.currStim.objects);
-    return _.extend(
-      client.game.trialInfo.currStim.currContextType,
+    console.log(client.game.trialInfo.currContextType);
+    return _.extend({},
+      client.game.trialInfo.currContextType,
       commonOutput(client, message_data), {
 	intendedName,
 	trialNum : client.game.state.roundNum + 1,	
