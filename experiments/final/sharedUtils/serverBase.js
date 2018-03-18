@@ -19,7 +19,7 @@ class ReferenceGameServer {
   // is fetched before starting game (otherwise race conditions)
   startGame(game) {
     if(game.experimentName == 'chairs_chatbox') {
-      sendPostRequest('http://localhost:4000/db/getstims', {
+      sendPostRequest('http://localhost:5000/db/getstims', {
 	json: {dbname: 'stimuli', colname: 'chairs1k',
 	       numRounds: game.numRounds, gameid: game.id}
       }, (error, res, body) => {
