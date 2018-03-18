@@ -36,7 +36,7 @@ var game_core = function(options){
   this.experimentName = 'speakerManipulation';
   this.iterationName = 'pilot0';
   this.anonymizeCSV = true;
-  this.bonusAmt = 2; // in cents
+  this.bonusAmt = 1; // in cents
   
   // save data to the following locations (allowed: 'csv', 'mongo')
   this.dataStore = ['csv', 'mongo'];
@@ -63,7 +63,7 @@ var game_core = function(options){
   this.numOcclusions = 2;
   
   // How many rounds do we want people to complete?
-  this.numRounds = 40;
+  this.numRounds = 24;
   this.feedbackDelay = 300;
 
   // This will be populated with the tangram set
@@ -141,7 +141,7 @@ game_core.prototype.newRound = function(delay) {
   setTimeout(function() {
     // If you've reached the planned number of rounds, end the game
     if(localThis.roundNum == localThis.numRounds - 1) {
-      _.forEach(players, p => p.player.instance.emit( 'finishedGame' ));
+      _.forEach(players, p => p.player.instance.disconnect());
     } else {
       // Tell players
       _.forEach(players, p => p.player.instance.emit( 'newRoundUpdate'));
@@ -204,27 +204,19 @@ game_core.prototype.sampleSequence = function() {
     {context : 'close', occlusions: 'irrelevant'}
   )).concat(Array(this.numRounds/8).fill(
     {context : 'close', occlusions: 'critical'}
-  )));
-  console.log(trials);
+  ))));
   var targetReps = this.numRounds / this.objects.length;
   var trialTypeSequenceLength = trials.length;
   var that = this;
   var proposal = _.map(trials, v => {
     var numDistractors = _.sample([2,3,4]);
     var numObjsOccluded = (v.occlusions == 'none' ? 0 :
-			   _.sample(_.range(1, numDistractors)));
+			   _.sample(_.range(1, _.min([3, numDistractors]))));
     return {
       target: _.sample(that.objects),
       trialType: _.extend({}, v, {numObjsOccluded, numDistractors})
     };
   });
-
-
-      //_.flattenDeep(_.map(_.range(targetReps/trialTypeSequenceLength), i => {
-//      return _.shuffle(_.flatten(_.map(that.objects, function(target) {
-      // return _.map(trials, function(trialType) {
-      // 	return {target, trialType};
-      // });
   return proposal;
 };
 
@@ -315,7 +307,6 @@ game_core.prototype.sampleDistractors = function(target, type) {
 };
 
 // take context type as argument
-// TODO: generate full sequence of context types
 game_core.prototype.sampleTrial = function(target, contextType) {
   var distractors = this.sampleDistractors(target, contextType);
   var locs = this.sampleStimulusLocs(distractors.concat(target).length);
