@@ -49,7 +49,7 @@ var onMessage = function(client,message) {
     target.instance.send('s.feedback.' + message_parts[1]);
 
     // Continue
-    gc.newRound(5000);
+    gc.newRound(1000);
     break;
 
   case 'playerTyping' :
