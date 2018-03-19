@@ -76,18 +76,14 @@ var dataOutput = function() {
     return _.filter(objects, o => o.targetStatus === 'target')[0]['name'];
   }
 
-  function getObjectLocs(objects) {
-    return _.flatten(_.map(objects, o => {
+  function getObjectProperties(objects) {
+    return _.map(_.unzip(_.map(objects, o => {
       return [o.name, o.gridX, o.gridY];
-    }));
+    })), l => '[' + l + ']');
   }
 
   function getObjectLocHeaderArray() {
-    return _.flatten(_.map(_.range(1,5), i => {
-      return _.map(['name', 'gridX', 'gridY'], v => {
-	return 'object' + i + v;
-      });
-    }));
+    return ['names', 'gridXs', 'gridYs'];
   };
   
   function commonOutput (client, message_data) {
@@ -102,7 +98,6 @@ var dataOutput = function() {
 
   var mouseOutput = function(client, messageData) {
     var common = commonOutput(client, messageData);
-    //var distractor = _.find(client.game.objects, obj => obj.targetStatus == "distractor");
     var object = _.find(client.game.trialInfo.currStim.objects,
 			obj => obj.targetStatus == 'target');
     var critical = _.find(client.game.trialInfo.currStim.objects,
@@ -120,7 +115,7 @@ var dataOutput = function() {
   var clickedObjOutput = function(client, message_data) {
     var objects = client.game.trialInfo.currStim.objects;
     var intendedName = getIntendedTargetName(objects);
-    var objLocations = _.zipObject(getObjectLocHeaderArray(), getObjectLocs(objects));
+    var objLocations = _.zipObject(getObjectLocHeaderArray(), getObjectProperties(objects));
     return _.extend({},
       commonOutput(client, message_data),
       client.game.trialInfo.currContextType,
@@ -137,8 +132,8 @@ var dataOutput = function() {
   var messageOutput = function(client, message_data) {
     var intendedName = getIntendedTargetName(client.game.trialInfo.currStim.objects);
     var output = _.extend({},
-        client.game.trialInfo.currContextType,
-        commonOutput(client, message_data), {
+      client.game.trialInfo.currContextType,
+      commonOutput(client, message_data), {
 	intendedName,
 	trialNum : client.game.state.roundNum + 1,	
 	text: message_data[1].replace(/~~~/g, '.'),
