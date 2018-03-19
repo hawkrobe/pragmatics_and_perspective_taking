@@ -49,7 +49,7 @@ var onMessage = function(client,message) {
     target.instance.send('s.feedback.' + message_parts[1]);
 
     // Continue
-    gc.newRound(1000);
+    gc.newRound(1500);
     break;
 
   case 'playerTyping' :
@@ -136,10 +136,9 @@ var dataOutput = function() {
 
   var messageOutput = function(client, message_data) {
     var intendedName = getIntendedTargetName(client.game.trialInfo.currStim.objects);
-    console.log(client.game.trialInfo.currContextType);
-    return _.extend({},
-      client.game.trialInfo.currContextType,
-      commonOutput(client, message_data), {
+    var output = _.extend({},
+        client.game.trialInfo.currContextType,
+        commonOutput(client, message_data), {
 	intendedName,
 	trialNum : client.game.state.roundNum + 1,	
 	text: message_data[1].replace(/~~~/g, '.'),
@@ -147,6 +146,8 @@ var dataOutput = function() {
 	timeFromRoundStart: message_data[2]
       }
     );
+    console.log(_.pick(output, ['gameid', 'trialNum', 'text', 'context', 'occlusions']));
+    return output;
   };
 
   return {

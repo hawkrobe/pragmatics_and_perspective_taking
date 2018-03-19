@@ -64,7 +64,7 @@ var game_core = function(options){
   
   // How many rounds do we want people to complete?
   this.numRounds = 24;
-  this.feedbackDelay = 300;
+  this.feedbackDelay = 100;
 
   // This will be populated with the tangram set
   this.trialInfo = {roles: _.values(this.playerRoleNames)};
