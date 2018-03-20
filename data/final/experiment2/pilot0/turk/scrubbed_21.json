@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-20T01:44:40Z",
+    "AutoApprovalTime": "2018-03-20T01:43:52Z",
+    "AssignmentId": "21",
+    "WorkerId": "21",
+    "answers": {
+        "subject_information": {
+            "totalLength": 750676,
+            "gameID": "0608-88ff7068-4c8c-4047-85ee-efd6314be332",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 23,
+            "role": "listener",
+            "comments": "",
+            "strategy": "Followed their amazing instructions"
+        },
+        "id": "0608-88ff7068-4c8c-4047-85ee-efd6314be332"
+    },
+    "AcceptTime": "2018-03-20T00:14:28Z",
+    "HITId": "39AYGO6AFFK0MO969UJBVQZ7A4Q6NF",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-20T01:38:52Z"
+}

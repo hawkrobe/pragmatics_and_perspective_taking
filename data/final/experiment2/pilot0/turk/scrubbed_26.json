@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-20T00:54:40Z",
+    "AutoApprovalTime": "2018-03-20T00:53:53Z",
+    "AssignmentId": "26",
+    "WorkerId": "26",
+    "answers": {
+        "subject_information": {
+            "totalLength": 469413,
+            "gameID": "7992-63fb7286-7ef0-456a-8bfa-e2f96ef59e9b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "Fun HIT",
+            "strategy": "Outline, then the pattern, then the shape. I sometimes used location. "
+        },
+        "id": "7992-63fb7286-7ef0-456a-8bfa-e2f96ef59e9b"
+    },
+    "AcceptTime": "2018-03-20T00:14:28Z",
+    "HITId": "39AYGO6AFFK0MO969UJBVQZ7A4Q6NF",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-20T00:48:53Z"
+}

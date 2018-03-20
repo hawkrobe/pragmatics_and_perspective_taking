@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-20T00:47:41Z",
+    "AutoApprovalTime": "2018-03-20T00:46:48Z",
+    "AssignmentId": "25",
+    "WorkerId": "25",
+    "answers": {
+        "subject_information": {
+            "totalLength": 566748,
+            "gameID": "0937-3bb5040f-7101-4ace-a988-03f3682027a2",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "speaker",
+            "comments": "The instructions were kind of confusing and I failed one of the questions the first time.  There is actually no mention in the instructions that says the listener can use the chat.",
+            "strategy": "I tried to keep what I said simple.  If I could see all the objects and all I needed was to describe the color and shape, that's all I said.  If I couldn't see every object I would describe the color, shape, and the inside pattern."
+        },
+        "id": "0937-3bb5040f-7101-4ace-a988-03f3682027a2"
+    },
+    "AcceptTime": "2018-03-20T00:27:12Z",
+    "HITId": "39AYGO6AFFK0MO969UJBVQZ7A4Q6NF",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-20T00:41:48Z"
+}

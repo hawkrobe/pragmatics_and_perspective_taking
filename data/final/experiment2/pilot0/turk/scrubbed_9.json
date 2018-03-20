@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-20T00:07:48Z",
+    "AutoApprovalTime": "2018-03-20T00:07:43Z",
+    "AssignmentId": "9",
+    "WorkerId": "9",
+    "answers": {
+        "subject_information": {
+            "totalLength": 418264,
+            "gameID": "4843-b0524771-fa28-4eac-ada9-c8ef81e36793",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "No, thank you.  A great HIT as always",
+            "strategy": "I clicked what I was told to click as long as it wasn't anything like a curtain item"
+        },
+        "id": "4843-b0524771-fa28-4eac-ada9-c8ef81e36793"
+    },
+    "AcceptTime": "2018-03-19T23:54:11Z",
+    "HITId": "3TL87MO8CMP6HHZWYA60C48VY8OLFQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-20T00:02:43Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-20T00:54:46Z",
+    "AutoApprovalTime": "2018-03-20T00:54:36Z",
+    "AssignmentId": "20",
+    "WorkerId": "20",
+    "answers": {
+        "subject_information": {
+            "totalLength": 355006,
+            "gameID": "7632-25123d63-fc4a-4e47-a78e-64b65160685c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "This was very fun!",
+            "strategy": "I used the strategy o naming shapes colors, and patterns to tell the listener what to pick. "
+        },
+        "id": "7632-25123d63-fc4a-4e47-a78e-64b65160685c"
+    },
+    "AcceptTime": "2018-03-20T00:31:30Z",
+    "HITId": "3S1L4CQSFX5PLY8S1JHA3QSK4WRFA4",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-20T00:49:36Z"
+}

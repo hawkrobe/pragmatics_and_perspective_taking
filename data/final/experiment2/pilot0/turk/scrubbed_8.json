@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-19T23:38:40Z",
+    "AutoApprovalTime": "2018-03-19T23:38:12Z",
+    "AssignmentId": "8",
+    "WorkerId": "8",
+    "answers": {
+        "subject_information": {
+            "totalLength": 518547,
+            "gameID": "0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "no",
+            "strategy": "pay attention to all details"
+        },
+        "id": "0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe"
+    },
+    "AcceptTime": "2018-03-19T23:17:08Z",
+    "HITId": "3TL87MO8CMP6HHZWYA60C48VY8OLFQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-19T23:33:12Z"
+}

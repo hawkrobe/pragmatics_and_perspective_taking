@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-19T23:58:40Z",
+    "AutoApprovalTime": "2018-03-19T23:58:10Z",
+    "AssignmentId": "12",
+    "WorkerId": "12",
+    "answers": {
+        "subject_information": {
+            "totalLength": 346202,
+            "gameID": "9045-55f46e80-6b24-435b-a88a-9afa3dc6a502",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "color shape inside design"
+        },
+        "id": "9045-55f46e80-6b24-435b-a88a-9afa3dc6a502"
+    },
+    "AcceptTime": "2018-03-19T23:17:09Z",
+    "HITId": "3TL87MO8CMP6HHZWYA60C48VY8OLFQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-19T23:53:10Z"
+}

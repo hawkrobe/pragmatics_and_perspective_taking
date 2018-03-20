@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-20T00:27:48Z",
+    "AutoApprovalTime": "2018-03-20T00:27:39Z",
+    "AssignmentId": "13",
+    "WorkerId": "13",
+    "answers": {
+        "subject_information": {
+            "totalLength": 655795,
+            "gameID": "0180-a541e54c-5dea-4d06-9a21-9b842316eb59",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 24,
+            "role": "listener",
+            "comments": "none additional",
+            "strategy": "I just followed the speaker's directions. He used location info rather than descriptions of the objects. This made identifying the target all but foolproof, so it makes me wonder if the game was meant to be played this way."
+        },
+        "id": "0180-a541e54c-5dea-4d06-9a21-9b842316eb59"
+    },
+    "AcceptTime": "2018-03-20T00:04:14Z",
+    "HITId": "3TL87MO8CMP6HHZWYA60C48VY8OLFQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-20T00:22:39Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-20T01:03:45Z",
+    "AutoApprovalTime": "2018-03-20T01:03:24Z",
+    "AssignmentId": "23",
+    "WorkerId": "23",
+    "answers": {
+        "subject_information": {
+            "totalLength": 2289737,
+            "gameID": "0101-0b659560-f05a-471a-89ac-60469e9c867f",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 8,
+            "role": "speaker",
+            "comments": "None.",
+            "strategy": "I first tried to talk about the object. Near the end I was identifying it but location."
+        },
+        "id": "0101-0b659560-f05a-471a-89ac-60469e9c867f"
+    },
+    "AcceptTime": "2018-03-20T00:14:29Z",
+    "HITId": "39AYGO6AFFK0MO969UJBVQZ7A4Q6NF",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-20T00:58:24Z"
+}

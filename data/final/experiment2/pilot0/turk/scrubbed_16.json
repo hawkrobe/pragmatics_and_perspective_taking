@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-20T01:44:42Z",
+    "AutoApprovalTime": "2018-03-20T01:43:58Z",
+    "AssignmentId": "16",
+    "WorkerId": "16",
+    "answers": {
+        "subject_information": {
+            "totalLength": 2743264,
+            "gameID": "0608-88ff7068-4c8c-4047-85ee-efd6314be332",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 23,
+            "role": "speaker",
+            "comments": "thanks",
+            "strategy": "just described the shapes with colors and pattern"
+        },
+        "id": "0608-88ff7068-4c8c-4047-85ee-efd6314be332"
+    },
+    "AcceptTime": "2018-03-19T23:43:40Z",
+    "HITId": "3S1L4CQSFX5PLY8S1JHA3QSK4WRFA4",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-20T01:38:58Z"
+}

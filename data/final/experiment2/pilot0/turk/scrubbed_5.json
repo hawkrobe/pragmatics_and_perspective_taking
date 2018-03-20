@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-19T23:20:42Z",
+    "AutoApprovalTime": "2018-03-19T23:20:23Z",
+    "AssignmentId": "5",
+    "WorkerId": "5",
+    "answers": {
+        "subject_information": {
+            "totalLength": 428621,
+            "gameID": "3266-414eb2f0-bc2f-4f2a-9c0e-30ad57b8ad63",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "Interesting and a little fun :)",
+            "strategy": "I just looked for what was described and ignored the items in behind the curtain even if it was described."
+        },
+        "id": "3266-414eb2f0-bc2f-4f2a-9c0e-30ad57b8ad63"
+    },
+    "AcceptTime": "2018-03-19T23:03:15Z",
+    "HITId": "3B6F54KMR2C2VF0EBKOGZOIWPSC1SI",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-19T23:15:23Z"
+}

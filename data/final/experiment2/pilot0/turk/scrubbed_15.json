@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-20T00:08:42Z",
+    "AutoApprovalTime": "2018-03-20T00:07:56Z",
+    "AssignmentId": "15",
+    "WorkerId": "15",
+    "answers": {
+        "subject_information": {
+            "totalLength": 773416,
+            "gameID": "4843-b0524771-fa28-4eac-ada9-c8ef81e36793",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "No",
+            "strategy": "I described more in depth if there were some boxes with a question mark on it. "
+        },
+        "id": "4843-b0524771-fa28-4eac-ada9-c8ef81e36793"
+    },
+    "AcceptTime": "2018-03-19T23:43:41Z",
+    "HITId": "3S1L4CQSFX5PLY8S1JHA3QSK4WRFA4",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-20T00:02:56Z"
+}

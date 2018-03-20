@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-20T01:02:42Z",
+    "AutoApprovalTime": "2018-03-20T01:02:00Z",
+    "AssignmentId": "17",
+    "WorkerId": "17",
+    "answers": {
+        "subject_information": {
+            "totalLength": 452246,
+            "gameID": "4870-8600f6e9-3b31-45b9-9728-d98bc8eca28a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "Fun experiment - it almost seems too easy......",
+            "strategy": "I just listened to what the speaker was telling me."
+        },
+        "id": "4870-8600f6e9-3b31-45b9-9728-d98bc8eca28a"
+    },
+    "AcceptTime": "2018-03-20T00:36:33Z",
+    "HITId": "3S1L4CQSFX5PLY8S1JHA3QSK4WRFA4",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-20T00:57:00Z"
+}

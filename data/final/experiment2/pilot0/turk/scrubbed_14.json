@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-20T00:30:47Z",
+    "AutoApprovalTime": "2018-03-20T00:30:41Z",
+    "AssignmentId": "14",
+    "WorkerId": "14",
+    "answers": {
+        "subject_information": {
+            "totalLength": 575047,
+            "gameID": "1213-37a61a9a-a3d3-4d34-a140-0bf0d005f334",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "listener",
+            "comments": "Sometimes HITs which require more than one worker don't go smoothly, but this did.",
+            "strategy": "None. Just picked what was described"
+        },
+        "id": "1213-37a61a9a-a3d3-4d34-a140-0bf0d005f334"
+    },
+    "AcceptTime": "2018-03-20T00:08:33Z",
+    "HITId": "3TL87MO8CMP6HHZWYA60C48VY8OLFQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-20T00:25:41Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-20T00:33:42Z",
+    "AutoApprovalTime": "2018-03-20T00:33:05Z",
+    "AssignmentId": "22",
+    "WorkerId": "22",
+    "answers": {
+        "subject_information": {
+            "totalLength": 656588,
+            "gameID": "9882-b9b80caf-d745-4d04-8d66-5e83dbd0f377",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "Describe outer and inner shapes"
+        },
+        "id": "9882-b9b80caf-d745-4d04-8d66-5e83dbd0f377"
+    },
+    "AcceptTime": "2018-03-20T00:14:29Z",
+    "HITId": "39AYGO6AFFK0MO969UJBVQZ7A4Q6NF",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-20T00:28:05Z"
+}

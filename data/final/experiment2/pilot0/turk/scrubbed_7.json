@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-20T00:34:43Z",
+    "AutoApprovalTime": "2018-03-20T00:34:05Z",
+    "AssignmentId": "7",
+    "WorkerId": "7",
+    "answers": {
+        "subject_information": {
+            "totalLength": 590520,
+            "gameID": "9882-b9b80caf-d745-4d04-8d66-5e83dbd0f377",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "No",
+            "strategy": "Pay attention and focus on following the clues given by the speaker to find the correct object"
+        },
+        "id": "9882-b9b80caf-d745-4d04-8d66-5e83dbd0f377"
+    },
+    "AcceptTime": "2018-03-19T23:17:08Z",
+    "HITId": "3TL87MO8CMP6HHZWYA60C48VY8OLFQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-20T00:29:05Z"
+}
