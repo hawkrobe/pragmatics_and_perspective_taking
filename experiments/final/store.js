@@ -37,7 +37,7 @@ function failure(response, text) {
 
 function success(response, text) {
   const message = makeMessage(text);
-  console.log(message);
+  //console.log(message);
   return response.send(message);
 }
 
