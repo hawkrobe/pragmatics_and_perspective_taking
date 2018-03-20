@@ -1,0 +1,4 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	time	intendedName	trialNum	text	role	timeFromRoundStart	eventType
+far	irrelevant	2	3	pilot0	9255-857d51b5-3f3b-4889-9f39-718f47bbe4f3	1521507511653	checked_blue_triangle	1	TRIANGLE CHECKERBOARD	speaker	8750	chatMessage
+far	irrelevant	2	3	pilot0	9255-857d51b5-3f3b-4889-9f39-718f47bbe4f3	1521507702418	checked_blue_triangle	1	are you there?	speaker	4215	chatMessage
+far	irrelevant	2	3	pilot0	9255-857d51b5-3f3b-4889-9f39-718f47bbe4f3	1521508818448	checked_blue_triangle	1	hello?	speaker	2643	chatMessage

@@ -1,0 +1,29 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	time	intendedName	trialNum	text	role	timeFromRoundStart	eventType
+close	critical	1	2	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521501901025	checked_black_square	1	the square checkerboard pattern	speaker	5776	chatMessage
+close	critical	1	2	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521501929864	checked_black_square	1	2 rows underneath the blue star	speaker	4933	chatMessage
+close	irrelevant	1	2	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521501969921	wavy_blue_square	2	the blue square wavy pattern up and to the right of the green wavy square	speaker	19204	chatMessage
+close	none	0	2	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521501999935	wavy_red_star	3	the red star	speaker	5388	chatMessage
+far	irrelevant	2	3	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502023790	striped_blue_square	4	the blue square with the vertical grey bars all the way up and to the left	speaker	12524	chatMessage
+close	none	0	3	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502043101	spotted_red_star	5	the red square	speaker	1917	chatMessage
+close	none	0	3	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502049750	spotted_red_star	5	the red star	speaker	1589	chatMessage
+far	irrelevant	1	2	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502064750	striped_green_circle	6	the green circle down and to the left of the green star	speaker	7700	chatMessage
+far	irrelevant	1	2	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502068685	striped_green_circle	6	down and to the right	speaker	2014	chatMessage
+close	critical	1	2	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502093181	spotted_red_star	7	the red star to rows to the left of the blue triangle	speaker	8532	chatMessage
+far	none	0	3	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502109525	striped_blue_triangle	8	the blue triangle	speaker	4148	chatMessage
+close	none	0	3	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502125444	striped_blue_circle	9	the blue circle with the vertical bars	speaker	6356	chatMessage
+far	irrelevant	1	2	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502143589	spotted_red_square	10	the red square with dots two rows below the blue star with dots	speaker	10429	chatMessage
+far	none	0	4	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502166645	striped_blue_star	11	the blue star	speaker	4316	chatMessage
+far	none	0	2	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502176739	striped_blue_star	12	the blue star	speaker	1965	chatMessage
+far	irrelevant	1	3	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502196387	checked_blue_triangle	13	the blue triangle two rows to the left of the blue star	speaker	9108	chatMessage
+close	irrelevant	1	4	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502214388	striped_green_star	14	the green star to the right of the green circle	speaker	7132	chatMessage
+close	none	0	2	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502227101	spotted_red_star	15	the red star	speaker	1739	chatMessage
+close	irrelevant	1	2	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502240002	checked_red_triangle	16	the red triangle with the checkerboard pattern	speaker	5341	chatMessage
+far	irrelevant	1	2	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502255391	spotted_black_circle	17	the black circle with the dots	speaker	5284	chatMessage
+close	none	0	4	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502267989	wavy_green_circle	18	the green circle with the waves	speaker	4020	chatMessage
+far	none	0	2	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502278244	striped_green_triangle	19	the green triangle	speaker	2395	chatMessage
+close	none	0	4	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502288770	wavy_green_circle	20	the green circle	speaker	3078	chatMessage
+far	none	0	4	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502301430	wavy_red_star	21	the red star	speaker	1652	chatMessage
+close	critical	1	3	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502314227	spotted_green_star	22	the green star with the dots	speaker	3548	chatMessage
+far	none	0	2	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502331563	wavy_green_star	23	the green star, good job cya later fellow turkstar	speaker	8709	chatMessage
+far	irrelevant	1	3	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502346201	spotted_green_triangle	24	the green triangle	speaker	2148	chatMessage
+far	irrelevant	1	3	pilot0	0539-834a52c8-b3a3-4a6d-b9bf-a03fa4560bbe	1521502350172	spotted_green_triangle	24	with dots	speaker	775	chatMessage

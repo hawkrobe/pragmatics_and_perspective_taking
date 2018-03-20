@@ -1,0 +1,48 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	time	intendedName	trialNum	text	role	timeFromRoundStart	eventType
+close	critical	2	3	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521505291475	checked_red_circle	1	The object is the red circle	speaker	9236	chatMessage
+close	none	0	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521505347995	striped_black_star	2	The object is the black star	speaker	11648	chatMessage
+close	none	0	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521505387649	wavy_green_triangle	3	The object is the green triangle with the wavy lines. 	speaker	25830	chatMessage
+far	none	0	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521505431844	wavy_red_square	4	The object is the sqaure with a red outline and wavy lines	speaker	25012	chatMessage
+far	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521505538016	checked_green_star	5	The object is the green star, with squares on it. It's in the bottom row. 	speaker	22163	chatMessage
+far	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521505657325	spotted_black_triangle	6	The target object is the triangle outlined in black with dots on it. 	speaker	50445	chatMessage
+far	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521505744482	spotted_black_triangle	6	It's in the bottom row. 	speaker	8042	chatMessage
+far	none	0	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521505819823	striped_red_circle	7	The target is outlined in red, it's in the middle row, going across. It's the circle. 	speaker	27709	chatMessage
+far	none	0	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521505958031	striped_red_circle	7	The object is above the blue square	speaker	16748	chatMessage
+close	none	0	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521505989021	spotted_blue_triangle	8	The object is next to the black star.	speaker	14819	chatMessage
+close	none	0	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521505995434	spotted_blue_triangle	8	It's blue	speaker	5160	chatMessage
+close	none	0	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506000295	spotted_blue_triangle	8	It's a triangle	speaker	3840	chatMessage
+close	none	0	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506054010	striped_black_circle	9	The object is a circle. It's black. It's in one of the corners	speaker	20985	chatMessage
+close	none	0	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506148876	striped_black_circle	9	It's in the bottom row. Under the triangle	speaker	13631	chatMessage
+close	none	0	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506214318	checked_black_square	10	Target is in bottom row. Middle. 	speaker	9226	chatMessage
+far	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506260843	spotted_black_star	11	The object is a star in the bottom row. 	speaker	16193	chatMessage
+far	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506267447	spotted_black_star	11	It's outlined in black	speaker	5861	chatMessage
+far	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506277970	spotted_black_star	11	The pattern is dots	speaker	5104	chatMessage
+close	critical	2	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506327420	spotted_blue_circle	12	the object is between the stars on the bottom row	speaker	11725	chatMessage
+close	critical	2	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506371398	spotted_blue_circle	12	It's a circle	speaker	3598	chatMessage
+close	critical	2	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506375182	spotted_blue_circle	12	It's blue	speaker	2699	chatMessage
+close	critical	2	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506451410	spotted_blue_circle	12	Hello?	speaker	2052	chatMessage
+close	critical	2	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506573177	spotted_blue_circle	12	Blue circle	speaker	2847	chatMessage
+close	none	0	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506619794	spotted_green_star	13	Green star	speaker	3490	chatMessage
+close	none	0	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506683554	spotted_green_star	13	Top row middle	speaker	4505	chatMessage
+far	none	0	3	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506757809	wavy_red_circle	14	Red Circle	speaker	2651	chatMessage
+far	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506783975	spotted_red_triangle	15	Red Triangle	speaker	3179	chatMessage
+far	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506789033	spotted_red_triangle	15	Bottom Row	speaker	3732	chatMessage
+far	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506793001	spotted_red_triangle	15	Under star	speaker	2981	chatMessage
+far	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506897806	spotted_red_triangle	15	Bottom corner.	speaker	4931	chatMessage
+far	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506942757	spotted_red_triangle	15	Triangle with dots	speaker	4090	chatMessage
+far	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506954773	spotted_red_triangle	15	Red Outline	speaker	3881	chatMessage
+close	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506983491	wavy_green_circle	16	Green Circle	speaker	3234	chatMessage
+close	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521506989861	wavy_green_circle	16	Middle Row	speaker	2851	chatMessage
+far	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521507086092	wavy_red_triangle	17	Red Triangle	speaker	3848	chatMessage
+far	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521507092280	wavy_red_triangle	17	Upper Corner.	speaker	4597	chatMessage
+far	none	0	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521507112935	spotted_red_star	18	Star. 	speaker	4677	chatMessage
+far	none	0	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521507117824	spotted_red_star	18	Not a Circle	speaker	3448	chatMessage
+far	none	0	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521507123593	spotted_red_star	18	Not a Triangle	speaker	4721	chatMessage
+far	none	0	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521507144489	spotted_red_star	18	Top Row	speaker	3568	chatMessage
+far	none	0	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521507190401	spotted_green_triangle	19	Green Triangle. It's on the Left as I face it. 	speaker	26139	chatMessage
+far	none	0	3	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521507235460	striped_blue_star	20	Blue Star. It's in the top row. 	speaker	12805	chatMessage
+far	none	0	3	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521507244789	striped_blue_star	20	It's on my right as I face it	speaker	7622	chatMessage
+close	irrelevant	1	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521507270047	spotted_black_star	21	Black star. Top Right Corner. 	speaker	16663	chatMessage
+close	irrelevant	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521507301002	checked_green_circle	22	Circle. Center row, Right side box	speaker	11783	chatMessage
+close	critical	1	2	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521507341136	checked_green_circle	23	Bottom row. Right side box	speaker	11569	chatMessage
+far	irrelevant	2	4	pilot0	0101-0b659560-f05a-471a-89ac-60469e9c867f	1521507372257	wavy_black_square	24	Top row. Center box	speaker	5065	chatMessage
