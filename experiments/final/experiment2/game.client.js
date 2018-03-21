@@ -59,15 +59,7 @@ var client_onserverupdate_received = function(data){
 		"<p>to tell the listener which object is the target.</p>");
     } else if(globalGame.my_role === globalGame.playerRoleNames.role2) {
       globalGame.viewport.addEventListener("click", mouseClickListener, false);
-      $('#viewport').mousemove(function(event){
-	var bRect = globalGame.viewport.getBoundingClientRect();
-	var mouseX = (event.clientX-bRect.left)*(globalGame.viewport.width/bRect.width);
-	var mouseY = (event.clientY-bRect.top)*(globalGame.viewport.height/bRect.height);
-	if(!globalGame.paused) {
-	  globalGame.socket.send(['updateMouse', Math.floor(mouseX),
-				  Math.floor(mouseY)].join('.'));
-	}
-      });
+      globalGame.viewport.addEventListener('mousemove', throttle(handleMousemove, 50));
       $('#instructs')
 	.empty()
 	.append("<p>After you see the speaker's message,</p>" +
@@ -78,6 +70,29 @@ var client_onserverupdate_received = function(data){
   // Draw all this new stuff
   console.log(data.trialInfo);
   drawScreen(globalGame, globalGame.get_player(globalGame.my_id));
+};
+
+var handleMousemove = function(event) {
+  var bRect = globalGame.viewport.getBoundingClientRect();
+  var mouseX = (event.clientX-bRect.left)*(globalGame.viewport.width/bRect.width);
+  var mouseY = (event.clientY-bRect.top)*(globalGame.viewport.height/bRect.height);
+  if(!globalGame.paused) {
+    globalGame.socket.send(
+      ['updateMouse', Date.now(), Math.floor(mouseX), Math.floor(mouseY)].join('.')
+    );
+  }
+};
+
+var throttle = function(func, delay) {
+  var prev = Date.now() - delay;
+	
+  return function() {
+    var current = Date.now();
+    if (current - prev >= delay) {
+      prev = current;
+      func.apply(null, arguments);
+    }
+  };
 };
 
 var client_onMessage = function(data) {

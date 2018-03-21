@@ -90,7 +90,7 @@ var dataOutput = function() {
     return {
       iterationName: client.game.iterationName,
       gameid: client.game.id,
-      time: Date.now(),
+      serverTime: Date.now(),
       workerId: client.workerid,
       assignmentId: client.assignmentid
     };
@@ -102,13 +102,24 @@ var dataOutput = function() {
 			obj => obj.targetStatus == 'target');
     var critical = _.find(client.game.trialInfo.currStim.objects,
 			  obj => obj.critical);
+    var mouse = {x: messageData[2], y : messageData[3]};
+    var target = {x: object.trueX + object.width/2, y: object.trueY + object.height/2};
+    var distractor = !critical ? 'none' : {
+      x: critical.trueX + critical.width/2, y: critical.trueY + critical.height/2
+    };
+
+    var targetDistance = Math.sqrt(
+      Math.pow(mouse.x - target.x, 2) + Math.pow(mouse.y - target.y, 2)
+    );
+    var distractorDistance = !critical ? 'none' : Math.sqrt(
+      Math.pow(mouse.x - distractor.x, 2) + Math.pow(mouse.y - distractor.y, 2)
+    );
+
     return _.extend({}, common, {
-      distractorX : critical ? critical.trueX + critical.width/2 : 'none',
-      distractorY : critical ? critical.trueY + critical.height/2 : 'none',
-      targetX : object.trueX + object.width/2,
-      targetY : object.trueY + object.height/2,
-      mouseX : messageData[1],
-      mouseY : messageData[2]
+      targetDistance, distractorDistance,
+      localTime : messageData[1],
+      rawMouseX : mouse.x,
+      rawMouseY : mouse.y
     });
   };
 
