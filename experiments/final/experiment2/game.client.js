@@ -58,8 +58,6 @@ var client_onserverupdate_received = function(data){
 	.append("<p>Send a message through the chat box</p>" +
 		"<p>to tell the listener which object is the target.</p>");
     } else if(globalGame.my_role === globalGame.playerRoleNames.role2) {
-      globalGame.viewport.addEventListener("click", mouseClickListener, false);
-      globalGame.viewport.addEventListener('mousemove', throttle(handleMousemove, 50));
       $('#instructs')
 	.empty()
 	.append("<p>After you see the speaker's message,</p>" +
@@ -224,6 +222,10 @@ var client_onjoingame = function(num_players, role) {
     globalGame.players.unshift({id: null, player: new game_player(globalGame)});
   });
   $("#chatbox").attr("disabled", "disabled");
+  if(globalGame.my_role == globalGame.playerRoleNames.role2) {
+    globalGame.viewport.addEventListener("click", mouseClickListener, false);
+    globalGame.viewport.addEventListener('mousemove', throttle(handleMousemove, 10));
+  }
   if(num_players == 1) {
     this.timeoutID = setTimeout(function() {
       if(_.size(this.urlParams) == 4) {
@@ -255,6 +257,7 @@ function mouseClickListener(evt) {
     if (hitCenter(mouseX, mouseY)) {
       globalGame.get_player(globalGame.my_id).message = "";
       globalGame.paused = false;
+      globalGame.listenerStartTime = Date.now();      
       $("#chatbox").removeAttr("disabled");
       $('#chatbox').focus();
       drawScreen(globalGame, globalGame.get_player(globalGame.my_id));    
@@ -262,7 +265,8 @@ function mouseClickListener(evt) {
       _.forEach(globalGame.objects, function(obj) {
 	if (hitTest(obj, mouseX, mouseY)) {
 	  globalGame.messageSent = false;
-          globalGame.socket.send(["clickedObj", obj.name].join('.'));
+	  var timeElapsed = Date.now() - globalGame.listenerStartTime;
+          globalGame.socket.send(["clickedObj", obj.name, timeElapsed].join('.'));
 	}
       });
     }
