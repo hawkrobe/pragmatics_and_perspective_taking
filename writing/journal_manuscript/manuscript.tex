@@ -87,7 +87,7 @@ Optimal indolence: a normative microscopic approach to work and leisure. Open Mi
 \begin{abstract}
 %To communicate successfully, speakers must flexibly adapt %the specificity of 
 %their utterances to the demands of the current context. When they are unsure exactly which objects are in view of their partner, for example, they may provide additional disambiguating information when referring to a particular object: saying "cassette tape" instead of the potentially ambiguous ``tape."
-Recent debates over theory of mind use have hinged on behavior in natural-language communication tasks but have largely neglected the nuanced pragmatics of these tasks. Under Gricean expectations of cooperativity, speakers ought to be more informative in contexts with high uncertainty about what is in the listener's field of view. If pragmatic reasoning is truly grounded in theory of mind,   A careful analysis of pragmatic demands using a rational model of communication suggests a minimal pair of experiments which show that apparent failures of visual perspective-taking are in fact successes for sophisticated social reasoning in context.
+Recent debates over adult theory of mind use have hinged on behavior in natural-language communication tasks but have largely neglected the nuanced pragmatics of these tasks. In particular, using occluded objects to create perspective asymmetries may have unexpected side effects under pragmatic reasoning. Cooperative speakers ought to flexibly adjust their utterances to be more informative in contexts with high uncertainty about what is in the listener's field of view. In a direct replication, we show that scripted confederates violate these expectations by using less informative labels than unscripted directors naturally use. In two additional experiments, we directly manipulate speaker and listener expectations to test each step of the pragmatic account. Hence, apparent failures of visual perspective-taking may in fact be successes for sophisticated theory of mind use in context.
 %Recent theories of language use as recursive social reasoning remain in tension with evidence that adult listeners apparently fail to take their partner's perspective in communication. To reconcile these points of view, we use a computational model of communication under uncertainty to analyze the pragmatic demands of a common theory of mind test.  Through a minimal pair of replications comparing scripted vs. unscripted speakers, we show that scripted confederates used in previous studies are \emph{uncooperative}: they are less informative than what a speaker would actually produce in that situation, thus violating the listener's rational social expectations. This ironically shows that apparent failures of theory of mind are in fact attributable to sophisticated expectations about speaker behavior---that is, to theory of mind. 
 \end{abstract}
 
@@ -95,32 +95,35 @@ Recent debates over theory of mind use have hinged on behavior in natural-langua
 
 %%% Characterize the computational approach to theory of mind we plan to take
 %%% Point out a gaping hole that could benefit from this approach
-Our success as a cooperative species depends upon our ability to make sense of other agents. 
-One solution is to maintain an internal predictive model of other agents: how unobservable beliefs and desires give rise to observable actions. 
-Such a model allows us to make inferences about a social partner's likely internal state given their past behavior and form sophisticated expectations about their future behavior. 
+%Our success as a cooperative species depends upon our ability to make sense of other agents. 
+%One solution is to maintain an internal predictive model of other agents: how unobservable beliefs and desires give rise to observable actions. 
+%Such a model allows us to make inferences about a social partner's likely internal state given their past behavior and form sophisticated expectations about their future behavior. 
 %This theoretical approach to social cognition, where theory of mind reasoning \cite{PremackWoodruff78_ChimpanzeeToM, GopnikWellman92_TheoryTheory, WellmanCrossWatson01_ToMMetaAnalysis, SetohScottBaillargeon16_FalseBelief, ScottBaillargeon17_EarlyToM} is grounded in an explicit computational model of how other minds work, has 
-% The approach has been useful for understanding a number of experimental phenomena in both adults and children \cite{KileyHamlinEtAl13_MentalisticCoreSocial, PantelisEtAl14_IntentionInference, BakerSaxeTenenbaum09_ActionUnderstandingInversePlanning, JaraEttingerEtAl16_NaiveUtilityCalculus, BakerEtAl17_ToMBayesian}. 
-Yet our current understanding of theory of mind use in \emph{communication} remains limited. 
-Just as making sense of an agent's physical movements in the world requires an accurate model of how beliefs and intentions translate into motor plans, making sense of language depends on an accurate model of what a speaker would say, or what a listener would think, in different situations. 
+% The approach has been useful for understanding a number of experimental phenomena in both adults and children \cite{KileyHamlinEtAl13_MentalisticCoreSocial, PantelisEtAl14_IntentionInference}. 
+%Yet our current understanding of theory of mind use in \emph{communication} remains limited. 
+
+Our ability to successfully communicate and coordinate with social partners relies on some degree of contextual flexibility in production and interpretation. It may be technically correct to refer to a particular entity as a ``dog,'' but speakers tend to choose more specific or \emph{informative} expressions when trying to point out their dog at a busy dog park. Similarly, a hyperbolic statement like ``I waited a million years for a table'' tends to be interpreted as an expression of frustration at longer-than-expected wait times rather than a literal statement about the time elapsed \citep{KaoWuBergenGoodman14_NonliteralNumberWords}.  %A doctor who uses a single Latinate term to tell their colleague about a condition may use many more words to tell a patient the same thing.  % Our success as a cooperative species depends upon our ability to make sense of other agents. 
+This systematic contextual variation could in principle be accommodated by internally caching a complex set of different meanings, but pragmatic accounts have argued for a more parsimonious explanation. Just as making sense of an agent's physical movements in the world requires an accurate model of how beliefs and intentions translate into motor plans \citep{BakerSaxeTenenbaum09_ActionUnderstandingInversePlanning, JaraEttingerEtAl16_NaiveUtilityCalculus, BakerEtAl17_ToMBayesian}, making sense of language depends on an accurate mental model of what a speaker would say, or what a listener would think, in different situations. In other words, flexible communication relies on a generic \emph{theory of mind} mechanism.
 
 %While these failures are compelling evidence against a simple model where theory of mind reasoning is limited to literal perspective-taking, 
 Past efforts to evaluate theory of mind in communication have focused on a relatively narrow behavioral operationalization of theory of mind as perspective-taking about a partner's visual access \citep{KeysarBarr___Brauner00_TakingPerspective, KeysarLinBarr03_LimitsOnTheoryOfMindUse, LinKeysarEpley10_ReflexivelyMindblind}. 
-We argue in this paper that the mental models supporting theory of mind use in communication are much richer than previously explored. 
-In particular, we consider a class of mental models representing not only a partner's visual access but also Gricean expectations of parsimony and cooperativity \citep{Grice75_LogicConversation}: that speakers will avoid saying things that are confusing or unnecessarily complicated given the current context. 
-For example, suppose a friend wants to refer to a nearby Dalmatian. 
+We argue in this paper that the mental models supporting theory of mind use in communication are richer than previously explored. 
+In particular, we consider a class of mental models representing not only a partner's visual access but also Gricean expectations of parsimony and cooperativity \citep{FrankeJager16_ProbabilisticPragmatics, Grice75_LogicConversation,Clark96_UsingLanguage,GoodmanFrank16_RSATiCS, FrankGoodman12_PragmaticReasoningLanguageGames, GoodmanStuhlmuller13_KnowledgeImplicature}: that speakers will avoid saying things that are confusing or unnecessarily complicated given the current context. 
+%For example, suppose a friend wants to refer to a nearby Dalmatian. 
 %There are numerous descriptions that would all be literally true, but different expressions are preferred in different contexts.
-If there are no other dogs nearby, we may expect them to use a parsimonious basic-level term like ``dog.''
-When there is potential for confusion, however, we expect them to consider our likely interpretation and introduce additional modifiers (``spotted dog'') or shift to more specific terms (``Dalmatian'') to disambiguate the one they are trying to refer to \citep{BrennanClark96_ConceptualPactsConversation, VanDeemter16_ComputationalModelsOfReferring, GrafEtAl16_BasicLevel}. 
-When speakers violate these expectations, listeners draw inferences about the intended meaning in order to account for the violation: for example, XXX \cite{XXX, BrehenyKatsosWilliams06_ImplicaturesOnline, StillerGoodmanFrank15_AdHocImplicature}. 
+%If there are no other dogs nearby, we may expect them to use a parsimonious basic-level term like ``dog.''
+%When there is potential for confusion, however, we expect them to consider our likely interpretation and introduce additional modifiers (``spotted dog'') or shift to more specific terms (``Dalmatian'') to disambiguate the one they are trying to refer to \citep{BrennanClark96_ConceptualPactsConversation, VanDeemter16_ComputationalModelsOfReferring, GrafEtAl16_BasicLevel}. 
+%When speakers violate these expectations, listeners draw inferences about the intended meaning in order to account for the violation: for example, XXX \cite{XXX, BrehenyKatsosWilliams06_ImplicaturesOnline, StillerGoodmanFrank15_AdHocImplicature}. 
 
-This intricate dance of expectations has been formalized in a probabilistic model of communication as recursive social reasoning. The Rational Speech Act (RSA) framework has successfully described many puzzling communicative phenomena, including vagueness \cite{Lassiter}, hyperbole \cite{Kao}, irony \cite{}, metaphor, and apparent over-informativeness \cite{Judith}. In the simplest version of this framework, speakers judge the utility of different utterances proportionate to the probability of correct interpretation under an internal model of a listener. Listener, in turn, use their respective internal model of the speaker to reason backward to the most plausible intention \cite{Grice75_LogicConversation,Clark96_UsingLanguage,GoodmanFrank16_RSATiCSFrankGoodman12_PragmaticReasoningLanguageGames, GoodmanStuhlmuller13_KnowledgeImplicature}. 
+%This intricate dance of expectations has been formalized in a probabilistic model of communication as recursive social reasoning. The Rational Speech Act (RSA) framework has successfully described many puzzling communicative phenomena, including vagueness \cite{Lassiter}, hyperbole \cite{Kao}, irony \cite{}, metaphor, and apparent over-informativeness \cite{Judith}. In the simplest version of this framework, speakers judge the utility of different utterances proportionate to the probability of correct interpretation under an internal model of a listener. Listener, in turn, use their respective internal model of the speaker to reason backward to the most plausible intention \cite{Grice75_LogicConversation,Clark96_UsingLanguage,GoodmanFrank16_RSATiCSFrankGoodman12_PragmaticReasoningLanguageGames, GoodmanStuhlmuller13_KnowledgeImplicature}. 
 
 %Since positive claims about theory of mind in communication concern the mental model we hold of our partner, these claims are best evaluated in a computational framework that formalizes the content of our representations and how we use them. We test a richer, more realistic theory of mind accounting not just for visual access but also for Gricean expectations of parsimony and context-appropriate informativity under uncertainty. Under this richer model, we find that behavior taken as evidence for limits on theory of mind reasoning is in fact precisely what is required by the pragmatics of the situation.
 
-Theory of mind mechanisms are therefore at the heart of the Rational Speech Act framework, yet they have never been directly compared against the predictions of egocentric or ``mindblind'' theories under the same behavioral paradigm. 
-Since positive claims about theory of mind in communication concern the mental model we hold of our partner, these claims are best evaluated in a computational framework that formalizes the content of our representations and how we use them. 
-By rigorously comparing the predicted behavior of speakers and listeners using different mental models, we show that theory of mind is required to account for context-sensitive behavior. 
-In addition, we replicate effects that, under more naive behavioral measures, were interpreted as evidence of limits on theory of mind use, but under a richer computational model are shown to be rational consequences of an uncooperative confederate. Especially in asymmetric communicative environments where speakers are explicitly put in a state of uncertainty over which objects their partner is seeing, evaluating the extent to which theory of mind is deployed in communication requires flexible mental models that represent the many sources of social expectations.
+%Theory of mind mechanisms are the foundation of pragmatic accounts, especially as recently formalized in recursive reasoning models \cite{Grice75_LogicConversation,}, yet they have never been directly compared against the predictions of egocentric or ``mindblind'' theories under the same behavioral paradigm. 
+%Since positive claims about theory of mind in communication concern the mental model we hold of our partner, these claims are best evaluated in a computational framework that formalizes the content of our representations and how we use them. 
+%By rigorously comparing the predicted behavior of speakers and listeners using different mental models, we show that theory of mind is required to account for context-sensitive behavior. 
+%In addition, we replicate effects that, under more naive behavioral measures, were interpreted as evidence of limits on theory of mind use, but under a richer computational model are shown to be rational consequences of an uncooperative confederate. 
+%Especially in asymmetric communicative environments where speakers are explicitly put in a state of uncertainty over which objects their partner is seeing, evaluating the extent to which theory of mind is deployed in communication requires flexible mental models that represent the many sources of social expectations.
 % While egocentric views of perspective-taking make more clear-cut behavioral predictions, the predictions derived from a computational theory of mind are more varied and complicated but ultimately more accurate.
 
 %The underlying mechanisms that support our ability to communicate so flexibly and effortlessly? 
@@ -137,10 +140,10 @@ In addition, we replicate effects that, under more naive behavioral measures, we
 %Additionally, eye-tracking data showed that participants considered the hidden item more often and for longer in the experimental condition than the control condition. 
 
 % Discuss other criticisms of Keysar paradigm?
-While these results are compelling, the paradigm has been criticized from few different angles. 
-\cite{HellerGrodnerTanenhaus08_Perspective} have pointed out that in many cases, the hidden object was a better fit for the referring expression than the one in common ground (e.g. the hidden roll of tape vs. the cassette tape for ``the tape''), making the hidden object \emph{a priori} more likely to be the referent; it would generally be fairer to compare two objects that fit the referring expression equally well. 
-We validate this argument by empirically measuring relative fit of the expressions to the target and distractor items.
-Moreover, \cite{HannaTanenhausTrueswell03_CommonGroundPerspective, HannaTanenhaus04_PragmaticEffects} argued that the viewpoint asymmetry paradigm is somewhat unnatural: common ground is typically built incrementally over the course of an interaction rather than presented all at once, and it is rare for a shared display to differ in perceptual accessibility. 
+%While these results are compelling, the paradigm has been criticized from few different angles. 
+%\cite{HellerGrodnerTanenhaus08_Perspective} have pointed out that in many cases, the hidden object was a better fit for the referring expression than the one in common ground (e.g. the hidden roll of tape vs. the cassette tape for ``the tape''), making the hidden object \emph{a priori} more likely to be the referent; it would generally be fairer to compare two objects that fit the referring expression equally well. 
+%We validate this argument by empirically measuring relative fit of the expressions to the target and distractor items.
+%Moreover, \cite{HannaTanenhausTrueswell03_CommonGroundPerspective, HannaTanenhaus04_PragmaticEffects} argued that the viewpoint asymmetry paradigm is somewhat unnatural: common ground is typically built incrementally over the course of an interaction rather than presented all at once, and it is rare for a shared display to differ in perceptual accessibility. 
 
 This suggests that we consider whether the utterances produced by the confederate in Keysar's critical conditions were actually what a speaker in that context would be expected to say. 
 If not, then perhaps listeners are making choices that are in fact consistent with a correct pragmatic interpretation of the confederate's (uncooperative) utterance.
@@ -206,7 +209,7 @@ For example, 75\% of participants made an error on item 6 upon hearing the scrip
 
 \subsubsection{Mouse-tracking}
 
-As a proxy for the eye-tracking analyses reported by \cite{KeysarLinBarr03_LimitsOnTheoryOfMindUse}, we conducted a mouse-tracking analysis. %We define the decision window as the span of time between  their instruction message and when they started moving an object. If it took them multiple attempts to move the correct object, we restricted our analysis to the first attempt. 
+As a proxy for the eye-tracking analyses reported by \cite{KeysarLinBarr03_LimitsOnTheoryOfMindUse}, we conducted a mouse-tracking analysis. Mouse-position is highly correlated with gaze in web browsing \citep{ChenEtAl01_MouseCursor, SpiveyGrosjeanKnoblich05} and has been used  %We define the decision window as the span of time between  their instruction message and when they started moving an object. If it took them multiple attempts to move the correct object, we restricted our analysis to the first attempt. 
 Within the decision window, we computed the total proportion of time spent moving toward the target relative to the distractor. %We had to exclude an additional 3 participants for this analysis, because the timestamps for director and matcher did not align and we could not establish the decision window properly. 
 %A paired-samples $t$-test found that matchers in the scripted condition tended to spend less time hovering over the target cell on critical experimental trials than on baseline trials, $t(10) = -2.65, p = 0.02$ (see Fig. \ref{fig:hover}), indicating that the presence of a hidden distractor interfered with participants ability to directly choose the target.%\footnote{This analysis includes participants who actually made errors, since the data is too sparse to exclude them.} . %accounts for a significant proportion of variance $F(3, 52) = 10.7, p < 0.001$
 
@@ -350,7 +353,7 @@ Pragmatic language understanding requires sophisticated social reasoning. To int
 The rational use of theory of mind for a listener thus depends on her expectations about the speaker: If, in a particular context, she expects a speaker to provide sufficiently informative utterances, she may be justified in neglecting his epistemic state when resolving reference.
 
 %consider the speaker's communicative goals and context. 
-In our replication (Expt.~1), we found evidence that listeners neglect the speaker's epistemic state, as Keysar and colleagues claim.
+In our replication, we found evidence that listeners neglect the speaker's epistemic state, as Keysar and colleagues claim.
 We also found that when the speaker's utterance fit the hidden distractor better than the target, matchers were more likely to make errors. 
 Indeed, we found that the extremely heterogeneous pattern of errors across items was well explained by the relative fit of the utterance to target and distractor.
 This suggests that reference disambiguation was driven primarily by \emph{a priori} label fitness rather than consideration of occluded vs. mutual visible items. 
@@ -372,9 +375,9 @@ The exact origin is a subject that must be followed up by future research \cite[
 %Indeed, the remaining errors in Expt.~2 are at least partially due to the lack of availability of more specific expressions. 
 %The items on which errors were most likely in Expt.~2 were difficult precisely because the natural utterance was \emph{still} ambiguous: even if the speaker uses ``hairbrush'' instead of the basic-level ``brush,'' for example, the distractor remains a more typical exemplar of the subcategory.
 
-Further work in a wider variety of tasks is necessary to pin down the various factors determining the relative weighting of these different sources of information, but we have argued that pragmatics play a crucial role.
+%Further work in a wider variety of tasks is necessary to pin down the various factors determining the relative weighting of these different sources of information, but we have argued that pragmatics play a crucial role.
 
-Previous theoretical advances in modeling pragmatics have typically hinged on `lifting' inference over some aspect of communication that was previously assumed to be fixed. For instance, \emph{manner implicatures} emerge from uncertainty over the true meanings of words in the lexicon \cite{BergenLevyGoodman16_LexicalUncertainty}, nonliteral constructions like \emph{hyperbole} and \emph{irony} emerge from uncertainty over the topic of discussion \cite{KaoWuBergenGoodman14_NonliteralNumberWords}, and \emph{prosody} and \emph{ellipsis} emerge from uncertainty (in the form of a noisy-channel model) over the various ways that a speaker's utterance could have been corrupted  \cite{BergenGoodman15_StrategicUseOfNoise}. Note that these are not ad hoc extensions; sources of uncertainty that are not strictly necessary to explain a particular effect are often omitted for simplicity, but they all coexist within the same model. 
+%Previous theoretical advances in modeling pragmatics have typically hinged on `lifting' inference over some aspect of communication that was previously assumed to be fixed. For instance, \emph{manner implicatures} emerge from uncertainty over the true meanings of words in the lexicon \cite{BergenLevyGoodman16_LexicalUncertainty}, nonliteral constructions like \emph{hyperbole} and \emph{irony} emerge from uncertainty over the topic of discussion \cite{KaoWuBergenGoodman14_NonliteralNumberWords}, and \emph{prosody} and \emph{ellipsis} emerge from uncertainty (in the form of a noisy-channel model) over the various ways that a speaker's utterance could have been corrupted  \cite{BergenGoodman15_StrategicUseOfNoise}. Note that these are not ad hoc extensions; sources of uncertainty that are not strictly necessary to explain a particular effect are often omitted for simplicity, but they all coexist within the same model. 
 
 % While We expect our conversation partners to follow common conventions about the meanings of words \cite{Lewis69_Convention, CentolaBaronchelli15_ConventionEmergence}, to update these conventions in light of previous interactions \cite{BrennanClark96_ConceptualPactsConversation}, and perhaps most importantly, 
 
@@ -831,73 +834,73 @@ experiments, etc.
 \bibliography{refs}
 
 
-\appendix
+%\appendix
 
-\section{Sample Appendix Section}
-We derive the result in Eq. \eqref{eq:analytical_linear}. We consider a linear $C_L(\tau_L+\taupav)=K_L(\tau_L+\taupav)$, and
-make two further 
-simplifications: (i) the subject does not
-engage in leisure in the pre-reward state (and so works for the whole
-price when it works); and (ii) \emph{a priori}, arbitrarily long leisure durations are possible
-($\lambda=0$).
-Then the reward rate in Eq. \eqref{eq:rhoCHT} becomes
-\begin{equation}\label{eq:analyticalrho}
-\rho^{\pi}= \frac{\vrule height 10pt width0pt RI + K_L \{~ \mathbb{E}[ \tau_L | \textrm{post} ] + \taupav  \} }
-     {P +
-\mathbb{E}[ \tau_L | \textrm{post} ] +\taupav  } 
-\end{equation} 
-As discussed in the \emph{Results} section, the probability of engaging in instrumental leisure in the post-reward state is $\pi([L,\tau_L]
-~| \textrm{post}) = \exp\left[-\{\beta (\rho^\pi-K_L) 
- \} \tau_L\right]$, which is an exponential distribution with
-mean 
-\begin{equation}
-\mathbb{E}[\tau_L | \textrm{post}]=\frac{1}{\beta (\rho^\pi-K_L) }
-\label{eq:analyticaltauL}
-\end{equation}  
-Re-arranging terms of this equation,
-\begin{equation}\label{eq:rhoversion2}
-\rho^{\pi}=\frac{1}{\beta ~\mathbb{E}[\tau_L | \textrm{post}]} +K_L 
-\end{equation} 
-Equating Eqs. \eqref{eq:analyticalrho} and \eqref{eq:rhoversion2} and solving for the mean instrumental leisure duration $\mathbb{E}[\tau_L | \textrm{post}]$, we derive
-\begin{equation}
-\mathbb{E}[\tau_L | \textrm{post}] = \frac{P+\taupav}{\beta ( RI - K_LP)-1} 
-\label{eq:solvedtauL}
-\end{equation}
-which is the second line of Eq.\eqref{eq:analytical_linear}. This is the mean instrumental leisure duration as long as  $RI - K_LP>1$, and  $\mathbb{E}[\tau_L | \textrm{post}] \rightarrow \infty$ otherwise. When the former condition holds, we may
-substitute Eq. \eqref{eq:solvedtauL} into Eq. \eqref{eq:analyticalrho} and solve for $\rho^{\pi}$
+%\section{Sample Appendix Section}
+%We derive the result in Eq. \eqref{eq:analytical_linear}. We consider a linear $C_L(\tau_L+\taupav)=K_L(\tau_L+\taupav)$, and
+%make two further 
+%simplifications: (i) the subject does not
+%engage in leisure in the pre-reward state (and so works for the whole
+%price when it works); and (ii) \emph{a priori}, arbitrarily long leisure durations are possible
+%($\lambda=0$).
+%Then the reward rate in Eq. \eqref{eq:rhoCHT} becomes
+%\begin{equation}\label{eq:analyticalrho}
+%\rho^{\pi}= \frac{\vrule height 10pt width0pt RI + K_L \{~ \mathbb{E}[ \tau_L | \textrm{post} ] + \taupav  \} }
+%     {P +
+%\mathbb{E}[ \tau_L | \textrm{post} ] +\taupav  } 
+%\end{equation} 
+%As discussed in the \emph{Results} section, the probability of engaging in instrumental leisure in the post-reward state is $\pi([L,\tau_L]
+%~| \textrm{post}) = \exp\left[-\{\beta (\rho^\pi-K_L) 
+% \} \tau_L\right]$, which is an exponential distribution with
+%mean 
+%\begin{equation}
+%\mathbb{E}[\tau_L | \textrm{post}]=\frac{1}{\beta (\rho^\pi-K_L) }
+%\label{eq:analyticaltauL}
+%\end{equation}  
+%Re-arranging terms of this equation,
+%\begin{equation}\label{eq:rhoversion2}
+%\rho^{\pi}=\frac{1}{\beta ~\mathbb{E}[\tau_L | \textrm{post}]} +K_L 
+%\end{equation} 
+%Equating Eqs. \eqref{eq:analyticalrho} and \eqref{eq:rhoversion2} and solving for the mean instrumental leisure duration $\mathbb{E}[\tau_L | \textrm{post}]$, we derive
+%\begin{equation}
+%\mathbb{E}[\tau_L | \textrm{post}] = \frac{P+\taupav}{\beta ( RI - K_LP)-1} 
+%\label{eq:solvedtauL}
+%\end{equation}
+%which is the second line of Eq.\eqref{eq:analytical_linear}. This is the mean instrumental leisure duration as long as  $RI - K_LP>1$, and  $\mathbb{E}[\tau_L | \textrm{post}] \rightarrow \infty$ otherwise. When the former condition holds, we may
+%substitute Eq. \eqref{eq:solvedtauL} into Eq. \eqref{eq:analyticalrho} and solve for $\rho^{\pi}$
+%
+%\begin{figure}
+%\widefigure{\fullpagewidth}{Fig1}
+%\caption{Sample Appendix Caption. Here is a caption that might
+%appear in an appendix. It is as wide as the full width of the page.}
+%\end{figure}
 
-\begin{figure}
-\widefigure{\fullpagewidth}{Fig1}
-\caption{Sample Appendix Caption. Here is a caption that might
-appear in an appendix. It is as wide as the full width of the page.}
-\end{figure}
+%\newpage
 
-\newpage
-
-\section{Making Your Bibliography for an Open Mind Article}
-{\it Open Mind} uses the APA author-date  bibliography style,
-apacite.bst. For more
-information on apacite, for examples in how to make your .bib file and more, see:\\
-\href{http://mirror.jmu.edu/pub/CTAN/biblio/bibtex/contrib/apacite/apacite.pdf}
-{http://mirror.jmu.edu/pub/CTAN/biblio/bibtex/contrib/apacite/apacite.pdf}
-
-\noindent
-(In spite of the mention of apacite cite commands, please use only
-Natbib commands for in text citations, as shown above.)
-
-\subsection{BibTeX}
-You will need to use BibTeX to form your bibliography; typing in the
-references would be
-a huge and unpleasant task. Look at the openmindsample.bbl file and you'll see why
-typing in the bibitems would be difficult. 
-
-For a good basic introduction to using BibTeX, see
-\href{https://www.economics.utoronto.ca/osborne/latex/BIBTEX.HTM}
-{https://www.economics.utoronto.ca/osborne/latex/BIBTEX.HTM}
-
-When you use BibTeX, the form of the bibliography will be correct. You
-don't need to supply a bibliography style, since that is built into
-the stjour.cls file.
+%\section{Making Your Bibliography for an Open Mind Article}
+%{\it Open Mind} uses the APA author-date  bibliography style,
+%apacite.bst. For more
+%information on apacite, for examples in how to make your .bib file and more, see:\\
+%\href{http://mirror.jmu.edu/pub/CTAN/biblio/bibtex/contrib/apacite/apacite.pdf}
+%{http://mirror.jmu.edu/pub/CTAN/biblio/bibtex/contrib/apacite/apacite.pdf}
+%
+%\noindent
+%(In spite of the mention of apacite cite commands, please use only
+%Natbib commands for in text citations, as shown above.)
+%
+%\subsection{BibTeX}
+%You will need to use BibTeX to form your bibliography; typing in the
+%references would be
+%a huge and unpleasant task. Look at the openmindsample.bbl file and you'll see why
+%typing in the bibitems would be difficult. 
+%
+%For a good basic introduction to using BibTeX, see
+%\href{https://www.economics.utoronto.ca/osborne/latex/BIBTEX.HTM}
+%{https://www.economics.utoronto.ca/osborne/latex/BIBTEX.HTM}
+%
+%When you use BibTeX, the form of the bibliography will be correct. You
+%don't need to supply a bibliography style, since that is built into
+%the stjour.cls file.
 
 \end{document}
 
