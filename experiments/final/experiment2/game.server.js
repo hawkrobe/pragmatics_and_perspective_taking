@@ -90,6 +90,7 @@ var dataOutput = function() {
     return {
       iterationName: client.game.iterationName,
       gameid: client.game.id,
+      trialNum : client.game.state.roundNum + 1,      
       serverTime: Date.now(),
       workerId: client.workerid,
       assignmentId: client.assignmentid
@@ -108,12 +109,13 @@ var dataOutput = function() {
       x: critical.trueX + critical.width/2, y: critical.trueY + critical.height/2
     };
 
-    var targetDistance = Math.sqrt(
+    var targetDistance = Math.floor(Math.sqrt(
       Math.pow(mouse.x - target.x, 2) + Math.pow(mouse.y - target.y, 2)
-    );
-    var distractorDistance = !critical ? 'none' : Math.sqrt(
+    ));
+
+    var distractorDistance = !critical ? 'none' : Math.floor(Math.sqrt(
       Math.pow(mouse.x - distractor.x, 2) + Math.pow(mouse.y - distractor.y, 2)
-    );
+    ));
 
     return _.extend({}, common, {
       targetDistance, distractorDistance,
@@ -133,9 +135,9 @@ var dataOutput = function() {
       objLocations, {
 	intendedName,
 	clickedName: message_data[1],
-	trialNum : client.game.state.roundNum + 1,	
 	correct: intendedName === message_data[1],
-	condition: client.game.condition
+	condition: client.game.condition,
+	responseRT: message_data[2]
       }
     );
   };
@@ -146,10 +148,9 @@ var dataOutput = function() {
       client.game.trialInfo.currContextType,
       commonOutput(client, message_data), {
 	intendedName,
-	trialNum : client.game.state.roundNum + 1,	
 	text: message_data[1].replace(/~~~/g, '.'),
 	role: client.role,
-	timeFromRoundStart: message_data[2]
+	typingRT: message_data[2]
       }
     );
     console.log(_.pick(output, ['gameid', 'trialNum', 'text', 'context', 'occlusions']));
