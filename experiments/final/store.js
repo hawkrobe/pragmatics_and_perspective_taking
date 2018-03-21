@@ -149,7 +149,8 @@ function serve() {
       if (!request.body) {
         return failure(response, '/db/insert needs post request body');
       }
-      log(`got request to insert into ${request.body.colname}`);
+      if(request.body['eventType'] != 'updateMouse')
+	log(`got request to insert into ${request.body.colname}`);
       
       const databaseName = request.body.dbname;
       const collectionName = request.body.colname;
