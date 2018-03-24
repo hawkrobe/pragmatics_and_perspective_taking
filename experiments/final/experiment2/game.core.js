@@ -192,19 +192,23 @@ game_core.prototype.makeTrialList = function () {
   return(trialList);
 };
 
+game_core.prototype.genTrialBlock = function() {
+  return [].concat(Array(this.numRounds/12).fill(    
+    {context : 'close', occlusions: 'none'}
+  ).concat(Array(this.numRounds/12).fill(
+    {context : 'far', occlusions: 'none'}
+  )).concat(Array(this.numRounds/12).fill(
+    {context : 'far', occlusions: 'irrelevant'}
+  )).concat(Array(this.numRounds/12).fill(
+    {context : 'close', occlusions: 'irrelevant'}
+  )));
+};
+
 // Ensure each object appears even number of times, evenly spaced across trial types...?
 game_core.prototype.sampleSequence = function() {
-  var trials = _.shuffle([].concat(Array(this.numRounds/4).fill(    
-    {context : 'close', occlusions: 'none'}
-  ).concat(Array(this.numRounds/4).fill(
-    {context : 'far', occlusions: 'none'}
-  )).concat(Array(this.numRounds/4).fill(
-    {context : 'far', occlusions: 'irrelevant'}
-  )).concat(Array(this.numRounds/8).fill(
-    {context : 'close', occlusions: 'irrelevant'}
-  )).concat(Array(this.numRounds/8).fill(
-    {context : 'close', occlusions: 'critical'}
-  ))));
+  var trials = _.shuffle(this.genTrialBlock())
+	.concat(_.shuffle(this.genTrialBlock()))
+	.concat(_.shuffle(this.genTrialBlock()));  
   var targetReps = this.numRounds / this.objects.length;
   var trialTypeSequenceLength = trials.length;
   var that = this;
