@@ -271,8 +271,8 @@ game_core.prototype.getPixelFromCell = function (obj) {
         + this.cellDimensions.height / 2),
     upperLeftX : (this.cellDimensions.width * (x - 1) + this.cellPadding/2),
     upperLeftY : (this.cellDimensions.height * (y - 1) + this.cellPadding/2),
-    width: obj.width ? 6 * obj.width : this.cellDimensions.width,
-    height: obj.height ? 6 * obj.height : this.cellDimensions.height
+    width: obj.width ? 4 * obj.width : this.cellDimensions.width,
+    height: obj.height ? 4 * obj.height : this.cellDimensions.height
   };
 };
 

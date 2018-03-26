@@ -95,7 +95,9 @@ var drawObjects = function() {
   _.map(globalGame.objectImages, function(obj) {
     if(globalGame.my_role == globalGame.playerRoleNames.role2 ||
        !containsCell(globalGame.occludedList, [obj.gridX, obj.gridY])) {
-      globalGame.ctx.drawImage(obj.img, obj.upperLeftX, obj.upperLeftY,
+      var objUpperLeftX = obj.centerX - obj.width/2;
+      var objUpperLeftY = obj.centerY - obj.height/2;
+      globalGame.ctx.drawImage(obj.img, objUpperLeftX, objUpperLeftY,
 			       obj.width, obj.height);
     }
   });
