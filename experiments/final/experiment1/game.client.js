@@ -31,33 +31,23 @@ function client_onserverupdate_received(data){
 
   var dataNames = _.map(data.objects, e => e.name);
   var localNames = _.map(globalGame.objects, e => e.name);
-
+  
   // Preload objects if out of date...
   // Note, might have to insert this inside an initial occlusion drawing callback?
   if (globalGame.objects.length == 0 || !_.isEqual(dataNames, localNames)) {
     globalGame.objectImages = [];
     globalGame.objectCount = dataNames.length;
-    console.log(globalGame.objectCount);
     globalGame.objects = _.map(data.objects, obj => {
-      console.log('preloading val' + obj.url);
       var imgObj = new Image();
       imgObj.src = obj.url;
       imgObj.onload = objectCounter;
       globalGame.objectImages.push(_.extend({}, obj, {img: imgObj}));
       return _.extend({}, obj, {img: imgObj});
-      //img: imgObj, trueX : obj.trueX, trueY : obj.trueY
     });
-  //});
   }
 
-  // // Update local object positions
-  // _.map(globalGame.objects, function(obj) {
-  //   var data_obj = _.find(data.objects, o => o.name == obj.name);
-  //   obj.trueX = data_obj.trueX;
-  //   obj.trueY = data_obj.trueY;
-  // });
-
   if(data.players.length > 1) {
+    constructOcclusions();
     globalGame.get_player(globalGame.my_id).message = "";
   }
   
@@ -183,7 +173,7 @@ var client_onjoingame = function(num_players, role) {
   // set role locally
   globalGame.my_role = role;
   globalGame.get_player(globalGame.my_id).role = role;
-  constructOcclusions();
+
   if(num_players == 1)
     globalGame.get_player(globalGame.my_id).message = 'Waiting for other player to connect...';
 
