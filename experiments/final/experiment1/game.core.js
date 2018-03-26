@@ -41,7 +41,16 @@ var game_core = function(options){
   };
 
   //Dimensions of world -- Used in collision detection, etc.
-  this.world = {width : 600, height : 600};  // 160cm * 3
+  this.numHorizontalCells = 4;
+  this.numVerticalCells = 4;
+  this.cellDimensions = {height : 600, width : 600}; // in pixels
+  this.cellPadding = 0;
+  this.world = {
+    width : 600 * this.numHorizontalCells,
+    height : 600 * this.numVerticalCells
+  };  // 160cm * 3
+
+
   this.roundNum = -1;
   this.instructionNum = -1;
   this.numRounds = 8;
@@ -209,59 +218,74 @@ var getLocations = function(numObjects) {
 
 // Randomizes objects in the way given by Keysar et al (2003)
 game_core.prototype.makeTrialList = function () {
-    // 1) Choose order of experimental & baseline (no more than 2 in a row)
-    var local_this = this;
-    var conditionOrder = sampleConditionOrder()
+  // 1) Choose order of experimental & baseline (no more than 2 in a row)
+  var local_this = this;
+  var conditionOrder = sampleConditionOrder();
 
-    // 2) Assign target & distractor based on condition
-    critItems = JSON.parse(JSON.stringify(objectSet.criticalItems))
-    var itemList = _.shuffle(critItems) //objectSet.criticalItems;
-    var trialList = _.map(_.range(8), function(i) {
-        var condition = conditionOrder[i];
-        var item = itemList[i];
-        var other = condition === "exp" ? item['distractor'] : item['alt']
-        var target = _.extend(item['target'], {target: true})
-        var objects = item.otherObjects.concat([target, other])
-        return _.extend(_.omit(itemList[i], ['distractor', 'alt', 'target']), 
-            {condition: condition,
-             instructions: item.instructions,
-             objects: objects}
-            )})
+  // 2) Assign target & distractor based on condition
+  var critItems = JSON.parse(JSON.stringify(objectSet.criticalItems));
+  var itemList = _.shuffle(critItems); 
+  var trialList = _.map(_.range(8), function(i) {
+    var condition = conditionOrder[i];
+    var item = itemList[i];
+    var other = condition === "exp" ? item['distractor'] : item['alt'];
+    var target = _.extend(item['target'], {target: true});
+    var objects = item.otherObjects.concat([target, other]);
+    return _.extend({}, _.omit(itemList[i], ['distractor', 'alt', 'target']), {
+      condition: condition,
+      instructions: item.instructions,
+      objects: objects
+    });
+  });
 
-    console.log(conditionOrder)
-
-    // 3. assign random initial locations (probably won't want to do this in the real exp.)
-    var local_this = this;
-    _.map(trialList, function(v) {
-        var locs = getLocations(v.objects.length)
-        _.map(_.zip(v.objects, locs), function(pair) {
-            var obj = pair[0]
-            if(obj.hasOwnProperty('initialLoc')){
-                var gridCell = local_this.getPixelFromCell(obj.initialLoc[1], obj.initialLoc[0])
-                obj.gridX = obj.initialLoc[1]
-                obj.gridY = obj.initialLoc[0]
-            } else {
-                var gridCell = local_this.getPixelFromCell(pair[1][0], pair[1][1])
-                obj.gridX = pair[1][0]
-                obj.gridY = pair[1][1]
-            }
-            obj.trueX = gridCell.centerX - obj.width/2
-            obj.trueY = gridCell.centerY - obj.height/2
-        })
-    })
-    return trialList
+  // 3. assign initial locations
+  _.forEach(trialList, function(v) {
+    var locs = getLocations(v.objects.length);
+    _.forEach(_.zip(v.objects, locs), function(pair) {
+      var obj = pair[0];
+      if(obj.hasOwnProperty('initialLoc')){
+	obj.gridX = obj.initialLoc[1];
+        obj.gridY = obj.initialLoc[0];
+      } else {
+	obj.gridX = pair[1][0];
+        obj.gridY = pair[1][1];
+      }
+      
+      _.extend(obj, local_this.getPixelFromCell(obj));  //obj.trueX = gridCell.centerX - obj.width/2;
+      //obj.trueY = gridCell.centerY - obj.height/2;
+    });
+  });
+  //console.log(trialList);
+  return trialList
 }
 
 // maps a grid location to the exact pixel coordinates
 // for x = 1,2,3,4; y = 1,2,3,4
-game_core.prototype.getPixelFromCell = function (x, y) {
-    return {
-        centerX: 25 + 68.75 + 137.5 * (x - 1),
-        centerY: 25 + 68.75 + 137.5 * (y - 1),
-        width: 137.5,
-        height: 137.5
-    }
-}
+game_core.prototype.getPixelFromCell = function (obj) {
+  var x = obj.gridX;
+  var y = obj.gridY;
+  return {
+    centerX: (this.cellPadding/2 + this.cellDimensions.width * (x - 1)
+        + this.cellDimensions.width / 2),
+    centerY: (this.cellPadding/2 + this.cellDimensions.height * (y - 1)
+        + this.cellDimensions.height / 2),
+    upperLeftX : (this.cellDimensions.width * (x - 1) + this.cellPadding/2),
+    upperLeftY : (this.cellDimensions.height * (y - 1) + this.cellPadding/2),
+    width: obj.width ? 6 * obj.width : this.cellDimensions.width,
+    height: obj.height ? 6 * obj.height : this.cellDimensions.height
+  };
+};
+
+// // maps a grid location to the exact pixel coordinates
+// // for x = 1,2,3,4; y = 1,2,3,4
+// game_core.prototype.getPixelFromCell = function (x, y) {
+//     return {
+//         centerX: 25 + 68.75 + 137.5 * (x - 1),
+//         centerY: 25 + 68.75 + 137.5 * (y - 1),
+//         width: 137.5,
+//         height: 137.5
+//     }
+// }
 
 // maps a raw pixel coordinate to to the exact pixel coordinates
 // for x = 1,2,3,4; y = 1,2,3,4

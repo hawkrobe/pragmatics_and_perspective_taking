@@ -1,4 +1,59 @@
-var occludedList = [[4,4], [2,2], [2,3], [3,1], [1,4]];
+function constructOcclusions() {
+  globalGame.occludedList = [[4,4], [2,2], [2,3], [3,1], [1,4]];
+  globalGame.occlusionImages = [];
+  globalGame.occlusionCount = globalGame.occludedList.length;
+  _.map(globalGame.occludedList, function(loc) {
+    var cell = globalGame.getPixelFromCell({gridX: loc[0], gridY: loc[1]});
+    var imgObj = new Image();
+    imgObj.onload = occlusionCounter;
+    imgObj.src = (globalGame.my_role == globalGame.playerRoleNames.role1 ?
+		  './stimuli/mystery.jpg' :
+		  './stimuli/mystery_noQ.jpg');
+    globalGame.occlusionImages.push(_.extend(cell, {img: imgObj}));
+  });
+  console.log('successfully cached occlusions')
+  console.log(globalGame.occlusionImages);
+};
+
+function containsCell(cellList, cell) {
+  return _.some(cellList, function(compCell) {
+    return _.isEqual(cell, [compCell.gridX, compCell.gridY]);
+  });
+};
+
+// common loader keeping track if loads
+function occlusionCounter() {
+  globalGame.occlusionCount--;
+  if (globalGame.occlusionCount === 0)
+    drawOcclusionImages();
+}
+
+// called when all images are loaded
+function drawOcclusionImages() {
+  for(var i = 0; i < globalGame.occlusionImages.length; i++) {
+    var obj = globalGame.occlusionImages[i];
+    console.log(obj);
+    globalGame.ctx.drawImage(obj.img, obj.upperLeftX, obj.upperLeftY,
+			     obj.width, obj.height);
+  }
+}
+
+// common loader keeping track if loads
+function objectCounter() {
+  globalGame.objectCount--;
+  if (globalGame.objectCount === 0)
+    drawObjects();
+}
+
+// called when all images are loaded
+// function drawObjectImages() {
+//   for(var i = 0; i < globalGame.objectImages.length; i++) {
+//     var obj = globalGame.objectImages[i];
+//     console.log(obj);
+//     globalGame.ctx.drawImage(obj.img, obj.upperLeftX, obj.upperLeftY,
+// 			     obj.width, obj.height);
+//   }
+// }
 
 var drawGrid = function(game){
   //size of canvas
@@ -27,18 +82,12 @@ var drawGrid = function(game){
   game.ctx.lineWidth = 1;
   game.ctx.strokeStyle = "black";
   game.ctx.stroke();
-
-  // occluded cells...
-  for(var i = 0; i < occludedList.length; i++) {
-    var cell = occludedList[i]
-    drawOccludedCell(game, cell[0],cell[1])
-  }
 }
 
 var drawClickPoint = function(game) {
   var centerX = game.viewport.width / 2;
   var centerY = game.viewport.height / 2;
-  var radius = 8;
+  var radius = 30;
 
   game.ctx.beginPath();
   game.ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
@@ -49,37 +98,22 @@ var drawClickPoint = function(game) {
   game.ctx.stroke();
 }
 
-var drawOccludedCell = function(game, x, y) {
-  var cell = game.getPixelFromCell(y,x)
-  var topLeft = [cell.centerX - cell.width/2, cell.centerY - cell.height/2]
-  var topRight = [cell.centerX + cell.width/2, topLeft[1]]
-  var bottomLeft = [topLeft[0], cell.centerY + cell.height/2]
-  var bottomRight = [topRight[0], bottomLeft[1]]
-  game.ctx.beginPath();
-  game.ctx.moveTo(topLeft[0], topLeft[1])
-  game.ctx.lineTo(topRight[0], topRight[1])
-  game.ctx.lineTo(bottomRight[0], bottomRight[1])
-  game.ctx.lineTo(bottomLeft[0], bottomLeft[1])
-  game.ctx.lineTo(topLeft[0], topLeft[1])
-  game.ctx.fillStyle = '#000000';
-  game.ctx.fill();
-  game.ctx.strokeStyle = '#FFFFFF'
-  game.ctx.stroke();
-}
-
 var containsCell = function(cellList, cell) {
   return _.some(cellList, function(compCell) {
     return _.isEqual(cell, compCell);
   })
 }
 
-var drawObjects = function(game, player) {
-  _.map(game.objects, function(obj) { 
-    if(player.role == "matcher")
-      game.ctx.drawImage(obj.img, obj.trueX, obj.trueY, obj.width, obj.height)
-    else if(!containsCell(occludedList, [obj.gridY, obj.gridX]))
-      game.ctx.drawImage(obj.img, obj.trueX, obj.trueY, obj.width, obj.height)
-  })
+var drawObjects = function() {
+  console.log('drawing object images');
+  console.log(globalGame.objectImages);
+  _.map(globalGame.objectImages, function(obj) {
+    if(globalGame.my_role == globalGame.playerRoleNames.role2 ||
+       !containsCell(globalGame.occlusionList, [obj.gridX, obj.gridY])) {
+      globalGame.ctx.drawImage(obj.img, obj.upperLeftX, obj.upperLeftY,
+			       obj.width, obj.height);
+    }
+  });
 }
 
 var drawInstructions = function(game) {
@@ -104,28 +138,29 @@ var drawInstructions = function(game) {
 }
 
 var drawScreen = function(game, player) {
-    //bg
-    game.ctx.fillStyle = "#FFFFFF";
-    game.ctx.fillRect(0,0,game.viewport.width,game.viewport.height);
-    if (player.message) {
-        // Draw message in center (for countdown, e.g.)
-        game.ctx.font = "bold 23pt Helvetica";
-        game.ctx.fillStyle = 'red';
-        game.ctx.textAlign = 'center';
-        wrapText(game, player.message, 
-          game.world.width/2, game.world.height/4,
-          game.world.width*4/5,
-          25);
-        if(player.role == "matcher")
-          drawClickPoint(game);
-    } else {
-        drawGrid(game);
-        drawObjects(game, player);   
-        if(player.role == "director"){
-          drawGrid(game);
-          drawInstructions(game)
-        }
-    }
+  //bg
+  game.ctx.fillStyle = "#FFFFFF";
+  game.ctx.fillRect(0,0,game.viewport.width,game.viewport.height);
+  if (player.message) {
+    // Draw message in center (for countdown, e.g.)
+    game.ctx.font = "bold 23pt Helvetica";
+    game.ctx.fillStyle = 'red';
+    game.ctx.textAlign = 'center';
+    wrapText(game, player.message, 
+             game.world.width/2, game.world.height/4,
+             game.world.width*4/5,
+             25);
+    // if(player.role == "matcher")
+    //   drawClickPoint(game);
+  } else if(player.role) {
+    drawGrid(game);
+    drawOcclusionImages();
+    drawObjects(game, player);
+    // if(player.role == "director"){
+    //   drawGrid(game);
+    //   drawInstructions(game)
+    // }
+  }
 }
 
 function wrapText(game, text, x, y, maxWidth, lineHeight) {
