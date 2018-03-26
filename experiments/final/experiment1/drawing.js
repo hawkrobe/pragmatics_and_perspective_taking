@@ -1,5 +1,5 @@
 function constructOcclusions() {
-  globalGame.occludedList = [[4,4], [2,2], [2,3], [3,1], [1,4]];
+  globalGame.occludedList = [[4,4], [2,2], [3,2], [1,3], [4,1]];
   globalGame.occlusionImages = [];
   globalGame.occlusionCount = globalGame.occludedList.length;
   _.map(globalGame.occludedList, function(loc) {
@@ -11,8 +11,6 @@ function constructOcclusions() {
 		  './stimuli/mystery_noQ.jpg');
     globalGame.occlusionImages.push(_.extend(cell, {img: imgObj}));
   });
-  console.log('successfully cached occlusions')
-  console.log(globalGame.occlusionImages);
 };
 
 function containsCell(cellList, cell) {
@@ -32,7 +30,6 @@ function occlusionCounter() {
 function drawOcclusionImages() {
   for(var i = 0; i < globalGame.occlusionImages.length; i++) {
     var obj = globalGame.occlusionImages[i];
-    console.log(obj);
     globalGame.ctx.drawImage(obj.img, obj.upperLeftX, obj.upperLeftY,
 			     obj.width, obj.height);
   }
@@ -44,16 +41,6 @@ function objectCounter() {
   if (globalGame.objectCount === 0)
     drawObjects();
 }
-
-// called when all images are loaded
-// function drawObjectImages() {
-//   for(var i = 0; i < globalGame.objectImages.length; i++) {
-//     var obj = globalGame.objectImages[i];
-//     console.log(obj);
-//     globalGame.ctx.drawImage(obj.img, obj.upperLeftX, obj.upperLeftY,
-// 			     obj.width, obj.height);
-//   }
-// }
 
 var drawGrid = function(game){
   //size of canvas
@@ -105,11 +92,9 @@ var containsCell = function(cellList, cell) {
 }
 
 var drawObjects = function() {
-  console.log('drawing object images');
-  console.log(globalGame.objectImages);
   _.map(globalGame.objectImages, function(obj) {
     if(globalGame.my_role == globalGame.playerRoleNames.role2 ||
-       !containsCell(globalGame.occlusionList, [obj.gridX, obj.gridY])) {
+       !containsCell(globalGame.occludedList, [obj.gridX, obj.gridY])) {
       globalGame.ctx.drawImage(obj.img, obj.upperLeftX, obj.upperLeftY,
 			       obj.width, obj.height);
     }
@@ -155,11 +140,11 @@ var drawScreen = function(game, player) {
   } else if(player.role) {
     drawGrid(game);
     drawOcclusionImages();
-    drawObjects(game, player);
-    // if(player.role == "director"){
-    //   drawGrid(game);
-    //   drawInstructions(game)
-    // }
+    drawObjects();
+    if(player.role == "director"){
+      drawGrid(game);
+      drawInstructions(game)
+    }
   }
 }
 
