@@ -10,8 +10,8 @@
 
 //require('look').start()
 
-    var utils       = require('../sharedUtils/sharedUtils.js'),
-        fs          = require('fs');
+var utils       = require('../sharedUtils/sharedUtils.js'),
+    fs          = require('fs');
 	    
 var moveObject = function(client, i, x, y) {
   var obj = client.game.objects[i];
@@ -52,16 +52,6 @@ var onMessage = function(client,message) {
     }
     setTimeout(() => client.game.newRound(), 1500);
     break;
-
-  // case 'ready' :
-  //   client.game.paused = false;
-  //   if(message_parts[1] === "incorrect")
-  //     client.game.instructionNum -= 1;
-  //   if(client.game.instructionNum + 1 < client.game.instructions.length) 
-  //     client.game.newInstruction();
-  //   else
-  //     client.game.newRound();
-  //   break;
 
   case 'chatMessage' :
     // Update others

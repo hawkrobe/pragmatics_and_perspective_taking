@@ -18,7 +18,6 @@ var globalGame = {};
 // Keeps track of whether player is paying attention...
 var visible;
 var incorrect;
-var dragging;
 var submitted = false;
 
 function client_onserverupdate_received(data){
@@ -126,6 +125,7 @@ var customSetup = function(game) {
       var msg = 'Waiting for your partner to send a message...';
       globalGame.get_player(globalGame.my_id).message = msg;
       globalGame.paused = true;
+      globalGame.dragging = false;
     } else {
       $("#chatbox").removeAttr("disabled");
       $('#chatbox').focus();
@@ -208,7 +208,7 @@ function mouseDownListener(evt) {
   if(!globalGame.paused) {
     for (i=0; i < globalGame.objects.length; i++) {
       if (hitTest(globalGame.objects[i], mouseX, mouseY)) {
-        dragging = true;
+        globalGame.dragging = true;
         if (i > highestIndex) {
           //We will pay attention to the point on the object where the mouse is "holding" the object:
           dragHoldX = mouseX - globalGame.objects[i].upperLeftX;
@@ -219,7 +219,7 @@ function mouseDownListener(evt) {
       }
     }
   }
-  if (dragging) {
+  if (globalGame.dragging) {
     window.addEventListener("mousemove", dragListener, false);
   }
   globalGame.viewport.removeEventListener("mousedown", mouseDownListener, false);
@@ -252,7 +252,7 @@ function clickListener(evt) {
 function mouseUpListener(evt) {    
   globalGame.viewport.addEventListener("mousedown", mouseDownListener, false);
   window.removeEventListener("mouseup", mouseUpListener, false);
-  if (dragging) {
+  if (globalGame.dragging) {
     // Set up the right variables
     var bRect = globalGame.viewport.getBoundingClientRect();
     dropX = (evt.clientX - bRect.left)*(globalGame.viewport.width/bRect.width);
@@ -290,7 +290,6 @@ function mouseUpListener(evt) {
     }
     // Tell server where you dropped it
     drawScreen(globalGame, globalGame.get_player(globalGame.my_id))
-    dragging = false;
     window.removeEventListener("mousemove", dragListener, false);
   }
 }
@@ -311,7 +310,7 @@ var mouseTracking = function(event) {
   var bRect = globalGame.viewport.getBoundingClientRect();
   var mouseX = (event.clientX-bRect.left)*(globalGame.viewport.width/bRect.width);
   var mouseY = (event.clientY-bRect.top)*(globalGame.viewport.height/bRect.height);
-  if(!globalGame.paused) {
+  if(!globalGame.paused && !globalGame.dragging) {
     globalGame.socket.send(
       ['updateMouse', Date.now(), Math.floor(mouseX), Math.floor(mouseY)].join('.')
     );
@@ -319,7 +318,6 @@ var mouseTracking = function(event) {
 };
 
 function dragListener(evt) {
-  console.log('dragging');
   // prevent from dragging offscreen
   var minX = 25;
   var maxX = globalGame.viewport.width - globalGame.objects[dragIndex].width - 25;
@@ -341,8 +339,7 @@ function dragListener(evt) {
   var obj = globalGame.objects[dragIndex]
   obj.upperLeftX = Math.round(posX);
   obj.upperLeftY = Math.round(posY);
-  console.log('updating obj ' + obj.name);
-  console.log('new vals are ' + obj.upperLeftX + ',' + obj.upperLeftY)
+
   // Tell server about it
   globalGame.socket.send("objMove." + dragIndex + "." + Math.round(posX) + "." + Math.round(posY))
   drawScreen(globalGame, globalGame.get_player(globalGame.my_id));
