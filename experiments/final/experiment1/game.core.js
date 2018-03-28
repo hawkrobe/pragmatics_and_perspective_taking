@@ -177,48 +177,48 @@ game_core.prototype.newInstruction = function() {
 }
 
 var sampleConditionOrder = function() {
-    var orderList = []
-    var options = ['exp', 'base'] 
-    while (orderList.length < 8
-        || !(_.every(orderList.concat().sort().slice(0,4), function(v) {return v === "base"})
-            && _.every(orderList.concat().sort().slice(4,8), function(v) {return v === "exp"}))) {
-        orderList = []
-        _.map(_.range(8), function(i){
-            var candidate = _.sample(options)
-            // If already two in a row...
-            if (_.every(orderList.slice(-2), function(v) {return v === candidate})) {
-                orderList.push(_.filter(options, function(v) {return v != candidate})[0])
-            } else {
-                orderList.push(candidate)
-            }
-        })
-        console.log(orderList)
-    }
-    return orderList
+  var orderList = []
+  var options = ['exp', 'base'] 
+  while (orderList.length < 8
+         || !(_.every(orderList.concat().sort().slice(0,4), function(v) {return v === "base"})
+              && _.every(orderList.concat().sort().slice(4,8), function(v) {return v === "exp"}))) {
+    orderList = []
+    _.map(_.range(8), function(i){
+      var candidate = _.sample(options)
+      // If already two in a row...
+      if (_.every(orderList.slice(-2), function(v) {return v === candidate})) {
+        orderList.push(_.filter(options, function(v) {return v != candidate})[0])
+      } else {
+        orderList.push(candidate)
+      }
+    })
+    console.log(orderList)
+  }
+  return orderList
 }
 
 var cartesianProductOf = function(listOfLists) {
-    return _.reduce(listOfLists, function(a, b) {
-        return _.flatten(_.map(a, function(x) {
-            return _.map(b, function(y) {
-                return x.concat([y]);
-            });
-        }), true);
-    }, [ [] ]);
+  return _.reduce(listOfLists, function(a, b) {
+    return _.flatten(_.map(a, function(x) {
+      return _.map(b, function(y) {
+        return x.concat([y]);
+      });
+    }), true);
+  }, [ [] ]);
 };
 
 // Returns random set of unique grid locations
 var getLocations = function(numObjects) {
-    var possibilities = cartesianProductOf([_.range(1, 5), _.range(1, 5)])
+  var possibilities = cartesianProductOf([_.range(1, 5), _.range(1, 5)])
 
-    function getRandomFromBucket() {
-        var randomIndex = Math.floor(Math.random()*possibilities.length);
-        return possibilities.splice(randomIndex, 1)[0];
-    }
+  function getRandomFromBucket() {
+    var randomIndex = Math.floor(Math.random()*possibilities.length);
+    return possibilities.splice(randomIndex, 1)[0];
+  }
 
-    return _.map(_.range(numObjects), function(v) {
-        return getRandomFromBucket()
-    })
+  return _.map(_.range(numObjects), function(v) {
+    return getRandomFromBucket()
+  })
 }
 
 // Randomizes objects in the way given by Keysar et al (2003)
@@ -290,7 +290,7 @@ game_core.prototype.getCellFromPixel = function (mx, my) {
 game_core.prototype.server_send_update = function(){
   //Make a snapshot of the current state, for updating the clients
   var local_game = this;
-    
+  
   // Add info about all players
   var player_packet = _.map(local_game.players, p => {
     return {'id': p.id, 'player': null};
