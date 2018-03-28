@@ -129,14 +129,14 @@ game_core.prototype.get_active_players = function() {
 game_core.prototype.newRound = function() {
   var players = this.get_active_players();
   if(this.instructionNum + 1 < this.instructions.length) {
+    console.log('in new instruction');
     this.newInstruction();
+    _.forEach(players, p => p.player.instance.emit( 'newRoundUpdate'));
   } else if(this.roundNum == this.numRounds - 1) {
     var local_game = this;
     _.forEach(players, p => p.player.instance.disconnect());
   } else {
-    // Tell players
     _.forEach(players, p => p.player.instance.emit( 'newRoundUpdate'));
-
     this.roundNum += 1;
     this.objects = this.trialList[this.roundNum].objects;
     this.instructions = this.trialList[this.roundNum].instructions;
@@ -165,14 +165,15 @@ game_core.prototype.setScriptAndDir = function(instruction) {
   case "right" :
     dest = [object.gridX + 1, object.gridY]; break;
   }
-  this.currentDestination = dest;
+  this.currentDestination = _.zipObject(['gridX', 'gridY'], dest);
 };
 
 game_core.prototype.newInstruction = function() {
-    this.instructionNum += 1;
-    var instruction = this.instructions[this.instructionNum]
-    this.setScriptAndDir(instruction)
-    this.server_send_update()
+  console.log('sending new instruction');
+  this.instructionNum += 1;
+  var instruction = this.instructions[this.instructionNum]
+  this.setScriptAndDir(instruction)
+  this.server_send_update()
 }
 
 var sampleConditionOrder = function() {

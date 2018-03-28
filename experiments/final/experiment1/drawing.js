@@ -111,8 +111,7 @@ var drawInstructions = function() {
   var dir = instruction.split(' ')[1]
   var object = _.find(globalGame.objects, function(obj) { return obj.name == item })
   var origin = globalGame.getPixelFromCell(object)
-  var dest = globalGame.getPixelFromCell({gridX: globalGame.currentDestination[0],
-					  gridY: globalGame.currentDestination[1]});
+  var dest = globalGame.getPixelFromCell(globalGame.currentDestination);
   drawArrow(globalGame, origin.centerX, origin.centerY, 
             dest.centerX, dest.centerY, 100)
   if(globalGame.scriptedInstruction != "none") {
