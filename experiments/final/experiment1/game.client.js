@@ -41,10 +41,6 @@ function client_onserverupdate_received(data){
       return _.extend({}, obj, {img: imgObj});
     });
   }
-
-  if(data.players.length > 1) {
-    constructOcclusions();
-  }
   
   globalGame.currentDestination = data.curr_dest;
   globalGame.scriptedInstruction = data.scriptedInstruction;
@@ -127,6 +123,7 @@ var customSetup = function(game) {
       globalGame.paused = true;
       globalGame.dragging = false;
     } else {
+      globalGame.paused = false;
       $("#chatbox").removeAttr("disabled");
       $('#chatbox').focus();
       globalGame.get_player(globalGame.my_id).message = "";
@@ -179,13 +176,11 @@ var client_onjoingame = function(num_players, role) {
   // set role locally
   globalGame.my_role = role;
   globalGame.get_player(globalGame.my_id).role = role;
+  globalGame.paused = true;
+  constructOcclusions();
 
   if(num_players == 1)
     globalGame.get_player(globalGame.my_id).message = 'Waiting for other player to connect...';
-
-  // set mouse-tracking event handler
-  if(role === globalGame.playerRoleNames.role2) {
-  }
 }; 
 
 /*
