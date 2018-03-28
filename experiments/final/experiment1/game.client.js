@@ -265,7 +265,7 @@ function mouseUpListener(evt) {
       obj.gridX = cell.gridX;
       obj.gridY = cell.gridY
       obj.upperLeftX = globalGame.getPixelFromCell(cell).centerX - obj.width/2
-      obj.upperLeftYY = globalGame.getPixelFromCell(cell).centerY - obj.height/2
+      obj.upperLeftY = globalGame.getPixelFromCell(cell).centerY - obj.height/2
       globalGame.socket.send("drop.correct." + dragIndex + "." +
 			     Math.round(obj.upperLeftX) + "." + Math.round(obj.upperLeftY))
       
