@@ -198,7 +198,7 @@ var drawArrow=function(game,x1,y1,x2,y2,d) {
 
   // Draw the shaft of the arrow
   game.ctx.beginPath();
-  game.ctx.strokeStyle = '#ff0000';
+  game.ctx.strokeStyle = '#000000';
   game.ctx.lineWidth = 30;
   game.ctx.moveTo(fromx,fromy);
   game.ctx.lineTo(tox,toy);
@@ -240,7 +240,7 @@ var drawHead = function(game,x0,y0,x1,y1,x2,y2){
   var cpx=(x0+x1+x2)/3;
   var cpy=(y0+y1+y2)/3;
   game.ctx.quadraticCurveTo(cpx,cpy,x0,y0);
-  game.ctx.fillStyle = '#FF0000';
+  game.ctx.fillStyle = '#000000';
   game.ctx.fill();
 //  game.ctx.restore();
 };

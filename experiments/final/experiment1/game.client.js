@@ -117,6 +117,7 @@ var customSetup = function(game) {
   // Set up new round on client's browsers after submit round button is pressed.
   // For mouse-tracking, matcher must wait until director sends message  
   game.socket.on('newRoundUpdate', function(data){
+    $('#messages').empty();
     if(globalGame.my_role == globalGame.playerRoleNames.role2) {
       var msg = 'Waiting for your partner to send a message...';
       globalGame.get_player(globalGame.my_id).message = msg;
