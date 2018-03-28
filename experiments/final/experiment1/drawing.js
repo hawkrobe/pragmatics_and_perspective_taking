@@ -22,7 +22,7 @@ function containsCell(cellList, cell) {
 // common loader keeping track if loads
 function occlusionCounter() {
   globalGame.occlusionCount--;
-  if (globalGame.occlusionCount === 0)
+  if (globalGame.occlusionCount === 0 && !globalGame.paused)
     drawOcclusionImages();
 }
 
@@ -38,7 +38,7 @@ function drawOcclusionImages() {
 // common loader keeping track if loads
 function objectCounter() {
   globalGame.objectCount--;
-  if (globalGame.objectCount === 0)
+  if (globalGame.objectCount === 0 && !globalGame.paused)
     drawObjects();
 }
 
@@ -48,7 +48,7 @@ var drawGrid = function(game){
   var ch = game.viewport.height;
 
   //padding around grid
-  var p = 25;
+  var p = 0;
 
   //grid width and height
   var bw = cw - (p*2) ;
@@ -66,7 +66,7 @@ var drawGrid = function(game){
     game.ctx.moveTo(p, 0.5 + x + p);
     game.ctx.lineTo(bw + p, 0.5 + x + p);}
 
-  game.ctx.lineWidth = 1;
+  game.ctx.lineWidth = 5;
   game.ctx.strokeStyle = "black";
   game.ctx.stroke();
 }
@@ -101,21 +101,25 @@ var drawObjects = function() {
 			       obj.width, obj.height);
     }
   });
+  if(globalGame.my_role == globalGame.playerRoleNames.role1)
+    drawInstructions()
 }
 
-var drawInstructions = function(game) {
-  var instruction = game.instructions[game.instructionNum]
+var drawInstructions = function() {
+  console.log('drawing instructions');
+  var instruction = globalGame.instructions[globalGame.instructionNum]
 
   var item = instruction.split(' ')[0]
   var dir = instruction.split(' ')[1]
-  var object = _.find(game.objects, function(obj) { return obj.name == item })
-  var origin = game.getPixelFromCell(object.gridX,object.gridY)
-  var dest = game.getPixelFromCell(game.currentDestination[0], game.currentDestination[1])
-  drawArrow(game, origin.centerX, origin.centerY, 
-            dest.centerX, dest.centerY, 50)
-  if(game.scriptedInstruction != "none") {
+  var object = _.find(globalGame.objects, function(obj) { return obj.name == item })
+  var origin = globalGame.getPixelFromCell(object)
+  var dest = globalGame.getPixelFromCell({gridX: globalGame.currentDestination[0],
+					  gridY: globalGame.currentDestination[1]});
+  drawArrow(globalGame, origin.centerX, origin.centerY, 
+            dest.centerX, dest.centerY, 100)
+  if(globalGame.scriptedInstruction != "none") {
     $('#chatbox').attr("disabled", "disabled"); 
-    $('#chatbox').val(game.scriptedInstruction);
+    $('#chatbox').val(globalGame.scriptedInstruction);
     $('#chatbutton').focus()
   } else {
     $('#chatbox').removeAttr("disabled");
@@ -129,24 +133,17 @@ var drawScreen = function(game, player) {
   game.ctx.fillStyle = "#FFFFFF";
   game.ctx.fillRect(0,0,game.viewport.width,game.viewport.height);
   if (player.message) {
-    // Draw message in center (for countdown, e.g.)
-    game.ctx.font = "bold 23pt Helvetica";
+    game.ctx.font = "bold 80pt Helvetica";
     game.ctx.fillStyle = 'red';
     game.ctx.textAlign = 'center';
     wrapText(game, player.message, 
              game.world.width/2, game.world.height/4,
              game.world.width*4/5,
-             25);
-    // if(player.role == "matcher")
-    //   drawClickPoint(game);
+             110);
   } else if(player.role) {
     drawGrid(game);
     drawOcclusionImages();
     drawObjects();
-    if(player.role == "director"){
-      drawGrid(game);
-      drawInstructions(game)
-    }
   }
 }
 
@@ -201,7 +198,7 @@ var drawArrow=function(game,x1,y1,x2,y2,d) {
   // Draw the shaft of the arrow
   game.ctx.beginPath();
   game.ctx.strokeStyle = '#ff0000';
-  game.ctx.lineWidth = 10;
+  game.ctx.lineWidth = 30;
   game.ctx.moveTo(fromx,fromy);
   game.ctx.lineTo(tox,toy);
   game.ctx.stroke();
