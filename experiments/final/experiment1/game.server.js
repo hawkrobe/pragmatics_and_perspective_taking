@@ -39,29 +39,28 @@ var onMessage = function(client,message) {
     moveObject(client, message_parts[1], message_parts[2], message_parts[3]);
     break;
 
-  case 'correctDrop' :
-    moveObject(client, message_parts[1], message_parts[2], message_parts[3]);
-    client.game.attemptNum = 0;
-    _.map(all, function(p) {p.player.instance.send("s.waiting.correct");});
-    client.game.paused = true;
+  case 'drop' :
+    var type = message_parts[1];
+    moveObject(client, message_parts[2], message_parts[3], message_parts[4]);
+    if(type == 'correct') {
+      client.game.attemptNum = 0;
+      _.map(all, function(p) {p.player.instance.send("s.feedback.correct");});
+      setTimeout(client.game.newRound, 1500);
+    } else {
+      client.game.attemptNum += 1;
+      _.map(all, function(p) {p.player.instance.send("s.feedback.incorrect"); });
+    }
     break;
 
-  case 'incorrectDrop' :
-    moveObject(client, message_parts[1], message_parts[2], message_parts[3]);
-    client.game.paused = true;
-    client.game.attemptNum += 1;
-    _.map(all, function(p) {p.player.instance.send("s.waiting.incorrect"); });
-    break;
-
-  case 'ready' :
-    client.game.paused = false;
-    if(message_parts[1] === "incorrect")
-      client.game.instructionNum -= 1;
-    if(client.game.instructionNum + 1 < client.game.instructions.length) 
-      client.game.newInstruction();
-    else
-      client.game.newRound();
-    break;
+  // case 'ready' :
+  //   client.game.paused = false;
+  //   if(message_parts[1] === "incorrect")
+  //     client.game.instructionNum -= 1;
+  //   if(client.game.instructionNum + 1 < client.game.instructions.length) 
+  //     client.game.newInstruction();
+  //   else
+  //     client.game.newRound();
+  //   break;
 
   case 'chatMessage' :
     // Update others

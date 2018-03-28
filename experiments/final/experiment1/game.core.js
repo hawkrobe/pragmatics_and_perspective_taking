@@ -55,7 +55,6 @@ var game_core = function(options){
   this.instructionNum = -1;
   this.numRounds = 8;
   this.attemptNum = 0; // Increments whenever someone makes a mistake
-  this.paused = true;
   this.objects = [];
   this.instructions = [];
   this.currentDestination = [];
@@ -128,11 +127,14 @@ game_core.prototype.get_active_players = function() {
 };
 
 game_core.prototype.newRound = function() {
+  var players = this.get_active_players();
   if(this.roundNum == this.numRounds - 1) {
     var local_game = this;
-    _.map(local_game.get_active_players(), function(p){
-      p.player.instance.disconnect();});
+    _.forEach(players, p => p.player.instance.disconnect());
   } else {
+    // Tell players
+    _.forEach(players, p => p.player.instance.emit( 'newRoundUpdate'));
+
     this.roundNum += 1;
     this.objects = this.trialList[this.roundNum].objects;
     this.instructions = this.trialList[this.roundNum].instructions;
@@ -275,17 +277,6 @@ game_core.prototype.getPixelFromCell = function (obj) {
     height: obj.height ? 4 * obj.height : this.cellDimensions.height
   };
 };
-
-// // maps a grid location to the exact pixel coordinates
-// // for x = 1,2,3,4; y = 1,2,3,4
-// game_core.prototype.getPixelFromCell = function (x, y) {
-//     return {
-//         centerX: 25 + 68.75 + 137.5 * (x - 1),
-//         centerY: 25 + 68.75 + 137.5 * (y - 1),
-//         width: 137.5,
-//         height: 137.5
-//     }
-// }
 
 // maps a raw pixel coordinate to to the exact pixel coordinates
 // for x = 1,2,3,4; y = 1,2,3,4
