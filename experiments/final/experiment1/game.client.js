@@ -34,13 +34,11 @@ function client_onserverupdate_received(data){
   // Preload objects if out of date...
   // Note, might have to insert this inside an initial occlusion drawing callback?
   if (globalGame.objects.length == 0 || !_.isEqual(dataNames, localNames)) {
-    globalGame.objectImages = [];
     globalGame.objectCount = dataNames.length;
     globalGame.objects = _.map(data.objects, obj => {
       var imgObj = new Image();
       imgObj.src = obj.url;
       imgObj.onload = objectCounter;
-      globalGame.objectImages.push(_.extend({}, obj, {img: imgObj}));
       return _.extend({}, obj, {img: imgObj});
     });
   }
@@ -116,8 +114,8 @@ client_onMessage = function(data) {
 
 var customSetup = function(game) {
   game.socket.on('objMove', function(data){
-    game.objects[data.i].trueX = data.x;
-    game.objects[data.i].trueY = data.y;
+    game.objects[data.i].upperLeftX = data.x;
+    game.objects[data.i].upperLeftY = data.y;
     drawScreen(game, game.get_player(globalGame.my_id));
   });
 
@@ -133,6 +131,7 @@ var customSetup = function(game) {
       $('#chatbox').focus();
       globalGame.get_player(globalGame.my_id).message = "";
     }
+    drawScreen(globalGame, globalGame.get_player(globalGame.my_id));
   });
 
   game.socket.on('chatMessage', function(data){
@@ -212,8 +211,8 @@ function mouseDownListener(evt) {
         dragging = true;
         if (i > highestIndex) {
           //We will pay attention to the point on the object where the mouse is "holding" the object:
-          dragHoldX = mouseX - globalGame.objects[i].trueX;
-          dragHoldY = mouseY - globalGame.objects[i].trueY;
+          dragHoldX = mouseX - globalGame.objects[i].upperLeftX;
+          dragHoldY = mouseY - globalGame.objects[i].upperLeftY;
           highestIndex = i;
           dragIndex = i;
         }
@@ -261,31 +260,33 @@ function mouseUpListener(evt) {
     var obj = globalGame.objects[dragIndex]
     var cell = globalGame.getCellFromPixel(dropX, dropY)
     console.log(cell)
-    console.log([obj.gridX, obj.gridY])
+    console.log(obj)
     
     // If you were dragging the correct object... And dragged it to the correct location...
     if (_.isEqual(obj.name, globalGame.instructions[globalGame.instructionNum].split(' ')[0])
         && _.isEqual(cell, globalGame.currentDestination)) {
       // center it
-      obj.gridX = cell[0]
-      obj.gridY = cell[1]
-      obj.trueX = globalGame.getPixelFromCell(cell[0], cell[1]).centerX - obj.width/2
-      obj.trueY = globalGame.getPixelFromCell(cell[0], cell[1]).centerY - obj.height/2
-      globalGame.socket.send("correctDrop." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY))
+      obj.gridX = cell.gridX;
+      obj.gridY = cell.gridY
+      obj.upperLeftX = globalGame.getPixelFromCell(cell).centerX - obj.width/2
+      obj.upperLeftYY = globalGame.getPixelFromCell(cell).centerY - obj.height/2
+      globalGame.socket.send("drop.correct." + dragIndex + "." +
+			     Math.round(obj.upperLeftX) + "." + Math.round(obj.upperLeftY))
       
       // If you didn't drag it beyond cell bounds, snap it back w/o comment
-    } else if (obj.gridX == cell[0] && obj.gridY == cell[1]) {
-      console.log("here!")
-      obj.trueX = globalGame.getPixelFromCell(obj.gridX, obj.gridY).centerX - obj.width/2
-      obj.trueY = globalGame.getPixelFromCell(obj.gridX, obj.gridY).centerY - obj.height/2
-      globalGame.socket.send("objMove." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY))
-      
+    } else if (obj.gridX == cell.gridX && obj.gridY == cell.gridY) {
+      obj.upperLeftX = globalGame.getPixelFromCell(obj).centerX - obj.width/2
+      obj.upperLeftY = globalGame.getPixelFromCell(obj).centerY - obj.height/2
+      globalGame.socket.send("objMove." + dragIndex + "." + Math.round(obj.upperLeftX) +
+			     "." + Math.round(obj.upperLeftY))
       // If you moved the incorrect object or went to the incorrect location, pause game to readjust mouse
     } else {
-      obj.trueX = globalGame.getPixelFromCell(obj.gridX, obj.gridY).centerX - obj.width/2
-      obj.trueY = globalGame.getPixelFromCell(obj.gridX, obj.gridY).centerY - obj.height/2
-      globalGame.socket.send("incorrectDrop." + dragIndex + "." + Math.round(obj.trueX) + "." + Math.round(obj.trueY) 
-			     + "." + cell[0] + "." + cell[1]);
+      obj.upperLeftX = globalGame.getPixelFromCell(obj).centerX - obj.width/2
+      obj.upperLeftY = globalGame.getPixelFromCell(obj).centerY - obj.height/2
+      var msg = ['drop', 'incorrect', dragIndex,
+		 Math.round(obj.upperLeftX), Math.round(obj.upperLeftY),
+		 cell.gridX, cell.gridY].join('.');
+      globalGame.socket.send(msg);
     }
     // Tell server where you dropped it
     drawScreen(globalGame, globalGame.get_player(globalGame.my_id))
@@ -318,6 +319,7 @@ var mouseTracking = function(event) {
 };
 
 function dragListener(evt) {
+  console.log('dragging');
   // prevent from dragging offscreen
   var minX = 25;
   var maxX = globalGame.viewport.width - globalGame.objects[dragIndex].width - 25;
@@ -337,9 +339,10 @@ function dragListener(evt) {
 
   // Update object locally
   var obj = globalGame.objects[dragIndex]
-  obj.trueX = Math.round(posX);
-  obj.trueY = Math.round(posY);
-
+  obj.upperLeftX = Math.round(posX);
+  obj.upperLeftY = Math.round(posY);
+  console.log('updating obj ' + obj.name);
+  console.log('new vals are ' + obj.upperLeftX + ',' + obj.upperLeftY)
   // Tell server about it
   globalGame.socket.send("objMove." + dragIndex + "." + Math.round(posX) + "." + Math.round(posY))
   drawScreen(globalGame, globalGame.get_player(globalGame.my_id));
@@ -352,7 +355,9 @@ function hitCenter(mouseX, mouseY) {
 };
 
 function hitTest(shape,mx,my) {
-  var dx = mx - shape.trueX;
-  var dy = my - shape.trueY;
+  console.log(shape);
+  var dx = mx - shape.upperLeftX;
+  var dy = my - shape.upperLeftY;
+  console.log([dx, dy])
   return (0 < dx) && (dx < shape.width) && (0 < dy) && (dy < shape.height)
 }

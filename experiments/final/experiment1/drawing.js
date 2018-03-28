@@ -92,12 +92,10 @@ var containsCell = function(cellList, cell) {
 }
 
 var drawObjects = function() {
-  _.map(globalGame.objectImages, function(obj) {
+  _.map(globalGame.objects, function(obj) {
     if(globalGame.my_role == globalGame.playerRoleNames.role2 ||
        !containsCell(globalGame.occludedList, [obj.gridX, obj.gridY])) {
-      var objUpperLeftX = obj.centerX - obj.width/2;
-      var objUpperLeftY = obj.centerY - obj.height/2;
-      globalGame.ctx.drawImage(obj.img, objUpperLeftX, objUpperLeftY,
+      globalGame.ctx.drawImage(obj.img, obj.upperLeftX, obj.upperLeftY,
 			       obj.width, obj.height);
     }
   });

@@ -45,11 +45,12 @@ var onMessage = function(client,message) {
     if(type == 'correct') {
       client.game.attemptNum = 0;
       _.map(all, function(p) {p.player.instance.send("s.feedback.correct");});
-      setTimeout(client.game.newRound, 1500);
     } else {
       client.game.attemptNum += 1;
       _.map(all, function(p) {p.player.instance.send("s.feedback.incorrect"); });
+      client.game.instructionNum -= 1;
     }
+    setTimeout(() => client.game.newRound(), 1500);
     break;
 
   // case 'ready' :

@@ -128,7 +128,9 @@ game_core.prototype.get_active_players = function() {
 
 game_core.prototype.newRound = function() {
   var players = this.get_active_players();
-  if(this.roundNum == this.numRounds - 1) {
+  if(this.instructionNum + 1 < this.instructions.length) {
+    this.newInstruction();
+  } else if(this.roundNum == this.numRounds - 1) {
     var local_game = this;
     _.forEach(players, p => p.player.instance.disconnect());
   } else {
@@ -253,11 +255,9 @@ game_core.prototype.makeTrialList = function () {
         obj.gridY = pair[1][1];
       }
       
-      _.extend(obj, local_this.getPixelFromCell(obj));  //obj.trueX = gridCell.centerX - obj.width/2;
-      //obj.trueY = gridCell.centerY - obj.height/2;
+      _.extend(obj, local_this.getPixelFromCell(obj));  
     });
   });
-  //console.log(trialList);
   return trialList
 }
 
@@ -266,24 +266,24 @@ game_core.prototype.makeTrialList = function () {
 game_core.prototype.getPixelFromCell = function (obj) {
   var x = obj.gridX;
   var y = obj.gridY;
-  return {
-    centerX: (this.cellPadding/2 + this.cellDimensions.width * (x - 1)
-        + this.cellDimensions.width / 2),
-    centerY: (this.cellPadding/2 + this.cellDimensions.height * (y - 1)
-        + this.cellDimensions.height / 2),
-    upperLeftX : (this.cellDimensions.width * (x - 1) + this.cellPadding/2),
-    upperLeftY : (this.cellDimensions.height * (y - 1) + this.cellPadding/2),
-    width: obj.width ? 4 * obj.width : this.cellDimensions.width,
-    height: obj.height ? 4 * obj.height : this.cellDimensions.height
-  };
+  var width = obj.width ? 4 * obj.width : this.cellDimensions.width;
+  var height = obj.height ? 4 * obj.height : this.cellDimensions.height;
+  var centerX = (this.cellPadding/2 + this.cellDimensions.width * (x - 1)
+		 + this.cellDimensions.width / 2);
+  var centerY = (this.cellPadding/2 + this.cellDimensions.height * (y - 1)
+		 + this.cellDimensions.height / 2);
+  var upperLeftX = centerX - width/2;
+  var upperLeftY = centerY - height/2;
+  return {width, height, centerX, centerY, upperLeftX, upperLeftY};
 };
 
 // maps a raw pixel coordinate to to the exact pixel coordinates
 // for x = 1,2,3,4; y = 1,2,3,4
 game_core.prototype.getCellFromPixel = function (mx, my) {
-    var cellX = Math.floor((mx - 25) / 137.5) + 1
-    var cellY = Math.floor((my - 25) / 137.5) + 1
-    return [cellX, cellY]
+  return {
+    gridX : Math.floor((mx - this.cellPadding) / this.cellDimensions.width) + 1,
+    gridY : Math.floor((my - this.cellPadding) / this.cellDimensions.height) + 1
+  }
 }
 
 game_core.prototype.server_send_update = function(){
