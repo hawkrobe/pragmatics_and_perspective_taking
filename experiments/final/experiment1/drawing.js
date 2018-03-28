@@ -99,8 +99,6 @@ var drawObjects = function() {
 			       obj.width, obj.height);
     }
   });
-  if(globalGame.my_role == globalGame.playerRoleNames.role1)
-    drawInstructions()
 }
 
 var drawInstructions = function() {
@@ -139,8 +137,14 @@ var drawScreen = function(game, player) {
              110);
   } else if(player.role) {
     drawGrid(game);
-    drawOcclusionImages();
-    drawObjects();
+    if(globalGame.my_role == globalGame.playerRoleNames.role1) {
+      drawObjects();
+      drawOcclusionImages();
+      drawInstructions();
+    } else {
+      drawOcclusionImages();
+      drawObjects();
+    }
   }
 }
 
