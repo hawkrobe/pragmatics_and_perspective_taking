@@ -44,6 +44,7 @@ function client_onserverupdate_received(data){
   
   globalGame.currentDestination = data.curr_dest;
   globalGame.scriptedInstruction = data.scriptedInstruction;
+  globalGame.attemptNum = data.attemptNum;
 
   globalGame.instructions = data.instructions;
   globalGame.instructionNum = data.instructionNum;
@@ -99,9 +100,17 @@ client_onMessage = function(data) {
       client_newgame(); break;
 
     case 'feedback' :
-      var type = commanddata;
-      globalGame.get_player(globalGame.my_id).message = type ? type + " move!\n" : ""
-      drawScreen(globalGame, globalGame.get_player(globalGame.my_id))
+      $("#chatbox").attr("disabled", "disabled");
+      console.log('commands ')
+      console.log(commands);
+      var type = commands[2];
+      var cell = globalGame.getPixelFromCell({gridX : commands[3], gridY : commands[4]});
+      // var targetName = globalGame.instructions[globalGame.instructionNum].split(' ')[0];
+      // var clickedObj = _.filter(game.objects, x => x.name == clickedObjName)[0];
+      setTimeout(() => drawFeedbackIcon(globalGame, type, cell), 200);
+		       
+      //globalGame.get_player(globalGame.my_id).message = type ? type + " move!\n" : ""
+      //drawScreen(globalGame, globalGame.get_player(globalGame.my_id))
       break;
     }
   } 
@@ -178,6 +187,7 @@ var client_onjoingame = function(num_players, role) {
   globalGame.my_role = role;
   globalGame.get_player(globalGame.my_id).role = role;
   globalGame.paused = true;
+  $("#chatbox").attr("disabled", "disabled");
   constructOcclusions();
 
   if(num_players == 1)
@@ -255,8 +265,6 @@ function mouseUpListener(evt) {
     dropY = (evt.clientY - bRect.top)*(globalGame.viewport.height/bRect.height);
     var obj = globalGame.objects[dragIndex]
     var cell = globalGame.getCellFromPixel(dropX, dropY)
-    console.log(cell)
-    console.log(obj)
     
     // If you were dragging the correct object... And dragged it to the correct location...
     if (_.isEqual(obj.name, globalGame.instructions[globalGame.instructionNum].split(' ')[0])
@@ -267,7 +275,8 @@ function mouseUpListener(evt) {
       obj.upperLeftX = globalGame.getPixelFromCell(cell).centerX - obj.width/2
       obj.upperLeftY = globalGame.getPixelFromCell(cell).centerY - obj.height/2
       globalGame.socket.send("drop.correct." + dragIndex + "." +
-			     Math.round(obj.upperLeftX) + "." + Math.round(obj.upperLeftY))
+			     Math.round(obj.upperLeftX) + "." + Math.round(obj.upperLeftY) +
+			    '.' + cell.gridX + '.' + cell.gridY)
       
       // If you didn't drag it beyond cell bounds, snap it back w/o comment
     } else if (obj.gridX == cell.gridX && obj.gridY == cell.gridY) {

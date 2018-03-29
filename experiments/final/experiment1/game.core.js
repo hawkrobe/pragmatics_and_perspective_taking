@@ -61,6 +61,7 @@ var game_core = function(options){
   
   if(this.server) {
     this.id = options.id;
+    this.expName = options.expName;        
     this.player_count = options.player_count;
     this.trialList = this.makeTrialList();
     this.condition = _.sample(['scripted', 'unscripted']);
@@ -302,6 +303,7 @@ game_core.prototype.server_send_update = function(){
     pc : this.player_count,
     dataObj  : this.data,
     scriptedInstruction : this.scriptedInstruction,
+    attemptNum : this.attemptNum,
     curr_dest : this.currentDestination,
     instructionNum : this.instructionNum
   };

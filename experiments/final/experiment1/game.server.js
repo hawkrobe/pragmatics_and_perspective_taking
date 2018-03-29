@@ -42,15 +42,17 @@ var onMessage = function(client,message) {
   case 'drop' :
     var type = message_parts[1];
     moveObject(client, message_parts[2], message_parts[3], message_parts[4]);
+    var extraData = message_parts[5] + '.' + message_parts[6];
     if(type == 'correct') {
       client.game.attemptNum = 0;
-      _.map(all, function(p) {p.player.instance.send("s.feedback.correct");});
+      _.map(all, function(p) {
+	p.player.instance.send("s.feedback.correct." + extraData);});
     } else {
       client.game.attemptNum += 1;
-      _.map(all, function(p) {p.player.instance.send("s.feedback.incorrect"); });
+      _.map(all, function(p) {p.player.instance.send("s.feedback.incorrect." + extraData);});
       client.game.instructionNum -= 1;
     }
-    setTimeout(() => client.game.newRound(), 1500);
+    setTimeout(() => client.game.newRound(), 3000);
     break;
 
   case 'chatMessage' :
