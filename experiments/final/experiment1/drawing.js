@@ -102,24 +102,28 @@ var drawObjects = function() {
 }
 
 var drawInstructions = function() {
-  console.log('drawing instructions');
   var instruction = globalGame.instructions[globalGame.instructionNum]
 
-  var item = instruction.split(' ')[0]
-  var dir = instruction.split(' ')[1]
-  var object = _.find(globalGame.objects, function(obj) { return obj.name == item })
-  var origin = globalGame.getPixelFromCell(object)
-  var dest = globalGame.getPixelFromCell(globalGame.currentDestination);
-  drawArrow(globalGame, origin.centerX, origin.centerY, 
-            dest.centerX, dest.centerY, 100)
-  if(globalGame.scriptedInstruction != "none") {
-    $('#chatbox').attr("disabled", "disabled"); 
-    $('#chatbox').val(globalGame.scriptedInstruction);
-    $('#chatbutton').focus()
-  } else {
-    $('#chatbox').removeAttr("disabled");
-    $('#chatbox').val("")
-    $('#chatbox').focus()
+  if(instruction) {
+    var item = instruction.split(' ')[0]
+    var dir = instruction.split(' ')[1]
+    var object = _.find(globalGame.objects, function(obj) { return obj.name == item })
+    var origin = globalGame.getPixelFromCell(object)
+    var dest = globalGame.getPixelFromCell(globalGame.currentDestination);
+    var fromX = origin.centerX + (dest.centerX - origin.centerX) * 1/4
+    var fromY = origin.centerY + (dest.centerY - origin.centerY) * 1/4
+    var toX = origin.centerX + (dest.centerX - origin.centerX) * 3/4
+    var toY = origin.centerY + (dest.centerY - origin.centerY) * 3/4  
+    drawArrow(globalGame, fromX, fromY, toX, toY, 200)
+    if(globalGame.scriptedInstruction != "none" && globalGame.attemptNum == 0) {
+      $('#chatbox').attr("disabled", "disabled"); 
+      $('#chatbox').val(globalGame.scriptedInstruction);
+      $('#chatbutton').focus()
+    } else {
+      $('#chatbox').removeAttr("disabled");
+      $('#chatbox').val("")
+      $('#chatbox').focus()
+    }
   }
 }
 
@@ -146,6 +150,17 @@ var drawScreen = function(game, player) {
       drawObjects();
     }
   }
+}
+
+function drawFeedbackIcon(game, outcome, cell) {
+  var imgObj = new Image();
+  imgObj.src = outcome == 'correct' ? './stimuli/checkmark.png' : './stimuli/xxx.png';
+  imgObj.onload = () => {
+    console.log('drawing');
+    console.log(cell);
+    game.ctx.drawImage(imgObj, cell.centerX - cell.width/4, cell.centerY - cell.height/4,
+		       cell.width/2, cell.height/2);
+  };
 }
 
 function wrapText(game, text, x, y, maxWidth, lineHeight) {
@@ -198,8 +213,8 @@ var drawArrow=function(game,x1,y1,x2,y2,d) {
 
   // Draw the shaft of the arrow
   game.ctx.beginPath();
-  game.ctx.strokeStyle = '#000000';
-  game.ctx.lineWidth = 30;
+  game.ctx.strokeStyle = '#27e833';
+  game.ctx.lineWidth = 60;
   game.ctx.moveTo(fromx,fromy);
   game.ctx.lineTo(tox,toy);
   game.ctx.stroke();
@@ -226,7 +241,7 @@ var drawHead = function(game,x0,y0,x1,y1,x2,y2){
   if(typeof(y1)=='string') y1=parseInt(y1);
   if(typeof(x2)=='string') x2=parseInt(x2);
   if(typeof(y2)=='string') y2=parseInt(y2);
-  var radius=3;
+  var radius=30;
   var twoPI=2*Math.PI;
 
   // all cases do this.
@@ -240,7 +255,7 @@ var drawHead = function(game,x0,y0,x1,y1,x2,y2){
   var cpx=(x0+x1+x2)/3;
   var cpy=(y0+y1+y2)/3;
   game.ctx.quadraticCurveTo(cpx,cpy,x0,y0);
-  game.ctx.fillStyle = '#000000';
+  game.ctx.fillStyle = '#27e833';
   game.ctx.fill();
 //  game.ctx.restore();
 };
