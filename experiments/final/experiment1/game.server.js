@@ -83,41 +83,52 @@ var dataOutput = function() {
       time: Date.now(),
       condition: client.game.condition,
       trialNum : client.game.roundNum + 1,
+      instructionNum : client.game.instructionNum,      
       workerId: client.workerid,
       assignmentId: client.assignmentid,
       targetObject: objectName,
       attemptNum : client.game.attemptNum,
       trialType : client.game.trialList[client.game.roundNum].condition,
       objectSet : client.game.trialList[client.game.roundNum].objectSet,
-      instructionNum : client.game.instructionNum,
       critical: object.critical === "filler" ? false : true
     };
   };
 
   var mouseOutput = function(client, messageData) {
     var common = commonOutput(client, messageData);
-    var distractor = _.find(client.game.objects, obj => obj.critical == "distractor");
+    var critical = _.find(client.game.objects, obj => obj.critical == "distractor");
     var object = _.find(client.game.objects, obj => obj.name == common.targetObject);
+    var mouse = {x: messageData[2], y : messageData[3]};
+    var target = {x: object.upperLeftX + object.width/2, y: object.upperLeftY + object.height/2};
+    var distractor = !common.critical ? 'none' : {
+      x: critical.upperLeftX + critical.width/2, y: critical.upperLeftY + critical.height/2
+    };
 
-    return _.extend(common, {
-      distractorX : common.critical ? distractor.trueX + distractor.width/2 : 'none',
-      distractorY : common.critical ? distractor.trueY + distractor.height/2 : 'none',
-      targetX : object.trueX + object.width/2,
-      targetY : object.trueY + object.height/2,
-      mouseX : messageData[1],
-      mouseY : messageData[2]
+    var targetDistance = Math.floor(Math.sqrt(
+      Math.pow(mouse.x - target.x, 2) + Math.pow(mouse.y - target.y, 2)
+    ));
+
+    var distractorDistance = !critical ? 'none' : Math.floor(Math.sqrt(
+      Math.pow(mouse.x - distractor.x, 2) + Math.pow(mouse.y - distractor.y, 2)
+    ));
+
+    return _.extend({}, common, {
+      targetDistance, distractorDistance,
+      localTime: messageData[1],
+      rawMouseX : mouse.x,
+      rawMouseY : mouse.y
     });
   };
 
   var messageOutput = function(client, messageData) {
-    return _.extend(commonOutput(client, messageData), {
+    return _.extend({}, commonOutput(client, messageData), {
       sender: client.role,
       contents : messageData[1].replace(/-/g,'.')
     });
   };
 
   var errorOutput = function(client, messageData) {
-    return _.extend(commonOutput(client, messageData), {
+    return _.extend({}, commonOutput(client, messageData), {
       attemptedObject : client.game.objects[messageData[1]].name,
       intendedX : client.game.currentDestination[0],
       intendedY : client.game.currentDestination[1],
