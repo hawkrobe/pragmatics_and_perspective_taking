@@ -173,6 +173,7 @@ game_core.prototype.newInstruction = function() {
   console.log('sending new instruction');
   this.instructionNum += 1;
   var instruction = this.instructions[this.instructionNum]
+  this.currTarget = instruction.split(' ')[0]; 
   this.setScriptAndDir(instruction)
   this.server_send_update()
 }

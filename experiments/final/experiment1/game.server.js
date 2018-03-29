@@ -74,13 +74,13 @@ var onMessage = function(client,message) {
 
 var dataOutput = function() {
   function commonOutput (client, message_data) {
-    var objectName = client.game.instructions[client.game.instructionNum].split(' ')[0];
+    var objectName = client.game.currTarget;
     var object = _.find(client.game.objects, obj => obj.name == objectName);
-
+    console.log('curr taget: ' + objectName);
     return {
       iterationName: client.game.iterationName,
       gameid: client.game.id,
-      time: Date.now(),
+      serverTime: Date.now(),
       condition: client.game.condition,
       trialNum : client.game.roundNum + 1,
       instructionNum : client.game.instructionNum,      
@@ -108,7 +108,7 @@ var dataOutput = function() {
       Math.pow(mouse.x - target.x, 2) + Math.pow(mouse.y - target.y, 2)
     ));
 
-    var distractorDistance = !critical ? 'none' : Math.floor(Math.sqrt(
+    var distractorDistance = !common.critical ? 'none' : Math.floor(Math.sqrt(
       Math.pow(mouse.x - distractor.x, 2) + Math.pow(mouse.y - distractor.y, 2)
     ));
 
@@ -127,20 +127,21 @@ var dataOutput = function() {
     });
   };
 
-  var errorOutput = function(client, messageData) {
+  var dropOutput = function(client, messageData) {
     return _.extend({}, commonOutput(client, messageData), {
-      attemptedObject : client.game.objects[messageData[1]].name,
-      intendedX : client.game.currentDestination[0],
-      intendedY : client.game.currentDestination[1],
-      attemptedX : messageData[4],
-      attemptedY : messageData[5]
+      correct : messageData[1],
+      attemptedObject : client.game.objects[messageData[2]].name,
+      intendedX : client.game.currentDestination.gridX,
+      intendedY : client.game.currentDestination.gridY,
+      attemptedX : messageData[5],
+      attemptedY : messageData[6]
     });
   };
   
   return {
     'updateMouse' : mouseOutput,
     'chatMessage' : messageOutput,
-    'incorrectDrop' : errorOutput
+    'drop' : dropOutput
   };
 }();
 
