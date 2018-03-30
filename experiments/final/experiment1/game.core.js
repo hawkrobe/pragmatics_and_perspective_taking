@@ -41,18 +41,27 @@ var game_core = function(options){
   };
 
   //Dimensions of world -- Used in collision detection, etc.
-  this.world = {width : 600, height : 600};  // 160cm * 3
+  this.numHorizontalCells = 4;
+  this.numVerticalCells = 4;
+  this.cellDimensions = {height : 600, width : 600}; // in pixels
+  this.cellPadding = 0;
+  this.world = {
+    width : 600 * this.numHorizontalCells,
+    height : 600 * this.numVerticalCells
+  };  // 160cm * 3
+
+
   this.roundNum = -1;
   this.instructionNum = -1;
   this.numRounds = 8;
   this.attemptNum = 0; // Increments whenever someone makes a mistake
-  this.paused = true;
   this.objects = [];
   this.instructions = [];
   this.currentDestination = [];
   
   if(this.server) {
     this.id = options.id;
+    this.expName = options.expName;        
     this.player_count = options.player_count;
     this.trialList = this.makeTrialList();
     this.condition = _.sample(['scripted', 'unscripted']);
@@ -119,11 +128,16 @@ game_core.prototype.get_active_players = function() {
 };
 
 game_core.prototype.newRound = function() {
-  if(this.roundNum == this.numRounds - 1) {
+  var players = this.get_active_players();
+  if(this.instructionNum + 1 < this.instructions.length) {
+    console.log('in new instruction');
+    this.newInstruction();
+    _.forEach(players, p => p.player.instance.emit( 'newRoundUpdate'));
+  } else if(this.roundNum == this.numRounds - 1) {
     var local_game = this;
-    _.map(local_game.get_active_players(), function(p){
-      p.player.instance.disconnect();});
+    _.forEach(players, p => p.player.instance.disconnect());
   } else {
+    _.forEach(players, p => p.player.instance.emit( 'newRoundUpdate'));
     this.roundNum += 1;
     this.objects = this.trialList[this.roundNum].objects;
     this.instructions = this.trialList[this.roundNum].instructions;
@@ -152,129 +166,133 @@ game_core.prototype.setScriptAndDir = function(instruction) {
   case "right" :
     dest = [object.gridX + 1, object.gridY]; break;
   }
-  this.currentDestination = dest;
+  this.currentDestination = _.zipObject(['gridX', 'gridY'], dest);
 };
 
 game_core.prototype.newInstruction = function() {
-    this.instructionNum += 1;
-    var instruction = this.instructions[this.instructionNum]
-    this.setScriptAndDir(instruction)
-    this.server_send_update()
+  console.log('sending new instruction');
+  this.instructionNum += 1;
+  var instruction = this.instructions[this.instructionNum]
+  this.currTarget = instruction.split(' ')[0]; 
+  this.setScriptAndDir(instruction)
+  this.server_send_update()
 }
 
 var sampleConditionOrder = function() {
-    var orderList = []
-    var options = ['exp', 'base'] 
-    while (orderList.length < 8
-        || !(_.every(orderList.concat().sort().slice(0,4), function(v) {return v === "base"})
-            && _.every(orderList.concat().sort().slice(4,8), function(v) {return v === "exp"}))) {
-        orderList = []
-        _.map(_.range(8), function(i){
-            var candidate = _.sample(options)
-            // If already two in a row...
-            if (_.every(orderList.slice(-2), function(v) {return v === candidate})) {
-                orderList.push(_.filter(options, function(v) {return v != candidate})[0])
-            } else {
-                orderList.push(candidate)
-            }
-        })
-        console.log(orderList)
-    }
-    return orderList
+  var orderList = []
+  var options = ['exp', 'base'] 
+  while (orderList.length < 8
+         || !(_.every(orderList.concat().sort().slice(0,4), function(v) {return v === "base"})
+              && _.every(orderList.concat().sort().slice(4,8), function(v) {return v === "exp"}))) {
+    orderList = []
+    _.map(_.range(8), function(i){
+      var candidate = _.sample(options)
+      // If already two in a row...
+      if (_.every(orderList.slice(-2), function(v) {return v === candidate})) {
+        orderList.push(_.filter(options, function(v) {return v != candidate})[0])
+      } else {
+        orderList.push(candidate)
+      }
+    })
+    console.log(orderList)
+  }
+  return orderList
 }
 
 var cartesianProductOf = function(listOfLists) {
-    return _.reduce(listOfLists, function(a, b) {
-        return _.flatten(_.map(a, function(x) {
-            return _.map(b, function(y) {
-                return x.concat([y]);
-            });
-        }), true);
-    }, [ [] ]);
+  return _.reduce(listOfLists, function(a, b) {
+    return _.flatten(_.map(a, function(x) {
+      return _.map(b, function(y) {
+        return x.concat([y]);
+      });
+    }), true);
+  }, [ [] ]);
 };
 
 // Returns random set of unique grid locations
 var getLocations = function(numObjects) {
-    var possibilities = cartesianProductOf([_.range(1, 5), _.range(1, 5)])
+  var possibilities = cartesianProductOf([_.range(1, 5), _.range(1, 5)])
 
-    function getRandomFromBucket() {
-        var randomIndex = Math.floor(Math.random()*possibilities.length);
-        return possibilities.splice(randomIndex, 1)[0];
-    }
+  function getRandomFromBucket() {
+    var randomIndex = Math.floor(Math.random()*possibilities.length);
+    return possibilities.splice(randomIndex, 1)[0];
+  }
 
-    return _.map(_.range(numObjects), function(v) {
-        return getRandomFromBucket()
-    })
+  return _.map(_.range(numObjects), function(v) {
+    return getRandomFromBucket()
+  })
 }
 
 // Randomizes objects in the way given by Keysar et al (2003)
 game_core.prototype.makeTrialList = function () {
-    // 1) Choose order of experimental & baseline (no more than 2 in a row)
-    var local_this = this;
-    var conditionOrder = sampleConditionOrder()
+  // 1) Choose order of experimental & baseline (no more than 2 in a row)
+  var local_this = this;
+  var conditionOrder = sampleConditionOrder();
 
-    // 2) Assign target & distractor based on condition
-    critItems = JSON.parse(JSON.stringify(objectSet.criticalItems))
-    var itemList = _.shuffle(critItems) //objectSet.criticalItems;
-    var trialList = _.map(_.range(8), function(i) {
-        var condition = conditionOrder[i];
-        var item = itemList[i];
-        var other = condition === "exp" ? item['distractor'] : item['alt']
-        var target = _.extend(item['target'], {target: true})
-        var objects = item.otherObjects.concat([target, other])
-        return _.extend(_.omit(itemList[i], ['distractor', 'alt', 'target']), 
-            {condition: condition,
-             instructions: item.instructions,
-             objects: objects}
-            )})
+  // 2) Assign target & distractor based on condition
+  var critItems = JSON.parse(JSON.stringify(objectSet.criticalItems));
+  var itemList = _.shuffle(critItems); 
+  var trialList = _.map(_.range(8), function(i) {
+    var condition = conditionOrder[i];
+    var item = itemList[i];
+    var other = condition === "exp" ? item['distractor'] : item['alt'];
+    var target = _.extend(item['target'], {target: true});
+    var objects = item.otherObjects.concat([target, other]);
+    return _.extend({}, _.omit(itemList[i], ['distractor', 'alt', 'target']), {
+      condition: condition,
+      instructions: item.instructions,
+      objects: objects
+    });
+  });
 
-    console.log(conditionOrder)
-
-    // 3. assign random initial locations (probably won't want to do this in the real exp.)
-    var local_this = this;
-    _.map(trialList, function(v) {
-        var locs = getLocations(v.objects.length)
-        _.map(_.zip(v.objects, locs), function(pair) {
-            var obj = pair[0]
-            if(obj.hasOwnProperty('initialLoc')){
-                var gridCell = local_this.getPixelFromCell(obj.initialLoc[1], obj.initialLoc[0])
-                obj.gridX = obj.initialLoc[1]
-                obj.gridY = obj.initialLoc[0]
-            } else {
-                var gridCell = local_this.getPixelFromCell(pair[1][0], pair[1][1])
-                obj.gridX = pair[1][0]
-                obj.gridY = pair[1][1]
-            }
-            obj.trueX = gridCell.centerX - obj.width/2
-            obj.trueY = gridCell.centerY - obj.height/2
-        })
-    })
-    return trialList
+  // 3. assign initial locations
+  _.forEach(trialList, function(v) {
+    var locs = getLocations(v.objects.length);
+    _.forEach(_.zip(v.objects, locs), function(pair) {
+      var obj = pair[0];
+      if(obj.hasOwnProperty('initialLoc')){
+	obj.gridX = obj.initialLoc[1];
+        obj.gridY = obj.initialLoc[0];
+      } else {
+	obj.gridX = pair[1][0];
+        obj.gridY = pair[1][1];
+      }
+      
+      _.extend(obj, local_this.getPixelFromCell(obj));  
+    });
+  });
+  return trialList
 }
 
 // maps a grid location to the exact pixel coordinates
 // for x = 1,2,3,4; y = 1,2,3,4
-game_core.prototype.getPixelFromCell = function (x, y) {
-    return {
-        centerX: 25 + 68.75 + 137.5 * (x - 1),
-        centerY: 25 + 68.75 + 137.5 * (y - 1),
-        width: 137.5,
-        height: 137.5
-    }
-}
+game_core.prototype.getPixelFromCell = function (obj) {
+  var x = obj.gridX;
+  var y = obj.gridY;
+  var width = obj.width ? 4 * obj.width : this.cellDimensions.width;
+  var height = obj.height ? 4 * obj.height : this.cellDimensions.height;
+  var centerX = (this.cellPadding/2 + this.cellDimensions.width * (x - 1)
+		 + this.cellDimensions.width / 2);
+  var centerY = (this.cellPadding/2 + this.cellDimensions.height * (y - 1)
+		 + this.cellDimensions.height / 2);
+  var upperLeftX = centerX - width/2;
+  var upperLeftY = centerY - height/2;
+  return {width, height, centerX, centerY, upperLeftX, upperLeftY};
+};
 
 // maps a raw pixel coordinate to to the exact pixel coordinates
 // for x = 1,2,3,4; y = 1,2,3,4
 game_core.prototype.getCellFromPixel = function (mx, my) {
-    var cellX = Math.floor((mx - 25) / 137.5) + 1
-    var cellY = Math.floor((my - 25) / 137.5) + 1
-    return [cellX, cellY]
+  return {
+    gridX : Math.floor((mx - this.cellPadding) / this.cellDimensions.width) + 1,
+    gridY : Math.floor((my - this.cellPadding) / this.cellDimensions.height) + 1
+  }
 }
 
 game_core.prototype.server_send_update = function(){
   //Make a snapshot of the current state, for updating the clients
   var local_game = this;
-    
+  
   // Add info about all players
   var player_packet = _.map(local_game.players, p => {
     return {'id': p.id, 'player': null};
@@ -286,6 +304,7 @@ game_core.prototype.server_send_update = function(){
     pc : this.player_count,
     dataObj  : this.data,
     scriptedInstruction : this.scriptedInstruction,
+    attemptNum : this.attemptNum,
     curr_dest : this.currentDestination,
     instructionNum : this.instructionNum
   };

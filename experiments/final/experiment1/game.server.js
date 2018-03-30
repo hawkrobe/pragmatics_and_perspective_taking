@@ -10,8 +10,8 @@
 
 //require('look').start()
 
-    var utils       = require('../sharedUtils/sharedUtils.js'),
-        fs          = require('fs');
+var utils       = require('../sharedUtils/sharedUtils.js'),
+    fs          = require('fs');
 	    
 var moveObject = function(client, i, x, y) {
   var obj = client.game.objects[i];
@@ -39,28 +39,20 @@ var onMessage = function(client,message) {
     moveObject(client, message_parts[1], message_parts[2], message_parts[3]);
     break;
 
-  case 'correctDrop' :
-    moveObject(client, message_parts[1], message_parts[2], message_parts[3]);
-    client.game.attemptNum = 0;
-    _.map(all, function(p) {p.player.instance.send("s.waiting.correct");});
-    client.game.paused = true;
-    break;
-
-  case 'incorrectDrop' :
-    moveObject(client, message_parts[1], message_parts[2], message_parts[3]);
-    client.game.paused = true;
-    client.game.attemptNum += 1;
-    _.map(all, function(p) {p.player.instance.send("s.waiting.incorrect"); });
-    break;
-
-  case 'ready' :
-    client.game.paused = false;
-    if(message_parts[1] === "incorrect")
+  case 'drop' :
+    var type = message_parts[1];
+    moveObject(client, message_parts[2], message_parts[3], message_parts[4]);
+    var extraData = message_parts[5] + '.' + message_parts[6];
+    if(type == 'correct') {
+      client.game.attemptNum = 0;
+      _.map(all, function(p) {
+	p.player.instance.send("s.feedback.correct." + extraData);});
+    } else {
+      client.game.attemptNum += 1;
+      _.map(all, function(p) {p.player.instance.send("s.feedback.incorrect." + extraData);});
       client.game.instructionNum -= 1;
-    if(client.game.instructionNum + 1 < client.game.instructions.length) 
-      client.game.newInstruction();
-    else
-      client.game.newRound();
+    }
+    setTimeout(() => client.game.newRound(), 3000);
     break;
 
   case 'chatMessage' :
@@ -82,62 +74,74 @@ var onMessage = function(client,message) {
 
 var dataOutput = function() {
   function commonOutput (client, message_data) {
-    var objectName = client.game.instructions[client.game.instructionNum].split(' ')[0];
+    var objectName = client.game.currTarget;
     var object = _.find(client.game.objects, obj => obj.name == objectName);
-
+    console.log('curr taget: ' + objectName);
     return {
       iterationName: client.game.iterationName,
       gameid: client.game.id,
-      time: Date.now(),
+      serverTime: Date.now(),
       condition: client.game.condition,
       trialNum : client.game.roundNum + 1,
+      instructionNum : client.game.instructionNum,      
       workerId: client.workerid,
       assignmentId: client.assignmentid,
       targetObject: objectName,
       attemptNum : client.game.attemptNum,
       trialType : client.game.trialList[client.game.roundNum].condition,
       objectSet : client.game.trialList[client.game.roundNum].objectSet,
-      instructionNum : client.game.instructionNum,
       critical: object.critical === "filler" ? false : true
     };
   };
 
   var mouseOutput = function(client, messageData) {
     var common = commonOutput(client, messageData);
-    var distractor = _.find(client.game.objects, obj => obj.critical == "distractor");
+    var critical = _.find(client.game.objects, obj => obj.critical == "distractor");
     var object = _.find(client.game.objects, obj => obj.name == common.targetObject);
+    var mouse = {x: messageData[2], y : messageData[3]};
+    var target = {x: object.upperLeftX + object.width/2, y: object.upperLeftY + object.height/2};
+    var distractor = !common.critical ? 'none' : {
+      x: critical.upperLeftX + critical.width/2, y: critical.upperLeftY + critical.height/2
+    };
 
-    return _.extend(common, {
-      distractorX : common.critical ? distractor.trueX + distractor.width/2 : 'none',
-      distractorY : common.critical ? distractor.trueY + distractor.height/2 : 'none',
-      targetX : object.trueX + object.width/2,
-      targetY : object.trueY + object.height/2,
-      mouseX : messageData[1],
-      mouseY : messageData[2]
+    var targetDistance = Math.floor(Math.sqrt(
+      Math.pow(mouse.x - target.x, 2) + Math.pow(mouse.y - target.y, 2)
+    ));
+
+    var distractorDistance = !common.critical ? 'none' : Math.floor(Math.sqrt(
+      Math.pow(mouse.x - distractor.x, 2) + Math.pow(mouse.y - distractor.y, 2)
+    ));
+
+    return _.extend({}, common, {
+      targetDistance, distractorDistance,
+      localTime: messageData[1],
+      rawMouseX : mouse.x,
+      rawMouseY : mouse.y
     });
   };
 
   var messageOutput = function(client, messageData) {
-    return _.extend(commonOutput(client, messageData), {
+    return _.extend({}, commonOutput(client, messageData), {
       sender: client.role,
       contents : messageData[1].replace(/-/g,'.')
     });
   };
 
-  var errorOutput = function(client, messageData) {
-    return _.extend(commonOutput(client, messageData), {
-      attemptedObject : client.game.objects[messageData[1]].name,
-      intendedX : client.game.currentDestination[0],
-      intendedY : client.game.currentDestination[1],
-      attemptedX : messageData[4],
-      attemptedY : messageData[5]
+  var dropOutput = function(client, messageData) {
+    return _.extend({}, commonOutput(client, messageData), {
+      correct : messageData[1],
+      attemptedObject : client.game.objects[messageData[2]].name,
+      intendedX : client.game.currentDestination.gridX,
+      intendedY : client.game.currentDestination.gridY,
+      attemptedX : messageData[5],
+      attemptedY : messageData[6]
     });
   };
   
   return {
     'updateMouse' : mouseOutput,
     'chatMessage' : messageOutput,
-    'incorrectDrop' : errorOutput
+    'drop' : dropOutput
   };
 }();
 
