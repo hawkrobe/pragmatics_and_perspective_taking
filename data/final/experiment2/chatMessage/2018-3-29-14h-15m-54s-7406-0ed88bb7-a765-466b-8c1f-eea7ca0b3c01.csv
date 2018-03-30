@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	1	3	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	1	1522358154762	striped_black_circle	The object is circular and striped in straight lines.	speaker	23278	chatMessage
+far	none	0	4	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	2	1522358204538	checked_black_triangle	The object is triangular and is checkered.	speaker	26878	chatMessage
+far	irrelevant	1	2	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	3	1522358268495	wavy_black_star	The object has 5 points and has wavy stripes.	speaker	46450	chatMessage
+far	irrelevant	1	2	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	4	1522358304615	spotted_black_circle	The object is circular and has dots.	speaker	21366	chatMessage
+close	none	0	4	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	5	1522358362951	striped_blue_circle	The object has straight stripes and is circular.	speaker	45710	chatMessage
+close	irrelevant	1	2	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	6	1522358390313	wavy_red_circle	The object is circular and has wavy stripes.	speaker	16364	chatMessage
+far	none	0	2	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	7	1522358434325	wavy_blue_triangle	The object is triangular and has wavy stripes.	speaker	23858	chatMessage
+close	none	0	3	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	8	1522358487681	checked_blue_star	The object has 5 points and is blue with checkered squares.	speaker	39574	chatMessage
+close	irrelevant	2	3	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	9	1522358518802	wavy_green_square	The object is squared with wavy lines.	speaker	17814	chatMessage
+far	irrelevant	1	2	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	10	1522358564888	checked_green_square	The object is green and squared with checkered squares.	speaker	35150	chatMessage
+close	none	0	4	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	11	1522358617329	striped_blue_star	The object has 5 points and has straight lines and is blue.	speaker	39678	chatMessage
+close	irrelevant	1	3	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	12	1522358654297	checked_red_circle	The object is a red circle with checkered squares.	speaker	25752	chatMessage
+close	none	0	3	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	13	1522358700271	wavy_red_triangle	The object is a red triangle with wavy lines.	speaker	27756	chatMessage
+far	none	0	3	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	14	1522358731211	wavy_red_triangle	The object is a red triangle with wavy lines.	speaker	17468	chatMessage
+far	irrelevant	2	4	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	15	1522358763341	checked_green_circle	The object is a green circle with checkered squares.	speaker	21154	chatMessage
+far	none	0	3	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	16	1522358792745	spotted_black_square	The object is a black square with dots.	speaker	15404	chatMessage
+close	irrelevant	1	4	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	17	1522358818274	wavy_blue_triangle	The object is a blue triangle with wavy lines.	speaker	14008	chatMessage
+close	none	0	4	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	18	1522358851089	checked_green_square	The object is a green square with checkered squares.	speaker	16564	chatMessage
+far	irrelevant	1	3	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	19	1522358878867	striped_blue_circle	The object is a blue circle with straight lines.	speaker	20284	chatMessage
+close	none	0	2	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	20	1522358912314	striped_red_triangle	The object is a red triangle with straight lines.	speaker	25750	chatMessage
+far	none	0	4	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	21	1522358941427	wavy_green_star	The object has 5 points and is green with wavy lines.	speaker	21730	chatMessage
+far	irrelevant	1	4	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	22	1522358971613	wavy_green_star	The object has 5 points and is green with wavy lines.	speaker	20874	chatMessage
+far	none	0	3	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	23	1522358997748	spotted_red_square	The object is a red square with dots.	speaker	15574	chatMessage
+close	irrelevant	1	3	planned_sample	7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01	24	1522359033391	striped_black_circle	The object is a black circle with straight lines.	speaker	26902	chatMessage

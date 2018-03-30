@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	none	0	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	1	1522354631690	striped_blue_circle	The blue circle with the stripes	speaker	10686	chatMessage
+far	none	0	3	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	2	1522354662045	spotted_blue_star	the blue star with the dots	speaker	10492	chatMessage
+close	irrelevant	1	3	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	3	1522354676007	checked_black_triangle	the black triangle with the squares	speaker	5190	chatMessage
+close	none	0	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	4	1522354692110	checked_red_star	the red star with the squares	speaker	5099	chatMessage
+far	none	0	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	5	1522354714791	striped_green_triangle	the green triangle with stripes	speaker	4811	chatMessage
+far	irrelevant	2	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	6	1522354730561	striped_green_square	the green square with stripes	speaker	5675	chatMessage
+close	irrelevant	2	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	7	1522354745501	spotted_blue_triangle	the blue triangle with dots	speaker	5338	chatMessage
+far	irrelevant	2	3	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	8	1522354762772	checked_green_circle	the green circle with squares	speaker	6485	chatMessage
+far	irrelevant	2	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	9	1522354779348	wavy_red_square	the red square with wavy lines	speaker	4814	chatMessage
+far	none	0	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	10	1522354793580	striped_red_circle	the red circle with grey stripes	speaker	4121	chatMessage
+far	none	0	2	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	11	1522354813877	wavy_black_triangle	the black triangle with wavy lines	speaker	8862	chatMessage
+close	none	0	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	12	1522354832773	checked_red_triangle	the red triangle with squares	speaker	3741	chatMessage
+close	irrelevant	2	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	13	1522354845614	striped_blue_triangle	the blue triangle with stipes	speaker	3951	chatMessage
+far	irrelevant	2	3	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	14	1522354860949	wavy_blue_square	the blue square with wavy lines	speaker	6272	chatMessage
+close	irrelevant	1	3	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	15	1522354874874	checked_red_star	the red star with squares	speaker	4618	chatMessage
+close	none	0	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	16	1522354887460	checked_black_star	the black star with squares	speaker	4649	chatMessage
+close	irrelevant	1	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	17	1522354901783	wavy_black_circle	the black circle with wavy lines	speaker	6691	chatMessage
+far	none	0	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	18	1522354912742	spotted_green_square	the green square with dots	speaker	4157	chatMessage
+close	none	0	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	19	1522354925285	striped_green_circle	the green circle with stripes	speaker	4019	chatMessage
+close	none	0	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	20	1522354938231	wavy_black_star	the black star with wavy lines	speaker	4078	chatMessage
+far	none	0	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	21	1522354950074	checked_blue_circle	blue circle with squares	speaker	3587	chatMessage
+close	irrelevant	2	4	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	22	1522354968979	wavy_red_square	red square with wavy lines	speaker	4791	chatMessage
+far	irrelevant	1	2	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	23	1522354981959	striped_red_circle	red circle with stripes	speaker	3929	chatMessage
+far	irrelevant	1	3	pilot0	0539-797dcb91-2801-4f57-81f6-34ff2e567b5d	24	1522354992449	spotted_red_square	red square with dots	speaker	2682	chatMessage

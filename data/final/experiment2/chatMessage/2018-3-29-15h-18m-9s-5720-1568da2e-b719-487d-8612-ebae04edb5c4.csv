@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	none	0	2	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	1	1522361889473	wavy_blue_triangle	blue triangle with waves	speaker	8696	chatMessage
+far	none	0	4	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	2	1522361907925	wavy_red_circle	orange circle with waves	speaker	6274	chatMessage
+close	none	0	3	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	3	1522361925469	wavy_red_star	red star with waves	speaker	2753	chatMessage
+close	irrelevant	2	4	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	4	1522361940645	wavy_red_star	red star with waves	speaker	3825	chatMessage
+close	irrelevant	1	3	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	5	1522361969173	wavy_red_square	red square horizontal wave	speaker	5775	chatMessage
+far	irrelevant	1	2	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	6	1522361986205	wavy_blue_square	blue square horizontal waves	speaker	4337	chatMessage
+far	none	0	2	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	7	1522362003564	spotted_black_circle	black circle with dots	speaker	5608	chatMessage
+far	irrelevant	1	3	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	8	1522362025309	wavy_black_star	black star with horizontal waves	speaker	8258	chatMessage
+far	none	0	3	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	9	1522362052368	striped_green_square	green square vertical stripes	speaker	14043	chatMessage
+far	none	0	2	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	10	1522362070621	wavy_red_star	red star horizontal waves	speaker	5327	chatMessage
+close	irrelevant	1	3	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	11	1522362088926	striped_blue_circle	blue circle vertical stripes	speaker	5568	chatMessage
+close	none	0	4	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	12	1522362110862	spotted_green_circle	green circle dots	speaker	9472	chatMessage
+far	irrelevant	1	2	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	13	1522362125092	spotted_blue_square	blue square dots	speaker	2200	chatMessage
+close	irrelevant	1	4	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	14	1522362146700	wavy_blue_star	blue star horizontal waves	speaker	4415	chatMessage
+close	none	0	2	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	15	1522362174636	striped_green_triangle	green triangle vertical lines	speaker	5038	chatMessage
+far	irrelevant	1	2	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	16	1522362191780	checked_blue_triangle	blue triangle checkers	speaker	5513	chatMessage
+far	none	0	2	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	17	1522362205564	spotted_green_circle	green circle dots	speaker	3186	chatMessage
+close	irrelevant	1	2	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	18	1522362224765	wavy_green_star	green star horizontal waves	speaker	6433	chatMessage
+close	irrelevant	1	4	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	19	1522362248940	spotted_green_triangle	green triangle dots	speaker	6672	chatMessage
+far	irrelevant	1	2	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	20	1522362274579	striped_black_star	black star vertical lines	speaker	4871	chatMessage
+close	none	0	2	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	21	1522362295814	wavy_black_star	black star waves	speaker	4083	chatMessage
+far	irrelevant	2	4	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	22	1522362310259	striped_green_square	green square vertical	speaker	5226	chatMessage
+far	none	0	2	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	23	1522362336483	spotted_red_star	red star dots	speaker	1986	chatMessage
+close	none	0	2	planned_sample	5720-1568da2e-b719-487d-8612-ebae04edb5c4	24	1522362350167	checked_blue_star	blue star checkers	speaker	3376	chatMessage

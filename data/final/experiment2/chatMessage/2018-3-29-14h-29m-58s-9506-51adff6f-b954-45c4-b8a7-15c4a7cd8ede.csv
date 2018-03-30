@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	none	0	2	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	1	1522358998645	wavy_red_triangle	red triangle	speaker	2973	chatMessage
+close	irrelevant	2	3	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	2	1522359021057	wavy_red_circle	red circle with squigly lines	speaker	8640	chatMessage
+far	irrelevant	1	4	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	3	1522359043915	spotted_black_circle	black circle with polka dots	speaker	6284	chatMessage
+close	none	0	3	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	4	1522359064997	checked_red_triangle	red triangle with checkers	speaker	5878	chatMessage
+far	irrelevant	1	3	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	5	1522359131569	spotted_green_star	green star with polka dots	speaker	3845	chatMessage
+far	none	0	4	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	6	1522359160219	checked_green_circle	green circle with checkers	speaker	4046	chatMessage
+close	irrelevant	2	3	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	7	1522359184080	wavy_green_star	green star with squigley lines	speaker	13489	chatMessage
+close	none	0	2	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	8	1522359206132	striped_red_star	red star with vertical stripes	speaker	8800	chatMessage
+far	irrelevant	1	2	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	9	1522359223468	spotted_red_circle	red circle with polka dots	speaker	5020	chatMessage
+close	irrelevant	2	3	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	10	1522359237983	checked_black_star	black star with checkers	speaker	3792	chatMessage
+far	none	0	2	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	11	1522359254747	spotted_black_triangle	black triangle with polka dots	speaker	6904	chatMessage
+far	none	0	3	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	12	1522359272942	wavy_black_star	black star with squigley lines	speaker	8084	chatMessage
+far	irrelevant	1	2	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	13	1522359317181	striped_blue_circle	blue circle with vertical lines	speaker	9031	chatMessage
+close	none	0	4	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	14	1522359334919	wavy_red_circle	red circle with squigley lines	speaker	7838	chatMessage
+close	none	0	3	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	15	1522359352203	checked_red_square	red square with checkers	speaker	7786	chatMessage
+close	irrelevant	2	4	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	16	1522359371209	striped_red_circle	red circle with vertical lines	speaker	7921	chatMessage
+far	none	0	4	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	17	1522359391909	spotted_black_triangle	black triangle with polka dots	speaker	5069	chatMessage
+far	none	0	4	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	18	1522359407227	checked_green_triangle	green triangle with checkers	speaker	5322	chatMessage
+close	none	0	2	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	19	1522359425427	spotted_blue_circle	blue circle with polka dots	speaker	9210	chatMessage
+close	none	0	3	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	20	1522359444663	wavy_green_star	green star with squigley lines	speaker	9350	chatMessage
+far	irrelevant	1	2	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	21	1522359462789	checked_black_star	black star with checkers	speaker	8421	chatMessage
+far	irrelevant	1	2	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	22	1522359477201	checked_green_triangle	green triangle with checkers	speaker	5294	chatMessage
+close	irrelevant	2	4	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	23	1522359498096	striped_black_triangle	black triangle with vertical lines	speaker	10580	chatMessage
+close	irrelevant	1	3	planned_sample	9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede	24	1522359514978	striped_green_square	green square with vertical lines	speaker	8353	chatMessage

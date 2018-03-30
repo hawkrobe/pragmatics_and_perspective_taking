@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	irrelevant	1	3	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	1	1522354032017	striped_red_triangle	The object is the striped triangle.	speaker	5795	chatMessage
+far	irrelevant	1	4	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	2	1522354052768	checked_green_star	The object is the checkered star.	speaker	4593	chatMessage
+close	irrelevant	1	2	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	3	1522354069379	wavy_red_circle	The object is the circle with waves.	speaker	7899	chatMessage
+close	none	0	2	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	4	1522354090884	checked_green_triangle	The object is the checkered triangle that is outlined in green.	speaker	10149	chatMessage
+close	irrelevant	1	2	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	5	1522354107944	wavy_black_triangle	The object is the triangle with waves that is outlined in black.	speaker	7309	chatMessage
+far	none	0	3	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	6	1522354120985	checked_green_circle	The object is the checkered circle.	speaker	5676	chatMessage
+far	none	0	3	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	7	1522354136739	striped_black_triangle	The object is the striped triangle.	speaker	7498	chatMessage
+close	none	0	4	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	8	1522354153196	striped_red_square	The object is the striped square outlined in red.	speaker	8638	chatMessage
+close	irrelevant	1	4	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	9	1522354167760	checked_blue_circle	The object is the checkered circle outlined in blue.	speaker	6745	chatMessage
+close	none	0	4	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	10	1522354181877	striped_red_circle	The object is the striped circle outlined in red.	speaker	5308	chatMessage
+far	irrelevant	1	4	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	11	1522354201109	spotted_black_square	The object is the dotted square outlined in black.	speaker	11274	chatMessage
+close	irrelevant	2	4	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	12	1522354216707	striped_blue_star	The object is the striped star outlined in blue.	speaker	7760	chatMessage
+far	none	0	4	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	13	1522354233110	checked_green_square	The object is the checkered square outlined in green.	speaker	7228	chatMessage
+far	none	0	2	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	14	1522354248299	wavy_green_circle	The object is the wavy circle outlined in green.	speaker	7177	chatMessage
+close	none	0	2	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	15	1522354261923	wavy_black_triangle	The object is the wavy triangle outlined in black.	speaker	7003	chatMessage
+far	irrelevant	2	3	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	16	1522354275692	checked_red_circle	The object is the checkered circle outlined in red.	speaker	5850	chatMessage
+far	none	0	2	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	17	1522354291088	checked_black_star	The object is the checkered star outlined in black.	speaker	8365	chatMessage
+close	none	0	3	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	18	1522354304016	wavy_black_square	The object is the wavy square outlined in black.	speaker	6196	chatMessage
+close	irrelevant	1	2	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	19	1522354316539	wavy_red_triangle	The object is the wavy triangle outlined in red.	speaker	5619	chatMessage
+far	none	0	4	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	20	1522354329914	spotted_black_triangle	The object is the dotted triangle outlined in black.	speaker	5343	chatMessage
+far	irrelevant	1	2	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	21	1522354342320	spotted_blue_star	The object is the dotted star outlined in blue.	speaker	6003	chatMessage
+far	irrelevant	2	3	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	22	1522354356369	spotted_red_triangle	The object is the dotted triangle outlined in red.	speaker	6713	chatMessage
+close	irrelevant	1	2	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	23	1522354369153	spotted_blue_square	The object is the dotted square outlined in blue.	speaker	5439	chatMessage
+close	none	0	2	pilot0	0132-8ecccfe0-be22-46d9-a649-f8282878cd6a	24	1522354382060	striped_green_star	The object is the striped star outlined in green.	speaker	5963	chatMessage

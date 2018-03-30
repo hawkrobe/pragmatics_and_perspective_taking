@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	1	2	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	1	1522354698996	wavy_black_triangle	black outlined triangle with wavy gray lines	speaker	8012	chatMessage
+close	none	0	4	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	2	1522354726711	striped_red_square	red outlined square with vertical gray lines	speaker	8727	chatMessage
+close	none	0	3	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	3	1522354745080	checked_red_circle	red outlined circle with grey checkerboard	speaker	6335	chatMessage
+far	irrelevant	1	4	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	4	1522354771111	checked_blue_square	blue outlined square with checkerboard, corner squares are grey	speaker	15678	chatMessage
+far	none	0	4	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	5	1522354791667	striped_green_star	green outlined star with vertical stripes	speaker	6467	chatMessage
+close	irrelevant	1	4	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	6	1522354813711	striped_red_square	red outlined square with vertical grey stripes	speaker	9753	chatMessage
+far	irrelevant	1	3	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	7	1522354842192	wavy_green_circle	green outlined circle with wavy grey lines	speaker	16689	chatMessage
+far	none	0	3	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	8	1522354856098	striped_black_square	black outlined square with vertical grey stripes	speaker	6540	chatMessage
+close	irrelevant	1	2	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	9	1522354877601	spotted_blue_circle	blue outlined circle with grey polka dots	speaker	11573	chatMessage
+close	none	0	3	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	10	1522354903163	striped_red_square	red outlined square with vertical grey stripes	speaker	15685	chatMessage
+close	irrelevant	1	2	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	11	1522354915857	checked_green_star	green outlined star with checkerboard	speaker	6031	chatMessage
+far	irrelevant	2	4	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	12	1522354936521	wavy_blue_circle	blue outlined circle with grey wavy lines	speaker	8565	chatMessage
+close	none	0	2	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	13	1522354953786	checked_red_triangle	red outlined triangle with checkerboard	speaker	7269	chatMessage
+far	none	0	3	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	14	1522354968672	wavy_black_triangle	black outlined triangle with wavy grey lines	speaker	6593	chatMessage
+far	none	0	2	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	15	1522354982335	wavy_green_circle	green outlined circle with wavy grey lines	speaker	5260	chatMessage
+far	irrelevant	1	2	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	16	1522354995677	wavy_red_star	red outlined star with wavy grey lines	speaker	5648	chatMessage
+far	irrelevant	1	2	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	17	1522355009095	spotted_black_star	black outlined star with polka dots	speaker	6479	chatMessage
+far	none	0	2	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	18	1522355025007	striped_black_triangle	black outlined triangle with vertical grey stripes	speaker	7547	chatMessage
+close	irrelevant	2	4	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	19	1522355041076	striped_green_star	green outlined star with vertical grey stripes	speaker	7724	chatMessage
+far	none	0	4	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	20	1522355053984	checked_blue_star	blue outlined star with checkerboard	speaker	4621	chatMessage
+close	none	0	4	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	21	1522355070091	wavy_green_star	green outlined star with wavy grey lines	speaker	7915	chatMessage
+close	none	0	2	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	22	1522355084997	wavy_blue_circle	blue outlined circle with wavy grey lines	speaker	4583	chatMessage
+far	irrelevant	1	2	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	23	1522355098872	striped_blue_square	blue outlined square with veritcal grey stripes	speaker	6463	chatMessage
+close	irrelevant	1	4	pilot0	9674-16e87787-4a0b-4ea9-8aff-1d46e859904c	24	1522355110675	checked_black_star	black outlined star with checkerboard	speaker	4824	chatMessage

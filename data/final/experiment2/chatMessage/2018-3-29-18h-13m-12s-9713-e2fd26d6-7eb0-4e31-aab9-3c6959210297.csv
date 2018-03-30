@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	none	0	4	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	1	1522372392411	wavy_red_star	star with horizontal waves	speaker	15406	chatMessage
+close	none	0	3	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	2	1522372427311	striped_red_circle	red circle with vertical lines	speaker	12003	chatMessage
+far	irrelevant	2	3	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	3	1522372449351	wavy_green_circle	green circle with horizontal waves	speaker	11603	chatMessage
+far	none	0	4	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	4	1522372464411	striped_red_triangle	triangle with vertical lines	speaker	7089	chatMessage
+close	irrelevant	1	2	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	5	1522372475331	spotted_blue_triangle	triangle with dots	speaker	3402	chatMessage
+close	irrelevant	1	3	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	6	1522372491931	checked_blue_star	blue star with checker pattern	speaker	7625	chatMessage
+far	irrelevant	1	4	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	7	1522372509811	checked_green_circle	green circle, checker pattern	speaker	6461	chatMessage
+far	none	0	2	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	8	1522372525471	checked_green_square	green box, checker pattern	speaker	8406	chatMessage
+far	irrelevant	1	4	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	9	1522372537231	striped_red_star	green box with waves	speaker	5348	chatMessage
+close	irrelevant	1	4	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	10	1522372553972	wavy_green_square	green box with waves	speaker	5118	chatMessage
+close	none	0	4	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	11	1522372575431	striped_green_triangle	green triangle, vertical lines	speaker	13075	chatMessage
+far	irrelevant	1	2	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	12	1522372591064	striped_blue_square	blue box with vertical lines	speaker	7512	chatMessage
+far	none	0	2	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	13	1522372603773	striped_green_triangle	green triangle with vertical lines	speaker	6873	chatMessage
+close	none	0	4	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	14	1522372624231	checked_green_triangle	green triangle, checker pattern	speaker	12776	chatMessage
+far	none	0	2	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	15	1522372643171	spotted_green_square	green square with dots	speaker	10105	chatMessage
+close	irrelevant	2	4	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	16	1522372657631	spotted_green_star	green star with tiny dots	speaker	6272	chatMessage
+far	irrelevant	1	4	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	17	1522372670210	checked_green_triangle	green triangle with checker pattern	speaker	6365	chatMessage
+far	none	0	2	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	18	1522372683210	checked_blue_triangle	blue triangle with checker pattern	speaker	7214	chatMessage
+close	none	0	4	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	19	1522372698871	striped_blue_circle	blue circle with lines	speaker	7711	chatMessage
+close	irrelevant	1	2	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	20	1522372712791	wavy_black_circle	black circle with waves	speaker	5209	chatMessage
+close	none	0	3	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	21	1522372726571	wavy_blue_circle	blue circle with waves	speaker	7273	chatMessage
+far	irrelevant	1	2	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	22	1522372740611	checked_green_square	green square with checker pattern	speaker	7868	chatMessage
+close	irrelevant	1	2	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	23	1522372750991	spotted_green_square	green box with tiny dots	speaker	3564	chatMessage
+far	none	0	3	planned_sample	9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297	24	1522372765731	spotted_blue_square	blue box with tiny dots	speaker	4186	chatMessage

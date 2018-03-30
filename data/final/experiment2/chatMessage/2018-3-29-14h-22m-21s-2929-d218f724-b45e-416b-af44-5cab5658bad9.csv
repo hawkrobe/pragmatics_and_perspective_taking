@@ -1,0 +1,55 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	1	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	1	1522358541868	striped_black_circle	Round 	speaker	5937	chatMessage
+close	irrelevant	1	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	1	1522358552568	striped_black_circle	Opposite of white	speaker	5974	chatMessage
+close	irrelevant	1	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	2	1522358574940	spotted_green_triangle	Has 3 sides	speaker	2921	chatMessage
+close	irrelevant	1	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	2	1522358588911	spotted_green_triangle	Not a primary color	speaker	3483	chatMessage
+far	irrelevant	1	4	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	3	1522358632120	spotted_blue_triangle	Has three sides	speaker	3996	chatMessage
+far	irrelevant	1	4	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	3	1522358637219	spotted_blue_triangle	A primary color	speaker	3156	chatMessage
+far	none	0	4	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	4	1522358659477	wavy_red_triangle	Has three sides	speaker	3738	chatMessage
+close	none	0	4	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	5	1522358681071	wavy_red_circle	Does not have sides	speaker	3658	chatMessage
+close	none	0	4	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	5	1522358684038	wavy_red_circle	Primary color	speaker	2520	chatMessage
+close	none	0	4	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	5	1522358690678	wavy_red_circle	radio waves	speaker	1713	chatMessage
+far	none	0	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	6	1522358715504	wavy_red_star	Has 5 tips	speaker	2291	chatMessage
+far	none	0	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	6	1522358726617	wavy_red_star	Primary color	speaker	1988	chatMessage
+far	irrelevant	1	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	7	1522358747092	striped_red_circle	Primary color with no sides	speaker	5694	chatMessage
+close	none	0	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	8	1522358776640	spotted_black_star	Opposite of white with 5 tips and not wavy	speaker	11727	chatMessage
+close	irrelevant	1	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	9	1522358804597	checked_black_triangle	Has three sides and opposite of white	speaker	10445	chatMessage
+close	irrelevant	1	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	9	1522358812073	checked_black_triangle	chess board	speaker	1858	chatMessage
+far	irrelevant	1	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	10	1522358826012	spotted_red_star	Primary color with 5 tips	speaker	4408	chatMessage
+far	irrelevant	1	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	10	1522358834526	spotted_red_star	Does not have solid bars	speaker	3373	chatMessage
+close	irrelevant	2	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	11	1522358846174	spotted_blue_star	Primary color	speaker	2168	chatMessage
+close	irrelevant	2	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	11	1522358847662	spotted_blue_star	5 tips	speaker	857	chatMessage
+close	irrelevant	2	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	11	1522358854925	spotted_blue_star	DOes not have bars or waves	speaker	4010	chatMessage
+far	none	0	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	12	1522358881640	striped_blue_circle	Does not have sides	speaker	3093	chatMessage
+far	none	0	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	12	1522358893853	striped_blue_circle	or dots	speaker	4490	chatMessage
+far	irrelevant	1	4	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	13	1522358909250	checked_black_triangle	Has three sides	speaker	4689	chatMessage
+far	irrelevant	1	4	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	13	1522358911682	checked_black_triangle	checkerboard	speaker	2111	chatMessage
+far	irrelevant	1	4	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	13	1522358919628	checked_black_triangle	opposre of white	speaker	2859	chatMessage
+far	none	0	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	14	1522358935218	spotted_green_triangle	Yellow and blue make....	speaker	5822	chatMessage
+far	none	0	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	14	1522358938016	spotted_green_triangle	has three sides	speaker	2127	chatMessage
+far	none	0	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	14	1522358969839	spotted_green_triangle	No waves	speaker	1311	chatMessage
+close	none	0	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	15	1522358979189	spotted_blue_circle	Has no sides	speaker	1946	chatMessage
+close	none	0	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	15	1522358983115	spotted_blue_circle	Primary color	speaker	2269	chatMessage
+close	none	0	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	15	1522358991392	spotted_blue_circle	No stripes	speaker	3334	chatMessage
+close	none	0	4	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	16	1522359002350	wavy_blue_square	Has 4 sides	speaker	3457	chatMessage
+close	none	0	4	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	16	1522359004728	wavy_blue_square	Primary color	speaker	1962	chatMessage
+close	none	0	4	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	16	1522359008435	wavy_blue_square	No dots	speaker	1249	chatMessage
+close	irrelevant	1	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	17	1522359018295	spotted_red_star	Has five tips	speaker	4314	chatMessage
+close	irrelevant	1	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	17	1522359023503	spotted_red_star	Primary color	speaker	2601	chatMessage
+far	irrelevant	1	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	18	1522359038528	checked_red_square	Had 4 sides	speaker	3179	chatMessage
+far	irrelevant	1	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	18	1522359047398	checked_red_square	looks like chess	speaker	7879	chatMessage
+far	irrelevant	1	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	18	1522359050594	checked_red_square	Primary color	speaker	1919	chatMessage
+close	none	0	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	19	1522359060456	striped_black_star	5 tips	speaker	878	chatMessage
+close	none	0	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	19	1522359068047	striped_black_star	Prison stripes	speaker	4414	chatMessage
+close	none	0	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	20	1522359077553	striped_black_square	4 sides	speaker	1450	chatMessage
+close	none	0	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	20	1522359080037	striped_black_square	not wavy	speaker	1924	chatMessage
+close	irrelevant	1	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	21	1522359094510	checked_black_square	4 sides	speaker	1658	chatMessage
+close	irrelevant	1	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	21	1522359097113	checked_black_square	chess board	speaker	1822	chatMessage
+close	irrelevant	1	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	21	1522359103003	checked_black_square	opposite of white	speaker	3798	chatMessage
+far	none	0	4	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	22	1522359108123	spotted_green_star	5 tips	speaker	928	chatMessage
+far	none	0	4	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	22	1522359112955	spotted_green_star	yellow and blue...	speaker	3262	chatMessage
+far	none	0	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	23	1522359131364	striped_red_square	4 sides	speaker	7074	chatMessage
+far	none	0	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	23	1522359138697	striped_red_square	1st color of rainbpw	speaker	3303	chatMessage
+far	none	0	2	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	23	1522359142049	striped_red_square	rainbow	speaker	1781	chatMessage
+far	irrelevant	1	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	24	1522359149634	wavy_green_triangle	3 sides	speaker	1511	chatMessage
+far	irrelevant	1	3	planned_sample	2929-d218f724-b45e-416b-af44-5cab5658bad9	24	1522359156246	wavy_green_triangle	Yellow and blue mix	speaker	4001	chatMessage

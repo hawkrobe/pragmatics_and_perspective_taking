@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	1	2	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	1	1522370568842	striped_green_star	green striped star	speaker	5714	chatMessage
+close	irrelevant	1	2	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	2	1522370589316	wavy_blue_square	blue outline box wavey lines	speaker	9383	chatMessage
+close	none	0	3	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	3	1522370607106	spotted_black_star	black outline star polka dots	speaker	7527	chatMessage
+far	irrelevant	1	3	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	4	1522370629529	spotted_black_square	blue outline circle vertical stripes	speaker	13958	chatMessage
+far	irrelevant	1	2	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	5	1522370652411	wavy_black_square	black outline square wavey lines 	speaker	11741	chatMessage
+close	none	0	3	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	6	1522370667170	checked_red_triangle	red outline triangle	speaker	4714	chatMessage
+far	none	0	3	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	7	1522370682315	striped_blue_square	blue outline square	speaker	6351	chatMessage
+far	none	0	3	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	8	1522370697540	wavy_black_circle	black outline circle	speaker	4973	chatMessage
+far	irrelevant	2	4	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	9	1522370721082	striped_green_circle	green outline circle with vertical inside stripes	speaker	15932	chatMessage
+close	irrelevant	2	4	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	10	1522370745638	spotted_green_square	green outline square with round dots inside	speaker	15071	chatMessage
+far	none	0	2	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	11	1522370757292	wavy_green_square	green outline circle	speaker	3989	chatMessage
+close	irrelevant	2	3	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	12	1522370779572	spotted_green_star	green outline star with dots inside	speaker	14822	chatMessage
+close	none	0	3	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	13	1522370791980	wavy_red_star	blue outline circle	speaker	5669	chatMessage
+close	none	0	2	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	14	1522370808812	checked_green_square	green outline square	speaker	6567	chatMessage
+far	none	0	3	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	15	1522370820532	checked_blue_circle	blue outline circle	speaker	4254	chatMessage
+far	irrelevant	1	2	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	16	1522370839108	wavy_black_star	black outline star wavey lines inside	speaker	10438	chatMessage
+far	none	0	4	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	17	1522370854718	wavy_green_circle	green outline circle waves inside	speaker	8462	chatMessage
+close	none	0	2	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	18	1522370874012	wavy_green_circle	green outline circle w/ waves	speaker	11653	chatMessage
+far	irrelevant	2	4	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	19	1522370892420	striped_red_star	red outline star with vertical stripe	speaker	10644	chatMessage
+close	irrelevant	2	3	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	20	1522370911979	wavy_black_square	black outline square waves	speaker	12229	chatMessage
+far	irrelevant	1	3	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	21	1522370932983	checked_blue_triangle	blue triangle checkerboard patter inside	speaker	12677	chatMessage
+far	none	0	4	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	22	1522370947708	wavy_red_triangle	red triangle waves	speaker	6966	chatMessage
+close	irrelevant	2	4	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	23	1522370967969	striped_green_square	green square vertical lines	speaker	10494	chatMessage
+close	none	0	2	planned_sample	3699-6c53ad23-34a7-4e0e-ad27-00654af271cc	24	1522370981364	striped_black_circle	black circle vertical lines	speaker	6207	chatMessage

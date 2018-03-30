@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	none	0	4	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	1	1522359947140	checked_red_triangle	red triangle	speaker	3234	chatMessage
+far	none	0	4	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	2	1522359961538	checked_black_star	black star	speaker	2649	chatMessage
+close	irrelevant	2	3	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	3	1522359982648	wavy_green_square	green squiggle square	speaker	11279	chatMessage
+far	irrelevant	2	3	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	4	1522359999226	wavy_blue_circle	blue squiggle circle	speaker	8214	chatMessage
+close	irrelevant	1	3	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	5	1522360015635	striped_green_triangle	green stripe triangle	speaker	5837	chatMessage
+far	irrelevant	1	2	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	6	1522360035379	wavy_red_square	red squiggle square	speaker	5926	chatMessage
+close	none	0	3	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	7	1522360048069	wavy_black_star	black squiggle star	speaker	4079	chatMessage
+far	none	0	2	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	8	1522360059887	wavy_red_star	red squiggle star	speaker	4076	chatMessage
+far	irrelevant	1	2	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	9	1522360072233	spotted_red_star	red polka dot star	speaker	3930	chatMessage
+close	irrelevant	1	2	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	10	1522360083947	striped_blue_circle	blue stripe circle	speaker	4113	chatMessage
+close	irrelevant	1	3	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	11	1522360095672	striped_blue_triangle	blue stripe triangle	speaker	5206	chatMessage
+close	none	0	2	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	12	1522360108989	wavy_black_star	black star	speaker	3933	chatMessage
+far	none	0	3	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	13	1522360119416	wavy_blue_circle	blue circle	speaker	2253	chatMessage
+close	none	0	2	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	14	1522360129578	spotted_green_star	green polka dot star	speaker	3713	chatMessage
+far	none	0	4	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	15	1522360140210	checked_blue_square	square	speaker	2513	chatMessage
+far	irrelevant	1	3	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	16	1522360153327	wavy_black_square	black squiggle square	speaker	4684	chatMessage
+close	irrelevant	1	2	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	17	1522360170208	wavy_blue_square	blue squiggle square	speaker	8622	chatMessage
+close	none	0	4	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	18	1522360184689	wavy_red_star	red squiggle star	speaker	5681	chatMessage
+close	irrelevant	1	2	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	19	1522360197289	striped_blue_star	blue stripe star	speaker	3280	chatMessage
+close	none	0	4	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	20	1522360214752	striped_blue_square	blue stripe square	speaker	8738	chatMessage
+far	irrelevant	1	2	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	21	1522360227735	checked_blue_triangle	blue checkered triangle	speaker	5751	chatMessage
+far	irrelevant	1	2	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	22	1522360240433	wavy_black_circle	black squiggle circle	speaker	3422	chatMessage
+far	none	0	2	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	23	1522360251827	striped_green_square	green stripe square	speaker	5161	chatMessage
+far	none	0	4	planned_sample	1738-0cb6b802-0558-411e-a1ee-f67c30dc499b	24	1522360262388	checked_blue_triangle	triangle	speaker	2278	chatMessage

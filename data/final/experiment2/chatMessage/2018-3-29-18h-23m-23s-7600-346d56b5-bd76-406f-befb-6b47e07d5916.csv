@@ -1,0 +1,23 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	1	2	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	1	1522373003493	spotted_blue_square	lots of dots with the color of the sky surrounding it	speaker	17165	chatMessage
+close	none	0	4	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	2	1522373057334	checked_black_circle	its a checkerboard design that is round like a merry go round	speaker	22975	chatMessage
+far	none	0	4	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	3	1522373099074	striped_red_triangle	Its like a caution symbol that is opposite of square or circle	speaker	20321	chatMessage
+close	none	0	4	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	4	1522373167747	spotted_red_circle	Its round with dots	speaker	8118	chatMessage
+far	none	0	2	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	5	1522373181892	spotted_green_square	square with dots	speaker	3960	chatMessage
+far	irrelevant	2	3	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	6	1522373210180	checked_red_circle	round checkerboard pattern	speaker	14527	chatMessage
+close	irrelevant	2	4	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	7	1522373226572	spotted_black_circle	round with dots	speaker	6161	chatMessage
+far	irrelevant	1	3	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	8	1522373244711	striped_black_triangle	caution symbol with stripes	speaker	9274	chatMessage
+far	none	0	3	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	9	1522373285469	checked_blue_star	ITs sky shape or Christmas topper with checkerboard pattern	speaker	17718	chatMessage
+far	irrelevant	1	4	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	10	1522373310793	striped_blue_square	square with stripes	speaker	5626	chatMessage
+close	irrelevant	2	4	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	11	1522373323342	wavy_red_square	square with waves	speaker	3390	chatMessage
+close	none	0	2	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	12	1522373335527	wavy_black_circle	round with waves	speaker	2661	chatMessage
+far	irrelevant	2	4	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	13	1522373349599	striped_black_star	sky shape with stripes	speaker	4766	chatMessage
+close	irrelevant	1	2	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	14	1522373368313	striped_blue_star	sky shape with stripes	speaker	4569	chatMessage
+close	irrelevant	1	2	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	14	1522373385124	striped_blue_star	They both have stripes	listener	2258	chatMessage
+close	irrelevant	1	2	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	14	1522373391326	striped_blue_star	oh yeah sorry	speaker	2561	chatMessage
+close	irrelevant	1	2	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	14	1522373399364	striped_blue_star	top right with sky blue	speaker	6330	chatMessage
+far	none	0	2	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	15	1522373412834	spotted_black_circle	round with dots	speaker	5642	chatMessage
+close	none	0	4	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	16	1522373427142	checked_green_circle	round with checkerboard pattern	speaker	5901	chatMessage
+far	irrelevant	2	4	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	17	1522373441348	wavy_blue_star	blue star with waves	speaker	3897	chatMessage
+close	none	0	2	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	18	1522373460448	wavy_black_triangle	black caution symbol with waves	speaker	8923	chatMessage
+far	none	0	4	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	19	1522373475844	spotted_red_triangle	pink caution symbol with dots	speaker	5775	chatMessage

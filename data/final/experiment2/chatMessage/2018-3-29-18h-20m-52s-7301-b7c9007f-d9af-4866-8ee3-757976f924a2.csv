@@ -1,0 +1,15 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	none	0	2	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	1	1522372852354	checked_red_square	The target is the square.	speaker	18092	chatMessage
+far	none	0	2	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	1	1522372932528	checked_red_square	the target is the square.	speaker	4134	chatMessage
+far	irrelevant	2	4	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	2	1522373024610	striped_black_star	the target is the star.	speaker	6177	chatMessage
+close	irrelevant	1	3	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	3	1522373068953	checked_black_square	the target is the checkered square.	speaker	9638	chatMessage
+close	irrelevant	1	4	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	4	1522373105578	spotted_black_triangle	the target is the polka dot triangle	speaker	9380	chatMessage
+far	irrelevant	2	3	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	5	1522373143208	striped_blue_circle	the target is the blue circle with gray vertical stripes.	speaker	18480	chatMessage
+close	none	0	4	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	6	1522373180481	spotted_black_circle	the target is the polka dot circle	speaker	8268	chatMessage
+close	none	0	4	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	7	1522373206075	striped_blue_triangle	the target is the blue triangle	speaker	7854	chatMessage
+far	none	0	3	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	8	1522373233099	wavy_red_triangle	the target is the red triangle	speaker	6745	chatMessage
+close	none	0	4	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	9	1522373265227	spotted_black_square	the target is the polka dot square.	speaker	11239	chatMessage
+close	irrelevant	1	2	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	10	1522373310937	checked_green_circle	the target is the green circle with gray and white checkers.	speaker	21672	chatMessage
+far	none	0	2	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	11	1522373355892	spotted_black_circle	the target is the black circle with gray polka dots.	speaker	12260	chatMessage
+far	irrelevant	1	2	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	12	1522373395319	wavy_black_star	the target is the black outlined start, with gray and white wavy lines running horizontal.	speaker	20889	chatMessage
+far	irrelevant	1	3	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	13	1522373468593	spotted_green_circle	the target is the green outlined circle, with gray polka dots on a white background.	speaker	21525	chatMessage

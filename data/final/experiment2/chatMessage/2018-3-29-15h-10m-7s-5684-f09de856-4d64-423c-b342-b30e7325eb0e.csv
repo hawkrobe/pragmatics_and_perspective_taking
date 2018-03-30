@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	none	0	2	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	1	1522361407235	striped_black_triangle	right middle	speaker	1659	chatMessage
+close	none	0	2	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	2	1522361425487	striped_blue_circle	left middle	speaker	1866	chatMessage
+far	irrelevant	1	2	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	3	1522361436270	striped_black_circle	top middle	speaker	1728	chatMessage
+far	irrelevant	2	3	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	4	1522361446060	checked_blue_square	right middle	speaker	2320	chatMessage
+far	none	0	2	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	5	1522361458725	wavy_green_star	left bottom	speaker	1650	chatMessage
+far	none	0	4	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	6	1522361469215	striped_red_square	left middle	speaker	1588	chatMessage
+close	irrelevant	1	2	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	7	1522361483919	spotted_green_square	middle botton	speaker	1227	chatMessage
+close	irrelevant	1	2	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	8	1522361493048	striped_blue_star	top right	speaker	827	chatMessage
+close	none	0	2	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	9	1522361502864	checked_red_triangle	left bot	speaker	2989	chatMessage
+far	irrelevant	2	4	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	10	1522361512603	checked_blue_triangle	right middle	speaker	2603	chatMessage
+far	irrelevant	1	3	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	11	1522361520957	checked_red_star	right top	speaker	928	chatMessage
+close	irrelevant	2	3	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	12	1522361530753	checked_black_circle	left top 	speaker	1400	chatMessage
+far	none	0	3	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	13	1522361540420	checked_blue_star	left middle	speaker	1269	chatMessage
+close	none	0	2	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	14	1522361552445	striped_green_circle	middle bottom	speaker	1542	chatMessage
+far	none	0	4	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	15	1522361560735	spotted_green_circle	middle top 	speaker	1146	chatMessage
+close	irrelevant	1	4	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	16	1522361569804	wavy_blue_square	middle top 	speaker	1768	chatMessage
+close	irrelevant	1	4	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	17	1522361579360	wavy_green_triangle	right bottom	speaker	1296	chatMessage
+far	irrelevant	2	4	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	18	1522361589240	striped_green_star	middle bottom	speaker	2184	chatMessage
+far	none	0	2	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	19	1522361599759	wavy_red_triangle	middle top 	speaker	1297	chatMessage
+far	none	0	4	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	20	1522361608285	spotted_green_star	right top 	speaker	1154	chatMessage
+close	irrelevant	2	4	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	21	1522361619279	striped_blue_circle	top left	speaker	1760	chatMessage
+close	none	0	4	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	22	1522361628585	checked_red_star	middle left	speaker	1187	chatMessage
+close	none	0	2	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	23	1522361638616	wavy_green_star	top left	speaker	2232	chatMessage
+far	irrelevant	1	2	planned_sample	5684-f09de856-4d64-423c-b342-b30e7325eb0e	24	1522361651274	striped_blue_square	middle right	speaker	1148	chatMessage

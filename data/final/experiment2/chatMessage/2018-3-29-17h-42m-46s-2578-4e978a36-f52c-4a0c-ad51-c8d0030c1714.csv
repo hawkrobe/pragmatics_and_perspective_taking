@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	1	2	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	1	1522370566500	spotted_red_triangle	The target is the red trianglewith grey spots	speaker	16094	chatMessage
+far	none	0	3	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	2	1522370603313	wavy_red_star	The target is the red star with wavy lines in it	speaker	16461	chatMessage
+far	none	0	3	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	3	1522370631868	wavy_black_star	The target is the black star with wavy lines in it	speaker	14286	chatMessage
+far	irrelevant	1	2	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	4	1522370661189	checked_red_square	The target is a red square with a gray and white checkerboard design in it	speaker	18660	chatMessage
+close	none	0	2	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	5	1522370693401	striped_red_triangle	The target is a red triangle with gray and white verticle stripes inside it	speaker	18235	chatMessage
+close	irrelevant	1	2	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	6	1522370728205	striped_red_triangle	The target is a red triangle with gray and white verticle stripes inside it	speaker	19557	chatMessage
+close	none	0	3	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	7	1522370758337	spotted_green_star	The target is a red triangle with wavy lines inside it	speaker	15934	chatMessage
+far	irrelevant	1	4	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	8	1522370791728	spotted_red_star	The target is a red triangle with grey and white wavy lines inside it	speaker	15715	chatMessage
+close	none	0	4	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	9	1522370822789	spotted_black_square	The target is a black square with dots inside it	speaker	10193	chatMessage
+close	irrelevant	1	4	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	10	1522370871174	checked_black_star	The target is a black star with a checkerboard pattern inside it	speaker	16204	chatMessage
+far	none	0	3	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	11	1522370900807	spotted_red_circle	The target is a red circle with dots inside it	speaker	15298	chatMessage
+close	irrelevant	1	4	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	12	1522370930205	checked_blue_circle	The target is a blue circle with a checkerboard pattern inside it	speaker	17728	chatMessage
+close	none	0	2	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	13	1522370954535	spotted_black_star	The target is a black star with dots inside it	speaker	11233	chatMessage
+far	irrelevant	1	3	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	14	1522370984995	spotted_black_circle	The target is a black circlewith gray dots inside it	speaker	18519	chatMessage
+far	none	0	2	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	15	1522371013287	spotted_blue_star	The target is a blue star with gray dots inside it	speaker	14151	chatMessage
+far	irrelevant	2	4	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	16	1522371039142	spotted_black_star	The target is a black star with gray dots inside it	speaker	13349	chatMessage
+close	irrelevant	1	3	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	17	1522371062320	spotted_black_star	The target is a black star with gray dots inside it	speaker	12493	chatMessage
+far	irrelevant	2	4	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	18	1522371089784	striped_black_square	The target is a black square with verticle gray and white stripes inside it	speaker	17644	chatMessage
+close	none	0	3	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	19	1522371123880	checked_green_triangle	The target is a green triangle with a checkerboard pattern inside it	speaker	17736	chatMessage
+far	none	0	3	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	20	1522371148827	spotted_blue_triangle	The target is a blue triangle with gray dots inside it	speaker	14094	chatMessage
+far	irrelevant	1	4	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	21	1522371172951	spotted_blue_square	The target is a blue square with gray dots inside it	speaker	13222	chatMessage
+far	none	0	2	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	22	1522371213134	checked_red_star	The target is a red star with a checkerboard pattern inside it	speaker	29605	chatMessage
+close	irrelevant	2	3	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	23	1522371243882	wavy_red_circle	The target is a red circle with wavy horizontal lines inside it	speaker	19718	chatMessage
+close	none	0	3	planned_sample	2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714	24	1522371272756	wavy_black_triangle	The target is a black triangle with wavy horizontal lines inside it	speaker	16328	chatMessage

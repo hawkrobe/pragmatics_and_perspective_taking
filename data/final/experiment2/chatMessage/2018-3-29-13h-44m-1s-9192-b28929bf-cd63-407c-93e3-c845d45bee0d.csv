@@ -1,0 +1,27 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	irrelevant	1	3	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	1	1522356241247	wavy_black_square	square with grey squiggles	speaker	11195	chatMessage
+close	none	0	4	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	2	1522356272777	spotted_blue_square	Blue outlined square with grey dots	speaker	13380	chatMessage
+close	irrelevant	1	2	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	3	1522356298484	striped_green_square	lime green outlined square with vertical grey stripes	speaker	11760	chatMessage
+close	irrelevant	1	2	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	3	1522356316567	striped_green_square	you can probably just say stripes for things like this	listener	7228	chatMessage
+far	irrelevant	2	4	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	4	1522356331796	striped_green_circle	green circle stripes	speaker	6389	chatMessage
+close	irrelevant	2	3	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	5	1522356350066	spotted_black_triangle	black triangle dots	speaker	7642	chatMessage
+far	none	0	4	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	6	1522356366963	checked_black_square	black square checkerboard	speaker	10095	chatMessage
+far	none	0	2	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	7	1522356380610	striped_black_square	black square stripes	speaker	6711	chatMessage
+close	none	0	3	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	8	1522356394051	wavy_blue_circle	blue circle squiggles	speaker	6594	chatMessage
+close	none	0	2	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	9	1522356409582	wavy_red_circle	red circle squiggles	speaker	5299	chatMessage
+close	none	0	3	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	10	1522356421715	striped_red_triangle	red triangle stripes	speaker	4726	chatMessage
+far	irrelevant	2	3	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	11	1522356436508	striped_blue_star	blue star stripes	speaker	8733	chatMessage
+close	irrelevant	2	4	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	12	1522356449398	striped_black_star	black star stripes	speaker	4767	chatMessage
+close	irrelevant	2	4	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	13	1522356465878	wavy_red_circle	red circle squiggles	speaker	8101	chatMessage
+far	none	0	2	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	14	1522356480880	striped_green_star	green star stripes	speaker	8046	chatMessage
+far	irrelevant	1	2	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	15	1522356497828	checked_green_circle	green circle checkerboard	speaker	5768	chatMessage
+far	none	0	3	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	16	1522356510925	checked_blue_square	blue square checkerboard	speaker	5989	chatMessage
+far	none	0	3	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	17	1522356524540	wavy_blue_circle	blue circle squiggles	speaker	4275	chatMessage
+close	irrelevant	2	3	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	18	1522356538083	striped_black_star	black star stripes	speaker	6179	chatMessage
+close	irrelevant	1	4	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	19	1522356560332	spotted_blue_square	blue square dots	speaker	5303	chatMessage
+far	irrelevant	2	3	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	20	1522356576198	striped_green_circle	green circle stripes	speaker	4725	chatMessage
+close	none	0	3	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	21	1522356588946	wavy_green_circle	green circle squiggles	speaker	5500	chatMessage
+far	none	0	3	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	22	1522356601089	checked_red_square	red square checkerboard	speaker	5022	chatMessage
+far	irrelevant	1	2	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	23	1522356612698	spotted_black_star	black star dots	speaker	4660	chatMessage
+close	none	0	4	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	24	1522356625839	wavy_red_square	red square squiggles	speaker	4977	chatMessage
+close	none	0	4	planned_sample	9192-b28929bf-cd63-407c-93e3-c845d45bee0d	24	1522356635920	wavy_red_square	good job team mate	listener	5077	chatMessage

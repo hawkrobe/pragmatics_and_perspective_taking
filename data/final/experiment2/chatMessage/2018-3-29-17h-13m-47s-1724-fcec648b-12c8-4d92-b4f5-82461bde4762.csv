@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	1	2	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	1	1522368827096	wavy_red_square	the red square with wave gray and white lines	speaker	11691	chatMessage
+close	irrelevant	1	3	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	2	1522368878308	wavy_green_square	the green outlined square with gray and white wavy lines	speaker	12622	chatMessage
+close	none	0	2	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	3	1522368909241	checked_green_star	the green outlined star with a gray and white checkerboard pattern	speaker	17211	chatMessage
+far	none	0	4	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	4	1522368934476	wavy_red_circle	the red outlined circle with gray and white wavy lines	speaker	14320	chatMessage
+far	none	0	4	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	5	1522368964921	striped_green_star	the green outlined star with gray and white vertical stripes	speaker	15567	chatMessage
+far	irrelevant	2	4	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	6	1522368995963	spotted_red_circle	the red outlined circle with gray polka dots on a white background	speaker	16618	chatMessage
+close	none	0	4	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	7	1522369021102	spotted_green_triangle	the green outlined triangle with gray polka dots	speaker	12410	chatMessage
+far	irrelevant	2	4	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	8	1522369048860	checked_green_star	the green outlined star with gray and white checkerboard print	speaker	12235	chatMessage
+far	irrelevant	2	3	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	9	1522369069494	wavy_black_square	the black outlined square with gray and white waves	speaker	10960	chatMessage
+close	none	0	3	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	10	1522369091504	wavy_red_square	the red outlines square with gray and white wavy lines	speaker	9623	chatMessage
+close	irrelevant	1	4	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	11	1522369110672	striped_green_circle	the green outlined circle with gray and white stripes	speaker	10157	chatMessage
+far	none	0	4	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	12	1522369136648	checked_red_triangle	the red outlined triangle with gray and white checkerboard pattern	speaker	14062	chatMessage
+close	irrelevant	1	2	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	13	1522369159734	striped_red_star	the red outlined star with gray and white vertical stripes	speaker	9896	chatMessage
+far	none	0	4	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	14	1522369186739	wavy_blue_circle	the blue outlined circle with gray and white wavy lines	speaker	13508	chatMessage
+close	none	0	4	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	15	1522369209964	spotted_black_star	the black outlined star with gray polka dots	speaker	11156	chatMessage
+far	irrelevant	1	2	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	16	1522369236348	spotted_red_square	the red outlined square with gray polka dots on a white backgrouns	speaker	15418	chatMessage
+far	irrelevant	1	3	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	17	1522369265476	wavy_red_triangle	the red outlined triangle with gray and white wavy lines	speaker	11797	chatMessage
+close	none	0	2	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	18	1522369287712	wavy_red_square	the red outlined square with gray and white wavy stripes	speaker	11454	chatMessage
+far	none	0	2	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	19	1522369308597	striped_black_square	the black outlined square with stripes	speaker	8215	chatMessage
+far	none	0	4	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	20	1522369340270	striped_black_square	the black outlined square with gray and white strieps	speaker	9837	chatMessage
+close	irrelevant	1	2	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	21	1522369364660	checked_green_circle	the green circle with gray and white checkerboard print	speaker	12737	chatMessage
+close	irrelevant	2	4	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	22	1522369392941	striped_red_circle	the red outlined circle with gray and white stripes	speaker	8884	chatMessage
+far	irrelevant	1	2	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	23	1522369417743	spotted_black_triangle	the black outlined triangle with gray polka dots	speaker	12086	chatMessage
+close	none	0	4	planned_sample	1724-fcec648b-12c8-4d92-b4f5-82461bde4762	24	1522369435692	striped_red_circle	the red outlined circle with gray and white stripes	speaker	9121	chatMessage

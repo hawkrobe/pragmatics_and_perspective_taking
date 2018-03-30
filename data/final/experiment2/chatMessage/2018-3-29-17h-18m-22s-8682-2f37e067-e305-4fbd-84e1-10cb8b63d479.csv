@@ -1,0 +1,28 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	none	0	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	1	1522369102790	spotted_black_square	square	speaker	1971	chatMessage
+close	none	0	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	1	1522369108004	spotted_black_square	with circles inside it	speaker	2765	chatMessage
+close	none	0	3	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	2	1522369129463	striped_red_square	square with lines inside	speaker	5119	chatMessage
+far	none	0	2	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	3	1522369148661	wavy_blue_triangle	triangle with blue border	speaker	6277	chatMessage
+far	irrelevant	2	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	4	1522369174760	spotted_blue_circle	circle with blue border and dots inside	speaker	10739	chatMessage
+far	irrelevant	2	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	5	1522369194953	wavy_red_triangle	triangle with red border and waves inside	speaker	5749	chatMessage
+close	irrelevant	1	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	6	1522369216454	checked_black_star	star with black border and checkers inside	speaker	9881	chatMessage
+far	none	0	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	7	1522369236594	spotted_black_square	square	speaker	3855	chatMessage
+close	irrelevant	1	2	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	8	1522369254915	spotted_green_triangle	triangle with green border and dots inside	speaker	6284	chatMessage
+far	irrelevant	2	3	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	9	1522369274147	striped_red_circle	circle with red border and vertical lines inside	speaker	8979	chatMessage
+far	none	0	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	10	1522369293873	striped_green_star	star with green border and verticle lines inside	speaker	8488	chatMessage
+close	none	0	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	11	1522369315469	striped_black_triangle	triangle with black border	speaker	5464	chatMessage
+close	irrelevant	1	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	12	1522369330085	wavy_blue_circle	circle with blue border and waves inside	speaker	5084	chatMessage
+far	irrelevant	2	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	13	1522369346072	striped_green_star	triangle with green border and verticle lines inside	speaker	7405	chatMessage
+far	irrelevant	2	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	13	1522369348872	striped_green_star	star	speaker	800	chatMessage
+far	irrelevant	2	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	13	1522369350344	striped_green_star	not triangle	speaker	1113	chatMessage
+close	none	0	3	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	14	1522369372916	striped_black_triangle	triangle with black border	speaker	5803	chatMessage
+far	none	0	2	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	15	1522369386047	wavy_red_square	square	speaker	1531	chatMessage
+close	irrelevant	1	3	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	16	1522369407985	checked_black_circle	circle with black border and checkers inside	speaker	7502	chatMessage
+close	none	0	3	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	17	1522369425893	spotted_black_circle	circle with dots inside	speaker	6562	chatMessage
+close	irrelevant	1	2	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	18	1522369442558	wavy_green_circle	circle with green border and waves inside	speaker	6654	chatMessage
+close	irrelevant	2	3	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	19	1522369459240	wavy_red_circle	circle with red border and waves inside	speaker	6600	chatMessage
+far	none	0	3	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	20	1522369472205	spotted_black_circle	circle	speaker	5218	chatMessage
+far	irrelevant	1	3	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	21	1522369484169	wavy_blue_square	square with blue border and waves inside	speaker	4734	chatMessage
+far	irrelevant	1	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	22	1522369502142	spotted_black_star	star with black border and dots inside	speaker	6251	chatMessage
+far	none	0	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	23	1522369525027	striped_blue_star	star	speaker	1520	chatMessage
+close	none	0	4	planned_sample	8682-2f37e067-e305-4fbd-84e1-10cb8b63d479	24	1522369547952	wavy_red_square	square with red border and waves inside. good work! :)	speaker	11667	chatMessage

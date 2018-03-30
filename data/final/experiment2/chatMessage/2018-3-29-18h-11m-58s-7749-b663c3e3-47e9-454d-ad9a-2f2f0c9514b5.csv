@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	2	4	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	1	1522372318593	wavy_red_star	blue squiggly star	speaker	7385	chatMessage
+close	none	0	4	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	2	1522372355493	striped_black_triangle	blue striped triangle	speaker	7275	chatMessage
+far	irrelevant	1	2	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	3	1522372379441	spotted_black_triangle	polka dot triangle	speaker	10120	chatMessage
+far	irrelevant	2	4	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	4	1522372409280	striped_green_star	striped star green outline	speaker	10589	chatMessage
+far	none	0	3	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	5	1522372428038	striped_blue_triangle	triangle striped blue outline	speaker	7120	chatMessage
+close	irrelevant	1	2	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	6	1522372448792	checked_red_star	checkered star red outline	speaker	9219	chatMessage
+close	none	0	2	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	7	1522372473116	striped_black_triangle	triangle striped black outline	speaker	9139	chatMessage
+far	none	0	4	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	8	1522372488900	checked_green_star	checkered star green outline	speaker	7297	chatMessage
+close	none	0	3	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	9	1522372508615	striped_black_triangle	striped triangle black outline	speaker	8396	chatMessage
+far	none	0	4	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	10	1522372533512	spotted_black_square	polka dot square black outline	speaker	8216	chatMessage
+close	irrelevant	1	4	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	11	1522372556530	wavy_blue_circle	squiggly circle light blue outline	speaker	13418	chatMessage
+far	irrelevant	1	4	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	12	1522372584934	spotted_blue_circle	polka dot circle light blue outline	speaker	14749	chatMessage
+close	irrelevant	1	2	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	13	1522372604780	striped_red_circle	striped circle red outline	speaker	7631	chatMessage
+far	irrelevant	2	3	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	14	1522372624192	spotted_green_star	polka dot star green outline	speaker	5840	chatMessage
+far	none	0	4	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	15	1522372641612	checked_blue_square	checkered square blue outline	speaker	7371	chatMessage
+close	none	0	2	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	16	1522372655558	checked_black_star	checkered star black outline	speaker	5095	chatMessage
+close	none	0	4	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	17	1522372671701	spotted_green_triangle	polka dot triangle green outline	speaker	6609	chatMessage
+far	irrelevant	2	4	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	18	1522372693420	checked_green_star	checkered star green outline	speaker	9779	chatMessage
+far	irrelevant	1	2	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	19	1522372710758	wavy_green_triangle	squiggly triangle green outline	speaker	9337	chatMessage
+far	none	0	4	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	20	1522372726452	checked_red_square	checkered square red outline	speaker	7357	chatMessage
+close	irrelevant	1	2	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	21	1522372742442	striped_green_circle	striped circle green outline	speaker	5999	chatMessage
+close	irrelevant	1	2	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	22	1522372759642	striped_red_circle	striped circle red outline	speaker	6578	chatMessage
+far	none	0	3	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	23	1522372775178	checked_red_star	checkered star red outline	speaker	6725	chatMessage
+close	none	0	4	planned_sample	7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5	24	1522372789822	striped_black_star	striped star black outline	speaker	5106	chatMessage

@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	1	3	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	1	1522368112379	spotted_red_triangle	Red upward pointing triangle with grey dots inside	speaker	26085	chatMessage
+close	none	0	2	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	2	1522368182720	striped_red_square	Red square with vertical grey bars inside 	speaker	16266	chatMessage
+close	irrelevant	2	4	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	3	1522368219170	striped_green_circle	Green circle with vertical grey bars inside	speaker	11964	chatMessage
+far	irrelevant	1	3	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	4	1522368256476	checked_black_triangle	Black upward pointing triangle with grey checkers inside	speaker	18281	chatMessage
+far	none	0	3	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	5	1522368288964	spotted_green_triangle	Green upward pointing triangle with grey dots inside	speaker	17699	chatMessage
+far	none	0	4	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	6	1522368325238	wavy_green_star	Green star with grey horizontal squiggles inside	speaker	18231	chatMessage
+far	irrelevant	2	4	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	7	1522368370697	wavy_black_star	Black star with grey horizontal squiggles inside	speaker	18971	chatMessage
+close	none	0	4	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	8	1522368428224	striped_red_star	Red star with grey vertical bars inside	speaker	11698	chatMessage
+close	irrelevant	1	4	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	9	1522368464896	wavy_blue_circle	Blue circle with horizontal grey squiggles inside	speaker	13513	chatMessage
+far	irrelevant	1	2	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	10	1522368496369	wavy_red_square	Red square with horizontal grey squiggles inside	speaker	13217	chatMessage
+close	none	0	3	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	11	1522368531176	checked_blue_triangle	Upward blue triangle with grey checkers inside	speaker	13231	chatMessage
+far	none	0	4	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	12	1522368657574	wavy_blue_square	Blue square with horizontal grey squiggles inside also I think there are different size squiggles dots etc. now so this one has slightly thicker squiggles 	speaker	100580	chatMessage
+close	none	0	2	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	13	1522368705097	striped_green_square	Green square with thinner horizontal grey bars	speaker	12679	chatMessage
+close	irrelevant	2	4	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	14	1522368733693	striped_blue_star	Blue star with thin vertical grey bars	speaker	11597	chatMessage
+far	irrelevant	1	3	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	15	1522368766323	striped_black_triangle	Black upward triangle with thin vertical grey bars	speaker	18765	chatMessage
+far	none	0	3	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	16	1522368802029	wavy_red_square	Red square with thicker horizontal grey squiggles	speaker	13798	chatMessage
+close	none	0	3	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	17	1522368834649	striped_red_square	Red square with thin vertical grey bars	speaker	10398	chatMessage
+far	none	0	3	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	18	1522368863902	spotted_black_circle	Black circle with smaller grey dots	speaker	12400	chatMessage
+far	irrelevant	1	2	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	19	1522368890250	striped_red_square	Red square with thin vertical grey bars	speaker	10064	chatMessage
+close	irrelevant	1	2	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	20	1522368919906	wavy_red_circle	Red circle with thicker horizontal grey squiggles	speaker	12899	chatMessage
+close	none	0	2	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	21	1522368944207	spotted_green_triangle	Upward green triangle with small grey dots	speaker	11998	chatMessage
+close	irrelevant	1	2	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	22	1522368964943	checked_black_circle	Black circle with big grey checkers	speaker	10014	chatMessage
+far	none	0	2	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	23	1522368985545	striped_red_square	Red square with thin vertical grey bars	speaker	9146	chatMessage
+far	irrelevant	1	2	planned_sample	9241-fc30c349-3fea-4e0e-bb20-738d6736f6c4	24	1522369049956	wavy_blue_circle	Blue circle with thicker horizontal grey squiggles and also good job👍	speaker	28469	chatMessage

@@ -1,0 +1,29 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	none	0	2	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	1	1522363666834	wavy_red_circle	Hello. The object is round with wavy rows	speaker	14996	chatMessage
+far	irrelevant	1	4	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	2	1522363693477	checked_red_square	The object is a square grid.	speaker	8691	chatMessage
+far	irrelevant	1	4	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	2	1522363699773	checked_red_square	*with	speaker	1015	chatMessage
+far	none	0	2	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	3	1522363714608	spotted_blue_circle	The object is round with dots.	speaker	6837	chatMessage
+far	irrelevant	2	4	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	4	1522363741253	striped_blue_square	The object is square with straight lines	speaker	16126	chatMessage
+close	none	0	3	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	5	1522363760253	spotted_blue_star	The object is a star with dots.	speaker	8080	chatMessage
+close	irrelevant	2	3	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	6	1522363781676	striped_red_circle	The object is a red circle with straight lines	speaker	12677	chatMessage
+close	none	0	4	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	7	1522363801983	checked_red_triangle	The object is a red triangle with a grid.	speaker	10451	chatMessage
+close	irrelevant	1	3	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	8	1522363819608	spotted_blue_square	The object is a blue square with dots.	speaker	7122	chatMessage
+far	irrelevant	1	4	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	9	1522363846660	striped_green_triangle	The object is a triangle; that I can see	speaker	15124	chatMessage
+close	none	0	4	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	10	1522363870984	spotted_blue_triangle	The object is a blue triangle with dots.	speaker	9308	chatMessage
+far	irrelevant	2	3	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	11	1522363890591	striped_black_circle	The object is a circle with straight lines that I can see	speaker	11837	chatMessage
+far	none	0	3	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	12	1522363906299	checked_green_square	The object is a square with a grid	speaker	6340	chatMessage
+far	none	0	3	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	13	1522363919316	checked_blue_triangle	The object is a triangle	speaker	3808	chatMessage
+close	irrelevant	1	2	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	14	1522363939081	wavy_black_triangle	The object is a black triangle that I can see.	speaker	9789	chatMessage
+close	none	0	2	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	15	1522363955835	checked_blue_circle	The object is a circle with a grid	speaker	6702	chatMessage
+close	irrelevant	1	4	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	16	1522363979302	wavy_green_star	The object is a star with wavy rows, that I can see	speaker	16296	chatMessage
+far	none	0	2	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	17	1522363994322	wavy_red_triangle	The object is a triangle	speaker	5893	chatMessage
+far	none	0	4	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	18	1522364004744	wavy_red_triangle	The object is a triangle	speaker	4028	chatMessage
+far	irrelevant	1	2	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	19	1522364024156	checked_black_star	The object is a black star with a grid, that I can see	speaker	11061	chatMessage
+close	none	0	2	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	20	1522364039759	spotted_black_circle	The object is a circle with dots	speaker	5153	chatMessage
+close	irrelevant	1	2	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	21	1522364061426	wavy_green_triangle	The object is a green triangle with wavy rows, that I can see.	speaker	13148	chatMessage
+close	irrelevant	2	4	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	22	1522364082122	wavy_green_triangle	The object is the same as last, that I can see	speaker	11002	chatMessage
+close	irrelevant	2	4	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	22	1522364097771	wavy_green_triangle	A triangle with wavy rows.	speaker	4007	chatMessage
+close	irrelevant	2	4	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	22	1522364103016	wavy_green_triangle	thanks!	listener	2861	chatMessage
+close	none	0	3	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	23	1522364120095	checked_black_triangle	The object is a black triangle with a grid	speaker	9335	chatMessage
+far	irrelevant	1	3	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	24	1522364137769	checked_red_star	The object is a red star with a grid, that I can see	speaker	8571	chatMessage
+far	irrelevant	1	3	planned_sample	3609-61b0c403-6ec1-4105-a463-23eb2bfe8704	24	1522364148577	checked_red_star	last one!	listener	3499	chatMessage

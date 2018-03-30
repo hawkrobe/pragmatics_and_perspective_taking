@@ -1,0 +1,27 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	irrelevant	1	2	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	1	1522357405606	wavy_blue_square	blue square with wave lines 	speaker	17560	chatMessage
+close	none	0	3	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	2	1522357426016	spotted_green_star	green star with dots	speaker	5566	chatMessage
+far	none	0	3	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	3	1522357439238	spotted_red_circle	red cicle with dots	speaker	3966	chatMessage
+close	none	0	2	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	4	1522357453167	spotted_red_star	red star with dots	speaker	3686	chatMessage
+far	irrelevant	1	2	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	5	1522357467906	spotted_green_circle	green circle with dots	speaker	6558	chatMessage
+close	irrelevant	1	2	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	6	1522357484106	striped_green_star	green star with stripes	speaker	5456	chatMessage
+far	none	0	3	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	7	1522357501894	wavy_black_square	black square with wave	speaker	8296	chatMessage
+close	irrelevant	2	3	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	8	1522357513028	spotted_black_star	black star with dots	speaker	3421	chatMessage
+far	none	0	4	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	9	1522357523807	spotted_blue_star	blue star	speaker	1942	chatMessage
+close	none	0	2	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	10	1522357537572	striped_red_triangle	red triangle	speaker	2918	chatMessage
+close	none	0	4	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	11	1522357545508	striped_red_circle	red cicle	speaker	1798	chatMessage
+close	none	0	4	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	11	1522357551790	striped_red_circle	circle	speaker	1813	chatMessage
+close	irrelevant	2	4	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	12	1522357566900	wavy_black_star	black star with waves	speaker	6642	chatMessage
+close	irrelevant	1	2	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	13	1522357587775	checked_green_square	green box with checker 	speaker	13051	chatMessage
+far	irrelevant	1	3	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	14	1522357601223	wavy_green_star	green star wave	speaker	4725	chatMessage
+far	irrelevant	2	3	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	15	1522357615556	wavy_blue_circle	blue circle wave	speaker	7455	chatMessage
+far	none	0	3	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	16	1522357624987	checked_red_square	red square	speaker	1941	chatMessage
+close	irrelevant	1	2	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	17	1522357639773	checked_red_square	red square checker	speaker	8071	chatMessage
+close	irrelevant	2	4	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	18	1522357651428	spotted_green_star	green star dots	speaker	3647	chatMessage
+far	irrelevant	2	3	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	19	1522357663144	spotted_blue_square	blue square dots	speaker	5125	chatMessage
+far	none	0	4	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	20	1522357672163	spotted_black_circle	black cicle	speaker	2238	chatMessage
+far	none	0	4	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	20	1522357677217	spotted_black_circle	circle	speaker	3070	chatMessage
+far	irrelevant	1	2	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	21	1522357686500	checked_green_star	green star checker	speaker	3014	chatMessage
+close	none	0	4	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	22	1522357696022	spotted_red_circle	red circle	speaker	2447	chatMessage
+close	none	0	4	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	23	1522357708810	spotted_red_square	red square	speaker	2110	chatMessage
+far	none	0	3	planned_sample	7040-e34567a1-1ae6-4940-9f0d-aecaca019132	24	1522357716896	striped_green_star	green star	speaker	1694	chatMessage

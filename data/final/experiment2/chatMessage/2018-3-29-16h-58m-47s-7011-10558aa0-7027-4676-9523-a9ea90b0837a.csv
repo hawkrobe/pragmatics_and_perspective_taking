@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	1	2	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	1	1522367927894	spotted_black_circle	The object is a circle with dots	speaker	5191	chatMessage
+far	none	0	3	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	2	1522367949752	spotted_black_triangle	the object is a triangle	speaker	4772	chatMessage
+close	none	0	2	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	3	1522367965404	checked_green_star	the object is a green star	speaker	6683	chatMessage
+far	none	0	2	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	4	1522367977376	checked_green_star	the object is a green star	speaker	3823	chatMessage
+far	irrelevant	1	2	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	5	1522367995674	spotted_green_triangle	The object is a triangle	speaker	10957	chatMessage
+far	irrelevant	2	4	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	6	1522368014337	wavy_blue_triangle	The object is below the blue circle	speaker	9452	chatMessage
+close	none	0	2	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	7	1522368034380	striped_green_square	the object is the green square	speaker	8010	chatMessage
+close	irrelevant	1	2	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	8	1522368049086	wavy_red_triangle	the object is the orange triangle	speaker	5646	chatMessage
+far	irrelevant	1	2	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	9	1522368079496	striped_black_triangle	the object is the black triangle	speaker	5924	chatMessage
+close	none	0	4	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	10	1522368094988	spotted_red_square	the object is the square with dots	speaker	6069	chatMessage
+close	irrelevant	1	2	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	11	1522368111422	spotted_black_star	the object is the black star with dots	speaker	4469	chatMessage
+far	irrelevant	2	4	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	12	1522368135878	checked_blue_triangle	The object is the blue triangle with checkers	speaker	15497	chatMessage
+close	none	0	3	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	13	1522368155306	striped_blue_circle	the object is the blue circle below the black star	speaker	10116	chatMessage
+far	none	0	3	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	14	1522368176613	checked_black_star	the black star below the black triangle	speaker	7655	chatMessage
+close	irrelevant	1	3	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	15	1522368200550	wavy_black_circle	the black circle with waves in it	speaker	12131	chatMessage
+far	none	0	3	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	16	1522368225668	checked_red_triangle	the red triangle	speaker	2668	chatMessage
+close	none	0	4	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	17	1522368249614	checked_blue_star	a blue star	speaker	3044	chatMessage
+close	irrelevant	1	2	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	18	1522368276181	wavy_black_square	the black square with waves	speaker	14856	chatMessage
+far	irrelevant	1	2	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	19	1522368292322	checked_red_square	the red square with checkers	speaker	5570	chatMessage
+close	none	0	4	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	20	1522368311552	checked_red_triangle	the red triangle	speaker	6211	chatMessage
+close	irrelevant	2	3	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	21	1522368326776	spotted_red_star	the red star with dots	speaker	5254	chatMessage
+far	irrelevant	1	2	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	22	1522368339101	striped_black_square	the black square with vertical stripes	speaker	5183	chatMessage
+far	none	0	4	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	23	1522368354086	striped_red_square	the red square	speaker	3377	chatMessage
+far	none	0	3	planned_sample	7011-10558aa0-7027-4676-9523-a9ea90b0837a	24	1522368380179	spotted_black_square	the black square with dots	speaker	4439	chatMessage

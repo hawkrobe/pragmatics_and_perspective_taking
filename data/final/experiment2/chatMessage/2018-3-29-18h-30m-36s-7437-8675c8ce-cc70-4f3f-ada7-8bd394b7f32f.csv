@@ -1,0 +1,3 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	none	0	4	planned_sample	7437-8675c8ce-cc70-4f3f-ada7-8bd394b7f32f	1	1522373436960	spotted_black_star	The object is a star with dots 	speaker	9969	chatMessage
+close	none	0	3	planned_sample	7437-8675c8ce-cc70-4f3f-ada7-8bd394b7f32f	2	1522373464311	checked_black_star	The object is a black star with a checkerboard on the inside.	speaker	12208	chatMessage

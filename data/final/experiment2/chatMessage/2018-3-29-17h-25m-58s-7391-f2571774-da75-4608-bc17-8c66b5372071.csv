@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	none	0	4	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	1	1522369558421	checked_blue_star	Look for a blue star with squares in it	speaker	11600	chatMessage
+far	none	0	3	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	2	1522369592325	spotted_black_star	It's a star again, black with dots	speaker	17722	chatMessage
+far	irrelevant	2	4	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	3	1522369619437	checked_black_triangle	OK, black triangle with gray squares	speaker	12609	chatMessage
+close	none	0	4	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	4	1522369649510	striped_red_triangle	Staying in the triangles, red outline, vertical stripes	speaker	17618	chatMessage
+far	irrelevant	1	3	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	5	1522369685319	spotted_black_circle	Black circle, gray dots	speaker	9873	chatMessage
+close	irrelevant	2	4	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	6	1522369723683	wavy_blue_circle	Ah, circles, blue, gray wavys	speaker	26833	chatMessage
+close	none	0	4	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	7	1522369753827	wavy_red_star	It's a star, red outline, gray stripes	speaker	16729	chatMessage
+close	irrelevant	1	2	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	8	1522369785412	striped_green_circle	I'm seeing a green circle, stripes, vertical, m'kay?	speaker	16569	chatMessage
+close	irrelevant	2	4	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	9	1522369817477	checked_green_triangle	And we're back to triangles, green with boxes	speaker	16161	chatMessage
+far	irrelevant	2	4	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	10	1522369843730	wavy_blue_star	Circle once more, greenish, and the waves reappear	speaker	14873	chatMessage
+close	irrelevant	1	4	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	11	1522369876133	striped_blue_circle	Circle, blue outline, vertical stripes	speaker	12089	chatMessage
+close	none	0	3	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	12	1522369918550	striped_blue_square	New territory, it's a square, blue in outline, and gray bars	speaker	28130	chatMessage
+close	none	0	4	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	13	1522369941102	spotted_red_triangle	red, dotted, triangle	speaker	7761	chatMessage
+far	none	0	4	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	14	1522369966043	striped_blue_square	stripes, blue, square	speaker	11704	chatMessage
+far	irrelevant	1	4	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	15	1522370006038	wavy_blue_circle	Not a star, not a triangle, not a square, definitely blue with waves though	speaker	30706	chatMessage
+far	none	0	4	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	16	1522370059173	wavy_green_circle	The object possesses no corners, has a wavy texture, and is outlined in green	speaker	33945	chatMessage
+far	none	0	3	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	17	1522370107981	striped_black_circle	The thing with a black outline (and gray stripes, and a circular shape)	speaker	27035	chatMessage
+close	irrelevant	1	2	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	18	1522370155758	wavy_black_square	Square? check.  Green, yup? Dotty, you betcha	speaker	28129	chatMessage
+close	none	0	2	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	19	1522370191647	striped_blue_circle	I think they moved the outline on me.  Blue, circle, stripes	speaker	20074	chatMessage
+close	none	0	2	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	20	1522370221835	wavy_green_circle	Green, circle, specifically with waves	speaker	12569	chatMessage
+far	irrelevant	1	3	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	21	1522370251895	checked_blue_circle	It's a star, with green, and waves	speaker	11314	chatMessage
+far	none	0	2	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	22	1522370295328	spotted_green_circle	I really think the outline is changing.  Right now it is on a green circle with dots	speaker	27474	chatMessage
+close	irrelevant	1	2	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	23	1522370326157	wavy_black_triangle	I have the outline on a black triangle with waves	speaker	15489	chatMessage
+far	irrelevant	1	2	planned_sample	7391-f2571774-da75-4608-bc17-8c66b5372071	24	1522370357061	wavy_black_star	And we end on a black, wavy star	speaker	16290	chatMessage

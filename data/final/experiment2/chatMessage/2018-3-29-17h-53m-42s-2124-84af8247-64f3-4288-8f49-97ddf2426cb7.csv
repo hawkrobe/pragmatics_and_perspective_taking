@@ -1,0 +1,27 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	1	4	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	1	1522371222497	spotted_red_star	Polka dots	speaker	7292	chatMessage
+far	irrelevant	1	2	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	2	1522371267230	striped_blue_circle	horizontal stripes	speaker	5786	chatMessage
+far	irrelevant	1	2	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	2	1522371294293	striped_blue_circle	what is the shape with the horizontal stripes?	listener	17240	chatMessage
+far	irrelevant	1	2	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	2	1522371301809	striped_blue_circle	circle	speaker	2805	chatMessage
+far	irrelevant	1	2	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	3	1522371319262	checked_green_circle	circle with squares	speaker	7624	chatMessage
+far	none	0	3	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	4	1522371343340	wavy_green_triangle	Triangle with squiggly lines	speaker	12520	chatMessage
+close	none	0	4	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	5	1522371371254	wavy_black_triangle	green box with horizontal stripes	speaker	17300	chatMessage
+close	none	0	3	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	6	1522371411410	striped_green_square	Green box with horizontal stripes	speaker	16247	chatMessage
+far	none	0	3	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	7	1522371439277	checked_black_triangle	Black triangle with boxes inside	speaker	14188	chatMessage
+close	irrelevant	1	2	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	8	1522371466337	striped_red_circle	Pink circle, horizontal stripes inside	speaker	13699	chatMessage
+close	none	0	3	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	9	1522371494624	wavy_black_star	Black star, inner squiggly lines	speaker	15678	chatMessage
+close	irrelevant	1	2	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	10	1522371529425	striped_green_triangle	Green triangle with horizontal stripes on inside	speaker	20857	chatMessage
+far	irrelevant	2	4	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	11	1522371556563	wavy_blue_star	Blue star, verticle squiggly lines	speaker	15309	chatMessage
+close	none	0	4	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	12	1522371593560	wavy_blue_square	Blue box, inner squiggly lines	speaker	14780	chatMessage
+far	none	0	2	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	13	1522371617105	checked_black_circle	Black circle with boxes inside	speaker	11390	chatMessage
+far	irrelevant	1	2	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	14	1522371636518	checked_black_circle	Black circle, boxes inside	speaker	7140	chatMessage
+far	none	0	3	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	15	1522371664540	striped_green_star	Green star, horizontal stripes	speaker	17357	chatMessage
+close	irrelevant	1	2	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	16	1522371686604	checked_blue_circle	Blue circle, boxes inside	speaker	8572	chatMessage
+far	none	0	4	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	17	1522371712645	spotted_red_square	pink box with dots on the inside	speaker	13194	chatMessage
+close	none	0	4	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	18	1522371733234	spotted_green_circle	green circle, dots inside	speaker	10353	chatMessage
+close	irrelevant	2	4	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	19	1522371760217	checked_red_square	Pink box with boxes inside	speaker	16706	chatMessage
+close	irrelevant	1	3	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	20	1522371790798	striped_blue_triangle	Blue triangle, horizontal stripes	speaker	18524	chatMessage
+far	irrelevant	2	4	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	21	1522371816177	checked_green_triangle	Green triangle, boxes inside	speaker	12333	chatMessage
+far	irrelevant	1	2	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	22	1522371852817	wavy_blue_triangle	Blue triangle, vertical squiggly lines	speaker	28036	chatMessage
+close	none	0	2	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	23	1522371870657	wavy_blue_star	Blue star, squiggly lines	speaker	9541	chatMessage
+far	none	0	4	planned_sample	2124-84af8247-64f3-4288-8f49-97ddf2426cb7	24	1522371893733	wavy_green_square	Green box, squiggly lines	speaker	11628	chatMessage

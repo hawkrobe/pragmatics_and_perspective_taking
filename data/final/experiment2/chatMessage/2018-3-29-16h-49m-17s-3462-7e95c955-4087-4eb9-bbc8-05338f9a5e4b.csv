@@ -1,0 +1,29 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	none	0	3	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	1	1522367357166	striped_green_square	is there square box	speaker	24906	chatMessage
+close	none	0	3	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	1	1522367370037	striped_green_square	green or red?	listener	3176	chatMessage
+close	irrelevant	1	3	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	2	1522367546537	spotted_red_square	is there a white square with black dots	speaker	50970	chatMessage
+close	irrelevant	1	3	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	2	1522367587767	spotted_red_square	No there's not	listener	2706	chatMessage
+close	irrelevant	1	3	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	2	1522367613679	spotted_red_square	Is it outlined in red?	listener	4236	chatMessage
+far	irrelevant	2	3	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	3	1522367651201	striped_blue_triangle	is there a triangle 	speaker	18038	chatMessage
+far	none	0	2	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	4	1522367728558	wavy_green_triangle	can you see a triangle outlined in green	speaker	33810	chatMessage
+far	none	0	4	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	5	1522367774712	wavy_black_triangle	can you see a triangle outlined in black	speaker	32844	chatMessage
+far	irrelevant	1	4	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	6	1522367816010	striped_black_star	can you see star outlined in black	speaker	24442	chatMessage
+close	irrelevant	2	3	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	7	1522367868704	striped_green_star	can you see a star outlined in green	speaker	17321	chatMessage
+close	irrelevant	2	3	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	7	1522367896762	striped_green_star	Yes, you're doing great!	listener	7218	chatMessage
+close	none	0	4	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	8	1522367929148	wavy_black_triangle	can you see a triangle outlined in black	speaker	4051	chatMessage
+far	none	0	3	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	9	1522367964313	striped_black_star	can you see a star outlined in black	speaker	9575	chatMessage
+far	irrelevant	2	4	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	10	1522368005410	checked_green_star	can you see a star outlined in green	speaker	29593	chatMessage
+close	none	0	2	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	11	1522368040710	spotted_black_circle	can you see a circle outlined in black	speaker	15748	chatMessage
+close	irrelevant	1	2	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	12	1522368082450	wavy_green_circle	can you see a circle outlined in green	speaker	21400	chatMessage
+far	irrelevant	2	3	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	13	1522368127181	spotted_green_circle	can you see a circle outlined in green	speaker	22377	chatMessage
+close	none	0	4	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	14	1522368153447	wavy_black_star	can you see a star outlined in black	speaker	13746	chatMessage
+close	irrelevant	1	2	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	15	1522368214127	wavy_blue_triangle	can you see a triangle outlined in blue	speaker	23110	chatMessage
+far	none	0	3	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	16	1522368249527	wavy_blue_star	can you see a star outlined in blue	speaker	18195	chatMessage
+close	irrelevant	1	2	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	17	1522368281718	spotted_green_triangle	can you see a triangle outlined in green	speaker	8508	chatMessage
+far	irrelevant	1	2	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	18	1522368414709	spotted_black_circle	can you see a circle outlined in black	speaker	13167	chatMessage
+far	irrelevant	1	4	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	19	1522368455285	checked_blue_square	can you see a triangle outlined in black	speaker	8977	chatMessage
+close	none	0	2	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	20	1522368491058	wavy_blue_triangle	can you see a triangle outlined in blue	speaker	5963	chatMessage
+far	none	0	4	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	21	1522368586594	checked_black_star	can you see a star outlined in black	speaker	11504	chatMessage
+far	none	0	2	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	22	1522368704260	striped_black_triangle	can you see a triangle outlined in black	speaker	4582	chatMessage
+close	none	0	4	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	23	1522368770477	checked_black_star	can you see a star outlined in black	speaker	7948	chatMessage
+close	irrelevant	1	4	planned_sample	3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b	24	1522368871015	checked_blue_star	can you see a star outlined in blue	speaker	20886	chatMessage

@@ -1,0 +1,12 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	none	0	2	planned_sample	3751-a4250ebd-57c7-4fc9-802b-708134c7fd93	1	1522360302045	striped_blue_circle	blue circle with gray vertical lines, about 9 lines	speaker	28297	chatMessage
+far	none	0	4	planned_sample	3751-a4250ebd-57c7-4fc9-802b-708134c7fd93	2	1522360345090	wavy_green_circle	green circle with about 6 gray horizontal waves lines	speaker	27988	chatMessage
+far	irrelevant	1	2	planned_sample	3751-a4250ebd-57c7-4fc9-802b-708134c7fd93	3	1522360389354	checked_black_square	black square with 13 gray squares, checkerboard pattern	speaker	31316	chatMessage
+close	none	0	3	planned_sample	3751-a4250ebd-57c7-4fc9-802b-708134c7fd93	4	1522360411810	checked_green_square	green square with same gray checkerboard pattern	speaker	11503	chatMessage
+far	irrelevant	1	4	planned_sample	3751-a4250ebd-57c7-4fc9-802b-708134c7fd93	5	1522360454659	striped_blue_triangle	blue triangle with about 8 gray vertical lines	speaker	15187	chatMessage
+close	none	0	3	planned_sample	3751-a4250ebd-57c7-4fc9-802b-708134c7fd93	6	1522360483773	spotted_blue_square	blue square with a grid of gray spots all over it	speaker	18195	chatMessage
+close	irrelevant	2	3	planned_sample	3751-a4250ebd-57c7-4fc9-802b-708134c7fd93	7	1522360512282	striped_green_triangle	green triangle with about 8ish vertical gray lines	speaker	18262	chatMessage
+close	irrelevant	1	2	planned_sample	3751-a4250ebd-57c7-4fc9-802b-708134c7fd93	8	1522360544062	wavy_red_circle	red/pink circle with 6 horizontal gray wavy lines	speaker	20704	chatMessage
+far	none	0	2	planned_sample	3751-a4250ebd-57c7-4fc9-802b-708134c7fd93	9	1522360591203	checked_blue_circle	blue circle with about 9 gray squares in a checkerboard motif  	speaker	35910	chatMessage
+far	none	0	2	planned_sample	3751-a4250ebd-57c7-4fc9-802b-708134c7fd93	9	1522360780488	checked_blue_circle	hello?	speaker	1453	chatMessage
+far	none	0	2	planned_sample	3751-a4250ebd-57c7-4fc9-802b-708134c7fd93	9	1522361117191	checked_blue_circle	hello? 	speaker	8452	chatMessage

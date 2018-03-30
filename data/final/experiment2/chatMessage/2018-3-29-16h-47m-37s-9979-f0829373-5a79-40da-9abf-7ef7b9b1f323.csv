@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	irrelevant	1	3	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	1	1522367257690	striped_black_circle	circle, vertical lines, thick outline	speaker	11272	chatMessage
+close	none	0	4	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	2	1522367280714	checked_blue_circle	circle, blue outline, checkered	speaker	8663	chatMessage
+close	irrelevant	1	2	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	3	1522367307772	striped_black_circle	cirlce, black outline, vertical grey/black lines	speaker	13846	chatMessage
+close	none	0	2	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	4	1522367333967	wavy_black_circle	circle, black outline, grey/white waves	speaker	11751	chatMessage
+far	none	0	3	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	5	1522367353376	striped_blue_triangle	triangle, blue outline, grey/white vertical lines	speaker	10060	chatMessage
+far	irrelevant	2	4	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	6	1522367375494	wavy_blue_triangle	triangle, blue outline, grey/white waves	speaker	11121	chatMessage
+close	irrelevant	2	4	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	7	1522367396192	striped_black_square	square, black outlinte, grey/white vertical lines	speaker	11045	chatMessage
+far	none	0	4	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	8	1522367418758	wavy_black_square	square, black outline, grey/white waves	speaker	11102	chatMessage
+close	irrelevant	2	3	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	9	1522367434660	spotted_green_triangle	triangle, green outline, grey dots	speaker	7489	chatMessage
+close	irrelevant	1	4	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	10	1522367450737	checked_red_triangle	triangle, red outline, checkered	speaker	7514	chatMessage
+close	none	0	4	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	11	1522367467649	striped_red_star	star, red outline, vertical lines	speaker	6976	chatMessage
+far	none	0	2	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	12	1522367483539	spotted_red_square	square, red outline, grey dots	speaker	4039	chatMessage
+far	irrelevant	2	3	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	13	1522367497274	checked_red_triangle	triangle, red outline, checkered	speaker	5889	chatMessage
+far	irrelevant	1	4	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	14	1522367516061	wavy_red_circle	circle, red outline, waves	speaker	9246	chatMessage
+close	none	0	4	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	15	1522367533671	spotted_green_triangle	triangle, green outline, grey dots	speaker	7728	chatMessage
+far	none	0	2	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	16	1522367549943	spotted_black_circle	circle, black outline, grey dots	speaker	7141	chatMessage
+far	none	0	4	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	17	1522367563013	spotted_red_square	square, red outline, grey dots	speaker	4882	chatMessage
+far	irrelevant	1	3	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	18	1522367574692	wavy_green_star	star, green outline, waves	speaker	4845	chatMessage
+far	irrelevant	1	4	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	19	1522367590795	spotted_green_triangle	triangle, green outline, grey dots	speaker	6100	chatMessage
+close	none	0	3	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	20	1522367606480	striped_black_triangle	triangle, black outline, vertical lines	speaker	7888	chatMessage
+close	irrelevant	1	2	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	21	1522367620789	spotted_green_triangle	triangle, green outline, grey dots	speaker	5519	chatMessage
+far	none	0	2	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	22	1522367633319	striped_green_star	star, green outline, vertical lines	speaker	5468	chatMessage
+close	none	0	2	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	23	1522367645888	spotted_red_triangle	triangle, red outline, grey dots	speaker	4754	chatMessage
+close	irrelevant	1	2	planned_sample	9979-f0829373-5a79-40da-9abf-7ef7b9b1f323	24	1522367659723	striped_red_square	square, red outline, vertical lines	speaker	5953	chatMessage

@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	1	2	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	1	1522368166362	checked_green_star	Green Outlined Star	speaker	4723	chatMessage
+far	none	0	2	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	2	1522368204573	wavy_blue_circle	Blue Outlined Circle with Horizontal Waves Inside	speaker	8228	chatMessage
+close	none	0	4	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	3	1522368232437	spotted_blue_circle	Blue Outlined Circle with Polka Dots Inside 	speaker	6913	chatMessage
+far	none	0	4	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	4	1522368254811	striped_green_triangle	Green Outlined Triangle. Vertical Stripes Inside	speaker	7515	chatMessage
+far	irrelevant	1	2	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	5	1522368276855	checked_green_star	Green Outlined Star. Checkerboard Pattern Inside	speaker	10346	chatMessage
+far	irrelevant	1	2	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	6	1522368292437	spotted_black_star	Black Outlined Star. Polka Dot Inside	speaker	5917	chatMessage
+close	irrelevant	1	3	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	7	1522368314565	striped_black_triangle	Black Outlined Triangle. Vertical Stripes Inside 	speaker	8753	chatMessage
+close	none	0	3	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	8	1522368332506	spotted_green_circle	Green Outlined Circle. Polka Dots Inside 	speaker	9090	chatMessage
+far	none	0	4	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	9	1522368353495	spotted_black_square	Black Outlined Square. Polka Dots Inside 	speaker	11991	chatMessage
+close	none	0	4	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	10	1522368371867	striped_black_circle	Black Outlined Circle. Vertical Stripes Inside. 	speaker	10214	chatMessage
+close	irrelevant	1	2	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	11	1522368391872	striped_black_star	Black Outlined Star. Vertical Stripes Inside. 	speaker	8153	chatMessage
+close	none	0	2	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	12	1522368409122	striped_green_square	Green Outlined Square. Vertical Stripes Inside	speaker	7069	chatMessage
+far	none	0	4	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	13	1522368428172	checked_green_square	Green Outlined Square. Checkerboard Pattern Inside. 	speaker	11955	chatMessage
+far	irrelevant	1	3	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	14	1522368441237	spotted_green_circle	Green Outlined Circle. Polka Dot Pattern Inside. 	speaker	7118	chatMessage
+close	irrelevant	1	2	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	15	1522368462980	spotted_black_triangle	Black Outlined Triangle. Polka Dot Pattern Inside. 	speaker	10753	chatMessage
+far	irrelevant	2	4	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	16	1522368481369	striped_red_square	Red Outlined Square. Vertical Stripe Pattern Inside. 	speaker	9727	chatMessage
+close	none	0	4	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	17	1522368507416	checked_blue_square	Blue Outlined Square. Checkerboard Pattern Inside. 	speaker	10861	chatMessage
+far	irrelevant	1	4	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	18	1522368530637	spotted_red_star	Red Outlined Star. Polka Dot Pattern Inside. 	speaker	10770	chatMessage
+close	irrelevant	1	2	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	19	1522368547881	spotted_green_circle	Green Outlined Circle. Polka Dot Pattern Inside. 	speaker	9688	chatMessage
+far	none	0	4	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	20	1522368563720	striped_green_triangle	Green Outlined Triangle. Vertical Stripes Inside. 	speaker	8643	chatMessage
+close	none	0	2	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	21	1522368587147	checked_black_square	Black Outlined Square. Checkerboard Inside. 	speaker	11104	chatMessage
+far	irrelevant	1	4	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	22	1522368604695	checked_red_triangle	Red Outlined Triangle. Checkerboard Inside. 	speaker	6394	chatMessage
+close	irrelevant	1	2	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	23	1522368621293	striped_green_circle	Green Outlined Circle. Vertical Stripes Inside. 	speaker	6913	chatMessage
+far	none	0	2	planned_sample	6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320	24	1522368644880	wavy_red_star	Red Outlined Star. Horizontal Waves Inside. 	speaker	11284	chatMessage

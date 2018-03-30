@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	1	3	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	1	1522356487124	striped_green_square	It is the square with vertical stripes	speaker	8197	chatMessage
+far	none	0	4	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	2	1522356508849	wavy_red_star	It is the star.	speaker	5656	chatMessage
+far	none	0	2	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	3	1522356521838	wavy_green_square	It is the square.	speaker	3805	chatMessage
+far	irrelevant	1	2	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	4	1522356540155	checked_green_triangle	It is the green triangle that has checkers in it.	speaker	7675	chatMessage
+far	irrelevant	1	2	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	5	1522356560078	wavy_green_circle	It is the green circle with wavy lines inside	speaker	9019	chatMessage
+close	irrelevant	1	4	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	6	1522356576196	spotted_green_square	It is the green square with dots inside	speaker	5997	chatMessage
+close	none	0	2	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	7	1522356592634	striped_blue_square	It is the blue square with vertical lines	speaker	8785	chatMessage
+close	none	0	3	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	8	1522356611945	spotted_green_star	It is the green star	speaker	3592	chatMessage
+close	none	0	4	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	9	1522356623132	wavy_red_square	It is the red square	speaker	3634	chatMessage
+close	irrelevant	1	3	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	10	1522356636181	striped_blue_star	It is the blue star with vertical stripes inside	speaker	6607	chatMessage
+close	irrelevant	2	4	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	11	1522356651106	wavy_red_star	It is the red star with wavy lines inside	speaker	5776	chatMessage
+far	none	0	2	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	12	1522356665609	checked_black_circle	It is the circle	speaker	1836	chatMessage
+far	none	0	3	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	13	1522356680461	spotted_red_star	It is the star	speaker	2198	chatMessage
+far	irrelevant	1	2	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	14	1522356694376	striped_green_star	It is the green star with vertical lines	speaker	5413	chatMessage
+far	irrelevant	1	2	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	15	1522356707850	wavy_blue_star	It is the blue star with wavy lines	speaker	4631	chatMessage
+close	none	0	4	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	16	1522356722403	spotted_red_circle	It is the red circle with dots inside	speaker	6507	chatMessage
+close	irrelevant	1	2	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	17	1522356738880	checked_red_circle	It is the red circle with checkers inside	speaker	6418	chatMessage
+close	none	0	2	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	18	1522356752357	wavy_red_triangle	It is the red triangle with wavy lines	speaker	5619	chatMessage
+close	none	0	2	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	19	1522356769351	spotted_black_square	It is the black square with dots	speaker	4975	chatMessage
+far	none	0	3	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	20	1522356780269	spotted_green_star	It is the star	speaker	2049	chatMessage
+far	irrelevant	1	3	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	21	1522356793376	checked_green_circle	It is the green circle that is checkered	speaker	5650	chatMessage
+close	irrelevant	1	4	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	22	1522356807378	spotted_blue_circle	It is the blue circle with dots	speaker	4723	chatMessage
+far	irrelevant	2	3	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	23	1522356821191	wavy_black_triangle	It is the black triangle with wavy lines	speaker	7330	chatMessage
+far	none	0	2	planned_sample	8358-50b362fd-7cb6-4167-8437-2cc80ab3a616	24	1522356830759	striped_green_square	It is the square	speaker	2383	chatMessage

@@ -1,0 +1,27 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	none	0	3	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	1	1522369118931	spotted_blue_circle	blue circle with grey dots	speaker	3714	chatMessage
+close	irrelevant	1	4	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	2	1522369141950	checked_green_triangle	green triangle with grey and white checkers	speaker	12018	chatMessage
+far	irrelevant	1	3	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	3	1522369160565	striped_green_square	green triangle with vertical grey stripes	speaker	8257	chatMessage
+far	irrelevant	1	3	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	3	1522369167119	striped_green_square	square sorry	speaker	1594	chatMessage
+far	irrelevant	1	3	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	3	1522369172553	striped_green_square	green square with vertical stripes	speaker	4416	chatMessage
+far	irrelevant	1	3	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	4	1522369187313	wavy_blue_square	blue square with wavy stripes	speaker	8438	chatMessage
+far	none	0	2	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	5	1522369202082	striped_green_square	green square with vertical stripes	speaker	5939	chatMessage
+close	none	0	2	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	6	1522369215991	spotted_green_square	green square with grey dots	speaker	5218	chatMessage
+close	irrelevant	1	3	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	7	1522369230704	spotted_green_star	green star with grey dots	speaker	4284	chatMessage
+close	none	0	4	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	8	1522369244169	wavy_red_star	red star with wavy stripes	speaker	5295	chatMessage
+far	none	0	2	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	9	1522369257274	wavy_black_circle	black circle with wavy stripes	speaker	5813	chatMessage
+close	none	0	3	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	10	1522369268145	wavy_blue_star	blue star with wavy stripes	speaker	3980	chatMessage
+close	irrelevant	2	3	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	11	1522369283672	striped_green_square	green square with vertical stripes	speaker	5335	chatMessage
+far	irrelevant	1	2	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	12	1522369298577	spotted_black_circle	black circle with grey dots	speaker	7685	chatMessage
+far	none	0	4	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	13	1522369314754	checked_blue_circle	blue circle with grey and white checkers	speaker	8322	chatMessage
+close	none	0	4	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	14	1522369328934	checked_blue_star	blue star with grey and white checkers	speaker	4165	chatMessage
+close	irrelevant	1	4	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	15	1522369344631	striped_green_star	green star with vertical grey stripes	speaker	5985	chatMessage
+far	irrelevant	1	4	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	16	1522369359603	striped_green_circle	green circle with vertical grey stripes	speaker	7643	chatMessage
+close	irrelevant	1	2	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	17	1522369374925	wavy_black_square	black square with wavy stripes	speaker	6469	chatMessage
+far	none	0	2	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	18	1522369388876	striped_red_square	red square with vertical grey stripes	speaker	5448	chatMessage
+far	irrelevant	1	4	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	19	1522369404565	checked_black_star	black star with grey and white checkers	speaker	7328	chatMessage
+far	irrelevant	2	3	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	20	1522369415645	spotted_red_star	red star with grey dots	speaker	3263	chatMessage
+close	none	0	4	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	21	1522369428078	striped_black_circle	black circle with vertical grey stripes	speaker	6047	chatMessage
+close	none	0	2	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	22	1522369440097	striped_red_star	red star with vertical grey stripes	speaker	4629	chatMessage
+close	irrelevant	1	2	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	23	1522369451916	wavy_green_square	green square with wavy stripes	speaker	4364	chatMessage
+far	none	0	2	planned_sample	9744-1ec95fb4-776a-4620-b8e3-f928fb09de2a	24	1522369466886	wavy_red_triangle	red triangle with wavy stripes	speaker	5045	chatMessage

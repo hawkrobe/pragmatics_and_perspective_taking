@@ -1,0 +1,28 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	2	3	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	1	1522367204402	wavy_red_circle	the red circle	speaker	5675	chatMessage
+close	none	0	2	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	2	1522367225899	spotted_green_star	green star	speaker	3463	chatMessage
+far	none	0	3	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	3	1522367240730	checked_black_circle	black circle	speaker	3384	chatMessage
+close	none	0	4	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	4	1522367248881	spotted_red_star	red star	speaker	2247	chatMessage
+close	irrelevant	1	3	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	5	1522367270484	checked_green_square	green square (checkered)	speaker	11487	chatMessage
+far	none	0	4	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	6	1522367280833	striped_red_circle	red circle	speaker	2031	chatMessage
+far	irrelevant	2	3	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	7	1522367297339	spotted_blue_square	blue square w/ dots	speaker	4903	chatMessage
+far	irrelevant	1	2	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	8	1522367309109	checked_blue_circle	blue circle (checkered)	speaker	3784	chatMessage
+far	irrelevant	1	2	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	9	1522367320099	checked_blue_circle	blue circle (checkered)	speaker	4319	chatMessage
+close	none	0	4	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	10	1522367333979	striped_blue_triangle	blue triangle (striped)	speaker	3480	chatMessage
+close	irrelevant	1	2	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	11	1522367348293	wavy_black_circle	black circle w/ squiggly lines	speaker	5486	chatMessage
+close	irrelevant	2	3	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	12	1522367359473	checked_green_triangle	green triangle (checkered)	speaker	4872	chatMessage
+far	none	0	2	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	13	1522367369890	striped_blue_triangle	blue triangle	speaker	4088	chatMessage
+far	irrelevant	2	4	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	14	1522367380690	spotted_black_triangle	black triangle w/ dots	speaker	4927	chatMessage
+close	none	0	4	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	15	1522367389036	spotted_green_triangle	green trinagle	speaker	1440	chatMessage
+far	none	0	3	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	16	1522367399354	wavy_blue_triangle	blue triangle	speaker	2159	chatMessage
+far	none	0	4	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	17	1522367406746	spotted_red_square	red square	speaker	1575	chatMessage
+far	irrelevant	1	2	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	18	1522367416603	striped_blue_star	blue star w/ stripes	speaker	4344	chatMessage
+close	irrelevant	2	3	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	19	1522367428131	spotted_red_star	red star w/ dots	speaker	4513	chatMessage
+far	irrelevant	1	2	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	20	1522367438615	wavy_red_star	red star w/ squiggly lines	speaker	4976	chatMessage
+close	none	0	4	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	21	1522367446089	spotted_red_star	red star	speaker	1718	chatMessage
+close	none	0	2	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	22	1522367454194	wavy_green_triangle	green triangle	speaker	1575	chatMessage
+far	none	0	4	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	23	1522367461079	striped_red_star	red star	speaker	1264	chatMessage
+close	irrelevant	2	4	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	24	1522367471271	spotted_black_star	black star w/ dots	speaker	3926	chatMessage
+close	irrelevant	2	4	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	24	1522367477937	spotted_black_star	okay thanks!	listener	2048	chatMessage
+close	irrelevant	2	4	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	24	1522367479823	spotted_black_star	have a good day	listener	1592	chatMessage
+close	irrelevant	2	4	planned_sample	5090-4b086da5-f9ab-4946-a4e5-289fa9fef307	24	1522367483213	spotted_black_star	you too!	speaker	1263	chatMessage

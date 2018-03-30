@@ -1,0 +1,27 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	none	0	3	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	1	1522368652277	spotted_green_triangle	green triangle with dots	speaker	5595	chatMessage
+far	none	0	3	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	2	1522368690505	spotted_green_square	green square with dots	speaker	3607	chatMessage
+close	none	0	2	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	3	1522368716925	checked_black_star	black star with white and grey squares	speaker	10560	chatMessage
+far	irrelevant	1	2	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	4	1522368751871	spotted_black_star	black star with dots	speaker	3474	chatMessage
+close	none	0	3	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	5	1522368777280	spotted_green_star	green star with dots	speaker	4147	chatMessage
+close	irrelevant	1	2	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	6	1522368798781	striped_green_star	green star with vertical stripes	speaker	9795	chatMessage
+close	irrelevant	1	2	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	7	1522368830995	wavy_red_triangle	red triangle with waves	speaker	7414	chatMessage
+far	irrelevant	1	3	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	8	1522368862796	spotted_red_square	red square with dots	speaker	2806	chatMessage
+far	none	0	2	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	9	1522368884460	checked_black_star	black star with black and white squares	speaker	8648	chatMessage
+far	none	0	3	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	10	1522368917625	checked_green_circle	green circle with checkered squares	speaker	10334	chatMessage
+close	none	0	3	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	11	1522368946751	checked_blue_square	blue square with checkered squares	speaker	6402	chatMessage
+far	irrelevant	1	2	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	12	1522368972221	spotted_black_circle	black circle with dots	speaker	3821	chatMessage
+far	irrelevant	1	4	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	13	1522368988601	wavy_blue_square	blue square with zig zags	speaker	4392	chatMessage
+close	none	0	4	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	14	1522369021763	checked_blue_circle	blue circle with checkered squares	speaker	7854	chatMessage
+close	irrelevant	1	2	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	15	1522369055318	checked_black_circle	black circle with checkered squares	speaker	12328	chatMessage
+close	irrelevant	1	3	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	16	1522369103083	striped_blue_square	blue square with vertical stripes	speaker	7512	chatMessage
+close	irrelevant	2	3	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	17	1522369135291	striped_blue_square	blue square with vertical stripes	speaker	6842	chatMessage
+far	none	0	4	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	18	1522369162996	checked_blue_square	blue square with checkered squares	speaker	8523	chatMessage
+close	none	0	4	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	19	1522369191324	checked_red_circle	red circle with checkered squares	speaker	12764	chatMessage
+far	irrelevant	1	3	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	20	1522369209532	wavy_red_star	red star with zig zags	speaker	5343	chatMessage
+close	none	0	2	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	21	1522369242882	striped_black_star	black star with vertical stripes	speaker	6064	chatMessage
+far	none	0	4	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	22	1522369262735	checked_red_circle	red circle with checkered squares	speaker	7283	chatMessage
+far	irrelevant	1	3	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	23	1522369283005	striped_green_square	green square with vertical stripes	speaker	6705	chatMessage
+close	irrelevant	2	3	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	24	1522369310536	checked_red_star	red triangle with checkered squares	speaker	8171	chatMessage
+close	irrelevant	2	3	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	24	1522369320632	checked_red_star	red star i mean	speaker	2054	chatMessage
+close	irrelevant	2	3	planned_sample	8621-a5ab85e7-22b3-468e-acfb-548a26e2387d	24	1522369333855	checked_red_star	red star with checkered squares	speaker	5262	chatMessage

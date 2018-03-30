@@ -1,0 +1,26 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	irrelevant	1	4	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	1	1522359004641	spotted_red_triangle	red triangle, with gray dots	speaker	11923	chatMessage
+far	irrelevant	1	4	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	2	1522359028498	spotted_green_star	orange star with gray dots	speaker	7927	chatMessage
+far	irrelevant	1	4	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	2	1522359040273	spotted_green_star	oops, green star	speaker	5460	chatMessage
+close	irrelevant	2	3	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	3	1522359058069	striped_blue_star	blue star with gray stripes	speaker	10338	chatMessage
+close	none	0	4	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	4	1522359086803	wavy_blue_star	blue start with gray squiggles horizontal	speaker	17736	chatMessage
+far	none	0	3	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	5	1522359104470	spotted_red_star	red start with gray dots	speaker	8047	chatMessage
+far	none	0	4	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	6	1522359127684	spotted_blue_star	blue star with gray dots.. yes, I can type, really I can	speaker	15338	chatMessage
+close	none	0	3	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	7	1522359147827	spotted_black_star	black star with gray dots	speaker	8081	chatMessage
+close	irrelevant	1	2	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	8	1522359170502	checked_red_triangle	red triangle with gray squares	speaker	14313	chatMessage
+far	irrelevant	2	4	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	9	1522359194572	wavy_black_circle	black circle with gray squiggles horizontal	speaker	14152	chatMessage
+close	none	0	4	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	10	1522359215230	checked_green_triangle	green triangle with gray squares	speaker	12146	chatMessage
+close	irrelevant	1	4	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	11	1522359235821	striped_blue_circle	blue circle with gray lines verticle	speaker	12629	chatMessage
+far	none	0	3	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	12	1522359257451	checked_black_triangle	black triangle with gray squares	speaker	9385	chatMessage
+close	irrelevant	1	2	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	13	1522359280940	wavy_red_star	red star with gray squiggles horizontal	speaker	15186	chatMessage
+far	none	0	4	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	14	1522359306380	striped_red_square	red box with gray lines verticle	speaker	16767	chatMessage
+far	irrelevant	2	4	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	15	1522359333765	wavy_green_circle	green circle with gray squiggles horizontal	speaker	18527	chatMessage
+close	none	0	3	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	16	1522359351349	spotted_green_circle	green circle with gray dots	speaker	9289	chatMessage
+far	none	0	3	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	17	1522359368789	spotted_blue_triangle	blue triangle with gray dots	speaker	9689	chatMessage
+close	none	0	3	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	18	1522359389284	wavy_red_triangle	red triangle with gray squiggles horizontal	speaker	13281	chatMessage
+far	irrelevant	2	3	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	19	1522359404498	spotted_red_star	red star with gray dots	speaker	7400	chatMessage
+far	irrelevant	1	2	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	20	1522359435686	striped_black_circle	black circle with gray lines vertical	speaker	23004	chatMessage
+close	none	0	4	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	21	1522359454486	checked_green_square	green square with gray boxes	speaker	10518	chatMessage
+close	irrelevant	2	3	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	22	1522359473821	spotted_green_circle	green circle with gray dots	speaker	10480	chatMessage
+far	none	0	2	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	23	1522359494358	checked_blue_triangle	blue triangle with gray boxes	speaker	9510	chatMessage
+close	irrelevant	1	2	planned_sample	6866-d4468ddf-92ea-416f-be28-16f0cfccb056	24	1522359513174	checked_blue_square	blue box with gray boxes	speaker	9908	chatMessage

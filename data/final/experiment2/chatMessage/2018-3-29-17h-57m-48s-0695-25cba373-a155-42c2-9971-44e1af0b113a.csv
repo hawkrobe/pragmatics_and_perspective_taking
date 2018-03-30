@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	none	0	3	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	1	1522371468729	striped_green_star	The green star	speaker	3321	chatMessage
+far	none	0	4	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	2	1522371492271	spotted_blue_circle	It's the circle that's blue	speaker	3062	chatMessage
+close	none	0	3	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	3	1522371503566	spotted_green_star	Polkadot star	speaker	2497	chatMessage
+far	irrelevant	1	3	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	4	1522371522055	spotted_red_circle	it's a polka dot red circle	speaker	3513	chatMessage
+close	irrelevant	1	2	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	5	1522371539169	striped_black_triangle	It's a black triangle with horizontal stripes	speaker	8620	chatMessage
+close	irrelevant	1	4	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	6	1522371553940	checked_green_star	Please click the green checkered star	speaker	4019	chatMessage
+far	none	0	3	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	7	1522371568072	striped_blue_circle	It's the only circle.	speaker	4432	chatMessage
+far	irrelevant	2	4	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	8	1522371583609	checked_blue_triangle	It's a blue triangle with grey checkers	speaker	7767	chatMessage
+far	irrelevant	2	4	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	9	1522371598042	checked_red_triangle	It's a red triangle with grey checkers	speaker	4636	chatMessage
+close	irrelevant	2	4	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	10	1522371610271	striped_blue_square	It's a blue square with horizontal grey stripes	speaker	4700	chatMessage
+close	none	0	2	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	11	1522371622277	checked_green_square	Green.	speaker	773	chatMessage
+close	none	0	2	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	12	1522371630424	spotted_red_square	red.	speaker	524	chatMessage
+far	none	0	2	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	13	1522371638311	wavy_red_circle	Red circle	speaker	1535	chatMessage
+far	irrelevant	1	3	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	14	1522371647345	wavy_red_square	red square with waves	speaker	2317	chatMessage
+far	none	0	3	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	15	1522371671161	checked_red_square	It's the square.	speaker	2451	chatMessage
+close	irrelevant	1	3	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	16	1522371681676	wavy_red_triangle	It's a red triangle with waves	speaker	3405	chatMessage
+far	none	0	3	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	17	1522371689495	striped_blue_star	star	speaker	788	chatMessage
+close	irrelevant	2	4	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	18	1522371704133	wavy_blue_square	blue square with waves	speaker	2826	chatMessage
+far	irrelevant	1	4	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	19	1522371715325	wavy_green_circle	green circle with waves	speaker	2688	chatMessage
+close	irrelevant	1	2	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	20	1522371727772	checked_green_star	This ones a green triangle with waves	speaker	5318	chatMessage
+far	irrelevant	1	4	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	21	1522371753182	striped_black_circle	It's a black circle that has horizontal stripes	speaker	7669	chatMessage
+close	none	0	3	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	22	1522371766814	striped_black_triangle	Black triangle with horizontal stripes	speaker	4949	chatMessage
+far	none	0	2	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	23	1522371779602	striped_black_square	It is not a star.	speaker	2658	chatMessage
+close	none	0	4	planned_sample	0695-25cba373-a155-42c2-9971-44e1af0b113a	24	1522371795383	striped_blue_square	It's the square with stripes	speaker	9906	chatMessage

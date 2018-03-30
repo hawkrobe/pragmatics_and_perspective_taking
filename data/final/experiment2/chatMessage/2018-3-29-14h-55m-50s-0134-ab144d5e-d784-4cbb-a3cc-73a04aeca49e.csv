@@ -1,0 +1,6 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	none	0	4	planned_sample	0134-ab144d5e-d784-4cbb-a3cc-73a04aeca49e	1	1522360550986	checked_green_square	green square	speaker	5226	chatMessage
+far	none	0	4	planned_sample	0134-ab144d5e-d784-4cbb-a3cc-73a04aeca49e	1	1522360601088	checked_green_square	green square with checkerboards inside	speaker	7354	chatMessage
+far	none	0	4	planned_sample	0134-ab144d5e-d784-4cbb-a3cc-73a04aeca49e	1	1522360636513	checked_green_square	hello?	speaker	1434	chatMessage
+far	none	0	4	planned_sample	0134-ab144d5e-d784-4cbb-a3cc-73a04aeca49e	1	1522360678152	checked_green_square	Is anyone there and actually participating?	speaker	8179	chatMessage
+far	none	0	4	planned_sample	0134-ab144d5e-d784-4cbb-a3cc-73a04aeca49e	1	1522360806695	checked_green_square	If you don't do anything I'm going to disconnect and return this.	speaker	11289	chatMessage

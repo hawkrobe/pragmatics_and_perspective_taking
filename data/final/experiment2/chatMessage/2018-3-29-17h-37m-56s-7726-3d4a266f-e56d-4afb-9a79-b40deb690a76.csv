@@ -1,0 +1,25 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	irrelevant	1	2	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	1	1522370276139	checked_blue_circle	The blue border circle at the upper left corner	speaker	21221	chatMessage
+far	irrelevant	2	4	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	2	1522370309768	checked_blue_star	The blue bordered star at the bottom right	speaker	9972	chatMessage
+close	none	0	3	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	3	1522370354850	wavy_green_circle	The green bordered circle in the middle row, far right corner	speaker	22130	chatMessage
+close	irrelevant	1	2	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	4	1522370385395	wavy_green_square	The green bordered square at the upper right corner	speaker	13120	chatMessage
+far	irrelevant	1	4	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	5	1522370416199	checked_red_circle	The red bordered circle at the upper left corner	speaker	19294	chatMessage
+far	none	0	3	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	6	1522370433042	striped_red_triangle	Upper left corner, red border triangle	speaker	9178	chatMessage
+close	none	0	3	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	7	1522370459622	spotted_blue_triangle	Bottom right corner, blue bordered triangle	speaker	14971	chatMessage
+far	none	0	3	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	8	1522370483905	spotted_black_star	upper right corner, black bordered star	speaker	16829	chatMessage
+close	irrelevant	1	4	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	9	1522370508960	wavy_green_star	bottom right corner, green bordered star	speaker	14348	chatMessage
+far	none	0	4	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	10	1522370538496	wavy_black_triangle	bottom row in the middle, black bordered triangle	speaker	15015	chatMessage
+far	irrelevant	1	2	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	11	1522370568016	striped_red_triangle	upper left corner, red bordered triangle	speaker	21275	chatMessage
+far	none	0	4	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	12	1522370595854	checked_black_triangle	middle row at the far right, black bordered triangle	speaker	13076	chatMessage
+far	irrelevant	2	4	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	13	1522370619957	checked_green_square	upper row in the middle, green bordered sqaure	speaker	15051	chatMessage
+close	none	0	3	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	14	1522370643408	checked_red_circle	bottom at the middle, red bordered circle	speaker	13141	chatMessage
+close	none	0	3	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	15	1522370668803	spotted_red_square	bottom row at the far right, red bordered square	speaker	13680	chatMessage
+close	irrelevant	1	4	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	16	1522370690642	striped_green_square	upper row in the middle, green bordered square	speaker	12813	chatMessage
+far	irrelevant	1	2	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	17	1522370714545	wavy_blue_star	bottom row at the far left, blue bordered star	speaker	14592	chatMessage
+far	none	0	4	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	18	1522370737713	checked_red_square	middle row at the far right, red bordered square	speaker	11100	chatMessage
+far	none	0	2	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	19	1522370762028	spotted_green_star	upper left corner, green bordered star	speaker	15377	chatMessage
+close	none	0	4	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	20	1522370783063	wavy_green_square	bottom row in the middle, green bordered square	speaker	12995	chatMessage
+close	irrelevant	2	3	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	21	1522370804503	striped_green_triangle	middle row at the far right, green bordered triangle	speaker	12676	chatMessage
+close	none	0	2	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	22	1522370831398	spotted_red_triangle	middle row at the far right, red bordered triangle	speaker	11498	chatMessage
+far	irrelevant	1	3	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	23	1522370851143	striped_black_star	bottom row at the far left, black bordered star	speaker	7655	chatMessage
+close	irrelevant	2	4	planned_sample	7726-3d4a266f-e56d-4afb-9a79-b40deb690a76	24	1522370875324	wavy_green_star	bottom row at the far left, green bordered star	speaker	12069	chatMessage
