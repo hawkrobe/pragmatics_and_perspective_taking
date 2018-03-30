@@ -1,0 +1,2 @@
+iterationName	gameid	trialNum	serverTime	context	occlusions	numObjsOccluded	numDistractors	names	gridXs	gridYs	intendedName	clickedName	correct	condition	responseRT	eventType
+planned_sample	3876-b404ee0b-2797-4939-9cbd-cd80fa504b94	1	1522359996846	far	irrelevant	1	2	[spotted_blue_triangle,wavy_black_triangle,spotted_black_star]	[2,1,1]	[1,3,2]	spotted_black_star	spotted_black_star	true	within	6964	clickedObj

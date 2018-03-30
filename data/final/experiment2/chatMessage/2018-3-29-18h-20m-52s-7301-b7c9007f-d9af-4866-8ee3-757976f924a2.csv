@@ -13,3 +13,14 @@ close	irrelevant	1	2	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	10
 far	none	0	2	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	11	1522373355892	spotted_black_circle	the target is the black circle with gray polka dots.	speaker	12260	chatMessage
 far	irrelevant	1	2	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	12	1522373395319	wavy_black_star	the target is the black outlined start, with gray and white wavy lines running horizontal.	speaker	20889	chatMessage
 far	irrelevant	1	3	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	13	1522373468593	spotted_green_circle	the target is the green outlined circle, with gray polka dots on a white background.	speaker	21525	chatMessage
+far	none	0	4	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	14	1522373519409	spotted_green_circle	the target is a the green outlined circle.	speaker	15151	chatMessage
+close	none	0	2	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	15	1522373549359	striped_blue_star	the target is the blue outlined star.	speaker	8936	chatMessage
+close	irrelevant	2	4	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	16	1522373588793	striped_blue_triangle	the target is the blue outlined triangle, with gray and white vertical stripes.	speaker	15597	chatMessage
+close	irrelevant	1	2	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	17	1522373645537	wavy_black_triangle	the target is the black outlined triangle, with wavy gray and white that runs horizontal.	speaker	23729	chatMessage
+far	none	0	4	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	18	1522373682496	spotted_green_circle	the target is the green outlined circle.	speaker	9302	chatMessage
+far	none	0	3	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	19	1522373710313	checked_green_square	the target is the green outlined square.	speaker	9462	chatMessage
+far	irrelevant	1	4	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	20	1522373748259	spotted_blue_triangle	the target is the blue outlined triangle, with gray polka dots on a white background.	speaker	19325	chatMessage
+close	irrelevant	2	3	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	21	1522373794953	striped_blue_circle	the target is a blue outlined circle, with straight vertical lines that are gray and white.	speaker	25352	chatMessage
+close	none	0	4	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	22	1522373841880	spotted_blue_square	the target is the blue outlined square.	speaker	8251	chatMessage
+far	irrelevant	2	3	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	23	1522373891263	checked_red_triangle	the target is the red outlined triangle, with small gray and white checkers.	speaker	31228	chatMessage
+close	none	0	3	planned_sample	7301-b7c9007f-d9af-4866-8ee3-757976f924a2	24	1522373942502	striped_red_star	the target is the red outlined star, with straight vertical lines.	speaker	22351	chatMessage

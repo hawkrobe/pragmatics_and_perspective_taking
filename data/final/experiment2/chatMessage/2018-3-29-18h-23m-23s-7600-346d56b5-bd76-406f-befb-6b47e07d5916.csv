@@ -21,3 +21,8 @@ close	none	0	4	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	16	15223
 far	irrelevant	2	4	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	17	1522373441348	wavy_blue_star	blue star with waves	speaker	3897	chatMessage
 close	none	0	2	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	18	1522373460448	wavy_black_triangle	black caution symbol with waves	speaker	8923	chatMessage
 far	none	0	4	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	19	1522373475844	spotted_red_triangle	pink caution symbol with dots	speaker	5775	chatMessage
+close	none	0	2	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	20	1522373500998	striped_black_triangle	black caution symbol bottom row with stripes	speaker	15476	chatMessage
+far	none	0	3	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	21	1522373515385	wavy_green_square	square with waves	speaker	4072	chatMessage
+far	irrelevant	2	3	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	22	1522373528869	spotted_green_circle	round with dots	speaker	2321	chatMessage
+close	irrelevant	1	2	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	23	1522373550250	checked_black_circle	round top left with checkerboard	speaker	10215	chatMessage
+close	irrelevant	1	4	planned_sample	7600-346d56b5-bd76-406f-befb-6b47e07d5916	24	1522373569693	checked_red_square	pink square with checkerboard	speaker	8420	chatMessage
