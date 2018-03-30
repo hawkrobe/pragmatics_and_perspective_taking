@@ -8,10 +8,17 @@ output: html_notebook
 ## Import message data
 
 ```{r}
-d_raw <- read_tsv('../data/final/experiment2/pilot0/chatMessage/pilot0_messages.csv')
+library(tidyverse)
+library(ggthemes)
+library(lme4)
+library(lmerTest)
+
+d_raw <- read_tsv('../data/final/experiment2/planned_sample/chatMessage/message.csv') %>%
+  filter(iterationName == 'planned_sample') %>%
+  filter(role == 'speaker')
 
 # nonNativeSpeakerIDs <- unique((tangramSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
-incompleteIDs <- unique((d %>% group_by(gameid) %>% 
+incompleteIDs <- unique((d_raw %>% group_by(gameid) %>% 
                            filter(length(unique(trialNum)) != 24))$gameid)
 
 # Some speakers relied purely on location in grid
@@ -29,23 +36,34 @@ d <- d_raw %>%
 ## Check basic (no-hidden) pragmatic effect
 
 ```{r}
-d %>%
+basic.d <- d %>%
   filter(hidden == 'no') %>%
   group_by(gameid, context) %>%
   summarize(m = mean(numRawWords)) %>%
   spread(context, m) %>%
-  mutate(diff = close - far) %>%
-  ggplot(aes(x = far, y = close)) +
+  mutate(diff = close - far) 
+ 
+ggplot(basic.d, aes(x = far, y = close)) +
     geom_point() +
     theme_bw() +
     geom_abline(intercept = 0, slope = 1) +
     ylim(1,12) +
     xlim(1,12) +
     theme(aspect.ratio = 1)
+```
 
-  summarize(m = mean(numRawWords), se = sd(numRawWords)/sqrt(length(numRawWords))) %>%
-    spread(context, numRawWords)
+Aggregated to difference scores:
 
+```{r}
+ggplot(basic.d, aes(x = diff)) +
+    geom_histogram(binwidth = 0.25) +
+    theme_bw() +
+    geom_vline(xintercept = 0) +
+    # ylim(1,12) +
+    xlim(-4,4) +
+    theme(aspect.ratio = 1)
+
+t.test(basic.d$diff)
 ```
 
 ## Message length collapsing across all subjects
@@ -65,32 +83,43 @@ d %>%
 ## Scatter to look at within-subj effects
 
 ```{r}
-d %>%
+hidden.d <- d %>%
   group_by(gameid, context, hidden) %>%
   summarize(m = mean(numRawWords)) %>%
   spread(hidden, m) %>%
-  mutate(diff = yes - no) %>%
-  ggplot(aes(x = no, y = yes)) +
+  mutate(diff = yes - no) 
+
+ggplot(hidden.d, aes(x = no, y = yes)) +
     geom_point() +
     facet_wrap(~ context) +
     theme_bw() +
     geom_abline(intercept = 0, slope = 1) +
-    ylim(1,12) +
+    ylim(1,15) +
     ylab('# words (with occlusions)') +
     xlab('# words (without occlusions)') +
     ggtitle('Within-pair comparisons of reference w/ and w/out occlusion') +
-    xlim(1,12) +
+    xlim(1,15) +
     theme(aspect.ratio = 1)
 
 ggsave('~/Downloads/scatter.pdf')
 ```
 
+Histogram
+
 ```{r}
-d %>%
-  group_by(gameid, context, hidden) %>%
-  summarize(m = mean(numRawWords)) %>%
-  spread(hidden, m) %>%
-  mutate(diff = yes - no) %>%
+ggplot(hidden.d %>% group_by(context) %>% mutate(m = mean(diff)), aes(x = diff)) +
+    geom_histogram(binwidth = 0.33) +
+    theme_bw() +
+    geom_vline(xintercept = 0, linetype = 2) +
+    geom_vline(aes(xintercept = m), color = 'red') +
+    facet_wrap(~ context) +
+    # ylim(1,12) +
+    xlim(-5,5) +
+    theme(aspect.ratio = 1)
+```
+
+```{r}
+hidden.d %>%
   group_by(context) %>%
   summarize(m = mean(diff), se = sd(diff)/sqrt(length(diff))) %>%
   ggplot(aes(x = context, y = m)) +
@@ -102,25 +131,30 @@ d %>%
   
 ```
 
-# Regression
+# Stats
+
+Simple effect of hidden-ness in 'far' contexts 
+
+```{r}
+summary(lmer(numRawWords ~ hidden + (1 + hidden | gameid), 
+             data = d %>% 
+                filter(context == 'far')))
+t.test(numRawWords ~ hidden, data = d %>% filter(context == 'far'), var.equal = FALSE)
+```
+
+interaction-y way
+
+```{r}
+summary(lmer(numRawWords ~ context * hidden + (1 + context * hidden | gameid), data = d))
+```
 
 helmert coding way (one way of slicing)
 
 ```{r}
-library(ggthemes)
-library(lme4)
-library(lmerTest)
-
 d.regression <- d %>% 
   unite(condition, context, hidden) %>%
   ungroup() %>%
   mutate(condition = ordered(condition, levels = c('far_no', 'close_no', 'far_yes', 'close_yes')))
 contrasts(d.regression$condition) <- contr.helmert(4)
 summary(lmer(numRawWords ~ condition + (1 + condition | gameid), data = d.regression))
-```
-
-interaction-y way
-
-```{r}
-summary(lmer(numRawWords ~ context * hidden + (1 + context + hidden | gameid), data = d))
 ```
