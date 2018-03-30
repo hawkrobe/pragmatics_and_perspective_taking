@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="/favicon.ico">
 
     <title>Experiment</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/lib/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
@@ -33,92 +33,133 @@
       
       <div class="well" style="width:800px; margin: 0 auto">
 
-	<p> In this experiment, we'll be playing a communication
-	game. The game has two roles, which will be assigned
-	randomly. Since you will not know which role you will play
-	until the game starts, you will be responsible for
-	understanding the responsibilities and goals of both
-	roles.  </p>
-
-	  <p> If you are the first person to arrive in a game, you must wait
-	shortly for another player to join. Once both players have
-	joined the game, you will see a display like the
-	following: </p>
-
 	<p>
-	  <center><img src="images/overall_view.jpg" alt="Example gameplay" style="width:600px;height:320px"></center>
+	  In this experiment you will play a fun communication game
+	  with another turker! One of you will be assigned
+	  the <b>Director</b> role and the other will be
+	  the <b>Matcher</b>. Since you will not know which role you
+	  will play until the game starts, you will be responsible for
+	  understanding the responsibilities and goals of both roles.
 	</p>
 
-	<p> On the right side of the screen, labeled "Play-space", you
-	will see a grid filled with various objects. On the left side
-	of the screen, labeled "Chatbox", you will see a chat window
-	that you can use to communicate with the other player. </p>
+	<p>
+	  On each round of the game, we will randomly pick a few
+	  everyday objects and place them in a grid. Although you will
+	  just see a 2D view in the game, you can imagine you are
+	  sitting across the table from your partner with cubbyholes
+	  between you.
+	</p>
+
+	<p>
+	  <center>
+	    <img src="images/overall_view.jpg"
+		 alt="Example gameplay"
+		 style="width:600px;height:320px">
+	  </center>
+	</p>
+
+	<p>
+	  The Director will be shown a series of instructions about
+	  how the objects in the grid need to be moved. However, only
+	  the Matcher has the ability to move objects. To succeed at
+	  the game, the Director must send messages through the chat
+	  box telling the Matcher how to move the objects. It is
+	  important to give instructions as clearly as possible. Given
+	  the below screen, for example, the Director would want the
+	  Matcher to move the umbrella to the right.
+	</p>
+
+	<p>
+	  <center>
+	    <img src="images/director_view.jpg"
+		 alt="director view"
+		 style="width:300px;height:320px">
+	  </center>
+	</p>
+
+	<p>
+	  The goal of the Matcher on each instruction is to identify
+	  which object must be moved, and where to move it, based on
+	  the message sent by the Director. You will follow these
+	  instructions by clicking and dragging items from one cell of
+	  the grid to another. If you are the Matcher, you will first
+	  need to wait until the Director has sent their message
+	  before being able to move an object or replying through the
+	  chatbox.
+	</p>
+
+	<p>
+	  Once the Matcher moves the object they believe the Director
+	  was talking about, both of you will be given feedback: the
+	  Director will see where the object was moved, and the
+	  Matcher will learn whether they made the correct move or
+	  not. If it is incorrect, the object will go back to its
+	  original position, and you will try again. If it is
+	  correct, you will both automatically advance to the next
+	  instruction. There are 8 different grids with different
+	  items in different locations, and four instructions per
+	  grid. After the final round you will answer a few more
+	  questions and be on your way.
+	</p>
 	
-	<h3> Director instructions </h3>
-
-	<p> If you are the "director", the grid will be marked to
-	indicate how the objects inside are to be moved.  You'll have
-	to give instructions to the other player telling them how to
-	move the objects. You are responsible for instructing to move
-	the items so that they reach the final positions that are
-	shown in the picture. Be sure to give your instructions as
-	clearly as you possibly can. Given the below screen, for
-	example, you would want your partner to move the
-	umbrella to the right. </p>
-
-	<p>
-	  <center><img src="images/director_view.jpg" alt="director view" style="width:300px;height:320px"></center>
-	</p>
-
-	<h3> Matcher instructions </h3>
-
-	<p> If you are the "matcher", your job will be to follow the
-	director's instructions as best as you can. You will follow
-	these instructions by clicking and dragging items from one
-	cell of the grid to another. To understand your behavior, we
-	will be recording the location of your mouse within the
-	grid. For this reason, we will ask you to click on a circle in
-	the center of the grid at the beginning of the game, between
-	instructions, or if you make an incorrect move. This screen
-	will look like the following: </p>
-
-	<p>
-	  <center><img src="images/clickInTheCircle.jpg" alt="director view" style="width:600px;height:290px"></center>
-	</p>	
-
 	<h3> Hidden objects </h3>
 
-	<p> An important point for both players to keep in mind is
-	that <strong> some cells are hidden to the director </strong>. When the
-	background of a cell is black, <strong> the director will not
-	know what is behind it, if anything </strong>. If you are the matcher, you
-	must pay close attention to the fact that the director will
-	not be able to see the items in the occluded slots. To illustrate, here are the 2 views side-by-side: </p>
-
 	<p>
-	    <center>
-	      <img src="images/director_view.jpg" alt="director view" style="width:300px;height:320px"> 
-	      <img src="images/matcher_view.jpg" alt="matcher view" style="width:300px;height:320px">
-	    </center>
+	  What makes this game more interesting is that on some rounds, 
+	  <b>curtains</b> will appear in some cells. These curtains
+	  block the view of the Director, who cannot know what object,
+	  if any, is behind the curtain. To illustrate, here is the
+	  Director's view and Matcher's view of the same grid, side by
+	  side. The Matcher can see there there is a tennis ball on
+	  their side of the curtain, but the Director does not know it
+	  is there.
+	
+	<p>
+	  <center>
+	    <img src="images/director_view.jpg"
+		 alt="director view"
+		 style="width:300px;height:320px"> 
+	    <img src="images/matcher_view.jpg"
+		 alt="matcher view"
+		 style="width:300px;height:320px">
+	  </center>
 	</p>
 
-	<p> Before we start, there are a few more things we'd like you to
-	keep in mind. </p>
-	  
-	<ol>
-	  <li> During each round, please talk only about the game. Try
-	    not to talk about the objects except as needed to move
-	    them around the grid. We will be recording the messages
-	    you send for research purposes. </li>
-	  <li> There will be 8 different grids with totally different
-	  items in different locations. There will be four
-	  instructions per grid. Once another player joins, the
-	  experiment should take about 7 minutes.</li>
-	  <li> Note that if you refresh the page, or close the tab
-	  containing the game, you will not be able to complete the
-	  HIT. We will warn you before you navigate away, so it
-	  shouldn't happen by accident!</li>
-	</ol>
+	<p>
+	  A few final notes: First, since you are playing with
+	  another player, you may see this screen before the game
+	  begins:
+	</p>
+
+	<p>
+	  <center>
+	    <img src="images/waitScreen.png" alt="wait screen"
+		 style="width:700px;height:150px">
+	  </center>
+	</p>
+
+	<p>
+	  Just hold tight. Another player should join the game within
+	  the next few minutes. If you're in the waiting room 15 minutes
+	  without another player joining, please return the HIT and try again later!
+	</p>
+
+	<p>
+	  Second, please be respectful of the worker you're playing
+	  with: pay close attention and try to be as responsive as
+	  possible. During each round, please talk only about the
+	  game and please use <b>properties of the object</b>
+	  instead of describing locations in the grid. We will be
+	  recording the messages you send for research
+	  purposes.
+	</p>
+
+	<p>
+	  Finally, please DO NOT refresh the page at any point once
+	  you start the game (including the waiting page). If you
+	  refresh, you will not be able to rejoin the game you were in
+	  and you may not be able to submit the HIT. <br> Thank you!
+	</p>
 	
       </div>
       <div class="page-header">
@@ -126,64 +167,71 @@
       </div>
 
       <div class="well" style="width:800px; margin: 0 auto">
-	</br>
-	The director's goal in this game is to
-	  </br>
-	  <input type="radio" name="dgoal" value="yes"> Communicate instructions clearly
-	  </br>
-	  <input type="radio" name="dgoal" value="no"> Move objects to the correct locations
-	  </br>
+	<br>
+	The Director's goal in this game is to
+	<br>
+	<input type="radio" name="dgoal" value="yes"> Communicate instructions clearly
+	<br>
+	<input type="radio" name="dgoal" value="no"> Move objects to the correct locations
+	<br>
 
 
-	</br>
-	The matcher's goal in this game is to 
-      </br>
-      <input type="radio" name="mgoal" value="no"> Communicate instructions clearly
-      </br>
-      <input type="radio" name="mgoal" value="yes"> Move objects to the correct locations
-      </br>
+	<br>
+	The Matcher's goal in this game is to 
+	<br>
+	<input type="radio" name="mgoal" value="no"> Communicate instructions clearly
+	<br>
+	<input type="radio" name="mgoal" value="yes"> Move objects to the correct locations
+	<br>
 
-      
-      </br>
-	If a square in the grid is black, it means
-	  </br>
-	  <input type="radio" name="occ" value="no"> The matcher <strong> cannot </strong> see the object behind it
-	  </br>
-	  <input type="radio" name="occ" value="yes"> The director <strong> cannot </strong> see the object behind it
-	  </br>
-	    <input type="radio" name="occ" value="no"> The director <strong> can </strong> see the object behind it
-	  </br>
-	  
+	
+	<br>
+	If a square in the grid has a curtain, it means
+	<br>
+	<input type="radio" name="occ" value="no"> The <strong> Matcher cannot </strong> see the object behind it.
+	<br>
+	<input type="radio" name="occ" value="yes"> Thed <strong> Director cannot </strong> see the object behind it.
+	<br>
+	<input type="radio" name="occ" value="no"> Both players <strong> can </strong> see the object.
+	<br>
+	
 
-      </br> To move an object, the matcher must
-      </br>
+	<br> To move an object, the Matcher must
+	<br>
 	<input type="radio" name="move" value="yes"> Click and drag it
-	  </br>
-	    <input type="radio" name="move" value="no"> Use their keyboard to select the destination
-       </br>
+	<br>
+	<input type="radio" name="move" value="no"> Use their keyboard to select the destination
+	<br>
 
-       </br> 
-       At the end of a round
-       </br>
-       <input type="radio" name="comp" value="no"> Some objects stay the same
-       </br>
-       <input type="radio" name="comp" value="yes"> All of the objects are replaced by new objects in new locations
-       </br>
-	  
-          </br>
-	  Have you participated in this study before? </br>
-	  <input type="radio" name="completed" value="yes"> No
-          </br>
-	  <input type="radio" name="completed" value="no"> Yes
-          </br>
+	<!-- <br> -->
+	<!-- At the end of a round -->
+	<!-- <br> -->
+	<!-- <input type="radio" name="comp" value="no"> Some objects stay the same -->
+	<!-- <br> -->
+	<!-- <input type="radio" name="comp" value="yes"> All of the objects are replaced by new objects in new locations -->
+	<!-- <br> -->
+	<br>
+	The speaker should describe the locations of objects in the grid (e.g. "upper-left corner").
+	<br>
+	<input type="radio" name="comp" value="no"> True
+	<br>
+	<input type="radio" name="comp" value="yes"> False
+	<br>
 
-	  </br>
-	  <input id="quiz_submit" type="submit" value="Submit"> 
-		  </br>
-		  </br>
+        <br>
+	Have you participated in this study before? <br>
+	<input type="radio" name="completed" value="yes"> No
+        <br>
+	<input type="radio" name="completed" value="no"> Yes
+        <br>
+
+	<br>
+	<input id="quiz_submit" type="submit" value="Submit"> 
+	<br>
+	<br>
 	<div class="error" style="display:none"> Ooops! Looks like you made a mistake. You have one more try. </div>
-    </div> <!-- /container -->
-      </div>
+      </div> <!-- /container -->
+    </div>
     <script type="text/javascript">
       $('html,body').scrollTop(0);
       var urlParams;
@@ -230,6 +278,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../dist/js/bootstrap.min.js"></script>
+    <script src="/lib/js/bootstrap.min.js"></script>
   </body>
 </html>
