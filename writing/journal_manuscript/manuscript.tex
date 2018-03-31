@@ -87,7 +87,7 @@ Optimal indolence: a normative microscopic approach to work and leisure. Open Mi
 \begin{abstract}
 %To communicate successfully, speakers must flexibly adapt %the specificity of 
 %their utterances to the demands of the current context. When they are unsure exactly which objects are in view of their partner, for example, they may provide additional disambiguating information when referring to a particular object: saying "cassette tape" instead of the potentially ambiguous ``tape."
-Recent debates over adult theory of mind use have hinged on behavior in natural-language communication tasks but have largely neglected the nuanced pragmatics of these tasks. In particular, using occluded objects to create perspective asymmetries may have unexpected side effects under pragmatic reasoning. Cooperative speakers ought to flexibly adjust their utterances to be more informative in contexts with high uncertainty about what is in the listener's field of view. In a direct replication, we show that scripted confederates violate these expectations by using less informative labels than unscripted directors naturally use. In two additional experiments, we directly manipulate speaker and listener expectations to test each step of the pragmatic account. Hence, apparent failures of visual perspective-taking may in fact be successes for sophisticated theory of mind use in context.
+Recent debates over adult theory of mind use have hinged on behavior in natural-language communication tasks but have largely neglected the nuanced pragmatics of these tasks. In particular, using occluded objects to create perspective asymmetries may have unexpected side effects under pragmatic reasoning. Cooperative speakers ought to flexibly adjust their utterances to be more informative in contexts with high uncertainty about what is in the listener's field of view. In a direct replication, we show that scripted confederates violate these expectations by using less informative labels than unscripted directors naturally use. In a follow-up experiment, we directly manipulate whether objects are hidden to test the pragmatic account of speaker informativity in uncertain environments. Hence, apparent failures of visual perspective-taking may in fact be successes for sophisticated theory of mind use in context.
 %Recent theories of language use as recursive social reasoning remain in tension with evidence that adult listeners apparently fail to take their partner's perspective in communication. To reconcile these points of view, we use a computational model of communication under uncertainty to analyze the pragmatic demands of a common theory of mind test.  Through a minimal pair of replications comparing scripted vs. unscripted speakers, we show that scripted confederates used in previous studies are \emph{uncooperative}: they are less informative than what a speaker would actually produce in that situation, thus violating the listener's rational social expectations. This ironically shows that apparent failures of theory of mind are in fact attributable to sophisticated expectations about speaker behavior---that is, to theory of mind. 
 \end{abstract}
 
@@ -312,22 +312,32 @@ In both raw patterns of error and mouse-tracking metrics, we successfully replic
  \includegraphics[scale=.25]{figures/Exp2_design}
  \caption{Within-pair factorial design used in Exp.~2. In the common condition, we reproduce a simple pragmatic reference contrast: when more than one star is present in common ground, speakers are expected to be more informative. On hidden versions of these condition, the same set of objects is visible, but some additional squares are occluded. If pragmatic directors represent uncertainty over what the matcher sees behind these squares, we predict that they will produce more informative utterances.}
  \vspace{-.5cm}
- \label{fig:hover}
+ \label{fig:exp2design}
  \end{center}
  \end{figure}
 
 \subsection{Experiment~2: Production in uncertain contexts}
 \label{sec:Exp2}
 
+In Experiment 2, we more directly test the hypothesis that speakers naturally produce more informative referring expressions in more uncertain contexts (e.g. contexts where objects are occluded such as those used in Director-Matcher tasks to test theory of mind use). 
+
 \subsection{Participants}
 
-We recruited K participants (K/2 pairs) from Amazon Mechanical Turk. All participants were native English speakers. %Three pairs were excluded for making 2 or more errors on non-critical items.
+We recruited 200 participants (100 pairs) from Amazon Mechanical Turk. All participants were native English speakers. 
 
 \subsection{Materials \& Procedure}
 
-To more directly test speaker behavior across different contexts, we moved to a more systematic stimulus domain. These objects varied along three discrete features: \emph{shape}, \emph{texture}, and \emph{color}. Each feature took four discrete values, giving a space of 64 possible objects. We placed these objects in a smaller $3 \times 3$ grid, and used a pure \emph{reference game} setup where listeners had to click the intended referent as opposed to following a movement instruction. 
+Stimuli were sampled from a more systematic domain than the idiosyncratic objects used in Exp.~1. They varied along three discrete features: \emph{shape}, \emph{texture}, and \emph{color}. Each feature took four discrete values, giving a space of 64 possible objects. We placed these objects in a smaller $3 \times 3$ grid, and used a pure \emph{reference game} setup where listeners had to click the intended referent as opposed to following a movement instruction. 
 
-To test how speakers flexibly modify their informativity in response to the uncertainty posed by 
+Our design is entirely within-pair. Each trial is sampled from a factorial 2 x 2 design manipulating (1) the presence or absence of occlusions (`hidden' vs. `no hidden'), and (2) the closeness of visible distractors to the target (`close' vs. `far'; see Fig. \ref{fig:exp2design}). On 'hidden' trials, two cells are covered in curtains such that only the matcher can see if there is an object in the cell; on 'no hidden' trials, all cells are in common ground. On 'far' trials, the target is the only object with a particular shape; on 'close' trials, there is also a visible distractor sharing the target's shape, differing only in color or texture. Each trial type appeared 6 times for a total of 24 trials, and the sequence of trials was pseudo-randomized such that no trial type appeared more than twice in each 
+
+ To test how speakers flexibly modify their informativity in response to the uncertainty posed by 
+
+\subsection{Results}
+
+Our primary is the length (in words) of their naturally produced referring expressions in different contexts. 
+
+As a secondary measure (intended for use in a cognitive model), we will also annotate each utterance by the number of object features mentioned (e.g. shape, texture, color). 
 
 \section{Evaluating models of referring}
 
