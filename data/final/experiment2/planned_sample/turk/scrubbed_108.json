@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:20:16Z",
+    "AutoApprovalTime": "2018-03-30T00:19:30Z",
+    "AssignmentId": "108",
+    "WorkerId": "108",
+    "answers": {
+        "subject_information": {
+            "totalLength": 499084,
+            "gameID": "7812-cf7640d7-5fa3-4f18-aed5-d7af48707614",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "Great hit and easier than I thought. One thing is the curtains didn't seem to be an issue at least for me. I sailed right through.",
+            "strategy": "Super easy as I got great clues. I just had to wait a second and make sure before clicking as it can be easy to go too quick. Have to really look as I did not want to make any mistakes."
+        },
+        "id": "7812-cf7640d7-5fa3-4f18-aed5-d7af48707614"
+    },
+    "AcceptTime": "2018-03-29T23:53:48Z",
+    "HITId": "3IKDQS3DQE0XO47GM5JMCIV0L5PICE",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:14:30Z"
+}

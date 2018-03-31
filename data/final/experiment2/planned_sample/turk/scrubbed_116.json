@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:22:16Z",
+    "AutoApprovalTime": "2018-03-30T00:21:39Z",
+    "AssignmentId": "116",
+    "WorkerId": "116",
+    "answers": {
+        "subject_information": {
+            "totalLength": 388426,
+            "gameID": "1141-78f9cc33-80b2-460f-a3b3-52eff020c08c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 23,
+            "role": "listener",
+            "comments": "none",
+            "strategy": "I had a good partner, didn't really need a strategy"
+        },
+        "id": "1141-78f9cc33-80b2-460f-a3b3-52eff020c08c"
+    },
+    "AcceptTime": "2018-03-29T23:59:50Z",
+    "HITId": "3BVS8WK9Q0VEEZFA85NR1YPI3KPBI0",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:16:39Z"
+}

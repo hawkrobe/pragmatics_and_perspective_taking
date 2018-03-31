@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:31:16Z",
+    "AutoApprovalTime": "2018-03-29T21:30:28Z",
+    "AssignmentId": "25",
+    "WorkerId": "25",
+    "answers": {
+        "subject_information": {
+            "totalLength": 408405,
+            "gameID": "3206-66e4691e-f369-40fc-8b4b-fdd6df0798d4",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "none",
+            "strategy": "I just followed other player lead."
+        },
+        "id": "3206-66e4691e-f369-40fc-8b4b-fdd6df0798d4"
+    },
+    "AcceptTime": "2018-03-29T21:13:40Z",
+    "HITId": "31N9JPQXIPIGJDTN5DAFSHOXJVHNHY",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:25:28Z"
+}

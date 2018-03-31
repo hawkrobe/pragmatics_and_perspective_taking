@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:35:17Z",
+    "AutoApprovalTime": "2018-03-29T21:34:36Z",
+    "AssignmentId": "58",
+    "WorkerId": "58",
+    "answers": {
+        "subject_information": {
+            "totalLength": 499473,
+            "gameID": "6725-df933262-f349-43bb-ad36-1faa416a9f44",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 23,
+            "role": "listener",
+            "comments": "",
+            "strategy": "The person just described the shape. It was very easy to succeed."
+        },
+        "id": "6725-df933262-f349-43bb-ad36-1faa416a9f44"
+    },
+    "AcceptTime": "2018-03-29T21:01:23Z",
+    "HITId": "3ZQX1VYFTD558NS63OGMUTV36MXO80",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:29:36Z"
+}

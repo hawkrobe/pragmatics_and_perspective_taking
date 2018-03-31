@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:15:17Z",
+    "AutoApprovalTime": "2018-03-29T21:15:11Z",
+    "AssignmentId": "21",
+    "WorkerId": "21",
+    "answers": {
+        "subject_information": {
+            "totalLength": 383980,
+            "gameID": "0036-cbf7b0c5-6796-4e02-ac77-7a411b19dc73",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "It was fun, Thank you!",
+            "strategy": "I looked at the color of the shape, it was mostly different..."
+        },
+        "id": "0036-cbf7b0c5-6796-4e02-ac77-7a411b19dc73"
+    },
+    "AcceptTime": "2018-03-29T20:49:39Z",
+    "HITId": "31N9JPQXIPIGJDTN5DAFSHOXJVHNHY",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:10:11Z"
+}

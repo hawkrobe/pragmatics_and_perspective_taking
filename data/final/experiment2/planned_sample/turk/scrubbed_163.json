@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:35:16Z",
+    "AutoApprovalTime": "2018-03-30T00:34:27Z",
+    "AssignmentId": "163",
+    "WorkerId": "163",
+    "answers": {
+        "subject_information": {
+            "totalLength": 917071,
+            "gameID": "6952-f84cf3f2-0198-4509-bb35-aac7dee1e132",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "listener",
+            "comments": "",
+            "strategy": "I honestly just tried to follow the speaker's instructions the best I could. "
+        },
+        "id": "6952-f84cf3f2-0198-4509-bb35-aac7dee1e132"
+    },
+    "AcceptTime": "2018-03-30T00:10:54Z",
+    "HITId": "33NOQL7T9OZH7R6D5XR3AR27RR6Z8M",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:29:27Z"
+}

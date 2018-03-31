@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T20:58:16Z",
+    "AutoApprovalTime": "2018-03-29T20:57:29Z",
+    "AssignmentId": "19",
+    "WorkerId": "19",
+    "answers": {
+        "subject_information": {
+            "totalLength": 820658,
+            "gameID": "9192-b28929bf-cd63-407c-93e3-c845d45bee0d",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "Really fun hit!",
+            "strategy": "At first, I wanted to be as descriptive as possible due to the \"mystery curtains,\" and not knowing what was behind them. Then getting feedback from my partner about how descriptive I needed to be, I changed my strategy to shorter answers."
+        },
+        "id": "9192-b28929bf-cd63-407c-93e3-c845d45bee0d"
+    },
+    "AcceptTime": "2018-03-29T20:34:58Z",
+    "HITId": "3OB6JN3A9QPNQPMQPH79T6131E3MRS",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T20:52:29Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:26:17Z",
+    "AutoApprovalTime": "2018-03-30T01:26:14Z",
+    "AssignmentId": "168",
+    "WorkerId": "168",
+    "answers": {
+        "subject_information": {
+            "totalLength": 584976,
+            "gameID": "7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 23,
+            "role": "listener",
+            "comments": "Love these! Thanks for letting me play.",
+            "strategy": "I chose the item my partner described. Outside of the first round where they put the wrong color, they did really well helping me know which block was correct."
+        },
+        "id": "7749-b663c3e3-47e9-454d-ad9a-2f2f0c9514b5"
+    },
+    "AcceptTime": "2018-03-30T01:06:38Z",
+    "HITId": "3DWNFENNE3VQOBE7B8Y45LYC67Z4J1",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:21:14Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:05:18Z",
+    "AutoApprovalTime": "2018-03-29T21:05:02Z",
+    "AssignmentId": "49",
+    "WorkerId": "49",
+    "answers": {
+        "subject_information": {
+            "totalLength": 305355,
+            "gameID": "4986-89a8a247-24aa-4bed-a45e-482506dfbd81",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "None",
+            "strategy": "Choosing what the speaker described."
+        },
+        "id": "4986-89a8a247-24aa-4bed-a45e-482506dfbd81"
+    },
+    "AcceptTime": "2018-03-29T20:51:21Z",
+    "HITId": "3D4BBDG7ZHWIY1PX12CZ8CTB2NN3CU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:00:02Z"
+}

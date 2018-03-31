@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:43:18Z",
+    "AutoApprovalTime": "2018-03-29T21:42:50Z",
+    "AssignmentId": "84",
+    "WorkerId": "84",
+    "answers": {
+        "subject_information": {
+            "totalLength": 423026,
+            "gameID": "1527-79f8c353-c372-4e1a-b849-28eea498254e",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 22,
+            "role": "speaker",
+            "comments": "Thanks for letting me participate! This was fun",
+            "strategy": "For rounds without curtains, I was only as descriptive as I needed to be. If there was only one shape (star, for example), I would just say \"star\". But with curtains I was as descriptive as possible"
+        },
+        "id": "1527-79f8c353-c372-4e1a-b849-28eea498254e"
+    },
+    "AcceptTime": "2018-03-29T21:26:47Z",
+    "HITId": "3CMIQF80GNQLPLMYPMBSZKUCGTQQ6S",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:37:50Z"
+}

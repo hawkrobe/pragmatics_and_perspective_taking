@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:26:16Z",
+    "AutoApprovalTime": "2018-03-30T01:25:28Z",
+    "AssignmentId": "171",
+    "WorkerId": "171",
+    "answers": {
+        "subject_information": {
+            "totalLength": 474679,
+            "gameID": "9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 23,
+            "role": "speaker",
+            "comments": "none",
+            "strategy": "describing the shape and then what was inside the shape."
+        },
+        "id": "9713-e2fd26d6-7eb0-4e31-aab9-3c6959210297"
+    },
+    "AcceptTime": "2018-03-30T01:06:13Z",
+    "HITId": "3DWNFENNE3VQOBE7B8Y45LYC67Z4J1",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:20:28Z"
+}

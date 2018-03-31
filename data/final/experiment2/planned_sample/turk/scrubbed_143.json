@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:09:16Z",
+    "AutoApprovalTime": "2018-03-30T01:08:45Z",
+    "AssignmentId": "143",
+    "WorkerId": "143",
+    "answers": {
+        "subject_information": {
+            "totalLength": 385242,
+            "gameID": "0695-25cba373-a155-42c2-9971-44e1af0b113a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "I just explained what the shape was and what the design in the middle was."
+        },
+        "id": "0695-25cba373-a155-42c2-9971-44e1af0b113a"
+    },
+    "AcceptTime": "2018-03-30T00:52:19Z",
+    "HITId": "368IUKXGA580P9LJP9W3ZF42BX9P65",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:03:45Z"
+}

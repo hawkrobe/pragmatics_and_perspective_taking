@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:02:17Z",
+    "AutoApprovalTime": "2018-03-30T01:01:49Z",
+    "AssignmentId": "174",
+    "WorkerId": "174",
+    "answers": {
+        "subject_information": {
+            "totalLength": 940132,
+            "gameID": "2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 22,
+            "role": "speaker",
+            "comments": "We missed a couple of targets there.  Either I got distracted and described the wrong thing, or he/she got distracted.  I didn't see if they picked what I described or not, it went by so fast, so I'm not sure which of us was at fault. Either way: sorry.",
+            "strategy": "I described the target as completely as I could"
+        },
+        "id": "2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714"
+    },
+    "AcceptTime": "2018-03-30T00:35:46Z",
+    "HITId": "3CMIQF80GNQLPLMYPMBSZKUCGTX6QF",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:56:49Z"
+}

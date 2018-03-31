@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:17:16Z",
+    "AutoApprovalTime": "2018-03-30T00:16:41Z",
+    "AssignmentId": "89",
+    "WorkerId": "89",
+    "answers": {
+        "subject_information": {
+            "totalLength": 411433,
+            "gameID": "7812-cf7640d7-5fa3-4f18-aed5-d7af48707614",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "speaker",
+            "comments": "That was fun.",
+            "strategy": "Few words as possible, only descriptive words."
+        },
+        "id": "7812-cf7640d7-5fa3-4f18-aed5-d7af48707614"
+    },
+    "AcceptTime": "2018-03-30T00:00:52Z",
+    "HITId": "3H1C3QRA01JL8Z5UQMTVR3X8TCICEZ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:11:41Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:39:19Z",
+    "AutoApprovalTime": "2018-03-29T21:39:00Z",
+    "AssignmentId": "23",
+    "WorkerId": "23",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1176464,
+            "gameID": "7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 23,
+            "role": "speaker",
+            "comments": "This was a great HIT.  Thank you and have a wonderful day.",
+            "strategy": "I relayed as much about the object as I could without telling the other person where the object was located."
+        },
+        "id": "7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01"
+    },
+    "AcceptTime": "2018-03-29T21:07:34Z",
+    "HITId": "31N9JPQXIPIGJDTN5DAFSHOXJVHNHY",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:34:00Z"
+}

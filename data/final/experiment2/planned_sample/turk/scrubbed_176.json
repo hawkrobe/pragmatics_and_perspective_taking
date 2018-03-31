@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:11:16Z",
+    "AutoApprovalTime": "2018-03-30T01:10:53Z",
+    "AssignmentId": "176",
+    "WorkerId": "176",
+    "answers": {
+        "subject_information": {
+            "totalLength": 761866,
+            "gameID": "2124-84af8247-64f3-4288-8f49-97ddf2426cb7",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 23,
+            "role": "listener",
+            "comments": "",
+            "strategy": "I waited for my partner to describe the object, and asked questions if more than one fit their description"
+        },
+        "id": "2124-84af8247-64f3-4288-8f49-97ddf2426cb7"
+    },
+    "AcceptTime": "2018-03-30T00:49:42Z",
+    "HITId": "3CMIQF80GNQLPLMYPMBSZKUCGTX6QF",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:05:53Z"
+}

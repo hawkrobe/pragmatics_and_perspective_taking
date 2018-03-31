@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:38:17Z",
+    "AutoApprovalTime": "2018-03-30T00:38:11Z",
+    "AssignmentId": "152",
+    "WorkerId": "152",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1107342,
+            "gameID": "1087-9a341f43-b2f9-4f35-bab4-bf169e3e0e2a",
+            "thinksHuman": "yes",
+            "confused": "confused",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 23,
+            "role": "listener",
+            "comments": "I was confused with the instructions because I was not sure of the roles between the listener and the speaker. One way for me this would be easier to understand is perhaps if there was a table or chart that had all the roles of the Listener on one side and all the parts of the speaker in the respective order on the other side =|= \n It would look like this:\n          Speaker         |         Listener\ndescribe object       | identify object\ncan use chat box     | can use chat box\ncannot see curtain  |  can see curtain\n\nBut maybe I am the only one with this confusion.",
+            "strategy": "pretty straight forward. The first one had to figure out what I was doing and there may have been a language barrier but it all worked out fine in the end."
+        },
+        "id": "1087-9a341f43-b2f9-4f35-bab4-bf169e3e0e2a"
+    },
+    "AcceptTime": "2018-03-30T00:09:41Z",
+    "HITId": "3VEI3XUCZRXTBSJ3HXZ1AAVY7KNRP5",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:33:11Z"
+}

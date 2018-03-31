@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:32:17Z",
+    "AutoApprovalTime": "2018-03-30T00:32:08Z",
+    "AssignmentId": "134",
+    "WorkerId": "134",
+    "answers": {
+        "subject_information": {
+            "totalLength": 609551,
+            "gameID": "2463-7f48f9b3-106d-4460-9749-561cfbf9387b",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "no",
+            "strategy": "describe with enough detail to where it couldn't be confused with any other"
+        },
+        "id": "2463-7f48f9b3-106d-4460-9749-561cfbf9387b"
+    },
+    "AcceptTime": "2018-03-30T00:08:42Z",
+    "HITId": "341H3G5YF0EZP21AATEOHCWP8TUZ0Z",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:27:08Z"
+}

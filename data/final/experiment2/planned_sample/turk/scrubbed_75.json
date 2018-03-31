@@ -1,0 +1,25 @@
+{
+    "ApprovalTime": "2018-03-29T21:43:17Z",
+    "AutoApprovalTime": "2018-03-29T21:42:33Z",
+    "AssignmentId": "75",
+    "WorkerId": "75",
+    "answers": {
+        "subject_information": {
+            "totalLength": 542409,
+            "gameID": "8444-291a5d3a-e311-4c24-925c-173dfcc01141",
+            "confused": "yes",
+            "comments": "no",
+            "ratePartner": "liked",
+            "score": 23,
+            "role": "speaker",
+            "nativeEnglish": "yes",
+            "strategy": "i just chatted the target shape and pattern if necessary"
+        },
+        "id": "8444-291a5d3a-e311-4c24-925c-173dfcc01141"
+    },
+    "AcceptTime": "2018-03-29T21:24:18Z",
+    "HITId": "3ZUE82NE0A1B2AFD4LXW7ZMPFM7F89",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:37:33Z"
+}

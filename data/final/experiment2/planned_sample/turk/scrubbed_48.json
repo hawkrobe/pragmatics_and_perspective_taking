@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:37:17Z",
+    "AutoApprovalTime": "2018-03-29T21:36:42Z",
+    "AssignmentId": "48",
+    "WorkerId": "48",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1000773,
+            "gameID": "7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 23,
+            "role": "listener",
+            "comments": "no",
+            "strategy": "Just listened to what my partner said and tried to follow their direction."
+        },
+        "id": "7406-0ed88bb7-a765-466b-8c1f-eea7ca0b3c01"
+    },
+    "AcceptTime": "2018-03-29T20:50:57Z",
+    "HITId": "3D4BBDG7ZHWIY1PX12CZ8CTB2NN3CU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:31:42Z"
+}

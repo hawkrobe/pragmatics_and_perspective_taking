@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T22:18:17Z",
+    "AutoApprovalTime": "2018-03-29T22:17:32Z",
+    "AssignmentId": "82",
+    "WorkerId": "82",
+    "answers": {
+        "subject_information": {
+            "totalLength": 814350,
+            "gameID": "7612-93786e7a-c029-45ea-ba1a-17203224b05b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "I just told the color and what the item was."
+        },
+        "id": "7612-93786e7a-c029-45ea-ba1a-17203224b05b"
+    },
+    "AcceptTime": "2018-03-29T21:53:49Z",
+    "HITId": "3VO4XFFP15M4TL038WGK5YU8B4AQ7R",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T22:12:32Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:07:17Z",
+    "AutoApprovalTime": "2018-03-29T21:06:35Z",
+    "AssignmentId": "36",
+    "WorkerId": "36",
+    "answers": {
+        "subject_information": {
+            "totalLength": 706842,
+            "gameID": "3324-abc05d42-f027-4cac-aa30-c3f24b0c2144",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 24,
+            "role": "speaker",
+            "comments": "I think that the instructions were a little bit long and a bit confusing. I think that a video demo of the game would be easier to understand.",
+            "strategy": "I just followed the instructions as best as I could and provided information that would be helpful to my partner to find the item."
+        },
+        "id": "3324-abc05d42-f027-4cac-aa30-c3f24b0c2144"
+    },
+    "AcceptTime": "2018-03-29T20:42:04Z",
+    "HITId": "3SZYX62S5G0F0ZH5O4SH7NZHE7M75R",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:01:35Z"
+}

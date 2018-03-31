@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T20:38:16Z",
+    "AutoApprovalTime": "2018-03-29T20:37:26Z",
+    "AssignmentId": "15",
+    "WorkerId": "15",
+    "answers": {
+        "subject_information": {
+            "totalLength": 812780,
+            "gameID": "9600-d9162640-3d69-4aef-9ca1-f50d5d58b7e2",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 24,
+            "role": "speaker",
+            "comments": "Wondering if there actually was a need for the extra detail, but I doubt I'll lose any sleep over it. ;)",
+            "strategy": "Outline color and shape was usually enough. Realized with curtains that specifying the pattern inside the shape may help, since I didn't know if there might be ambiguity otherwise. "
+        },
+        "id": "9600-d9162640-3d69-4aef-9ca1-f50d5d58b7e2"
+    },
+    "AcceptTime": "2018-03-29T20:16:14Z",
+    "HITId": "3OB6JN3A9QPNQPMQPH79T6131E3MRS",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T20:32:26Z"
+}

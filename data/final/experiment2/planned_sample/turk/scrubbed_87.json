@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:45:19Z",
+    "AutoApprovalTime": "2018-03-29T21:45:00Z",
+    "AssignmentId": "87",
+    "WorkerId": "87",
+    "answers": {
+        "subject_information": {
+            "totalLength": 616323,
+            "gameID": "6866-d4468ddf-92ea-416f-be28-16f0cfccb056",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "I gave: color geometry then color style (internal)"
+        },
+        "id": "6866-d4468ddf-92ea-416f-be28-16f0cfccb056"
+    },
+    "AcceptTime": "2018-03-29T21:25:36Z",
+    "HITId": "3CMIQF80GNQLPLMYPMBSZKUCGTQQ6S",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:40:00Z"
+}

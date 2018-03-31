@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T22:32:17Z",
+    "AutoApprovalTime": "2018-03-29T22:32:02Z",
+    "AssignmentId": "69",
+    "WorkerId": "69",
+    "answers": {
+        "subject_information": {
+            "totalLength": 779391,
+            "gameID": "5720-1568da2e-b719-487d-8612-ebae04edb5c4",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 24,
+            "role": "speaker",
+            "comments": "maybe too easy",
+            "strategy": "I just tried to describe the properties of the shapes as best I could"
+        },
+        "id": "5720-1568da2e-b719-487d-8612-ebae04edb5c4"
+    },
+    "AcceptTime": "2018-03-29T22:02:45Z",
+    "HITId": "3ZUE82NE0A1B2AFD4LXW7ZMPFM7F89",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T22:27:02Z"
+}

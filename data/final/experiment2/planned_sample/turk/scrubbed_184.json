@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:44:16Z",
+    "AutoApprovalTime": "2018-03-30T01:43:20Z",
+    "AssignmentId": "184",
+    "WorkerId": "184",
+    "answers": {
+        "subject_information": {
+            "totalLength": 481030,
+            "gameID": "7437-8675c8ce-cc70-4f3f-ada7-8bd394b7f32f",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 23,
+            "role": "listener",
+            "comments": "This was fun but I wish we could have switched sides after awhile.",
+            "strategy": "I just read what the person wrote and chose what was described. I missed one though and that was totally my fault."
+        },
+        "id": "7437-8675c8ce-cc70-4f3f-ada7-8bd394b7f32f"
+    },
+    "AcceptTime": "2018-03-30T01:18:25Z",
+    "HITId": "3UEDKCTP9VQIII28VRWN9CIZCYP7KN",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:38:20Z"
+}

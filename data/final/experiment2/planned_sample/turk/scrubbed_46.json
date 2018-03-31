@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:10:17Z",
+    "AutoApprovalTime": "2018-03-29T21:09:53Z",
+    "AssignmentId": "46",
+    "WorkerId": "46",
+    "answers": {
+        "subject_information": {
+            "totalLength": 553213,
+            "gameID": "2317-ff855a4b-3f08-4c94-8999-a2d56cb88842",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "thank you",
+            "strategy": "I just listened to the speaker, they were very thorough and accurate so I just read what they wrote carefully and made sure I clicked the right one."
+        },
+        "id": "2317-ff855a4b-3f08-4c94-8999-a2d56cb88842"
+    },
+    "AcceptTime": "2018-03-29T20:50:41Z",
+    "HITId": "3D4BBDG7ZHWIY1PX12CZ8CTB2NN3CU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:04:53Z"
+}

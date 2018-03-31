@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:48:16Z",
+    "AutoApprovalTime": "2018-03-29T21:47:31Z",
+    "AssignmentId": "47",
+    "WorkerId": "47",
+    "answers": {
+        "subject_information": {
+            "totalLength": 438816,
+            "gameID": "0310-cab6f98f-b24b-45ce-9ff6-be1af7a9dc61",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "",
+            "strategy": "other player was very good in his descriptions, so I just made sure to follow them carefully."
+        },
+        "id": "0310-cab6f98f-b24b-45ce-9ff6-be1af7a9dc61"
+    },
+    "AcceptTime": "2018-03-29T20:50:57Z",
+    "HITId": "3D4BBDG7ZHWIY1PX12CZ8CTB2NN3CU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:42:31Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:01:19Z",
+    "AutoApprovalTime": "2018-03-29T21:01:17Z",
+    "AssignmentId": "24",
+    "WorkerId": "24",
+    "answers": {
+        "subject_information": {
+            "totalLength": 507595,
+            "gameID": "8358-50b362fd-7cb6-4167-8437-2cc80ab3a616",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 24,
+            "role": "listener",
+            "comments": "No",
+            "strategy": "The speaker often described the color of the shape, the shape, and type of stripes, dots, etc. it contained.  This uniquely identified it and enabled the listener (me) to locate it within the grid."
+        },
+        "id": "8358-50b362fd-7cb6-4167-8437-2cc80ab3a616"
+    },
+    "AcceptTime": "2018-03-29T20:39:06Z",
+    "HITId": "31N9JPQXIPIGJDTN5DAFSHOXJVHNHY",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T20:56:17Z"
+}

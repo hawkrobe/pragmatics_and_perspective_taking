@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:58:16Z",
+    "AutoApprovalTime": "2018-03-29T21:57:34Z",
+    "AssignmentId": "59",
+    "WorkerId": "59",
+    "answers": {
+        "subject_information": {
+            "totalLength": 373071,
+            "gameID": "8823-1bd68d46-09c1-44aa-ab57-07071a85e24b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "listener",
+            "comments": "very smooth for an interacting hit especially, thanks",
+            "strategy": "Did as my partner told me to"
+        },
+        "id": "8823-1bd68d46-09c1-44aa-ab57-07071a85e24b"
+    },
+    "AcceptTime": "2018-03-29T21:33:39Z",
+    "HITId": "3ZQX1VYFTD558NS63OGMUTV36MXO80",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:52:34Z"
+}

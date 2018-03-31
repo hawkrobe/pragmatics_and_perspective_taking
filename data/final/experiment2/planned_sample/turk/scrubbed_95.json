@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:07:16Z",
+    "AutoApprovalTime": "2018-03-30T00:06:56Z",
+    "AssignmentId": "95",
+    "WorkerId": "95",
+    "answers": {
+        "subject_information": {
+            "totalLength": 409526,
+            "gameID": "5459-5459411f-4723-40bd-94a7-4b6b7904160c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 23,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "I used the outline the fill and the shape to identify the target"
+        },
+        "id": "5459-5459411f-4723-40bd-94a7-4b6b7904160c"
+    },
+    "AcceptTime": "2018-03-29T23:38:37Z",
+    "HITId": "3D1UCPY6GG9GMYZKKQWU6QXSCW738T",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:01:56Z"
+}

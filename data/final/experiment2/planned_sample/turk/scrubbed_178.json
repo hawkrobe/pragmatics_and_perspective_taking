@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:01:16Z",
+    "AutoApprovalTime": "2018-03-30T01:00:46Z",
+    "AssignmentId": "178",
+    "WorkerId": "178",
+    "answers": {
+        "subject_information": {
+            "totalLength": 809933,
+            "gameID": "2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 22,
+            "role": "listener",
+            "comments": "none",
+            "strategy": "Followed the directions the speaker was given."
+        },
+        "id": "2578-4e978a36-f52c-4a0c-ad51-c8d0030c1714"
+    },
+    "AcceptTime": "2018-03-30T00:35:46Z",
+    "HITId": "3CMIQF80GNQLPLMYPMBSZKUCGTX6QF",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:55:46Z"
+}

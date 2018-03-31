@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:37:17Z",
+    "AutoApprovalTime": "2018-03-30T00:36:47Z",
+    "AssignmentId": "157",
+    "WorkerId": "157",
+    "answers": {
+        "subject_information": {
+            "totalLength": 501298,
+            "gameID": "1390-1099952c-7333-49c7-9fe0-64973c521a8a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "The curtain part was confusing to me.",
+            "strategy": "speaker told the shape and color.  we had one that we had to converse twice on"
+        },
+        "id": "1390-1099952c-7333-49c7-9fe0-64973c521a8a"
+    },
+    "AcceptTime": "2018-03-30T00:20:18Z",
+    "HITId": "3S8A4GJRD33DUTIFBL5257TKXLB6V8",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:31:47Z"
+}

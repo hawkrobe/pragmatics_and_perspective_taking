@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:22:18Z",
+    "AutoApprovalTime": "2018-03-29T21:22:12Z",
+    "AssignmentId": "43",
+    "WorkerId": "43",
+    "answers": {
+        "subject_information": {
+            "totalLength": 403909,
+            "gameID": "7984-ef06d445-8a78-4a69-b67b-a68168fc9039",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 24,
+            "role": "listener",
+            "comments": "No.",
+            "strategy": "I tried to find the right box."
+        },
+        "id": "7984-ef06d445-8a78-4a69-b67b-a68168fc9039"
+    },
+    "AcceptTime": "2018-03-29T20:50:49Z",
+    "HITId": "3I4E7AFQ2KZA5WTXQ9ZCDTA4L58TJB",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:17:12Z"
+}

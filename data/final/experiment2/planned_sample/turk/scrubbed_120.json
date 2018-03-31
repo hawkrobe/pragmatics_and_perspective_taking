@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:08:17Z",
+    "AutoApprovalTime": "2018-03-30T00:07:59Z",
+    "AssignmentId": "120",
+    "WorkerId": "120",
+    "answers": {
+        "subject_information": {
+            "totalLength": 442460,
+            "gameID": "5459-5459411f-4723-40bd-94a7-4b6b7904160c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 23,
+            "role": "listener",
+            "comments": "",
+            "strategy": "My strategy was to see if anything else could be mistaken for the requested symbol and send a message if I felt there would conflict. (Like if they say star and I see two stars but they didn't) I didn't end up needing clarification"
+        },
+        "id": "5459-5459411f-4723-40bd-94a7-4b6b7904160c"
+    },
+    "AcceptTime": "2018-03-29T23:51:58Z",
+    "HITId": "37VE3DA4YUHEI44Q2N561MO337ABH7",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:02:59Z"
+}

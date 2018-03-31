@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:36:17Z",
+    "AutoApprovalTime": "2018-03-30T00:36:10Z",
+    "AssignmentId": "154",
+    "WorkerId": "154",
+    "answers": {
+        "subject_information": {
+            "totalLength": 534765,
+            "gameID": "1390-1099952c-7333-49c7-9fe0-64973c521a8a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "no",
+            "strategy": "just tried my best to describe the objects"
+        },
+        "id": "1390-1099952c-7333-49c7-9fe0-64973c521a8a"
+    },
+    "AcceptTime": "2018-03-30T00:15:29Z",
+    "HITId": "3VEI3XUCZRXTBSJ3HXZ1AAVY7KNRP5",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:31:10Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:53:18Z",
+    "AutoApprovalTime": "2018-03-29T21:52:56Z",
+    "AssignmentId": "41",
+    "WorkerId": "41",
+    "answers": {
+        "subject_information": {
+            "totalLength": 674774,
+            "gameID": "9452-741992fa-5356-4447-bc18-89338ff71886",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 23,
+            "role": "speaker",
+            "comments": "none",
+            "strategy": "nice and good.ability to think about it."
+        },
+        "id": "9452-741992fa-5356-4447-bc18-89338ff71886"
+    },
+    "AcceptTime": "2018-03-29T20:59:36Z",
+    "HITId": "3I4E7AFQ2KZA5WTXQ9ZCDTA4L58TJB",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:47:56Z"
+}

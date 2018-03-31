@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:31:16Z",
+    "AutoApprovalTime": "2018-03-29T21:30:25Z",
+    "AssignmentId": "32",
+    "WorkerId": "32",
+    "answers": {
+        "subject_information": {
+            "totalLength": 502721,
+            "gameID": "3206-66e4691e-f369-40fc-8b4b-fdd6df0798d4",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "speaker",
+            "comments": "No further comment, at this time.",
+            "strategy": "I described the objects in an unambiguous manner to ensure the partner was able to discriminate accurately"
+        },
+        "id": "3206-66e4691e-f369-40fc-8b4b-fdd6df0798d4"
+    },
+    "AcceptTime": "2018-03-29T20:41:52Z",
+    "HITId": "3SZYX62S5G0F0ZH5O4SH7NZHE7M75R",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:25:25Z"
+}

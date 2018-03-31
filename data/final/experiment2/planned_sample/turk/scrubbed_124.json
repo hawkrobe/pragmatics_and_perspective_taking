@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:42:18Z",
+    "AutoApprovalTime": "2018-03-30T00:42:09Z",
+    "AssignmentId": "124",
+    "WorkerId": "124",
+    "answers": {
+        "subject_information": {
+            "totalLength": 555918,
+            "gameID": "4894-6857c442-5c56-4f12-b114-573822a68e9c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 20,
+            "role": "speaker",
+            "comments": "Interesting HIT - fun!",
+            "strategy": "I described the shape by number of sides it had, and then described the pattern within the shape."
+        },
+        "id": "4894-6857c442-5c56-4f12-b114-573822a68e9c"
+    },
+    "AcceptTime": "2018-03-30T00:03:15Z",
+    "HITId": "3ABAOCJ4R84NEO7QC2I9OGRY6TAQM7",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:37:09Z"
+}

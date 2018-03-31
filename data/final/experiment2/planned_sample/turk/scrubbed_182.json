@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:40:16Z",
+    "AutoApprovalTime": "2018-03-30T01:39:43Z",
+    "AssignmentId": "182",
+    "WorkerId": "182",
+    "answers": {
+        "subject_information": {
+            "totalLength": 719367,
+            "gameID": "6032-6f8a671d-23bc-4e8d-bf67-7fb3f791065a",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "This was a fun experiment.  Thanks for allowing me to participate.",
+            "strategy": "I described the item with as much detail as I could."
+        },
+        "id": "6032-6f8a671d-23bc-4e8d-bf67-7fb3f791065a"
+    },
+    "AcceptTime": "2018-03-30T01:13:21Z",
+    "HITId": "3UEDKCTP9VQIII28VRWN9CIZCYP7KN",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:34:43Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:18:17Z",
+    "AutoApprovalTime": "2018-03-29T21:17:35Z",
+    "AssignmentId": "8",
+    "WorkerId": "8",
+    "answers": {
+        "subject_information": {
+            "totalLength": 333135,
+            "gameID": "2706-02691c0f-8495-4f5c-971f-7ca649e1bc47",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 24,
+            "role": "listener",
+            "comments": "",
+            "strategy": "The talker was very descriptive so it just followed that."
+        },
+        "id": "2706-02691c0f-8495-4f5c-971f-7ca649e1bc47"
+    },
+    "AcceptTime": "2018-03-29T20:55:09Z",
+    "HITId": "3RSBJ6YZECQEN22TB2MS4LCPTQ5OFC",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:12:35Z"
+}

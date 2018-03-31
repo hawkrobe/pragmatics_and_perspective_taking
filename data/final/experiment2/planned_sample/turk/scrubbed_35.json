@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:46:16Z",
+    "AutoApprovalTime": "2018-03-29T21:45:23Z",
+    "AssignmentId": "35",
+    "WorkerId": "35",
+    "answers": {
+        "subject_information": {
+            "totalLength": 636074,
+            "gameID": "6866-d4468ddf-92ea-416f-be28-16f0cfccb056",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "No problems.",
+            "strategy": "I just followed the instructions of the speaker. There were no problems in their descriptions of the objects."
+        },
+        "id": "6866-d4468ddf-92ea-416f-be28-16f0cfccb056"
+    },
+    "AcceptTime": "2018-03-29T21:23:28Z",
+    "HITId": "3SZYX62S5G0F0ZH5O4SH7NZHE7M75R",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:40:23Z"
+}

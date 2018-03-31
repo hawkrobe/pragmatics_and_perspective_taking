@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:28:16Z",
+    "AutoApprovalTime": "2018-03-30T00:27:47Z",
+    "AssignmentId": "133",
+    "WorkerId": "133",
+    "answers": {
+        "subject_information": {
+            "totalLength": 579679,
+            "gameID": "7924-57d79d28-8fa1-42d8-b81c-7c7130e30eca",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 23,
+            "role": "listener",
+            "comments": "Yes.  I was slow to start and actually thought the game didn't load properly so I slowed us down a bit, I had to scroll down to see the board with the shaped",
+            "strategy": "I paid attention to the description I was given"
+        },
+        "id": "7924-57d79d28-8fa1-42d8-b81c-7c7130e30eca"
+    },
+    "AcceptTime": "2018-03-30T00:09:30Z",
+    "HITId": "341H3G5YF0EZP21AATEOHCWP8TUZ0Z",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:22:47Z"
+}

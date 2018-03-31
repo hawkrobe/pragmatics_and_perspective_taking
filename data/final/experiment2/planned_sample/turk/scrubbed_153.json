@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:30:17Z",
+    "AutoApprovalTime": "2018-03-30T00:29:53Z",
+    "AssignmentId": "153",
+    "WorkerId": "153",
+    "answers": {
+        "subject_information": {
+            "totalLength": 527314,
+            "gameID": "6894-7656b41b-8dfd-427e-9290-f0726a4d08c0",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "",
+            "strategy": "i chose what the speaker told me to choose"
+        },
+        "id": "6894-7656b41b-8dfd-427e-9290-f0726a4d08c0"
+    },
+    "AcceptTime": "2018-03-30T00:13:49Z",
+    "HITId": "3VEI3XUCZRXTBSJ3HXZ1AAVY7KNRP5",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:24:53Z"
+}

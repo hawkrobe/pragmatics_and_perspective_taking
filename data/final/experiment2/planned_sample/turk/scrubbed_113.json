@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:29:17Z",
+    "AutoApprovalTime": "2018-03-30T00:28:45Z",
+    "AssignmentId": "113",
+    "WorkerId": "113",
+    "answers": {
+        "subject_information": {
+            "totalLength": 516507,
+            "gameID": "2038-bf103984-52eb-4d60-8529-330c4ddc8159",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 23,
+            "role": "speaker",
+            "comments": "Have the instructions reviewable",
+            "strategy": "Only used the shape when there was only one of them, then focused on the inside."
+        },
+        "id": "2038-bf103984-52eb-4d60-8529-330c4ddc8159"
+    },
+    "AcceptTime": "2018-03-30T00:11:16Z",
+    "HITId": "3BVS8WK9Q0VEEZFA85NR1YPI3KPBI0",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:23:45Z"
+}

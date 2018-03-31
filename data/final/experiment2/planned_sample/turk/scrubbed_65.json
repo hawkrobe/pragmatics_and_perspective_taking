@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:47:19Z",
+    "AutoApprovalTime": "2018-03-29T21:47:16Z",
+    "AssignmentId": "65",
+    "WorkerId": "65",
+    "answers": {
+        "subject_information": {
+            "totalLength": 621886,
+            "gameID": "0310-cab6f98f-b24b-45ce-9ff6-be1af7a9dc61",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "speaker",
+            "comments": "none",
+            "strategy": "i used the least amount of clues necessary to convey to the listener which object was the target"
+        },
+        "id": "0310-cab6f98f-b24b-45ce-9ff6-be1af7a9dc61"
+    },
+    "AcceptTime": "2018-03-29T21:28:19Z",
+    "HITId": "30EMX9PEVKJ41GM0JUUY43EVZCVKSG",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:42:16Z"
+}

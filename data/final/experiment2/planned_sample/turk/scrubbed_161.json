@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:54:18Z",
+    "AutoApprovalTime": "2018-03-30T00:54:10Z",
+    "AssignmentId": "161",
+    "WorkerId": "161",
+    "answers": {
+        "subject_information": {
+            "totalLength": 903299,
+            "gameID": "7726-3d4a266f-e56d-4afb-9a79-b40deb690a76",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "I described the location and the color of the borders of the shape"
+        },
+        "id": "7726-3d4a266f-e56d-4afb-9a79-b40deb690a76"
+    },
+    "AcceptTime": "2018-03-30T00:21:08Z",
+    "HITId": "33NOQL7T9OZH7R6D5XR3AR27RR6Z8M",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:49:10Z"
+}

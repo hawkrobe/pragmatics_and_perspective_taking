@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:44:16Z",
+    "AutoApprovalTime": "2018-03-30T01:43:41Z",
+    "AssignmentId": "187",
+    "WorkerId": "187",
+    "answers": {
+        "subject_information": {
+            "totalLength": 893927,
+            "gameID": "7437-8675c8ce-cc70-4f3f-ada7-8bd394b7f32f",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 23,
+            "role": "speaker",
+            "comments": "The instructions should be re-written for clarity without the quiz I would not have fully understood the directions.",
+            "strategy": "I used more detailed descriptions when the curtains were present."
+        },
+        "id": "7437-8675c8ce-cc70-4f3f-ada7-8bd394b7f32f"
+    },
+    "AcceptTime": "2018-03-30T01:19:19Z",
+    "HITId": "3B0MCRZMBRU8ZF3O45VC5FVJ620PPC",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:38:41Z"
+}

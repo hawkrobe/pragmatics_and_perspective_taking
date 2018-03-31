@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:32:17Z",
+    "AutoApprovalTime": "2018-03-30T00:31:51Z",
+    "AssignmentId": "165",
+    "WorkerId": "165",
+    "answers": {
+        "subject_information": {
+            "totalLength": 585177,
+            "gameID": "2463-7f48f9b3-106d-4460-9749-561cfbf9387b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "",
+            "strategy": "I clicked on the shape that was said by the speaker."
+        },
+        "id": "2463-7f48f9b3-106d-4460-9749-561cfbf9387b"
+    },
+    "AcceptTime": "2018-03-30T00:13:52Z",
+    "HITId": "33NOQL7T9OZH7R6D5XR3AR27RR6Z8M",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:26:51Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:15:16Z",
+    "AutoApprovalTime": "2018-03-29T21:14:39Z",
+    "AssignmentId": "30",
+    "WorkerId": "30",
+    "answers": {
+        "subject_information": {
+            "totalLength": 307762,
+            "gameID": "0036-cbf7b0c5-6796-4e02-ac77-7a411b19dc73",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "Great time with this hope to do another like this for other reasons.",
+            "strategy": "Just followed the directions the speaker typed."
+        },
+        "id": "0036-cbf7b0c5-6796-4e02-ac77-7a411b19dc73"
+    },
+    "AcceptTime": "2018-03-29T20:58:52Z",
+    "HITId": "3ZTE0JGGCES7KQIJK0WRWFRMWDICOU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:09:39Z"
+}

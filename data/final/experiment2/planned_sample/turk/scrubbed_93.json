@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T23:56:17Z",
+    "AutoApprovalTime": "2018-03-29T23:55:33Z",
+    "AssignmentId": "93",
+    "WorkerId": "93",
+    "answers": {
+        "subject_information": {
+            "totalLength": 483728,
+            "gameID": "1185-86cb1927-6496-45f8-9bff-78096ec538c0",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "Realized about halfway through that the objects in the curtain do not matter even if they might match the description that the speaker gave because the speaker cannot see it. The speaker would have to be able to see the object to describe it.",
+            "strategy": "Just clicked the object that the speaker was describing."
+        },
+        "id": "1185-86cb1927-6496-45f8-9bff-78096ec538c0"
+    },
+    "AcceptTime": "2018-03-29T23:36:52Z",
+    "HITId": "3H1C3QRA01JL8Z5UQMTVR3X8TCICEZ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T23:50:33Z"
+}

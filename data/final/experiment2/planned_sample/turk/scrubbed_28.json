@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:39:20Z",
+    "AutoApprovalTime": "2018-03-29T21:39:15Z",
+    "AssignmentId": "28",
+    "WorkerId": "28",
+    "answers": {
+        "subject_information": {
+            "totalLength": 728129,
+            "gameID": "2929-d218f724-b45e-416b-af44-5cab5658bad9",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 21,
+            "role": "listener",
+            "comments": "Thank you , fun exxperiment",
+            "strategy": "I tried to understand what the speaker was typing and be very selective on my responses , to not make mistake."
+        },
+        "id": "2929-d218f724-b45e-416b-af44-5cab5658bad9"
+    },
+    "AcceptTime": "2018-03-29T20:45:04Z",
+    "HITId": "3ZTE0JGGCES7KQIJK0WRWFRMWDICOU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:34:15Z"
+}

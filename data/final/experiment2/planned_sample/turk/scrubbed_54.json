@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:18:18Z",
+    "AutoApprovalTime": "2018-03-29T21:17:55Z",
+    "AssignmentId": "54",
+    "WorkerId": "54",
+    "answers": {
+        "subject_information": {
+            "totalLength": 407297,
+            "gameID": "2706-02691c0f-8495-4f5c-971f-7ca649e1bc47",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "I tried to give enough info, and also give the most descriptive explanation when there were curtains"
+        },
+        "id": "2706-02691c0f-8495-4f5c-971f-7ca649e1bc47"
+    },
+    "AcceptTime": "2018-03-29T21:01:24Z",
+    "HITId": "3CKVGCS3PG52OQFWF1KGLJZMKDOS0E",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:12:55Z"
+}

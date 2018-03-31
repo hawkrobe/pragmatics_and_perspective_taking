@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:28:16Z",
+    "AutoApprovalTime": "2018-03-30T00:27:47Z",
+    "AssignmentId": "110",
+    "WorkerId": "110",
+    "answers": {
+        "subject_information": {
+            "totalLength": 446145,
+            "gameID": "2038-bf103984-52eb-4d60-8529-330c4ddc8159",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 23,
+            "role": "listener",
+            "comments": "no",
+            "strategy": "I just clicked on what they told me to"
+        },
+        "id": "2038-bf103984-52eb-4d60-8529-330c4ddc8159"
+    },
+    "AcceptTime": "2018-03-30T00:05:49Z",
+    "HITId": "3IKDQS3DQE0XO47GM5JMCIV0L5PICE",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:22:47Z"
+}

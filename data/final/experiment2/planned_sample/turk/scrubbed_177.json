@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:53:17Z",
+    "AutoApprovalTime": "2018-03-30T00:52:47Z",
+    "AssignmentId": "177",
+    "WorkerId": "177",
+    "answers": {
+        "subject_information": {
+            "totalLength": 467884,
+            "gameID": "6158-31d36259-49a9-4822-9da7-2d988284b159",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 23,
+            "role": "speaker",
+            "comments": "I got confused at one point, and described the wrong shape, which I felt badly about",
+            "strategy": "I used color, shape, and fill of the shape "
+        },
+        "id": "6158-31d36259-49a9-4822-9da7-2d988284b159"
+    },
+    "AcceptTime": "2018-03-30T00:36:05Z",
+    "HITId": "3CMIQF80GNQLPLMYPMBSZKUCGTX6QF",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:47:47Z"
+}

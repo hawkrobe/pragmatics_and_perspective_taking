@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T22:32:18Z",
+    "AutoApprovalTime": "2018-03-29T22:32:08Z",
+    "AssignmentId": "53",
+    "WorkerId": "53",
+    "answers": {
+        "subject_information": {
+            "totalLength": 560444,
+            "gameID": "5720-1568da2e-b719-487d-8612-ebae04edb5c4",
+            "thinksHuman": "yes",
+            "confused": "confused",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "I didn't understand what the curtains and the hidden objects were about. ",
+            "strategy": "I paid attention to what the other person was saying, then looked for the object. "
+        },
+        "id": "5720-1568da2e-b719-487d-8612-ebae04edb5c4"
+    },
+    "AcceptTime": "2018-03-29T21:55:41Z",
+    "HITId": "3CKVGCS3PG52OQFWF1KGLJZMKDOS0E",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T22:27:08Z"
+}

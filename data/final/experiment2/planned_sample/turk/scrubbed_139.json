@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:46:18Z",
+    "AutoApprovalTime": "2018-03-30T00:46:10Z",
+    "AssignmentId": "139",
+    "WorkerId": "139",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1053983,
+            "gameID": "7391-f2571774-da75-4608-bc17-8c66b5372071",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 21,
+            "role": "speaker",
+            "comments": "Did you change the target on me?  Or was I really so tired I got some wrong",
+            "strategy": "I was using multiple descriptors (shape, outline, and texture)"
+        },
+        "id": "7391-f2571774-da75-4608-bc17-8c66b5372071"
+    },
+    "AcceptTime": "2018-03-30T00:19:05Z",
+    "HITId": "368IUKXGA580P9LJP9W3ZF42BX9P65",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:41:10Z"
+}

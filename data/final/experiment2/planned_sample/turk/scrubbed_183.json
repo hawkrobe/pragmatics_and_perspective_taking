@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:48:16Z",
+    "AutoApprovalTime": "2018-03-30T01:47:32Z",
+    "AssignmentId": "183",
+    "WorkerId": "183",
+    "answers": {
+        "subject_information": {
+            "totalLength": 604006,
+            "gameID": "3841-e5ccbd15-ee73-442d-bf4f-c7983bfa2043",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 21,
+            "role": "speaker",
+            "comments": "no",
+            "strategy": "I described the patterns in the shapes and the color of the outline they had."
+        },
+        "id": "3841-e5ccbd15-ee73-442d-bf4f-c7983bfa2043"
+    },
+    "AcceptTime": "2018-03-30T01:21:33Z",
+    "HITId": "3UEDKCTP9VQIII28VRWN9CIZCYP7KN",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:42:32Z"
+}

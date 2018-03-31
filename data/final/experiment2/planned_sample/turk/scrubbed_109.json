@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:17:17Z",
+    "AutoApprovalTime": "2018-03-30T00:16:58Z",
+    "AssignmentId": "109",
+    "WorkerId": "109",
+    "answers": {
+        "subject_information": {
+            "totalLength": 564950,
+            "gameID": "6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 24,
+            "role": "listener",
+            "comments": "",
+            "strategy": "My partner described each object with enough detail that I was immediately able to tell which object was correct. I didn't really have to use any strategy."
+        },
+        "id": "6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320"
+    },
+    "AcceptTime": "2018-03-29T23:42:48Z",
+    "HITId": "3IKDQS3DQE0XO47GM5JMCIV0L5PICE",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:11:58Z"
+}

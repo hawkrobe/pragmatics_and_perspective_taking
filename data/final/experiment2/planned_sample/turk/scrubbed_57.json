@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:23:16Z",
+    "AutoApprovalTime": "2018-03-29T21:22:29Z",
+    "AssignmentId": "57",
+    "WorkerId": "57",
+    "answers": {
+        "subject_information": {
+            "totalLength": 523304,
+            "gameID": "7984-ef06d445-8a78-4a69-b67b-a68168fc9039",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "speaker",
+            "comments": "I was surprised that I didn't get a turn to be the listener, and that none were ever behind the curtains.",
+            "strategy": "I described the colors, and the interior shapes"
+        },
+        "id": "7984-ef06d445-8a78-4a69-b67b-a68168fc9039"
+    },
+    "AcceptTime": "2018-03-29T21:01:21Z",
+    "HITId": "3CKVGCS3PG52OQFWF1KGLJZMKDOS0E",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:17:29Z"
+}

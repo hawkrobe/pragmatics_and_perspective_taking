@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:42:17Z",
+    "AutoApprovalTime": "2018-03-30T00:41:40Z",
+    "AssignmentId": "104",
+    "WorkerId": "104",
+    "answers": {
+        "subject_information": {
+            "totalLength": 520824,
+            "gameID": "4894-6857c442-5c56-4f12-b114-573822a68e9c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 20,
+            "role": "listener",
+            "comments": "No.",
+            "strategy": "I listened to the speaker and followed his descriptions."
+        },
+        "id": "4894-6857c442-5c56-4f12-b114-573822a68e9c"
+    },
+    "AcceptTime": "2018-03-29T23:42:35Z",
+    "HITId": "39O0SQZVJN745MF3LB5KAO4D7QH7RE",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:36:40Z"
+}

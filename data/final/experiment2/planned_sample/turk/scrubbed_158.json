@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:33:16Z",
+    "AutoApprovalTime": "2018-03-30T00:32:35Z",
+    "AssignmentId": "158",
+    "WorkerId": "158",
+    "answers": {
+        "subject_information": {
+            "totalLength": 562838,
+            "gameID": "8682-2f37e067-e305-4fbd-84e1-10cb8b63d479",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 24,
+            "role": "listener",
+            "comments": "I couldn't type back and say Thank you!",
+            "strategy": "Basic"
+        },
+        "id": "8682-2f37e067-e305-4fbd-84e1-10cb8b63d479"
+    },
+    "AcceptTime": "2018-03-30T00:10:53Z",
+    "HITId": "3S8A4GJRD33DUTIFBL5257TKXLB6V8",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:27:35Z"
+}

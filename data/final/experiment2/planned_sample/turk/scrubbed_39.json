@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:09:18Z",
+    "AutoApprovalTime": "2018-03-29T21:09:09Z",
+    "AssignmentId": "39",
+    "WorkerId": "39",
+    "answers": {
+        "subject_information": {
+            "totalLength": 500891,
+            "gameID": "2088-4cdc3e3c-433b-48e0-b3da-69f2a51f2c6b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "Nice study!",
+            "strategy": "I tried to give all information unless I could see all squares and knew it was safe to give minimal information."
+        },
+        "id": "2088-4cdc3e3c-433b-48e0-b3da-69f2a51f2c6b"
+    },
+    "AcceptTime": "2018-03-29T20:50:51Z",
+    "HITId": "3I4E7AFQ2KZA5WTXQ9ZCDTA4L58TJB",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:04:09Z"
+}

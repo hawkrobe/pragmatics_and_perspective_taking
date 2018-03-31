@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:31:17Z",
+    "AutoApprovalTime": "2018-03-30T00:31:08Z",
+    "AssignmentId": "167",
+    "WorkerId": "167",
+    "answers": {
+        "subject_information": {
+            "totalLength": 327960,
+            "gameID": "3377-28918824-176d-48cb-820d-f110b89f050b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "Thank you",
+            "strategy": "The speaker was great at description."
+        },
+        "id": "3377-28918824-176d-48cb-820d-f110b89f050b"
+    },
+    "AcceptTime": "2018-03-30T00:10:59Z",
+    "HITId": "33NOQL7T9OZH7R6D5XR3AR27RR6Z8M",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:26:08Z"
+}

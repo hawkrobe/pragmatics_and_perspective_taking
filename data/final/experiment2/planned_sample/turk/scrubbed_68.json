@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T23:03:16Z",
+    "AutoApprovalTime": "2018-03-29T23:02:34Z",
+    "AssignmentId": "68",
+    "WorkerId": "68",
+    "answers": {
+        "subject_information": {
+            "totalLength": 622754,
+            "gameID": "3609-61b0c403-6ec1-4105-a463-23eb2bfe8704",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "I suspected it might be a bot or predetermined answers, but the phrasing let me know it was a human. It was fun.",
+            "strategy": "I just read what the other player did and followed  the instructions"
+        },
+        "id": "3609-61b0c403-6ec1-4105-a463-23eb2bfe8704"
+    },
+    "AcceptTime": "2018-03-29T22:17:28Z",
+    "HITId": "30EMX9PEVKJ41GM0JUUY43EVZCVKSG",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T22:57:34Z"
+}

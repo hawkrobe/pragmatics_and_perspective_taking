@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:49:16Z",
+    "AutoApprovalTime": "2018-03-30T01:48:53Z",
+    "AssignmentId": "170",
+    "WorkerId": "170",
+    "answers": {
+        "subject_information": {
+            "totalLength": 671533,
+            "gameID": "3841-e5ccbd15-ee73-442d-bf4f-c7983bfa2043",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 21,
+            "role": "listener",
+            "comments": "The guy was giving me obviously wrong information... it was annoying",
+            "strategy": "I just went by what my partner said"
+        },
+        "id": "3841-e5ccbd15-ee73-442d-bf4f-c7983bfa2043"
+    },
+    "AcceptTime": "2018-03-30T01:18:29Z",
+    "HITId": "3DWNFENNE3VQOBE7B8Y45LYC67Z4J1",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:43:53Z"
+}

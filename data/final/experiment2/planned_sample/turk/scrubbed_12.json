@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T20:18:17Z",
+    "AutoApprovalTime": "2018-03-29T20:18:03Z",
+    "AssignmentId": "12",
+    "WorkerId": "12",
+    "answers": {
+        "subject_information": {
+            "totalLength": 313155,
+            "gameID": "9257-edf28781-1177-42e3-add5-8cf85c6f9db0",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 24,
+            "role": "listener",
+            "comments": "The study was straightforward and easy to follow",
+            "strategy": "Listen to the speaker"
+        },
+        "id": "9257-edf28781-1177-42e3-add5-8cf85c6f9db0"
+    },
+    "AcceptTime": "2018-03-29T20:03:04Z",
+    "HITId": "3RSBJ6YZECQEN22TB2MS4LCPTQ5OFC",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T20:13:03Z"
+}

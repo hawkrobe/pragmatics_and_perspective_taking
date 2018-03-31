@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:46:17Z",
+    "AutoApprovalTime": "2018-03-30T01:45:56Z",
+    "AssignmentId": "185",
+    "WorkerId": "185",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1231065,
+            "gameID": "7301-b7c9007f-d9af-4866-8ee3-757976f924a2",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 23,
+            "role": "speaker",
+            "comments": "I thought maybe it was a computer, because it took so long to respond and got one wrong that was very obviously not the answer.  It was unnerving when that happened, but otherwise was fun!",
+            "strategy": "I tried to be as descriptive as possible in identifying the shapes and the things inside them."
+        },
+        "id": "7301-b7c9007f-d9af-4866-8ee3-757976f924a2"
+    },
+    "AcceptTime": "2018-03-30T01:08:30Z",
+    "HITId": "3UEDKCTP9VQIII28VRWN9CIZCYP7KN",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:40:56Z"
+}

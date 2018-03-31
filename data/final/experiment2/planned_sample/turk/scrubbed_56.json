@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:52:18Z",
+    "AutoApprovalTime": "2018-03-29T21:52:16Z",
+    "AssignmentId": "56",
+    "WorkerId": "56",
+    "answers": {
+        "subject_information": {
+            "totalLength": 496925,
+            "gameID": "9452-741992fa-5356-4447-bc18-89338ff71886",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 23,
+            "role": "listener",
+            "comments": "It was fun!",
+            "strategy": "I was listener and got good clues."
+        },
+        "id": "9452-741992fa-5356-4447-bc18-89338ff71886"
+    },
+    "AcceptTime": "2018-03-29T21:34:17Z",
+    "HITId": "3CKVGCS3PG52OQFWF1KGLJZMKDOS0E",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:47:16Z"
+}

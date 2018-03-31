@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:55:18Z",
+    "AutoApprovalTime": "2018-03-29T21:55:17Z",
+    "AssignmentId": "44",
+    "WorkerId": "44",
+    "answers": {
+        "subject_information": {
+            "totalLength": 508302,
+            "gameID": "1266-eda1d15d-a467-463f-8ead-dc652f77220e",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 23,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "Describe as much as possible when thecurtains were up. "
+        },
+        "id": "1266-eda1d15d-a467-463f-8ead-dc652f77220e"
+    },
+    "AcceptTime": "2018-03-29T21:38:38Z",
+    "HITId": "3I4E7AFQ2KZA5WTXQ9ZCDTA4L58TJB",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:50:17Z"
+}

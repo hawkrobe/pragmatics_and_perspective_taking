@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:04:18Z",
+    "AutoApprovalTime": "2018-03-30T00:03:47Z",
+    "AssignmentId": "122",
+    "WorkerId": "122",
+    "answers": {
+        "subject_information": {
+            "totalLength": 258003,
+            "gameID": "9498-196b6b8e-52e7-40b6-bf31-c03ee6ed98e7",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "listener",
+            "comments": "",
+            "strategy": "I picked the shape described by the speaker - there were never any ambiguities"
+        },
+        "id": "9498-196b6b8e-52e7-40b6-bf31-c03ee6ed98e7"
+    },
+    "AcceptTime": "2018-03-29T23:51:48Z",
+    "HITId": "37VE3DA4YUHEI44Q2N561MO337ABH7",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T23:58:47Z"
+}

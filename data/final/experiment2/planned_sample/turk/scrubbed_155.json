@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:30:17Z",
+    "AutoApprovalTime": "2018-03-30T01:29:53Z",
+    "AssignmentId": "155",
+    "WorkerId": "155",
+    "answers": {
+        "subject_information": {
+            "totalLength": 716627,
+            "gameID": "4185-e240a023-27c8-48ea-88dd-4661146e6b23",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 23,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "I describe the shape, color and the what is inside the shape"
+        },
+        "id": "4185-e240a023-27c8-48ea-88dd-4661146e6b23"
+    },
+    "AcceptTime": "2018-03-30T01:08:46Z",
+    "HITId": "3S8A4GJRD33DUTIFBL5257TKXLB6V8",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:24:53Z"
+}

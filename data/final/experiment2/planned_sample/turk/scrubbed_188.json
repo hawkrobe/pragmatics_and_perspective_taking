@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:10:16Z",
+    "AutoApprovalTime": "2018-03-30T01:09:20Z",
+    "AssignmentId": "188",
+    "WorkerId": "188",
+    "answers": {
+        "subject_information": {
+            "totalLength": 405164,
+            "gameID": "0695-25cba373-a155-42c2-9971-44e1af0b113a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 24,
+            "role": "listener",
+            "comments": "No, thank you for the survey! ",
+            "strategy": "I just read what the person typed and found the item they were describing "
+        },
+        "id": "0695-25cba373-a155-42c2-9971-44e1af0b113a"
+    },
+    "AcceptTime": "2018-03-30T00:51:53Z",
+    "HITId": "3B0MCRZMBRU8ZF3O45VC5FVJ620PPC",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:04:20Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:34:16Z",
+    "AutoApprovalTime": "2018-03-30T00:33:25Z",
+    "AssignmentId": "166",
+    "WorkerId": "166",
+    "answers": {
+        "subject_information": {
+            "totalLength": 846732,
+            "gameID": "1087-9a341f43-b2f9-4f35-bab4-bf169e3e0e2a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 23,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "Tell outline first then shape then what's inside. As I went on I shortened words and phrases to go faster"
+        },
+        "id": "1087-9a341f43-b2f9-4f35-bab4-bf169e3e0e2a"
+    },
+    "AcceptTime": "2018-03-30T00:10:58Z",
+    "HITId": "33NOQL7T9OZH7R6D5XR3AR27RR6Z8M",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:28:25Z"
+}

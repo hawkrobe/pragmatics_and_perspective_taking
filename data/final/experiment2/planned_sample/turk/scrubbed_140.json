@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:48:16Z",
+    "AutoApprovalTime": "2018-03-30T00:47:21Z",
+    "AssignmentId": "140",
+    "WorkerId": "140",
+    "answers": {
+        "subject_information": {
+            "totalLength": 573221,
+            "gameID": "7338-7e6fe44c-9252-4b18-9f29-07454840b139",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "listener",
+            "comments": "No issues, but the instructions were a bit ambiguous. The question about the message box being 2-way was never mentioned -- and as a Listener, never needed -- yet I had to answer a question about it before I could proceed. ",
+            "strategy": "Read Listener's clues."
+        },
+        "id": "7338-7e6fe44c-9252-4b18-9f29-07454840b139"
+    },
+    "AcceptTime": "2018-03-30T00:16:06Z",
+    "HITId": "368IUKXGA580P9LJP9W3ZF42BX9P65",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:42:21Z"
+}

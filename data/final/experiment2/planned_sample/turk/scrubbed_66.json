@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T22:02:16Z",
+    "AutoApprovalTime": "2018-03-29T22:01:23Z",
+    "AssignmentId": "66",
+    "WorkerId": "66",
+    "answers": {
+        "subject_information": {
+            "totalLength": 428013,
+            "gameID": "9117-68358f00-951d-449a-9fd0-9b19a02ec382",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "I described the color, shape, and design of the target"
+        },
+        "id": "9117-68358f00-951d-449a-9fd0-9b19a02ec382"
+    },
+    "AcceptTime": "2018-03-29T21:24:16Z",
+    "HITId": "30EMX9PEVKJ41GM0JUUY43EVZCVKSG",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:56:23Z"
+}

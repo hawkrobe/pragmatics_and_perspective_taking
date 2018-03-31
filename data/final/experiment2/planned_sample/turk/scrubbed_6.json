@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T20:19:16Z",
+    "AutoApprovalTime": "2018-03-29T20:18:18Z",
+    "AssignmentId": "6",
+    "WorkerId": "6",
+    "answers": {
+        "subject_information": {
+            "totalLength": 334999,
+            "gameID": "9257-edf28781-1177-42e3-add5-8cf85c6f9db0",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "I described what was necessary. That is, if there was a curtain I described all the traits, but only the needed ones if there were no hidden objects."
+        },
+        "id": "9257-edf28781-1177-42e3-add5-8cf85c6f9db0"
+    },
+    "AcceptTime": "2018-03-29T20:03:05Z",
+    "HITId": "3NBFJK3IOHIK12YOMMSAM6C1U55OGB",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T20:13:18Z"
+}

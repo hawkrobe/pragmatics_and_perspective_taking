@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:46:18Z",
+    "AutoApprovalTime": "2018-03-30T01:46:12Z",
+    "AssignmentId": "181",
+    "WorkerId": "181",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1241620,
+            "gameID": "7301-b7c9007f-d9af-4866-8ee3-757976f924a2",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 23,
+            "role": "listener",
+            "comments": "no",
+            "strategy": "I used a common sense strategy that focused on the color shape first and then the inside pattern"
+        },
+        "id": "7301-b7c9007f-d9af-4866-8ee3-757976f924a2"
+    },
+    "AcceptTime": "2018-03-30T00:47:08Z",
+    "HITId": "3UEDKCTP9VQIII28VRWN9CIZCYP7KN",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:41:12Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:32:16Z",
+    "AutoApprovalTime": "2018-03-30T00:31:25Z",
+    "AssignmentId": "156",
+    "WorkerId": "156",
+    "answers": {
+        "subject_information": {
+            "totalLength": 524363,
+            "gameID": "8682-2f37e067-e305-4fbd-84e1-10cb8b63d479",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "describing the shape, border, and what is inside the object"
+        },
+        "id": "8682-2f37e067-e305-4fbd-84e1-10cb8b63d479"
+    },
+    "AcceptTime": "2018-03-30T00:17:04Z",
+    "HITId": "3S8A4GJRD33DUTIFBL5257TKXLB6V8",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:26:25Z"
+}

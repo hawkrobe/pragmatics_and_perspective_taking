@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T20:31:17Z",
+    "AutoApprovalTime": "2018-03-29T20:30:51Z",
+    "AssignmentId": "7",
+    "WorkerId": "7",
+    "answers": {
+        "subject_information": {
+            "totalLength": 506615,
+            "gameID": "9674-16e87787-4a0b-4ea9-8aff-1d46e859904c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "I described the outline color, shape, and pattern."
+        },
+        "id": "9674-16e87787-4a0b-4ea9-8aff-1d46e859904c"
+    },
+    "AcceptTime": "2018-03-29T20:12:32Z",
+    "HITId": "3RSBJ6YZECQEN22TB2MS4LCPTQ5OFC",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T20:25:51Z"
+}

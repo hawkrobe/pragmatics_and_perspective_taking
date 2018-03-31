@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:57:17Z",
+    "AutoApprovalTime": "2018-03-29T21:56:40Z",
+    "AssignmentId": "73",
+    "WorkerId": "73",
+    "answers": {
+        "subject_information": {
+            "totalLength": 360568,
+            "gameID": "1738-0cb6b802-0558-411e-a1ee-f67c30dc499b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "listener",
+            "comments": "",
+            "strategy": "No real strategy, just read what the speaker wrote and picked that."
+        },
+        "id": "1738-0cb6b802-0558-411e-a1ee-f67c30dc499b"
+    },
+    "AcceptTime": "2018-03-29T21:28:28Z",
+    "HITId": "3ZUE82NE0A1B2AFD4LXW7ZMPFM7F89",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:51:40Z"
+}

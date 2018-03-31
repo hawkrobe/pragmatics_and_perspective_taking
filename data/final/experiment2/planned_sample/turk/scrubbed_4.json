@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T20:29:17Z",
+    "AutoApprovalTime": "2018-03-29T20:29:08Z",
+    "AssignmentId": "4",
+    "WorkerId": "4",
+    "answers": {
+        "subject_information": {
+            "totalLength": 705373,
+            "gameID": "0539-797dcb91-2801-4f57-81f6-34ff2e567b5d",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "speaker",
+            "comments": "It was a fun experiment.",
+            "strategy": "I always started with the shape and its color and then added what shape was inside the outer shape."
+        },
+        "id": "0539-797dcb91-2801-4f57-81f6-34ff2e567b5d"
+    },
+    "AcceptTime": "2018-03-29T20:08:24Z",
+    "HITId": "3NBFJK3IOHIK12YOMMSAM6C1U55OGB",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T20:24:08Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:12:17Z",
+    "AutoApprovalTime": "2018-03-30T00:11:48Z",
+    "AssignmentId": "99",
+    "WorkerId": "99",
+    "answers": {
+        "subject_information": {
+            "totalLength": 591219,
+            "gameID": "7011-10558aa0-7027-4676-9523-a9ea90b0837a",
+            "thinksHuman": "yes",
+            "confused": "confused",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "i described the shape"
+        },
+        "id": "7011-10558aa0-7027-4676-9523-a9ea90b0837a"
+    },
+    "AcceptTime": "2018-03-29T23:36:39Z",
+    "HITId": "3D1UCPY6GG9GMYZKKQWU6QXSCW738T",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:06:48Z"
+}

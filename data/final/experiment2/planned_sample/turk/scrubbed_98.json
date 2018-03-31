@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:46:17Z",
+    "AutoApprovalTime": "2018-03-30T00:45:46Z",
+    "AssignmentId": "98",
+    "WorkerId": "98",
+    "answers": {
+        "subject_information": {
+            "totalLength": 908073,
+            "gameID": "7391-f2571774-da75-4608-bc17-8c66b5372071",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 21,
+            "role": "listener",
+            "comments": "Thanks for the study!",
+            "strategy": "I listened to the instructions they told me."
+        },
+        "id": "7391-f2571774-da75-4608-bc17-8c66b5372071"
+    },
+    "AcceptTime": "2018-03-30T00:19:44Z",
+    "HITId": "3D1UCPY6GG9GMYZKKQWU6QXSCW738T",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:40:46Z"
+}

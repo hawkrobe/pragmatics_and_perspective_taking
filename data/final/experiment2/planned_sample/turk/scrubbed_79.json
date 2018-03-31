@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:58:16Z",
+    "AutoApprovalTime": "2018-03-29T21:57:41Z",
+    "AssignmentId": "79",
+    "WorkerId": "79",
+    "answers": {
+        "subject_information": {
+            "totalLength": 639772,
+            "gameID": "1738-0cb6b802-0558-411e-a1ee-f67c30dc499b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "I tried to use the same language consistently so it wasn't hard to know was I was referring to for my partner, but then I realized I didn't need to use the same descriptive language each time if the shape was the only one on the screen. I went back anf forth depending on my groove in those cases"
+        },
+        "id": "1738-0cb6b802-0558-411e-a1ee-f67c30dc499b"
+    },
+    "AcceptTime": "2018-03-29T21:37:16Z",
+    "HITId": "3VO4XFFP15M4TL038WGK5YU8B4AQ7R",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:52:41Z"
+}

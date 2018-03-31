@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:17:16Z",
+    "AutoApprovalTime": "2018-03-29T21:16:30Z",
+    "AssignmentId": "31",
+    "WorkerId": "31",
+    "answers": {
+        "subject_information": {
+            "totalLength": 474891,
+            "gameID": "6763-8f3780a3-cab8-43a9-827f-c6d0a55064b8",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 22,
+            "role": "listener",
+            "comments": "Very interesting.",
+            "strategy": "I just trusted the speaker's words and hoped for the best."
+        },
+        "id": "6763-8f3780a3-cab8-43a9-827f-c6d0a55064b8"
+    },
+    "AcceptTime": "2018-03-29T20:42:01Z",
+    "HITId": "3ZTE0JGGCES7KQIJK0WRWFRMWDICOU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:11:30Z"
+}

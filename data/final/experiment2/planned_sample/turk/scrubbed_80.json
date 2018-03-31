@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T22:20:19Z",
+    "AutoApprovalTime": "2018-03-29T22:20:08Z",
+    "AssignmentId": "80",
+    "WorkerId": "80",
+    "answers": {
+        "subject_information": {
+            "totalLength": 312240,
+            "gameID": "5684-f09de856-4d64-423c-b342-b30e7325eb0e",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 22,
+            "role": "listener",
+            "comments": "Thanks for the fun HIT!",
+            "strategy": "I just followed what the speaker told me to do."
+        },
+        "id": "5684-f09de856-4d64-423c-b342-b30e7325eb0e"
+    },
+    "AcceptTime": "2018-03-29T21:56:09Z",
+    "HITId": "3VO4XFFP15M4TL038WGK5YU8B4AQ7R",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T22:15:08Z"
+}

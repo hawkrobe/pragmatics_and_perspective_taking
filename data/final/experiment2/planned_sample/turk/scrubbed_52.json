@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:39:17Z",
+    "AutoApprovalTime": "2018-03-29T21:38:37Z",
+    "AssignmentId": "52",
+    "WorkerId": "52",
+    "answers": {
+        "subject_information": {
+            "totalLength": 727523,
+            "gameID": "2929-d218f724-b45e-416b-af44-5cab5658bad9",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 21,
+            "role": "speaker",
+            "comments": "Fun",
+            "strategy": "I used characteristics of the colors and shapes."
+        },
+        "id": "2929-d218f724-b45e-416b-af44-5cab5658bad9"
+    },
+    "AcceptTime": "2018-03-29T21:01:01Z",
+    "HITId": "3CKVGCS3PG52OQFWF1KGLJZMKDOS0E",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:33:37Z"
+}

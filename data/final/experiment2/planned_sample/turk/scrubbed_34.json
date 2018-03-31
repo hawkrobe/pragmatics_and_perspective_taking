@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:11:17Z",
+    "AutoApprovalTime": "2018-03-29T21:10:33Z",
+    "AssignmentId": "34",
+    "WorkerId": "34",
+    "answers": {
+        "subject_information": {
+            "totalLength": 617901,
+            "gameID": "2317-ff855a4b-3f08-4c94-8999-a2d56cb88842",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "I enjoyed it",
+            "strategy": "Shapes had three characteristics; overall shape, shapes contained within, and color of outer barrier. I gave clues based on how many of these characteristics I thought was needed to figure out the selected shape. If there were curtains, I gave all three, but other times only one would be needed, etc."
+        },
+        "id": "2317-ff855a4b-3f08-4c94-8999-a2d56cb88842"
+    },
+    "AcceptTime": "2018-03-29T20:41:49Z",
+    "HITId": "3SZYX62S5G0F0ZH5O4SH7NZHE7M75R",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:05:33Z"
+}

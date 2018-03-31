@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:16:16Z",
+    "AutoApprovalTime": "2018-03-29T21:15:33Z",
+    "AssignmentId": "38",
+    "WorkerId": "38",
+    "answers": {
+        "subject_information": {
+            "totalLength": 443602,
+            "gameID": "6763-8f3780a3-cab8-43a9-827f-c6d0a55064b8",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 22,
+            "role": "speaker",
+            "comments": "Good Luck!! ",
+            "strategy": "color and shape, sometimes inside pattern"
+        },
+        "id": "6763-8f3780a3-cab8-43a9-827f-c6d0a55064b8"
+    },
+    "AcceptTime": "2018-03-29T20:50:47Z",
+    "HITId": "3I4E7AFQ2KZA5WTXQ9ZCDTA4L58TJB",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:10:33Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T22:21:16Z",
+    "AutoApprovalTime": "2018-03-29T22:20:22Z",
+    "AssignmentId": "63",
+    "WorkerId": "63",
+    "answers": {
+        "subject_information": {
+            "totalLength": 604258,
+            "gameID": "5684-f09de856-4d64-423c-b342-b30e7325eb0e",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 22,
+            "role": "speaker",
+            "comments": "no",
+            "strategy": "indicate the side and position of each box.\nLeft, middle, right,\ntop, middle, bottom"
+        },
+        "id": "5684-f09de856-4d64-423c-b342-b30e7325eb0e"
+    },
+    "AcceptTime": "2018-03-29T21:24:20Z",
+    "HITId": "30EMX9PEVKJ41GM0JUUY43EVZCVKSG",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T22:15:22Z"
+}

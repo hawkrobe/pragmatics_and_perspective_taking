@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:45:17Z",
+    "AutoApprovalTime": "2018-03-29T21:44:38Z",
+    "AssignmentId": "81",
+    "WorkerId": "81",
+    "answers": {
+        "subject_information": {
+            "totalLength": 587835,
+            "gameID": "9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "I described the shape, the outline color, and the filling"
+        },
+        "id": "9506-51adff6f-b954-45c4-b8a7-15c4a7cd8ede"
+    },
+    "AcceptTime": "2018-03-29T21:26:22Z",
+    "HITId": "3VO4XFFP15M4TL038WGK5YU8B4AQ7R",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:39:38Z"
+}

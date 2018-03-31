@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T23:58:18Z",
+    "AutoApprovalTime": "2018-03-29T23:57:43Z",
+    "AssignmentId": "103",
+    "WorkerId": "103",
+    "answers": {
+        "subject_information": {
+            "totalLength": 388242,
+            "gameID": "5090-4b086da5-f9ab-4946-a4e5-289fa9fef307",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "I used the simplest directions possible, unless there were curtains. When there were curtains I used more detailed, specific descriptions in case the simpler ones could also apply to the shapes behind the curtains."
+        },
+        "id": "5090-4b086da5-f9ab-4946-a4e5-289fa9fef307"
+    },
+    "AcceptTime": "2018-03-29T23:42:45Z",
+    "HITId": "39O0SQZVJN745MF3LB5KAO4D7QH7RE",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T23:52:43Z"
+}

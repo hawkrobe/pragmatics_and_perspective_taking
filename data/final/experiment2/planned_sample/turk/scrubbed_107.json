@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:03:18Z",
+    "AutoApprovalTime": "2018-03-30T00:02:41Z",
+    "AssignmentId": "107",
+    "WorkerId": "107",
+    "answers": {
+        "subject_information": {
+            "totalLength": 394984,
+            "gameID": "4419-f62723a2-7f38-4221-be55-621f5737425f",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "Describe the object leaving no room for the speaker to guess on what the object is."
+        },
+        "id": "4419-f62723a2-7f38-4221-be55-621f5737425f"
+    },
+    "AcceptTime": "2018-03-29T23:44:08Z",
+    "HITId": "39O0SQZVJN745MF3LB5KAO4D7QH7RE",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T23:57:41Z"
+}

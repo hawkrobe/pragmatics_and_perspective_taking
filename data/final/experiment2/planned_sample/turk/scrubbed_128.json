@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:17:17Z",
+    "AutoApprovalTime": "2018-03-30T00:17:04Z",
+    "AssignmentId": "128",
+    "WorkerId": "128",
+    "answers": {
+        "subject_information": {
+            "totalLength": 576453,
+            "gameID": "6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "I would have liked to have the game switch half-way through so I got the experience of being a Listener too. ",
+            "strategy": "Two Sentences. First Sentence: Color of Outline & Shape. Second Sentence: Inside Pattern. "
+        },
+        "id": "6187-fe020d7b-ab85-47f0-9a9c-c089dfdc6320"
+    },
+    "AcceptTime": "2018-03-29T23:59:05Z",
+    "HITId": "3ABAOCJ4R84NEO7QC2I9OGRY6TAQM7",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:12:04Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:22:16Z",
+    "AutoApprovalTime": "2018-03-30T00:21:45Z",
+    "AssignmentId": "105",
+    "WorkerId": "105",
+    "answers": {
+        "subject_information": {
+            "totalLength": 604636,
+            "gameID": "3493-0f243055-f356-4cf5-9bc3-3367776efde8",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 23,
+            "role": "speaker",
+            "comments": "I enjoyed the experiment except I got confused on one object.",
+            "strategy": "It was good"
+        },
+        "id": "3493-0f243055-f356-4cf5-9bc3-3367776efde8"
+    },
+    "AcceptTime": "2018-03-29T23:42:45Z",
+    "HITId": "39O0SQZVJN745MF3LB5KAO4D7QH7RE",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:16:45Z"
+}

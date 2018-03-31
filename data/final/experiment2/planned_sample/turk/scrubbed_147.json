@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:39:18Z",
+    "AutoApprovalTime": "2018-03-30T01:39:16Z",
+    "AssignmentId": "147",
+    "WorkerId": "147",
+    "answers": {
+        "subject_information": {
+            "totalLength": 644744,
+            "gameID": "6032-6f8a671d-23bc-4e8d-bf67-7fb3f791065a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "listener",
+            "comments": "Survey went smoothly.",
+            "strategy": "I trusted what my partner described, they described things well. "
+        },
+        "id": "6032-6f8a671d-23bc-4e8d-bf67-7fb3f791065a"
+    },
+    "AcceptTime": "2018-03-30T01:08:13Z",
+    "HITId": "3P7QK0GJ3TL6LC4OPGI200P45REZ2J",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:34:16Z"
+}

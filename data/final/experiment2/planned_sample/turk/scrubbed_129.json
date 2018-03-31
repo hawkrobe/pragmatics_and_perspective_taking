@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:31:16Z",
+    "AutoApprovalTime": "2018-03-30T00:30:44Z",
+    "AssignmentId": "129",
+    "WorkerId": "129",
+    "answers": {
+        "subject_information": {
+            "totalLength": 368776,
+            "gameID": "2162-b2701f79-4ab1-4ad4-b8fc-d1c19e0b6e5c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 22,
+            "role": "speaker",
+            "comments": "I could have sworn a couple times my partner guessed correctly, but y'all said it was wrong",
+            "strategy": "tried to be as simple as possible"
+        },
+        "id": "2162-b2701f79-4ab1-4ad4-b8fc-d1c19e0b6e5c"
+    },
+    "AcceptTime": "2018-03-30T00:03:13Z",
+    "HITId": "31HLTCK4BLVFRM7LNYEOHY69RZDGVJ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:25:44Z"
+}

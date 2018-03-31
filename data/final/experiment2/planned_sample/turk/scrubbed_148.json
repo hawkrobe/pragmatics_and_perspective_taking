@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:27:17Z",
+    "AutoApprovalTime": "2018-03-30T00:27:09Z",
+    "AssignmentId": "148",
+    "WorkerId": "148",
+    "answers": {
+        "subject_information": {
+            "totalLength": 660002,
+            "gameID": "7924-57d79d28-8fa1-42d8-b81c-7c7130e30eca",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 23,
+            "role": "speaker",
+            "comments": "",
+            "strategy": "use less words when possible. describe as much as possible when there are curtains."
+        },
+        "id": "7924-57d79d28-8fa1-42d8-b81c-7c7130e30eca"
+    },
+    "AcceptTime": "2018-03-30T00:09:41Z",
+    "HITId": "3VEI3XUCZRXTBSJ3HXZ1AAVY7KNRP5",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:22:09Z"
+}

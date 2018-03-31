@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:39:16Z",
+    "AutoApprovalTime": "2018-03-30T01:38:42Z",
+    "AssignmentId": "179",
+    "WorkerId": "179",
+    "answers": {
+        "subject_information": {
+            "totalLength": 804221,
+            "gameID": "7600-346d56b5-bd76-406f-befb-6b47e07d5916",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 23,
+            "role": "listener",
+            "comments": "",
+            "strategy": "By listening to the details of the messages."
+        },
+        "id": "7600-346d56b5-bd76-406f-befb-6b47e07d5916"
+    },
+    "AcceptTime": "2018-03-30T01:12:47Z",
+    "HITId": "3CMIQF80GNQLPLMYPMBSZKUCGTX6QF",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:33:42Z"
+}

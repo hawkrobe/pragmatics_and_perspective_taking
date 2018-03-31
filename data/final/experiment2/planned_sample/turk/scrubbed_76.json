@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:57:18Z",
+    "AutoApprovalTime": "2018-03-29T21:56:48Z",
+    "AssignmentId": "76",
+    "WorkerId": "76",
+    "answers": {
+        "subject_information": {
+            "totalLength": 364369,
+            "gameID": "8823-1bd68d46-09c1-44aa-ab57-07071a85e24b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "No.",
+            "strategy": "Identify color, pattern, and shape."
+        },
+        "id": "8823-1bd68d46-09c1-44aa-ab57-07071a85e24b"
+    },
+    "AcceptTime": "2018-03-29T21:26:25Z",
+    "HITId": "3VO4XFFP15M4TL038WGK5YU8B4AQ7R",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:51:48Z"
+}

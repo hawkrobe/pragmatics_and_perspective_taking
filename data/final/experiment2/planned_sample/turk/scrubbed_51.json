@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:51:17Z",
+    "AutoApprovalTime": "2018-03-29T21:50:35Z",
+    "AssignmentId": "51",
+    "WorkerId": "51",
+    "answers": {
+        "subject_information": {
+            "totalLength": 611341,
+            "gameID": "9822-1bf0db84-7fff-4b19-a595-b1d2a0b271ed",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 24,
+            "role": "listener",
+            "comments": "",
+            "strategy": "Just listened to what they were telling me. Circle with grey waves etc."
+        },
+        "id": "9822-1bf0db84-7fff-4b19-a595-b1d2a0b271ed"
+    },
+    "AcceptTime": "2018-03-29T21:31:20Z",
+    "HITId": "3CKVGCS3PG52OQFWF1KGLJZMKDOS0E",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:45:35Z"
+}

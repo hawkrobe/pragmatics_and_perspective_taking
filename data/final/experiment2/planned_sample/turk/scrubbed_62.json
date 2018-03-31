@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:42:18Z",
+    "AutoApprovalTime": "2018-03-29T21:42:00Z",
+    "AssignmentId": "62",
+    "WorkerId": "62",
+    "answers": {
+        "subject_information": {
+            "totalLength": 592849,
+            "gameID": "4783-0b704cd3-43da-4780-8f74-6a85513278d2",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "Fun! It was nice working with someone in this manner!",
+            "strategy": "I used as simple description as possible"
+        },
+        "id": "4783-0b704cd3-43da-4780-8f74-6a85513278d2"
+    },
+    "AcceptTime": "2018-03-29T21:05:36Z",
+    "HITId": "3ZQX1VYFTD558NS63OGMUTV36MXO80",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:37:00Z"
+}

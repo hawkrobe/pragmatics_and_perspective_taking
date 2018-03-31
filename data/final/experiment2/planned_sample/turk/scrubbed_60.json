@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T22:04:18Z",
+    "AutoApprovalTime": "2018-03-29T22:04:03Z",
+    "AssignmentId": "60",
+    "WorkerId": "60",
+    "answers": {
+        "subject_information": {
+            "totalLength": 707949,
+            "gameID": "4526-507c6fa3-c9b0-4415-bc58-6d75e5ad10f7",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "This was fun-thank you!  I messed up once on my shape and when my partner didn't choose right away I noticed my mistake and sent a corrected message. ",
+            "strategy": "shape, color of shape, pattern inside of shape"
+        },
+        "id": "4526-507c6fa3-c9b0-4415-bc58-6d75e5ad10f7"
+    },
+    "AcceptTime": "2018-03-29T21:41:26Z",
+    "HITId": "3ZQX1VYFTD558NS63OGMUTV36MXO80",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:59:03Z"
+}

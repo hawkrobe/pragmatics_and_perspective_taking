@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T20:19:17Z",
+    "AutoApprovalTime": "2018-03-29T20:18:48Z",
+    "AssignmentId": "2",
+    "WorkerId": "2",
+    "answers": {
+        "subject_information": {
+            "totalLength": 493715,
+            "gameID": "0132-8ecccfe0-be22-46d9-a649-f8282878cd6a",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "This was a very interesting experiment.",
+            "strategy": "I tried to be as descriptive as possible with the pattern and outline color."
+        },
+        "id": "0132-8ecccfe0-be22-46d9-a649-f8282878cd6a"
+    },
+    "AcceptTime": "2018-03-29T20:03:02Z",
+    "HITId": "3NBFJK3IOHIK12YOMMSAM6C1U55OGB",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T20:13:48Z"
+}

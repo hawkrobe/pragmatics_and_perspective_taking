@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:39:16Z",
+    "AutoApprovalTime": "2018-03-30T00:38:32Z",
+    "AssignmentId": "132",
+    "WorkerId": "132",
+    "answers": {
+        "subject_information": {
+            "totalLength": 758449,
+            "gameID": "6580-daed1634-1b8f-47bb-99cc-569c05381caa",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 21,
+            "role": "speaker",
+            "comments": "no",
+            "strategy": "basic sides color filling"
+        },
+        "id": "6580-daed1634-1b8f-47bb-99cc-569c05381caa"
+    },
+    "AcceptTime": "2018-03-30T00:14:18Z",
+    "HITId": "341H3G5YF0EZP21AATEOHCWP8TUZ0Z",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:33:32Z"
+}

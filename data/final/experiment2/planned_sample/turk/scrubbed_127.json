@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T00:56:16Z",
+    "AutoApprovalTime": "2018-03-30T00:55:25Z",
+    "AssignmentId": "127",
+    "WorkerId": "127",
+    "answers": {
+        "subject_information": {
+            "totalLength": 422597,
+            "gameID": "9937-65f300c2-31f1-4fbb-850a-b085457b0e50",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "Good study",
+            "strategy": "Had to describe the color and shape, and also what pattern filled the shape."
+        },
+        "id": "9937-65f300c2-31f1-4fbb-850a-b085457b0e50"
+    },
+    "AcceptTime": "2018-03-30T00:39:42Z",
+    "HITId": "3ABAOCJ4R84NEO7QC2I9OGRY6TAQM7",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T00:50:25Z"
+}

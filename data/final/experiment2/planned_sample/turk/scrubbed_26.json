@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-29T21:45:16Z",
+    "AutoApprovalTime": "2018-03-29T21:44:19Z",
+    "AssignmentId": "26",
+    "WorkerId": "26",
+    "answers": {
+        "subject_information": {
+            "totalLength": 490499,
+            "gameID": "3750-f2fc7f74-7614-4f73-a47a-1a6ee9d14ae2",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 23,
+            "role": "speaker",
+            "comments": "I must have been confused on the one I got wrong. I thought the other had been the orange target.",
+            "strategy": "I tired to be as clear as possible."
+        },
+        "id": "3750-f2fc7f74-7614-4f73-a47a-1a6ee9d14ae2"
+    },
+    "AcceptTime": "2018-03-29T21:27:34Z",
+    "HITId": "31N9JPQXIPIGJDTN5DAFSHOXJVHNHY",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-29T21:39:19Z"
+}

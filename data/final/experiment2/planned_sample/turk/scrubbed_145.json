@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:08:16Z",
+    "AutoApprovalTime": "2018-03-30T01:07:28Z",
+    "AssignmentId": "145",
+    "WorkerId": "145",
+    "answers": {
+        "subject_information": {
+            "totalLength": 904389,
+            "gameID": "7580-e1cd16aa-d561-47cf-bd1f-e725ec66998e",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 18,
+            "role": "listener",
+            "comments": "At least in my window I had to use an extremely narrow scroll bar to scroll up and down each round. I'm sure this HIT could be designed to accomplish the same goals with 1/10 of the currently required effort.",
+            "strategy": "I tried to find a match to the speakers description."
+        },
+        "id": "7580-e1cd16aa-d561-47cf-bd1f-e725ec66998e"
+    },
+    "AcceptTime": "2018-03-30T00:40:12Z",
+    "HITId": "3P7QK0GJ3TL6LC4OPGI200P45REZ2J",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:02:28Z"
+}

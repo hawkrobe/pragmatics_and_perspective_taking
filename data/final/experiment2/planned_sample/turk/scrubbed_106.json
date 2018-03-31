@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-03-30T01:14:16Z",
+    "AutoApprovalTime": "2018-03-30T01:13:22Z",
+    "AssignmentId": "106",
+    "WorkerId": "106",
+    "answers": {
+        "subject_information": {
+            "totalLength": 805720,
+            "gameID": "8808-202dc754-665a-4310-82e8-bd4e301b9404",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 24,
+            "role": "speaker",
+            "comments": "Very fun experiment.  Would love to do similar in the future.",
+            "strategy": "Giving a detailed description of the shape that I saw, for example \"Blue square with vertical gray stripes.\""
+        },
+        "id": "8808-202dc754-665a-4310-82e8-bd4e301b9404"
+    },
+    "AcceptTime": "2018-03-30T00:27:28Z",
+    "HITId": "39O0SQZVJN745MF3LB5KAO4D7QH7RE",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-03-30T01:08:22Z"
+}
