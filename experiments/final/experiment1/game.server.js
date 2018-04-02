@@ -24,6 +24,7 @@ var moveObject = function(client, i, x, y) {
 };
 
 var onMessage = function(client,message) {
+  console.log('message' + message);
   //Cut the message up into sub components
   var message_parts = message.split('.');
 
@@ -66,6 +67,9 @@ var onMessage = function(client,message) {
   case 'updateMouse' :
     break;
 
+  case 'mouseOverDistractor' :
+    break;
+
   case 'h' : // Receive message when browser focus shifts
     target.visible = message_parts[1];
     break;
@@ -76,7 +80,6 @@ var dataOutput = function() {
   function commonOutput (client, message_data) {
     var objectName = client.game.currTarget;
     var object = _.find(client.game.objects, obj => obj.name == objectName);
-    console.log('curr taget: ' + objectName);
     return {
       iterationName: client.game.iterationName,
       gameid: client.game.id,
@@ -103,7 +106,7 @@ var dataOutput = function() {
     var distractor = !common.critical ? 'none' : {
       x: critical.upperLeftX + critical.width/2, y: critical.upperLeftY + critical.height/2
     };
-
+    
     var targetDistance = Math.floor(Math.sqrt(
       Math.pow(mouse.x - target.x, 2) + Math.pow(mouse.y - target.y, 2)
     ));
@@ -114,34 +117,38 @@ var dataOutput = function() {
 
     return _.extend({}, common, {
       targetDistance, distractorDistance,
-      localTime: messageData[1],
+      timeFromReveal: messageData[1],
       rawMouseX : mouse.x,
       rawMouseY : mouse.y
     });
   };
 
-  var messageOutput = function(client, messageData) {
-    return _.extend({}, commonOutput(client, messageData), {
-      sender: client.role,
-      contents : messageData[1].replace(/-/g,'.')
-    });
-  };
-
-  var dropOutput = function(client, messageData) {
-    return _.extend({}, commonOutput(client, messageData), {
-      correct : messageData[1],
-      attemptedObject : client.game.objects[messageData[2]].name,
-      intendedX : client.game.currentDestination.gridX,
-      intendedY : client.game.currentDestination.gridY,
-      attemptedX : messageData[5],
-      attemptedY : messageData[6]
-    });
-  };
-  
   return {
     'updateMouse' : mouseOutput,
-    'chatMessage' : messageOutput,
-    'drop' : dropOutput
+    'chatMessage' : (client, messageData) => {
+      return _.extend({}, commonOutput(client, messageData), {
+	sender: client.role,
+	contents : messageData[1].replace(/-/g,'.'),
+	typingRT : messageData[2]
+      });
+    },
+    'drop' : (client, messageData)  => {
+      return _.extend({}, commonOutput(client, messageData), {
+	correct : messageData[1],
+	attemptedObject : client.game.objects[messageData[2]].name,
+	intendedX : client.game.currentDestination.gridX,
+	intendedY : client.game.currentDestination.gridY,
+	attemptedX : messageData[5],
+	attemptedY : messageData[6],
+	responseTime : messageData[7]
+      });
+    }, 
+    'mouseOverDistractor' : (client, messageData) => {
+      return _.extend({}, commonOutput(client, messageData), {
+	onOff: messageData[1],
+	timeElapsed : messageData[2]
+      });
+    }
   };
 }();
 
