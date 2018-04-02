@@ -197,7 +197,7 @@ game_server.findGame = function(player) {
                 var d = new Date();
                 var start_time = d.getFullYear() + '-' + d.getMonth() + 1 + '-' + d.getDate() + '-' + d.getHours() + '-' + d.getMinutes() + '-' + d.getSeconds() + '-' + d.getMilliseconds()
               var name = start_time + '_' + game.id;
-	      var prefix = "../../../data/experiment1/";
+	      var prefix = "../../../data/cogsci/raw/experiment1/";
                 var mouse_f = prefix + "mouse/" + name + ".csv"
                 fs.writeFile(mouse_f, "gameid, time, condition, critical, objectSet, instructionNum, attemptNum, targetX, targetY, distractorX, distractorY, mouseX, mouseY\n", function (err) {if(err) throw err;})
                 game.gamecore.mouseDataStream = fs.createWriteStream(mouse_f, {'flags' : 'a'});
