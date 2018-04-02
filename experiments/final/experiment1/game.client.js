@@ -29,10 +29,13 @@ function client_onserverupdate_received(data){
 
   var dataNames = _.map(data.objects, e => e.name);
   var localNames = _.map(globalGame.objects, e => e.name);
-  
+
+  globalGame.instructions = data.instructions;
+  globalGame.instructionNum = data.instructionNum;
+
   // Preload objects if out of date...
   // Note, might have to insert this inside an initial occlusion drawing callback?
-  if (globalGame.objects.length == 0 || !_.isEqual(dataNames, localNames)) {
+  if ((globalGame.objects.length == 0 || !_.isEqual(dataNames, localNames))) {
     globalGame.objectCount = dataNames.length;
     globalGame.objects = _.map(data.objects, obj => {
       var imgObj = new Image();
@@ -41,13 +44,18 @@ function client_onserverupdate_received(data){
       return _.extend({}, obj, {img: imgObj});
     });
   }
-  
+
+  if(globalGame.instructions.length > 0) {
+    globalGame.currTarget = globalGame.instructions[globalGame.instructionNum].split(' ')[0];
+    console.log(globalGame.currTarget);
+    globalGame.critical = _.find(globalGame.objects, obj => {
+      return obj.name == globalGame.currTarget;
+    })['critical'] == 'target';  
+  }
   globalGame.currentDestination = data.curr_dest;
   globalGame.scriptedInstruction = data.scriptedInstruction;
   globalGame.attemptNum = data.attemptNum;
 
-  globalGame.instructions = data.instructions;
-  globalGame.instructionNum = data.instructionNum;
   globalGame.data = data.dataObj;
   globalGame.game_started = data.gs;
   globalGame.players_threshold = data.pt;
@@ -101,16 +109,10 @@ client_onMessage = function(data) {
 
     case 'feedback' :
       $("#chatbox").attr("disabled", "disabled");
-      console.log('commands ')
-      console.log(commands);
       var type = commands[2];
       var cell = globalGame.getPixelFromCell({gridX : commands[3], gridY : commands[4]});
       // var targetName = globalGame.instructions[globalGame.instructionNum].split(' ')[0];
-      // var clickedObj = _.filter(game.objects, x => x.name == clickedObjName)[0];
       setTimeout(() => drawFeedbackIcon(globalGame, type, cell), 200);
-		       
-      //globalGame.get_player(globalGame.my_id).message = type ? type + " move!\n" : ""
-      //drawScreen(globalGame, globalGame.get_player(globalGame.my_id))
       break;
     }
   } 
@@ -132,6 +134,7 @@ var customSetup = function(game) {
       globalGame.get_player(globalGame.my_id).message = msg;
       globalGame.paused = true;
       globalGame.dragging = false;
+      globalGame.overDistractor = false;
     } else {
       globalGame.paused = false;
       $("#chatbox").removeAttr("disabled");
@@ -267,16 +270,17 @@ function mouseUpListener(evt) {
     var cell = globalGame.getCellFromPixel(dropX, dropY)
     
     // If you were dragging the correct object... And dragged it to the correct location...
-    if (_.isEqual(obj.name, globalGame.instructions[globalGame.instructionNum].split(' ')[0])
+    var timeElapsed = Date.now() - globalGame.listenerStartTime;
+    if (_.isEqual(obj.name, globalGame.currTarget)
         && _.isEqual(cell, globalGame.currentDestination)) {
       // center it
       obj.gridX = cell.gridX;
       obj.gridY = cell.gridY
       obj.upperLeftX = globalGame.getPixelFromCell(cell).centerX - obj.width/2
       obj.upperLeftY = globalGame.getPixelFromCell(cell).centerY - obj.height/2
-      globalGame.socket.send("drop.correct." + dragIndex + "." +
+      globalGame.socket.send("drop.correct." + dragIndex + "." + 
 			     Math.round(obj.upperLeftX) + "." + Math.round(obj.upperLeftY) +
-			    '.' + cell.gridX + '.' + cell.gridY)
+			     '.' + cell.gridX + '.' + cell.gridY + '.' + timeElapsed);
       
       // If you didn't drag it beyond cell bounds, snap it back w/o comment
     } else if (obj.gridX == cell.gridX && obj.gridY == cell.gridY) {
@@ -288,9 +292,9 @@ function mouseUpListener(evt) {
     } else {
       obj.upperLeftX = globalGame.getPixelFromCell(obj).centerX - obj.width/2
       obj.upperLeftY = globalGame.getPixelFromCell(obj).centerY - obj.height/2
-      var msg = ['drop', 'incorrect', dragIndex,
+      var msg = ['drop', 'incorrect', dragIndex, 
 		 Math.round(obj.upperLeftX), Math.round(obj.upperLeftY),
-		 cell.gridX, cell.gridY].join('.');
+		 cell.gridX, cell.gridY, timeElapsed].join('.');
       globalGame.socket.send(msg);
     }
     // Tell server where you dropped it
@@ -317,7 +321,22 @@ var mouseTracking = function(event) {
   var mouseY = (event.clientY-bRect.top)*(globalGame.viewport.height/bRect.height);
   if(!globalGame.paused && !globalGame.dragging) {
     globalGame.socket.send(
-      ['updateMouse', Date.now(), Math.floor(mouseX), Math.floor(mouseY)].join('.')
+      ['updateMouse', Date.now() - globalGame.listenerStartTime,
+       Math.floor(mouseX), Math.floor(mouseY)].join('.')
+    );
+  }
+  // Record when entering or exiting distractor square (easier to get DV from)
+  var distractor = _.find(globalGame.objects, obj => obj.critical == "distractor");
+  if(!globalGame.overDistractor & globalGame.critical & hitTest(distractor, mouseX, mouseY)) {
+    globalGame.overDistractor = true;
+    globalGame.socket.send(
+      ['mouseOverDistractor.on', Date.now() - globalGame.listenerStartTime].join('.')
+    );
+  }
+  if(globalGame.overDistractor & globalGame.critical & !hitTest(distractor, mouseX, mouseY)) {
+    globalGame.overDistractor = false;
+    globalGame.socket.send(
+      ['mouseOverDistractor.off', Date.now() - globalGame.listenerStartTime].join('.')
     );
   }
 };
@@ -357,9 +376,7 @@ function hitCenter(mouseX, mouseY) {
 };
 
 function hitTest(shape,mx,my) {
-  console.log(shape);
   var dx = mx - shape.upperLeftX;
   var dy = my - shape.upperLeftY;
-  console.log([dx, dy])
   return (0 < dx) && (dx < shape.width) && (0 < dy) && (dy < shape.height)
 }
