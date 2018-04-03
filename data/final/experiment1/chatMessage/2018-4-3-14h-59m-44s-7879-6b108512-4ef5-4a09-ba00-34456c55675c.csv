@@ -1,0 +1,2 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	7879-6b108512-4ef5-4a09-ba00-34456c55675c	1522792784782	scripted	1	0	scissors	0	base	3	false	director	Move the scissors one block to the right	11994	chatMessage

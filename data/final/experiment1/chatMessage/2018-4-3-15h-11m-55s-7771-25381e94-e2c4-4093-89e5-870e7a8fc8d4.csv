@@ -1,0 +1,2 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	7771-25381e94-e2c4-4093-89e5-870e7a8fc8d4	1522793515848	unscripted	1	0	airplane	0	base	1	false	director	move the airplane one to the right	12455	chatMessage

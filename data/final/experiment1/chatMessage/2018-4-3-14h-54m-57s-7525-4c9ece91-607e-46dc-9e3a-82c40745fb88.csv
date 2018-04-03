@@ -1,0 +1,21 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792497029	scripted	1	0	banana	0	exp	6	false	director	move the banana up by one space	NaN	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792516319	scripted	1	1	dollar	0	exp	6	false	director	move the dollar one space to the right	5930	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792531249	scripted	1	2	boardEraser	0	exp	6	true	director	move the eraser up by one space	20861	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792550314	scripted	1	2	boardEraser	1	exp	6	true	director	move the eraser on the bottom row up one space	7754	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792554142	scripted	1	2	boardEraser	1	exp	6	true	director	he got me lol	1803	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792566964	scripted	1	3	feather	0	exp	6	false	director	move the feather on the bottom row left one space	7265	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792587227	scripted	2	0	binoculars	0	base	2	false	director	move the binoculars one space to the right	27529	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792607043	scripted	2	1	wrench	0	base	2	false	director	move the wrench in the top row one space to the left	8097	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792618348	scripted	2	2	middleBlock	0	base	2	true	director	move the bottom block one space to the left	19400	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792645887	scripted	2	3	coffeeMug	0	base	2	false	director	move the coffee mug below the yellow A block one space to the left	15502	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792652042	scripted	2	3	coffeeMug	0	base	2	false	director	sorry right	1348	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792679860	scripted	3	0	scissors	0	base	3	false	director	move the scissors in the row below the top on the leftmost side one space to the right	19865	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792699679	scripted	3	1	knife	0	base	3	false	director	move the knife down one space	39679	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792720172	scripted	3	2	barOfSoap	0	base	3	false	director	move the soap into the spot where the knife just was	8614	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792725706	scripted	3	2	barOfSoap	0	base	3	false	director	one space to the left	2222	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792733036	scripted	3	3	cassetteTape	0	base	3	true	director	move the tape down by one space	9550	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792755524	scripted	4	0	basketball	0	exp	5	false	director	move the basketball on top next to the red book down one space	10586	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792769922	scripted	4	1	roundBrush	0	exp	5	true	director	move the brush one space to the left	24986	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792788506	scripted	4	1	roundBrush	1	exp	5	true	director	move the hairbrush on the bottom one space to the left	7041	chatMessage
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792798741	scripted	4	1	roundBrush	1	exp	5	true	matcher	my bad	4308	chatMessage

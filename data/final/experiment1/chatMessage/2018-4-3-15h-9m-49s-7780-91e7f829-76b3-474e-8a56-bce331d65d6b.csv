@@ -1,0 +1,6 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793389425	scripted	1	0	airplane	0	base	1	false	director	move the plan one block closer to barrell on same line	16814	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793395969	scripted	1	0	airplane	0	base	1	false	director	plane*	3006	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793458689	scripted	1	1	sunGlasses	0	base	1	true	director	move the glasses one space to the right	65722	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793500597	scripted	1	3	saxophone	0	base	1	false	director	move saxaphone up one block	19442	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793522596	scripted	2	0	binoculars	0	exp	2	false	director	move the binoculars one space to the right	41440	chatMessage

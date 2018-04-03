@@ -1,0 +1,16 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792490956	unscripted	1	0	comb	0	base	8	false	director	please move the comb up one	13283	chatMessage
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792516985	unscripted	1	1	computerMouse	0	base	8	true	director	please move the mouse up one	9197	chatMessage
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792534638	unscripted	1	2	castIronPan	0	base	8	false	director	now move the frying pan up one	6714	chatMessage
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792564288	unscripted	1	3	piano	0	base	8	false	director	pls move the piano to the left	15091	chatMessage
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792585621	unscripted	2	0	banana	0	exp	6	false	director	now the banana goes up one	8781	chatMessage
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792605922	unscripted	2	1	dollar	0	exp	6	false	director	pls move the dollar to the right	8090	chatMessage
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792630632	unscripted	2	2	boardEraser	0	exp	6	true	director	plse move the brick.type thing up one	10459	chatMessage
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792662065	unscripted	2	3	feather	0	exp	6	false	director	now the feather goes to the left	9931	chatMessage
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792685162	unscripted	3	0	airplane	0	exp	1	false	director	fly the plane one to the right	8680	chatMessage
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792707137	unscripted	3	1	sunGlasses	0	exp	1	true	director	sunglasses one right	6995	chatMessage
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792726958	unscripted	3	2	barrel	0	exp	1	false	director	barrel down one	6746	chatMessage
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792743254	unscripted	3	3	saxophone	0	exp	1	false	director	sax up one pls	5393	chatMessage
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792767140	unscripted	4	0	scissors	0	base	3	false	director	scissors one to the right	12072	chatMessage
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792785103	unscripted	4	1	knife	0	base	3	false	director	knife down one	4562	chatMessage
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792805133	unscripted	4	2	barOfSoap	0	base	3	false	director	white loaf of bread one left	10035	chatMessage

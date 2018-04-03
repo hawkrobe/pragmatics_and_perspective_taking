@@ -1,0 +1,26 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791174332	unscripted	1	0	airplane	0	base	1	false	director	move the plane forward	23479	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791204442	unscripted	1	2	barrel	0	base	1	false	director	move the barrel down	2535	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791225534	unscripted	1	3	saxophone	0	base	1	false	director	move the sax up	3050	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791248012	unscripted	2	0	comb	0	exp	8	false	director	move the comb up	2629	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791261434	unscripted	2	1	computerMouse	0	exp	8	true	director	move the mouse up	2084	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791276255	unscripted	2	1	computerMouse	1	exp	8	true	director	move the mouse up	2607	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791295731	unscripted	2	1	computerMouse	2	exp	8	true	director	move the mouse up	2642	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791312045	unscripted	2	1	computerMouse	3	exp	8	true	director	move the computer mouse up	4007	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791329042	unscripted	2	1	computerMouse	4	exp	8	true	director	move the mouse up	2114	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791348793	unscripted	2	1	computerMouse	5	exp	8	true	director	move the mouse away from the pan	4235	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791371193	unscripted	2	1	computerMouse	6	exp	8	true	director	move the mouse	2963	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791406911	unscripted	2	1	computerMouse	7	exp	8	true	director	move the mouse	1268	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791423333	unscripted	2	2	castIronPan	0	exp	8	false	director	move the pan up	3550	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791436219	unscripted	2	3	piano	0	exp	8	false	director	move the piano left	3309	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791447416	unscripted	3	0	carrot	0	base	4	false	director	move the carrot up	2270	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791459418	unscripted	3	1	mediumMeasuringCup	0	base	4	true	director	move the pyrex down	3113	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791481195	unscripted	3	1	mediumMeasuringCup	1	base	4	true	director	move the measuring cup down	6961	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791501041	unscripted	3	1	mediumMeasuringCup	2	base	4	true	director	move the cup down	2297	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791515127	unscripted	3	1	mediumMeasuringCup	3	base	4	true	director	move the other cup down	2510	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791529179	unscripted	3	1	mediumMeasuringCup	4	base	4	true	director	move the pyrex cup down	4913	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791540796	unscripted	3	1	mediumMeasuringCup	5	base	4	true	director	move the cup down	2016	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791559699	unscripted	3	1	mediumMeasuringCup	6	base	4	true	director	move the cup away from the chair	8213	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791579246	unscripted	3	1	mediumMeasuringCup	7	base	4	true	director	move the cup in the opposite direction of the chair	7161	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791606688	unscripted	3	1	mediumMeasuringCup	8	base	4	true	director	move the MEASURING CUP away from the chair	12434	chatMessage
+planned_sample	5183-23d8a846-f3f4-44ab-b616-40a98cb5ffbe	1522791638685	unscripted	3	1	mediumMeasuringCup	9	base	4	true	director	move the pyrex down	3989	chatMessage

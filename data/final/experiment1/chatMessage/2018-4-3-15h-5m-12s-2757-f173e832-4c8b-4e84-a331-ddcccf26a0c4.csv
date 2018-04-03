@@ -1,0 +1,7 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	2757-f173e832-4c8b-4e84-a331-ddcccf26a0c4	1522793112309	unscripted	1	0	basketball	0	exp	5	false	director	move the orange basketball down one space	8622	chatMessage
+planned_sample	2757-f173e832-4c8b-4e84-a331-ddcccf26a0c4	1522793233269	unscripted	1	1	roundBrush	0	exp	5	true	director	move the hairbrush one space to the left, or in other words one space towards the ring	23159	chatMessage
+planned_sample	2757-f173e832-4c8b-4e84-a331-ddcccf26a0c4	1522793291613	unscripted	1	1	roundBrush	1	exp	5	true	director	move the hairbrush one space to the left, or towards the ring	11247	chatMessage
+planned_sample	2757-f173e832-4c8b-4e84-a331-ddcccf26a0c4	1522793370485	unscripted	1	1	roundBrush	3	exp	5	true	director	move the hairbrush on the bottom row one space to the left towards the ring	16936	chatMessage
+planned_sample	2757-f173e832-4c8b-4e84-a331-ddcccf26a0c4	1522793450478	unscripted	1	1	roundBrush	5	exp	5	true	director	move the hair brush on the bottom to the left one space	19614	chatMessage
+planned_sample	2757-f173e832-4c8b-4e84-a331-ddcccf26a0c4	1522793507054	unscripted	1	1	roundBrush	6	exp	5	true	director	the hairbrush is two spaces below the box where the X appeared, it needs to be moved one space to the left	25254	chatMessage

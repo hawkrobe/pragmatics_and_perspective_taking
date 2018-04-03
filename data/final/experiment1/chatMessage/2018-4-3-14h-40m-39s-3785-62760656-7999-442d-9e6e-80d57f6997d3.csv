@@ -1,0 +1,38 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791639245	scripted	1	0	basketball	0	exp	5	false	director	basketball goes down one	3813	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791655830	scripted	1	1	roundBrush	0	exp	5	true	director	move the brush one space to the left	20396	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791669221	scripted	1	1	roundBrush	1	exp	5	true	director	brush one space left	2281	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791683309	scripted	1	2	headphones	0	exp	5	false	director	headphones one space left	4641	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791693560	scripted	1	3	book	0	exp	5	false	director	move the book one space to the right	14889	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791704929	scripted	2	0	comb	0	base	8	false	director	comb one space up	2399	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791716513	scripted	2	1	computerMouse	0	base	8	true	director	move the mouse up by one space	13985	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791731348	scripted	2	2	castIronPan	0	base	8	false	director	pan one space up	1724	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791743824	scripted	2	3	piano	0	base	8	false	director	piano one space left	2659	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791752702	scripted	3	0	binoculars	0	base	2	false	director	move the binoculars one space to the right	11534	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791763176	scripted	3	1	wrench	0	base	2	false	director	wrench left 1 space	3283	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791770644	scripted	3	2	middleBlock	0	base	2	true	director	move the bottom block one space to the left	10774	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791782256	scripted	3	3	coffeeMug	0	base	2	false	director	coffee cup one space right	3265	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791800465	scripted	4	0	scissors	0	exp	3	false	director	scissors one space right	3201	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791808524	scripted	4	1	knife	0	exp	3	false	director	move the knife down one space	11292	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791818446	scripted	4	2	barOfSoap	0	exp	3	false	director	soap one space left	1931	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791825946	scripted	4	3	cassetteTape	0	exp	3	true	director	move the tape down by one space	9418	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791834667	scripted	4	3	cassetteTape	1	exp	3	true	director	tape down 1	1399	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791843150	scripted	5	0	banana	0	exp	6	false	director	move the banana up by one space	9885	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791866285	scripted	5	1	dollar	0	exp	6	false	director	MONEY ONE SPACE RIGHT	2662	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791875891	scripted	5	2	boardEraser	0	exp	6	true	director	move the eraser up by one space	12265	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791883695	scripted	5	2	boardEraser	0	exp	6	true	matcher	pink or gray?	2602	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791933302	scripted	5	2	boardEraser	1	exp	6	true	director	gray eraser up 1	1854	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791943434	scripted	5	3	feather	0	exp	6	false	director	feather left 1	1552	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791953365	scripted	6	0	magnet	0	base	7	false	director	move the magnet down by one space	11499	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791966067	scripted	6	1	handcuffs	0	base	7	false	director	handcuffs down 1	2373	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791975645	scripted	6	2	pandaToy	0	base	7	false	director	panda down 1	1800	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522791982779	scripted	6	3	mediumCandle	0	base	7	true	director	move the small candle down by one space	8936	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522792001755	scripted	7	0	airplane	0	base	1	false	director	plane right 1	1188	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522792012093	scripted	7	1	sunGlasses	0	base	1	true	director	move the glasses one space to the right	11525	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522792020524	scripted	7	2	barrel	0	base	1	false	director	move the barrel down by one space	19955	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522792028078	scripted	7	3	saxophone	0	base	1	false	director	sax up 1	1100	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522792035709	scripted	8	0	carrot	0	exp	4	false	director	move the carrot up one space	8717	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522792043770	scripted	8	1	mediumMeasuringCup	0	exp	4	true	director	move the large measuring cup down one space	16794	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522792053298	scripted	8	1	mediumMeasuringCup	1	exp	4	true	director	measuring cup down 1	2111	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522792062872	scripted	8	2	waterBottle	0	exp	4	false	director	bottle right 1	1835	chatMessage
+planned_sample	3785-62760656-7999-442d-9e6e-80d57f6997d3	1522792071011	scripted	8	3	chair	0	exp	4	false	director	chair left 1	1060	chatMessage

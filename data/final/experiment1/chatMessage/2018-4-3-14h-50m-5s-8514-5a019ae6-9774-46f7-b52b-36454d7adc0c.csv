@@ -1,0 +1,23 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792205852	unscripted	1	0	basketball	0	base	5	false	director	Move the ball down 1 square	14245	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792237815	unscripted	1	1	roundBrush	0	base	5	true	director	brush left 1 square	8250	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792273663	unscripted	1	2	headphones	0	base	5	false	director	headphone left 1 square	9189	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792297061	unscripted	1	3	book	0	base	5	false	director	book right 1 square	8597	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792324497	unscripted	2	0	scissors	0	exp	3	false	director	scissors right 1 square	12501	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792347947	unscripted	2	1	knife	0	exp	3	false	director	knife down 1	10365	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792392542	unscripted	2	2	barOfSoap	0	exp	3	false	director	soap left 1 square	8230	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792417383	unscripted	2	3	cassetteTape	0	exp	3	true	director	cassette down 1 square	12159	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792435670	unscripted	3	0	banana	0	exp	6	false	director	banana up 1 square	8095	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792456485	unscripted	3	1	dollar	0	exp	6	false	director	dollar right 1 sqaure	8222	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792476308	unscripted	3	2	boardEraser	0	exp	6	true	director	eraser up 1 square	8270	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792506988	unscripted	3	2	boardEraser	1	exp	6	true	director	eraser up 1 square	13427	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792520793	unscripted	3	2	boardEraser	1	exp	6	true	matcher	can't	7349	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792597446	unscripted	3	2	boardEraser	2	exp	6	true	director	eraser left 1 square then up 1 square then right 1 square	56204	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792664276	unscripted	3	3	feather	0	exp	6	false	director	feather left 1 square	28845	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792690040	unscripted	4	0	comb	0	base	8	false	director	comb up 1 square	6387	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792706780	unscripted	4	1	computerMouse	0	base	8	true	director	mouse up 1 square	5958	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792726520	unscripted	4	2	castIronPan	0	base	8	false	director	pan up 1 square	9902	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792748005	unscripted	4	3	piano	0	base	8	false	director	piano left 1 square	7430	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792757184	unscripted	4	3	piano	0	base	8	false	matcher	mouse please	1738	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792782957	unscripted	4	3	piano	1	base	8	false	director	piano left 1 square	9685	chatMessage
+planned_sample	8514-5a019ae6-9774-46f7-b52b-36454d7adc0c	1522792801073	unscripted	5	0	airplane	0	base	1	false	director	plane right 1 square	6102	chatMessage

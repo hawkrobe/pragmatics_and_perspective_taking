@@ -1,0 +1,11 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	6068-59d1743c-c6f4-46d8-b524-4834fd4c43cf	1522793363944	scripted	1	0	basketball	0	base	5	false	director	move the basketball down	9586	chatMessage
+planned_sample	6068-59d1743c-c6f4-46d8-b524-4834fd4c43cf	1522793407827	scripted	1	0	basketball	1	base	5	false	director	move the basketball down	6172	chatMessage
+planned_sample	6068-59d1743c-c6f4-46d8-b524-4834fd4c43cf	1522793427910	scripted	1	0	basketball	2	base	5	false	director	move the basket ball down once	14484	chatMessage
+planned_sample	6068-59d1743c-c6f4-46d8-b524-4834fd4c43cf	1522793442091	scripted	1	1	roundBrush	0	base	5	true	director	move the brush one space to the left	28668	chatMessage
+planned_sample	6068-59d1743c-c6f4-46d8-b524-4834fd4c43cf	1522793461507	scripted	1	2	headphones	0	base	5	false	director	move headphones once to the left	7627	chatMessage
+planned_sample	6068-59d1743c-c6f4-46d8-b524-4834fd4c43cf	1522793473864	scripted	1	3	book	0	base	5	false	director	move the book one space to the right	19983	chatMessage
+planned_sample	6068-59d1743c-c6f4-46d8-b524-4834fd4c43cf	1522793484011	scripted	2	0	banana	0	exp	6	false	director	move the banana up by one space	30131	chatMessage
+planned_sample	6068-59d1743c-c6f4-46d8-b524-4834fd4c43cf	1522793503387	scripted	2	1	dollar	0	exp	6	false	director	move the dollar once to the right	6883	chatMessage
+planned_sample	6068-59d1743c-c6f4-46d8-b524-4834fd4c43cf	1522793514582	scripted	2	2	boardEraser	0	exp	6	true	director	move the eraser up by one space	18079	chatMessage
+planned_sample	6068-59d1743c-c6f4-46d8-b524-4834fd4c43cf	1522793530226	scripted	2	2	boardEraser	1	exp	6	true	director	move the erasaer up once	5414	chatMessage
