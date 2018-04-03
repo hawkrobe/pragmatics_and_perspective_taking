@@ -47,7 +47,6 @@ function client_onserverupdate_received(data){
 
   if(globalGame.instructions.length > 0) {
     globalGame.currTarget = globalGame.instructions[globalGame.instructionNum].split(' ')[0];
-    console.log(globalGame.currTarget);
     globalGame.critical = _.find(globalGame.objects, obj => {
       return obj.name == globalGame.currTarget;
     })['critical'] == 'target';  
@@ -57,10 +56,17 @@ function client_onserverupdate_received(data){
   globalGame.attemptNum = data.attemptNum;
 
   globalGame.roundNum = data.roundNum;
-  globalGame.data = data.dataObj;
+  if(!_.has(globalGame, 'data')) {
+    globalGame.data = data.dataObj;
+  }
+
   globalGame.game_started = data.gs;
   globalGame.players_threshold = data.pt;
   globalGame.player_count = data.pc;
+
+  $('#roundnumber').empty()
+    .append("Round: " + (globalGame.roundNum + 1) + "/" + globalGame.numRounds +
+	    '\nInstruction: ' + (globalGame.instructionNum + 1) + '/4');
 
   // Draw all this new stuff
   drawScreen(globalGame, globalGame.get_player(globalGame.my_id));
@@ -114,6 +120,12 @@ client_onMessage = function(data) {
       var cell = globalGame.getPixelFromCell({gridX : commands[3], gridY : commands[4]});
       // var targetName = globalGame.instructions[globalGame.instructionNum].split(' ')[0];
       setTimeout(() => drawFeedbackIcon(globalGame, type, cell), 200);
+      var scoreDiff = (type == 'correct' ?
+		       Math.max(0, globalGame.bonusAmt - globalGame.attemptNum)  : 0);
+      globalGame.data.subject_information.score += scoreDiff;
+      $('#score').empty()
+        .append("Bonus: $" + (globalGame.data.subject_information.score/100).toFixed(2));
+
       break;
     }
   } 
@@ -130,6 +142,11 @@ var customSetup = function(game) {
   // For mouse-tracking, matcher must wait until director sends message  
   game.socket.on('newRoundUpdate', function(data){
     $('#messages').empty();
+    if(game.roundNum + 2 > game.numRounds) {
+      $('#roundnumber').empty();
+      $('#instructs').empty();
+    } 
+
     if(globalGame.my_role == globalGame.playerRoleNames.role2) {
       var msg = 'Waiting for your partner to send a message...';
       globalGame.get_player(globalGame.my_id).message = msg;

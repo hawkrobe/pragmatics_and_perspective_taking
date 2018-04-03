@@ -33,6 +33,7 @@ var game_core = function(options){
   this.iterationName = 'pilot1';
   this.dataStore = ['csv', 'mongo'];
   this.anonymizeCSV = true;
+  this.bonusAmt = 1; // in cents
 
   this.players_threshold = 2;
   this.playerRoleNames = {
@@ -74,10 +75,9 @@ var game_core = function(options){
 
     this.data = {
       id : this.id,
-      trials : [],
-      catch_trials : [], system : {}, 
       subject_information : {
-	gameID: this.id, scale: 0
+	score: 0,
+	gameID: this.id
       }
     };
     this.server_send_update();
@@ -170,8 +170,8 @@ game_core.prototype.setScriptAndDir = function(instruction) {
 };
 
 game_core.prototype.newInstruction = function() {
-  console.log('sending new instruction');
   this.instructionNum += 1;
+  console.log('sending new instruction ' + this.instructionNum);
   var instruction = this.instructions[this.instructionNum]
   this.currTarget = instruction.split(' ')[0]; 
   this.setScriptAndDir(instruction)
