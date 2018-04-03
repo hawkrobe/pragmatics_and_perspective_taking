@@ -17,13 +17,17 @@ library(lmerTest)
 
 ## Import turk survey data 
 
+```{r}
+subjInfo <- read_csv('../data/final/experiment2/planned_sample/turk/subjInfo.csv')
+```
+
 ## Import message data
 
 ```{r}
 d_annotated <- read_csv('../data/final/experiment2/planned_sample/chatMessage/messages_with_annotations.csv') 
 
 # nonNativeSpeakerIDs <- unique((tangramSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
-incompleteIDs <- unique((d_raw %>% group_by(gameid) %>% 
+incompleteIDs <- unique((d_annotated %>% group_by(gameid) %>% 
                            filter(length(unique(trialNum)) != 24))$gameid)
 confused <- unique((subjInfo %>% filter(understandsInstructions != 'yes'))$gameid)
 
@@ -84,15 +88,16 @@ dodge <- position_dodge(width=0.9)
 
 d %>%
   group_by(context, hidden) %>%
-  summarize(m = mean(numRawWords), se = sd(numRawWords)/sqrt(length(numRawWords))) %>%
-  ggplot(aes(x = context, y = m, fill = hidden)) +
+  tidyboot_mean(column = numRawWords) %>%
+  ggplot(aes(x = context, y = empirical_stat, fill = hidden)) +
     geom_bar(stat = 'identity', position = dodge) +
-    geom_errorbar(aes(ymin = m - se, ymax = m + se), position = dodge, width = 0.1) +
+    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), position = dodge, width = 0) +
     theme_few() +
     ylab('mean # words') +
-    theme(aspect.ratio = .5)
+    theme(aspect.ratio = .5) +
+    scale_fill_colorblind()
 
-ggsave('~/Downloads/aggregated_means.pdf')
+ggsave('~/Downloads/aggregated_means.pdf', width = 4, height = 2)
 ```
 
 ## Scatter to look at within-subj effects
@@ -240,4 +245,42 @@ summary(glmer(textureMention ~ occlusions + (1 + occlusions | gameid), family = 
 d %>% 
   group_by(context, occlusions) %>% 
   summarize(numFeatures = mean(numFeatures))
+```
+
+```{r}
+d.booted <- d %>% 
+  gather(feature, mentioned, shapeMention, colorMention, textureMention) %>%
+  group_by(context, hidden, feature) %>% 
+  tidyboot_mean(column = mentioned) 
+
+ggplot(d.booted, aes(x = context, y = empirical_stat, fill = hidden)) + 
+  geom_bar(stat = 'identity', position = dodge) +
+  geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0) +
+  facet_wrap(~ feature) + 
+  theme_few() +
+  theme(aspect.ratio = 1) + 
+  ylab('% utterances with feature') +
+  scale_fill_colorblind()
+
+ggsave('~/Downloads/by-feature-analysis.pdf')
+```
+
+## Mouse-tracking 
+
+should be really straightforward but might help catch a bug for Exp. 1?
+
+```{r}
+d.mouse <- read_tsv('../data/final/experiment2/planned_sample/updateMouse/mouse.csv') %>%
+  filter(!(gameid %in% badGames)) %>%
+  left_join(d_annotated)
+
+d.mouse %>%
+  filter(distractorDistance != 'none') %>%
+  mutate(distractorDistance = as.numeric(distractorDistance)) %>%
+  group_by(gameid, trialNum) %>%
+  mutate(initTime = first(localTime)) %>%
+  group_by(context, hidden, gameid, trialNum, targetDistance < 300, distractorDistance < 300)  %>%
+  summarize(firstTarget = first(localTime) - mean(initTime))
+  # filter(distractorDistance < 300)
+#  group_by()
 ```
