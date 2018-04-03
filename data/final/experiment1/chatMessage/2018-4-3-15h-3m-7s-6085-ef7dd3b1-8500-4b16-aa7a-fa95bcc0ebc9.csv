@@ -19,3 +19,12 @@ planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793433738	scripted	
 planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793448054	scripted	5	0	banana	0	base	6	false	director	move the banana up by one space	40995	chatMessage
 planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793488172	scripted	5	1	dollar	0	base	6	false	director	move the $1 dollar bill to the right one spot	6683	chatMessage
 planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793526574	scripted	5	2	boardEraser	0	base	6	true	director	move the eraser up by one space	45084	chatMessage
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793554422	scripted	5	3	feather	0	base	6	false	director	move the gray feather one spot to the left	6916	chatMessage
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793571466	scripted	6	0	carrot	0	exp	4	false	director	move the carrot up one space	23960	chatMessage
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793604249	scripted	6	1	mediumMeasuringCup	0	exp	4	true	director	move the large measuring cup down one space	56743	chatMessage
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793633941	scripted	6	1	mediumMeasuringCup	1	exp	4	true	director	move the big measuring cup down one spot	8855	chatMessage
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793662253	scripted	6	2	waterBottle	0	exp	4	false	director	move the plastic water bottle one spot to the right	7810	chatMessage
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793684433	scripted	6	3	chair	0	exp	4	false	director	move the wooden chair to the left one spot	5355	chatMessage
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793699959	scripted	7	0	binoculars	0	exp	2	false	director	move the binoculars one space to the right	20878	chatMessage
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793724691	scripted	7	1	wrench	0	exp	2	false	director	move the metal wrench one spot to left	5827	chatMessage
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793741639	scripted	7	2	middleBlock	0	exp	2	true	director	move the bottom block one space to the left	22775	chatMessage

@@ -10,3 +10,14 @@ planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793472843	scripted	
 planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793499786	scripted	2	3	mediumCandle	0	base	7	true	director	move the small candle down by one space	38956	chatMessage
 planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793509952	scripted	3	0	carrot	0	base	4	false	director	move the carrot up one space	49120	chatMessage
 planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793519997	scripted	3	1	mediumMeasuringCup	0	base	4	true	director	move the large measuring cup down one space	59160	chatMessage
+planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793559165	scripted	3	2	waterBottle	0	base	4	false	director	move the bottle over one space to the right	24556	chatMessage
+planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793581874	scripted	3	3	chair	0	base	4	false	director	move chair over one space to the left	9019	chatMessage
+planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793601648	scripted	4	0	airplane	0	exp	1	false	director	move the plane over one space to the right	8806	chatMessage
+planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793614438	scripted	4	1	sunGlasses	0	exp	1	true	director	move the glasses one space to the right	21597	chatMessage
+planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793626458	scripted	4	2	barrel	0	exp	1	false	director	move the barrel down by one space	33618	chatMessage
+planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793653396	scripted	4	3	saxophone	0	exp	1	false	director	move the instrument up one space	14990	chatMessage
+planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793664356	scripted	5	0	banana	0	base	6	false	director	move the banana up by one space	25960	chatMessage
+planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793688224	scripted	5	1	dollar	0	base	6	false	director	move the dollar over by one space to the right	11808	chatMessage
+planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793699424	scripted	5	2	boardEraser	0	base	6	true	director	move the eraser up by one space	23009	chatMessage
+planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793736688	scripted	5	3	feather	0	base	6	false	director	move the feather over one space to the left 	22873	chatMessage
+planned_sample	7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9	1522793747115	scripted	6	0	binoculars	0	exp	2	false	director	move the binoculars one space to the right	33300	chatMessage

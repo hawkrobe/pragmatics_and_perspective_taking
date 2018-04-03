@@ -1,0 +1,9 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	2388-41d9ba83-3ce4-40be-abe1-1afff9a441fc	1522793912557	scripted	1	0	scissors	0	exp	3	false	director	move the scizzors over one space	21351	chatMessage
+planned_sample	2388-41d9ba83-3ce4-40be-abe1-1afff9a441fc	1522793941145	scripted	1	1	knife	0	exp	3	false	director	move the knife down one space	49934	chatMessage
+planned_sample	2388-41d9ba83-3ce4-40be-abe1-1afff9a441fc	1522793961592	scripted	1	2	barOfSoap	0	exp	3	false	director	move the soap over one space	8461	chatMessage
+planned_sample	2388-41d9ba83-3ce4-40be-abe1-1afff9a441fc	1522793985152	scripted	1	3	cassetteTape	0	exp	3	true	director	move the tape down by one space	32023	chatMessage
+planned_sample	2388-41d9ba83-3ce4-40be-abe1-1afff9a441fc	1522794015605	scripted	1	3	cassetteTape	1	exp	3	true	director	the tape needs to be moved down one space	15057	chatMessage
+planned_sample	2388-41d9ba83-3ce4-40be-abe1-1afff9a441fc	1522794034031	scripted	2	0	binoculars	0	base	2	false	director	move the binoculars one space to the right	33481	chatMessage
+planned_sample	2388-41d9ba83-3ce4-40be-abe1-1afff9a441fc	1522794068116	scripted	2	1	wrench	0	base	2	false	director	move the wrench over one space to the blank	12876	chatMessage
+planned_sample	2388-41d9ba83-3ce4-40be-abe1-1afff9a441fc	1522794092598	scripted	2	2	middleBlock	0	base	2	true	director	move the bottom block one space to the left	37356	chatMessage
