@@ -24,7 +24,6 @@ var moveObject = function(client, i, x, y) {
 };
 
 var onMessage = function(client,message) {
-  console.log('message' + message);
   //Cut the message up into sub components
   var message_parts = message.split('.');
 
@@ -126,14 +125,31 @@ var dataOutput = function() {
   return {
     'updateMouse' : mouseOutput,
     'chatMessage' : (client, messageData) => {
-      return _.extend({}, commonOutput(client, messageData), {
+      var common = commonOutput(client, messageData);
+      console.log({
+	gameid : common.gameid,
+	roundNum : common.trialNum,
+	condition: common.condition,
+	instructionNum: common.instructionNum,
+	message : messageData[1].replace(/-/g,'.')
+      });
+      return _.extend({}, common, {
 	sender: client.role,
 	contents : messageData[1].replace(/-/g,'.'),
 	typingRT : messageData[2]
       });
     },
     'drop' : (client, messageData)  => {
-      return _.extend({}, commonOutput(client, messageData), {
+      var common = commonOutput(client, messageData);
+      if(messageData[1] == 'incorrect') {
+	console.log({
+	  gameid : common.gameid,
+	  correct : messageData[1],
+	  condition: common.condition,
+	  attemptedObject  :client.game.objects[messageData[2]].name
+	});
+      }
+      return _.extend({}, common, {
 	correct : messageData[1],
 	attemptedObject : client.game.objects[messageData[2]].name,
 	intendedX : client.game.currentDestination.gridX,

@@ -152,6 +152,7 @@ var customSetup = function(game) {
       globalGame.get_player(globalGame.my_id).message = msg;
       globalGame.paused = true;
       globalGame.dragging = false;
+      globalGame.triggered = false;
       globalGame.overDistractor = false;
     } else {
       globalGame.paused = false;
@@ -296,10 +297,12 @@ function mouseUpListener(evt) {
       obj.gridY = cell.gridY
       obj.upperLeftX = globalGame.getPixelFromCell(cell).centerX - obj.width/2
       obj.upperLeftY = globalGame.getPixelFromCell(cell).centerY - obj.height/2
-      globalGame.socket.send("drop.correct." + dragIndex + "." + 
-			     Math.round(obj.upperLeftX) + "." + Math.round(obj.upperLeftY) +
-			     '.' + cell.gridX + '.' + cell.gridY + '.' + timeElapsed);
-      
+      if(!globalGame.triggeredDrop) {
+	globalGame.triggered = true;
+	globalGame.socket.send("drop.correct." + dragIndex + "." + 
+			       Math.round(obj.upperLeftX) + "." + Math.round(obj.upperLeftY) +
+			       '.' + cell.gridX + '.' + cell.gridY + '.' + timeElapsed);
+      }
       // If you didn't drag it beyond cell bounds, snap it back w/o comment
     } else if (obj.gridX == cell.gridX && obj.gridY == cell.gridY) {
       obj.upperLeftX = globalGame.getPixelFromCell(obj).centerX - obj.width/2
@@ -308,12 +311,15 @@ function mouseUpListener(evt) {
 			     "." + Math.round(obj.upperLeftY))
       // If you moved the incorrect object or went to the incorrect location, pause game to readjust mouse
     } else {
-      obj.upperLeftX = globalGame.getPixelFromCell(obj).centerX - obj.width/2
-      obj.upperLeftY = globalGame.getPixelFromCell(obj).centerY - obj.height/2
-      var msg = ['drop', 'incorrect', dragIndex, 
-		 Math.round(obj.upperLeftX), Math.round(obj.upperLeftY),
-		 cell.gridX, cell.gridY, timeElapsed].join('.');
-      globalGame.socket.send(msg);
+      if(!globalGame.triggeredDrop) {
+	obj.upperLeftX = globalGame.getPixelFromCell(obj).centerX - obj.width/2
+	obj.upperLeftY = globalGame.getPixelFromCell(obj).centerY - obj.height/2
+	var msg = ['drop', 'incorrect', dragIndex, 
+		   Math.round(obj.upperLeftX), Math.round(obj.upperLeftY),
+		   cell.gridX, cell.gridY, timeElapsed].join('.');
+	globalGame.triggered = true;
+	globalGame.socket.send(msg);
+      }
     }
     // Tell server where you dropped it
     drawScreen(globalGame, globalGame.get_player(globalGame.my_id))
