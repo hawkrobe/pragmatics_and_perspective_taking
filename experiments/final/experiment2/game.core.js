@@ -34,7 +34,7 @@ var game_core = function(options){
   this.email = 'rxdh@stanford.edu';
   this.projectName = 'ToM';
   this.experimentName = 'speakerManipulation';
-  this.iterationName = 'pilot0';
+  this.iterationName = 'planned_sample';
   this.anonymizeCSV = true;
   this.bonusAmt = 1; // in cents
   
