@@ -32,6 +32,9 @@
 	<h1 id='roleLabel'></h1> 
 	<p id='instructs'> </p>
       </div>
+      <p style="color:white" id='feedback'> </p>
+      <p style="color:red" id='roundnumber'>Waiting room</p>
+      <p style="color:green" id='score'> </p>
     </div>
     
     <div id='main'>
@@ -52,9 +55,8 @@
       
     <div id="exit_survey" style="display:none">
       <br><br><br><br><br>
-      <h3> Thanks for participating in our experiment! </h3>
-      <h3> Before you submit your HIT, we'd like to ask you a few questions. </h3>
-      <br><br><br>
+      <p> How would you describe the strategy you used in this experiment? </p>
+      <textarea id='strategy' rows="4" cols="50"></textarea>
       <p> Did you believe you were playing against another human player? </p>
       <select onChange="dropdownTip('human::' + this.value)">
 	<option value=""></option>
@@ -81,10 +83,28 @@
       </select>
       <br><br>
 
+            <p> Did you read the instructions and do you think you did the 
+	HIT correctly? </p>
+      <select onChange="dropdownTip('confused::' + this.value)">
+	<option value = ""></option>
+	<option value="yes">Yes</option>
+	<option value="no">No</option>
+	<option value="confused">I was confused</option>
+      </select>
+      <br><br>
+      
       <p> Do you have any comments on the experiment? </p>
       <textarea id='comments' rows="4" cols="50"></textarea>
       <br>
-      <div><button id="surveySubmit" onclick="dropdownTip('submit')" type="button">Submit HIT</button></div>
+      
+      <p> Clicking this button should automatically submit the HIT and close this tab. <p>
+	<div><button id="surveySubmit" onclick="dropdownTip('submit')" type="button">Submit HIT</button></div>
+      <p> If you click this button and nothing happens, please enter
+      the code <strong>E2iZwi8d</strong> into the box that appeared on
+      the mturk tab. Do <strong>not</strong> enter this code before clicking the above
+      button: it is a last resort to make sure you get paid if
+      something goes wrong with the auto-submit button above, not the
+      intended way of submitting! </p>
     </div>
   </body>
 </html>
