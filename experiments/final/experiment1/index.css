@@ -217,9 +217,10 @@ ALOT...don't understand how to adjust that.*/
 #viewport {
 	float: right;
 	border:solid 1px #333;
-	height: 80vh;
-	width: 80vh;
-	margin-right: 2.5%;
+	height: 75vh;
+	width: 75vh;
+	margin-top: 0%;
+	margin-right: 5%;
 	background: #383838;
 }
 
