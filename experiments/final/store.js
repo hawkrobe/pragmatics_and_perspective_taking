@@ -108,14 +108,12 @@ function serve() {
       const query = request.body.query;
       const projection = request.body.projection;
 
-      // hardcoded for now (TODO: get list of collections in db)
-      var collectionList = ['ToM']//'sketchpad_basic','sketchpad_repeated',
-			    //'chatbox_basic', //'chairs_chatbox',
-			    //'artificialLanguage']; 
+      // hardcoded for now (TODO: get list of collections in db?)
+      var collectionList = ['speakerManipulation', 'replication'];
 
       function checkCollectionForHits(collectionName, query, projection, callback) {
         const collection = database.collection(collectionName);        
-        collection.find(query, projection).limit(1).toArray((err, items) => {          
+        collection.find(query, projection).limit(1).toArray((err, items) => { 
           callback(!_.isEmpty(items));
         });  
       }
@@ -141,8 +139,12 @@ function serve() {
         response.json(hits>0);
       }
 
-      checkEach(collectionList, checkCollectionForHits, query, projection, evaluateTally);
-
+      // Always let the requester test ;) 
+      if(query.workerId == 'A1BOIDKD33QSDK') {
+	response.json(false);
+      } else {
+	checkEach(collectionList, checkCollectionForHits, query, projection, evaluateTally);
+      }
     });
 
     app.post('/db/insert', (request, response) => {
