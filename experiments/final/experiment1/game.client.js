@@ -56,6 +56,7 @@ function client_onserverupdate_received(data){
   globalGame.scriptedInstruction = data.scriptedInstruction;
   globalGame.attemptNum = data.attemptNum;
 
+  globalGame.roundNum = data.roundNum;
   globalGame.data = data.dataObj;
   globalGame.game_started = data.gs;
   globalGame.players_threshold = data.pt;

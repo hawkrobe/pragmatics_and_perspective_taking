@@ -303,6 +303,7 @@ game_core.prototype.server_send_update = function(){
     pt : this.players_threshold,
     pc : this.player_count,
     dataObj  : this.data,
+    roundNum : this.roundNum,
     scriptedInstruction : this.scriptedInstruction,
     attemptNum : this.attemptNum,
     curr_dest : this.currentDestination,
