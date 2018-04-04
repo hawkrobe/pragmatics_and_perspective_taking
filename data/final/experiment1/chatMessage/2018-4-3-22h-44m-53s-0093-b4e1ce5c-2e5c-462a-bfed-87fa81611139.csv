@@ -37,3 +37,7 @@ planned_sample	0093-b4e1ce5c-2e5c-462a-bfed-87fa81611139	1522821798332	scripted	
 planned_sample	0093-b4e1ce5c-2e5c-462a-bfed-87fa81611139	1522821835417	scripted	8	2	boardEraser	1	exp	6	true	director	move the eraser up one space	9950	chatMessage
 planned_sample	0093-b4e1ce5c-2e5c-462a-bfed-87fa81611139	1522821866442	scripted	8	2	boardEraser	2	exp	6	true	director	move the eraser up one space	10726	chatMessage
 planned_sample	0093-b4e1ce5c-2e5c-462a-bfed-87fa81611139	1522821908575	scripted	8	2	boardEraser	3	exp	6	true	director	move the eraser right one space	27002	chatMessage
+planned_sample	0093-b4e1ce5c-2e5c-462a-bfed-87fa81611139	1522821963221	scripted	8	2	boardEraser	4	exp	6	true	director	move the eraser right one space	23500	chatMessage
+planned_sample	0093-b4e1ce5c-2e5c-462a-bfed-87fa81611139	1522821995722	scripted	8	2	boardEraser	5	exp	6	true	director	move the eraser up one space	10728	chatMessage
+planned_sample	0093-b4e1ce5c-2e5c-462a-bfed-87fa81611139	1522822057997	scripted	8	2	boardEraser	6	exp	6	true	director	move the eraser up one space	12784	chatMessage
+planned_sample	0093-b4e1ce5c-2e5c-462a-bfed-87fa81611139	1522822088957	scripted	8	3	feather	0	exp	6	false	director	move the feather left one space	10360	chatMessage

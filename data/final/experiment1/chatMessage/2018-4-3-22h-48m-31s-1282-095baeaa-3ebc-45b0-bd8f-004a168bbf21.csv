@@ -29,3 +29,12 @@ planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522821825541	scripted	
 planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522821851150	scripted	6	2	castIronPan	0	base	8	false	director	move the cooking tool up one	11500	chatMessage
 planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522821877822	scripted	6	3	piano	0	base	8	false	director	move the item with keys to the left	15568	chatMessage
 planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522821924088	scripted	7	0	basketball	0	base	5	false	director	move the item you play a sport with down one	31744	chatMessage
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522821963554	scripted	7	1	roundBrush	0	base	5	true	director	move the brush one space to the left	71204	chatMessage
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822014766	scripted	7	2	headphones	0	base	5	false	director	move this device you use to listen to music one left	36532	chatMessage
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822039871	scripted	7	3	book	0	base	5	false	director	move the book one space to the right	61636	chatMessage
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822055895	scripted	8	0	banana	0	exp	6	false	director	move the banana up by one space	77660	chatMessage
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822097054	scripted	8	1	dollar	0	exp	6	false	director	move the item you purchase things with to the right	30614	chatMessage
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822111739	scripted	8	2	boardEraser	0	exp	6	true	director	move the eraser up by one space	45300	chatMessage
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822143124	scripted	8	2	boardEraser	0	exp	6	true	matcher	Well done~~~ Thanks so much~~~ Sorry for the careless misses~~~	18102	chatMessage
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822191012	scripted	8	2	boardEraser	1	exp	6	true	director	move the item used to erase the board up one	32620	chatMessage
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822218884	scripted	8	3	feather	0	exp	6	false	director	move the item found on a bird left one	17740	chatMessage

@@ -1,0 +1,2 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	9953-68c853c3-ef8a-4927-85a5-00fbc0d251e6	1522822560035	unscripted	1	0	magnet	0	base	7	false	director	Move the horse shoe down one 	30585	chatMessage

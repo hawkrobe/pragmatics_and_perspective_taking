@@ -1,0 +1,15 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e	1522822377659	scripted	1	0	carrot	0	base	4	false	director	move the carrot up one space	NaN	chatMessage
+planned_sample	2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e	1522822409214	scripted	1	1	mediumMeasuringCup	0	base	4	true	director	move the large measuring cup down one space	NaN	chatMessage
+planned_sample	2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e	1522822455728	scripted	1	2	waterBottle	0	base	4	false	director	slide the water bottle to the next box	6562	chatMessage
+planned_sample	2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e	1522822492972	scripted	1	3	chair	0	base	4	false	director	slide the chair over one space	5477	chatMessage
+planned_sample	2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e	1522822516093	scripted	2	0	airplane	0	exp	1	false	director	slide the plane  to the left	10993	chatMessage
+planned_sample	2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e	1522822545050	scripted	2	0	airplane	1	exp	1	false	director	slide the plane to the right one space	11968	chatMessage
+planned_sample	2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e	1522822556585	scripted	2	1	sunGlasses	0	exp	1	true	director	move the glasses one space to the right	23503	chatMessage
+planned_sample	2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e	1522822570895	scripted	2	2	barrel	0	exp	1	false	director	move the barrel down by one space	37811	chatMessage
+planned_sample	2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e	1522822593466	scripted	2	3	saxophone	0	exp	1	false	director	move the saxophone up one space	10165	chatMessage
+planned_sample	2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e	1522822608111	scripted	3	0	binoculars	0	base	2	false	director	move the binoculars one space to the right	24817	chatMessage
+planned_sample	2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e	1522822632859	scripted	3	1	wrench	0	base	2	false	director	move the wrench one space to the left	7583	chatMessage
+planned_sample	2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e	1522822649596	scripted	3	2	middleBlock	0	base	2	true	director	move the bottom block one space to the left	24317	chatMessage
+planned_sample	2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e	1522822669859	scripted	3	3	coffeeMug	0	base	2	false	director	move the coffee one space to the right	5412	chatMessage
+planned_sample	2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e	1522822684890	scripted	4	0	comb	0	exp	8	false	director	move the comb up once space	4453	chatMessage

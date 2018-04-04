@@ -28,3 +28,8 @@ planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821788226	scripted	
 planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821845455	scripted	7	0	comb	1	exp	8	false	director	move the brown comb one space up	6898	chatMessage
 planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821883166	scripted	7	1	computerMouse	0	exp	8	true	director	move the mouse up by one space	44609	chatMessage
 planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821935024	scripted	7	2	castIronPan	0	exp	8	false	director	move the frying pan up one space	8788	chatMessage
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821976760	scripted	7	3	piano	0	exp	8	false	director	move the piano one space left	6431	chatMessage
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821997823	scripted	8	0	basketball	0	base	5	false	director	move the basketball one space down	5439	chatMessage
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522822018789	scripted	8	1	roundBrush	0	base	5	true	director	move the brush one space to the left	26411	chatMessage
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522822054896	scripted	8	2	headphones	0	base	5	false	director	move the earphones one space left	5541	chatMessage
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522822074928	scripted	8	3	book	0	base	5	false	director	move the book one space to the right	25572	chatMessage

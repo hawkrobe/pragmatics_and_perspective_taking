@@ -32,3 +32,7 @@ planned_sample	2417-f105caf3-b5fd-4059-9b5b-4b0710bef7da	1522821866979	scripted	
 planned_sample	2417-f105caf3-b5fd-4059-9b5b-4b0710bef7da	1522821902019	scripted	7	2	boardEraser	1	exp	6	true	director	move the black eraser up one space	12725	chatMessage
 planned_sample	2417-f105caf3-b5fd-4059-9b5b-4b0710bef7da	1522821922973	scripted	7	3	feather	0	exp	6	false	director	move the feather right one space	5220	chatMessage
 planned_sample	2417-f105caf3-b5fd-4059-9b5b-4b0710bef7da	1522821944932	scripted	7	3	feather	1	exp	6	false	director	move the feather left one space	8795	chatMessage
+planned_sample	2417-f105caf3-b5fd-4059-9b5b-4b0710bef7da	1522821968018	scripted	8	0	basketball	0	base	5	false	director	move the basketball down one space	9525	chatMessage
+planned_sample	2417-f105caf3-b5fd-4059-9b5b-4b0710bef7da	1522821986607	scripted	8	1	roundBrush	0	base	5	true	director	move the brush one space to the left	28108	chatMessage
+planned_sample	2417-f105caf3-b5fd-4059-9b5b-4b0710bef7da	1522822044668	scripted	8	2	headphones	0	base	5	false	director	move the headphones left one space	8114	chatMessage
+planned_sample	2417-f105caf3-b5fd-4059-9b5b-4b0710bef7da	1522822057966	scripted	8	3	book	0	base	5	false	director	move the book one space to the right	21416	chatMessage

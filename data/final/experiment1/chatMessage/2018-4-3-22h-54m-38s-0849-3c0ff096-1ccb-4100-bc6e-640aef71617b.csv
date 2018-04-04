@@ -29,3 +29,5 @@ planned_sample	0849-3c0ff096-1ccb-4100-bc6e-640aef71617b	1522821868644	unscripte
 planned_sample	0849-3c0ff096-1ccb-4100-bc6e-640aef71617b	1522821886548	unscripted	7	3	piano	0	exp	8	false	director	move the piano one square left	13551	chatMessage
 planned_sample	0849-3c0ff096-1ccb-4100-bc6e-640aef71617b	1522821907970	unscripted	8	0	carrot	0	exp	4	false	director	move the carrot one square up	10319	chatMessage
 planned_sample	0849-3c0ff096-1ccb-4100-bc6e-640aef71617b	1522821946292	unscripted	8	1	mediumMeasuringCup	0	exp	4	true	director	move the glass measuring cup one with the handle square down	30006	chatMessage
+planned_sample	0849-3c0ff096-1ccb-4100-bc6e-640aef71617b	1522821973765	unscripted	8	2	waterBottle	0	exp	4	false	director	move the plastic water bottle with the blue top one square right	10591	chatMessage
+planned_sample	0849-3c0ff096-1ccb-4100-bc6e-640aef71617b	1522822004219	unscripted	8	3	chair	0	exp	4	false	director	move the chair one square left	9486	chatMessage

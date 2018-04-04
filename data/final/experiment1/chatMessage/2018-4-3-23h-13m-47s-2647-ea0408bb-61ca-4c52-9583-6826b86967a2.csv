@@ -1,0 +1,9 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822427511	unscripted	1	0	banana	0	base	6	false	director	Move the banana up one space	6174	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822467702	unscripted	1	1	dollar	0	base	6	false	director	Move the dollar bill so that it is in the box under the banana	21411	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822492440	unscripted	1	2	boardEraser	0	base	6	true	director	Move the expo eraser up one box	7792	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822517986	unscripted	1	3	feather	0	base	6	false	director	Move the feather to the box below the expo eraser	9878	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822537486	unscripted	2	0	carrot	0	exp	4	false	director	Move the carrot up one box	6401	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822563825	unscripted	2	1	mediumMeasuringCup	0	exp	4	true	director	Move the pyrex measuring cup down one box	11552	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822606620	unscripted	2	1	mediumMeasuringCup	1	exp	4	true	director	Move the glass cup that is below the chair down one space	10039	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822657042	unscripted	2	2	waterBottle	0	exp	4	false	director	Move the water bottle one box over in the same row, so that it is closer to the chair	34445	chatMessage

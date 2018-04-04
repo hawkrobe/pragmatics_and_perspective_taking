@@ -1,0 +1,3 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	7635-ae02f05a-ec28-4785-8542-f45af53fa496	1522822562472	scripted	1	0	binoculars	0	exp	2	false	director	move the binoculars one space to the right	NaN	chatMessage
+planned_sample	7635-ae02f05a-ec28-4785-8542-f45af53fa496	1522822632869	scripted	1	1	wrench	0	exp	2	false	director	move the binoculars one place to right	39030	chatMessage

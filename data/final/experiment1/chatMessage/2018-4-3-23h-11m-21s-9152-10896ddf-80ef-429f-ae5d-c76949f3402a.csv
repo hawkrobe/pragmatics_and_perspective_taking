@@ -1,0 +1,5 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	9152-10896ddf-80ef-429f-ae5d-c76949f3402a	1522822281546	unscripted	1	0	basketball	0	exp	5	false	director	Move the basketball down	3756	chatMessage
+planned_sample	9152-10896ddf-80ef-429f-ae5d-c76949f3402a	1522822318981	unscripted	1	1	roundBrush	0	exp	5	true	director	Move the brush left	4124	chatMessage
+planned_sample	9152-10896ddf-80ef-429f-ae5d-c76949f3402a	1522822374996	unscripted	1	1	roundBrush	1	exp	5	true	director	Move the brush left	4966	chatMessage
+planned_sample	9152-10896ddf-80ef-429f-ae5d-c76949f3402a	1522822438564	unscripted	1	1	roundBrush	2	exp	5	true	director	Still waiting for you to move the brush left~~~~~~~~~~~~	8374	chatMessage

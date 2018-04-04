@@ -1,0 +1,5 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	4455-7c98f9ab-684a-4a7f-a655-d6e3feaa8dbd	1522822636704	scripted	1	0	scissors	0	base	3	false	director	Hi	779	chatMessage
+planned_sample	4455-7c98f9ab-684a-4a7f-a655-d6e3feaa8dbd	1522822656896	scripted	1	0	scissors	0	base	3	false	matcher	hi, lets get this started!	9646	chatMessage
+planned_sample	4455-7c98f9ab-684a-4a7f-a655-d6e3feaa8dbd	1522822658655	scripted	1	0	scissors	0	base	3	false	director	Move the scissor over	19951	chatMessage
+planned_sample	4455-7c98f9ab-684a-4a7f-a655-d6e3feaa8dbd	1522822676779	scripted	1	1	knife	0	base	3	false	director	move the knife down one space	38074	chatMessage

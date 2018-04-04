@@ -1,0 +1,3 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	1319-aa1b7da5-7bad-49c3-9664-b87dec4d800f	1522822337024	unscripted	1	0	airplane	0	exp	1	false	director	PLEASE MOVE THE OBJECT TO THE RIGHT	55270	chatMessage
+planned_sample	1319-aa1b7da5-7bad-49c3-9664-b87dec4d800f	1522822545349	unscripted	1	0	airplane	0	exp	1	false	director	Hello~~~~~~~~~~~~~~~anyone there??	17782	chatMessage
