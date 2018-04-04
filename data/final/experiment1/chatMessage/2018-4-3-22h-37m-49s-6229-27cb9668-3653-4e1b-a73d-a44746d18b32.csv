@@ -1,0 +1,5 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	6229-27cb9668-3653-4e1b-a73d-a44746d18b32	1522820269360	unscripted	1	0	comb	0	base	8	false	director	Go up	5529	chatMessage
+planned_sample	6229-27cb9668-3653-4e1b-a73d-a44746d18b32	1522820357441	unscripted	1	0	comb	1	base	8	false	director	Move the comb up	6418	chatMessage
+planned_sample	6229-27cb9668-3653-4e1b-a73d-a44746d18b32	1522820380122	unscripted	1	1	computerMouse	0	base	8	true	director	Move the mouse up	3266	chatMessage
+planned_sample	6229-27cb9668-3653-4e1b-a73d-a44746d18b32	1522820394746	unscripted	1	2	castIronPan	0	base	8	false	director	Move the pan up	3289	chatMessage
