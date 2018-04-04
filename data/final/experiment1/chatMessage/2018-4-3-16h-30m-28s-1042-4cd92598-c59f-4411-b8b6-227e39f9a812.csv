@@ -1,0 +1,45 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798228482	unscripted	1	0	scissors	0	base	3	false	director	the scissors need to move behind one of the curtains	6756	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798251891	unscripted	1	0	scissors	0	base	3	false	director	closer to the knife and the cassette tape	4681	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798307757	unscripted	1	0	scissors	1	base	3	false	director	Move the scissors towards the knife and the cassette tape	15119	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798314396	unscripted	1	0	scissors	1	base	3	false	director	but not in between them	2323	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798329274	unscripted	1	1	knife	0	base	3	false	director	move the knife away from the casette tape	4123	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798379310	unscripted	1	2	barOfSoap	0	base	3	false	director	move the rock above the knife	20902	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798396042	unscripted	1	3	cassetteTape	0	base	3	true	director	move the casette tape towards the rock	3378	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798453256	unscripted	2	0	binoculars	0	exp	2	false	director	move the binoculars towards whatever is next to the coffee cup	33076	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798495703	unscripted	2	0	binoculars	1	exp	2	false	director	move the binoculars just a little bit~~~ Not the way you went last time	13849	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798533691	unscripted	2	0	binoculars	2	exp	2	false	director	wow this is hard to describe~~~ Underneath where you just put it	20238	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798555219	unscripted	2	1	wrench	0	exp	2	false	director	Move the wrench towards the yellow A block	7956	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798579507	unscripted	2	2	middleBlock	0	exp	2	true	director	Move the blue B block in the same direction and the same amount of spaces that you just moved the wrench	11244	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798606129	unscripted	2	3	coffeeMug	0	exp	2	false	director	Move the coffee mug so that it is underneath the wrench	7339	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798631329	unscripted	3	0	magnet	0	exp	7	false	director	Move the magnet down	6838	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798653782	unscripted	3	1	handcuffs	0	exp	7	false	director	Move the handcuffs down the same amount of spaces that you just moved the magnet	9330	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798675454	unscripted	3	2	pandaToy	0	exp	7	false	director	Move the bear down the same amount of spaces that you just moved the handcuffs	8327	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798694953	unscripted	3	3	mediumCandle	0	exp	7	true	director	Candle needs to go down the same amount as well	4866	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798756819	unscripted	4	0	carrot	0	base	4	false	director	Move the carrot so that it is kiddie corner to the water	38126	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798775265	unscripted	4	1	mediumMeasuringCup	0	base	4	true	director	Move the measuring cup away from the chair	14580	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798794135	unscripted	4	2	waterBottle	0	base	4	false	director	Move the water so that it is above the carrot	6117	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798815193	unscripted	4	3	chair	0	base	4	false	director	Move the chair so that it is next to where the water got moved to	7194	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798820653	unscripted	4	3	chair	0	base	4	false	director	and under the cup	1444	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798867620	unscripted	5	0	comb	0	base	8	false	director	Move the comb so that it is as far away from the mouse as possible	25148	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798896678	unscripted	5	0	comb	0	base	8	false	director	And as far away from the piano	3678	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798938351	unscripted	5	1	computerMouse	0	base	8	true	director	Move the mouse away from the frying pan and not in the same collumn or row as the frying pan	28316	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798972560	unscripted	5	2	castIronPan	0	base	8	false	director	Move the frying pan kiddie corner to the mouse	17220	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522798999810	unscripted	5	2	castIronPan	0	base	8	false	director	towards the mouse but not in the same collumn or row	5358	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799037603	unscripted	5	3	piano	0	base	8	false	director	Move the piano so that it is underneath the comb but farthest away from the comb	17328	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799087571	unscripted	6	0	basketball	0	exp	5	false	director	Move the basketball towards the brush	6001	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799106221	unscripted	6	0	basketball	0	exp	5	false	director	But not next to the headphones	3578	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799138972	unscripted	6	1	roundBrush	0	exp	5	true	director	Move the brush next to the ring	4130	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799170954	unscripted	6	1	roundBrush	1	exp	5	true	director	Move the brush next to the ring	3281	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799221448	unscripted	6	1	roundBrush	2	exp	5	true	director	The round brush next to the gold ring	24392	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799246723	unscripted	6	2	headphones	0	exp	5	false	director	Move the headphones in the same direction you just moved that brush	21855	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799271352	unscripted	6	3	book	0	exp	5	false	director	Move the book in the opposite direction that you just moved the headphones~~~ Away from the dog	9358	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799292439	unscripted	7	0	airplane	0	exp	1	false	director	Move the plane kiddie corner to the barrel 	6573	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799313967	unscripted	7	0	airplane	0	exp	1	false	director	Same collumn as the glasses	3876	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799326257	unscripted	7	1	sunGlasses	0	exp	1	true	director	Move the glasses the same way you just moved the plane	5560	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799344977	unscripted	7	2	barrel	0	exp	1	false	director	barrel towards the glasses	4195	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799367785	unscripted	7	3	saxophone	0	exp	1	false	director	Saxophone in the opposite direction that you just moved the barrel	8095	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799415159	unscripted	8	0	banana	0	base	6	false	director	move the banana kiddie corner to the dollar but not next to the feather	15541	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799441484	unscripted	8	1	dollar	0	base	6	false	director	move the dollar under the banan	3079	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799471520	unscripted	8	2	boardEraser	0	base	6	true	director	Move the eraser to the spot that is to the left of where the dollar was BEFORE	13867	chatMessage
+planned_sample	1042-4cd92598-c59f-4411-b8b6-227e39f9a812	1522799490080	unscripted	8	3	feather	0	base	6	false	director	Move the feather under the eraser	3010	chatMessage

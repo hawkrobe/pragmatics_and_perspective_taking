@@ -1,0 +1,23 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794551836	unscripted	1	0	binoculars	0	exp	2	false	director	Move the binoculars to the right~~~	15875	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794585827	unscripted	1	1	wrench	0	exp	2	false	director	Move the wrench to the left~~~	7941	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794609335	unscripted	1	2	middleBlock	0	exp	2	true	director	Move the block to the left~~~	10332	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794642490	unscripted	1	2	middleBlock	1	exp	2	true	director	Move the blue block to the left~~~	15490	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794667434	unscripted	1	3	coffeeMug	0	exp	2	false	director	Move the white coffee mug to the right~~~	12306	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794695922	unscripted	2	0	comb	0	base	8	false	director	Move the tan comb up~~~	12794	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794717379	unscripted	2	1	computerMouse	0	base	8	true	director	Move the grey mouse up~~~	9451	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794741548	unscripted	2	2	castIronPan	0	base	8	false	director	Move the black skillet up~~~	12415	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794768698	unscripted	2	3	piano	0	base	8	false	director	Move the black piano to the left~~~	13689	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794794598	unscripted	3	0	scissors	0	base	3	false	director	Move the metal scissors to the right~~~	15366	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794824050	unscripted	3	1	knife	0	base	3	false	director	Move the black handled knife down~~~	15427	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794849915	unscripted	3	2	barOfSoap	0	base	3	false	director	Move the blue bar of soap to the left~~~	13540	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794873374	unscripted	3	3	cassetteTape	0	base	3	true	director	Move the clear cassette tape down~~~	12105	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794896055	unscripted	4	0	airplane	0	exp	1	false	director	Move the red toy airplane to the right~~~	11547	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794927932	unscripted	4	1	sunGlasses	0	exp	1	true	director	Move the black lens sunglasses to the right~~~	17190	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794949315	unscripted	4	2	barrel	0	exp	1	false	director	Move the wooden barrel down~~~	9975	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794979417	unscripted	4	3	saxophone	0	exp	1	false	director	Move the silver saxophone up~~~	13051	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522794998786	unscripted	5	0	basketball	0	base	5	false	director	Move the orange basketball down~~~	9230	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522795033622	unscripted	5	1	roundBrush	0	base	5	true	director	Move the wooden handled brush to the left~~~	18963	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522795055294	unscripted	5	2	headphones	0	base	5	false	director	Move the red headphones to the left,	9322	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522795080435	unscripted	5	3	book	0	base	5	false	director	Move the red book to the right~~~	12618	chatMessage
+planned_sample	0771-ecbcf018-95f2-4e94-a411-b996093c3c68	1522795102290	unscripted	6	0	banana	0	exp	6	false	director	Move the yellow banana up~~~	10809	chatMessage

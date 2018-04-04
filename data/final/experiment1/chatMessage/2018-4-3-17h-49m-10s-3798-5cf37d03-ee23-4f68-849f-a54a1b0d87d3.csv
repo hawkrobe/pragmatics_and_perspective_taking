@@ -1,0 +1,25 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522802950305	unscripted	1	0	scissors	0	exp	3	false	director	move the scissors to right one cell	12166	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522802990642	unscripted	1	1	knife	0	exp	3	false	director	move the knife down one cell	17528	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803026769	unscripted	1	2	barOfSoap	0	exp	3	false	director	move the soap to left one cell	10348	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803050447	unscripted	1	3	cassetteTape	0	exp	3	true	director	move the cassette down by one cell	12642	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803141681	unscripted	2	0	banana	0	base	6	false	director	move the banana up by one cell	38454	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803171752	unscripted	2	1	dollar	0	base	6	false	director	move the dollar bill to right by one cell	12234	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803194645	unscripted	2	2	boardEraser	0	base	6	true	director	move the eraser up by one cell	12272	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803217023	unscripted	2	3	feather	0	base	6	false	director	move the feather to left by one cell	10916	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803269587	unscripted	3	0	basketball	0	base	5	false	director	move the ball down by one cell	21904	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803306540	unscripted	3	1	roundBrush	0	base	5	true	director	move the hair brush to left by one cell	11695	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803328713	unscripted	3	2	headphones	0	base	5	false	director	move the headphones to left by one cell	10391	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803370586	unscripted	3	3	book	0	base	5	false	director	move book to right by one cell	13017	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803455635	unscripted	4	0	binoculars	0	exp	2	false	director	move the binoculars to right by one cell	58688	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803493688	unscripted	4	1	wrench	0	exp	2	false	director	move the spanner to left by one cell	23695	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803569371	unscripted	4	2	middleBlock	0	exp	2	true	director	move the block with letter B to left by one cell	16118	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803635802	unscripted	4	3	coffeeMug	0	exp	2	false	director	move the coffee mug to right by one cell	13665	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803729759	unscripted	5	0	magnet	0	base	7	false	director	move the magnet down by one cell	11723	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803788980	unscripted	5	1	handcuffs	0	base	7	false	director	move hand cuffs down by one cell	17869	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803867310	unscripted	5	2	pandaToy	0	base	7	false	director	move teddy down by one cell	12697	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803907281	unscripted	5	3	mediumCandle	0	base	7	true	director	move the candle down by one cell	10509	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522803965035	unscripted	6	0	comb	0	exp	8	false	director	move the comb up by one cell	21426	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522804055367	unscripted	6	1	computerMouse	0	exp	8	true	director	move the mouse up by one cell	16001	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522804208544	unscripted	6	1	computerMouse	0	exp	8	true	director	move the computer mouse up by one cell	12873	chatMessage
+planned_sample	3798-5cf37d03-ee23-4f68-849f-a54a1b0d87d3	1522804258553	unscripted	6	1	computerMouse	1	exp	8	true	director	move the mouse up by one cell	21754	chatMessage

@@ -1,0 +1,40 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522802589769	unscripted	1	0	banana	0	exp	6	false	director	move aroow up to top right corner	20779	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522802648804	unscripted	1	0	banana	1	exp	6	false	director	move arrow up one space	14491	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522802701690	unscripted	1	0	banana	2	exp	6	false	director	move arrow up 2 spaces	26717	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522802728408	unscripted	1	0	banana	3	exp	6	false	director	one space	4305	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522802759716	unscripted	1	0	banana	4	exp	6	false	director	banana one space up	10248	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522802779388	unscripted	1	1	dollar	0	exp	6	false	director	dollar one space right	9232	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522802800648	unscripted	1	2	boardEraser	0	exp	6	true	director	eraser up 1 space	9456	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522802822578	unscripted	1	3	feather	0	exp	6	false	director	feather 1 space to left	9230	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522802856665	unscripted	2	0	binoculars	0	base	2	false	director	move one space right binoculars	23039	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522802879033	unscripted	2	1	wrench	0	base	2	false	director	wrench 1 left	10172	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522802914870	unscripted	2	2	middleBlock	0	base	2	true	director	block with  letter be one spot tp left	21633	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522802942867	unscripted	2	3	coffeeMug	0	base	2	false	director	cup one right	6247	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522802967353	unscripted	3	0	basketball	0	exp	5	false	director	ball 1 down	11917	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522802985809	unscripted	3	1	roundBrush	0	exp	5	true	director	brush 1 left	7091	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803017876	unscripted	3	1	roundBrush	1	exp	5	true	director	brush 1 left	7531	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803042885	unscripted	3	2	headphones	0	exp	5	false	director	earphones 1 left	11578	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803058098	unscripted	3	3	book	0	exp	5	false	director	book 1 right	6257	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803075753	unscripted	4	0	carrot	0	base	4	false	director	carrot 1 up	4993	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803096405	unscripted	4	1	mediumMeasuringCup	0	base	4	true	director	measure cup down	9280	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803113752	unscripted	4	2	waterBottle	0	base	4	false	director	water 1 left	4814	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803143780	unscripted	4	2	waterBottle	1	base	4	false	director	bottle water 1 left	11607	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803176062	unscripted	4	3	chair	0	base	4	false	director	chair one left	8216	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803197693	unscripted	5	0	scissors	0	exp	3	false	director	scissors 1 eight	10364	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803214175	unscripted	5	1	knife	0	exp	3	false	director	knife 1 down	5518	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803238755	unscripted	5	2	barOfSoap	0	exp	3	false	director	rock 1 to left	5625	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803255091	unscripted	5	3	cassetteTape	0	exp	3	true	director	tape down 1	4502	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803278439	unscripted	5	3	cassetteTape	1	exp	3	true	director	tape  down 1	8200	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803310706	unscripted	6	0	magnet	0	base	7	false	director	horseshoe down 1	9998	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803328329	unscripted	6	1	handcuffs	0	base	7	false	director	handcuffs down 1	6442	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803351556	unscripted	6	2	pandaToy	0	base	7	false	director	bear down 1	10147	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803367465	unscripted	6	3	mediumCandle	0	base	7	true	director	candle down 1	5839	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803383702	unscripted	7	0	airplane	0	base	1	false	director	plane 1 right	6830	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803410684	unscripted	7	1	sunGlasses	0	base	1	true	director	glasses right	15449	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803431659	unscripted	7	2	barrel	0	base	1	false	director	barrel down 1	9534	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803448745	unscripted	7	3	saxophone	0	base	1	false	director	saxaphone up 1	6436	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803465829	unscripted	8	0	comb	0	exp	8	false	director	comb up	7490	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803482958	unscripted	8	1	computerMouse	0	exp	8	true	director	mouse up 1	8262	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803503005	unscripted	8	2	castIronPan	0	exp	8	false	director	pan up 1	5217	chatMessage
+planned_sample	3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040	1522803516580	unscripted	8	3	piano	0	exp	8	false	director	piano left	3937	chatMessage

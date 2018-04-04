@@ -1,0 +1,34 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805055559	unscripted	1	0	carrot	0	exp	4	false	director	rows are a,b,c,d  columns are 1,2,3,4~~~~~~~~~move D2 to C2	39878	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805127590	unscripted	1	1	mediumMeasuringCup	0	exp	4	true	director	Move C4 to D4	21202	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805165536	unscripted	1	2	waterBottle	0	exp	4	false	director	move B1 to B2	20089	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805194405	unscripted	1	3	chair	0	exp	4	false	director	move B4 to B3	14539	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805239372	unscripted	2	0	airplane	0	base	1	false	director	move A2 to A3	13326	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805264966	unscripted	2	1	sunGlasses	0	base	1	true	director	move D3 to D4	14420	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805292590	unscripted	2	2	barrel	0	base	1	false	director	move B4 to C4	13548	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805322112	unscripted	2	3	saxophone	0	base	1	false	director	move D2 to C2	16595	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805355592	unscripted	3	0	scissors	0	exp	3	false	director	move B1 to B2	16958	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805379337	unscripted	3	1	knife	0	exp	3	false	director	move C3 to D3	11534	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805400678	unscripted	3	2	barOfSoap	0	exp	3	false	director	move C4 to C3	10210	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805425585	unscripted	3	3	cassetteTape	0	exp	3	true	director	move A3 to B3	14205	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805446442	unscripted	4	0	binoculars	0	exp	2	false	director	move D1 to D2	6169	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805491666	unscripted	4	0	binoculars	0	exp	2	false	matcher	Hrm, I don't have an image in D1	9725	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805554043	unscripted	4	1	wrench	0	exp	2	false	director	move A3 to A2	47308	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805576701	unscripted	4	2	middleBlock	0	exp	2	true	director	move C4 to C3	7143	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805596071	unscripted	4	3	coffeeMug	0	exp	2	false	director	Move B1 to B2	8322	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805615204	unscripted	5	0	magnet	0	base	7	false	director	Move C2 to D2	7417	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805647361	unscripted	5	1	handcuffs	0	base	7	false	director	Move B4 to C4	8748	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805665799	unscripted	5	2	pandaToy	0	base	7	false	director	move A3 to B3	6261	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805685561	unscripted	5	3	mediumCandle	0	base	7	true	director	Move A1 to B1	5561	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805705109	unscripted	6	0	basketball	0	exp	5	false	director	Move A3 to B3	7432	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805747197	unscripted	6	1	roundBrush	0	exp	5	true	director	move D3 to D2	8787	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805775841	unscripted	6	2	headphones	0	exp	5	false	director	Move C4 to C3	16254	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805793582	unscripted	6	3	book	0	exp	5	false	director	Move A2 to A3	8180	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805814706	unscripted	7	0	banana	0	base	6	false	director	C4 to B4	6357	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805835109	unscripted	7	1	dollar	0	base	6	false	director	C3 to C4	4512	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805857518	unscripted	7	2	boardEraser	0	base	6	true	director	D2 to C2	7258	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805881884	unscripted	7	3	feather	0	base	6	false	director	D3 to D2	8166	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805904148	unscripted	8	0	comb	0	base	8	false	director	B1 to A1	4989	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805941017	unscripted	8	1	computerMouse	0	base	8	true	director	C4 to B4	9257	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805963658	unscripted	8	2	castIronPan	0	base	8	false	director	D3 to C3	7562	chatMessage
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805983708	unscripted	8	3	piano	0	base	8	false	director	D2 to D1	7106	chatMessage

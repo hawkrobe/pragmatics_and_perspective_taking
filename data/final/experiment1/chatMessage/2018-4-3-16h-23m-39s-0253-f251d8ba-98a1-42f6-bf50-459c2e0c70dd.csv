@@ -1,0 +1,34 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522797819291	unscripted	1	0	scissors	0	exp	3	false	director	scissor one to right	11955	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522797848916	unscripted	1	1	knife	0	exp	3	false	director	knife down one	2336	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522797864474	unscripted	1	2	barOfSoap	0	exp	3	false	director	soap left one	4222	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522797882140	unscripted	1	3	cassetteTape	0	exp	3	true	director	cassette down one	5335	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522797903984	unscripted	2	0	binoculars	0	base	2	false	director	binocular right one	7020	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522797919747	unscripted	2	1	wrench	0	base	2	false	director	wrench left one	5004	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522797937699	unscripted	2	2	middleBlock	0	base	2	true	director	B block left one	4607	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522797951954	unscripted	2	3	coffeeMug	0	base	2	false	director	mug right one	1788	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522797966103	unscripted	3	0	carrot	0	exp	4	false	director	carrot up one	2043	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522797980213	unscripted	3	1	mediumMeasuringCup	0	exp	4	true	director	measuring cup down one	3714	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798000267	unscripted	3	2	waterBottle	0	exp	4	false	director	water bottle right one	2803	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798014059	unscripted	3	3	chair	0	exp	4	false	director	chair left one	1601	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798026580	unscripted	4	0	basketball	0	base	5	false	director	basketball down one	3438	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798042935	unscripted	4	1	roundBrush	0	base	5	true	director	hairbrush left one	7441	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798060759	unscripted	4	2	headphones	0	base	5	false	director	headphones left one	2572	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798073586	unscripted	4	3	book	0	base	5	false	director	book right one	1842	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798089351	unscripted	5	0	airplane	0	base	1	false	director	plane right one	4055	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798105137	unscripted	5	1	sunGlasses	0	base	1	true	director	sunglasses right one	5281	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798120133	unscripted	5	2	barrel	0	base	1	false	director	barrel down one	5511	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798140984	unscripted	5	3	saxophone	0	base	1	false	director	saxophone up one	10822	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798153912	unscripted	6	0	magnet	0	exp	7	false	director	magnet down one	2417	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798170687	unscripted	6	1	handcuffs	0	exp	7	false	director	handcuffs down one	3979	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798183813	unscripted	6	2	pandaToy	0	exp	7	false	director	panda down one	2632	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798197274	unscripted	6	3	mediumCandle	0	exp	7	true	director	candle down one	1974	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798211385	unscripted	7	0	comb	0	base	8	false	director	comb up one	2544	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798224465	unscripted	7	1	computerMouse	0	base	8	true	director	mouse up one	1850	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798239739	unscripted	7	2	castIronPan	0	base	8	false	director	pan up one	3107	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798253519	unscripted	7	3	piano	0	base	8	false	director	piano one left	1998	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798266472	unscripted	8	0	banana	0	exp	6	false	director	banana up one	2714	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798277705	unscripted	8	1	dollar	0	exp	6	false	director	dollar right one	2103	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798293208	unscripted	8	2	boardEraser	0	exp	6	true	director	eraser up one	3678	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798308932	unscripted	8	2	boardEraser	1	exp	6	true	director	whiteboard erase up one	4515	chatMessage
+planned_sample	0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd	1522798327744	unscripted	8	3	feather	0	exp	6	false	director	feather left one	6549	chatMessage

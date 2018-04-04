@@ -1,0 +1,34 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799510861	unscripted	1	0	basketball	0	exp	5	false	director	basketball down one	4485	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799539890	unscripted	1	1	roundBrush	0	exp	5	true	director	hairbrush left one	8408	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799609313	unscripted	1	1	roundBrush	1	exp	5	true	director	two below basketball, move brush left	11692	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799641646	unscripted	1	2	headphones	0	exp	5	false	director	headphones left one	6624	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799670965	unscripted	1	3	book	0	exp	5	false	director	book right one	2535	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799688095	unscripted	2	0	banana	0	base	6	false	director	banana up one	3265	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799727094	unscripted	2	1	dollar	0	base	6	false	director	dollar right under banana	8817	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799758051	unscripted	2	2	boardEraser	0	base	6	true	director	eraser up one	2940	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799773145	unscripted	2	3	feather	0	base	6	false	director	feather left one	2984	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799797831	unscripted	3	0	carrot	0	exp	4	false	director	carrot up one	2381	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799815707	unscripted	3	1	mediumMeasuringCup	0	exp	4	true	director	measuring cup down one	6351	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799845213	unscripted	3	2	waterBottle	0	exp	4	false	director	water bottle left above carrot	6323	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799880886	unscripted	3	3	chair	0	exp	4	false	director	chair left next to water bottle	19718	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799911341	unscripted	4	0	airplane	0	base	1	false	director	plane right one	2491	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799945482	unscripted	4	1	sunGlasses	0	base	1	true	director	sunglasses right one	3493	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522799997616	unscripted	4	2	barrel	0	base	1	false	director	barrel down one above sunglasses	9681	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800020276	unscripted	4	3	saxophone	0	base	1	false	director	saxophone up one	3900	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800057966	unscripted	5	0	binoculars	0	exp	2	false	director	binoculars right one	3251	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800108216	unscripted	5	1	wrench	0	exp	2	false	director	wrench left one next to block	7484	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800201845	unscripted	5	2	middleBlock	0	exp	2	true	director	B block left one	6897	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800232524	unscripted	5	3	coffeeMug	0	exp	2	false	director	mug right one under wrench	4449	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800261242	unscripted	6	0	scissors	0	exp	3	false	director	scissors right one	8354	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800294012	unscripted	6	1	knife	0	exp	3	false	director	knife down one	8034	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800317792	unscripted	6	2	barOfSoap	0	exp	3	false	director	soap left one above knife	5891	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800336131	unscripted	6	3	cassetteTape	0	exp	3	true	director	tape down one above soap	6106	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800400694	unscripted	7	0	magnet	0	base	7	false	director	magnet down one next to candle	4972	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800418811	unscripted	7	1	handcuffs	0	base	7	false	director	handcuffs down one	4759	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800467354	unscripted	7	2	pandaToy	0	base	7	false	director	panda down one	15676	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800495362	unscripted	7	3	mediumCandle	0	base	7	true	director	candlestick down one	3280	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800509589	unscripted	8	0	comb	0	base	8	false	director	comb up one	1728	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800532858	unscripted	8	1	computerMouse	0	base	8	true	director	mouse up one	3025	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800546597	unscripted	8	2	castIronPan	0	base	8	false	director	pan up one	1519	chatMessage
+planned_sample	4715-4501143e-ea94-4532-9726-05fa3429c32d	1522800592347	unscripted	8	3	piano	0	base	8	false	director	piano left one	2745	chatMessage

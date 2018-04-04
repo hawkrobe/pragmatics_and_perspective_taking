@@ -1,0 +1,28 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522802795061	unscripted	1	0	carrot	0	base	4	false	director	Move carrot up one cell	19640	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522802849581	unscripted	1	1	mediumMeasuringCup	0	base	4	true	director	Move glass measuring cup d9wn one cell	23292	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522802897418	unscripted	1	2	waterBottle	0	base	4	false	director	Move water bottle right one cell	14549	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522802940694	unscripted	1	3	chair	0	base	4	false	director	Move chair left one cell	14346	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522802974681	unscripted	2	0	comb	0	exp	8	false	director	Move comb up one cell	9859	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522802999703	unscripted	2	1	computerMouse	0	exp	8	true	director	Move mouse up one cell	10070	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803043401	unscripted	2	1	computerMouse	1	exp	8	true	director	Move mouse up one cell	14964	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803084095	unscripted	2	1	computerMouse	2	exp	8	true	director	Move mouse up one cell	14346	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803114609	unscripted	2	1	computerMouse	3	exp	8	true	director	Do not move anything	14201	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803138668	unscripted	2	1	computerMouse	3	exp	8	true	matcher	ok	333	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803160298	unscripted	2	1	computerMouse	3	exp	8	true	director	Move mouse left	9195	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803173485	unscripted	2	1	computerMouse	3	exp	8	true	matcher	which mouse?  you aren't following directions	8336	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803199954	unscripted	2	1	computerMouse	4	exp	8	true	director	I dont know what to do	11047	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803220194	unscripted	2	1	computerMouse	4	exp	8	true	matcher	you are supposed to tell me what to move, and where to move it	6040	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803228125	unscripted	2	1	computerMouse	4	exp	8	true	matcher	you took a quiz before you entered this task	5154	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803255988	unscripted	2	1	computerMouse	4	exp	8	true	director	Should i return the hit	9594	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803268796	unscripted	2	1	computerMouse	4	exp	8	true	matcher	I don't understand . doesn't it tell you what to tell me to do?	8328	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803343608	unscripted	2	1	computerMouse	5	exp	8	true	director	Move mouse up one cell	65962	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803358243	unscripted	2	1	computerMouse	5	exp	8	true	matcher	which mouse?  there are two	3490	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803390058	unscripted	2	1	computerMouse	5	exp	8	true	director	I only see one mouse	11678	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803435310	unscripted	2	1	computerMouse	6	exp	8	true	director	I dont know what to do now~~~ I will probably return hit	28394	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803448883	unscripted	2	1	computerMouse	6	exp	8	true	matcher	what is it telling you to do?	3300	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803469333	unscripted	2	1	computerMouse	6	exp	8	true	director	Green arrow 8s pointing up	9735	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803481838	unscripted	2	1	computerMouse	6	exp	8	true	matcher	on the computer mouse?	2571	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803487938	unscripted	2	1	computerMouse	6	exp	8	true	director	Yes	1246	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803494545	unscripted	2	1	computerMouse	6	exp	8	true	matcher	and it's just one arrow pointing up?	3968	chatMessage
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803505147	unscripted	2	1	computerMouse	6	exp	8	true	director	Yes	1180	chatMessage

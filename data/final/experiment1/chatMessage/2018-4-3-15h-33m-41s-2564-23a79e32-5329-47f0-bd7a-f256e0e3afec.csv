@@ -1,0 +1,15 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	2564-23a79e32-5329-47f0-bd7a-f256e0e3afec	1522794821881	unscripted	1	0	basketball	0	base	5	false	director	basketball down one space	6848	chatMessage
+planned_sample	2564-23a79e32-5329-47f0-bd7a-f256e0e3afec	1522794847054	unscripted	1	1	roundBrush	0	base	5	true	director	brush left one space	4692	chatMessage
+planned_sample	2564-23a79e32-5329-47f0-bd7a-f256e0e3afec	1522794875705	unscripted	1	2	headphones	0	base	5	false	director	headphones left one space	9382	chatMessage
+planned_sample	2564-23a79e32-5329-47f0-bd7a-f256e0e3afec	1522794905785	unscripted	1	3	book	0	base	5	false	director	book right one space	10688	chatMessage
+planned_sample	2564-23a79e32-5329-47f0-bd7a-f256e0e3afec	1522794928319	unscripted	2	0	airplane	0	exp	1	false	director	plane right one space	7563	chatMessage
+planned_sample	2564-23a79e32-5329-47f0-bd7a-f256e0e3afec	1522794974345	unscripted	2	1	sunGlasses	0	exp	1	true	director	sunglasses right one space	10577	chatMessage
+planned_sample	2564-23a79e32-5329-47f0-bd7a-f256e0e3afec	1522795000173	unscripted	2	2	barrel	0	exp	1	false	director	barrel down one space	7732	chatMessage
+planned_sample	2564-23a79e32-5329-47f0-bd7a-f256e0e3afec	1522795030008	unscripted	2	3	saxophone	0	exp	1	false	director	instrument up one space	8944	chatMessage
+planned_sample	2564-23a79e32-5329-47f0-bd7a-f256e0e3afec	1522795056366	unscripted	3	0	banana	0	base	6	false	director	banana up one	7624	chatMessage
+planned_sample	2564-23a79e32-5329-47f0-bd7a-f256e0e3afec	1522795075472	unscripted	3	1	dollar	0	base	6	false	director	dollar right one	10542	chatMessage
+planned_sample	2564-23a79e32-5329-47f0-bd7a-f256e0e3afec	1522795089450	unscripted	3	2	boardEraser	0	base	6	true	director	eraser up one	4483	chatMessage
+planned_sample	2564-23a79e32-5329-47f0-bd7a-f256e0e3afec	1522795113481	unscripted	3	3	feather	0	base	6	false	director	feather left one	12854	chatMessage
+planned_sample	2564-23a79e32-5329-47f0-bd7a-f256e0e3afec	1522795127468	unscripted	4	0	comb	0	exp	8	false	director	comb up one	5269	chatMessage
+planned_sample	2564-23a79e32-5329-47f0-bd7a-f256e0e3afec	1522795145683	unscripted	4	1	computerMouse	0	exp	8	true	director	mouse up one	5518	chatMessage

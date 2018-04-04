@@ -1,0 +1,10 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	8810-f2af8060-b251-4d71-8747-14b03329d3b7	1522799859064	scripted	1	0	carrot	0	exp	4	false	director	move the carrot up one space	NaN	chatMessage
+planned_sample	8810-f2af8060-b251-4d71-8747-14b03329d3b7	1522799897852	scripted	1	1	mediumMeasuringCup	0	exp	4	true	director	move the large measuring cup down one space	NaN	chatMessage
+planned_sample	8810-f2af8060-b251-4d71-8747-14b03329d3b7	1522800010296	scripted	1	1	mediumMeasuringCup	1	exp	4	true	director	move the pyrex glass measurement device down two spaces below the chair	56164	chatMessage
+planned_sample	8810-f2af8060-b251-4d71-8747-14b03329d3b7	1522800062986	scripted	1	1	mediumMeasuringCup	1	exp	4	true	director	bottom right corner	7649	chatMessage
+planned_sample	8810-f2af8060-b251-4d71-8747-14b03329d3b7	1522800191281	scripted	1	1	mediumMeasuringCup	1	exp	4	true	director	make sure its placed in the square~~~ it is in the opposite corner right now based on where you moved it	24353	chatMessage
+planned_sample	8810-f2af8060-b251-4d71-8747-14b03329d3b7	1522800346722	scripted	1	1	mediumMeasuringCup	1	exp	4	true	director	two more to the right	2140	chatMessage
+planned_sample	8810-f2af8060-b251-4d71-8747-14b03329d3b7	1522800353400	scripted	1	1	mediumMeasuringCup	1	exp	4	true	director	two below the chair	3133	chatMessage
+planned_sample	8810-f2af8060-b251-4d71-8747-14b03329d3b7	1522800521640	scripted	1	1	mediumMeasuringCup	1	exp	4	true	director	right side of the grid, bottom square	53954	chatMessage
+planned_sample	8810-f2af8060-b251-4d71-8747-14b03329d3b7	1522800527801	scripted	1	1	mediumMeasuringCup	1	exp	4	true	director	make sure its completely placed	2838	chatMessage

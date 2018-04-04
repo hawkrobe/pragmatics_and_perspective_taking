@@ -1,0 +1,34 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803089816	unscripted	1	0	carrot	0	base	4	false	director	move the carrot up one square	12113	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803125038	unscripted	1	1	mediumMeasuringCup	0	base	4	true	director	move the measuring glass down one square	10680	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803172426	unscripted	1	1	mediumMeasuringCup	1	base	4	true	director	move the large measuring glass down one square	13061	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803202618	unscripted	1	2	waterBottle	0	base	4	false	director	move the water bottle to the right one square	13651	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803236900	unscripted	1	3	chair	0	base	4	false	director	move the brown chair with a white cushion one square to the left	17163	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803273046	unscripted	2	0	banana	0	exp	6	false	director	move the banana up one square	9157	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803304327	unscripted	2	1	dollar	0	exp	6	false	director	move the one dollar bill to the right one square	15341	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803330743	unscripted	2	2	boardEraser	0	exp	6	true	director	move the expo eraser up one square	12038	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803363526	unscripted	2	3	feather	0	exp	6	false	director	move the gray feather to the left one square	13690	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803391082	unscripted	3	0	binoculars	0	base	2	false	director	move the black binoculars to the right	9844	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803422087	unscripted	3	1	wrench	0	base	2	false	director	move the wrench to the left one square	10703	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803457558	unscripted	3	2	middleBlock	0	base	2	true	director	move the block with the B on top to the left one square	17292	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803494247	unscripted	3	3	coffeeMug	0	base	2	false	director	move the white mug of coffee to the right one square	14424	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803529227	unscripted	4	0	scissors	0	exp	3	false	director	move the black scissors to the right one square	14147	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803561328	unscripted	4	1	knife	0	exp	3	false	director	move the black handle knife down	11455	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803591837	unscripted	4	2	barOfSoap	0	exp	3	false	director	move the white bar of soap to the left one square	10439	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803614335	unscripted	4	3	cassetteTape	0	exp	3	true	director	move the cassette tape down one square	7751	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803644885	unscripted	5	0	magnet	0	exp	7	false	director	move the red and silver magnet down one square	16102	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803671882	unscripted	5	1	handcuffs	0	exp	7	false	director	move the silver handcuffs down one square	8708	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803708006	unscripted	5	2	pandaToy	0	exp	7	false	director	move the stuffed panda down one square	12548	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803735912	unscripted	5	3	mediumCandle	0	exp	7	true	director	move the red candle on the stand down one square	14076	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803764267	unscripted	6	0	comb	0	base	8	false	director	move the tan comb up one square	7698	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803799446	unscripted	6	1	computerMouse	0	base	8	true	director	move the silver (gray?) computer mouse up one square	20039	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803834374	unscripted	6	2	castIronPan	0	base	8	false	director	move the cast iron skillet up one square	11514	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803856304	unscripted	6	3	piano	0	base	8	false	director	move the black piano left one square	8924	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803887987	unscripted	7	0	airplane	0	base	1	false	director	move the red and black plane to the right one square	12791	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803919916	unscripted	7	1	sunGlasses	0	base	1	true	director	move the black sunglasses right one square	13761	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803944476	unscripted	7	2	barrel	0	base	1	false	director	move the wooden barrel down one square	8310	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522803974470	unscripted	7	3	saxophone	0	base	1	false	director	move the silver saxophone up one square	12365	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522804001914	unscripted	8	0	basketball	0	exp	5	false	director	move th large basketball down one square	9986	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522804043478	unscripted	8	1	roundBrush	0	exp	5	true	director	move the black round brush with the wooden handle to the left one square	23669	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522804084078	unscripted	8	2	headphones	0	exp	5	false	director	move the red headphones to the left one square	13455	chatMessage
+planned_sample	9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d	1522804112405	unscripted	8	3	book	0	exp	5	false	director	move the red book to the right one square	8576	chatMessage
