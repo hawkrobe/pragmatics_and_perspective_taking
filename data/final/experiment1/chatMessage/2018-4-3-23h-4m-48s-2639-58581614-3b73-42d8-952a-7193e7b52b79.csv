@@ -1,0 +1,5 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	2639-58581614-3b73-42d8-952a-7193e7b52b79	1522821888724	unscripted	1	0	comb	0	exp	8	false	director	Move the comb up one space	5954	chatMessage
+planned_sample	2639-58581614-3b73-42d8-952a-7193e7b52b79	1522821916542	unscripted	1	1	computerMouse	0	exp	8	true	director	Move the mouse up one space	4587	chatMessage
+planned_sample	2639-58581614-3b73-42d8-952a-7193e7b52b79	1522821932638	unscripted	1	2	castIronPan	0	exp	8	false	director	Move the frying pan up once space	4192	chatMessage
+planned_sample	2639-58581614-3b73-42d8-952a-7193e7b52b79	1522821949423	unscripted	1	3	piano	0	exp	8	false	director	move the piano left one space	5504	chatMessage

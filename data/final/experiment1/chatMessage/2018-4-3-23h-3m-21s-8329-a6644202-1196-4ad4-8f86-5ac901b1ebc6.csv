@@ -1,0 +1,5 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	8329-a6644202-1196-4ad4-8f86-5ac901b1ebc6	1522821801320	unscripted	1	0	scissors	0	exp	3	false	director	Move the scissors on the  left, 2nd row, to the box on the right	61859	chatMessage
+planned_sample	8329-a6644202-1196-4ad4-8f86-5ac901b1ebc6	1522821858946	unscripted	1	0	scissors	1	exp	3	false	director	Move the scissors to the box to the right	18498	chatMessage
+planned_sample	8329-a6644202-1196-4ad4-8f86-5ac901b1ebc6	1522821892839	unscripted	1	1	knife	0	exp	3	false	director	Move the knife to the box below	19627	chatMessage
+planned_sample	8329-a6644202-1196-4ad4-8f86-5ac901b1ebc6	1522821931048	unscripted	1	1	knife	1	exp	3	false	director	Move the knife to the box just below it	24783	chatMessage
