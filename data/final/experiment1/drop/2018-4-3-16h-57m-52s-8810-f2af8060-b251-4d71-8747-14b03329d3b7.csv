@@ -1,0 +1,3 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	8810-f2af8060-b251-4d71-8747-14b03329d3b7	1522799872843	scripted	1	0	carrot	0	exp	4	false	correct	carrot	2	3	2	3	2519	drop
+planned_sample	8810-f2af8060-b251-4d71-8747-14b03329d3b7	1522799904285	scripted	1	0	mediumMeasuringCup	1	exp	4	true	incorrect	largeMeasuringCup	4	4	1	4	2040	drop

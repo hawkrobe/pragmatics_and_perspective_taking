@@ -1,0 +1,8 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522824836906	scripted	1	0	airplane	0	base	1	false	correct	airplane	3	1	3	1	13613	drop
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522824867045	scripted	1	1	sunGlasses	0	base	1	true	correct	sunGlasses	4	4	4	4	13478	drop
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522824891324	scripted	1	2	barrel	0	base	1	false	correct	barrel	4	3	4	3	6688	drop
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522824929103	scripted	1	3	saxophone	0	base	1	false	correct	saxophone	2	3	2	3	10240	drop
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522824949270	scripted	2	0	carrot	0	exp	4	false	correct	carrot	2	3	2	3	7978	drop
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522824968653	scripted	2	0	mediumMeasuringCup	1	exp	4	true	incorrect	largeMeasuringCup	4	4	1	4	6290	drop
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522825008622	scripted	2	1	mediumMeasuringCup	0	exp	4	true	correct	mediumMeasuringCup	4	4	4	4	19798	drop

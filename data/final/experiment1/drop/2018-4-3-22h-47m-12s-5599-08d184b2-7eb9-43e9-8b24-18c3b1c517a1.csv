@@ -1,0 +1,2 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	5599-08d184b2-7eb9-43e9-8b24-18c3b1c517a1	1522820832313	unscripted	1	0	magnet	0	base	7	false	correct	magnet	2	4	2	4	5681	drop

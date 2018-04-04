@@ -1,0 +1,11 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792125622	scripted	1	-1	scissors	1	base	3	false	incorrect	scissors	2	2	2	1	7197	drop
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792165586	scripted	1	-1	scissors	2	base	3	false	incorrect	scissors	2	2	2	3	14866	drop
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792218117	scripted	1	0	scissors	0	base	3	false	correct	scissors	2	2	2	2	3502	drop
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792219121	scripted	1	0	scissors	0	base	3	false	correct	scissors	2	2	2	2	4485	drop
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792219179	scripted	1	0	scissors	0	base	3	false	correct	scissors	2	2	2	2	4566	drop
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792254425	scripted	1	3	cassetteTape	0	base	3	true	correct	cassetteTape	3	2	3	2	12211	drop
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792271811	scripted	2	0	banana	0	exp	6	false	correct	banana	4	2	4	2	5110	drop
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792304154	scripted	2	1	dollar	0	exp	6	false	correct	dollar	4	3	4	3	6893	drop
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792320882	scripted	2	1	boardEraser	1	exp	6	true	incorrect	pencilEraser	2	3	1	2	6373	drop
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792345764	scripted	2	1	boardEraser	2	exp	6	true	incorrect	pencilEraser	2	3	1	2	8154	drop

@@ -1,0 +1,13 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522802804985	unscripted	1	0	carrot	0	base	4	false	correct	carrot	2	3	2	3	1891	drop
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522802868981	unscripted	1	1	mediumMeasuringCup	0	base	4	true	correct	mediumMeasuringCup	4	4	4	4	9342	drop
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522802916661	unscripted	1	2	waterBottle	0	base	4	false	correct	waterBottle	2	2	2	2	5058	drop
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522802947647	unscripted	1	3	chair	0	base	4	false	correct	chair	3	2	3	2	2303	drop
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522802980177	unscripted	2	0	comb	0	exp	8	false	correct	comb	1	1	1	1	1524	drop
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803006238	unscripted	2	0	computerMouse	1	exp	8	true	incorrect	toyMouse	4	2	1	2	4734	drop
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803054721	unscripted	2	0	computerMouse	2	exp	8	true	incorrect	computerMouse	4	2	4	1	5570	drop
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803090244	unscripted	2	0	computerMouse	3	exp	8	true	incorrect	computerMouse	4	2	4	1	2616	drop
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803179892	unscripted	2	0	computerMouse	4	exp	8	true	incorrect	computerMouse	4	2	3	2	57555	drop
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803321819	unscripted	2	0	computerMouse	5	exp	8	true	incorrect	toyMouse	4	2	2	3	117277	drop
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803395099	unscripted	2	0	computerMouse	6	exp	8	true	incorrect	computerMouse	4	2	4	1	45329	drop
+planned_sample	4737-d0d6e46d-fec1-4544-8808-42b048d873c2	1522803510143	unscripted	2	0	computerMouse	7	exp	8	true	incorrect	computerMouse	4	2	4	1	68008	drop

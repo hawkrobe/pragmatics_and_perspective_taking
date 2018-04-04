@@ -1,0 +1,4 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+pilot1	1011-d5505953-a0f7-42ec-84d0-db6bf9e22d0c	1522787850393	scripted	1	0	carrot	0	exp	4	false	correct	carrot	2	3	2	3	2171	drop
+pilot1	1011-d5505953-a0f7-42ec-84d0-db6bf9e22d0c	1522787867878	scripted	1	1	mediumMeasuringCup	0	exp	4	true	correct	mediumMeasuringCup	4	4	4	4	2394	drop
+pilot1	1011-d5505953-a0f7-42ec-84d0-db6bf9e22d0c	1522787886261	scripted	1	2	waterBottle	0	exp	4	false	correct	waterBottle	2	2	2	2	2868	drop

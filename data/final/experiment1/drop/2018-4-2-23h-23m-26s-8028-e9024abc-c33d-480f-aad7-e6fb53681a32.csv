@@ -1,0 +1,2 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+pilot1	8028-e9024abc-c33d-480f-aad7-e6fb53681a32	1522736606220	unscripted	1	0	comb	0	base	8	false	correct	comb	1	1	1	1	1298	drop

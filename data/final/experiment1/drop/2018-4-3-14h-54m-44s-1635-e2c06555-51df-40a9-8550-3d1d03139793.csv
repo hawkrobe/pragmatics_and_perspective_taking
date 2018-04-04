@@ -1,0 +1,12 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792484141	scripted	1	0	banana	0	exp	6	false	correct	banana	4	2	4	2	3960	drop
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792542078	scripted	1	1	dollar	0	exp	6	false	correct	dollar	4	3	4	3	1166	drop
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792569529	scripted	1	2	boardEraser	0	exp	6	true	correct	boardEraser	2	3	2	3	6018	drop
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792599932	scripted	1	3	feather	0	exp	6	false	correct	feather	2	4	2	4	1020	drop
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792627362	scripted	2	0	scissors	0	base	3	false	correct	scissors	2	2	2	2	1764	drop
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792648019	scripted	2	1	knife	0	base	3	false	correct	knife	3	4	3	4	796	drop
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792666186	scripted	2	2	barOfSoap	0	base	3	false	correct	barOfSoap	3	3	3	3	1624	drop
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792679221	scripted	2	3	cassetteTape	0	base	3	true	correct	cassetteTape	3	2	3	2	3574	drop
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792737401	scripted	3	0	comb	0	base	8	false	correct	comb	1	1	1	1	1908	drop
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792763947	scripted	3	1	computerMouse	0	base	8	true	correct	computerMouse	4	2	4	2	3898	drop
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792788646	scripted	3	2	castIronPan	0	base	8	false	correct	castIronPan	3	3	3	3	6604	drop

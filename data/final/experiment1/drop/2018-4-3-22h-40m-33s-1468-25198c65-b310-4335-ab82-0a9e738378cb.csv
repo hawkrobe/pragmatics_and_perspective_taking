@@ -1,0 +1,2 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	1468-25198c65-b310-4335-ab82-0a9e738378cb	1522820433694	unscripted	1	0	scissors	0	base	3	false	correct	scissors	2	2	2	2	5021	drop

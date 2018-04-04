@@ -1,0 +1,4 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	4676-314524a9-155b-46ac-83db-dd6ef99bf7af	1522796606830	unscripted	1	-1	basketball	1	exp	5	false	incorrect	book	3	2	2	2	3624	drop
+planned_sample	4676-314524a9-155b-46ac-83db-dd6ef99bf7af	1522796607560	unscripted	1	-2	basketball	2	exp	5	false	incorrect	book	3	2	2	3	4349	drop
+planned_sample	4676-314524a9-155b-46ac-83db-dd6ef99bf7af	1522796609570	unscripted	1	-3	basketball	3	exp	5	false	incorrect	book	3	2	3	3	6351	drop

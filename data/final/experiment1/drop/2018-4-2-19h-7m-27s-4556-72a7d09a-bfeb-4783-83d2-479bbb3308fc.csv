@@ -1,0 +1,6 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+pilot1	4556-72a7d09a-bfeb-4783-83d2-479bbb3308fc	1522721247864	unscripted	1	0	magnet	0	exp	7	false	correct	magnet	2	4	2	4	994	drop
+pilot1	4556-72a7d09a-bfeb-4783-83d2-479bbb3308fc	1522721254027	unscripted	1	0	handcuffs	1	exp	7	false	incorrect	largeCandle	4	3	3	3	947	drop
+pilot1	4556-72a7d09a-bfeb-4783-83d2-479bbb3308fc	1522721260638	unscripted	1	1	handcuffs	0	exp	7	false	correct	handcuffs	4	3	4	3	850	drop
+pilot1	4556-72a7d09a-bfeb-4783-83d2-479bbb3308fc	1522721267433	unscripted	1	2	pandaToy	0	exp	7	false	correct	pandaToy	3	2	3	2	745	drop
+pilot1	4556-72a7d09a-bfeb-4783-83d2-479bbb3308fc	1522721275406	unscripted	1	3	mediumCandle	0	exp	7	true	correct	mediumCandle	1	2	1	2	955	drop

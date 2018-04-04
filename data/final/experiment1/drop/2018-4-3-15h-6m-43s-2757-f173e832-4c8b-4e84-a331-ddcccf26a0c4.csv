@@ -1,0 +1,9 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	2757-f173e832-4c8b-4e84-a331-ddcccf26a0c4	1522793203820	unscripted	1	0	basketball	0	exp	5	false	correct	basketball	3	2	3	2	8412	drop
+planned_sample	2757-f173e832-4c8b-4e84-a331-ddcccf26a0c4	1522793253711	unscripted	1	0	roundBrush	1	exp	5	true	incorrect	hairBrush	2	4	3	1	3730	drop
+planned_sample	2757-f173e832-4c8b-4e84-a331-ddcccf26a0c4	1522793314432	unscripted	1	0	roundBrush	2	exp	5	true	incorrect	hairBrush	2	4	1	3	5153	drop
+planned_sample	2757-f173e832-4c8b-4e84-a331-ddcccf26a0c4	1522793317134	unscripted	1	-1	roundBrush	3	exp	5	true	incorrect	basketball	2	4	1	3	7793	drop
+planned_sample	2757-f173e832-4c8b-4e84-a331-ddcccf26a0c4	1522793413245	unscripted	1	0	roundBrush	4	exp	5	true	incorrect	hairBrush	2	4	3	1	6313	drop
+planned_sample	2757-f173e832-4c8b-4e84-a331-ddcccf26a0c4	1522793416489	unscripted	1	0	roundBrush	5	exp	5	true	incorrect	hairBrush	2	4	4	2	9481	drop
+planned_sample	2757-f173e832-4c8b-4e84-a331-ddcccf26a0c4	1522793472781	unscripted	1	0	roundBrush	6	exp	5	true	incorrect	hairBrush	2	4	3	2	2727	drop
+planned_sample	2757-f173e832-4c8b-4e84-a331-ddcccf26a0c4	1522793531669	unscripted	1	0	roundBrush	7	exp	5	true	incorrect	hairBrush	2	4	4	4	2407	drop

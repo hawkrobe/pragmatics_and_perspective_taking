@@ -1,0 +1,12 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793445746	unscripted	1	0	basketball	0	exp	5	false	correct	basketball	3	2	3	2	6207	drop
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793474208	unscripted	1	0	roundBrush	1	exp	5	true	incorrect	hairBrush	2	4	3	1	8119	drop
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793539587	unscripted	1	1	roundBrush	0	exp	5	true	correct	roundBrush	2	4	2	4	21783	drop
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793578520	unscripted	1	2	headphones	0	exp	5	false	correct	headphones	3	3	3	3	2450	drop
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793615613	unscripted	1	3	book	0	exp	5	false	correct	book	3	1	3	1	8394	drop
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793645507	unscripted	2	0	magnet	0	base	7	false	correct	magnet	2	4	2	4	3675	drop
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793667161	unscripted	2	1	handcuffs	0	base	7	false	correct	handcuffs	4	3	4	3	3351	drop
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793687986	unscripted	2	2	pandaToy	0	base	7	false	correct	pandaToy	3	2	3	2	5861	drop
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793703072	unscripted	2	3	mediumCandle	0	base	7	true	correct	mediumCandle	1	2	1	2	2079	drop
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793721047	unscripted	3	0	comb	0	exp	8	false	correct	comb	1	1	1	1	1507	drop
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793734805	unscripted	3	1	computerMouse	0	exp	8	true	correct	computerMouse	4	2	4	2	2110	drop

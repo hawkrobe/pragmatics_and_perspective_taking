@@ -1,0 +1,2 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+pilot1	4063-8018b7d8-55f0-4b31-996b-2ff5e124cc9a	1522718421846	scripted	1	0	binoculars	0	exp	2	false	correct	binoculars	2	4	2	4	1363	drop

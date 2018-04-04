@@ -1,0 +1,2 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+pilot1	7232-bbdae6c3-d20b-4cf1-bab9-2855bbafa8f1	1522736229140	unscripted	1	-1	airplane	1	exp	1	false	incorrect	airplane	3	1	1	1	1775	drop
