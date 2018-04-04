@@ -181,7 +181,7 @@ var customSetup = function(game) {
 	scrollTop: $("#messages").prop("scrollHeight")
       }, 800);
     if(globalGame.my_role == globalGame.playerRoleNames.role2 && globalGame.paused) {
-      var msg = 'Message received! Please click on the circle in the center to continue.'
+      var msg = 'Message received! Please click on the circle in the center to continue.';
       globalGame.get_player(globalGame.my_id).message = msg;
       drawScreen(globalGame, globalGame.get_player(globalGame.my_id));
       drawClickPoint(game);
@@ -221,47 +221,48 @@ var client_onjoingame = function(num_players, role) {
 */
 
 function mouseDownListener(evt) {
-  var i;
-  //We are going to pay attention to the layering order of the objects so that if a mouse down occurs over more than object,
-  //only the topmost one will be dragged.
-  var highestIndex = -1;
-  
-  //getting mouse position correctly, being mindful of resizing that may have occured in the browser:
-  var bRect = globalGame.viewport.getBoundingClientRect();
-  mouseX = (evt.clientX - bRect.left)*(globalGame.viewport.width/bRect.width);
-  mouseY = (evt.clientY - bRect.top)*(globalGame.viewport.height/bRect.height);
+  if(!globalGame.triggeredDrop) {
+    var i;
+    //We are going to pay attention to the layering order of the objects so that if a mouse down occurs over more than object,
+    //only the topmost one will be dragged.
+    var highestIndex = -1;
+    
+    //getting mouse position correctly, being mindful of resizing that may have occured in the browser:
+    var bRect = globalGame.viewport.getBoundingClientRect();
+    var mouseX = (evt.clientX - bRect.left)*(globalGame.viewport.width/bRect.width);
+    var mouseY = (evt.clientY - bRect.top)*(globalGame.viewport.height/bRect.height);
 
-  // if waiting flag is active, check if center was clicked
-  //find which shape was clicked
-  if(!globalGame.paused) {
-    for (i=0; i < globalGame.objects.length; i++) {
-      if (hitTest(globalGame.objects[i], mouseX, mouseY)) {
-        globalGame.dragging = true;
-        if (i > highestIndex) {
-          //We will pay attention to the point on the object where the mouse is "holding" the object:
-          dragHoldX = mouseX - globalGame.objects[i].upperLeftX;
-          dragHoldY = mouseY - globalGame.objects[i].upperLeftY;
-          highestIndex = i;
-          dragIndex = i;
-        }
+    //find which shape was clicked
+    if(!globalGame.paused & !globalGame.triggeredDrop) {
+      for (i=0; i < globalGame.objects.length; i++) {
+	if (hitTest(globalGame.objects[i], mouseX, mouseY)) {
+          globalGame.dragging = true;
+          if (i > highestIndex) {
+            //We will pay attention to the point on the object where the mouse is "holding" the object:
+            globalGame.dragHoldX = mouseX - globalGame.objects[i].upperLeftX;
+            globalGame.dragHoldY = mouseY - globalGame.objects[i].upperLeftY;
+            highestIndex = i;
+            globalGame.dragIndex = i;
+          }
+	}
       }
     }
-  }
-  if (globalGame.dragging) {
-    window.addEventListener("mousemove", dragListener, false);
-  }
-  globalGame.viewport.removeEventListener("mousedown", mouseDownListener, false);
-  window.addEventListener("mouseup", mouseUpListener, false);
+    if (globalGame.dragging) {
+      window.addEventListener("mousemove", dragListener, false);
+    }
+    globalGame.viewport.removeEventListener("mousedown", mouseDownListener, false);
+    window.addEventListener("mouseup", mouseUpListener, false);
 
-  //code below prevents the mouse down from having an effect on the main browser window:
-  if (evt.preventDefault) {
-    evt.preventDefault();
-  } //standard
-  else if (evt.returnValue) {
-    evt.returnValue = false;
-  } //older IE
-  return false;
-}
+    //code below prevents the mouse down from having an effect on the main browser window:
+    if (evt.preventDefault) {
+      evt.preventDefault();
+    } //standard
+    else if (evt.returnValue) {
+      evt.returnValue = false;
+    } //older IE
+    return false;
+  }
+};
 
 function clickListener(evt) {
   var bRect = globalGame.viewport.getBoundingClientRect();
@@ -280,12 +281,12 @@ function clickListener(evt) {
 function mouseUpListener(evt) {    
   globalGame.viewport.addEventListener("mousedown", mouseDownListener, false);
   window.removeEventListener("mouseup", mouseUpListener, false);
-  if (globalGame.dragging) {
+  if (globalGame.dragging && !globalGame.triggeredDrop) {
     // Set up the right variables
     var bRect = globalGame.viewport.getBoundingClientRect();
-    dropX = (evt.clientX - bRect.left)*(globalGame.viewport.width/bRect.width);
-    dropY = (evt.clientY - bRect.top)*(globalGame.viewport.height/bRect.height);
-    var obj = globalGame.objects[dragIndex]
+    var dropX = (evt.clientX - bRect.left)*(globalGame.viewport.width/bRect.width);
+    var dropY = (evt.clientY - bRect.top)*(globalGame.viewport.height/bRect.height);
+    var obj = globalGame.objects[globalGame.dragIndex]
     var cell = globalGame.getCellFromPixel(dropX, dropY)
     
     // If you were dragging the correct object... And dragged it to the correct location...
@@ -294,35 +295,30 @@ function mouseUpListener(evt) {
         && _.isEqual(cell, globalGame.currentDestination)) {
       // center it
       obj.gridX = cell.gridX;
-      obj.gridY = cell.gridY
-      obj.upperLeftX = globalGame.getPixelFromCell(cell).centerX - obj.width/2
-      obj.upperLeftY = globalGame.getPixelFromCell(cell).centerY - obj.height/2
-      if(!globalGame.triggeredDrop) {
-	globalGame.triggeredDrop = true;
-	globalGame.socket.send("drop.correct." + dragIndex + "." + 
-			       Math.round(obj.upperLeftX) + "." + Math.round(obj.upperLeftY) +
-			       '.' + cell.gridX + '.' + cell.gridY + '.' + timeElapsed);
-      }
+      obj.gridY = cell.gridY;
+      obj.upperLeftX = globalGame.getPixelFromCell(cell).centerX - obj.width/2;
+      obj.upperLeftY = globalGame.getPixelFromCell(cell).centerY - obj.height/2;
+      globalGame.socket.send("drop.correct." + globalGame.dragIndex + "." + 
+			     Math.round(obj.upperLeftX) + "." + Math.round(obj.upperLeftY) +
+			     '.' + cell.gridX + '.' + cell.gridY + '.' + timeElapsed);
+      globalGame.triggeredDrop = true;
       // If you didn't drag it beyond cell bounds, snap it back w/o comment
     } else if (obj.gridX == cell.gridX && obj.gridY == cell.gridY) {
+      obj.upperLeftX = globalGame.getPixelFromCell(obj).centerX - obj.width/2;
+      obj.upperLeftY = globalGame.getPixelFromCell(obj).centerY - obj.height/2;
+      globalGame.socket.send("objMove." + globalGame.dragIndex + "." + Math.round(obj.upperLeftX) +
+			     "." + Math.round(obj.upperLeftY));
+    } else {
       obj.upperLeftX = globalGame.getPixelFromCell(obj).centerX - obj.width/2
       obj.upperLeftY = globalGame.getPixelFromCell(obj).centerY - obj.height/2
-      globalGame.socket.send("objMove." + dragIndex + "." + Math.round(obj.upperLeftX) +
-			     "." + Math.round(obj.upperLeftY))
-      // If you moved the incorrect object or went to the incorrect location, pause game to readjust mouse
-    } else {
-      if(!globalGame.triggeredDrop) {
-	obj.upperLeftX = globalGame.getPixelFromCell(obj).centerX - obj.width/2
-	obj.upperLeftY = globalGame.getPixelFromCell(obj).centerY - obj.height/2
-	var msg = ['drop', 'incorrect', dragIndex, 
-		   Math.round(obj.upperLeftX), Math.round(obj.upperLeftY),
-		   cell.gridX, cell.gridY, timeElapsed].join('.');
-	globalGame.triggeredDrop = true;
-	globalGame.socket.send(msg);
-      }
+      var msg = ['drop', 'incorrect', globalGame.dragIndex, 
+		 Math.round(obj.upperLeftX), Math.round(obj.upperLeftY),
+		 cell.gridX, cell.gridY, timeElapsed].join('.');
+      globalGame.socket.send(msg);
+      globalGame.triggeredDrop = true;
     }
     // Tell server where you dropped it
-    drawScreen(globalGame, globalGame.get_player(globalGame.my_id))
+    drawScreen(globalGame, globalGame.get_player(globalGame.my_id));
     window.removeEventListener("mousemove", dragListener, false);
   }
 }
@@ -368,29 +364,32 @@ var mouseTracking = function(event) {
 function dragListener(evt) {
   // prevent from dragging offscreen
   var minX = 25;
-  var maxX = globalGame.viewport.width - globalGame.objects[dragIndex].width - 25;
+  var maxX = globalGame.viewport.width - globalGame.objects[globalGame.dragIndex].width - 25;
   var minY = 25;
-  var maxY = globalGame.viewport.height - globalGame.objects[dragIndex].height - 25;
+  var maxY = globalGame.viewport.height - globalGame.objects[globalGame.dragIndex].height - 25;
 
   //getting mouse position correctly 
   var bRect = globalGame.viewport.getBoundingClientRect();
-  mouseX = (evt.clientX - bRect.left)*(globalGame.viewport.width/bRect.width);
-  mouseY = (evt.clientY - bRect.top)*(globalGame.viewport.height/bRect.height);
+  var mouseX = (evt.clientX - bRect.left)*(globalGame.viewport.width/bRect.width);
+  var mouseY = (evt.clientY - bRect.top)*(globalGame.viewport.height/bRect.height);
 
   //clamp x and y positions to prevent object from dragging outside of canvas
-  var posX = mouseX - dragHoldX;
+  var posX = mouseX - globalGame.dragHoldX;
   posX = (posX < minX) ? minX : ((posX > maxX) ? maxX : posX);
-  var posY = mouseY - dragHoldY;
+  var posY = mouseY - globalGame.dragHoldY;
   posY = (posY < minY) ? minY : ((posY > maxY) ? maxY : posY);
 
-  // Update object locally
-  var obj = globalGame.objects[dragIndex]
-  obj.upperLeftX = Math.round(posX);
-  obj.upperLeftY = Math.round(posY);
+  // Only allow to drag before drop (not during feedback
+  if(!globalGame.triggeredDrop) {
+    var obj = globalGame.objects[globalGame.dragIndex];
+    obj.upperLeftX = Math.round(posX);
+    obj.upperLeftY = Math.round(posY);
 
-  // Tell server about it
-  globalGame.socket.send("objMove." + dragIndex + "." + Math.round(posX) + "." + Math.round(posY))
-  drawScreen(globalGame, globalGame.get_player(globalGame.my_id));
+    // Tell server about it
+    globalGame.socket.send("objMove." + globalGame.dragIndex + "." +
+			   Math.round(posX) + "." + Math.round(posY));
+    drawScreen(globalGame, globalGame.get_player(globalGame.my_id));
+  }
 }
 
 function hitCenter(mouseX, mouseY) {
