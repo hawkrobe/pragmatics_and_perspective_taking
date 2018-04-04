@@ -1,0 +1,12 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823572521	scripted	1	0	banana	0	base	6	false	director	move the banana up by one space	NaN	chatMessage
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823636690	scripted	1	1	dollar	0	base	6	false	director	move a dollar to right	9858	chatMessage
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823667938	scripted	1	2	boardEraser	0	base	6	true	director	move the eraser up by one space	41105	chatMessage
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823712642	scripted	1	3	feather	0	base	6	false	director	move feather left side	23382	chatMessage
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823741003	scripted	2	0	basketball	0	exp	5	false	director	move the ball down	9492	chatMessage
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823762035	scripted	2	1	roundBrush	0	exp	5	true	director	move the brush one space to the left	30524	chatMessage
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823827388	scripted	2	1	roundBrush	1	exp	5	true	director	move brush to the left space	19298	chatMessage
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823889745	scripted	2	1	roundBrush	2	exp	5	true	director	move the dog down on blank space	33631	chatMessage
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823934536	scripted	2	1	roundBrush	3	exp	5	true	director	move headst up on blank space	19488	chatMessage
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823970967	scripted	2	1	roundBrush	4	exp	5	true	director	move headset on the left blank space	19389	chatMessage
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522824002543	scripted	2	1	roundBrush	5	exp	5	true	director	move the ring up	7001	chatMessage

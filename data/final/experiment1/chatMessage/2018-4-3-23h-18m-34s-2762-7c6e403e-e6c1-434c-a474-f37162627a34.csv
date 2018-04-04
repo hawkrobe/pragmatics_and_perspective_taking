@@ -1,0 +1,33 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+, down one square 	35602	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522822766814	unscripted	1	1	roundBrush	0	exp	5	true	director	Move the hairbrush in the bottom row, one square to the left	23072	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522822812072	unscripted	1	2	headphones	0	exp	5	false	director	Move the headphones on the 3rd row, one square to the left~~~	27376	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522822846286	unscripted	1	3	book	0	exp	5	false	director	Move the book in the top row, one square to the right	18385	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522822883726	unscripted	2	0	banana	0	base	6	false	director	Move the banana in the 3rd row, one square up	23282	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522822911924	unscripted	2	1	dollar	0	base	6	false	director	Move the dollar bill on the 3rd row, one square to the right	16121	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522822941034	unscripted	2	2	boardEraser	0	base	6	true	director	Move the eraser on the bottom row one square up	16722	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522822966854	unscripted	2	3	feather	0	base	6	false	director	Move the feather on the bottom row one square to the left~~~	15491	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522822996515	unscripted	3	0	airplane	0	base	1	false	director	Move the airplane on the top row, one square to the right~~~	17055	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823020215	unscripted	3	1	sunGlasses	0	base	1	true	director	Move the sunglasses in the bottom row, one square to the right~~~	12894	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823048357	unscripted	3	2	barrel	0	base	1	false	director	Move the barrel in the 2nd row, one square down	15289	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823076391	unscripted	3	3	saxophone	0	base	1	false	director	Move the saxophone on the bottom row, one square up	17693	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823102529	unscripted	4	0	magnet	0	exp	7	false	director	Move the magnet in the 3rd row, one square down	13461	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823124096	unscripted	4	1	handcuffs	0	exp	7	false	director	Move the handcuff in the 2nd row, one square down	12143	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823145695	unscripted	4	2	pandaToy	0	exp	7	false	director	Move the panda in the 1st row one square down	11360	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823168975	unscripted	4	3	mediumCandle	0	exp	7	true	director	Move the candle in the top row one square down	13983	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823202713	unscripted	5	0	binoculars	0	exp	2	false	director	Move in the binoculars in the last row, one square to the right	20911	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823228580	unscripted	5	1	wrench	0	exp	2	false	director	Move the wrench in the top row one square to the left	13246	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823267888	unscripted	5	2	middleBlock	0	exp	2	true	director	Move the B block in the 3rd row, one square to the left	25423	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823291205	unscripted	5	3	coffeeMug	0	exp	2	false	director	Move the coffee mug in the 2nd row, one square to the right	12598	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823337559	unscripted	6	0	comb	0	base	8	false	director	Move the comb in the 2nd row, one square up	22948	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823357539	unscripted	6	1	computerMouse	0	base	8	true	director	Move the mouse in the 3rd row, one square up	9759	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823378895	unscripted	6	2	castIronPan	0	base	8	false	director	Move the pan on the bottom row, one square up	11022	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823398704	unscripted	6	3	piano	0	base	8	false	director	Move the piano on the bottom row, one square to the left	11472	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823421594	unscripted	7	0	carrot	0	base	4	false	director	Move the carrot on the bottom row, one square up	12573	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823462646	unscripted	7	1	mediumMeasuringCup	0	base	4	true	director	Move the pyrex measuring cup in the 3rd row, down one square	31704	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823499285	unscripted	7	2	waterBottle	0	base	4	false	director	Move the bottle in the 2nd row, one square to the right	18330	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823518209	unscripted	7	3	chair	0	base	4	false	director	Move the chair int he 2nd row, one square to the left	8452	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823547230	unscripted	8	0	scissors	0	exp	3	false	director	Move the scissors in the 2nd row one square to right	17011	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823569401	unscripted	8	1	knife	0	exp	3	false	director	Move the knife in the 3rd row, one square down	11589	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823596516	unscripted	8	2	barOfSoap	0	exp	3	false	director	Move the bar of soap on the 3rd row, one square to the left	18391	chatMessage
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823624779	unscripted	8	3	cassetteTape	0	exp	3	true	director	Move the cassette in the top row, one square down	16404	chatMessage

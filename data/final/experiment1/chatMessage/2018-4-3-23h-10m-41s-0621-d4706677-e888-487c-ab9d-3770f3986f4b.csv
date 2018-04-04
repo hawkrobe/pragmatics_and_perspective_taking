@@ -18,3 +18,22 @@ planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822623778	scripted	
 planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822635674	scripted	4	3	book	0	exp	5	false	director	move the book one space to the right	23174	chatMessage
 planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822659085	scripted	5	0	binoculars	0	base	2	false	director	move the binoculars one space to the right	46470	chatMessage
 planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822691481	scripted	5	1	wrench	0	base	2	false	director	move the wrench to the left	8741	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822717593	scripted	5	2	middleBlock	0	base	2	true	director	move the bottom block one space to the left	36157	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822752545	scripted	5	3	coffeeMug	0	base	2	false	director	move the mug 1 to the right	7837	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822767641	scripted	6	0	banana	0	exp	6	false	director	move the banana up by one space	24485	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822790225	scripted	6	1	dollar	0	exp	6	false	director	move the dollar to the right	8365	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822805993	scripted	6	2	boardEraser	0	exp	6	true	director	move the eraser up by one space	23045	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822820710	scripted	6	2	boardEraser	0	exp	6	true	matcher	the pink one or the black one?	6859	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822840480	scripted	6	2	boardEraser	0	exp	6	true	matcher	There's one hidden behind a curtain	5969	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822904482	scripted	6	3	feather	0	exp	6	false	director	it wouldn't tlet me answer you either time! move the oval shaped thing to the left 1	50422	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822927565	scripted	6	3	feather	0	exp	6	false	matcher	that's okay!  No worries	13707	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822959149	scripted	6	3	feather	1	exp	6	false	director	move the seed? to the left 1	23389	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522823010998	scripted	7	0	comb	0	base	8	false	director	move the comb up 1	8245	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522823029926	scripted	7	1	computerMouse	0	base	8	true	director	move the mouse up by one space	26668	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522823057751	scripted	7	2	castIronPan	0	base	8	false	director	move the pan up 1	12101	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522823097755	scripted	7	3	piano	0	base	8	false	director	you see sometimes it makes me use an automated response~~~ move thepiano 1 to the left	25821	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522823118838	scripted	7	3	piano	0	base	8	false	matcher	Lol, that's okay~~~  You're doing great~~~  Sorry I screwed up the oval one	13104	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522823159876	scripted	8	0	airplane	0	exp	1	false	director	move the airplane 1 to the right	12070	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522823175367	scripted	8	1	sunGlasses	0	exp	1	true	director	move the glasses one space to the right	26005	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522823194466	scripted	8	2	barrel	0	exp	1	false	director	move the barrel down by one space	45702	chatMessage
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522823217230	scripted	8	3	saxophone	0	exp	1	false	director	move the sax up 1	7813	chatMessage

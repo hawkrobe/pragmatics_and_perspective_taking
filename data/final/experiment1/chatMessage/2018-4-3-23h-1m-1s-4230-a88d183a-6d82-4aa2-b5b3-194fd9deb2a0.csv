@@ -26,3 +26,10 @@ planned_sample	4230-a88d183a-6d82-4aa2-b5b3-194fd9deb2a0	1522822592062	scripted	
 planned_sample	4230-a88d183a-6d82-4aa2-b5b3-194fd9deb2a0	1522822618654	scripted	6	3	saxophone	0	exp	1	false	director	move trumpet up by one space	11069	chatMessage
 planned_sample	4230-a88d183a-6d82-4aa2-b5b3-194fd9deb2a0	1522822660300	scripted	7	0	scissors	0	exp	3	false	director	move scissors right by one space	19944	chatMessage
 planned_sample	4230-a88d183a-6d82-4aa2-b5b3-194fd9deb2a0	1522822672104	scripted	7	1	knife	0	exp	3	false	director	move the knife down one space	31747	chatMessage
+planned_sample	4230-a88d183a-6d82-4aa2-b5b3-194fd9deb2a0	1522822701648	scripted	7	2	barOfSoap	0	exp	3	false	director	move soap left by one space	16845	chatMessage
+planned_sample	4230-a88d183a-6d82-4aa2-b5b3-194fd9deb2a0	1522822713728	scripted	7	3	cassetteTape	0	exp	3	true	director	move the tape down by one space	28931	chatMessage
+planned_sample	4230-a88d183a-6d82-4aa2-b5b3-194fd9deb2a0	1522822752699	scripted	7	3	cassetteTape	1	exp	3	true	director	move tape down by one space	16400	chatMessage
+planned_sample	4230-a88d183a-6d82-4aa2-b5b3-194fd9deb2a0	1522822770776	scripted	8	0	binoculars	0	base	2	false	director	move the binoculars one space to the right	34477	chatMessage
+planned_sample	4230-a88d183a-6d82-4aa2-b5b3-194fd9deb2a0	1522822806329	scripted	8	1	wrench	0	base	2	false	director	move spanner left by one space	20061	chatMessage
+planned_sample	4230-a88d183a-6d82-4aa2-b5b3-194fd9deb2a0	1522822829154	scripted	8	2	middleBlock	0	base	2	true	director	move the bottom block one space to the left	42885	chatMessage
+planned_sample	4230-a88d183a-6d82-4aa2-b5b3-194fd9deb2a0	1522822862453	scripted	8	3	coffeeMug	0	base	2	false	director	move cup right by one space	14769	chatMessage

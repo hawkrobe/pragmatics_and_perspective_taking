@@ -31,3 +31,5 @@ planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822640007	unscripte
 planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822655648	unscripted	7	3	coffeeMug	0	exp	2	false	director	mug right	4460	chatMessage
 planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822670325	unscripted	8	0	carrot	0	base	4	false	director	carrot up	5446	chatMessage
 planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822685938	unscripted	8	1	mediumMeasuringCup	0	base	4	true	director	pyrex down	6973	chatMessage
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822701524	unscripted	8	2	waterBottle	0	base	4	false	director	water right	4284	chatMessage
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822714886	unscripted	8	3	chair	0	base	4	false	director	chair left	3757	chatMessage

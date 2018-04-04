@@ -30,3 +30,6 @@ planned_sample	8329-a6644202-1196-4ad4-8f86-5ac901b1ebc6	1522822645985	unscripte
 planned_sample	8329-a6644202-1196-4ad4-8f86-5ac901b1ebc6	1522822660562	unscripted	7	2	headphones	0	base	5	false	director	move the headphones left	6240	chatMessage
 planned_sample	8329-a6644202-1196-4ad4-8f86-5ac901b1ebc6	1522822678701	unscripted	7	3	book	0	base	5	false	director	move the book right	7962	chatMessage
 planned_sample	8329-a6644202-1196-4ad4-8f86-5ac901b1ebc6	1522822693852	unscripted	8	0	magnet	0	exp	7	false	director	move the magnet down	4863	chatMessage
+planned_sample	8329-a6644202-1196-4ad4-8f86-5ac901b1ebc6	1522822709824	unscripted	8	1	handcuffs	0	exp	7	false	director	move the handcuffs down	6348	chatMessage
+planned_sample	8329-a6644202-1196-4ad4-8f86-5ac901b1ebc6	1522822727293	unscripted	8	2	pandaToy	0	exp	7	false	director	move the panda bear down	7558	chatMessage
+planned_sample	8329-a6644202-1196-4ad4-8f86-5ac901b1ebc6	1522822740988	unscripted	8	3	mediumCandle	0	exp	7	true	director	move the red candle down	5764	chatMessage

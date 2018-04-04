@@ -28,3 +28,13 @@ planned_sample	1902-d09f4a57-3905-44dd-ae98-be36bce68361	1522822567006	scripted	
 planned_sample	1902-d09f4a57-3905-44dd-ae98-be36bce68361	1522822609268	scripted	6	0	comb	0	base	8	false	director	Comb up one	4628	chatMessage
 planned_sample	1902-d09f4a57-3905-44dd-ae98-be36bce68361	1522822632568	scripted	6	1	computerMouse	0	base	8	true	director	move the mouse up by one space	27925	chatMessage
 planned_sample	1902-d09f4a57-3905-44dd-ae98-be36bce68361	1522822664170	scripted	6	2	castIronPan	0	base	8	false	director	Move pan up one	7652	chatMessage
+planned_sample	1902-d09f4a57-3905-44dd-ae98-be36bce68361	1522822695268	scripted	6	3	piano	0	base	8	false	director	Move piano over to the left	12646	chatMessage
+planned_sample	1902-d09f4a57-3905-44dd-ae98-be36bce68361	1522822721637	scripted	7	0	carrot	0	base	4	false	director	move the carrot up one space	39081	chatMessage
+planned_sample	1902-d09f4a57-3905-44dd-ae98-be36bce68361	1522822747373	scripted	7	1	mediumMeasuringCup	0	base	4	true	director	move the large measuring cup down one space	64839	chatMessage
+planned_sample	1902-d09f4a57-3905-44dd-ae98-be36bce68361	1522822772040	scripted	7	2	waterBottle	0	base	4	false	director	Move water to the right 	9098	chatMessage
+planned_sample	1902-d09f4a57-3905-44dd-ae98-be36bce68361	1522822795455	scripted	7	3	chair	0	base	4	false	director	Move chair to the left	10470	chatMessage
+planned_sample	1902-d09f4a57-3905-44dd-ae98-be36bce68361	1522822833346	scripted	8	0	airplane	0	exp	1	false	director	Move airplane one to the right	11784	chatMessage
+planned_sample	1902-d09f4a57-3905-44dd-ae98-be36bce68361	1522822850946	scripted	8	1	sunGlasses	0	exp	1	true	director	move the glasses one space to the right	29384	chatMessage
+planned_sample	1902-d09f4a57-3905-44dd-ae98-be36bce68361	1522822871144	scripted	8	1	sunGlasses	0	exp	1	true	director	move the glasses one space to the right	49574	chatMessage
+planned_sample	1902-d09f4a57-3905-44dd-ae98-be36bce68361	1522822873310	scripted	8	2	barrel	0	exp	1	false	director	move the barrel down by one space	51743	chatMessage
+planned_sample	1902-d09f4a57-3905-44dd-ae98-be36bce68361	1522822909002	scripted	8	3	saxophone	0	exp	1	false	director	Move sax up one	14988	chatMessage
