@@ -152,7 +152,7 @@ var customSetup = function(game) {
       globalGame.get_player(globalGame.my_id).message = msg;
       globalGame.paused = true;
       globalGame.dragging = false;
-      globalGame.triggered = false;
+      globalGame.triggeredDrop = false;
       globalGame.overDistractor = false;
     } else {
       globalGame.paused = false;
@@ -298,7 +298,7 @@ function mouseUpListener(evt) {
       obj.upperLeftX = globalGame.getPixelFromCell(cell).centerX - obj.width/2
       obj.upperLeftY = globalGame.getPixelFromCell(cell).centerY - obj.height/2
       if(!globalGame.triggeredDrop) {
-	globalGame.triggered = true;
+	globalGame.triggeredDrop = true;
 	globalGame.socket.send("drop.correct." + dragIndex + "." + 
 			       Math.round(obj.upperLeftX) + "." + Math.round(obj.upperLeftY) +
 			       '.' + cell.gridX + '.' + cell.gridY + '.' + timeElapsed);
@@ -317,7 +317,7 @@ function mouseUpListener(evt) {
 	var msg = ['drop', 'incorrect', dragIndex, 
 		   Math.round(obj.upperLeftX), Math.round(obj.upperLeftY),
 		   cell.gridX, cell.gridY, timeElapsed].join('.');
-	globalGame.triggered = true;
+	globalGame.triggeredDrop = true;
 	globalGame.socket.send(msg);
       }
     }
