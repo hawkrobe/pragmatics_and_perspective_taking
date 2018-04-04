@@ -1,0 +1,11 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821122388	scripted	1	1	sunGlasses	0	exp	1	true	on	2443	mouseOverDistractor
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821122405	scripted	1	1	sunGlasses	0	exp	1	true	off	2460	mouseOverDistractor
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821495506	scripted	4	3	cassetteTape	0	exp	3	true	on	23526	mouseOverDistractor
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821497057	scripted	4	2	cassetteTape	1	exp	3	true	off	25071	mouseOverDistractor
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821499093	scripted	4	2	cassetteTape	1	exp	3	true	on	27109	mouseOverDistractor
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821499387	scripted	4	2	cassetteTape	1	exp	3	true	off	27408	mouseOverDistractor
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821570525	scripted	5	1	mediumMeasuringCup	0	exp	4	true	on	1279	mouseOverDistractor
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821573055	scripted	5	1	mediumMeasuringCup	0	exp	4	true	off	3812	mouseOverDistractor
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821731629	scripted	6	2	middleBlock	0	base	2	true	on	4502	mouseOverDistractor
+planned_sample	5707-ac526852-17d2-48e8-bb09-cbfdc564089f	1522821731714	scripted	6	2	middleBlock	0	base	2	true	off	4585	mouseOverDistractor

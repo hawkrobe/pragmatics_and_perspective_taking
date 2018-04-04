@@ -1,0 +1,7 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+pilot1	2801-9605f5bf-1b60-4128-9c0b-6975e364776a	1522718280329	unscripted	2	1	computerMouse	0	base	8	true	on	1225	mouseOverDistractor
+pilot1	2801-9605f5bf-1b60-4128-9c0b-6975e364776a	1522718284465	unscripted	2	0	computerMouse	1	base	8	true	off	5362	mouseOverDistractor
+pilot1	2801-9605f5bf-1b60-4128-9c0b-6975e364776a	1522718544259	unscripted	4	3	cassetteTape	0	base	3	true	on	5549	mouseOverDistractor
+pilot1	2801-9605f5bf-1b60-4128-9c0b-6975e364776a	1522718544308	unscripted	4	3	cassetteTape	0	base	3	true	off	5598	mouseOverDistractor
+pilot1	2801-9605f5bf-1b60-4128-9c0b-6975e364776a	1522718922826	unscripted	7	1	roundBrush	0	base	5	true	on	12326	mouseOverDistractor
+pilot1	2801-9605f5bf-1b60-4128-9c0b-6975e364776a	1522718922957	unscripted	7	1	roundBrush	0	base	5	true	off	12460	mouseOverDistractor

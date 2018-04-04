@@ -28,3 +28,10 @@ planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823889664	unscripte
 planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823924375	unscripted	6	3	chair	0	base	4	false	director	Move the chair one square to be directly under the shot glass~~~	14454	chatMessage
 planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823951126	unscripted	7	0	comb	0	exp	8	false	director	Move the comb up one square~~~	12215	chatMessage
 planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823973826	unscripted	7	1	computerMouse	0	exp	8	true	director	Move the mouse up one square~~~	4684	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522824037089	unscripted	7	1	computerMouse	1	exp	8	true	director	Move the mouse that is closer to the pan up one square	33560	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522824060093	unscripted	7	2	castIronPan	0	exp	8	false	director	Move the pan up one square	6605	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522824123066	unscripted	7	3	piano	0	exp	8	false	director	Move the piano one square so it is in the current row and the same column as the comb	26791	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522824149072	unscripted	8	0	basketball	0	base	5	false	director	Move the basketball down one square	4495	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522824190558	unscripted	8	1	roundBrush	0	base	5	true	director	Move the hairbrush so it is in the same row and immediately next to the gold and diamond ring	17494	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522824247779	unscripted	8	2	headphones	0	base	5	false	director	Move the red headphones one square away from the edge, in the same row	23834	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522824290208	unscripted	8	3	book	0	base	5	false	director	Move the red book so it is in the same row and is above the red headphones	14914	chatMessage

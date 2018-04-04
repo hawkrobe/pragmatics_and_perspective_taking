@@ -28,3 +28,7 @@ planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823934455	unscripte
 planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823951670	unscripted	7	2	headphones	0	exp	5	false	director	3rd row 4th square move left 1 square	7618	chatMessage
 planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823975668	unscripted	7	3	book	0	exp	5	false	director	1st row 2nd square move right 1 square	12141	chatMessage
 planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522824003164	unscripted	8	0	banana	0	base	6	false	director	3rd row 4th square move UP 1 square	11761	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522824029836	unscripted	8	1	dollar	0	base	6	false	director	3rd row 3rd square move right 1 square	13100	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522824063001	unscripted	8	1	dollar	1	base	6	false	director	3rd row 3rd square move right 1 square	12801	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522824079186	unscripted	8	2	boardEraser	0	base	6	true	director	4th row 2nd square move up 1 square	5386	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522824106155	unscripted	8	3	feather	0	base	6	false	director	4th row 3rd square move left 1 square	12838	chatMessage

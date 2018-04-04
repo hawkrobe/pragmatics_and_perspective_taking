@@ -1,0 +1,15 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	0925-bc219375-7a80-4963-8ea0-03854bb7aa4f	1522813842270	scripted	2	1	roundBrush	0	exp	5	true	on	1192	mouseOverDistractor
+planned_sample	0925-bc219375-7a80-4963-8ea0-03854bb7aa4f	1522813842730	scripted	2	1	roundBrush	0	exp	5	true	off	1655	mouseOverDistractor
+planned_sample	0925-bc219375-7a80-4963-8ea0-03854bb7aa4f	1522813842876	scripted	2	1	roundBrush	0	exp	5	true	on	1801	mouseOverDistractor
+planned_sample	0925-bc219375-7a80-4963-8ea0-03854bb7aa4f	1522813843163	scripted	2	0	roundBrush	1	exp	5	true	off	2088	mouseOverDistractor
+planned_sample	0925-bc219375-7a80-4963-8ea0-03854bb7aa4f	1522813844155	scripted	2	0	roundBrush	1	exp	5	true	on	2822	mouseOverDistractor
+planned_sample	0925-bc219375-7a80-4963-8ea0-03854bb7aa4f	1522813845263	scripted	2	0	roundBrush	1	exp	5	true	off	4189	mouseOverDistractor
+planned_sample	0925-bc219375-7a80-4963-8ea0-03854bb7aa4f	1522814011830	scripted	3	3	mediumCandle	0	exp	7	true	on	1178	mouseOverDistractor
+planned_sample	0925-bc219375-7a80-4963-8ea0-03854bb7aa4f	1522814013815	scripted	3	2	mediumCandle	1	exp	7	true	off	3189	mouseOverDistractor
+planned_sample	0925-bc219375-7a80-4963-8ea0-03854bb7aa4f	1522814081707	scripted	4	2	boardEraser	0	base	6	true	on	9592	mouseOverDistractor
+planned_sample	0925-bc219375-7a80-4963-8ea0-03854bb7aa4f	1522814081724	scripted	4	2	boardEraser	0	base	6	true	off	9608	mouseOverDistractor
+planned_sample	0925-bc219375-7a80-4963-8ea0-03854bb7aa4f	1522814082095	scripted	4	2	boardEraser	0	base	6	true	on	9978	mouseOverDistractor
+planned_sample	0925-bc219375-7a80-4963-8ea0-03854bb7aa4f	1522814082125	scripted	4	2	boardEraser	0	base	6	true	off	10009	mouseOverDistractor
+planned_sample	0925-bc219375-7a80-4963-8ea0-03854bb7aa4f	1522814092078	scripted	4	2	boardEraser	0	base	6	true	on	6338	mouseOverDistractor
+planned_sample	0925-bc219375-7a80-4963-8ea0-03854bb7aa4f	1522814092174	scripted	4	2	boardEraser	0	base	6	true	off	6434	mouseOverDistractor

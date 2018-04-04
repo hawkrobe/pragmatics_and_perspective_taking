@@ -36,3 +36,10 @@ planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522824873332	scripted	
 planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522824917598	scripted	6	2	waterBottle	0	base	4	false	correct	waterBottle	2	2	2	2	4544	drop
 planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522824953178	scripted	6	3	chair	0	base	4	false	correct	chair	3	2	3	2	3400	drop
 planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522824996770	scripted	7	0	airplane	0	exp	1	false	correct	airplane	3	1	3	1	3288	drop
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522825014288	scripted	7	1	sunGlasses	0	exp	1	true	correct	sunGlasses	4	4	4	4	3560	drop
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522825029803	scripted	7	2	barrel	0	exp	1	false	correct	barrel	4	3	4	3	4638	drop
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522825071373	scripted	7	3	saxophone	0	exp	1	false	correct	saxophone	2	3	2	3	2354	drop
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522825097988	scripted	8	0	comb	0	exp	8	false	correct	comb	1	1	1	1	4071	drop
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522825114051	scripted	8	1	computerMouse	0	exp	8	true	correct	computerMouse	4	2	4	2	3075	drop
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522825141727	scripted	8	2	castIronPan	0	exp	8	false	correct	castIronPan	3	3	3	3	3658	drop
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522825168358	scripted	8	3	piano	0	exp	8	false	correct	piano	1	4	1	4	2683	drop

@@ -1,0 +1,17 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522820099467	scripted	1	3	mediumCandle	0	exp	7	true	on	5645	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522820099681	scripted	1	3	mediumCandle	0	exp	7	true	off	5860	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522820162588	scripted	2	1	sunGlasses	0	base	1	true	on	11942	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522820164782	scripted	2	1	sunGlasses	0	base	1	true	off	14141	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522820342438	scripted	3	2	middleBlock	0	base	2	true	on	1407	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522820342838	scripted	3	2	middleBlock	0	base	2	true	off	1807	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522820515103	scripted	4	3	cassetteTape	0	exp	3	true	on	941	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522820515419	scripted	4	3	cassetteTape	0	exp	3	true	off	1260	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522820515448	scripted	4	3	cassetteTape	0	exp	3	true	on	1276	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522820515780	scripted	4	2	cassetteTape	1	exp	3	true	off	1620	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522820516786	scripted	4	2	cassetteTape	1	exp	3	true	on	2624	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522820516801	scripted	4	2	cassetteTape	1	exp	3	true	off	2642	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522820793047	scripted	6	1	mediumMeasuringCup	0	base	4	true	on	13616	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522820793183	scripted	6	1	mediumMeasuringCup	0	base	4	true	off	13753	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522821176505	scripted	8	2	boardEraser	0	base	6	true	on	10483	mouseOverDistractor
+planned_sample	7624-3c1b623b-35f4-4cbe-b1be-286bb5049d51	1522821176555	scripted	8	2	boardEraser	0	base	6	true	off	10534	mouseOverDistractor

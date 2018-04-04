@@ -23,3 +23,11 @@ planned_sample	1627-6d009f25-8f2e-4d59-8756-8ce5dbb255b6	1522823919544	unscripte
 planned_sample	1627-6d009f25-8f2e-4d59-8756-8ce5dbb255b6	1522823939266	unscripted	6	1	dollar	0	exp	6	false	director	money right	1168	chatMessage
 planned_sample	1627-6d009f25-8f2e-4d59-8756-8ce5dbb255b6	1522823952621	unscripted	6	2	boardEraser	0	exp	6	true	director	eraser up	1287	chatMessage
 planned_sample	1627-6d009f25-8f2e-4d59-8756-8ce5dbb255b6	1522824017040	unscripted	6	3	feather	0	exp	6	false	director	feather left	1238	chatMessage
+planned_sample	1627-6d009f25-8f2e-4d59-8756-8ce5dbb255b6	1522824034520	unscripted	7	0	carrot	0	exp	4	false	director	carrot up	2175	chatMessage
+planned_sample	1627-6d009f25-8f2e-4d59-8756-8ce5dbb255b6	1522824047120	unscripted	7	1	mediumMeasuringCup	0	exp	4	true	director	meausre down	3343	chatMessage
+planned_sample	1627-6d009f25-8f2e-4d59-8756-8ce5dbb255b6	1522824090759	unscripted	7	2	waterBottle	0	exp	4	false	director	water right	2670	chatMessage
+planned_sample	1627-6d009f25-8f2e-4d59-8756-8ce5dbb255b6	1522824099914	unscripted	7	3	chair	0	exp	4	false	director	chair left	1302	chatMessage
+planned_sample	1627-6d009f25-8f2e-4d59-8756-8ce5dbb255b6	1522824113360	unscripted	8	0	magnet	0	base	7	false	director	magnet down	2161	chatMessage
+planned_sample	1627-6d009f25-8f2e-4d59-8756-8ce5dbb255b6	1522824122575	unscripted	8	1	handcuffs	0	base	7	false	director	cuffs down	1184	chatMessage
+planned_sample	1627-6d009f25-8f2e-4d59-8756-8ce5dbb255b6	1522824133480	unscripted	8	2	pandaToy	0	base	7	false	director	bear down	1418	chatMessage
+planned_sample	1627-6d009f25-8f2e-4d59-8756-8ce5dbb255b6	1522824143825	unscripted	8	3	mediumCandle	0	base	7	true	director	candle down	1223	chatMessage

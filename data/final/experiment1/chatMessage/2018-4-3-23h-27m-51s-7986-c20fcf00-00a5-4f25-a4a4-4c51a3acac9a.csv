@@ -25,3 +25,11 @@ planned_sample	7986-c20fcf00-00a5-4f25-a4a4-4c51a3acac9a	1522823963564	scripted	
 planned_sample	7986-c20fcf00-00a5-4f25-a4a4-4c51a3acac9a	1522823978548	scripted	6	1	knife	0	base	3	false	director	move the knife down one space	21880	chatMessage
 planned_sample	7986-c20fcf00-00a5-4f25-a4a4-4c51a3acac9a	1522824002603	scripted	6	2	barOfSoap	0	base	3	false	director	move the bar of soap one space to the left	10101	chatMessage
 planned_sample	7986-c20fcf00-00a5-4f25-a4a4-4c51a3acac9a	1522824017962	scripted	6	3	cassetteTape	0	base	3	true	director	move the tape down by one space	25460	chatMessage
+planned_sample	7986-c20fcf00-00a5-4f25-a4a4-4c51a3acac9a	1522824028690	scripted	7	0	banana	0	exp	6	false	director	move the banana up by one space	36188	chatMessage
+planned_sample	7986-c20fcf00-00a5-4f25-a4a4-4c51a3acac9a	1522824055353	scripted	7	1	dollar	0	exp	6	false	director	move the dollar bill one space to the right	7200	chatMessage
+planned_sample	7986-c20fcf00-00a5-4f25-a4a4-4c51a3acac9a	1522824069848	scripted	7	2	boardEraser	0	exp	6	true	director	move the eraser up by one space	21696	chatMessage
+planned_sample	7986-c20fcf00-00a5-4f25-a4a4-4c51a3acac9a	1522824101755	scripted	7	3	feather	0	exp	6	false	director	move the feather one space to the left	10171	chatMessage
+planned_sample	7986-c20fcf00-00a5-4f25-a4a4-4c51a3acac9a	1522824122869	scripted	8	0	basketball	0	base	5	false	director	move the basketball down one space	7237	chatMessage
+planned_sample	7986-c20fcf00-00a5-4f25-a4a4-4c51a3acac9a	1522824136382	scripted	8	1	roundBrush	0	base	5	true	director	move the brush one space to the left	20747	chatMessage
+planned_sample	7986-c20fcf00-00a5-4f25-a4a4-4c51a3acac9a	1522824154537	scripted	8	2	headphones	0	base	5	false	director	move the headphones one space to the left	7819	chatMessage
+planned_sample	7986-c20fcf00-00a5-4f25-a4a4-4c51a3acac9a	1522824167873	scripted	8	3	book	0	base	5	false	director	move the book one space to the right	21155	chatMessage

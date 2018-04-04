@@ -1,0 +1,11 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805101109	unscripted	1	1	mediumMeasuringCup	0	exp	4	true	on	33855	mouseOverDistractor
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805130703	unscripted	1	1	mediumMeasuringCup	0	exp	4	true	off	63458	mouseOverDistractor
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805276623	unscripted	2	2	barrel	0	base	1	false	on	7984	mouseOverDistractor
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805276742	unscripted	2	2	barrel	0	base	1	false	off	8119	mouseOverDistractor
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805860028	unscripted	7	2	boardEraser	0	base	6	true	on	18256	mouseOverDistractor
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805860106	unscripted	7	2	boardEraser	0	base	6	true	off	18330	mouseOverDistractor
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805868984	unscripted	7	2	boardEraser	0	base	6	true	on	7747	mouseOverDistractor
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805869064	unscripted	7	2	boardEraser	0	base	6	true	off	7814	mouseOverDistractor
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805943779	unscripted	8	1	computerMouse	0	base	8	true	on	35243	mouseOverDistractor
+planned_sample	9457-4189cc9b-a82b-4db9-828d-bf90d1987aee	1522805943859	unscripted	8	1	computerMouse	0	base	8	true	off	35404	mouseOverDistractor

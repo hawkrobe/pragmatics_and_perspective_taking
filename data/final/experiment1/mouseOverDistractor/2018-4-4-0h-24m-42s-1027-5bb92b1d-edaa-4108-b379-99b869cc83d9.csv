@@ -1,0 +1,17 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522826682765	scripted	1	2	boardEraser	0	exp	6	true	on	5147	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522826687918	scripted	1	1	boardEraser	1	exp	6	true	off	10275	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522826890258	scripted	4	1	mediumMeasuringCup	0	exp	4	true	on	1422	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522826891619	scripted	4	0	mediumMeasuringCup	1	exp	4	true	off	2777	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522826894240	scripted	4	0	mediumMeasuringCup	1	exp	4	true	on	5407	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522826894712	scripted	4	1	mediumMeasuringCup	1	exp	4	true	on	5874	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522826894840	scripted	4	1	mediumMeasuringCup	1	exp	4	true	off	6007	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522826895807	scripted	4	1	mediumMeasuringCup	1	exp	4	true	on	6975	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522826897458	scripted	4	1	mediumMeasuringCup	1	exp	4	true	off	8625	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522827087962	scripted	7	1	computerMouse	0	exp	8	true	on	11990	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522827088013	scripted	7	1	computerMouse	0	exp	8	true	off	12040	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522827090018	scripted	7	1	computerMouse	0	exp	8	true	on	720	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522827091855	scripted	7	0	computerMouse	1	exp	8	true	off	2552	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522827093383	scripted	7	0	computerMouse	1	exp	8	true	on	4087	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522827095892	scripted	7	1	computerMouse	1	exp	8	true	on	6598	mouseOverDistractor
+planned_sample	1027-5bb92b1d-edaa-4108-b379-99b869cc83d9	1522827097373	scripted	7	1	computerMouse	1	exp	8	true	off	8080	mouseOverDistractor

@@ -1,0 +1,11 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	1336-781ddb71-735d-4dfe-90de-9b2b85a89f15	1522791331873	unscripted	1	1	roundBrush	0	exp	5	true	on	1537	mouseOverDistractor
+planned_sample	1336-781ddb71-735d-4dfe-90de-9b2b85a89f15	1522791332040	unscripted	1	1	roundBrush	0	exp	5	true	off	1705	mouseOverDistractor
+planned_sample	1336-781ddb71-735d-4dfe-90de-9b2b85a89f15	1522791340907	unscripted	1	1	roundBrush	0	exp	5	true	on	10571	mouseOverDistractor
+planned_sample	1336-781ddb71-735d-4dfe-90de-9b2b85a89f15	1522791341255	unscripted	1	1	roundBrush	0	exp	5	true	off	10921	mouseOverDistractor
+planned_sample	1336-781ddb71-735d-4dfe-90de-9b2b85a89f15	1522791530282	unscripted	4	2	boardEraser	0	base	6	true	on	2252	mouseOverDistractor
+planned_sample	1336-781ddb71-735d-4dfe-90de-9b2b85a89f15	1522791530298	unscripted	4	2	boardEraser	0	base	6	true	off	2269	mouseOverDistractor
+planned_sample	1336-781ddb71-735d-4dfe-90de-9b2b85a89f15	1522791628214	unscripted	6	1	mediumMeasuringCup	0	exp	4	true	on	1891	mouseOverDistractor
+planned_sample	1336-781ddb71-735d-4dfe-90de-9b2b85a89f15	1522791628480	unscripted	6	1	mediumMeasuringCup	0	exp	4	true	off	2160	mouseOverDistractor
+planned_sample	1336-781ddb71-735d-4dfe-90de-9b2b85a89f15	1522791638395	unscripted	6	1	mediumMeasuringCup	0	exp	4	true	on	12076	mouseOverDistractor
+planned_sample	1336-781ddb71-735d-4dfe-90de-9b2b85a89f15	1522791638411	unscripted	6	1	mediumMeasuringCup	0	exp	4	true	off	12093	mouseOverDistractor

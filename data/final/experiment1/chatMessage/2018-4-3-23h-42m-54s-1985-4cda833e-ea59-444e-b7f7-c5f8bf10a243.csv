@@ -1,0 +1,50 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824174914	unscripted	1	0	comb	0	exp	8	false	director	move right	10795	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824193413	unscripted	1	0	comb	0	exp	8	false	matcher	which item?	2286	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824199843	unscripted	1	0	comb	0	exp	8	false	director	move durectly above	12062	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824212205	unscripted	1	0	comb	0	exp	8	false	matcher	Describe which item I need to move?	5256	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824239181	unscripted	1	0	comb	0	exp	8	false	director	move comb to the slot above it	16069	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824275853	unscripted	1	1	computerMouse	0	exp	8	true	director	move mouse to the slot above it	17428	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824342155	unscripted	1	1	computerMouse	1	exp	8	true	director	move mouse directly above it	32312	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824355935	unscripted	1	1	computerMouse	1	exp	8	true	matcher	which mouse? the animal or the computer mouse?	6411	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824375956	unscripted	1	1	computerMouse	1	exp	8	true	director	computer mouse sorry i did not see animal	14671	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824427857	unscripted	1	2	castIronPan	0	exp	8	false	director	Move black iron skillet directly above	34338	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824471580	unscripted	1	3	piano	0	exp	8	false	director	move black piano to the right	21603	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824486813	unscripted	1	3	piano	1	exp	8	false	director	i mean left	6022	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824529036	unscripted	2	0	binoculars	0	base	2	false	director	move binoculars to the right	15057	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824554693	unscripted	2	1	wrench	0	base	2	false	director	wrench left	11160	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824595295	unscripted	2	2	middleBlock	0	base	2	true	director	toy alphabet block left	18691	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824604759	unscripted	2	2	middleBlock	0	base	2	true	matcher	there are two	2884	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824607817	unscripted	2	2	middleBlock	0	base	2	true	matcher	the yellow or blue one	2800	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824617252	unscripted	2	2	middleBlock	0	base	2	true	matcher	blue?	3197	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824619413	unscripted	2	2	middleBlock	0	base	2	true	director	blue with B	6260	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824644994	unscripted	2	3	coffeeMug	0	base	2	false	director	white coffe mug right	14796	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824691186	unscripted	3	0	basketball	0	base	5	false	director	orange basket ball move right below it	29752	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824716226	unscripted	3	1	roundBrush	0	base	5	true	director	round brush left	9128	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824739434	unscripted	3	2	headphones	0	base	5	false	director	red headphone left	9288	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824758025	unscripted	3	3	book	0	base	5	false	director	red book right	6102	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824777158	unscripted	4	0	banana	0	exp	6	false	director	banana right above it	7023	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824795218	unscripted	4	1	dollar	0	exp	6	false	director	dollar bill right	5193	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824813099	unscripted	4	2	boardEraser	0	exp	6	true	director	erasure above	7930	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824826550	unscripted	4	2	boardEraser	0	exp	6	true	matcher	the pink erasure or the white board one	6059	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824838361	unscripted	4	2	boardEraser	0	exp	6	true	director	black with expo on it	6224	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824855850	unscripted	4	3	feather	0	exp	6	false	director	feather left	7932	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824873469	unscripted	5	0	scissors	0	base	3	false	director	scissors right	5267	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824895376	unscripted	5	1	knife	0	base	3	false	director	knife below	8866	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824913741	unscripted	5	2	barOfSoap	0	base	3	false	director	soap left	4998	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824931035	unscripted	5	3	cassetteTape	0	base	3	true	director	cassette tape below	9092	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824948822	unscripted	6	0	carrot	0	exp	4	false	director	carrot above	6611	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824965897	unscripted	6	1	mediumMeasuringCup	0	exp	4	true	director	measuring cup below	7342	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824974875	unscripted	6	1	mediumMeasuringCup	0	exp	4	true	director	large pyrex	3373	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824982838	unscripted	6	1	mediumMeasuringCup	0	exp	4	true	matcher	the red lettered one?	4773	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824988986	unscripted	6	1	mediumMeasuringCup	0	exp	4	true	director	yes	2449	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522825003809	unscripted	6	2	waterBottle	0	exp	4	false	director	water bottle right	7088	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522825022655	unscripted	6	3	chair	0	exp	4	false	director	chair left	6539	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522825043819	unscripted	7	0	magnet	0	exp	7	false	director	horse shoe below (red)	9871	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522825064161	unscripted	7	1	handcuffs	0	exp	7	false	director	handcuffs below	8521	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522825086238	unscripted	7	2	pandaToy	0	exp	7	false	director	panda (toy) below	12954	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522825104701	unscripted	7	3	mediumCandle	0	exp	7	true	director	red candle below	9502	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522825120102	unscripted	8	0	airplane	0	base	1	false	director	red plane right	4855	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522825143984	unscripted	8	1	sunGlasses	0	base	1	true	director	sunglasses (black) right	13647	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522825167969	unscripted	8	2	barrel	0	base	1	false	director	barrel below	7539	chatMessage
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522825186220	unscripted	8	3	saxophone	0	base	1	false	director	sax above	6885	chatMessage

@@ -1,0 +1,15 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824292076	unscripted	1	1	computerMouse	0	base	8	true	on	35490	mouseOverDistractor
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824292175	unscripted	1	1	computerMouse	0	base	8	true	off	35590	mouseOverDistractor
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824304414	unscripted	1	1	computerMouse	0	base	8	true	on	902	mouseOverDistractor
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824304526	unscripted	1	1	computerMouse	0	base	8	true	off	1020	mouseOverDistractor
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824312345	unscripted	1	1	computerMouse	0	base	8	true	on	8836	mouseOverDistractor
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824312375	unscripted	1	1	computerMouse	0	base	8	true	off	8870	mouseOverDistractor
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824655391	unscripted	4	1	mediumMeasuringCup	0	exp	4	true	on	3584	mouseOverDistractor
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824659172	unscripted	4	1	mediumMeasuringCup	0	exp	4	true	off	7334	mouseOverDistractor
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824659767	unscripted	4	1	mediumMeasuringCup	0	exp	4	true	on	7950	mouseOverDistractor
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824671078	unscripted	4	0	mediumMeasuringCup	1	exp	4	true	off	18316	mouseOverDistractor
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824671267	unscripted	4	0	mediumMeasuringCup	1	exp	4	true	on	19432	mouseOverDistractor
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824671774	unscripted	4	0	mediumMeasuringCup	1	exp	4	true	off	19966	mouseOverDistractor
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824951693	unscripted	7	1	roundBrush	0	exp	5	true	on	4978	mouseOverDistractor
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824955498	unscripted	7	0	roundBrush	1	exp	5	true	off	8796	mouseOverDistractor

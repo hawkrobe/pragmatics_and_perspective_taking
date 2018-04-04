@@ -26,3 +26,10 @@ planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824902136	unscripte
 planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824914946	unscripted	6	3	saxophone	0	base	1	false	correct	saxophone	2	3	2	3	3630	drop
 planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824937035	unscripted	7	0	basketball	0	exp	5	false	correct	basketball	3	2	3	2	5696	drop
 planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522824955114	unscripted	7	0	roundBrush	1	exp	5	true	incorrect	hairBrush	2	4	3	1	8416	drop
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522825053892	unscripted	7	1	roundBrush	0	exp	5	true	correct	roundBrush	2	4	2	4	73278	drop
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522825084540	unscripted	7	2	headphones	0	exp	5	false	correct	headphones	3	3	3	3	9466	drop
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522825101701	unscripted	7	3	book	0	exp	5	false	correct	book	3	1	3	1	5096	drop
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522825122601	unscripted	8	0	banana	0	base	6	false	correct	banana	4	2	4	2	3190	drop
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522825144388	unscripted	8	1	dollar	0	base	6	false	correct	dollar	4	3	4	3	9718	drop
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522825171558	unscripted	8	2	boardEraser	0	base	6	true	correct	boardEraser	2	3	2	3	8284	drop
+planned_sample	9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e	1522825185168	unscripted	8	3	feather	0	base	6	false	correct	feather	2	4	2	4	4144	drop

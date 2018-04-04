@@ -1,0 +1,8 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792535360	scripted	1	2	boardEraser	0	exp	6	true	on	483	mouseOverDistractor
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792537281	scripted	1	1	boardEraser	1	exp	6	true	off	2393	mouseOverDistractor
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792538640	scripted	1	1	boardEraser	1	exp	6	true	on	3767	mouseOverDistractor
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792538706	scripted	1	1	boardEraser	1	exp	6	true	off	3833	mouseOverDistractor
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792774811	scripted	4	1	roundBrush	0	exp	5	true	on	1206	mouseOverDistractor
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792776026	scripted	4	0	roundBrush	1	exp	5	true	off	2424	mouseOverDistractor
+planned_sample	7525-4c9ece91-607e-46dc-9e3a-82c40745fb88	1522792802622	scripted	4	1	roundBrush	0	exp	5	true	on	10862	mouseOverDistractor

@@ -1,0 +1,13 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822453565	scripted	2	3	cassetteTape	0	exp	3	true	on	32292	mouseOverDistractor
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822456583	scripted	2	3	cassetteTape	0	exp	3	true	off	35308	mouseOverDistractor
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822811421	scripted	6	2	boardEraser	0	exp	6	true	on	2269	mouseOverDistractor
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822812075	scripted	6	2	boardEraser	0	exp	6	true	off	2926	mouseOverDistractor
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822821718	scripted	6	2	boardEraser	0	exp	6	true	on	12570	mouseOverDistractor
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822821737	scripted	6	2	boardEraser	0	exp	6	true	off	12587	mouseOverDistractor
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822823220	scripted	6	2	boardEraser	0	exp	6	true	on	14070	mouseOverDistractor
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822823237	scripted	6	2	boardEraser	0	exp	6	true	off	14086	mouseOverDistractor
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822844655	scripted	6	2	boardEraser	0	exp	6	true	on	35502	mouseOverDistractor
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522822844722	scripted	6	2	boardEraser	0	exp	6	true	off	35569	mouseOverDistractor
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522823031544	scripted	7	1	computerMouse	0	base	8	true	on	16997	mouseOverDistractor
+planned_sample	0621-d4706677-e888-487c-ab9d-3770f3986f4b	1522823031610	scripted	7	1	computerMouse	0	base	8	true	off	17064	mouseOverDistractor

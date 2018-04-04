@@ -1,0 +1,16 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792479104	scripted	2	2	middleBlock	0	exp	2	true	on	690	mouseOverDistractor
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792480073	scripted	2	1	middleBlock	1	exp	2	true	off	1656	mouseOverDistractor
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792480548	scripted	2	1	middleBlock	1	exp	2	true	on	2122	mouseOverDistractor
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792481552	scripted	2	1	middleBlock	1	exp	2	true	off	3140	mouseOverDistractor
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792538223	scripted	3	1	mediumMeasuringCup	0	base	4	true	on	9836	mouseOverDistractor
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792538304	scripted	3	1	mediumMeasuringCup	0	base	4	true	off	9920	mouseOverDistractor
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792542205	scripted	3	1	mediumMeasuringCup	0	base	4	true	on	2730	mouseOverDistractor
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792542216	scripted	3	1	mediumMeasuringCup	0	base	4	true	off	2746	mouseOverDistractor
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792673060	scripted	5	1	sunGlasses	0	exp	1	true	on	2324	mouseOverDistractor
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792673064	scripted	5	1	sunGlasses	0	exp	1	true	off	2340	mouseOverDistractor
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792719824	scripted	6	1	computerMouse	0	base	8	true	on	2866	mouseOverDistractor
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792785326	scripted	7	2	boardEraser	0	base	6	true	on	8224	mouseOverDistractor
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792785348	scripted	7	2	boardEraser	0	base	6	true	off	8240	mouseOverDistractor
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792790141	scripted	7	2	boardEraser	0	base	6	true	on	3514	mouseOverDistractor
+planned_sample	3854-4096ea0a-299d-4d6b-9a80-5223d4b04902	1522792790156	scripted	7	2	boardEraser	0	base	6	true	off	3532	mouseOverDistractor

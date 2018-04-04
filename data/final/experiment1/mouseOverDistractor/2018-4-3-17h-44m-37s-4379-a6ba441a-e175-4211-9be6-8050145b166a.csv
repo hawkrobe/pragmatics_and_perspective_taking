@@ -1,0 +1,15 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	4379-a6ba441a-e175-4211-9be6-8050145b166a	1522802677801	scripted	1	1	computerMouse	0	exp	8	true	on	8873	mouseOverDistractor
+planned_sample	4379-a6ba441a-e175-4211-9be6-8050145b166a	1522802687816	scripted	1	1	computerMouse	0	exp	8	true	off	18888	mouseOverDistractor
+planned_sample	4379-a6ba441a-e175-4211-9be6-8050145b166a	1522802690019	scripted	1	1	computerMouse	0	exp	8	true	on	1106	mouseOverDistractor
+planned_sample	4379-a6ba441a-e175-4211-9be6-8050145b166a	1522802690970	scripted	1	1	computerMouse	0	exp	8	true	off	2058	mouseOverDistractor
+planned_sample	4379-a6ba441a-e175-4211-9be6-8050145b166a	1522802691104	scripted	1	1	computerMouse	0	exp	8	true	on	2192	mouseOverDistractor
+planned_sample	4379-a6ba441a-e175-4211-9be6-8050145b166a	1522802691919	scripted	1	0	computerMouse	1	exp	8	true	off	3007	mouseOverDistractor
+planned_sample	4379-a6ba441a-e175-4211-9be6-8050145b166a	1522803028772	scripted	4	3	mediumCandle	0	exp	7	true	on	1522	mouseOverDistractor
+planned_sample	4379-a6ba441a-e175-4211-9be6-8050145b166a	1522803029742	scripted	4	3	mediumCandle	0	exp	7	true	off	2493	mouseOverDistractor
+planned_sample	4379-a6ba441a-e175-4211-9be6-8050145b166a	1522803029841	scripted	4	3	mediumCandle	0	exp	7	true	on	2593	mouseOverDistractor
+planned_sample	4379-a6ba441a-e175-4211-9be6-8050145b166a	1522803030822	scripted	4	2	mediumCandle	1	exp	7	true	off	3575	mouseOverDistractor
+planned_sample	4379-a6ba441a-e175-4211-9be6-8050145b166a	1522803351496	scripted	7	3	cassetteTape	0	exp	3	true	on	86763	mouseOverDistractor
+planned_sample	4379-a6ba441a-e175-4211-9be6-8050145b166a	1522803363658	scripted	7	3	cassetteTape	0	exp	3	true	off	98928	mouseOverDistractor
+planned_sample	4379-a6ba441a-e175-4211-9be6-8050145b166a	1522803363976	scripted	7	3	cassetteTape	0	exp	3	true	on	99245	mouseOverDistractor
+planned_sample	4379-a6ba441a-e175-4211-9be6-8050145b166a	1522803365462	scripted	7	2	cassetteTape	1	exp	3	true	off	100730	mouseOverDistractor

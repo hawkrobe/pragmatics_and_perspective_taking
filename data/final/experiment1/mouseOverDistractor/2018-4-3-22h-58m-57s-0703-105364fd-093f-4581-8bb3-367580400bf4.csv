@@ -1,0 +1,12 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	0703-105364fd-093f-4581-8bb3-367580400bf4	1522821537561	scripted	6	3	cassetteTape	0	exp	3	true	on	8155	mouseOverDistractor
+planned_sample	0703-105364fd-093f-4581-8bb3-367580400bf4	1522821538209	scripted	6	2	cassetteTape	1	exp	3	true	off	8795	mouseOverDistractor
+planned_sample	0703-105364fd-093f-4581-8bb3-367580400bf4	1522821538729	scripted	6	2	cassetteTape	1	exp	3	true	on	9324	mouseOverDistractor
+planned_sample	0703-105364fd-093f-4581-8bb3-367580400bf4	1522821540298	scripted	6	2	cassetteTape	1	exp	3	true	off	10890	mouseOverDistractor
+planned_sample	0703-105364fd-093f-4581-8bb3-367580400bf4	1522821689868	scripted	8	2	boardEraser	0	exp	6	true	on	1265	mouseOverDistractor
+planned_sample	0703-105364fd-093f-4581-8bb3-367580400bf4	1522821690315	scripted	8	1	boardEraser	1	exp	6	true	off	1716	mouseOverDistractor
+planned_sample	0703-105364fd-093f-4581-8bb3-367580400bf4	1522821690798	scripted	8	1	boardEraser	1	exp	6	true	on	2200	mouseOverDistractor
+planned_sample	0703-105364fd-093f-4581-8bb3-367580400bf4	1522821693407	scripted	8	2	boardEraser	1	exp	6	true	on	4809	mouseOverDistractor
+planned_sample	0703-105364fd-093f-4581-8bb3-367580400bf4	1522821696137	scripted	8	2	boardEraser	1	exp	6	true	off	7539	mouseOverDistractor
+planned_sample	0703-105364fd-093f-4581-8bb3-367580400bf4	1522821705585	scripted	8	2	boardEraser	1	exp	6	true	on	1301	mouseOverDistractor
+planned_sample	0703-105364fd-093f-4581-8bb3-367580400bf4	1522821706284	scripted	8	2	boardEraser	1	exp	6	true	off	2002	mouseOverDistractor

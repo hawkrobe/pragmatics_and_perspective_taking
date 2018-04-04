@@ -1,0 +1,5 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+pilot1	3799-cb9429a2-2a97-4894-9db0-460306296d64	1522737219797	scripted	1	2	boardEraser	0	exp	6	true	on	559	mouseOverDistractor
+pilot1	3799-cb9429a2-2a97-4894-9db0-460306296d64	1522737219869	scripted	1	2	boardEraser	0	exp	6	true	off	626	mouseOverDistractor
+pilot1	3799-cb9429a2-2a97-4894-9db0-460306296d64	1522737220077	scripted	1	2	boardEraser	0	exp	6	true	on	843	mouseOverDistractor
+pilot1	3799-cb9429a2-2a97-4894-9db0-460306296d64	1522737220950	scripted	1	2	boardEraser	0	exp	6	true	off	1727	mouseOverDistractor

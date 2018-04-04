@@ -30,3 +30,5 @@ planned_sample	9812-c8bf7480-90ac-4909-a186-acefc1ab4cc2	1522823958339	scripted	
 planned_sample	9812-c8bf7480-90ac-4909-a186-acefc1ab4cc2	1522823977621	scripted	7	3	chair	0	base	4	false	director	chair left	1159	chatMessage
 planned_sample	9812-c8bf7480-90ac-4909-a186-acefc1ab4cc2	1522823989067	scripted	8	0	comb	0	exp	8	false	director	combn up	1776	chatMessage
 planned_sample	9812-c8bf7480-90ac-4909-a186-acefc1ab4cc2	1522824006767	scripted	8	1	computerMouse	0	exp	8	true	director	move the mouse up by one space	19478	chatMessage
+planned_sample	9812-c8bf7480-90ac-4909-a186-acefc1ab4cc2	1522824027689	scripted	8	2	castIronPan	0	exp	8	false	director	iron up	792	chatMessage
+planned_sample	9812-c8bf7480-90ac-4909-a186-acefc1ab4cc2	1522824054794	scripted	8	3	piano	0	exp	8	false	director	piano left	1391	chatMessage

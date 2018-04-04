@@ -33,3 +33,4 @@ planned_sample	0715-06250ca0-7a76-4415-8f41-b39fa652d804	1522824933448	scripted	
 planned_sample	0715-06250ca0-7a76-4415-8f41-b39fa652d804	1522824944137	scripted	8	0	banana	0	base	6	false	correct	banana	4	2	4	2	4557	drop
 planned_sample	0715-06250ca0-7a76-4415-8f41-b39fa652d804	1522824973035	scripted	8	1	dollar	0	base	6	false	correct	dollar	4	3	4	3	4498	drop
 planned_sample	0715-06250ca0-7a76-4415-8f41-b39fa652d804	1522824982477	scripted	8	2	boardEraser	0	base	6	true	correct	boardEraser	2	3	2	3	2003	drop
+planned_sample	0715-06250ca0-7a76-4415-8f41-b39fa652d804	1522825013342	scripted	8	3	feather	0	base	6	false	correct	feather	2	4	2	4	2652	drop

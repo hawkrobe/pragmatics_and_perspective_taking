@@ -1,0 +1,16 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522814664322	scripted	5	1	sunGlasses	0	exp	1	true	on	4184	mouseOverDistractor
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522815080601	scripted	6	2	boardEraser	0	base	6	true	on	11954	mouseOverDistractor
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522815080622	scripted	6	2	boardEraser	0	base	6	true	off	11970	mouseOverDistractor
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522815095259	scripted	6	2	boardEraser	0	base	6	true	on	26599	mouseOverDistractor
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522815095332	scripted	6	2	boardEraser	0	base	6	true	off	26682	mouseOverDistractor
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522815268581	scripted	7	3	cassetteTape	0	exp	3	true	on	1500	mouseOverDistractor
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522815269294	scripted	7	3	cassetteTape	0	exp	3	true	off	2220	mouseOverDistractor
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522815271681	scripted	7	3	cassetteTape	0	exp	3	true	on	4600	mouseOverDistractor
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522815271728	scripted	7	3	cassetteTape	0	exp	3	true	off	4649	mouseOverDistractor
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522815292332	scripted	7	3	cassetteTape	0	exp	3	true	on	25253	mouseOverDistractor
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522815297766	scripted	7	3	cassetteTape	0	exp	3	true	off	30699	mouseOverDistractor
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522815297856	scripted	7	3	cassetteTape	0	exp	3	true	on	30789	mouseOverDistractor
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522815302032	scripted	7	2	cassetteTape	1	exp	3	true	off	34965	mouseOverDistractor
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522815303057	scripted	7	2	cassetteTape	1	exp	3	true	on	35990	mouseOverDistractor
+planned_sample	6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3	1522815303418	scripted	7	2	cassetteTape	1	exp	3	true	off	36341	mouseOverDistractor

@@ -1,0 +1,12 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	1710-2b2ffe4f-4e15-46f3-a881-2bb207e6f943	1522825501603	unscripted	2	3	cassetteTape	0	exp	3	true	on	7513	mouseOverDistractor
+planned_sample	1710-2b2ffe4f-4e15-46f3-a881-2bb207e6f943	1522825501960	unscripted	2	3	cassetteTape	0	exp	3	true	off	7873	mouseOverDistractor
+planned_sample	1710-2b2ffe4f-4e15-46f3-a881-2bb207e6f943	1522825502073	unscripted	2	3	cassetteTape	0	exp	3	true	on	7985	mouseOverDistractor
+planned_sample	1710-2b2ffe4f-4e15-46f3-a881-2bb207e6f943	1522825502876	unscripted	2	2	cassetteTape	1	exp	3	true	off	8777	mouseOverDistractor
+planned_sample	1710-2b2ffe4f-4e15-46f3-a881-2bb207e6f943	1522825504889	unscripted	2	2	cassetteTape	1	exp	3	true	on	10801	mouseOverDistractor
+planned_sample	1710-2b2ffe4f-4e15-46f3-a881-2bb207e6f943	1522825506041	unscripted	2	3	cassetteTape	1	exp	3	true	on	11952	mouseOverDistractor
+planned_sample	1710-2b2ffe4f-4e15-46f3-a881-2bb207e6f943	1522825535993	unscripted	2	3	cassetteTape	1	exp	3	true	off	41905	mouseOverDistractor
+planned_sample	1710-2b2ffe4f-4e15-46f3-a881-2bb207e6f943	1522825862169	unscripted	3	2	boardEraser	0	exp	6	true	on	5681	mouseOverDistractor
+planned_sample	1710-2b2ffe4f-4e15-46f3-a881-2bb207e6f943	1522825862721	unscripted	3	2	boardEraser	0	exp	6	true	off	6233	mouseOverDistractor
+planned_sample	1710-2b2ffe4f-4e15-46f3-a881-2bb207e6f943	1522826161345	unscripted	5	1	mediumMeasuringCup	0	exp	4	true	on	3921	mouseOverDistractor
+planned_sample	1710-2b2ffe4f-4e15-46f3-a881-2bb207e6f943	1522826162929	unscripted	5	0	mediumMeasuringCup	1	exp	4	true	off	5506	mouseOverDistractor

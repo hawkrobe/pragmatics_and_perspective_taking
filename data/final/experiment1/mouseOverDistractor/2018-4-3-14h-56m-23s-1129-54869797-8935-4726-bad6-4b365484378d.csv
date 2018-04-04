@@ -1,0 +1,12 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	1129-54869797-8935-4726-bad6-4b365484378d	1522792583273	scripted	2	3	mediumCandle	0	exp	7	true	on	2639	mouseOverDistractor
+planned_sample	1129-54869797-8935-4726-bad6-4b365484378d	1522792587355	scripted	2	2	mediumCandle	1	exp	7	true	off	6725	mouseOverDistractor
+planned_sample	1129-54869797-8935-4726-bad6-4b365484378d	1522792588841	scripted	2	2	mediumCandle	1	exp	7	true	on	8210	mouseOverDistractor
+planned_sample	1129-54869797-8935-4726-bad6-4b365484378d	1522792609903	scripted	2	3	mediumCandle	1	exp	7	true	on	29273	mouseOverDistractor
+planned_sample	1129-54869797-8935-4726-bad6-4b365484378d	1522792609945	scripted	2	3	mediumCandle	1	exp	7	true	off	29310	mouseOverDistractor
+planned_sample	1129-54869797-8935-4726-bad6-4b365484378d	1522792657470	scripted	3	1	sunGlasses	0	exp	1	true	on	5233	mouseOverDistractor
+planned_sample	1129-54869797-8935-4726-bad6-4b365484378d	1522792657546	scripted	3	1	sunGlasses	0	exp	1	true	off	5316	mouseOverDistractor
+planned_sample	1129-54869797-8935-4726-bad6-4b365484378d	1522792713259	scripted	4	1	mediumMeasuringCup	0	base	4	true	on	14651	mouseOverDistractor
+planned_sample	1129-54869797-8935-4726-bad6-4b365484378d	1522792713326	scripted	4	1	mediumMeasuringCup	0	base	4	true	off	14718	mouseOverDistractor
+planned_sample	1129-54869797-8935-4726-bad6-4b365484378d	1522792720100	scripted	4	1	mediumMeasuringCup	0	base	4	true	on	6027	mouseOverDistractor
+planned_sample	1129-54869797-8935-4726-bad6-4b365484378d	1522792720164	scripted	4	1	mediumMeasuringCup	0	base	4	true	off	6094	mouseOverDistractor

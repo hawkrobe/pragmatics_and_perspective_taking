@@ -1,0 +1,15 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522820993553	scripted	1	2	middleBlock	0	exp	2	true	on	1573	mouseOverDistractor
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522820997699	scripted	1	2	middleBlock	0	exp	2	true	off	5738	mouseOverDistractor
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522821562832	scripted	4	3	cassetteTape	0	exp	3	true	on	749	mouseOverDistractor
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522821563214	scripted	4	3	cassetteTape	0	exp	3	true	off	1132	mouseOverDistractor
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522821563280	scripted	4	3	cassetteTape	0	exp	3	true	on	1198	mouseOverDistractor
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522821563783	scripted	4	2	cassetteTape	1	exp	3	true	off	1701	mouseOverDistractor
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822143515	scripted	8	2	boardEraser	0	exp	6	true	on	28865	mouseOverDistractor
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822151527	scripted	8	1	boardEraser	1	exp	6	true	off	36881	mouseOverDistractor
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822151537	scripted	8	1	boardEraser	1	exp	6	true	on	36891	mouseOverDistractor
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822151562	scripted	8	1	boardEraser	1	exp	6	true	off	36916	mouseOverDistractor
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822152931	scripted	8	2	boardEraser	1	exp	6	true	on	38282	mouseOverDistractor
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822158263	scripted	8	2	boardEraser	1	exp	6	true	off	43616	mouseOverDistractor
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822158296	scripted	8	2	boardEraser	1	exp	6	true	on	43648	mouseOverDistractor
+planned_sample	1282-095baeaa-3ebc-45b0-bd8f-004a168bbf21	1522822158387	scripted	8	2	boardEraser	1	exp	6	true	off	43715	mouseOverDistractor

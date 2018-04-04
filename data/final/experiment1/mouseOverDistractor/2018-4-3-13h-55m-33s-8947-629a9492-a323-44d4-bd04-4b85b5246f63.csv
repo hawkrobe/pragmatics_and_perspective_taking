@@ -1,0 +1,13 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	8947-629a9492-a323-44d4-bd04-4b85b5246f63	1522788933246	scripted	1	1	mediumMeasuringCup	0	exp	4	true	on	760	mouseOverDistractor
+planned_sample	8947-629a9492-a323-44d4-bd04-4b85b5246f63	1522788935948	scripted	1	0	mediumMeasuringCup	1	exp	4	true	off	3461	mouseOverDistractor
+planned_sample	8947-629a9492-a323-44d4-bd04-4b85b5246f63	1522788936569	scripted	1	0	mediumMeasuringCup	1	exp	4	true	on	4043	mouseOverDistractor
+planned_sample	8947-629a9492-a323-44d4-bd04-4b85b5246f63	1522788937844	scripted	1	0	mediumMeasuringCup	1	exp	4	true	off	5360	mouseOverDistractor
+planned_sample	8947-629a9492-a323-44d4-bd04-4b85b5246f63	1522788954960	scripted	1	1	mediumMeasuringCup	1	exp	4	true	on	22476	mouseOverDistractor
+planned_sample	8947-629a9492-a323-44d4-bd04-4b85b5246f63	1522788955044	scripted	1	1	mediumMeasuringCup	1	exp	4	true	off	22560	mouseOverDistractor
+planned_sample	8947-629a9492-a323-44d4-bd04-4b85b5246f63	1522789175046	scripted	5	3	cassetteTape	0	exp	3	true	on	1508	mouseOverDistractor
+planned_sample	8947-629a9492-a323-44d4-bd04-4b85b5246f63	1522789176232	scripted	5	3	cassetteTape	0	exp	3	true	off	2692	mouseOverDistractor
+planned_sample	8947-629a9492-a323-44d4-bd04-4b85b5246f63	1522789275912	scripted	7	3	mediumCandle	0	base	7	true	on	6510	mouseOverDistractor
+planned_sample	8947-629a9492-a323-44d4-bd04-4b85b5246f63	1522789275945	scripted	7	3	mediumCandle	0	base	7	true	off	6545	mouseOverDistractor
+planned_sample	8947-629a9492-a323-44d4-bd04-4b85b5246f63	1522789277311	scripted	7	3	mediumCandle	0	base	7	true	on	7911	mouseOverDistractor
+planned_sample	8947-629a9492-a323-44d4-bd04-4b85b5246f63	1522789277362	scripted	7	3	mediumCandle	0	base	7	true	off	7961	mouseOverDistractor

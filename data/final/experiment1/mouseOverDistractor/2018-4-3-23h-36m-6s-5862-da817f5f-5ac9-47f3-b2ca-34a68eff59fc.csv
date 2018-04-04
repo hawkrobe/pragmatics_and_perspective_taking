@@ -1,0 +1,17 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823766948	scripted	2	1	roundBrush	0	exp	5	true	on	1705	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823769209	scripted	2	0	roundBrush	1	exp	5	true	off	3522	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823769610	scripted	2	0	roundBrush	1	exp	5	true	on	4371	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823801879	scripted	2	1	roundBrush	1	exp	5	true	on	36637	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823801911	scripted	2	1	roundBrush	1	exp	5	true	off	36669	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823833447	scripted	2	1	roundBrush	1	exp	5	true	on	1304	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522823834643	scripted	2	1	roundBrush	1	exp	5	true	off	2503	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522824585242	scripted	4	2	middleBlock	0	exp	2	true	on	2948	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522824586158	scripted	4	2	middleBlock	0	exp	2	true	off	3864	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522824586192	scripted	4	2	middleBlock	0	exp	2	true	on	3897	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522824586431	scripted	4	1	middleBlock	1	exp	2	true	off	4142	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522824625525	scripted	4	2	middleBlock	1	exp	2	true	on	1950	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522824627734	scripted	4	1	middleBlock	2	exp	2	true	off	4161	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522824677074	scripted	4	2	middleBlock	2	exp	2	true	on	2391	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522824678507	scripted	4	2	middleBlock	2	exp	2	true	off	3824	mouseOverDistractor
+planned_sample	5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc	1522824683150	scripted	4	2	middleBlock	0	exp	2	true	on	8472	mouseOverDistractor

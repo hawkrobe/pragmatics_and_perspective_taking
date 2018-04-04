@@ -1,0 +1,16 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823308997	scripted	4	3	cassetteTape	0	exp	3	true	on	1151	mouseOverDistractor
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823310462	scripted	4	2	cassetteTape	1	exp	3	true	off	2598	mouseOverDistractor
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823310497	scripted	4	2	cassetteTape	1	exp	3	true	on	2657	mouseOverDistractor
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823311139	scripted	4	2	cassetteTape	1	exp	3	true	off	3291	mouseOverDistractor
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823311736	scripted	4	2	cassetteTape	1	exp	3	true	on	3897	mouseOverDistractor
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823312730	scripted	4	3	cassetteTape	1	exp	3	true	on	4888	mouseOverDistractor
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823312784	scripted	4	3	cassetteTape	1	exp	3	true	off	4937	mouseOverDistractor
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823384778	scripted	5	2	boardEraser	0	exp	6	true	on	3552	mouseOverDistractor
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823385463	scripted	5	2	boardEraser	0	exp	6	true	off	4428	mouseOverDistractor
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823385475	scripted	5	2	boardEraser	0	exp	6	true	on	4444	mouseOverDistractor
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823386123	scripted	5	1	boardEraser	1	exp	6	true	off	5089	mouseOverDistractor
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823386489	scripted	5	1	boardEraser	1	exp	6	true	on	5444	mouseOverDistractor
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823386570	scripted	5	1	boardEraser	1	exp	6	true	off	5534	mouseOverDistractor
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823540425	scripted	7	1	computerMouse	0	base	8	true	on	3331	mouseOverDistractor
+planned_sample	8712-3da310b4-6a34-489a-8e2e-238d9174810a	1522823540432	scripted	7	1	computerMouse	0	base	8	true	off	3370	mouseOverDistractor

@@ -1,0 +1,12 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	1761-0d4777ae-ad0a-44e4-9b0e-d53fcabccb5a	1522799758993	unscripted	1	1	computerMouse	0	base	8	true	on	16163	mouseOverDistractor
+planned_sample	1761-0d4777ae-ad0a-44e4-9b0e-d53fcabccb5a	1522799759210	unscripted	1	1	computerMouse	0	base	8	true	off	16380	mouseOverDistractor
+planned_sample	1761-0d4777ae-ad0a-44e4-9b0e-d53fcabccb5a	1522799764194	unscripted	1	1	computerMouse	0	base	8	true	on	2904	mouseOverDistractor
+planned_sample	1761-0d4777ae-ad0a-44e4-9b0e-d53fcabccb5a	1522799765198	unscripted	1	1	computerMouse	0	base	8	true	off	3903	mouseOverDistractor
+planned_sample	1761-0d4777ae-ad0a-44e4-9b0e-d53fcabccb5a	1522800009477	unscripted	4	3	mediumCandle	0	exp	7	true	on	1943	mouseOverDistractor
+planned_sample	1761-0d4777ae-ad0a-44e4-9b0e-d53fcabccb5a	1522800036287	unscripted	5	1	mediumMeasuringCup	0	base	4	true	on	17804	mouseOverDistractor
+planned_sample	1761-0d4777ae-ad0a-44e4-9b0e-d53fcabccb5a	1522800036289	unscripted	5	1	mediumMeasuringCup	0	base	4	true	off	17860	mouseOverDistractor
+planned_sample	1761-0d4777ae-ad0a-44e4-9b0e-d53fcabccb5a	1522800157237	unscripted	7	1	sunGlasses	0	exp	1	true	on	9868	mouseOverDistractor
+planned_sample	1761-0d4777ae-ad0a-44e4-9b0e-d53fcabccb5a	1522800157369	unscripted	7	1	sunGlasses	0	exp	1	true	off	10002	mouseOverDistractor
+planned_sample	1761-0d4777ae-ad0a-44e4-9b0e-d53fcabccb5a	1522800218558	unscripted	8	2	boardEraser	0	exp	6	true	on	3345	mouseOverDistractor
+planned_sample	1761-0d4777ae-ad0a-44e4-9b0e-d53fcabccb5a	1522800219828	unscripted	8	2	boardEraser	0	exp	6	true	off	4612	mouseOverDistractor

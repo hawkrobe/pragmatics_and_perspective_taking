@@ -1,0 +1,14 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824278106	unscripted	1	1	computerMouse	0	exp	8	true	on	97722	mouseOverDistractor
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824278123	unscripted	1	1	computerMouse	0	exp	8	true	off	97739	mouseOverDistractor
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824280611	unscripted	1	1	computerMouse	0	exp	8	true	on	885	mouseOverDistractor
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824281896	unscripted	1	0	computerMouse	1	exp	8	true	off	2168	mouseOverDistractor
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824282158	unscripted	1	0	computerMouse	1	exp	8	true	on	2436	mouseOverDistractor
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824282611	unscripted	1	0	computerMouse	1	exp	8	true	off	2887	mouseOverDistractor
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824283194	unscripted	1	0	computerMouse	1	exp	8	true	on	3470	mouseOverDistractor
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824285126	unscripted	1	1	computerMouse	1	exp	8	true	on	5403	mouseOverDistractor
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824301676	unscripted	1	1	computerMouse	1	exp	8	true	off	21953	mouseOverDistractor
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824329481	unscripted	1	1	computerMouse	1	exp	8	true	on	49758	mouseOverDistractor
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824329548	unscripted	1	1	computerMouse	1	exp	8	true	off	49825	mouseOverDistractor
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824348016	unscripted	1	1	computerMouse	1	exp	8	true	on	1989	mouseOverDistractor
+planned_sample	1985-4cda833e-ea59-444e-b7f7-c5f8bf10a243	1522824348051	unscripted	1	1	computerMouse	1	exp	8	true	off	2021	mouseOverDistractor

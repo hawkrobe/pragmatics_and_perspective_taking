@@ -1,0 +1,16 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798072743	unscripted	2	2	boardEraser	0	exp	6	true	on	5668	mouseOverDistractor
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798072754	unscripted	2	2	boardEraser	0	exp	6	true	off	5684	mouseOverDistractor
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798077698	unscripted	2	2	boardEraser	0	exp	6	true	on	717	mouseOverDistractor
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798078448	unscripted	2	2	boardEraser	0	exp	6	true	off	1484	mouseOverDistractor
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798080083	unscripted	2	1	boardEraser	1	exp	6	true	on	3116	mouseOverDistractor
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798082054	unscripted	2	2	boardEraser	1	exp	6	true	on	5082	mouseOverDistractor
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798082195	unscripted	2	2	boardEraser	1	exp	6	true	off	5199	mouseOverDistractor
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798097893	unscripted	2	2	boardEraser	1	exp	6	true	on	20926	mouseOverDistractor
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798097958	unscripted	2	2	boardEraser	1	exp	6	true	off	20994	mouseOverDistractor
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798296967	unscripted	5	1	roundBrush	0	exp	5	true	on	1314	mouseOverDistractor
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798297562	unscripted	5	1	roundBrush	0	exp	5	true	off	1913	mouseOverDistractor
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798431904	unscripted	6	3	mediumCandle	0	exp	7	true	on	5899	mouseOverDistractor
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798432032	unscripted	6	3	mediumCandle	0	exp	7	true	off	6032	mouseOverDistractor
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798438516	unscripted	6	3	mediumCandle	0	exp	7	true	on	12513	mouseOverDistractor
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798445123	unscripted	6	3	mediumCandle	0	exp	7	true	off	19127	mouseOverDistractor

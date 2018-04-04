@@ -1,0 +1,16 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798507576	scripted	4	1	sunGlasses	0	exp	1	true	on	23221	mouseOverDistractor
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798507612	scripted	4	1	sunGlasses	0	exp	1	true	off	23255	mouseOverDistractor
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798683142	scripted	6	2	middleBlock	0	exp	2	true	on	1657	mouseOverDistractor
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798684736	scripted	6	1	middleBlock	1	exp	2	true	off	3255	mouseOverDistractor
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798685334	scripted	6	1	middleBlock	1	exp	2	true	on	3854	mouseOverDistractor
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798688137	scripted	6	2	middleBlock	1	exp	2	true	on	6656	mouseOverDistractor
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798688415	scripted	6	2	middleBlock	1	exp	2	true	off	6934	mouseOverDistractor
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798867296	scripted	8	2	boardEraser	0	exp	6	true	on	6349	mouseOverDistractor
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798868187	scripted	8	2	boardEraser	0	exp	6	true	off	7245	mouseOverDistractor
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798868216	scripted	8	2	boardEraser	0	exp	6	true	on	7262	mouseOverDistractor
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798868241	scripted	8	2	boardEraser	0	exp	6	true	off	7293	mouseOverDistractor
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798868268	scripted	8	2	boardEraser	0	exp	6	true	on	7326	mouseOverDistractor
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798868651	scripted	8	1	boardEraser	1	exp	6	true	off	7709	mouseOverDistractor
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798892065	scripted	8	2	boardEraser	1	exp	6	true	on	31122	mouseOverDistractor
+planned_sample	1552-aed8937c-6189-4750-ae14-63e8ed41fc22	1522798899270	scripted	8	2	boardEraser	1	exp	6	true	off	38326	mouseOverDistractor

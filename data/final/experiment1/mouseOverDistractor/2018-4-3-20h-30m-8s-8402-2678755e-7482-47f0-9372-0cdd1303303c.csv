@@ -1,0 +1,15 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	8402-2678755e-7482-47f0-9372-0cdd1303303c	1522812608041	unscripted	1	1	computerMouse	0	base	8	true	on	1084	mouseOverDistractor
+planned_sample	8402-2678755e-7482-47f0-9372-0cdd1303303c	1522812608143	unscripted	1	1	computerMouse	0	base	8	true	off	1184	mouseOverDistractor
+planned_sample	8402-2678755e-7482-47f0-9372-0cdd1303303c	1522812990064	unscripted	7	1	sunGlasses	0	exp	1	true	on	922	mouseOverDistractor
+planned_sample	8402-2678755e-7482-47f0-9372-0cdd1303303c	1522812990288	unscripted	7	1	sunGlasses	0	exp	1	true	off	1138	mouseOverDistractor
+planned_sample	8402-2678755e-7482-47f0-9372-0cdd1303303c	1522812990833	unscripted	7	1	sunGlasses	0	exp	1	true	on	1672	mouseOverDistractor
+planned_sample	8402-2678755e-7482-47f0-9372-0cdd1303303c	1522812991286	unscripted	7	1	sunGlasses	0	exp	1	true	off	2147	mouseOverDistractor
+planned_sample	8402-2678755e-7482-47f0-9372-0cdd1303303c	1522812991617	unscripted	7	1	sunGlasses	0	exp	1	true	on	2192	mouseOverDistractor
+planned_sample	8402-2678755e-7482-47f0-9372-0cdd1303303c	1522812991630	unscripted	7	0	sunGlasses	1	exp	1	true	off	2378	mouseOverDistractor
+planned_sample	8402-2678755e-7482-47f0-9372-0cdd1303303c	1522812992192	unscripted	7	0	sunGlasses	1	exp	1	true	on	3054	mouseOverDistractor
+planned_sample	8402-2678755e-7482-47f0-9372-0cdd1303303c	1522812993144	unscripted	7	0	sunGlasses	1	exp	1	true	off	4005	mouseOverDistractor
+planned_sample	8402-2678755e-7482-47f0-9372-0cdd1303303c	1522813012099	unscripted	7	1	sunGlasses	1	exp	1	true	on	22938	mouseOverDistractor
+planned_sample	8402-2678755e-7482-47f0-9372-0cdd1303303c	1522813012129	unscripted	7	1	sunGlasses	1	exp	1	true	off	22954	mouseOverDistractor
+planned_sample	8402-2678755e-7482-47f0-9372-0cdd1303303c	1522813019144	unscripted	7	1	sunGlasses	1	exp	1	true	on	6251	mouseOverDistractor
+planned_sample	8402-2678755e-7482-47f0-9372-0cdd1303303c	1522813021444	unscripted	7	1	sunGlasses	1	exp	1	true	off	8551	mouseOverDistractor

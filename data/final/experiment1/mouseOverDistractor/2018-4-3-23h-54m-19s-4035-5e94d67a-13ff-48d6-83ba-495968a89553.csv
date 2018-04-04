@@ -1,0 +1,17 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522824859297	scripted	1	1	sunGlasses	0	base	1	true	on	5729	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522824859363	scripted	1	1	sunGlasses	0	base	1	true	off	5795	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522824965595	scripted	2	1	mediumMeasuringCup	0	exp	4	true	on	3225	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522824968670	scripted	2	0	mediumMeasuringCup	1	exp	4	true	off	6290	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522824971934	scripted	2	1	mediumMeasuringCup	1	exp	4	true	on	9572	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522824973484	scripted	2	1	mediumMeasuringCup	1	exp	4	true	off	11122	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522824993169	scripted	2	1	mediumMeasuringCup	1	exp	4	true	on	4346	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522825003723	scripted	2	1	mediumMeasuringCup	1	exp	4	true	off	14897	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522825217709	scripted	4	3	mediumCandle	0	exp	7	true	on	5418	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522825220681	scripted	4	2	mediumCandle	1	exp	7	true	off	8371	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522825226488	scripted	4	3	mediumCandle	1	exp	7	true	on	14200	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522825226572	scripted	4	3	mediumCandle	1	exp	7	true	off	14283	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522825489661	scripted	7	3	cassetteTape	0	exp	3	true	on	1574	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522825492919	scripted	7	2	cassetteTape	1	exp	3	true	off	4812	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522825622465	scripted	8	2	middleBlock	0	exp	2	true	on	3853	mouseOverDistractor
+planned_sample	4035-5e94d67a-13ff-48d6-83ba-495968a89553	1522825626262	scripted	8	1	middleBlock	1	exp	2	true	off	7629	mouseOverDistractor

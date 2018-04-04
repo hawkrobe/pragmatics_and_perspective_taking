@@ -1,0 +1,15 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	6540-7f14fa62-c692-4860-90d4-32baa1137833	1522802993645	unscripted	1	2	boardEraser	0	exp	6	true	on	5748	mouseOverDistractor
+planned_sample	6540-7f14fa62-c692-4860-90d4-32baa1137833	1522802997910	unscripted	1	1	boardEraser	1	exp	6	true	off	10014	mouseOverDistractor
+planned_sample	6540-7f14fa62-c692-4860-90d4-32baa1137833	1522803018462	unscripted	1	2	boardEraser	1	exp	6	true	on	944	mouseOverDistractor
+planned_sample	6540-7f14fa62-c692-4860-90d4-32baa1137833	1522803026243	unscripted	1	1	boardEraser	2	exp	6	true	off	8727	mouseOverDistractor
+planned_sample	6540-7f14fa62-c692-4860-90d4-32baa1137833	1522803053611	unscripted	1	2	boardEraser	0	exp	6	true	on	4278	mouseOverDistractor
+planned_sample	6540-7f14fa62-c692-4860-90d4-32baa1137833	1522803053711	unscripted	1	2	boardEraser	0	exp	6	true	off	4378	mouseOverDistractor
+planned_sample	6540-7f14fa62-c692-4860-90d4-32baa1137833	1522803342545	unscripted	4	1	mediumMeasuringCup	0	base	4	true	on	20636	mouseOverDistractor
+planned_sample	6540-7f14fa62-c692-4860-90d4-32baa1137833	1522803342630	unscripted	4	1	mediumMeasuringCup	0	base	4	true	off	20720	mouseOverDistractor
+planned_sample	6540-7f14fa62-c692-4860-90d4-32baa1137833	1522803351245	unscripted	4	1	mediumMeasuringCup	0	base	4	true	on	6952	mouseOverDistractor
+planned_sample	6540-7f14fa62-c692-4860-90d4-32baa1137833	1522803351296	unscripted	4	1	mediumMeasuringCup	0	base	4	true	off	7002	mouseOverDistractor
+planned_sample	6540-7f14fa62-c692-4860-90d4-32baa1137833	1522803434496	unscripted	5	1	sunGlasses	0	base	1	true	on	2899	mouseOverDistractor
+planned_sample	6540-7f14fa62-c692-4860-90d4-32baa1137833	1522803434646	unscripted	5	1	sunGlasses	0	base	1	true	off	3049	mouseOverDistractor
+planned_sample	6540-7f14fa62-c692-4860-90d4-32baa1137833	1522803516216	unscripted	6	1	computerMouse	0	exp	8	true	on	1813	mouseOverDistractor
+planned_sample	6540-7f14fa62-c692-4860-90d4-32baa1137833	1522803519912	unscripted	6	0	computerMouse	1	exp	8	true	off	5512	mouseOverDistractor
