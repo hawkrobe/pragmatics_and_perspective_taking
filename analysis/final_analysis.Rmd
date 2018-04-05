@@ -11,6 +11,278 @@ library(tidyverse)
 library(ggthemes)
 library(lme4)
 library(lmerTest)
+library(tidyboot)
+```
+
+# Experiment 1
+
+```{r}
+exp1_messages <- read_csv('../data/final/experiment1/chatMessage/messagesFromMongo.csv') %>%
+  mutate(critical = ifelse(critical == 'True', 1, 0)) %>%
+  rename(messageTime = serverTime) %>%
+  filter(sender == 'director') %>%
+  group_by(gameid, trialNum, instructionNum, attemptNum, critical, condition, objectSet, targetObject) %>%
+  summarize(text = paste0(contents, collapse = ' '),
+            typingRT = sum(typingRT)) %>%   # Concatenate multiple utterance on same trial
+  mutate(numRawWords = str_count(text, "\\S+")) 
+
+## Have to fix attemptNum bug (got recorded incorrectly)
+exp1_drops <- read_csv('../data/final/experiment1/drop/dropsFromMongo.csv') %>%
+  mutate(critical = ifelse(critical == 'True', 1, 0),
+         correct = ifelse(correct == 'correct', 1, 0),
+         instructionNum = ifelse(correct == 0, instructionNum + 1, instructionNum)) %>%
+  group_by(gameid, instructionNum, trialNum) %>%
+  mutate(attemptNum = ifelse(attemptNum == 0, max(attemptNum), attemptNum - 1)) %>%
+  rename(dropTime = serverTime) %>%
+  select(-X1, -eventType)
+```
+
+```{r}
+exp1_subjInfo <- read_csv('../data/final/experiment1/turk/subjInfo.csv')
+incompleteIDs <- unique((exp1_messages %>% 
+                           group_by(gameid, trialNum, instructionNum) %>% 
+                           summarize(id = row_number()) %>% 
+                           group_by(gameid) %>% 
+                           tally() %>% 
+                           filter(n != 32))$gameid)
+
+confused <- unique((exp1_subjInfo %>% filter(understandsInstructions != 'yes'))$gameid)
+nonNative <- unique((exp1_subjInfo %>% filter(nativeEnglish != 'yes'))$gameid)
+
+nonCriticalMistakes <- unique((exp1_drops %>%
+  # only look at mistakes on noncritical (filler) items
+  filter(critical != 1) %>%
+  # don't want to double-count people for messing the same thing up multiple times
+  filter(attemptNum == 1) %>% 
+  group_by(gameid, correct) %>%
+  tally() %>%
+  # implement exclusion criteria of errors on >~10% of non-critical trials
+  filter(n > 1))$gameid)
+
+exp1_badGames <- c(incompleteIDs, nonNative, confused, nonCriticalMistakes)
+
+exp1_d <- exp1_messages %>%
+  left_join(exp1_drops) %>% #, by = c('gameid', 'trialNum', 'instructionNum', 'trialType', 
+                      #         'targetObject', 'critical', 'condition', 'attemptNum')) %>%
+  filter(!(gameid %in% exp1_badGames))
+```
+
+## Descriptive stats
+
+How many recruited, how many excluded, for what reasons, etc?
+
+```{r}
+paste0('recruited ', length(exp1_subjInfo$gameid))
+paste0('total games ', length(unique(exp1_drops$gameid)))
+paste0('incomplete ', length(incompleteIDs))
+paste0('too many mistakes ', length(setdiff(union(confused, nonCriticalMistakes), incompleteIDs)))
+paste0('non-native english ', length(setdiff(nonNative, union(confused, union(nonCriticalMistakes, incompleteIDs)))))
+paste0('final sample ', length(unique(exp1_d$gameid)))
+```
+
+Happened to get slightly more people in scripted condition
+
+```{r}
+exp1_d %>% 
+  group_by(gameid, condition) %>% 
+  tally() %>% 
+  group_by(condition) %>% 
+  summarize(numInCondition = length(n))
+```
+
+## Listener Analyses
+
+First, look at error rates
+
+```{r}
+critTrials <- exp1_d %>% 
+  filter(attemptNum == 0) %>%
+  filter(critical == 1) %>%
+  filter(trialType == 'exp') 
+
+critTrials %>%
+  group_by(gameid, condition) %>%
+  summarize(pctCriticalError = 1 - mean(correct)) %>%
+  ggplot(aes(x = pctCriticalError, fill = condition)) +
+    #geom_density(aes(y = ..density../sum(..density..)), alpha = 0.5, adjust = 1.25)
+    geom_histogram(aes(y = ..count../sum(..count..)), alpha = 0.5, position = 'dodge', binwidth = 0.125)  +
+    facet_grid(condition ~ .) +
+    theme_few()
+
+ggsave('~/Downloads/criticalErrors.pdf')
+```
+
+```{r}
+errorTable <- critTrials %>%
+  group_by(gameid, condition) %>%
+  summarize(numErrors = 4 - sum(correct),
+            numPossible = length(correct),
+         atLeastOnce = sum(correct) < 4,
+         atLeastTwice = sum(correct) < 3,
+          atLeastThree = sum(correct) < 2,
+         pctErrors = 1 - mean(correct)) %>%
+  group_by(condition) %>%
+  summarize(pctAtLeastOnce = mean(atLeastOnce),
+            pctAtLeastTwice = mean(atLeastTwice),
+            pctAtLeastThree = mean(atLeastThree),
+            avgPctErrors = mean(pctErrors),
+            totalNumErrors = sum(numErrors),
+            totalPossible = sum(numPossible))
+errorTable
+```
+
+### Statistical tests of error reduction
+
+```{r}
+prop.test(errorTable$totalNumErrors, errorTable$totalPossible)
+```
+
+### Control for item-level error rates...
+
+```{r}
+summary(glmer(correct ~ condition + (1|gameid) + (1+condition | objectSet), family = 'binomial', 
+              data = critTrials))
+```
+
+## Error heterogeneity across items...
+
+```{r}
+diffs <- critTrials %>% 
+  mutate(error = 1 - correct) %>%
+  group_by(objectSet, condition, targetObject) %>%
+  summarize(pctErrors = mean(error)) %>%
+  spread(condition, pctErrors) %>%
+  mutate(errorReduction = scripted - unscripted) %>%
+  gather(condition, pctErrors, scripted, unscripted) 
+
+critTrials %>% 
+  left_join(diffs) %>%
+  mutate(error = 1 - correct) %>%
+  group_by(objectSet, condition, targetObject, errorReduction) %>%
+  tidyboot_mean(column = error) %>%
+  ggplot(aes(x = reorder(targetObject, -errorReduction), y = empirical_stat, color = condition, group = condition)) +
+    geom_point() +
+    geom_line(stat = 'identity', position = 'dodge') +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0) +
+    theme_few() +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    ggtitle('error heterogeneity across item') +
+    xlab('critical item') +
+    ylab('% error in condition')
+
+ggsave('~/Downloads/itemHeterogeneity.pdf')
+```
+
+```{r}
+exp1_d %>% 
+  filter(attemptNum == 0) %>%
+  filter(correct == 1) %>%
+  filter(critical == 1) %>% 
+  ungroup() %>%
+  filter(responseTime < median(responseTime, na.rm = T) +  3* sd(responseTime)) %>%
+  group_by(trialType, condition) %>%
+  mutate(m = median(responseTime)) %>%
+  ggplot(aes(x = responseTime)) +
+    geom_histogram() +
+    geom_vline(aes(xintercept = m))+
+    facet_wrap(trialType ~ condition) +
+    scale_x_log10() +
+    theme_few() 
+```
+
+```{r}
+summary(lmer(log(responseTime) ~ trialType * condition + (1 | gameid),
+     data = exp1_d %>% 
+        filter(attemptNum == 0) %>%
+        filter(correct == 1) %>%
+        filter(critical == 1) %>% 
+        ungroup() %>%
+        filter(responseTime < median(responseTime, na.rm = T) +  3* sd(responseTime))))
+```
+
+## Mouse-tracking 
+
+Even on critical trials where they didn't make errors, how often did they 'consider' the distractor (i.e. hover over the distractor cell)
+
+```{r}
+d.onDistractor <- exp1_d %>% 
+  left_join(read_csv('../data/final/experiment1/mouseOverDistractor/distractorMouseFromMongo.csv') %>% 
+              mutate(critical = ifelse(critical == 'True', 1, 0))
+            ) %>%
+  select(-serverTime, -X1) %>%
+  filter(attemptNum == 0) %>%
+  filter(correct == 1) %>%
+  filter(critical == 1) %>%
+  group_by(gameid, trialNum) %>%
+  mutate(toggle = floor((row_number() - 1) / 2)) %>%
+  mutate(onOff = ifelse(is.na(onOff), 'off', onOff)) %>%
+  spread(onOff, timeElapsed) %>%
+  mutate(diff = ifelse(is.na(off), 0, off - on)) %>%
+  group_by(gameid,condition,objectSet, trialType) %>%
+  summarize(totalAmtTimeOnDistractor = sum(diff)) %>%
+  mutate(hovered = totalAmtTimeOnDistractor > 0) %>%
+  ungroup() 
+
+dodge <- position_dodge(width=0.9)
+d.onDistractor %>%
+  group_by(condition, trialType) %>%
+  tidyboot_mean(column = hovered) %>%
+  ggplot(aes(x = condition, y=empirical_stat, fill = trialType)) +
+    geom_bar(stat = 'identity', position = dodge) +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0, position = dodge) +
+    theme_few() +
+    ylab('% trials hovering over distractor') +
+    theme(aspect.ratio = 0.5)
+
+ggsave('~/Downloads/hoverOverDistractor.pdf')
+```
+
+```{r}
+summary(glmer(hovered ~ trialType * condition + (1 + trialType|gameid) + (1 |objectSet), data = d.onDistractor, family = 'binomial'))
+```
+
+
+Note: because I stopped recording from the mouse as soon as someone starts dragging, it's technically possible for them to hover over the distractor object, click and start to drag it, but then drop it in place and go over to the target object. So they get it 'correct' even though it looks like their mouse never gets close... 
+
+Note: a couple researcher degrees of freedom here: 
+* do we take the time from 'object reveal' or from first mouse move (i.e. subtract off the first time recorded NOT in target or distractor)? 
+* do we restrict to only 'correct' trials (i.e. to make an argument like "even when they got it right, they were still distracted") or include everything?
+* how big a radius around the target center should we consider a 'mouse-fixation' (obviously needs to be close enough to move it, but objects were different sizes...)
+
+```{r}
+# Touch people?
+touch <- c('0095-03bb67a7-ae89-402d-9f7f-c5898784e63f', '0093-b4e1ce5c-2e5c-462a-bfed-87fa81611139')
+targetRadius = 175
+d.mouse <- exp1_d %>% ungroup() %>%
+  left_join(read_csv('../data/final/experiment1/updateMouse/mouseFromMongo.csv') %>%
+                  mutate(critical = ifelse(critical == 'True', 1, 0))
+  ) %>%
+  filter(!(gameid %in% touch)) %>%
+  filter(critical == 1) %>% filter(attemptNum == 0) %>% filter(correct == 1) %>%
+  select(-critical, -attemptNum, -eventType, -iterationName) %>%
+  mutate(distractorDistance = as.numeric(distractorDistance)) %>%
+  group_by(condition, trialType, gameid, objectSet, onTarget = targetDistance < targetRadius) %>%
+  summarize(firstTime = first(timeFromReveal), 
+            lastTime = last(timeFromReveal)) %>%
+  group_by(condition, trialType, gameid, objectSet) %>%
+  summarize(initMouseMove = min(firstTime), 
+            initTargetHover = max(firstTime) - initMouseMove, 
+            finalTargetHover = max(lastTime) - initMouseMove) %>%
+  select(-initMouseMove) %>%
+  gather(metric, value, initTargetHover, finalTargetHover) %>%
+  #spread(onTarget, value) %>%
+  #mutate(timeFromFirstMouseMove = `TRUE` - `FALSE`) %>%
+  #ungroup() %>%
+  #filter(firstTime < mean(firstTime, na.rm = T) + 3 * sd(firstTime, na.rm = T)) %>%
+  group_by(condition, trialType, metric) %>%
+  tidyboot_mean(column = value)
+
+d.mouse
+ggplot(d.mouse, aes(x = trialType, y = empirical_stat, fill = metric)) +
+  geom_bar(stat= 'identity', position = dodge) +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), position = dodge, width = 0) +
+  facet_wrap(~ condition) +
+  theme_few()
 ```
 
 # Experiment 2
@@ -18,7 +290,7 @@ library(lmerTest)
 ## Import turk survey data 
 
 ```{r}
-subjInfo <- read_csv('../data/final/experiment2/planned_sample/turk/subjInfo.csv')
+exp2_subjInfo <- read_csv('../data/final/experiment2/planned_sample/turk/subjInfo.csv')
 ```
 
 ## Import message data
@@ -29,7 +301,7 @@ d_annotated <- read_csv('../data/final/experiment2/planned_sample/chatMessage/me
 # nonNativeSpeakerIDs <- unique((tangramSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
 incompleteIDs <- unique((d_annotated %>% group_by(gameid) %>% 
                            filter(length(unique(trialNum)) != 24))$gameid)
-confused <- unique((subjInfo %>% filter(understandsInstructions != 'yes'))$gameid)
+confused <- unique((exp2_subjInfo %>% filter(understandsInstructions != 'yes'))$gameid)
 
 # Some speakers relied on location in grid (TODO: WHAT ABOUT 'BELOW' PEOPLE?)
 location_abusers <- c('8219-bb7861c1-43f4-480c-906b-8441c583c0ab', 
@@ -263,24 +535,4 @@ ggplot(d.booted, aes(x = context, y = empirical_stat, fill = hidden)) +
   scale_fill_colorblind()
 
 ggsave('~/Downloads/by-feature-analysis.pdf')
-```
-
-## Mouse-tracking 
-
-should be really straightforward but might help catch a bug for Exp. 1?
-
-```{r}
-d.mouse <- read_tsv('../data/final/experiment2/planned_sample/updateMouse/mouse.csv') %>%
-  filter(!(gameid %in% badGames)) %>%
-  left_join(d_annotated)
-
-d.mouse %>%
-  filter(distractorDistance != 'none') %>%
-  mutate(distractorDistance = as.numeric(distractorDistance)) %>%
-  group_by(gameid, trialNum) %>%
-  mutate(initTime = first(localTime)) %>%
-  group_by(context, hidden, gameid, trialNum, targetDistance < 300, distractorDistance < 300)  %>%
-  summarize(firstTarget = first(localTime) - mean(initTime))
-  # filter(distractorDistance < 300)
-#  group_by()
 ```
