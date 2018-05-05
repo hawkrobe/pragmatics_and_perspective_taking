@@ -17,6 +17,7 @@ library(tidyboot)
 # Experiment 1
 
 ```{r}
+raw <- read_csv('../data/final/experiment1/chatMessage/messagesFromMongo.csv')
 exp1_messages <- read_csv('../data/final/experiment1/chatMessage/messagesFromMongo.csv') %>%
   mutate(critical = ifelse(critical == 'True', 1, 0)) %>%
   rename(messageTime = serverTime) %>%
@@ -26,11 +27,14 @@ exp1_messages <- read_csv('../data/final/experiment1/chatMessage/messagesFromMon
             typingRT = sum(typingRT)) %>%   # Concatenate multiple utterance on same trial
   mutate(numRawWords = str_count(text, "\\S+")) 
 
-## Have to fix attemptNum bug (got recorded incorrectly)
+## Have to post-hoc attemptNum and instructionNum bugs (got reset for next trial prematurely)
+## Also, remove trials where multi-drop bug happened (i.e. where clicking multiple times triggered multiple instruction resetting)
 exp1_drops <- read_csv('../data/final/experiment1/drop/dropsFromMongo.csv') %>%
   mutate(critical = ifelse(critical == 'True', 1, 0),
          correct = ifelse(correct == 'correct', 1, 0),
          instructionNum = ifelse(correct == 0, instructionNum + 1, instructionNum)) %>%
+  group_by(gameid, targetObject) %>%
+  filter(length(unique(instructionNum)) < 2) %>%
   group_by(gameid, instructionNum, trialNum) %>%
   mutate(attemptNum = ifelse(attemptNum == 0, max(attemptNum), attemptNum - 1)) %>%
   rename(dropTime = serverTime) %>%
@@ -59,10 +63,20 @@ nonCriticalMistakes <- unique((exp1_drops %>%
   # implement exclusion criteria of errors on >~10% of non-critical trials
   filter(n > 1))$gameid)
 
-exp1_badGames <- c(incompleteIDs, nonNative, confused, nonCriticalMistakes)
+buggyTrials <- read_csv('../data/final/experiment1/drop/dropsFromMongo.csv') %>%
+  mutate(critical = ifelse(critical == 'True', 1, 0),
+       correct = ifelse(correct == 'correct', 1, 0),
+       instructionNum = ifelse(correct == 0, instructionNum + 1, instructionNum)) %>%
+  group_by(gameid, targetObject) %>%
+  mutate(numInstructions = length(unique(instructionNum))) %>%
+  filter(numInstructions > 1)
 
-exp1_d <- exp1_messages %>%
-  left_join(exp1_drops) %>% #, by = c('gameid', 'trialNum', 'instructionNum', 'trialType', 
+taboo <- c('4241-cda4a373-ffd7-41e3-ae60-82b9d377a455')
+onlyLocation <- c('3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1', '9457-4189cc9b-a82b-4db9-828d-bf90d1987aee')
+exp1_badGames <- c(incompleteIDs, nonNative, confused, nonCriticalMistakes, taboo, onlyLocation, unique(buggyTrials$gameid))
+
+exp1_d <- exp1_drops %>% 
+  left_join(exp1_messages) %>% #, by = c('gameid', 'trialNum', 'instructionNum', 'trialType', 
                       #         'targetObject', 'critical', 'condition', 'attemptNum')) %>%
   filter(!(gameid %in% exp1_badGames))
 ```
@@ -90,6 +104,16 @@ exp1_d %>%
   summarize(numInCondition = length(n))
 ```
 
+And slightly uneven numbers of 'experimental' trials in each item... 
+
+```{r}
+exp1_d %>% 
+  group_by(gameid, objectSet, trialType, condition) %>% 
+  tally() %>% 
+  group_by(condition, objectSet, trialType) %>% 
+  summarize(numInCondition = length(n))
+```
+
 ## Listener Analyses
 
 First, look at error rates
@@ -102,15 +126,37 @@ critTrials <- exp1_d %>%
 
 critTrials %>%
   group_by(gameid, condition) %>%
-  summarize(pctCriticalError = 1 - mean(correct)) %>%
+  summarize(pctCriticalError = 4 - sum(correct)) %>%
   ggplot(aes(x = pctCriticalError, fill = condition)) +
-    #geom_density(aes(y = ..density../sum(..density..)), alpha = 0.5, adjust = 1.25)
-    geom_histogram(aes(y = ..count../sum(..count..)), alpha = 0.5, position = 'dodge', binwidth = 0.125)  +
+    geom_histogram(alpha = 0.5, position = 'dodge', binwidth = 0.5)  +
     facet_grid(condition ~ .) +
-    theme_few()
+    theme_few() +
+    ylab('# pairs making k critical errors') +
+    xlab('# critical errors') + 
+    theme(aspect.ratio = 1, legend.position="none") +
+    scale_fill_colorblind()+
+    ggtitle('critical errors')
+  
 
-ggsave('~/Downloads/criticalErrors.pdf')
+ggsave('../writing/journal_manuscript/figures/criticalErrors.pdf')
 ```
+
+```{r}
+critTrials %>%
+  group_by(condition) %>%
+  mutate(error = 1 - correct) %>%
+  tidyboot_mean(column = error) %>%
+  ggplot(aes(x = condition, y =empirical_stat, fill = condition)) +
+    geom_bar(stat = 'identity', alpha = .5) +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0) +
+    ylab('% errors') +
+    scale_fill_colorblind()+
+    theme_few() +
+    theme(aspect.ratio = 1, legend.position="none") 
+
+ggsave('../writing/journal_manuscript/figures/errorMeans.pdf', height = 3, width = 3)
+```
+
 
 ```{r}
 errorTable <- critTrials %>%
@@ -170,7 +216,7 @@ critTrials %>%
     xlab('critical item') +
     ylab('% error in condition')
 
-ggsave('~/Downloads/itemHeterogeneity.pdf')
+ggsave('../writing/journal_manuscript/figures//itemHeterogeneity.pdf')
 ```
 
 ```{r}
@@ -228,13 +274,14 @@ d.onDistractor %>%
   group_by(condition, trialType) %>%
   tidyboot_mean(column = hovered) %>%
   ggplot(aes(x = condition, y=empirical_stat, fill = trialType)) +
-    geom_bar(stat = 'identity', position = dodge) +
+    geom_bar(stat = 'identity', position = dodge, alpha =.5) +
     geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0, position = dodge) +
     theme_few() +
     ylab('% trials hovering over distractor') +
+    scale_fill_colorblind()+
     theme(aspect.ratio = 0.5)
-
-ggsave('~/Downloads/hoverOverDistractor.pdf')
+    
+ggsave('../writing/journal_manuscript/figures//hoverOverDistractor.pdf', height = 3, width = 6)
 ```
 
 ```{r}
@@ -285,6 +332,40 @@ ggplot(d.mouse, aes(x = trialType, y = empirical_stat, fill = metric)) +
   theme_few()
 ```
 
+## Prep informativity norming stims
+
+```{r}
+refExps <- exp1_d %>% 
+  filter(condition == 'unscripted') %>% 
+  filter(critical == 1) %>% 
+  filter(attemptNum == 0) %>% 
+  ungroup() %>%
+  select(gameid, objectSet, text) 
+
+write_csv(refExps, './refExpressions_raw.csv')
+```
+
+For 6 of the 8 items, unscripted speakers had significantly more words in their referring expressions... (n.s. for the other 2, but idiosyncratic)
+
+```{r}
+refs <- read_csv('../data/final/experiment1/refExpressions.csv')
+scripted <- data.frame(objectSet = c(1,2,3,4,5,6,7,8), 
+                       m = c('glasses', 'bottom block', 'tape', 'large measuring cup', 'brush', 'eraser', 'small candle', 'mouse'),
+                       numRawWords = c(1,2,1,3,1,1,2,1))
+refs %>% 
+  mutate(numRawWords = str_count(text, "\\S+")) %>%
+  group_by(objectSet) %>%
+  tidyboot_mean(numRawWords) %>%
+  left_join(scripted)
+```
+
+## TO-DO
+
+1. Subject-level analyses of informativity: could be a mixture of 'lazy' egocentric speakers and 'attentive' audience-sensitive speakers? 
+2. Sometimes the additional information is in movement instruction (i.e. "one square left toward a curtain" or "one square up below the comb")
+3. Change in informativity over time (are people already being informative on first round? are people 'learning' to be more informative over course of expt? or getting less informative because tired of task?)
+4. Just length of referring expression in words?
+
 # Experiment 2
 
 ## Import turk survey data 
@@ -312,7 +393,7 @@ location_abusers <- c('8219-bb7861c1-43f4-480c-906b-8441c583c0ab',
 tabooers <- c('2929-d218f724-b45e-416b-af44-5cab5658bad9', #(opposite of white... primary color...)
               '7600-346d56b5-bd76-406f-befb-6b47e07d5916', # MERRY GO ROUND
               '3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b') # CAN YOU SEE???
-badGames <- c(incompleteIDs, pureLocation, confused)
+badGames <- c(incompleteIDs, location_abusers, confused)
 
 d <- d_annotated %>%
   mutate(numFeatures = colorMention + shapeMention + textureMention) %>%
@@ -336,21 +417,25 @@ ggplot(basic.d, aes(x = far, y = close)) +
     geom_abline(intercept = 0, slope = 1) +
     ylim(1,12) +
     xlim(1,12) +
-    theme(aspect.ratio = 1)
+    theme(aspect.ratio = 1, text = element_text(size=20))
 ```
 
 Aggregated to difference scores:
 
 ```{r}
-ggplot(basic.d, aes(x = ratio)) +
-    geom_histogram(binwidth = 0.25) +
-    theme_bw() +
-    geom_vline(xintercept = 0) +
-    # ylim(1,12) +
-    xlim(-4,4) +
-    theme(aspect.ratio = 1)
+tidyboot_mean(basic.d %>%ungroup(), column = diff) %>%
+  ggplot(aes(x = 'close - far', y = empirical_stat)) +
+      geom_bar(stat ='identity', width = 0.25) +
+      geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0) +
+      theme_few()+
+      geom_hline(yintercept = 0) +
+      #geom_vline(xintercept = 0) +
+      ylim(-1,1) +
+      # xlim(-4,4) +
+      ylab('# words used') +
+    theme(aspect.ratio = 1, text = element_text(size=20))
 
-t.test(basic.d$ratio)
+t.test(basic.d$diff)
 ```
 
 ## Message length collapsing across all subjects
@@ -366,7 +451,7 @@ d %>%
     geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), position = dodge, width = 0) +
     theme_few() +
     ylab('mean # words') +
-    theme(aspect.ratio = .5) +
+    theme(aspect.ratio = 1, text = element_text(size=20)) +
     scale_fill_colorblind()
 
 ggsave('~/Downloads/aggregated_means.pdf', width = 4, height = 2)
@@ -403,9 +488,9 @@ ggplot(hidden.d, aes(x = no, y = yes)) +
     ylim(1,15) +
     ylab('# words (with occlusions)') +
     xlab('# words (without occlusions)') +
-    ggtitle('Within-pair comparisons of reference w/ and w/out occlusion') +
+    #ggtitle('Within-pair comparisons of reference w/ and w/out occlusion') +
     xlim(1,15) +
-    theme(aspect.ratio = 1)
+    theme(aspect.ratio = 1, text = element_text(size=20)) 
 
 ggsave('~/Downloads/scatter.pdf')
 ```
@@ -413,15 +498,19 @@ ggsave('~/Downloads/scatter.pdf')
 Histogram
 
 ```{r}
-ggplot(hidden.d %>% filter(!(gameid %in% all_the_things_ers)) %>% group_by(context) %>% mutate(m = mean(diff)), aes(x = diff)) +
-    geom_histogram(binwidth = 0.33) +
-    theme_bw() +
-    geom_vline(xintercept = 0, linetype = 2) +
-    geom_vline(aes(xintercept = m), color = 'red') +
-    facet_wrap(~ context) +
-    # ylim(1,12) +
-    xlim(-6,6) +
-    theme(aspect.ratio = 1)
+hidden.d %>% 
+  #filter(!(gameid %in% all_the_things_ers)) %>% 
+  group_by(context) %>% 
+  mutate(m = mean(diff)) %>%
+  ggplot(aes(x = diff)) +
+      geom_histogram(binwidth = 0.33) +
+      theme_bw() +
+      geom_vline(xintercept = 0, linetype = 2) +
+      geom_vline(aes(xintercept = m), color = 'red') +
+      facet_wrap(~ context) +
+      # ylim(1,12) +
+      xlim(-6,6) +
+      theme(aspect.ratio = 1)
 
 ggsave("~/Downloads/histograms.pdf")
 ```
@@ -431,10 +520,12 @@ hidden.d %>%
   group_by(context) %>%
   summarize(m = mean(diff), se = sd(diff)/sqrt(length(diff))) %>%
   ggplot(aes(x = context, y = m)) +
-    geom_bar(stat = 'identity') +
+    geom_bar(stat = 'identity', width = 0.25) +
     geom_errorbar(aes(ymin = m - se, ymax = m + se), width = 0) +
     theme_few() +
+    geom_hline(yintercept = 0) +
     ylim(-3, 3) +
+    theme(aspect.ratio = 1, text = element_text(size=20))  +
     ylab('# words (occlusions - no occlusions)')
   
 ```
@@ -530,7 +621,7 @@ ggplot(d.booted, aes(x = context, y = empirical_stat, fill = hidden)) +
   geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0) +
   facet_wrap(~ feature) + 
   theme_few() +
-  theme(aspect.ratio = 1) + 
+  theme(aspect.ratio = 1, text = element_text(size=20))  +
   ylab('% utterances with feature') +
   scale_fill_colorblind()
 
