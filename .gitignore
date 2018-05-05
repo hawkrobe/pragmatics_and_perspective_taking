@@ -3,8 +3,9 @@ keysar_replication.sublime*
 cogsci_keysar.pdf
 pnas-submission.pdf
 node_modules
-auth.json	
+auth.json
 mturk-and-gmail.txt
+auth.txt
 *.synctex.gz
 .DS_Store
 *.bst
