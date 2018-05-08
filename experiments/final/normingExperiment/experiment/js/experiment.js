@@ -24,6 +24,7 @@ function make_slides(f) {
       this.stim = stim;
       this.init_sliders();
       exp.sliderPost = {};
+      console.log(stim);
       var contextsentence = "How well does <strong>"+this.stim.text+"</strong> apply to this object?";
       var objimagehtml = '<center><img src="'+this.stim.object.contextURL+'" style="height:500px;"></center>';
       $("#contextsentence").html(contextsentence);

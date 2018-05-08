@@ -137,7 +137,7 @@ var stimList = function() {
     return _.map(referents, function(referent) {
       var relevantObject = criticalItems[Number(labelObj.objectSet) - 1][referent];
 
-      return {label: labelObj.text, objectSet : labelObj.objectSet,
+      return {text: labelObj.text, objectSet : labelObj.objectSet,
 	      referent: referent, object : relevantObject};
     });
   }));
