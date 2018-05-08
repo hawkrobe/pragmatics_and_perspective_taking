@@ -11,13 +11,13 @@ var glassesCase = {
 	url: 'stimuli/glassesCase.png', name: "glassesCase", width : 100, height: 107,
 	instruction: "", initialLoc: [3,1], critical : "distractor",}
 var soccerBall = {
-	url: 'stimuli/soccerBall.jpg', name: "soccerBall", width: 100, height: 100,
+	url: 'stimuli/soccerBall.png', name: "soccerBall", width: 100, height: 100,
 	instruction: "", initialLoc: glassesCase.initialLoc, critical : "distractor",}
 var saxophone = {
 	url: 'stimuli/saxophone.png', name: "saxophone", width: 97, height: 130,
 	instruction: "saxophone up", initialLoc: [4,2], critical : "filler",}
 var airplane = {
-	url: 'stimuli/airplane.jpg', name: 'airplane', width: 130, height: 60,
+	url: 'stimuli/airplane.png', name: 'airplane', width: 130, height: 60,
 	instruction: "airplane right", initialLoc : [1,2],critical : "filler",}
 var barrel = {
 	url: 'stimuli/barrel.png', name: 'barrel', width: 87, height: 130,
@@ -33,16 +33,16 @@ var middleBlock = {
 	instruction: "middleBlock left", initialLoc: [3,4],
 	scriptedInstruction: "move the bottom block one space to the left", critical : "target"}
 var bottomBlock = {
-	url: 'stimuli/bottomBlock.jpg', name: "bottomBlock", width: 80, height: 80,
+	url: 'stimuli/bottomBlock.png', name: "bottomBlock", width: 80, height: 80,
 	instruction: "", initialLoc: [4,4], critical : "distractor"}
 var stapler = {
-	url: 'stimuli/stapler.jpg', name: "stapler", width: 80, height: 80,
+	url: 'stimuli/stapler.png', name: "stapler", width: 80, height: 80,
 	instruction: "", initialLoc: [4,4], critical : "distractor",}
 var topBlock = {
-	url: 'stimuli/topBlock.jpg', name: "topBlock", width: 80, height: 80,
+	url: 'stimuli/topBlock.png', name: "topBlock", width: 80, height: 80,
 	instruction: "", initialLoc: [1,1], critical : "filler",}
 var binoculars = {
-	url: 'stimuli/binoculars.jpg', name: 'binoculars', width: 100, height: 100,
+	url: 'stimuli/binoculars.png', name: 'binoculars', width: 100, height: 100,
 	instruction: "binoculars right", initialLoc: [4,1], critical : "filler",
 	scriptedInstruction: "move the binoculars one space to the right"}
 var wrench = {
@@ -54,17 +54,17 @@ var coffeeMug = {
 
 // BLOCK 3
 var cassetteTape = {
-	url: 'stimuli/cassetteTape.jpg', name: "cassetteTape",  width: 87.5, height: 55,
+	url: 'stimuli/cassetteTape.png', name: "cassetteTape",  width: 87.5, height: 55,
 	instruction: "cassetteTape down", initialLoc: [1,3], critical : "target",
 	scriptedInstruction: "move the tape down by one space",}
 var rollOfTape = {
-	url: 'stimuli/rollOfTape.jpg', name: "rollOfTape", width: 83, height: 83,
+	url: 'stimuli/rollOfTape.png', name: "rollOfTape", width: 83, height: 83,
 	instruction: "", initialLoc: [1,4], critical : "distractor"}
 var battery = {
-	url: 'stimuli/battery.jpg', name: "battery", width: 50, height: 80,
+	url: 'stimuli/battery.png', name: "battery", width: 50, height: 80,
 	instruction: "", initialLoc: [1,4], critical : "distractor"}
 var scissors = {
-	url: 'stimuli/scissors.jpg', name: "scissors", width: 66, height: 130,
+	url: 'stimuli/scissors.png', name: "scissors", width: 66, height: 130,
 	instruction: "scissors right", initialLoc: [2,1], critical : "filler"}
 var butterfly = {
 	url: 'stimuli/butterfly.png', name: 'butterfly', width: 130, height: 112,
@@ -144,7 +144,7 @@ var brain = {
 	url: 'stimuli/brain.png', name: "brain", width: 130, height:104,
 	instruction: "", initialLoc: [3,1],critical : "distractor",}
 var dollar = {
-	url: 'stimuli/dollar.jpg', name: 'dollar', width: 130, height: 54,
+	url: 'stimuli/dollar.png', name: 'dollar', width: 130, height: 54,
 	instruction: "dollar right", initialLoc: [3,3],critical : "filler",}
 var feather = {
 	url: 'stimuli/feather.png', name: 'feather', width: 130, height: 98,

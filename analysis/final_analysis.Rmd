@@ -219,6 +219,26 @@ critTrials %>%
 ggsave('../writing/journal_manuscript/figures//itemHeterogeneity.pdf')
 ```
 
+## Test error homogeneity
+
+```{r}
+errorRates = critTrials %>% 
+  mutate(error = 1 - correct) %>%
+  group_by(objectSet, condition, targetObject) %>%
+  summarize(errors = sum(error), nonerrors = length(error) - errors) %>%
+  ungroup() 
+
+scriptedErrors <- errorRates %>% 
+  filter(condition == 'scripted') %>%
+  select(errors, nonerrors)
+chisq.test(as.matrix(rbind(scriptedErrors$errors, scriptedErrors$nonerrors)), simulate.p.value = T)
+  
+unscriptedErrors <- errorRates %>% 
+  filter(condition == 'unscripted') %>%
+  select(errors, nonerrors)
+chisq.test(as.matrix(rbind(unscriptedErrors$errors, unscriptedErrors$nonerrors)), simulate.p.value = T)
+```
+
 ```{r}
 exp1_d %>% 
   filter(attemptNum == 0) %>%
@@ -273,15 +293,18 @@ dodge <- position_dodge(width=0.9)
 d.onDistractor %>%
   group_by(condition, trialType) %>%
   tidyboot_mean(column = hovered) %>%
-  ggplot(aes(x = condition, y=empirical_stat, fill = trialType)) +
-    geom_bar(stat = 'identity', position = dodge, alpha =.5) +
+  mutate(trial = ifelse(trialType == 'base', 'baseline', 'experimental')) %>%
+  ggplot(aes(x = condition, y=empirical_stat, fill = condition, group = trial)) +
+    geom_bar(aes(alpha = trial), stat = 'identity', position = dodge) +
     geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0, position = dodge) +
     theme_few() +
+    scale_alpha_manual(values=c(.25, .75)) +
     ylab('% trials hovering over distractor') +
     scale_fill_colorblind()+
-    theme(aspect.ratio = 0.5)
+    guides(fill='none') +
+    theme(aspect.ratio = 1, legend.position = 'top')
     
-ggsave('../writing/journal_manuscript/figures//hoverOverDistractor.pdf', height = 3, width = 6)
+ggsave('../writing/journal_manuscript/figures/hoverOverDistractor.pdf', height = 3, width = 3)
 ```
 
 ```{r}
@@ -348,10 +371,11 @@ write_csv(refExps, './refExpressions_raw.csv')
 For 6 of the 8 items, unscripted speakers had significantly more words in their referring expressions... (n.s. for the other 2, but idiosyncratic)
 
 ```{r}
-refs <- read_csv('../data/final/experiment1/refExpressions.csv')
-scripted <- data.frame(objectSet = c(1,2,3,4,5,6,7,8), 
-                       m = c('glasses', 'bottom block', 'tape', 'large measuring cup', 'brush', 'eraser', 'small candle', 'mouse'),
-                       numRawWords = c(1,2,1,3,1,1,2,1))
+scripted_refs <- c('glasses', 'bottom block', 'tape', 'large measuring cup', 'brush', 'eraser', 'small candle', 'mouse')
+standardized_refs <- read_csv('../data/final/experiment1/refExpressions_standardized.csv')
+length(unique(c(standardized_refs$text, scripted_refs)))
+unscripted_refs <- read_csv('../data/final/experiment1/refExpressions.csv')
+scripted.df <- data.frame(objectSet = c(1,2,3,4,5,6,7,8), m = scripted_refs, numRawWords = c(1,2,1,3,1,1,2,1))
 refs %>% 
   mutate(numRawWords = str_count(text, "\\S+")) %>%
   group_by(objectSet) %>%
