@@ -1,5 +1,6 @@
-var stimList = function() {
+// Requires importing uniqueLabels.js before this in html
 
+var stimList = function() {
   // BLOCK 1
   var sunGlasses = {
     url: 'js/stimuli/sunGlasses.png', name: "sunGlasses", width: 130, height: 65,
@@ -18,13 +19,13 @@ var stimList = function() {
     contextURL: 'js/stimuli/middleBlockContext.png',
     scriptedInstruction: "move the bottom block one space to the left", critical : "target"}
   var bottomBlock = {
-    url: 'js/stimuli/bottomBlock.jpg', name: "bottomBlock", width: 80, height: 80,
+    url: 'js/stimuli/bottomBlock.png', name: "bottomBlock", width: 80, height: 80,
     contextURL: 'js/stimuli/bottomBlockContext.png',
     instruction: "", initialLoc: [4,4], critical : "distractor"}
 
   // BLOCK 3
   var cassetteTape = {
-    url: 'js/stimuli/cassetteTape.jpg', name: "cassetteTape",  width: 87.5, height: 55,
+    url: 'js/stimuli/cassetteTape.png', name: "cassetteTape",  width: 87.5, height: 55,
     instruction: "cassetteTape down", initialLoc: [1,3], critical : "target",
     contextURL: 'js/stimuli/cassetteTapeContext.png',
     scriptedInstruction: "move the tape down by one space",}
@@ -84,7 +85,6 @@ var stimList = function() {
 
 
   // BLOCK 8
-
   var computerMouse = {
     url: 'js/stimuli/computerMouse.png', name: "computerMouse", width:130, height: 112,
     instruction: "computerMouse up", initialLoc: [3,4],critical : "target",
@@ -132,19 +132,16 @@ var stimList = function() {
 
   var referents = ["target", "distractor"];
   var contexts = ["isolated", "comparison"];
-  
+
   var stimList = _.flatten(_.map(uniqueLabels, function(labelObj) {
     return _.map(referents, function(referent) {
       var relevantObject = criticalItems[Number(labelObj.objectSet) - 1][referent];
-      return {label: labelObj.label, objectSet : labelObj.objectSet,
+
+      return {text: labelObj.text, objectSet : labelObj.objectSet,
 	      referent: referent, object : relevantObject};
-      // }  else {
-      // 	return {label: labelObj.label, objectSet : labelObj.objectSet,
-      // 		referent: referent, object : relevantObject, context: "isolated"};
-      // }
     });
   }));
-
+  console.log(stimList);
   return stimList;
 }();
 
