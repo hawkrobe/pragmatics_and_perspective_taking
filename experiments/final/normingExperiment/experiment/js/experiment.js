@@ -24,11 +24,12 @@ function make_slides(f) {
       this.stim = stim;
       this.init_sliders();
       exp.sliderPost = {};
-      var contextsentence = "How well does <strong>"+this.stim.label+"</strong> apply to this object?";
+      console.log(this.stim);
+      var contextsentence = "How well does <strong>"+this.stim.text+"</strong> apply to this object?";
       if(stim.context == "isolated") {
-	var objimagehtml = '<img src="'+this.stim.object.url+'" style="height:190px;">';
+	var objimagehtml = '<img src="'+this.stim.object.url+'" style="transform: scale(2.5);  transform-origin: top;height:' + this.stim.object.height + "px;width:" + this.stim.object.width + 'px;">';
       } else {
-	var objimagehtml = '<img src="'+this.stim.object.contextURL+'" style="height:190px;">';
+	var objimagehtml = '<img src="'+this.stim.object.contextURL+'" style="height:300px;">';
       }
       $("#contextsentence").html(contextsentence);
       $("#objectimage").html(objimagehtml);

@@ -33,6 +33,7 @@
 
     <!-- experiment file -->
     <script src="js/experiment.js"></script>
+    <script src="js/uniqueLabels.js"></script>
     <script src="js/objectSet.js"></script>
     
 </head>
@@ -67,7 +68,7 @@
   <div class="slide" id="rating">
     <p id="contextsentence">{{}}</p>
 
-    <div id="objectimage">
+    <div id="objectimage" style="height:40%">
       {{}}
     </div>
 
@@ -138,7 +139,7 @@
   </div>
 
   <div class="progress">
-    <span>Progress:</span>
+    <span id="progress-text">Progress:</span>
     <div class="bar-wrapper">
       <div class="bar" width="0%">
       </div>
