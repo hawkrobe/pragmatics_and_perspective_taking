@@ -41,10 +41,33 @@
 <body onload="init();">
   <noscript>This task requires JavaScript.</noscript>
 
-  <div class="slide" id="i0" style="height:600px">
+  <div class="slide" id="i0" style="height:1000px">
     <img src="../_shared/images/cocologo.png" alt="Stanford CoCoLab" id="cocologo"></img>
     <p id="cocolab">Stanford CoCoLab</p>
-    <p align="left" id="instruct-text">In this HIT, you will see a sequence of labels and pictures of objects. You will use a slider to rate how well the given label describes the given object. The whole HIT should take no longer than 10 minutes. Please pay attention and think carefully before responding! Thank you!</p>
+    <p align="left" id="instruct-text">In this HIT, you will see a sequence of labels and pictures of objects.</p>
+    <p>
+      For each pair, you will use a slider bar to rate how well the given
+      label describes the given object: from <b>'strongly disagree'</b> if the
+      label doesn't match the object at all to <b>'strongly agree'</b> if the
+      label matches perfectly. For example, in the display below, the
+      highlighted object is definitely a pair of "black sunglasses"
+      so it would be rated very highly.
+    </p>
+    <img src="../_shared/images/example.png"></img>
+    <p>
+      Occasionally, labels will refer to the object's location in the
+      grid (e.g. "bottom" or "top"), or explicitly compare it to other
+      objects (e.g. "larger" or "smaller"). For these labels, you may
+      find that you need to look at the full grid to know whether the
+      label is good or not. For the vast majority of labels, however,
+      the grid and other objects are irrelevant and can be ignored.
+    </p>
+
+    <p>
+      The whole HIT should take no longer than 20 minutes:
+      you will see a progress bar in the top-right corner. Thank you for
+      your work!
+    </p>
     <button id="start_button" type="button">Start Experiment</button>
     <hr>
     <u><p id="legal">Legal information:</p></u>
@@ -74,8 +97,8 @@
 
     <table id="slider_table" class="slider_table">
       <tr>
-	<td class="left"><h3>not at all</h3></td>
-	<td class="right" id="numObjects"><h3>perfectly</h3></td>
+	<td class="left"><h3>strongly disagree</h3></td>
+	<td class="right" id="numObjects"><h3>strongly agree</h3></td>
       </tr>
       <tr><td colspan="2"><div id="single_slider" class="slider"></div></td></tr>
     </table>
