@@ -25,7 +25,7 @@ function make_slides(f) {
       this.init_sliders();
       exp.sliderPost = {};
       console.log(stim);
-      var contextsentence = "How well does <strong>"+this.stim.text+"</strong> apply to this object?";
+      var contextsentence = "<strong>"+this.stim.text+"</strong>";
       var objimagehtml = '<center><img src="'+this.stim.object.contextURL+'" style="height:500px;"></center>';
       $("#contextsentence").html(contextsentence);
       $("#objectimage").html(objimagehtml);
@@ -49,7 +49,7 @@ function make_slides(f) {
     },
     log_responses : function() {
       exp.data_trials.push({
-        "label" : this.stim.label,
+        "label" : this.stim.text,
         "slideNumber": exp.phase,
         "response" : exp.sliderPost,
 	"objectSet" : this.stim.objectSet,
