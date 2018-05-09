@@ -22,23 +22,23 @@ gameid,objectSet,text
 0849-3c0ff096-1ccb-4100-bc6e-640aef71617b,2,child's B block
 0849-3c0ff096-1ccb-4100-bc6e-640aef71617b,5,hairbrush
 0849-3c0ff096-1ccb-4100-bc6e-640aef71617b,8,computer mouse
-0849-3c0ff096-1ccb-4100-bc6e-640aef71617b,4,glass measuring cup with the handle
+0849-3c0ff096-1ccb-4100-bc6e-640aef71617b,4,glass measuring cup with handle
 0914-515eaa37-ca0b-49de-8ade-e23d75984698,3,radio cassette
-0914-515eaa37-ca0b-49de-8ade-e23d75984698,2,block with the blue letter B facing up
+0914-515eaa37-ca0b-49de-8ade-e23d75984698,2,block with blue letter B facing up
 0914-515eaa37-ca0b-49de-8ade-e23d75984698,7,red candle
 0914-515eaa37-ca0b-49de-8ade-e23d75984698,8,computer mouse
 0914-515eaa37-ca0b-49de-8ade-e23d75984698,1,black sunglasses
 0914-515eaa37-ca0b-49de-8ade-e23d75984698,4,clear pyrex measuring cup
 0914-515eaa37-ca0b-49de-8ade-e23d75984698,6,expo whiteboard eraser
-0914-515eaa37-ca0b-49de-8ade-e23d75984698,5,round barrel hairbrush in the bottom row
+0914-515eaa37-ca0b-49de-8ade-e23d75984698,5,round barrel hairbrush in bottom row
 0993-d2ff1751-f174-40fd-9d1c-f702d5e1ee50,2,3rd row block
 0993-d2ff1751-f174-40fd-9d1c-f702d5e1ee50,3,Row 1 cassette tape
-0993-d2ff1751-f174-40fd-9d1c-f702d5e1ee50,5,hairbrush row 4 box 3
-0993-d2ff1751-f174-40fd-9d1c-f702d5e1ee50,1,sunglasses row 4 box 3
-0993-d2ff1751-f174-40fd-9d1c-f702d5e1ee50,7,candle row 1 box 1
+0993-d2ff1751-f174-40fd-9d1c-f702d5e1ee50,5,hairbrush in row 4 box 3
+0993-d2ff1751-f174-40fd-9d1c-f702d5e1ee50,1,sunglasses in row 4 box 3
+0993-d2ff1751-f174-40fd-9d1c-f702d5e1ee50,7,candle in row 1 box 1
 0993-d2ff1751-f174-40fd-9d1c-f702d5e1ee50,6,eraser
 0993-d2ff1751-f174-40fd-9d1c-f702d5e1ee50,8,mouse
-0993-d2ff1751-f174-40fd-9d1c-f702d5e1ee50,4,measuring cup row 3 box 4
+0993-d2ff1751-f174-40fd-9d1c-f702d5e1ee50,4,measuring cup in row 3 box 4
 1336-781ddb71-735d-4dfe-90de-9b2b85a89f15,5,hairbrush
 1336-781ddb71-735d-4dfe-90de-9b2b85a89f15,1,glasses
 1336-781ddb71-735d-4dfe-90de-9b2b85a89f15,2,block
@@ -78,7 +78,7 @@ gameid,objectSet,text
 1530-63446cf3-b006-4888-8af1-dc928951fabb,7,candle
 1530-63446cf3-b006-4888-8af1-dc928951fabb,6,chalkboard eraser
 1530-63446cf3-b006-4888-8af1-dc928951fabb,3,cassette tape
-1530-63446cf3-b006-4888-8af1-dc928951fabb,2,wooden block with the B
+1530-63446cf3-b006-4888-8af1-dc928951fabb,2,wooden block with B
 1590-9eeaa5f0-c5a2-49bb-8227-d95a13fb8ea3,8,silver mouse
 1590-9eeaa5f0-c5a2-49bb-8227-d95a13fb8ea3,2,block with a blue B
 1590-9eeaa5f0-c5a2-49bb-8227-d95a13fb8ea3,5,hairbrush
@@ -170,19 +170,19 @@ gameid,objectSet,text
 2647-ea0408bb-61ca-4c52-9583-6826b86967a2,6,expo eraser
 2647-ea0408bb-61ca-4c52-9583-6826b86967a2,4,pyrex measuring cup
 2647-ea0408bb-61ca-4c52-9583-6826b86967a2,5,round hairbrush
-2647-ea0408bb-61ca-4c52-9583-6826b86967a2,2,block with the letter B
+2647-ea0408bb-61ca-4c52-9583-6826b86967a2,2,block with letter B
 2647-ea0408bb-61ca-4c52-9583-6826b86967a2,7,red candle
 2647-ea0408bb-61ca-4c52-9583-6826b86967a2,3,cassette tape
 2647-ea0408bb-61ca-4c52-9583-6826b86967a2,1,sunglasses
 2647-ea0408bb-61ca-4c52-9583-6826b86967a2,8,mouse
-2762-7c6e403e-e6c1-434c-a474-f37162627a34,5,hairbrush on the bottom
-2762-7c6e403e-e6c1-434c-a474-f37162627a34,6,eraser on the bottom row
-2762-7c6e403e-e6c1-434c-a474-f37162627a34,1,sunglasses in the bottom row
-2762-7c6e403e-e6c1-434c-a474-f37162627a34,7,candle in the top row
-2762-7c6e403e-e6c1-434c-a474-f37162627a34,2,B block in the 3rd row
-2762-7c6e403e-e6c1-434c-a474-f37162627a34,8,mouse in the 3rd row
-2762-7c6e403e-e6c1-434c-a474-f37162627a34,4,pyrex measuring cup in the 3rd row
-2762-7c6e403e-e6c1-434c-a474-f37162627a34,3,cassette in the top row
+2762-7c6e403e-e6c1-434c-a474-f37162627a34,5,hairbrush on bottom
+2762-7c6e403e-e6c1-434c-a474-f37162627a34,6,eraser on bottom row
+2762-7c6e403e-e6c1-434c-a474-f37162627a34,1,sunglasses in bottom row
+2762-7c6e403e-e6c1-434c-a474-f37162627a34,7,candle in top row
+2762-7c6e403e-e6c1-434c-a474-f37162627a34,2,B block in 3rd row
+2762-7c6e403e-e6c1-434c-a474-f37162627a34,8,mouse in 3rd row
+2762-7c6e403e-e6c1-434c-a474-f37162627a34,4,pyrex measuring cup in 3rd row
+2762-7c6e403e-e6c1-434c-a474-f37162627a34,3,cassette in top row
 3075-f2ea5c22-1e1d-412b-9454-48d4a17cb50c,5,hairbrush
 3075-f2ea5c22-1e1d-412b-9454-48d4a17cb50c,1,sunglasses
 3075-f2ea5c22-1e1d-412b-9454-48d4a17cb50c,7,red candle
@@ -224,7 +224,7 @@ gameid,objectSet,text
 3750-0352fcb7-a7e4-4895-899a-dbe156f139df,4,pyrex measuring cup
 3750-0352fcb7-a7e4-4895-899a-dbe156f139df,7,candle
 3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040,6,eraser
-3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040,2,block with the letter B
+3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040,2,block with letter B
 3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040,5,brush
 3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040,4,measuring cup
 3833-a49bf9ed-4704-4c7b-8a7b-a8ff919f0040,3,tape
@@ -286,10 +286,10 @@ gameid,objectSet,text
 6229-27cb9668-3653-4e1b-a73d-a44746d18b32,3,cassette tape
 6229-27cb9668-3653-4e1b-a73d-a44746d18b32,7,candle
 6229-27cb9668-3653-4e1b-a73d-a44746d18b32,5,hairbrush
-6229-27cb9668-3653-4e1b-a73d-a44746d18b32,2,block with the letter B
+6229-27cb9668-3653-4e1b-a73d-a44746d18b32,2,block with letter B
 6540-7f14fa62-c692-4860-90d4-32baa1137833,6,eraser
 6540-7f14fa62-c692-4860-90d4-32baa1137833,5,brush
-6540-7f14fa62-c692-4860-90d4-32baa1137833,2,block with the letter B
+6540-7f14fa62-c692-4860-90d4-32baa1137833,2,block with letter B
 6540-7f14fa62-c692-4860-90d4-32baa1137833,4,measuring cup
 6540-7f14fa62-c692-4860-90d4-32baa1137833,1,glasses
 6540-7f14fa62-c692-4860-90d4-32baa1137833,8,mouse
@@ -313,11 +313,11 @@ gameid,objectSet,text
 7243-acd434ec-b5d6-4d4e-8c98-bc4cdb2b00ec,8,mouse
 7744-d41dd430-a713-4edf-a863-c1cde5455560,1,sunglasses
 7744-d41dd430-a713-4edf-a863-c1cde5455560,8,mouse
-7744-d41dd430-a713-4edf-a863-c1cde5455560,4,pyrex measuring glass with the handle
+7744-d41dd430-a713-4edf-a863-c1cde5455560,4,pyrex measuring glass with handle
 7744-d41dd430-a713-4edf-a863-c1cde5455560,3,cassette tape
 7744-d41dd430-a713-4edf-a863-c1cde5455560,2,toy block
 7744-d41dd430-a713-4edf-a863-c1cde5455560,7,red candle in a candle holder
-7744-d41dd430-a713-4edf-a863-c1cde5455560,5,hairbrush with two lines on the handle
+7744-d41dd430-a713-4edf-a863-c1cde5455560,5,hairbrush with two lines on handle
 7744-d41dd430-a713-4edf-a863-c1cde5455560,6,expo eraser
 7782-9f4edcd8-c073-4cec-875f-4681dcc3e900,5,brush
 7782-9f4edcd8-c073-4cec-875f-4681dcc3e900,7,candle
@@ -339,7 +339,7 @@ gameid,objectSet,text
 8402-2678755e-7482-47f0-9372-0cdd1303303c,6,expo
 8402-2678755e-7482-47f0-9372-0cdd1303303c,5,brush
 8402-2678755e-7482-47f0-9372-0cdd1303303c,7,red candle
-8402-2678755e-7482-47f0-9372-0cdd1303303c,2,cube B
+8402-2678755e-7482-47f0-9372-0cdd1303303c,2,B cube
 8402-2678755e-7482-47f0-9372-0cdd1303303c,3,cassette
 8402-2678755e-7482-47f0-9372-0cdd1303303c,1,shades
 8402-2678755e-7482-47f0-9372-0cdd1303303c,4,pyrex
@@ -353,7 +353,7 @@ gameid,objectSet,text
 8710-e4a804cd-2869-4e25-b1fe-c0c276bc494c,1,black sunglasses
 8834-ddbb439f-b8ec-4e20-8bf0-07bbfe5bb277,1,sunglasses
 8834-ddbb439f-b8ec-4e20-8bf0-07bbfe5bb277,2,blue block
-8834-ddbb439f-b8ec-4e20-8bf0-07bbfe5bb277,5,lint brush (?)
+8834-ddbb439f-b8ec-4e20-8bf0-07bbfe5bb277,5,lint brush
 8834-ddbb439f-b8ec-4e20-8bf0-07bbfe5bb277,7,candle
 8834-ddbb439f-b8ec-4e20-8bf0-07bbfe5bb277,8,mouse
 8834-ddbb439f-b8ec-4e20-8bf0-07bbfe5bb277,3,cassette tape
@@ -369,21 +369,21 @@ gameid,objectSet,text
 9075-90e715e1-6ed3-4c5d-931a-00a4ea65040f,3,cassette tape
 9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d,4,measuring glass
 9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d,6,expo eraser
-9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d,2,block with the B on top
+9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d,2,block with B on top
 9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d,3,cassette tape
-9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d,7,red candle on the stand
+9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d,7,red candle on stand
 9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d,8,silver (gray?) computer mouse
 9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d,1,black sunglasses
-9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d,5,black round brush with the wooden handle
+9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d,5,black round brush with wooden handle
 9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc,2,alphabet block
-9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc,6,the bundle which is near the feather
+9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc,6,bundle which is near feather
 9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc,4,pyrex measuring cup
 9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc,7,lighted red candle
 9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc,8,silver mouse
 9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc,1,black sunglasses
 9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc,3,cassette recorder
 9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc,5,round hairbrush
-9696-71907a9b-6b17-48d9-83a5-dcd44739991e,2,cube w/ the B
+9696-71907a9b-6b17-48d9-83a5-dcd44739991e,2,cube w/ a B
 9696-71907a9b-6b17-48d9-83a5-dcd44739991e,3,cassette tape
 9696-71907a9b-6b17-48d9-83a5-dcd44739991e,5,audio adapter
 9696-71907a9b-6b17-48d9-83a5-dcd44739991e,1,sunglasses
