@@ -41,11 +41,11 @@
 <body onload="init();">
   <noscript>This task requires JavaScript.</noscript>
 
-  <div class="slide" id="i0" style="height:1000px">
+  <div class="slide" id="i0" style="height:1200px">
     <img src="../_shared/images/cocologo.png" alt="Stanford CoCoLab" id="cocologo"></img>
     <p id="cocolab">Stanford CoCoLab</p>
     <p align="left" id="instruct-text">In this HIT, you will see a sequence of labels and pictures of objects.</p>
-    <p>
+    <p align="left">
       For each pair, you will use a slider bar to rate how well the given
       label describes the given object: from <b>'strongly disagree'</b> if the
       label doesn't match the object at all to <b>'strongly agree'</b> if the
@@ -53,8 +53,8 @@
       highlighted object is definitely a pair of "black sunglasses"
       so it would be rated very highly.
     </p>
-    <img src="../_shared/images/example.png"></img>
-    <p>
+    <img src="../_shared/images/example.png" height="400px" width="303px"></img>
+    <p align="left">
       Occasionally, labels will refer to the object's location in the
       grid (e.g. "bottom" or "top"), or explicitly compare it to other
       objects (e.g. "larger" or "smaller"). For these labels, you may
@@ -63,7 +63,7 @@
       the grid and other objects are irrelevant and can be ignored.
     </p>
 
-    <p>
+    <p align="left">
       The whole HIT should take no longer than 20 minutes:
       you will see a progress bar in the top-right corner. Thank you for
       your work!
@@ -88,7 +88,7 @@
 
 
   <!-- MAIN EXPERIMENT SLIDE -->
-  <div class="slide" id="rating" style="height:95%">
+  <div class="slide" id="rating" style="height:800px">
     <p id="contextsentence">{{}}</p>
 
     <div id="objectimage">
@@ -102,8 +102,8 @@
       </tr>
       <tr><td colspan="2"><div id="single_slider" class="slider"></div></td></tr>
     </table>
-    <button onclick="_s.button()">Continue</button>
-    <div class="err" style="display:none;">Please adjust the slider before continuing.</div>
+    <!-- <button onclick="_s.button()">Continue</button> -->
+    <div class="err">Click on the slider bar to make a response!</div>
   </div>
 
 
