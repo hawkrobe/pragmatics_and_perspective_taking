@@ -51,7 +51,7 @@ var utils = {
 		});
 	},
 
-	make_slider: function(label, response_callback) {
+  make_slider: function(label, response_callback, on_mouse_up_callback) {
 		$(label).empty();
 		$(label).slider({
 			range : "min",
@@ -60,7 +60,8 @@ var utils = {
 			step: 0.01,
 			value : 0.5,
 			slide : response_callback,
-						change : response_callback
+		  change : response_callback,
+		  stop : on_mouse_up_callback
 		});
 		$(label + ' .ui-slider-handle').hide();
 				$(label).mousedown(function(){
