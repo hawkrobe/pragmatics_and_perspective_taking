@@ -10,7 +10,7 @@ var stimList = function() {
   var glassesCase = {
     url: 'js/stimuli/glassesCase.png', name: "glassesCase", width : 100, height: 107,
     instruction: "", initialLoc: [3,1], critical : "distractor",
-    contextURL: 'js/stimuli/sunglassesContext.png'};
+    contextURL: 'js/stimuli/glassesCaseContext.png'};
 
   // BLOCK 2
   var middleBlock = {
