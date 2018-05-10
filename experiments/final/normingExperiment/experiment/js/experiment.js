@@ -7,14 +7,7 @@ function make_slides(f) {
       exp.startT = Date.now();
     }
   });
-  
-  slides.q_instructions = slide({
-    name : "q_instructions",
-    button : function() {
-      exp.go(); //use exp.go() if and only if there is no "present" data.
-    }
-  });
-  
+   
   slides.rating = slide({
     name: "rating",
     present : _.shuffle(stimList),
@@ -30,21 +23,22 @@ function make_slides(f) {
       $("#contextsentence").html(contextsentence);
       $("#objectimage").html(objimagehtml);
       console.log(this);
-      $(".err1").hide();
+      //$(".err1").hide();
     },
 
-    button : function() {
-      if (exp.sliderPost > -1 && exp.sliderPost < 16) {
-	$(".err").hide();
-	this.log_responses();
-	_stream.apply(this); //use exp.go() if and only if there is no "present" data.
-      } else {
-	$(".err").show();
-      }
-    },
     init_sliders : function() {
+      // Takes a callback for 'change' and a callback for 'mouseup'
+      var that = this;
       utils.make_slider("#single_slider", function(event, ui) {
 	exp.sliderPost = ui.value;
+      }, function(event, ui) {
+	if (exp.sliderPost > -1 && exp.sliderPost < 16) {
+	  //$(".err").hide();
+	  that.log_responses();
+	  _stream.apply(that); //Use exp.go() if and only if there is no "present" data.
+	} else {
+	  //$(".err").show();
+	}
       });
     },
     log_responses : function() {
@@ -136,7 +130,9 @@ function init() {
     if (turk.previewMode) {
       $("#mustaccept").show();
     } else {
-      $("#start_button").click(function() {$("#mustaccept").show();});
+      $("#start_button").click(function() {
+	$("#mustaccept").show();
+      });
       exp.go();
     }
   });
