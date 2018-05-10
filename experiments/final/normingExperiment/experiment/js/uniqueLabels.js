@@ -24,7 +24,7 @@ var uniqueLabels = [
         "objectSet": "4"
     },
     {
-        "text": "block with a blue 'B' showing",
+        "text": "block with a blue B showing",
         "objectSet": "2"
     },
     {
@@ -68,7 +68,7 @@ var uniqueLabels = [
         "objectSet": "8"
     },
     {
-        "text": "glass measuring cup with the handle",
+        "text": "glass measuring cup with handle",
         "objectSet": "4"
     },
     {
@@ -76,7 +76,7 @@ var uniqueLabels = [
         "objectSet": "3"
     },
     {
-        "text": "block with the blue letter B facing up",
+        "text": "block with blue letter B facing up",
         "objectSet": "2"
     },
     {
@@ -96,7 +96,7 @@ var uniqueLabels = [
         "objectSet": "6"
     },
     {
-        "text": "round barrel hairbrush in the bottom row",
+        "text": "round barrel hairbrush in bottom row",
         "objectSet": "5"
     },
     {
@@ -108,19 +108,19 @@ var uniqueLabels = [
         "objectSet": "3"
     },
     {
-        "text": "hairbrush row 4 box 3",
+        "text": "hairbrush in row 4 box 3",
         "objectSet": "5"
     },
     {
-        "text": "sunglasses row 4 box 3",
+        "text": "sunglasses in row 4 box 3",
         "objectSet": "1"
     },
     {
-        "text": "candle row 1 box 1",
+        "text": "candle in row 1 box 1",
         "objectSet": "7"
     },
     {
-        "text": "measuring cup row 3 box 4",
+        "text": "measuring cup in row 3 box 4",
         "objectSet": "4"
     },
     {
@@ -164,7 +164,7 @@ var uniqueLabels = [
         "objectSet": "6"
     },
     {
-        "text": "wooden block with the B",
+        "text": "wooden block with B",
         "objectSet": "2"
     },
     {
@@ -256,39 +256,39 @@ var uniqueLabels = [
         "objectSet": "4"
     },
     {
-        "text": "block with the letter B",
+        "text": "block with letter B",
         "objectSet": "2"
     },
     {
-        "text": "hairbrush on the bottom",
+        "text": "hairbrush on bottom",
         "objectSet": "5"
     },
     {
-        "text": "eraser on the bottom row",
+        "text": "eraser on bottom row",
         "objectSet": "6"
     },
     {
-        "text": "sunglasses in the bottom row",
+        "text": "sunglasses in bottom row",
         "objectSet": "1"
     },
     {
-        "text": "candle in the top row",
+        "text": "candle in top row",
         "objectSet": "7"
     },
     {
-        "text": "B block in the 3rd row",
+        "text": "B block in 3rd row",
         "objectSet": "2"
     },
     {
-        "text": "mouse in the 3rd row",
+        "text": "mouse in 3rd row",
         "objectSet": "8"
     },
     {
-        "text": "pyrex measuring cup in the 3rd row",
+        "text": "pyrex measuring cup in 3rd row",
         "objectSet": "4"
     },
     {
-        "text": "cassette in the top row",
+        "text": "cassette in top row",
         "objectSet": "3"
     },
     {
@@ -356,7 +356,7 @@ var uniqueLabels = [
         "objectSet": "2"
     },
     {
-        "text": "pyrex measuring glass with the handle",
+        "text": "pyrex measuring glass with handle",
         "objectSet": "4"
     },
     {
@@ -364,7 +364,7 @@ var uniqueLabels = [
         "objectSet": "7"
     },
     {
-        "text": "hairbrush with two lines on the handle",
+        "text": "hairbrush with two lines on handle",
         "objectSet": "5"
     },
     {
@@ -372,7 +372,7 @@ var uniqueLabels = [
         "objectSet": "7"
     },
     {
-        "text": "cube B",
+        "text": "B cube",
         "objectSet": "2"
     },
     {
@@ -388,12 +388,16 @@ var uniqueLabels = [
         "objectSet": "2"
     },
     {
-        "text": "lint brush (?)",
+        "text": "lint brush",
         "objectSet": "5"
     },
     {
         "text": "larger measuring cup",
         "objectSet": "4"
+    },
+    {
+        "text": "hairbrush on the bottom",
+        "objectSet": "5"
     },
     {
         "text": "grey whiteboard eraser",
@@ -404,11 +408,11 @@ var uniqueLabels = [
         "objectSet": "4"
     },
     {
-        "text": "block with the B on top",
+        "text": "block with B on top",
         "objectSet": "2"
     },
     {
-        "text": "red candle on the stand",
+        "text": "red candle on stand",
         "objectSet": "7"
     },
     {
@@ -416,7 +420,7 @@ var uniqueLabels = [
         "objectSet": "8"
     },
     {
-        "text": "black round brush with the wooden handle",
+        "text": "black round brush with wooden handle",
         "objectSet": "5"
     },
     {
@@ -424,7 +428,7 @@ var uniqueLabels = [
         "objectSet": "2"
     },
     {
-        "text": "the bundle which is near the feather",
+        "text": "bundle which is near feather",
         "objectSet": "6"
     },
     {
@@ -436,7 +440,7 @@ var uniqueLabels = [
         "objectSet": "3"
     },
     {
-        "text": "cube w/ the B",
+        "text": "cube w/ a B",
         "objectSet": "2"
     },
     {
