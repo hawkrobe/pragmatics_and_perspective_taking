@@ -122,7 +122,8 @@ First, look at error rates
 critTrials <- exp1_d %>% 
   filter(attemptNum == 0) %>%
   filter(critical == 1) %>%
-  filter(trialType == 'exp') 
+  filter(trialType == 'exp') %>%
+  mutate(error = 1 - correct) 
 
 critTrials %>%
   group_by(gameid, condition) %>%
@@ -144,7 +145,6 @@ ggsave('../writing/journal_manuscript/figures/criticalErrors.pdf')
 ```{r}
 critTrials %>%
   group_by(condition) %>%
-  mutate(error = 1 - correct) %>%
   tidyboot_mean(column = error) %>%
   ggplot(aes(x = condition, y =empirical_stat, fill = condition)) +
     geom_bar(stat = 'identity', alpha = .5) +
@@ -183,7 +183,7 @@ errorTable
 prop.test(errorTable$totalNumErrors, errorTable$totalPossible)
 ```
 
-### Control for item-level error rates...
+### Control for item-level and subject-level error rates...
 
 ```{r}
 summary(glmer(correct ~ condition + (1|gameid) + (1+condition | objectSet), family = 'binomial', 
@@ -193,20 +193,17 @@ summary(glmer(correct ~ condition + (1|gameid) + (1+condition | objectSet), fami
 ## Error heterogeneity across items...
 
 ```{r}
-diffs <- critTrials %>% 
-  mutate(error = 1 - correct) %>%
+error_diffs <- critTrials %>% 
   group_by(objectSet, condition, targetObject) %>%
   summarize(pctErrors = mean(error)) %>%
   spread(condition, pctErrors) %>%
   mutate(errorReduction = scripted - unscripted) %>%
-  gather(condition, pctErrors, scripted, unscripted) 
-
-critTrials %>% 
-  left_join(diffs) %>%
-  mutate(error = 1 - correct) %>%
+  gather(condition, pctErrors, scripted, unscripted) %>%
+  right_join(critTrials) %>%
   group_by(objectSet, condition, targetObject, errorReduction) %>%
-  tidyboot_mean(column = error) %>%
-  ggplot(aes(x = reorder(targetObject, -errorReduction), y = empirical_stat, color = condition, group = condition)) +
+  tidyboot_mean(column = error) 
+
+ggplot(error_diffs, aes(x = reorder(targetObject, -errorReduction), y = empirical_stat, color = condition, group = condition)) +
     geom_point() +
     geom_line(stat = 'identity', position = 'dodge') +
     geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0) +
@@ -308,7 +305,13 @@ ggsave('../writing/journal_manuscript/figures/hoverOverDistractor.pdf', height =
 ```
 
 ```{r}
-summary(glmer(hovered ~ trialType * condition + (1 + trialType|gameid) + (1 |objectSet), data = d.onDistractor, family = 'binomial'))
+summary(glmer(hovered ~ trialType * condition + (1 + trialType |gameid) + (1 |objectSet), data = d.onDistractor, family = 'binomial'))
+```
+Note that this is still significant for our preregistered dv (raw amount of data) -- it's just less interpretable given the distribution... 
+
+```{r}
+summary(lmer(totalAmtTimeOnDistractor ~ trialType * condition + (1 + trialType|gameid) + (1 |objectSet), 
+             data = d.onDistractor %>% mutate(totalAmtTimeOnDistractor = ifelse(totalAmtTimeOnDistractor == 0, 0, log(totalAmtTimeOnDistractor)))))
 ```
 
 
@@ -368,20 +371,277 @@ refExps <- exp1_d %>%
 write_csv(refExps, './refExpressions_raw.csv')
 ```
 
-For 6 of the 8 items, unscripted speakers had significantly more words in their referring expressions... (n.s. for the other 2, but idiosyncratic)
+Look at all of them to make sure there aren't dumb duplicates...
 
 ```{r}
-scripted_refs <- c('glasses', 'bottom block', 'tape', 'large measuring cup', 'brush', 'eraser', 'small candle', 'mouse')
+scripted_words <- c('glasses', 'bottom block', 'tape', 'large measuring cup', 'brush', 'eraser', 'small candle', 'mouse')
+scripted_refs <- data.frame(objectSet = c(1,2,3,4,5,6,7,8), text = scripted_words, stringsAsFactors=FALSE)
+
 standardized_refs <- read_csv('../data/final/experiment1/refExpressions_standardized.csv')
-length(unique(c(standardized_refs$text, scripted_refs)))
-unscripted_refs <- read_csv('../data/final/experiment1/refExpressions.csv')
-scripted.df <- data.frame(objectSet = c(1,2,3,4,5,6,7,8), m = scripted_refs, numRawWords = c(1,2,1,3,1,1,2,1))
-refs %>% 
-  mutate(numRawWords = str_count(text, "\\S+")) %>%
-  group_by(objectSet) %>%
-  tidyboot_mean(numRawWords) %>%
-  left_join(scripted)
+cat('unique utterances: ', length(unique(c(scripted_refs, standardized_refs$text))))
+unscripted_utt_counts <- standardized_refs %>% 
+  group_by(objectSet,text) %>%
+  tally() %>%
+  mutate(condition = 'unscripted')
 ```
+
+Unscripted speakers had significantly more words in their referring expressions across items... (note: if you just bootstrap cis for each item, it's significant for 6 of 8...)
+
+```{r}
+unscripted_refs <- read_csv('../data/final/experiment1/refExpressions.csv')
+scripted.df <- data.frame(objectSet = c(1,2,3,4,5,6,7,8), scriptedMessage = scripted_refs, scriptedNumWords = c(1,2,1,3,1,1,2,1))
+diff.df <- unscripted_refs %>% 
+  mutate(unscriptedNumWords = str_count(text, "\\S+")) %>%
+  left_join(scripted.df, by = c('objectSet')) %>%
+  mutate(diff = unscriptedNumWords - scriptedNumWords)
+
+library(lmerTest)
+summary(lmer(diff ~ 1 + (1 | objectSet) + (1 | gameid), data= diff.df))
+```
+
+## Analyze informativity ratings
+
+First identify 4 turkers who were responding randomly...
+
+```{r}
+raw_inf_ratings <- read_csv('../informativity_ratings.csv')
+# ggplot(raw_inf_ratings %>% mutate(workerid = substr(workerid, 0, 6)), aes(x = response, fill = referent)) +
+#   geom_density(alpha = 0.5) +
+#   facet_wrap(~ workerid, scales = 'free_y')
+# 
+# ggplot(raw_inf_ratings %>% mutate(workerid = substr(workerid, 0, 6)), aes(x = slideNumber, y = response, color = referent)) + 
+#   geom_point() +
+#   facet_wrap(~ workerid)
+
+raw_inf_ratings %>% mutate(workerid = substr(workerid, 0, 6)) %>%
+  group_by(workerid) %>%
+  summarize(medianRT = median(rt))
+
+bad_raters <- c('956e201e2604ead2f2fa81d0ef666626', '6559a18fae791987122350d706538e90', '2301c2d66270fecb3c16cd1593e4aa0f', 'dd0463e01b62413231a9218253908a91')#, 'deec4028cd9f327085a947bac0e19aab', '766e6aa74bc2c113e29531dab30d63e9')
+```
+
+```{r}
+library(irr)
+inf_ratings <- raw_inf_ratings %>%
+  filter(!(workerid %in% bad_raters))
+
+inf_diffs <- inf_ratings %>%
+  select(-slideNumber, -rt) %>%
+  group_by(workerid, label) %>%
+  spread(referent, response) %>%
+  mutate(diff = target - distractor) %>%
+  ungroup()
+
+wideRatings <- inf_diffs %>% select(label, diff, workerid) %>% spread(workerid, diff)
+icc(wideRatings[,-c(1)],
+    model = "twoway", type = "agreement")
+
+inf_diffs_collapsed <- inf_diffs %>%
+  group_by(label) %>%
+  summarize(distractor = mean(distractor),
+            target = mean(target),
+            paired_inf = mean(diff))
+```
+
+lmer mixed-model here is complicated because of the complex & partially crossed nature of the variance in the data (i.e. between judgements of raters, between object sets, between utterances chosen by different speakers)  TODO: double-bootstrapping thing where you first resample 'mean' ratings for each utterance, then you resample the distribution of utterances in a condition (i.e. within object set), then you take a weighted average to get your 'informativity' 
+
+```{r}
+## Make a df with each utterance duplicated proportionally to the times it was said
+utt_data_tmp <- scripted_refs %>% mutate(n = 68) %>% mutate(condition = 'scripted') %>%
+  group_by(text) %>% 
+  slice(rep(1:n(), each = n)) %>%
+  mutate(gameid = as.character(row_number())) 
+
+utt_data <- left_join(
+  inf_diffs %>% group_by(label) %>% summarize(m = mean(diff)),
+  utt_data_tmp %>% rename(label = text)
+) %>% filter(condition == 'scripted') %>% group_by(label, objectSet, condition) %>% summarize(m = mean(m)) %>%
+  right_join(critTrials %>% filter(condition == 'scripted'), by = c('objectSet', 'condition')) %>%
+  group_by(gameid, condition, objectSet, label) %>%
+  group_by(label, objectSet, condition, gameid) %>%
+  tally() %>%
+  select(-n) %>%
+  rename(text = label) %>%
+  bind_rows(standardized_refs %>% mutate(condition = 'unscripted', objectSet = as.numeric(objectSet)))
+```
+
+```{r}
+## In the inner loop, we want to sample a 'mean' rating for each utterance
+## using same sample of *raters* for all utterances... 
+sampleRatings = function(df, indices) {
+  grouped_df <- df %>%
+    group_by(label, objectSet) %>%
+    do(data.frame(diff = mean(.$diff[indices]),
+                  target = mean(.$target[indices]),
+                  distractor = mean(.$distractor[indices])))
+  return(grouped_df)
+}
+
+## In outer loop, we want to sample 'pairs' as a unit (with their 8 utterances)
+samplePairs = function(df) {
+  uniq_ids <- unique(df$gameid)
+  new_ids <- sample(uniq_ids, length(uniq_ids), replace = TRUE)
+  resampled_ids = data.frame(gameid = new_ids,
+                             sampleid = 1:length(new_ids), 
+                             stringsAsFactors = FALSE)
+  return(left_join(resampled_ids, df, by = c('gameid')))
+}
+
+## Finally, want to sample object sets per pair
+sampleObjects = function(df, indices) {
+  new_objects <- data.frame(objectSet = df$objectSet[indices])
+  return(left_join(new_objects, df, by = c('objectSet')))
+}
+# sampleObjects(data.frame(objectSet = c(1,2,3,4,5,6,7,8), utt = c('a', 'b', 'c', 'a', 'b', 'c', 'd', 'e')),
+#               obj_sets)
+```
+
+```{r}
+## do a multi-stage bootstrap...
+## 1. resample a set of raters to get a mean for each utterance...
+## 2. sample object set indices (e.g. 5,2,3,3,5,1,8,5)
+## 3. resample pairs within each condition and then resample utterances within pairs using object set indices
+boot_samples = replicate(1000, {
+  raters = sample(1:16,16,replace = TRUE)
+  obj_sets = sample(1:8, 8, replace = TRUE)
+  resampled_ratings = sampleRatings(inf_diffs, raters)
+
+  resampled_pairs = utt_data %>%
+    group_by(condition) %>%
+    do(samplePairs(.)) %>%
+    group_by(condition, sampleid) %>%
+    do(sampleObjects(., obj_sets)) %>%
+    rename(label = text)
+  
+  combined <- left_join(resampled_pairs, resampled_ratings, by = 'label') %>%
+    gather(referent, value, target,distractor,diff) %>%
+    group_by(condition, referent) %>%
+    summarize(m = mean(value))
+  diff_of_diffs <- combined %>% filter(referent == 'diff') %>% spread(condition, m) %>% mutate(diff_of_diffs = unscripted - scripted)
+  return(c((combined %>% filter(referent != 'diff'))$m, diff_of_diffs$diff_of_diffs))
+})
+```
+
+```{r}
+# Look at diff of diffs (if excludes 0, significant)
+data.frame(test_stat = boot_samples[5,]) %>%
+  summarize(m = mean(test_stat),
+            ci_upper = sort(test_stat)[length(test_stat) * 0.025],
+            ci_lower = sort(test_stat)[length(test_stat) * 0.975]) 
+```
+
+```{r}
+boot_stats = data.frame(
+  scripted_distractor = boot_samples[1,],
+  scripted_target = boot_samples[2,],
+  unscripted_distractor = boot_samples[3,],
+  unscripted_target = boot_samples[4,]
+) %>%
+  gather(condition, value) %>%
+  group_by(condition) %>%
+  summarize(m = mean(value),
+            ci_upper = sort(value)[length(value) * 0.025],
+            ci_lower = sort(value)[length(value) * 0.975]) %>%
+  separate(condition, into = c('condition', 'referent'), by = '_') 
+
+dodge <- position_dodge(width=0.9)
+ggplot(boot_stats, aes(x = condition, y = m, fill = condition, alpha = referent)) +
+  geom_bar(stat= 'identity', position = 'dodge') +
+  scale_alpha_manual(values=c(.25, .75)) +
+  geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0, position = dodge) + 
+  theme_few() +
+  scale_fill_colorblind() +
+  guides(fill = 'none') +
+  ylab('utterance informativity ratings') +
+  theme(aspect.ratio = 1)
+
+ggsave('../writing/journal_manuscript/figures/informativity.pdf')
+```
+
+### How well does informativity correlate with error?
+
+now bootstrap again but within items
+
+```{r}
+boot_objectsets = replicate(1000, {
+  raters = sample(1:16,16,replace = TRUE)
+  resampled_ratings = sampleRatings(inf_diffs, raters)
+
+  resampled_pairs = utt_data %>%
+    group_by(condition) %>%
+    do(samplePairs(.)) %>%
+    rename(label = text)
+  
+  combined <- left_join(resampled_pairs, resampled_ratings, by = c('label', 'objectSet')) %>%
+    gather(referent, value, target,distractor,diff) %>%
+    group_by(condition, objectSet, referent) %>%
+    summarize(m = mean(value))
+
+  return((combined %>% filter(referent == 'diff'))$m)
+})
+```
+
+Kind of messy way to aggregate these, but so it goes... (replicate doesn't return a dataframe)
+
+(note that the 'outlier' here is the scripted 'candle' trial: raters thought it was *much* more likely to refer )
+
+```{r}
+boot_objectsets_stats = data.frame(
+  condition = c(rep('scripted', 8), rep('unscripted', 8)),
+  m_rating = rep(0,16),
+  ci_upper_rating = rep(0,16),
+  ci_lower_rating = rep(0,16),
+  objectSet = rep(1:8,2)
+)
+
+for (i in 1:16) {
+  boot_row = boot_objectsets[i,]
+  boot_objectsets_stats[i,]$m_rating = mean(boot_row)
+  boot_objectsets_stats[i,]$ci_upper_rating = sort(boot_row)[length(boot_row) * 0.025]
+  boot_objectsets_stats[i,]$ci_lower_rating = sort(boot_row)[length(boot_row) * 0.975]
+}
+
+left_join(boot_objectsets_stats, error_diffs, by = c('condition', 'objectSet')) %>%
+  ggplot(aes(x = m_rating, y = mean, color = condition, group = 1)) +
+    geom_point(size = 2, shape = 16) +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), alpha = .3) +
+    geom_errorbarh(aes(xmax = ci_upper_rating, xmin = ci_lower_rating), alpha =.3) +
+    geom_smooth(linetype = 'dotted', method = 'lm', colour="black", se = F) +
+    theme_few() +
+    theme(aspect.ratio = 1, legend.position = 'top') +
+    scale_color_colorblind() +
+    xlab('informativity diff (target - distractor)') +
+    ylab('% critical error')
+
+ggsave('../writing/journal_manuscript/figures/informativity_predicts_errors.pdf',
+       height = 3, width = 3, useDingbats=FALSE)
+```
+
+
+```{r}
+boot_correlation = replicate(1000, {
+  raters = sample(1:16,16,replace = TRUE)
+  resampled_ratings = sampleRatings(inf_diffs, raters)
+
+  resampled_pairs = utt_data %>%
+    group_by(condition) %>%
+    do(samplePairs(.)) %>%
+    rename(label = text)
+  
+  combined <- left_join(resampled_pairs, resampled_ratings, by = c('label', 'objectSet')) %>%
+    select(-target,-distractor,-label) %>%
+    inner_join(critTrials, by = c('gameid', 'condition', 'objectSet')) %>%
+    group_by(objectSet, condition) %>%
+    summarize(inf = mean(diff), error = mean(error))
+    
+  return(cor(combined$inf, combined$error))
+})
+
+cat('r = ', mean(boot_correlation), 
+    ', 95% CI = [', sort(boot_correlation)[length(boot_correlation) * 0.025],
+    ', ', sort(boot_correlation)[length(boot_correlation) * 0.975],']')
+```
+
 
 ## TO-DO
 
@@ -466,6 +726,7 @@ t.test(basic.d$diff)
 
 ```{r}
 dodge <- position_dodge(width=0.9)
+cbPalette = c(rgb(0.8, .8, .8), rgb(.8, .3, .3),  rgb(0, .6, .4), rgb(.4, .4, .4))
 
 d %>%
   group_by(context, hidden) %>%
@@ -476,9 +737,10 @@ d %>%
     theme_few() +
     ylab('mean # words') +
     theme(aspect.ratio = 1, text = element_text(size=20)) +
-    scale_fill_colorblind()
+    scale_fill_manual(values=cbPalette) +
+    theme(aspect.ratio = 1)
 
-ggsave('~/Downloads/aggregated_means.pdf', width = 4, height = 2)
+ggsave('../writing/journal_manuscript/figures/num_words.pdf', width = 4, height = 3)
 ```
 
 ## Scatter to look at within-subj effects
@@ -486,6 +748,13 @@ ggsave('~/Downloads/aggregated_means.pdf', width = 4, height = 2)
 Some people used exactly the same number of words on every trial...
 
 ```{r}
+hidden.d <- d %>%
+  group_by(gameid, context, hidden) %>%
+  summarize(m = mean(numRawWords)) %>%
+  spread(hidden, m) %>%
+  mutate(diff = yes- no,
+         ratio = log(yes/no)) 
+
 hidden.d %>% 
   filter(context == 'far') %>% 
   mutate(group = case_when(diff < -0 ~ 'anti',
@@ -497,12 +766,6 @@ all_the_things_ers <- (hidden.d %>% filter(context =='far') %>% filter(diff == 0
 ```
 
 ```{r}
-hidden.d <- d %>%
-  group_by(gameid, context, hidden) %>%
-  summarize(m = mean(numRawWords)) %>%
-  spread(hidden, m) %>%
-  mutate(diff = yes- no,
-         ratio = log(yes/no)) 
 
 ggplot(hidden.d, aes(x = no, y = yes)) +
     geom_point() +
@@ -516,7 +779,7 @@ ggplot(hidden.d, aes(x = no, y = yes)) +
     xlim(1,15) +
     theme(aspect.ratio = 1, text = element_text(size=20)) 
 
-ggsave('~/Downloads/scatter.pdf')
+ggsave('../writing/journal_manuscript/figures//scatter.pdf')
 ```
 
 Histogram
@@ -647,7 +910,8 @@ ggplot(d.booted, aes(x = context, y = empirical_stat, fill = hidden)) +
   theme_few() +
   theme(aspect.ratio = 1, text = element_text(size=20))  +
   ylab('% utterances with feature') +
-  scale_fill_colorblind()
+  scale_fill_manual(values=cbPalette) 
 
-ggsave('~/Downloads/by-feature-analysis.pdf')
+ggsave('../writing/journal_manuscript/figures/by-feature-analysis.pdf', 
+       height = 3, width = 9)
 ```
