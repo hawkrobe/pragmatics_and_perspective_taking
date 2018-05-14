@@ -648,7 +648,6 @@ cat('r = ', mean(boot_correlation),
 1. Subject-level analyses of informativity: could be a mixture of 'lazy' egocentric speakers and 'attentive' audience-sensitive speakers? 
 2. Sometimes the additional information is in movement instruction (i.e. "one square left toward a curtain" or "one square up below the comb")
 3. Change in informativity over time (are people already being informative on first round? are people 'learning' to be more informative over course of expt? or getting less informative because tired of task?)
-4. Just length of referring expression in words?
 
 # Experiment 2
 
@@ -667,6 +666,7 @@ d_annotated <- read_csv('../data/final/experiment2/planned_sample/chatMessage/me
 incompleteIDs <- unique((d_annotated %>% group_by(gameid) %>% 
                            filter(length(unique(trialNum)) != 24))$gameid)
 confused <- unique((exp2_subjInfo %>% filter(understandsInstructions != 'yes'))$gameid)
+nonNative <- unique((exp2_subjInfo %>% filter(nativeEnglish != 'yes'))$gameid)
 
 # Some speakers relied on location in grid (TODO: WHAT ABOUT 'BELOW' PEOPLE?)
 location_abusers <- c('8219-bb7861c1-43f4-480c-906b-8441c583c0ab', 
@@ -677,14 +677,54 @@ location_abusers <- c('8219-bb7861c1-43f4-480c-906b-8441c583c0ab',
 tabooers <- c('2929-d218f724-b45e-416b-af44-5cab5658bad9', #(opposite of white... primary color...)
               '7600-346d56b5-bd76-406f-befb-6b47e07d5916', # MERRY GO ROUND
               '3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b') # CAN YOU SEE???
-badGames <- c(incompleteIDs, location_abusers, confused)
+badGames <- c(incompleteIDs, nonNative, location_abusers, confused, tabooers)
 
 d <- d_annotated %>%
   mutate(numFeatures = colorMention + shapeMention + textureMention) %>%
-  filter(!(gameid %in% badGames))
+  filter(!(gameid %in% badGames)) %>%
+  mutate(occlusions = as.factor(occlusions),
+        context = as.factor(context))
 ```
 
-## Check basic (no-hidden) pragmatic effect
+## Descriptive stats
+
+How many recruited, how many excluded, for what reasons, etc?
+
+```{r}
+paste0('recruited ', length(exp2_subjInfo$gameid))
+paste0('total games ', length(unique(d_annotated$gameid)))
+paste0('incomplete ', length(incompleteIDs))
+paste0('confused ', length(setdiff(confused,incompleteIDs)))
+paste0('non-native english ', length(setdiff(nonNative, union(confused, incompleteIDs))))
+paste0('violated instructions ', length(setdiff(c(location_abusers, tabooers), union(nonNative, union(confused, incompleteIDs)))))
+paste0('final sample ', length(unique(d$gameid)))
+```
+
+## Quick listener analysis: how common are errors?
+
+Errors rare...
+
+```{r}
+exp2_clicks <- read_tsv('../data/final/experiment2/planned_sample/clickedObj/clickedObj.csv') %>%
+  mutate(correct = ifelse(correct == 'true', 1, 0)) %>%
+  filter(!(gameid %in% badGames))
+
+## Errors by condition
+tmp <- exp2_clicks %>%
+  group_by(context, occlusions) %>%
+  summarize(m = sum(correct), total = length(correct) - m) 
+
+chisq.test(t(tmp[,3:4]))
+
+## Error distribution by pair
+exp2_clicks %>%
+  group_by(gameid) %>%
+  summarize(numErrors = 24- sum(correct)) %>%
+  group_by(numErrors) %>%
+  tally()
+```
+
+## Visualize basic (no-hidden) pragmatic effect
 
 ```{r}
 basic.d <- d %>%
@@ -695,6 +735,8 @@ basic.d <- d %>%
   mutate(diff = close- far,
          ratio = log(close / far))
  
+summary(lmer(numRawWords ~ context + (1 + context | gameid), d %>% filter(hidden == 'no')))
+
 ggplot(basic.d, aes(x = far, y = close)) +
     geom_point() +
     theme_bw() +
@@ -722,7 +764,7 @@ tidyboot_mean(basic.d %>%ungroup(), column = diff) %>%
 t.test(basic.d$diff)
 ```
 
-## Message length collapsing across all subjects
+## Visualize message length collapsing across all subjects
 
 ```{r}
 dodge <- position_dodge(width=0.9)
@@ -743,7 +785,7 @@ d %>%
 ggsave('../writing/journal_manuscript/figures/num_words.pdf', width = 4, height = 3)
 ```
 
-## Scatter to look at within-subj effects
+## Visualize individual differences
 
 Some people used exactly the same number of words on every trial...
 
@@ -754,19 +796,9 @@ hidden.d <- d %>%
   spread(hidden, m) %>%
   mutate(diff = yes- no,
          ratio = log(yes/no)) 
-
-hidden.d %>% 
-  filter(context == 'far') %>% 
-  mutate(group = case_when(diff < -0 ~ 'anti',
-                           diff > 0 ~ 'pro',
-                           TRUE ~ 'all_the_things')) %>%
-  group_by(group) %>% tally()
-
-all_the_things_ers <- (hidden.d %>% filter(context =='far') %>% filter(diff == 0))$gameid
 ```
 
 ```{r}
-
 ggplot(hidden.d, aes(x = no, y = yes)) +
     geom_point() +
     facet_wrap(~ context) +
@@ -802,6 +834,19 @@ hidden.d %>%
 ggsave("~/Downloads/histograms.pdf")
 ```
 
+Look for population who mentioned all the things all the time...
+
+```{r}
+hidden.d %>% 
+  filter(context == 'far') %>% 
+  mutate(group = case_when(diff < -0 ~ 'anti',
+                           diff > 0 ~ 'pro',
+                           TRUE ~ 'all_the_things')) %>%
+  group_by(group) %>% tally()
+
+all_the_things_ers <- (hidden.d %>% filter(context =='far') %>% filter(diff == 0))$gameid
+```
+
 ```{r}
 hidden.d %>%
   group_by(context) %>%
@@ -822,30 +867,21 @@ hidden.d %>%
 Simple effect of hidden-ness in 'far' contexts 
 
 ```{r}
-summary(lmer(numRawWords ~ hidden + (1 + hidden | gameid), 
-             data = d %>% 
-               filter(context == 'far') %>%
-               filter(!(gameid %in% all_the_things_ers))
-               ))
-t.test(numRawWords ~ hidden, data = d %>% filter(context == 'far') , var.equal = FALSE)
+# summary(lmer(numRawWords ~ hidden + (1 + hidden | gameid), 
+#              data = d %>% filter(context == 'far') 
+))
+#t.test(numRawWords ~ hidden, data = d %>% filter(context == 'far') , var.equal = FALSE)
 ```
 
 interaction-y way
 
 ```{r}
-summary(lmer(numRawWords ~ context * hidden + (1 + context * hidden | gameid), data = d %>% filter(!(gameid %in% all_the_things_ers))))
+contrasts(d$context) <- contr.treatment(2, base = 2)
+contrasts(d$occlusions) <- contr.treatment(2, base = 2)
+
+summary(lmer(numRawWords ~ context * occlusions + (1 + context * occlusions | gameid), data = d ))
 ```
 
-helmert coding way (one way of slicing)
-
-```{r}
-d.regression <- d %>% 
-  unite(condition, context, hidden) %>%
-  ungroup() %>%
-  mutate(condition = ordered(condition, levels = c('far_no', 'close_no', 'far_yes', 'close_yes')))
-contrasts(d.regression$condition) <- contr.helmert(4)
-summary(lmer(numRawWords ~ condition + (1 + condition | gameid), data = d.regression))
-```
 
 ## Use feature data instead
 
@@ -877,18 +913,27 @@ d %>% group_by(context, occlusions) %>%
     theme_few()
 ```
 
-Note: Random intercept doesn't converge (less variance in these numbers...)
+Note: Random interaction doesn't converge (less variance in these numbers...)
 
 ```{r}
-summary(lmer(numFeatures ~ context * occlusions + (1 + context + occlusions | gameid), data = d))
 ```
 
 ```{r}
-summary(glmer(colorMention ~ occlusions + (1 + occlusions | gameid), family = 'binomial', data = d))
+contrasts(d$context) <- contr.treatment(2, base = 2)
+contrasts(d$occlusions) <- contr.treatment(2, base = 2)
+summary(glmer(colorMention ~ occlusions * context + (1 + occlusions | gameid), 
+              family = 'binomial', data = d))
 ```
 
 ```{r}
-summary(glmer(textureMention ~ occlusions + (1 + occlusions | gameid), family = 'binomial', data = d))
+summary(glmer(textureMention ~ occlusions * context + (1 + occlusions | gameid), 
+              family = 'binomial', data = d))
+summary(tmp2)
+fixef(tmp2)
+baseprob = fixef(tmp2)[1] 
+cat('no-occlusion:', exp(baseprob) / (1 + exp(baseprob)))
+occludedprob = fixef(tmp2)[1] + fixef(tmp2)[2]
+cat('with occlusion:', exp(occludedprob) / (1 + exp(occludedprob)))
 ```
 
 ```{r}
@@ -903,7 +948,7 @@ d.booted <- d %>%
   group_by(context, hidden, feature) %>% 
   tidyboot_mean(column = mentioned) 
 
-ggplot(d.booted, aes(x = context, y = empirical_stat, fill = hidden)) + 
+ggplot(d.booted, aes(x = context, y = mean, fill = hidden)) + 
   geom_bar(stat = 'identity', position = dodge) +
   geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0) +
   facet_wrap(~ feature) + 
