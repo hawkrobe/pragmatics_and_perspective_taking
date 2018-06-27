@@ -648,6 +648,9 @@ cat('r = ', mean(boot_correlation),
 1. Subject-level analyses of informativity: could be a mixture of 'lazy' egocentric speakers and 'attentive' audience-sensitive speakers? 
 2. Sometimes the additional information is in movement instruction (i.e. "one square left toward a curtain" or "one square up below the comb")
 3. Change in informativity over time (are people already being informative on first round? are people 'learning' to be more informative over course of expt? or getting less informative because tired of task?)
+4. Order effects (i.e. are people more likely to use a modifier when they had to on the previous round?)
+5. Are people more informative when there are more objects? 
+
 
 # Experiment 2
 
@@ -686,6 +689,14 @@ d <- d_annotated %>%
         context = as.factor(context))
 ```
 
+Write out for BDA
+
+```{r}
+d %>% 
+  select(-numRawWords, -numFeatures, -text, -occlusions) %>%
+  write_csv('../modeling/bdaInput/bdaInput.csv')
+```
+
 ## Descriptive stats
 
 How many recruited, how many excluded, for what reasons, etc?
@@ -722,6 +733,55 @@ exp2_clicks %>%
   summarize(numErrors = 24- sum(correct)) %>%
   group_by(numErrors) %>%
   tally()
+```
+
+Add missing column annotating whether critical distractor in close trials different from target in texture, color, or both...
+
+```{r}
+library(dplyr)
+bdaInput = exp2_clicks %>% 
+  mutate(names = substr(names,2,nchar(names)-1)) %>%
+  separate(names, sep = ',', into = c('item1','item2','item3', 'item4', 'item5'),
+           extra = "merge", fill = "left") %>%
+  select(-item5) %>%
+  gather(distractorNum, distractorName, item1:item4) %>%
+  separate(intendedName, into = c('targetTexture', 'targetColor', 'targetShape')) %>%
+  filter(!is.na(distractorName)) %>%
+  separate(distractorName, into = c('distractorTexture', 'distractorColor', 'distractorShape')) %>%
+  filter(distractorShape == targetShape) %>%
+  mutate(textureMatch = distractorTexture == targetTexture) %>%
+  mutate(colorMatch = distractorColor == targetColor) %>%
+  mutate(distractorType = ifelse(textureMatch, 'texture_shape', ifelse(colorMatch, 'color_shape', 'shape_only'))) %>%
+  select(gameid, trialNum, distractorType) %>%
+  right_join(exp2_clicks) %>%
+  mutate(distractorType = ifelse(is.na(distractorType), 'diff_shape', distractorType)) %>%
+  right_join(d) %>%
+  select(gameid, trialNum, distractorType, context, hidden, numDistractors, colorMention, shapeMention, textureMention)
+
+write_csv(bdaInput, '../modeling/bdaInput/bdaInput.csv')
+```
+
+Now that we have these distractor types... check if results differ across what the distractor is?
+
+```{r}
+bdaInput %>%
+  group_by(distractorType, hidden) %>%
+  tidyboot_mean(column = numFeatures) %>%
+  ggplot(aes(x = distractorType, y = mean, fill = hidden)) +
+    geom_bar(stat = 'identity', position = dodge) +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0)
+```
+
+check if results depend on number of distractors?
+
+```{r}
+bdaInput %>%
+  mutate(numVisible= numDistractors - numObjsOccluded) %>%
+  group_by(numVisible, hidden) %>%
+  tidyboot_mean(column = numFeatures) %>%
+  ggplot(aes(x = numVisible, y = mean, fill = hidden)) +
+    geom_bar(stat = 'identity', position = dodge) +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0)
 ```
 
 ## Visualize basic (no-hidden) pragmatic effect
@@ -938,8 +998,11 @@ cat('with occlusion:', exp(occludedprob) / (1 + exp(occludedprob)))
 
 ```{r}
 d %>% 
-  group_by(context, occlusions) %>% 
-  summarize(numFeatures = mean(numFeatures))
+  group_by(context, hidden) %>% 
+  tidyboot_mean(column = numFeatures) %>%
+  ggplot(aes(x = context, y = mean, fill = hidden)) +
+    geom_bar(stat = 'identity', position = dodge) +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0)
 ```
 
 ```{r}
@@ -959,4 +1022,65 @@ ggplot(d.booted, aes(x = context, y = mean, fill = hidden)) +
 
 ggsave('../writing/journal_manuscript/figures/by-feature-analysis.pdf', 
        height = 3, width = 9)
+```
+
+## Model-based analyses
+
+```{r}
+library(coda)
+
+estimate_mode <- function(s) {
+  d <- density(s)
+  return(d$x[which.max(d$y)])
+}
+HPDhi<- function(s){
+  m <- HPDinterval(mcmc(s))
+  return(m["var1","upper"])
+}
+HPDlo<- function(s){
+  m <- HPDinterval(mcmc(s))
+  return(m["var1","lower"])
+}
+
+rbind(read.csv('../modeling/bdaOutput/occlusionSensitivityPredictives.csv') %>% mutate(source = 'occlusion-sensitive model'),
+      read.csv('../modeling/bdaOutput/egocentricPredictives.csv') %>% mutate(source = 'egocentric model')) %>%
+  mutate(i = row_number()) %>%
+  gather(condition, value, close_hidden:far_visible) %>%
+  group_by(condition, source) %>%
+  summarize(mean = estimate_mode(value),
+            ci_lower = round(HPDlo(value), 3),
+            ci_upper = round(HPDhi(value), 3)) %>%
+  separate(condition, into = c('context', 'hidden')) %>%
+  mutate(hidden = ifelse(hidden == 'hidden', 'yes', 'no')) %>%
+  rbind(d %>% 
+          group_by(context, hidden) %>% 
+          tidyboot_mean(column = numFeatures) %>%
+          ungroup() %>%
+          mutate(context = as.character(context)) %>%
+          mutate(source = as.character('empirical data')) %>% 
+          select(-empirical_stat, -n)) %>%
+  ggplot(aes(x = context, fill = hidden, y = mean)) +
+    geom_bar(stat = 'identity', position = dodge) +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0) +
+    facet_wrap(~ source) +
+    theme_few() +
+    ylab('mean # features produced') +
+    theme(aspect.ratio = 1)
+```
+
+Examine param posteriors for occlusion-sensitive model
+
+```{r}
+read.csv('../modeling/bdaOutput/occlusionSensitivityParams.csv') %>%
+  gather(parameter, value, alpha:shapeCost) %>%
+  group_by(parameter) %>%
+  summarize(mode = estimate_mode(value),
+            md_lo = round(HPDlo(value), 3),
+            md_hi = round(HPDhi(value), 3))
+```
+
+log-likelihood plot
+
+```{r}
+
 ```
