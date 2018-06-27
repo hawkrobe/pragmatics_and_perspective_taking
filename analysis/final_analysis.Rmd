@@ -283,25 +283,26 @@ d.onDistractor <- exp1_d %>%
   mutate(diff = ifelse(is.na(off), 0, off - on)) %>%
   group_by(gameid,condition,objectSet, trialType) %>%
   summarize(totalAmtTimeOnDistractor = sum(diff)) %>%
+  mutate(totalAmtTimeOnDistractor = ifelse(totalAmtTimeOnDistractor == 0, 0, log(totalAmtTimeOnDistractor))) %>%
   mutate(hovered = totalAmtTimeOnDistractor > 0) %>%
   ungroup() 
 
 dodge <- position_dodge(width=0.9)
 d.onDistractor %>%
   group_by(condition, trialType) %>%
-  tidyboot_mean(column = hovered) %>%
+  tidyboot_mean(column = totalAmtTimeOnDistractor) %>%
   mutate(trial = ifelse(trialType == 'base', 'baseline', 'experimental')) %>%
   ggplot(aes(x = condition, y=empirical_stat, fill = condition, group = trial)) +
     geom_bar(aes(alpha = trial), stat = 'identity', position = dodge) +
     geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0, position = dodge) +
     theme_few() +
     scale_alpha_manual(values=c(.25, .75)) +
-    ylab('% trials hovering over distractor') +
+    ylab('(log) ms hovering over distractor') +
     scale_fill_colorblind()+
     guides(fill='none') +
     theme(aspect.ratio = 1, legend.position = 'top')
     
-ggsave('../writing/journal_manuscript/figures/hoverOverDistractor.pdf', height = 3, width = 3)
+ggsave('../../pragmatics_of_perspective_taking_tex/journal_manuscript/figures/hoverOverDistractor.pdf', height = 3, width = 3)
 ```
 
 ```{r}
@@ -311,7 +312,7 @@ Note that this is still significant for our preregistered dv (raw amount of data
 
 ```{r}
 summary(lmer(totalAmtTimeOnDistractor ~ trialType * condition + (1 + trialType|gameid) + (1 |objectSet), 
-             data = d.onDistractor %>% mutate(totalAmtTimeOnDistractor = ifelse(totalAmtTimeOnDistractor == 0, 0, log(totalAmtTimeOnDistractor)))))
+             data = d.onDistractor))
 ```
 
 
@@ -1082,5 +1083,16 @@ read.csv('../modeling/bdaOutput/occlusionSensitivityParams.csv') %>%
 log-likelihood plot
 
 ```{r}
+library(tidyverse)
+library(ggthemes)
+rbind(read.csv('../modeling/bdaOutput/occlusionSensitivityParams.csv'),
+      read.csv('../modeling/bdaOutput/egocentricParams.csv')) %>%
+  group_by(source) %>%
+  summarize(maxLikelihood = max(logLikelihood)) %>%
+  ggplot(aes(x = source, y = maxLikelihood)) +
+    geom_bar(stat = 'identity') +
+    theme_few() +
+    theme(aspect.ratio = 1)
 
+ggsave("../../pragmatics_of_perspective_taking_tex/journal_manuscript/figures/likelihoodPlot.pdf")
 ```
