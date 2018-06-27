@@ -4,11 +4,12 @@
   "webppl": {
     "wppl": [
       "model.wppl",
-      "helpers.wppl"      
+      "helpers.wppl"
     ]
   },
   "dependencies": {
+    "babyparse": "*",
     "lodash": "~4.17.4",
-    "papaparse": "^4.3.6"
+    "npm": "^6.1.0"
   }
 }
