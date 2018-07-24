@@ -1,5 +1,7 @@
 keysar_replication.sublime*
 *~
+*.nb.html
+analysis/refExpressions_raw.csv
 cogsci_keysar.pdf
 pnas-submission.pdf
 node_modules
