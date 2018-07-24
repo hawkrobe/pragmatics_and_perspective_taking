@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:52:03Z",
+    "AutoApprovalTime": "2018-04-03T23:51:51Z",
+    "AssignmentId": "87",
+    "WorkerId": "87",
+    "answers": {
+        "subject_information": {
+            "totalLength": 649215,
+            "gameID": "1902-2cad7ac0-96be-42b1-a2e0-c5864d3961ae",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 31,
+            "role": "director",
+            "comments": "",
+            "strategy": "basic id of object, plus left or right. Some had multiples (candles), so started to add color to distinguish which."
+        },
+        "id": "1902-2cad7ac0-96be-42b1-a2e0-c5864d3961ae"
+    },
+    "AcceptTime": "2018-04-03T23:32:04Z",
+    "HITId": "3PGQRAZX02KZLLBHN9VPDBT6XYZSYS",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:46:51Z"
+}

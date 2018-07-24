@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T04:05:03Z",
+    "AutoApprovalTime": "2018-04-04T04:04:55Z",
+    "AssignmentId": "168",
+    "WorkerId": "168",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1186986,
+            "gameID": "4241-cda4a373-ffd7-41e3-ae60-82b9d377a455",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 32,
+            "role": "matcher",
+            "comments": "No.",
+            "strategy": "The director made the clues very easy to understand, so I just followed his/her clues, making sure to stay away from the objects that they couldn't see. "
+        },
+        "id": "4241-cda4a373-ffd7-41e3-ae60-82b9d377a455"
+    },
+    "AcceptTime": "2018-04-04T03:30:02Z",
+    "HITId": "3FO95NVK5C0QOKZV9E3V5F09UCTSR1",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T03:59:55Z"
+}

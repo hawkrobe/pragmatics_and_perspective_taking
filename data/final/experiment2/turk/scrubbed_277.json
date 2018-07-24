@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:07:03Z",
+    "AutoApprovalTime": "2018-04-04T07:06:22Z",
+    "AssignmentId": "277",
+    "WorkerId": "277",
+    "answers": {
+        "subject_information": {
+            "totalLength": 976598,
+            "gameID": "5818-3e5f1ebe-d3b0-427e-a8cd-df1f0781e5c0",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 30,
+            "role": "director",
+            "comments": "",
+            "strategy": "speak plainly and specifically "
+        },
+        "id": "5818-3e5f1ebe-d3b0-427e-a8cd-df1f0781e5c0"
+    },
+    "AcceptTime": "2018-04-04T06:40:31Z",
+    "HITId": "3ZQX1VYFTD558NS63OGMUTV37V78OD",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:01:22Z"
+}

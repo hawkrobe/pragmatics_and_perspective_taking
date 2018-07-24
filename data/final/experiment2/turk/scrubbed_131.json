@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:02:04Z",
+    "AutoApprovalTime": "2018-04-04T01:01:46Z",
+    "AssignmentId": "131",
+    "WorkerId": "131",
+    "answers": {
+        "subject_information": {
+            "totalLength": 866295,
+            "gameID": "9696-71907a9b-6b17-48d9-83a5-dcd44739991e",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "director",
+            "comments": "maybe allow the entire game to be zoomed in. some of the pictures were a little tough to see clearly(where there was a feather i initially thought it was a leaf, where there was a hair brush i initially thought it was an audio adapter)",
+            "strategy": "pretty simple.just very straightforward"
+        },
+        "id": "9696-71907a9b-6b17-48d9-83a5-dcd44739991e"
+    },
+    "AcceptTime": "2018-04-04T00:38:43Z",
+    "HITId": "3KQC8JMJGCS9F90DNUQ0J3QRFMQ3HF",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:56:46Z"
+}

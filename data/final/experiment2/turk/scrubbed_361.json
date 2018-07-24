@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:03:03Z",
+    "AutoApprovalTime": "2018-04-03T22:02:54Z",
+    "AssignmentId": "361",
+    "WorkerId": "361",
+    "answers": {
+        "subject_information": {
+            "totalLength": 738668,
+            "gameID": "5218-1b6b0df7-63b6-440f-8e22-de9217a8e1b1",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 31,
+            "role": "director",
+            "comments": "No",
+            "strategy": "Simple directions, but after the first missed one I realized I needed to be more descriptive in case there was something similar in a box I can't see."
+        },
+        "id": "5218-1b6b0df7-63b6-440f-8e22-de9217a8e1b1"
+    },
+    "AcceptTime": "2018-04-03T21:38:56Z",
+    "HITId": "3N5YJ55YXG319QL9Z70NBV1T78MNAZ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:57:54Z"
+}

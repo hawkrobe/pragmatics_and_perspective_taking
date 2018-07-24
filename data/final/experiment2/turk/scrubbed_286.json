@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:43:03Z",
+    "AutoApprovalTime": "2018-04-04T06:42:32Z",
+    "AssignmentId": "286",
+    "WorkerId": "286",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1294630,
+            "gameID": "1968-d8d8332d-9575-41ab-a27d-19aaae052df1",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 28,
+            "role": "matcher",
+            "comments": "Very nice",
+            "strategy": "It is used for comment strategy."
+        },
+        "id": "1968-d8d8332d-9575-41ab-a27d-19aaae052df1"
+    },
+    "AcceptTime": "2018-04-04T06:14:51Z",
+    "HITId": "33N1S8XHHMLZWRMS6CIOVHFZDT3Z1L",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:37:32Z"
+}

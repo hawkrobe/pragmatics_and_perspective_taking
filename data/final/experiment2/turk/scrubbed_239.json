@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:39:03Z",
+    "AutoApprovalTime": "2018-04-04T06:38:04Z",
+    "AssignmentId": "239",
+    "WorkerId": "239",
+    "answers": {
+        "subject_information": {
+            "totalLength": 715282,
+            "gameID": "1757-fed9dbb6-64f8-4dfb-9f0d-9b9891fd464d",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 29,
+            "role": "matcher",
+            "comments": "It was interesting and id be glad to do another hit like it",
+            "strategy": "They told me what item to move and where, which i think wasnt supposed to happen. But there were some instances where there were two items fitting the same description they described and it was confusing."
+        },
+        "id": "1757-fed9dbb6-64f8-4dfb-9f0d-9b9891fd464d"
+    },
+    "AcceptTime": "2018-04-04T06:17:19Z",
+    "HITId": "304QEQWKZPKNQYN38K371EPLOXV0OI",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:33:04Z"
+}

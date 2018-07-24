@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:03Z",
+    "AutoApprovalTime": "2018-04-03T22:06:17Z",
+    "AssignmentId": "45",
+    "WorkerId": "45",
+    "answers": {
+        "subject_information": {
+            "totalLength": 373763,
+            "gameID": "7799-d174c147-343b-43b9-8b31-bb290ead7a75",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 12,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I was the matcher and I would just follow their direction."
+        },
+        "id": "7799-d174c147-343b-43b9-8b31-bb290ead7a75"
+    },
+    "AcceptTime": "2018-04-03T21:47:43Z",
+    "HITId": "3NFWQRSHVEEQVPLVNJ9KZC3N3CDGFX",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:17Z"
+}

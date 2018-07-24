@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T04:24:03Z",
+    "AutoApprovalTime": "2018-04-04T04:23:52Z",
+    "AssignmentId": "171",
+    "WorkerId": "171",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1024880,
+            "gameID": "1580-4762ca9e-da2d-4bb3-bc84-2d913edcee4f",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 29,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I listened to what the director was saying, for most of them. I forgot that it wasn't possible for them to see behind the red curtains, so that's where we lost points."
+        },
+        "id": "1580-4762ca9e-da2d-4bb3-bc84-2d913edcee4f"
+    },
+    "AcceptTime": "2018-04-04T03:39:15Z",
+    "HITId": "3K2CEDRACB1064ZIT6C4TL2LQ88TM3",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T04:18:52Z"
+}

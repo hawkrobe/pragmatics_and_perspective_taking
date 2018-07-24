@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:03Z",
+    "AutoApprovalTime": "2018-04-03T22:06:28Z",
+    "AssignmentId": "49",
+    "WorkerId": "49",
+    "answers": {
+        "subject_information": {
+            "totalLength": 549551,
+            "gameID": "3854-4096ea0a-299d-4d6b-9a80-5223d4b04902",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 27,
+            "role": "director",
+            "comments": "Sometimes the instructions were already input for me and I couldn't change them. Was that by design? sometimes I would have worded it a little differently.",
+            "strategy": "Describe the object as plainly as possible and tell the other player where to move it"
+        },
+        "id": "3854-4096ea0a-299d-4d6b-9a80-5223d4b04902"
+    },
+    "AcceptTime": "2018-04-03T21:50:07Z",
+    "HITId": "3MDKGGG61QNYH1EQ6Q5N4P5Z07IT6G",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:28Z"
+}

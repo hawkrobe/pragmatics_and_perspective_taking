@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:04Z",
+    "AutoApprovalTime": "2018-04-03T22:06:37Z",
+    "AssignmentId": "33",
+    "WorkerId": "33",
+    "answers": {
+        "subject_information": {
+            "totalLength": 450139,
+            "gameID": "9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 14,
+            "role": "director",
+            "comments": "this was sort-of fun, no complaints",
+            "strategy": "it was pretty easy, I am not sure I needed a strategy except to describe the object and where it should go"
+        },
+        "id": "9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e"
+    },
+    "AcceptTime": "2018-04-03T21:48:45Z",
+    "HITId": "3QQUBC64ZEED53T2AHS1V3CR8TVNX3",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:37Z"
+}

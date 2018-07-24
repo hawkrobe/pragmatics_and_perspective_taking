@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:51:03Z",
+    "AutoApprovalTime": "2018-04-04T01:50:05Z",
+    "AssignmentId": "134",
+    "WorkerId": "134",
+    "answers": {
+        "subject_information": {
+            "totalLength": 764093,
+            "gameID": "2424-e0f68d15-48c9-4e47-b792-605560d7a848",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "director",
+            "comments": "",
+            "strategy": "Basic, just be clear and precise with instructions."
+        },
+        "id": "2424-e0f68d15-48c9-4e47-b792-605560d7a848"
+    },
+    "AcceptTime": "2018-04-04T01:28:24Z",
+    "HITId": "3P4C70TRMRHCVHVR9UCIUP87084LGC",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T01:45:05Z"
+}

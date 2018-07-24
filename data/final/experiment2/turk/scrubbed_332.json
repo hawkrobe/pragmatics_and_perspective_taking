@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:51:03Z",
+    "AutoApprovalTime": "2018-04-04T07:50:46Z",
+    "AssignmentId": "332",
+    "WorkerId": "332",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1074146,
+            "gameID": "7977-1c061827-b189-446f-89fd-3624fdaa57d9",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 28,
+            "role": "director",
+            "comments": "I didn't like not being warned that some of the answers were going to be filled in for me, instead of me writing all the directions as I'd been led to believe.  I also didn't like that when I ended sentences with a period it showed up instead as a set of three tildes.",
+            "strategy": "My strategy was to describe the color of the object, especially if I couldn't be as specific as I'd have liked to be with the terminology for the item itself."
+        },
+        "id": "7977-1c061827-b189-446f-89fd-3624fdaa57d9"
+    },
+    "AcceptTime": "2018-04-04T07:24:33Z",
+    "HITId": "3EQPA8A374W6R82WW1OUZHBL7A4JZA",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:45:46Z"
+}

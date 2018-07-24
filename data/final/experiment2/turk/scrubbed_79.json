@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T00:08:03Z",
+    "AutoApprovalTime": "2018-04-04T00:07:21Z",
+    "AssignmentId": "79",
+    "WorkerId": "79",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1858868,
+            "gameID": "3689-1eb3f292-866c-427b-aaee-a6f996e421c1",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 32,
+            "role": "director",
+            "comments": "Tried my very best.",
+            "strategy": "I kept it short and simple, stuck with using adverbs like up or down. Just followed the directions that i was given and try to be as descriptive as possible when objects were very similar. For example, there were 2 candles on the same grid and tried to distinguish it for my partner by color."
+        },
+        "id": "3689-1eb3f292-866c-427b-aaee-a6f996e421c1"
+    },
+    "AcceptTime": "2018-04-03T23:19:47Z",
+    "HITId": "3MJ9GGZYO365K4WGDO23J7YVWDY2AQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:02:21Z"
+}

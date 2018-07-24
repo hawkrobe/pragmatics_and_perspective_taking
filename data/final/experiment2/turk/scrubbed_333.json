@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:41:03Z",
+    "AutoApprovalTime": "2018-04-04T07:40:17Z",
+    "AssignmentId": "333",
+    "WorkerId": "333",
+    "answers": {
+        "subject_information": {
+            "totalLength": 722670,
+            "gameID": "1027-5bb92b1d-edaa-4108-b379-99b869cc83d9",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 29,
+            "role": "matcher",
+            "comments": "That was interesting...",
+            "strategy": "I would read the directions twice before I did anything."
+        },
+        "id": "1027-5bb92b1d-edaa-4108-b379-99b869cc83d9"
+    },
+    "AcceptTime": "2018-04-04T06:51:33Z",
+    "HITId": "3EQPA8A374W6R82WW1OUZHBL7A4JZA",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:35:17Z"
+}

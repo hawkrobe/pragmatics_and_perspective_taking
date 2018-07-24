@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:03Z",
+    "AutoApprovalTime": "2018-04-03T22:06:05Z",
+    "AssignmentId": "54",
+    "WorkerId": "54",
+    "answers": {
+        "subject_information": {
+            "totalLength": 190093,
+            "gameID": "7975-32a7aea5-ac36-46c8-aee9-e8872dc31ce9",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 4,
+            "role": "director",
+            "comments": "",
+            "strategy": "Just explaining the direction to go?"
+        },
+        "id": "7975-32a7aea5-ac36-46c8-aee9-e8872dc31ce9"
+    },
+    "AcceptTime": "2018-04-03T21:53:12Z",
+    "HITId": "3X4Q1O9UBHM189NNTJOGGTZ8WALO7O",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:05Z"
+}

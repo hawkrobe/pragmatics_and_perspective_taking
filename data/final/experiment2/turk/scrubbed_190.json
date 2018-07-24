@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:29:03Z",
+    "AutoApprovalTime": "2018-04-04T06:28:56Z",
+    "AssignmentId": "190",
+    "WorkerId": "190",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1661449,
+            "gameID": "1902-d09f4a57-3905-44dd-ae98-be36bce68361",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 27,
+            "role": "matcher",
+            "comments": "you claim it would take 10 minutes, but it takes more than 30",
+            "strategy": "reading"
+        },
+        "id": "1902-d09f4a57-3905-44dd-ae98-be36bce68361"
+    },
+    "AcceptTime": "2018-04-04T05:50:22Z",
+    "HITId": "3RQVKZ7ZRKJN12YI6LQJ9GW5V6427D",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:23:56Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:57:03Z",
+    "AutoApprovalTime": "2018-04-03T23:56:38Z",
+    "AssignmentId": "74",
+    "WorkerId": "74",
+    "answers": {
+        "subject_information": {
+            "totalLength": 704423,
+            "gameID": "8094-bcee8e29-e81e-493b-beaa-36129925bea0",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 0,
+            "role": "director",
+            "comments": "I wanted to be able to do this HIT, but my partner apparently disconnected after we were paired (after I waited for about 7 minutes in the waiting room).  It says at the top to still complete the survey and submit the HIT, so that's what I'm doing.  I was given the code E2iZwi8d.",
+            "strategy": "I didn't get to use a strategy, because my partner lost their connection."
+        },
+        "id": "8094-bcee8e29-e81e-493b-beaa-36129925bea0"
+    },
+    "AcceptTime": "2018-04-03T23:19:32Z",
+    "HITId": "3MJ9GGZYO365K4WGDO23J7YVWDY2AQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:51:38Z"
+}

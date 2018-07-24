@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:32:04Z",
+    "AutoApprovalTime": "2018-04-04T06:32:02Z",
+    "AssignmentId": "255",
+    "WorkerId": "255",
+    "answers": {
+        "subject_information": {
+            "totalLength": 733369,
+            "gameID": "7066-b04dd4c1-8e43-468a-9a00-45d532b13d86",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 4,
+            "role": "director",
+            "comments": "No",
+            "strategy": "I was giving clear instructions to move objects to matcher"
+        },
+        "id": "7066-b04dd4c1-8e43-468a-9a00-45d532b13d86"
+    },
+    "AcceptTime": "2018-04-04T06:04:20Z",
+    "HITId": "36FQTHX3Z3RZOWXRN2G4XSNTKAW3BC",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:27:02Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T03:45:03Z",
+    "AutoApprovalTime": "2018-04-04T03:44:20Z",
+    "AssignmentId": "148",
+    "WorkerId": "148",
+    "answers": {
+        "subject_information": {
+            "totalLength": 843087,
+            "gameID": "5803-9ecfc101-0c9f-406a-96e9-95ce9e342def",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 32,
+            "role": "matcher",
+            "comments": "That was so much fun! Thanks!",
+            "strategy": "Just be careful to make sure I'm only moving things that the director can see."
+        },
+        "id": "5803-9ecfc101-0c9f-406a-96e9-95ce9e342def"
+    },
+    "AcceptTime": "2018-04-04T03:21:07Z",
+    "HITId": "3OND0WXMHWFCP7GACE7W2UUO6CMHES",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T03:39:20Z"
+}

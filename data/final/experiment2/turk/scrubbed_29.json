@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:04Z",
+    "AutoApprovalTime": "2018-04-03T22:06:57Z",
+    "AssignmentId": "29",
+    "WorkerId": "29",
+    "answers": {
+        "subject_information": {
+            "totalLength": 551043,
+            "gameID": "4203-2a5f910b-59d7-400f-8e01-5152a2ac155c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 11,
+            "role": "director",
+            "comments": "I lost connection I believe. ",
+            "strategy": "I was straightforward there wasn't anything tricky about it. "
+        },
+        "id": "4203-2a5f910b-59d7-400f-8e01-5152a2ac155c"
+    },
+    "AcceptTime": "2018-04-03T21:46:40Z",
+    "HITId": "3WGCNLZJKF8WTQHWEUTR4PWWPAED1J",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:57Z"
+}

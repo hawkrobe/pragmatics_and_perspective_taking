@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:43:03Z",
+    "AutoApprovalTime": "2018-04-04T06:42:43Z",
+    "AssignmentId": "261",
+    "WorkerId": "261",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1486650,
+            "gameID": "2647-ea0408bb-61ca-4c52-9583-6826b86967a2",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "director",
+            "comments": "I thought it was a fun experiment. I would like to have a chance to be on the other side.\n\nI did read the instructions carefully and looked back at them when I was answering the questions. However, part of the way through the experiment, I started to doubt whether I was following them correctly.\n\nI remember that it said not to reference items by where they were on the board, and instead to describe them. I did that, but I couldn't remember if directions like Up and Down were allowed or even if they were mentioned.",
+            "strategy": "I used the name of the object and told the other person which direction to move it, giving more information and referencing other objects when I thought it would be helpful."
+        },
+        "id": "2647-ea0408bb-61ca-4c52-9583-6826b86967a2"
+    },
+    "AcceptTime": "2018-04-04T06:08:38Z",
+    "HITId": "3KVQ0UJWPXLUQEI6WC0TZ3YY874W5A",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:37:43Z"
+}

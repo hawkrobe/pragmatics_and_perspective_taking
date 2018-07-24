@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:49:03Z",
+    "AutoApprovalTime": "2018-04-03T23:48:13Z",
+    "AssignmentId": "83",
+    "WorkerId": "83",
+    "answers": {
+        "subject_information": {
+            "totalLength": 719631,
+            "gameID": "1469-244e5288-7a61-4511-b925-8d1f662f0c24",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 30,
+            "role": "matcher",
+            "comments": "fun and interesting",
+            "strategy": "Just paying attention"
+        },
+        "id": "1469-244e5288-7a61-4511-b925-8d1f662f0c24"
+    },
+    "AcceptTime": "2018-04-03T23:23:44Z",
+    "HITId": "3PGQRAZX02KZLLBHN9VPDBT6XYZSYS",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:43:13Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:08:03Z",
+    "AutoApprovalTime": "2018-04-04T07:07:40Z",
+    "AssignmentId": "293",
+    "WorkerId": "293",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1138994,
+            "gameID": "9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 30,
+            "role": "matcher",
+            "comments": "Thanks for the task.",
+            "strategy": "I just tried to figure out what the director was wanting me to move."
+        },
+        "id": "9774-a14f9086-ba45-44ee-a5f7-9b5f0703c41e"
+    },
+    "AcceptTime": "2018-04-04T06:33:17Z",
+    "HITId": "3FBEFUUYRK5T25FH0QE69KF7CJD6AQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:02:40Z"
+}

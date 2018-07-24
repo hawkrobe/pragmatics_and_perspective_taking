@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:11:03Z",
+    "AutoApprovalTime": "2018-04-03T23:10:03Z",
+    "AssignmentId": "71",
+    "WorkerId": "71",
+    "answers": {
+        "subject_information": {
+            "totalLength": 126000,
+            "gameID": "2047-38668323-11ba-4474-bd64-92399aa2aadc",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 1,
+            "role": "director",
+            "comments": "I wish that it could have lasted longer.  It ended much too soon so I was not able to enjoy it as much as I had hoped.  Thank you for the opportunity!",
+            "strategy": "I wasn't able to use much strategy as the other person disconnected right away.  I was hoping to chat with the person and try to figure out a good way to relay the info.  It didn't last very long unfortunately. "
+        },
+        "id": "2047-38668323-11ba-4474-bd64-92399aa2aadc"
+    },
+    "AcceptTime": "2018-04-03T22:59:47Z",
+    "HITId": "3QXFBUZ4ZKGFE7ILI84JLC4QDZUGUY",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:05:03Z"
+}

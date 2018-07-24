@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:50:03Z",
+    "AutoApprovalTime": "2018-04-03T21:49:14Z",
+    "AssignmentId": "95",
+    "WorkerId": "95",
+    "answers": {
+        "subject_information": {
+            "totalLength": 590105,
+            "gameID": "1336-781ddb71-735d-4dfe-90de-9b2b85a89f15",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 32,
+            "role": "director",
+            "comments": "no",
+            "strategy": "I just told them how to move it\n"
+        },
+        "id": "1336-781ddb71-735d-4dfe-90de-9b2b85a89f15"
+    },
+    "AcceptTime": "2018-04-03T21:18:39Z",
+    "HITId": "31KSVEGZ34SJV1G4TJDW243U0ODRW1",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:44:14Z"
+}

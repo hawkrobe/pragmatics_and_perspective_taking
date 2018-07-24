@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:21:03Z",
+    "AutoApprovalTime": "2018-04-04T07:20:29Z",
+    "AssignmentId": "258",
+    "WorkerId": "258",
+    "answers": {
+        "subject_information": {
+            "totalLength": 2709235,
+            "gameID": "9075-90e715e1-6ed3-4c5d-931a-00a4ea65040f",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 31,
+            "role": "matcher",
+            "comments": "yes, I don't get why it takes my partner FOREVER to give instructions, the entire thing took me 40+ minutes to complete!!!",
+            "strategy": "I assume all moves are by 1"
+        },
+        "id": "9075-90e715e1-6ed3-4c5d-931a-00a4ea65040f"
+    },
+    "AcceptTime": "2018-04-04T06:26:35Z",
+    "HITId": "3KVQ0UJWPXLUQEI6WC0TZ3YY874W5A",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:15:29Z"
+}

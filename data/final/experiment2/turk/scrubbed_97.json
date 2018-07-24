@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T00:16:03Z",
+    "AutoApprovalTime": "2018-04-04T00:15:33Z",
+    "AssignmentId": "97",
+    "WorkerId": "97",
+    "answers": {
+        "subject_information": {
+            "totalLength": 753334,
+            "gameID": "8710-e4a804cd-2869-4e25-b1fe-c0c276bc494c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "director",
+            "comments": "Fun!",
+            "strategy": "At first I described just the item. Then I started describing the color as well. "
+        },
+        "id": "8710-e4a804cd-2869-4e25-b1fe-c0c276bc494c"
+    },
+    "AcceptTime": "2018-04-03T23:55:11Z",
+    "HITId": "337F8MIIMZDJM5DLP0OYNGJG75I40X",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:10:33Z"
+}

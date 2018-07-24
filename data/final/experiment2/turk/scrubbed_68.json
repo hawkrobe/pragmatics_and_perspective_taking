@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:58:03Z",
+    "AutoApprovalTime": "2018-04-03T23:57:18Z",
+    "AssignmentId": "68",
+    "WorkerId": "68",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1336783,
+            "gameID": "1042-4cd92598-c59f-4411-b8b6-227e39f9a812",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 29,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "Just tried to parse what the person was telling me."
+        },
+        "id": "1042-4cd92598-c59f-4411-b8b6-227e39f9a812"
+    },
+    "AcceptTime": "2018-04-03T22:59:45Z",
+    "HITId": "3QXFBUZ4ZKGFE7ILI84JLC4QDZUGUY",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:52:18Z"
+}

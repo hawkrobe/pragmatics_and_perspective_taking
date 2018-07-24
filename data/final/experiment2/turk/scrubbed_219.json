@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:08:03Z",
+    "AutoApprovalTime": "2018-04-04T06:07:43Z",
+    "AssignmentId": "219",
+    "WorkerId": "219",
+    "answers": {
+        "subject_information": {
+            "totalLength": 754077,
+            "gameID": "0703-105364fd-093f-4581-8bb3-367580400bf4",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 29,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "It was common sense."
+        },
+        "id": "0703-105364fd-093f-4581-8bb3-367580400bf4"
+    },
+    "AcceptTime": "2018-04-04T05:46:34Z",
+    "HITId": "3FDWKV9VCN2F6HE7TB2EYHON9MJUMZ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:02:43Z"
+}

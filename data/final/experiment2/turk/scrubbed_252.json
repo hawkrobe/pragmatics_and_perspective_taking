@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:41:03Z",
+    "AutoApprovalTime": "2018-04-04T06:40:17Z",
+    "AssignmentId": "252",
+    "WorkerId": "252",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1083296,
+            "gameID": "2762-7c6e403e-e6c1-434c-a474-f37162627a34",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 32,
+            "role": "director",
+            "comments": "Fun",
+            "strategy": "Clearly state the object needed to move and location"
+        },
+        "id": "2762-7c6e403e-e6c1-434c-a474-f37162627a34"
+    },
+    "AcceptTime": "2018-04-04T06:12:33Z",
+    "HITId": "36FQTHX3Z3RZOWXRN2G4XSNTKAW3BC",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:35:17Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:40:03Z",
+    "AutoApprovalTime": "2018-04-03T21:39:58Z",
+    "AssignmentId": "93",
+    "WorkerId": "93",
+    "answers": {
+        "subject_information": {
+            "totalLength": 601827,
+            "gameID": "7329-6db17199-1eaa-4ece-95b4-a3d06e98ae3d",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 30,
+            "role": "matcher",
+            "comments": "It was fun.",
+            "strategy": "I would move the object wherever the other person told me too."
+        },
+        "id": "7329-6db17199-1eaa-4ece-95b4-a3d06e98ae3d"
+    },
+    "AcceptTime": "2018-04-03T21:18:38Z",
+    "HITId": "31KSVEGZ34SJV1G4TJDW243U0ODRW1",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:34:58Z"
+}

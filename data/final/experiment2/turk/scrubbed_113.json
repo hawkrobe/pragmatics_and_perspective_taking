@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:48:03Z",
+    "AutoApprovalTime": "2018-04-04T01:47:55Z",
+    "AssignmentId": "113",
+    "WorkerId": "113",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1184853,
+            "gameID": "1585-1a4947c1-4ec5-4537-b571-23fff63fd505",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 22,
+            "role": "director",
+            "comments": "I think something must have gone wrong for my partner.  On the last one before they dropped, they kept trying to move the block but couldnt seem to get it to the right box.",
+            "strategy": "I tried to mimic the instructions that were pre-typed in for me, the example ones."
+        },
+        "id": "1585-1a4947c1-4ec5-4537-b571-23fff63fd505"
+    },
+    "AcceptTime": "2018-04-04T01:10:26Z",
+    "HITId": "3WRBLBQ2GR8ZYL65K1QZW5GJXAT0GI",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T01:42:55Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:03:03Z",
+    "AutoApprovalTime": "2018-04-04T01:02:52Z",
+    "AssignmentId": "128",
+    "WorkerId": "128",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1113797,
+            "gameID": "0095-03bb67a7-ae89-402d-9f7f-c5898784e63f",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 29,
+            "role": "matcher",
+            "comments": "I enjoyed it!",
+            "strategy": "I tried to follow the instructions. Some of the instructions were a little vague and that led to confusion."
+        },
+        "id": "0095-03bb67a7-ae89-402d-9f7f-c5898784e63f"
+    },
+    "AcceptTime": "2018-04-04T00:36:04Z",
+    "HITId": "3KQC8JMJGCS9F90DNUQ0J3QRFMQ3HF",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:57:52Z"
+}

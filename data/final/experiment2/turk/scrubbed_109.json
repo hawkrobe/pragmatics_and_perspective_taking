@@ -1,0 +1,27 @@
+{
+    "ApprovalTime": "2018-04-04T00:19:03Z",
+    "AutoApprovalTime": "2018-04-04T00:18:21Z",
+    "AssignmentId": "109",
+    "WorkerId": "109",
+    "answers": {
+        "doNotRedirect": true,
+        "subject_information": {
+            "totalLength": 1083672,
+            "gameID": "0993-d2ff1751-f174-40fd-9d1c-f702d5e1ee50",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 30,
+            "role": "director",
+            "comments": "I tried my best. ",
+            "strategy": "I would tell them: the item, row number, and box number.  Then I would tell them what box and row to move the item to. "
+        },
+        "id": "0993-d2ff1751-f174-40fd-9d1c-f702d5e1ee50"
+    },
+    "AcceptTime": "2018-04-03T23:49:25Z",
+    "HITId": "3S37Y8CWI80CUVE6I7HJUBSK8AXW4R",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:13:21Z"
+}

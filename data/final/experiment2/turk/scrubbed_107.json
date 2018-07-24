@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T00:17:03Z",
+    "AutoApprovalTime": "2018-04-04T00:16:36Z",
+    "AssignmentId": "107",
+    "WorkerId": "107",
+    "answers": {
+        "subject_information": {
+            "totalLength": 767814,
+            "gameID": "8710-e4a804cd-2869-4e25-b1fe-c0c276bc494c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 31,
+            "role": "matcher",
+            "comments": "It was pretty fun :)",
+            "strategy": "I looked for the item the director mentioned. When there were two or more similar items, I looked to see whether one was behind a curtain. (I messed that up once -- I chose the wrong type of eraser)"
+        },
+        "id": "8710-e4a804cd-2869-4e25-b1fe-c0c276bc494c"
+    },
+    "AcceptTime": "2018-04-03T23:55:53Z",
+    "HITId": "3S37Y8CWI80CUVE6I7HJUBSK8AXW4R",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:11:36Z"
+}

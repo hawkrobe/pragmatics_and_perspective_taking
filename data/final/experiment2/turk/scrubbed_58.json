@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:03Z",
+    "AutoApprovalTime": "2018-04-03T22:06:26Z",
+    "AssignmentId": "58",
+    "WorkerId": "58",
+    "answers": {
+        "subject_information": {
+            "totalLength": 468225,
+            "gameID": "1265-dda0c278-294f-47c4-abcd-f8a8ef498f56",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 18,
+            "role": "director",
+            "comments": "Everything was clear",
+            "strategy": "I just instructed them where to move things and they were quick"
+        },
+        "id": "1265-dda0c278-294f-47c4-abcd-f8a8ef498f56"
+    },
+    "AcceptTime": "2018-04-03T21:50:10Z",
+    "HITId": "3X4Q1O9UBHM189NNTJOGGTZ8WALO7O",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:26Z"
+}

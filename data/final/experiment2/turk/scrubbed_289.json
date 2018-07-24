@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:49:03Z",
+    "AutoApprovalTime": "2018-04-04T06:48:38Z",
+    "AssignmentId": "289",
+    "WorkerId": "289",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1121155,
+            "gameID": "3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "director",
+            "comments": "I really enjoyed this hit a lot. its one of my favorite hits I've done so far.",
+            "strategy": "I would tell them the row and the number of the square and what direction i wanted them to put it. so like 3rd-row 4th square move up 1 square. like that"
+        },
+        "id": "3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1"
+    },
+    "AcceptTime": "2018-04-04T06:20:03Z",
+    "HITId": "3UDTAB6HH6ZKJBJX6VKP4OUWTY990D",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:43:38Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:16:04Z",
+    "AutoApprovalTime": "2018-04-03T21:15:58Z",
+    "AssignmentId": "1",
+    "WorkerId": "1",
+    "answers": {
+        "subject_information": {
+            "totalLength": 622674,
+            "gameID": "7130-8492ab5a-49c5-4ec2-acfa-0d5492edf111",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 30,
+            "role": "director",
+            "comments": "",
+            "strategy": "My strategy was simply to describe the object as best as possible."
+        },
+        "id": "7130-8492ab5a-49c5-4ec2-acfa-0d5492edf111"
+    },
+    "AcceptTime": "2018-04-03T20:53:23Z",
+    "HITId": "36818Z1KV3DU5MSZHOG82H3N2RU3AY",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:10:58Z"
+}

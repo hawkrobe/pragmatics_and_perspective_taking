@@ -1,0 +1,25 @@
+{
+    "ApprovalTime": "2018-04-04T07:16:03Z",
+    "AutoApprovalTime": "2018-04-04T07:16:02Z",
+    "AssignmentId": "314",
+    "WorkerId": "314",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1071178,
+            "gameID": "4035-5e94d67a-13ff-48d6-83ba-495968a89553",
+            "thinksHuman": "yes",
+            "comments": "This was interesting, I haven't done anything like this before. The directions were clear, but a little long, might've been easier if they were more brief.",
+            "ratePartner": "liked",
+            "score": 27,
+            "role": "matcher",
+            "nativeEnglish": "yes",
+            "strategy": "Tried to follow the directions as best I could"
+        },
+        "id": "4035-5e94d67a-13ff-48d6-83ba-495968a89553"
+    },
+    "AcceptTime": "2018-04-04T06:37:56Z",
+    "HITId": "3GONHBMNHVYWSG8HZY1MF932B4YZMT",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:11:02Z"
+}

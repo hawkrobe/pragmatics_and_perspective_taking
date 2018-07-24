@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:02:04Z",
+    "AutoApprovalTime": "2018-04-04T01:01:49Z",
+    "AssignmentId": "104",
+    "WorkerId": "104",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1418131,
+            "gameID": "0095-03bb67a7-ae89-402d-9f7f-c5898784e63f",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 29,
+            "role": "director",
+            "comments": "None",
+            "strategy": "Once I realized that some rounds had similar items, I started being more descriptive. Once I determined each round only had one pair or so of similar items, I stopped being descriptive to save time, and only added descriptors if needed."
+        },
+        "id": "0095-03bb67a7-ae89-402d-9f7f-c5898784e63f"
+    },
+    "AcceptTime": "2018-04-04T00:30:10Z",
+    "HITId": "3UAU495MIIS36KZJ6RHRQLDS4LMOUU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:56:49Z"
+}

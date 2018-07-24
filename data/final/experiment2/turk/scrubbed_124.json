@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:01:03Z",
+    "AutoApprovalTime": "2018-04-04T01:01:02Z",
+    "AssignmentId": "124",
+    "WorkerId": "124",
+    "answers": {
+        "subject_information": {
+            "totalLength": 699091,
+            "gameID": "5651-35ab95d3-21a7-43ae-a09d-40ab5d133303",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 29,
+            "role": "director",
+            "comments": "Interesting experiment!",
+            "strategy": "I stated the object and said to move it one space in the appropriate direction. If there were two objects I added additional descriptions of the first object."
+        },
+        "id": "5651-35ab95d3-21a7-43ae-a09d-40ab5d133303"
+    },
+    "AcceptTime": "2018-04-04T00:38:46Z",
+    "HITId": "3QE4DGPGBRBGX9O632D1886WEM9G4E",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:56:02Z"
+}

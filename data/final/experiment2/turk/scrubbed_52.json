@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:03Z",
+    "AutoApprovalTime": "2018-04-03T22:06:29Z",
+    "AssignmentId": "52",
+    "WorkerId": "52",
+    "answers": {
+        "subject_information": {
+            "totalLength": 407728,
+            "gameID": "9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 14,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "very simplistic and straight forward due to clear instructions from the director "
+        },
+        "id": "9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e"
+    },
+    "AcceptTime": "2018-04-03T21:52:12Z",
+    "HITId": "3MDKGGG61QNYH1EQ6Q5N4P5Z07IT6G",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:29Z"
+}

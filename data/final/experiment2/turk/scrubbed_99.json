@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T00:17:03Z",
+    "AutoApprovalTime": "2018-04-04T00:16:27Z",
+    "AssignmentId": "99",
+    "WorkerId": "99",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1213790,
+            "gameID": "4715-4501143e-ea94-4532-9726-05fa3429c32d",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 31,
+            "role": "director",
+            "comments": "",
+            "strategy": "Describe the object and the direction to move it"
+        },
+        "id": "4715-4501143e-ea94-4532-9726-05fa3429c32d"
+    },
+    "AcceptTime": "2018-04-03T23:44:14Z",
+    "HITId": "337F8MIIMZDJM5DLP0OYNGJG75I40X",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:11:27Z"
+}

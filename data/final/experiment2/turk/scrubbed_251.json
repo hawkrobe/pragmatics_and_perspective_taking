@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:37:03Z",
+    "AutoApprovalTime": "2018-04-04T06:36:49Z",
+    "AssignmentId": "251",
+    "WorkerId": "251",
+    "answers": {
+        "subject_information": {
+            "totalLength": 646483,
+            "gameID": "1757-fed9dbb6-64f8-4dfb-9f0d-9b9891fd464d",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 29,
+            "role": "director",
+            "comments": "this was a very fun experiment. I really enjoyed doing it.",
+            "strategy": "my strategy was to be as clear and concise as I could possibly be when giving out instructions"
+        },
+        "id": "1757-fed9dbb6-64f8-4dfb-9f0d-9b9891fd464d"
+    },
+    "AcceptTime": "2018-04-04T06:18:52Z",
+    "HITId": "36FQTHX3Z3RZOWXRN2G4XSNTKAW3BC",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:31:49Z"
+}

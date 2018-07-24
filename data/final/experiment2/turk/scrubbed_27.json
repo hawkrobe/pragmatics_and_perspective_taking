@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:23:03Z",
+    "AutoApprovalTime": "2018-04-03T22:22:34Z",
+    "AssignmentId": "27",
+    "WorkerId": "27",
+    "answers": {
+        "subject_information": {
+            "totalLength": 372525,
+            "gameID": "7771-25381e94-e2c4-4093-89e5-870e7a8fc8d4",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 4,
+            "role": "director",
+            "comments": "no",
+            "strategy": "I typed out clear instructions on how to move the object"
+        },
+        "id": "7771-25381e94-e2c4-4093-89e5-870e7a8fc8d4"
+    },
+    "AcceptTime": "2018-04-03T22:07:15Z",
+    "HITId": "3WGCNLZJKF8WTQHWEUTR4PWWPAED1J",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:17:34Z"
+}

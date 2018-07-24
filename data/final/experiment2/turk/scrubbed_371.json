@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:22:03Z",
+    "AutoApprovalTime": "2018-04-03T22:21:49Z",
+    "AssignmentId": "371",
+    "WorkerId": "371",
+    "answers": {
+        "subject_information": {
+            "totalLength": 544414,
+            "gameID": "7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 19,
+            "role": "matcher",
+            "comments": "No",
+            "strategy": "Both partners needed to cooperate."
+        },
+        "id": "7760-b35ea0ce-179c-4d5b-bd79-8505dfafcdf9"
+    },
+    "AcceptTime": "2018-04-03T22:05:49Z",
+    "HITId": "3M47JKRKCX1FJHM23SUSDT9CMUX684",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:16:49Z"
+}

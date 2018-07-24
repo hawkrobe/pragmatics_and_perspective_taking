@@ -1,0 +1,23 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:03Z",
+    "AutoApprovalTime": "2018-04-03T22:06:35Z",
+    "AssignmentId": "373",
+    "WorkerId": "373",
+    "answers": {
+        "subject_information": {
+            "totalLength": 109915,
+            "gameID": "8831-a9e4a1f5-3030-486f-8c21-4304d325728a",
+            "nativeEnglish": "yes",
+            "strategy": "\nOops! It looks like your partner lost their connection!",
+            "score": 0,
+            "role": "matcher",
+            "comments": "\nOops! It looks like your partner lost their connection!"
+        },
+        "id": "8831-a9e4a1f5-3030-486f-8c21-4304d325728a"
+    },
+    "AcceptTime": "2018-04-03T21:39:45Z",
+    "HITId": "3M47JKRKCX1FJHM23SUSDT9CMUX684",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:35Z"
+}

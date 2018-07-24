@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:39:03Z",
+    "AutoApprovalTime": "2018-04-03T21:38:10Z",
+    "AssignmentId": "160",
+    "WorkerId": "160",
+    "answers": {
+        "subject_information": {
+            "totalLength": 702814,
+            "gameID": "1578-92cffe95-8e93-4ad2-8078-2d0ec1c7442f",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 30,
+            "role": "matcher",
+            "comments": "No, not really. ",
+            "strategy": "I tried to follow the instructions. That was it. I made mistakes, which I shouldn't have because of how easy this was. I bet my partner hates me. "
+        },
+        "id": "1578-92cffe95-8e93-4ad2-8078-2d0ec1c7442f"
+    },
+    "AcceptTime": "2018-04-03T21:18:51Z",
+    "HITId": "3VLL1PIENQOKSJTTCEGZ7DS763XZOQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:33:10Z"
+}

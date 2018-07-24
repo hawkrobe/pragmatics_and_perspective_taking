@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:09:03Z",
+    "AutoApprovalTime": "2018-04-03T22:08:17Z",
+    "AssignmentId": "56",
+    "WorkerId": "56",
+    "answers": {
+        "subject_information": {
+            "totalLength": 372821,
+            "gameID": "6189-2f479adc-a6f3-41e9-9aae-3d7148abd432",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 2,
+            "role": "matcher",
+            "comments": "Thanks for the opportunity. I would've liked to go through the whole experiment but I understand technical issues happen.",
+            "strategy": "I had to follow the Director's instructions. I realized I needed a little more info because there were two brushes on the first exercise."
+        },
+        "id": "6189-2f479adc-a6f3-41e9-9aae-3d7148abd432"
+    },
+    "AcceptTime": "2018-04-03T21:53:10Z",
+    "HITId": "3X4Q1O9UBHM189NNTJOGGTZ8WALO7O",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:03:17Z"
+}

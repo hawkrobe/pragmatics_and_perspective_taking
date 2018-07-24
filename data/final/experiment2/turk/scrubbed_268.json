@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:25:03Z",
+    "AutoApprovalTime": "2018-04-04T06:24:16Z",
+    "AssignmentId": "268",
+    "WorkerId": "268",
+    "answers": {
+        "subject_information": {
+            "totalLength": 281136,
+            "gameID": "5916-4a09d33d-d36c-467e-8055-d69a03a6529e",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 0,
+            "role": "matcher",
+            "comments": "I'm sad I didn't get to play. My partner lost connection :( ",
+            "strategy": "N/A"
+        },
+        "id": "5916-4a09d33d-d36c-467e-8055-d69a03a6529e"
+    },
+    "AcceptTime": "2018-04-04T06:08:08Z",
+    "HITId": "341H3G5YF0EZP21AATEOHCWP81XZ0I",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:19:16Z"
+}

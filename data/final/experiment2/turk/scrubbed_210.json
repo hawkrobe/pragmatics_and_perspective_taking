@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:19:03Z",
+    "AutoApprovalTime": "2018-04-04T06:18:55Z",
+    "AssignmentId": "210",
+    "WorkerId": "210",
+    "answers": {
+        "subject_information": {
+            "totalLength": 836129,
+            "gameID": "6729-d84430fa-22ab-40e1-aa07-9784a3bc0722",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 29,
+            "role": "matcher",
+            "comments": "it was confusing when there was multiple pictures that could describe the item ",
+            "strategy": "just read what was told to me "
+        },
+        "id": "6729-d84430fa-22ab-40e1-aa07-9784a3bc0722"
+    },
+    "AcceptTime": "2018-04-04T05:56:18Z",
+    "HITId": "3B0MCRZMBRU8ZF3O45VC5FVJ6A2PPU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:13:55Z"
+}

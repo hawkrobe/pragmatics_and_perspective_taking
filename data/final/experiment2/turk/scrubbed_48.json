@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:08:03Z",
+    "AutoApprovalTime": "2018-04-03T22:07:08Z",
+    "AssignmentId": "48",
+    "WorkerId": "48",
+    "answers": {
+        "subject_information": {
+            "totalLength": 253061,
+            "gameID": "7296-7cd39165-082a-4c25-8f63-658a2e945961",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 2,
+            "role": "matcher",
+            "comments": "My partner seems to have bailed or lost their connection very early in the experiment. ",
+            "strategy": "I simply did what they told me."
+        },
+        "id": "7296-7cd39165-082a-4c25-8f63-658a2e945961"
+    },
+    "AcceptTime": "2018-04-03T21:49:51Z",
+    "HITId": "3MDKGGG61QNYH1EQ6Q5N4P5Z07IT6G",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:02:08Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:01:03Z",
+    "AutoApprovalTime": "2018-04-04T07:01:01Z",
+    "AssignmentId": "311",
+    "WorkerId": "311",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1023045,
+            "gameID": "5259-daa2fa4b-e576-4bbd-8cc6-da44de38d900",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 29,
+            "role": "matcher",
+            "comments": "I was amused how I made a few mistakes even though I understood the rules. Sometimes my impulse got the better of me. Also, there were objects similar to the description that I received like \"glass\" or \"candle\" which I made a mistake with as well. Overall, it was a neat communication game. I enjoyed it. Thank you! :)",
+            "strategy": "It was my job to listen to instructions. I forgot twice that the director couldn't see what was behind the curtain. I knew that intellectually but I caught myself clicking on item behind a curtain once or twice without thinking. Overall, I needed to pay attention to the details of each object to make sure to move the right one to the proper new spot."
+        },
+        "id": "5259-daa2fa4b-e576-4bbd-8cc6-da44de38d900"
+    },
+    "AcceptTime": "2018-04-04T06:33:10Z",
+    "HITId": "3GONHBMNHVYWSG8HZY1MF932B4YZMT",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:56:01Z"
+}

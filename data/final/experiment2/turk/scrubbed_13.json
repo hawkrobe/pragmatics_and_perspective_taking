@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:21:03Z",
+    "AutoApprovalTime": "2018-04-03T21:20:59Z",
+    "AssignmentId": "13",
+    "WorkerId": "13",
+    "answers": {
+        "subject_information": {
+            "totalLength": 663136,
+            "gameID": "3374-01519e79-6759-4f00-b000-cbd5605c12bb",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 32,
+            "role": "matcher",
+            "comments": "clicking the TINY green button was a freaking nightmare",
+            "strategy": "following the directions"
+        },
+        "id": "3374-01519e79-6759-4f00-b000-cbd5605c12bb"
+    },
+    "AcceptTime": "2018-04-03T20:58:53Z",
+    "HITId": "3GV1I4SEO9PAYO6LXH3WIYVI6UVL64",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:15:59Z"
+}

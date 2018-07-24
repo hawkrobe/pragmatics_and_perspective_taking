@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:41:03Z",
+    "AutoApprovalTime": "2018-04-04T07:41:01Z",
+    "AssignmentId": "336",
+    "WorkerId": "336",
+    "answers": {
+        "subject_information": {
+            "totalLength": 2040252,
+            "gameID": "0538-e2547271-2750-4461-ac40-4d5b18fd8344",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 21,
+            "role": "director",
+            "comments": "The other player seemed to stop playing after round 7: I got no action from him though I restated the direction four different ways. I was just about to return the hit when this screen appeared.",
+            "strategy": "I tried to use simple commands. If there was an error I would try to be *more explicit*, since I assumed there were multiple objects of the same kind, some of which I could not see. At one time, I said to use the 'other' item, and that worked."
+        },
+        "id": "0538-e2547271-2750-4461-ac40-4d5b18fd8344"
+    },
+    "AcceptTime": "2018-04-04T06:56:23Z",
+    "HITId": "3L60IFZKF3IO9H7C2FF2NXR1YSJHHD",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:36:01Z"
+}

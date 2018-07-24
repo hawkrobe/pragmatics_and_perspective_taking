@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T05:58:03Z",
+    "AutoApprovalTime": "2018-04-04T05:57:27Z",
+    "AssignmentId": "202",
+    "WorkerId": "202",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1006131,
+            "gameID": "9856-71d419c9-4739-4d4c-bc4d-2bfb5551b540",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 26,
+            "role": "director",
+            "comments": "",
+            "strategy": "Follow examples given and keep it simple"
+        },
+        "id": "9856-71d419c9-4739-4d4c-bc4d-2bfb5551b540"
+    },
+    "AcceptTime": "2018-04-04T05:33:17Z",
+    "HITId": "3EPG8DX9LKQ465L5KQMY79Q2FA1P58",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T05:52:27Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:26:03Z",
+    "AutoApprovalTime": "2018-04-04T06:25:15Z",
+    "AssignmentId": "278",
+    "WorkerId": "278",
+    "answers": {
+        "subject_information": {
+            "totalLength": 116713,
+            "gameID": "4174-2779bbb5-e1a1-478e-ad42-96cc99142102",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 0,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I thoroughly read through the instructions and internalized them."
+        },
+        "id": "4174-2779bbb5-e1a1-478e-ad42-96cc99142102"
+    },
+    "AcceptTime": "2018-04-04T06:15:25Z",
+    "HITId": "3ZQX1VYFTD558NS63OGMUTV37V78OD",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:20:15Z"
+}

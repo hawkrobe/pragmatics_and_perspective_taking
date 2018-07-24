@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:56:03Z",
+    "AutoApprovalTime": "2018-04-03T21:55:06Z",
+    "AssignmentId": "157",
+    "WorkerId": "157",
+    "answers": {
+        "subject_information": {
+            "totalLength": 706801,
+            "gameID": "3398-9e59764f-161c-40af-ad2b-17b184ed3edc",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 32,
+            "role": "matcher",
+            "comments": "It was fun!",
+            "strategy": "Mine was easy.  I just followed directions.  The director did a great job communicating."
+        },
+        "id": "3398-9e59764f-161c-40af-ad2b-17b184ed3edc"
+    },
+    "AcceptTime": "2018-04-03T21:18:50Z",
+    "HITId": "3VLL1PIENQOKSJTTCEGZ7DS763XZOQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:50:06Z"
+}

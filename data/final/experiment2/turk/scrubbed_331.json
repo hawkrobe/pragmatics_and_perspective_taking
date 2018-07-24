@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:34:03Z",
+    "AutoApprovalTime": "2018-04-04T07:33:41Z",
+    "AssignmentId": "331",
+    "WorkerId": "331",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1477078,
+            "gameID": "1625-e9aca54a-0b20-416d-82ec-a29cfaa8f991",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "director",
+            "comments": "This was fun, but I wish I had gotten to play the other side!",
+            "strategy": "Name objects as simply and clearly as possible and when it appears that more than one such object exists reference other points to help distinguish."
+        },
+        "id": "1625-e9aca54a-0b20-416d-82ec-a29cfaa8f991"
+    },
+    "AcceptTime": "2018-04-04T07:00:47Z",
+    "HITId": "3EQPA8A374W6R82WW1OUZHBL7A4JZA",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:28:41Z"
+}

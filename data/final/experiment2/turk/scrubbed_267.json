@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:53:03Z",
+    "AutoApprovalTime": "2018-04-04T06:52:50Z",
+    "AssignmentId": "267",
+    "WorkerId": "267",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1780763,
+            "gameID": "8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 28,
+            "role": "matcher",
+            "comments": "Thank you! This was fun!",
+            "strategy": "Tried my very best to follow instructions which were provided, I found it easy overall but difficult when not enout detail was provided. (i.e. move the mouse down 2 squares. A small stuffed mouse appeared on the screen and a computer mouse. Of course I moved the wrong one.)"
+        },
+        "id": "8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee"
+    },
+    "AcceptTime": "2018-04-04T06:12:31Z",
+    "HITId": "341H3G5YF0EZP21AATEOHCWP81XZ0I",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:47:50Z"
+}

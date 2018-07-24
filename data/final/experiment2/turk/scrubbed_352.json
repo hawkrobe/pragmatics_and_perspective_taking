@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:44:03Z",
+    "AutoApprovalTime": "2018-04-03T22:43:59Z",
+    "AssignmentId": "352",
+    "WorkerId": "352",
+    "answers": {
+        "subject_information": {
+            "totalLength": 357714,
+            "gameID": "4526-74f81656-28a1-40dd-bfc3-abda88672197",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 0,
+            "role": "director",
+            "comments": "It's too bad my partner disconnected immediately.",
+            "strategy": "Fun!"
+        },
+        "id": "4526-74f81656-28a1-40dd-bfc3-abda88672197"
+    },
+    "AcceptTime": "2018-04-03T22:25:12Z",
+    "HITId": "3SCKNODZ0XGJQONBS4O314Z360G7NS",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:38:59Z"
+}

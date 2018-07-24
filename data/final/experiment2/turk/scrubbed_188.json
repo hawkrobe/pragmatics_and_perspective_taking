@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:13:03Z",
+    "AutoApprovalTime": "2018-04-04T06:12:52Z",
+    "AssignmentId": "188",
+    "WorkerId": "188",
+    "answers": {
+        "subject_information": {
+            "totalLength": 894220,
+            "gameID": "0849-3c0ff096-1ccb-4100-bc6e-640aef71617b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 32,
+            "role": "director",
+            "comments": "It was very easy. ",
+            "strategy": "I use the name of the object and the direction it needed to go. I became more descriptive if I thought that there was any potential for ambiguity. "
+        },
+        "id": "0849-3c0ff096-1ccb-4100-bc6e-640aef71617b"
+    },
+    "AcceptTime": "2018-04-04T05:21:59Z",
+    "HITId": "3SZYX62S5G0F0ZH5O4SH7NZHFGV75J",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:07:52Z"
+}

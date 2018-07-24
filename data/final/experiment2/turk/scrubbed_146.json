@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T03:47:03Z",
+    "AutoApprovalTime": "2018-04-04T03:46:26Z",
+    "AssignmentId": "146",
+    "WorkerId": "146",
+    "answers": {
+        "subject_information": {
+            "totalLength": 893151,
+            "gameID": "1990-dac78831-3703-41d5-afe1-dd14d4d8cb79",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 28,
+            "role": "director",
+            "comments": "",
+            "strategy": "I tried to give as much visual detail so the other player would know which one I was referring to."
+        },
+        "id": "1990-dac78831-3703-41d5-afe1-dd14d4d8cb79"
+    },
+    "AcceptTime": "2018-04-04T03:19:29Z",
+    "HITId": "3OND0WXMHWFCP7GACE7W2UUO6CMHES",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T03:41:26Z"
+}

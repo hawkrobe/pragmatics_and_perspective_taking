@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:52:03Z",
+    "AutoApprovalTime": "2018-04-04T06:52:02Z",
+    "AssignmentId": "296",
+    "WorkerId": "296",
+    "answers": {
+        "subject_information": {
+            "totalLength": 858628,
+            "gameID": "1455-83f094ea-1b7b-4dc9-b309-37f9718b45f5",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "director",
+            "comments": "no",
+            "strategy": "I just followed the arrows and told the other player what to do."
+        },
+        "id": "1455-83f094ea-1b7b-4dc9-b309-37f9718b45f5"
+    },
+    "AcceptTime": "2018-04-04T06:21:51Z",
+    "HITId": "3FBEFUUYRK5T25FH0QE69KF7CJD6AQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:47:02Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:05:03Z",
+    "AutoApprovalTime": "2018-04-04T06:04:48Z",
+    "AssignmentId": "200",
+    "WorkerId": "200",
+    "answers": {
+        "subject_information": {
+            "totalLength": 733979,
+            "gameID": "8440-74c8eb37-4fcf-4c6a-b8f0-1e7cedb983a0",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "There wasn't really a need for strategy. I just read what the director said and it was pretty straight forward to deduce what I needed to do."
+        },
+        "id": "8440-74c8eb37-4fcf-4c6a-b8f0-1e7cedb983a0"
+    },
+    "AcceptTime": "2018-04-04T05:41:56Z",
+    "HITId": "307L9TDWJYS1P5MOQSLDONNN1Z9N3K",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T05:59:48Z"
+}

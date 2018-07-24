@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:46:03Z",
+    "AutoApprovalTime": "2018-04-03T22:45:35Z",
+    "AssignmentId": "46",
+    "WorkerId": "46",
+    "answers": {
+        "subject_information": {
+            "totalLength": 138666,
+            "gameID": "6627-763d407c-7492-4c05-bba9-d6f249173a8f",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 0,
+            "role": "director",
+            "comments": "My partner lost their connection.  ",
+            "strategy": "My partner lost their connection :("
+        },
+        "id": "6627-763d407c-7492-4c05-bba9-d6f249173a8f"
+    },
+    "AcceptTime": "2018-04-03T22:19:37Z",
+    "HITId": "3MDKGGG61QNYH1EQ6Q5N4P5Z07IT6G",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:40:35Z"
+}

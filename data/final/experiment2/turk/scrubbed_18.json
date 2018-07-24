@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:05:03Z",
+    "AutoApprovalTime": "2018-04-03T22:04:08Z",
+    "AssignmentId": "18",
+    "WorkerId": "18",
+    "answers": {
+        "subject_information": {
+            "totalLength": 752652,
+            "gameID": "5218-1b6b0df7-63b6-440f-8e22-de9217a8e1b1",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 31,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I followed the instructions that they gave me. They usually gave good descriptions. There was only one instance where they said eraser and I forgot they couldn't see behind the one curtain and I moved that one. Other than that, I understood what they meant. My partner communicated well."
+        },
+        "id": "5218-1b6b0df7-63b6-440f-8e22-de9217a8e1b1"
+    },
+    "AcceptTime": "2018-04-03T21:42:51Z",
+    "HITId": "34HEO7RUG6UMOOD1SEH4KF6385BARA",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:59:08Z"
+}

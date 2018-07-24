@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:42:03Z",
+    "AutoApprovalTime": "2018-04-03T22:42:01Z",
+    "AssignmentId": "365",
+    "WorkerId": "365",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1120907,
+            "gameID": "7782-9f4edcd8-c073-4cec-875f-4681dcc3e900",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 30,
+            "role": "director",
+            "comments": "sometimes directions I entered would disappear as soon as I hit send",
+            "strategy": "Used simple, direct terms"
+        },
+        "id": "7782-9f4edcd8-c073-4cec-875f-4681dcc3e900"
+    },
+    "AcceptTime": "2018-04-03T22:11:27Z",
+    "HITId": "3N5YJ55YXG319QL9Z70NBV1T78MNAZ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:37:01Z"
+}

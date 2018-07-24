@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:48:03Z",
+    "AutoApprovalTime": "2018-04-04T07:47:18Z",
+    "AssignmentId": "335",
+    "WorkerId": "335",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1259297,
+            "gameID": "0914-515eaa37-ca0b-49de-8ade-e23d75984698",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 32,
+            "role": "matcher",
+            "comments": "I hope my inputs are helpful to your research.",
+            "strategy": "I paid close attention to the instructions received from the Director and executed them exactly."
+        },
+        "id": "0914-515eaa37-ca0b-49de-8ade-e23d75984698"
+    },
+    "AcceptTime": "2018-04-04T07:15:14Z",
+    "HITId": "3EQPA8A374W6R82WW1OUZHBL7A4JZA",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:42:18Z"
+}

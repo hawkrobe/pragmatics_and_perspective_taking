@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:04Z",
+    "AutoApprovalTime": "2018-04-03T22:06:37Z",
+    "AssignmentId": "368",
+    "WorkerId": "368",
+    "answers": {
+        "subject_information": {
+            "totalLength": 274470,
+            "gameID": "6189-2f479adc-a6f3-41e9-9aae-3d7148abd432",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 2,
+            "role": "director",
+            "comments": "I kinda wish I could have completed the hit.",
+            "strategy": "I listed the item that needed to be moved and instruction where to move it and how many times to move it. "
+        },
+        "id": "6189-2f479adc-a6f3-41e9-9aae-3d7148abd432"
+    },
+    "AcceptTime": "2018-04-03T21:54:01Z",
+    "HITId": "3N5YJ55YXG319QL9Z70NBV1T78MNAZ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:37Z"
+}

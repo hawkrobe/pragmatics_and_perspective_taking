@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:52:03Z",
+    "AutoApprovalTime": "2018-04-04T06:52:01Z",
+    "AssignmentId": "312",
+    "WorkerId": "312",
+    "answers": {
+        "subject_information": {
+            "totalLength": 802075,
+            "gameID": "1455-83f094ea-1b7b-4dc9-b309-37f9718b45f5",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 30,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "the person told me the object and where to move it and how many squares"
+        },
+        "id": "1455-83f094ea-1b7b-4dc9-b309-37f9718b45f5"
+    },
+    "AcceptTime": "2018-04-04T06:29:07Z",
+    "HITId": "3GONHBMNHVYWSG8HZY1MF932B4YZMT",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:47:01Z"
+}

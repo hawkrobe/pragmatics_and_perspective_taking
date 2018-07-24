@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T00:18:03Z",
+    "AutoApprovalTime": "2018-04-04T00:17:41Z",
+    "AssignmentId": "102",
+    "WorkerId": "102",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1267264,
+            "gameID": "4715-4501143e-ea94-4532-9726-05fa3429c32d",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 31,
+            "role": "matcher",
+            "comments": "No.",
+            "strategy": "I just paid attention to what the person asked me to do."
+        },
+        "id": "4715-4501143e-ea94-4532-9726-05fa3429c32d"
+    },
+    "AcceptTime": "2018-04-03T23:46:38Z",
+    "HITId": "3UAU495MIIS36KZJ6RHRQLDS4LMOUU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:12:41Z"
+}

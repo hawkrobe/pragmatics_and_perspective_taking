@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:46:03Z",
+    "AutoApprovalTime": "2018-04-03T22:45:53Z",
+    "AssignmentId": "350",
+    "WorkerId": "350",
+    "answers": {
+        "subject_information": {
+            "totalLength": 598478,
+            "gameID": "2564-23a79e32-5329-47f0-bd7a-f256e0e3afec",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "no",
+            "ratePartner": "okay",
+            "score": 13,
+            "role": "matcher",
+            "comments": "Too bad we did not finish the experiment. ",
+            "strategy": "I try to follow the instructions"
+        },
+        "id": "2564-23a79e32-5329-47f0-bd7a-f256e0e3afec"
+    },
+    "AcceptTime": "2018-04-03T22:24:25Z",
+    "HITId": "3SCKNODZ0XGJQONBS4O314Z360G7NS",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:40:53Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:26:03Z",
+    "AutoApprovalTime": "2018-04-04T06:25:29Z",
+    "AssignmentId": "245",
+    "WorkerId": "245",
+    "answers": {
+        "subject_information": {
+            "totalLength": 733827,
+            "gameID": "5041-402509fd-fa04-4bc8-932a-2ef7457c88d3",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 30,
+            "role": "matcher",
+            "comments": "no comment",
+            "strategy": "I did not have a strategy. It was not always easy to figure out which object they were referring to because a few times there were similar items so I just guessed which one."
+        },
+        "id": "5041-402509fd-fa04-4bc8-932a-2ef7457c88d3"
+    },
+    "AcceptTime": "2018-04-04T06:04:01Z",
+    "HITId": "33BFF6QPI1BRCZV2ITC0K60EUBDW3K",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:20:29Z"
+}

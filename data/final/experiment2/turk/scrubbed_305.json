@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:06:03Z",
+    "AutoApprovalTime": "2018-04-03T22:05:55Z",
+    "AssignmentId": "305",
+    "WorkerId": "305",
+    "answers": {
+        "subject_information": {
+            "totalLength": 382566,
+            "gameID": "7525-4c9ece91-607e-46dc-9e3a-82c40745fb88",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 12,
+            "role": "director",
+            "comments": "",
+            "strategy": "I communicated exactly what I meant after messing up the first time"
+        },
+        "id": "7525-4c9ece91-607e-46dc-9e3a-82c40745fb88"
+    },
+    "AcceptTime": "2018-04-03T21:21:51Z",
+    "HITId": "3YD0MU1NC21C65TMJ0JYFYF37TH7A8",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:00:55Z"
+}

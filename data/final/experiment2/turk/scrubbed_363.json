@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:03Z",
+    "AutoApprovalTime": "2018-04-03T22:06:31Z",
+    "AssignmentId": "363",
+    "WorkerId": "363",
+    "answers": {
+        "subject_information": {
+            "totalLength": 707398,
+            "gameID": "8514-5a019ae6-9774-46f7-b52b-36454d7adc0c",
+            "thinksHuman": "yes",
+            "confused": "confused",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 15,
+            "role": "matcher",
+            "comments": "I was confuse. I was hoping at the same time my partner would put all the items into the curtain.",
+            "strategy": "I believe there was no strategy and the director made all the decision"
+        },
+        "id": "8514-5a019ae6-9774-46f7-b52b-36454d7adc0c"
+    },
+    "AcceptTime": "2018-04-03T21:38:52Z",
+    "HITId": "3N5YJ55YXG319QL9Z70NBV1T78MNAZ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:31Z"
+}

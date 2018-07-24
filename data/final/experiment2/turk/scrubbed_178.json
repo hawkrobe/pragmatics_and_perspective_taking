@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T04:01:03Z",
+    "AutoApprovalTime": "2018-04-04T04:01:02Z",
+    "AssignmentId": "178",
+    "WorkerId": "178",
+    "answers": {
+        "subject_information": {
+            "totalLength": 827190,
+            "gameID": "1530-63446cf3-b006-4888-8af1-dc928951fabb",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "director",
+            "comments": "Thanks for the HIT!",
+            "strategy": "I just instructed my partner to move the right objects to wherever they needed to go. "
+        },
+        "id": "1530-63446cf3-b006-4888-8af1-dc928951fabb"
+    },
+    "AcceptTime": "2018-04-04T03:39:14Z",
+    "HITId": "3TZ0XG8CBUK210O01ZX4X30ECWH89V",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T03:56:02Z"
+}

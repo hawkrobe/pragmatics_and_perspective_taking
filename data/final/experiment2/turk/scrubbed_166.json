@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T04:04:03Z",
+    "AutoApprovalTime": "2018-04-04T04:03:09Z",
+    "AssignmentId": "166",
+    "WorkerId": "166",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1599543,
+            "gameID": "0980-86201282-6873-4820-a41b-ea9f286c8aa2",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 29,
+            "role": "director",
+            "comments": "First time i tried this hit waited ~50 minutes and no one showed up.  For how long this actually took to complete I am glad no one showed up in that latter half.  I know the instructiosn recommended returning the HIT after 15 minutes.  But it would be useful to reinforce that by giving an estimate of how long the game actually takes.  Mine was about ~20 minutes of actual play time.",
+            "strategy": "I was as specific as possible as the director.  Giving clear and descriptive instructions."
+        },
+        "id": "0980-86201282-6873-4820-a41b-ea9f286c8aa2"
+    },
+    "AcceptTime": "2018-04-04T03:30:58Z",
+    "HITId": "3P4C70TRMRHCVHVR9UCIUP8709ALGK",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T03:58:09Z"
+}

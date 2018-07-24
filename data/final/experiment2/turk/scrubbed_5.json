@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:39:03Z",
+    "AutoApprovalTime": "2018-04-03T21:38:09Z",
+    "AssignmentId": "5",
+    "WorkerId": "5",
+    "answers": {
+        "subject_information": {
+            "totalLength": 825241,
+            "gameID": "1578-92cffe95-8e93-4ad2-8078-2d0ec1c7442f",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "director",
+            "comments": "",
+            "strategy": "Using clear and concise instructions, specifying a color if I needed."
+        },
+        "id": "1578-92cffe95-8e93-4ad2-8078-2d0ec1c7442f"
+    },
+    "AcceptTime": "2018-04-03T21:16:24Z",
+    "HITId": "36818Z1KV3DU5MSZHOG82H3N2RU3AY",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:33:09Z"
+}

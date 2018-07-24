@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:16:03Z",
+    "AutoApprovalTime": "2018-04-03T21:15:08Z",
+    "AssignmentId": "7",
+    "WorkerId": "7",
+    "answers": {
+        "subject_information": {
+            "totalLength": 842735,
+            "gameID": "5601-ef5309ee-189f-4d87-84a2-d1d52c65c529",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 29,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I tried to best guess which object the person wanted me to move"
+        },
+        "id": "5601-ef5309ee-189f-4d87-84a2-d1d52c65c529"
+    },
+    "AcceptTime": "2018-04-03T20:52:40Z",
+    "HITId": "36818Z1KV3DU5MSZHOG82H3N2RU3AY",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:10:08Z"
+}

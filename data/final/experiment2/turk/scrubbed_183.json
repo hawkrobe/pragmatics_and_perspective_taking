@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T05:46:03Z",
+    "AutoApprovalTime": "2018-04-04T05:45:24Z",
+    "AssignmentId": "183",
+    "WorkerId": "183",
+    "answers": {
+        "subject_information": {
+            "totalLength": 786362,
+            "gameID": "1459-7eeb4d17-275d-4664-a1af-1462bef639e0",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 31,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "after i figured out he couldn't see the items behind the curtain i knew that's the one i shouldn't move- for example when he asked me to move the mouse, and a real mouse was behind the curtain i moved the computer mouse since i knew he couldn't see the real one"
+        },
+        "id": "1459-7eeb4d17-275d-4664-a1af-1462bef639e0"
+    },
+    "AcceptTime": "2018-04-04T05:23:11Z",
+    "HITId": "3SZYX62S5G0F0ZH5O4SH7NZHFGV75J",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T05:40:24Z"
+}

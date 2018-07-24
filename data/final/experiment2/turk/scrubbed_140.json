@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:04:03Z",
+    "AutoApprovalTime": "2018-04-04T01:03:41Z",
+    "AssignmentId": "140",
+    "WorkerId": "140",
+    "answers": {
+        "subject_information": {
+            "totalLength": 683587,
+            "gameID": "3592-3f23ca18-c32b-4f96-bb57-90d47d86e040",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 31,
+            "role": "director",
+            "comments": "",
+            "strategy": "I just told the matcher to move a specific object using basic language and not trying to be too specific"
+        },
+        "id": "3592-3f23ca18-c32b-4f96-bb57-90d47d86e040"
+    },
+    "AcceptTime": "2018-04-04T00:42:40Z",
+    "HITId": "3VGZ74AYTGGJSD1LWHJJR6IK6ZQGCR",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:58:41Z"
+}

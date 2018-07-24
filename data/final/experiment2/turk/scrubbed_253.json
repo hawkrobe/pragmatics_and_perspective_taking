@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:47:03Z",
+    "AutoApprovalTime": "2018-04-04T06:46:07Z",
+    "AssignmentId": "253",
+    "WorkerId": "253",
+    "answers": {
+        "subject_information": {
+            "totalLength": 2038958,
+            "gameID": "7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 27,
+            "role": "matcher",
+            "comments": "a few times i was confused but overall i think i did understand ",
+            "strategy": "i just followed the directions to the best i could and i realized after making a mistake that i needed to pay closer attention to objects having the same names and i also understood alot of the analogies so i was able to follow the directions well "
+        },
+        "id": "7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db"
+    },
+    "AcceptTime": "2018-04-04T06:02:59Z",
+    "HITId": "36FQTHX3Z3RZOWXRN2G4XSNTKAW3BC",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:41:07Z"
+}

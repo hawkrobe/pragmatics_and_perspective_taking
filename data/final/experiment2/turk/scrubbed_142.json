@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:10:03Z",
+    "AutoApprovalTime": "2018-04-04T01:09:27Z",
+    "AssignmentId": "142",
+    "WorkerId": "142",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1038635,
+            "gameID": "6540-7f14fa62-c692-4860-90d4-32baa1137833",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 30,
+            "role": "director",
+            "comments": "Very interesting and unique experiment. I really enjoyed participating today. ",
+            "strategy": "I tried to give clear instructions that could be easily understood."
+        },
+        "id": "6540-7f14fa62-c692-4860-90d4-32baa1137833"
+    },
+    "AcceptTime": "2018-04-04T00:42:34Z",
+    "HITId": "3VGZ74AYTGGJSD1LWHJJR6IK6ZQGCR",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T01:04:27Z"
+}

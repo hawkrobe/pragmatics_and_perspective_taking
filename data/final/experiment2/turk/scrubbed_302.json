@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:48:03Z",
+    "AutoApprovalTime": "2018-04-03T21:47:46Z",
+    "AssignmentId": "302",
+    "WorkerId": "302",
+    "answers": {
+        "subject_information": {
+            "totalLength": 965982,
+            "gameID": "3211-fbe14ddb-629f-462b-a888-1838770f3fa6",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 26,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I tried to follow his directions, at least using a move consistent with the direction if it were vague"
+        },
+        "id": "3211-fbe14ddb-629f-462b-a888-1838770f3fa6"
+    },
+    "AcceptTime": "2018-04-03T21:21:52Z",
+    "HITId": "3YD0MU1NC21C65TMJ0JYFYF37TH7A8",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:42:46Z"
+}

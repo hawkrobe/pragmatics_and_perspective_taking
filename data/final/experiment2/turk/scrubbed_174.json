@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T04:26:03Z",
+    "AutoApprovalTime": "2018-04-04T04:25:43Z",
+    "AssignmentId": "174",
+    "WorkerId": "174",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1779325,
+            "gameID": "6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 31,
+            "role": "matcher",
+            "comments": "This was fun.",
+            "strategy": "I don't really think there was a strategy. They told me exactly what to do so I did it without any thoughts."
+        },
+        "id": "6867-fca7bfc4-d76e-4ea3-8f49-a605d6ad4cc3"
+    },
+    "AcceptTime": "2018-04-04T03:45:50Z",
+    "HITId": "3K2CEDRACB1064ZIT6C4TL2LQ88TM3",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T04:20:43Z"
+}

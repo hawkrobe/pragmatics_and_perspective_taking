@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:36:03Z",
+    "AutoApprovalTime": "2018-04-04T06:35:37Z",
+    "AssignmentId": "281",
+    "WorkerId": "281",
+    "answers": {
+        "subject_information": {
+            "totalLength": 814535,
+            "gameID": "4455-7c98f9ab-684a-4a7f-a655-d6e3feaa8dbd",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 31,
+            "role": "matcher",
+            "comments": "I thought the director was not real because the one time I asked a question I did not receive a response. But the rest of the time the director was typing very fast.",
+            "strategy": "I just followed what the director stated. after making one mistake early on, I was sure to be mindful that the director cannot see what is in the curtain spaces. So I didn't want to mistakenly move those."
+        },
+        "id": "4455-7c98f9ab-684a-4a7f-a655-d6e3feaa8dbd"
+    },
+    "AcceptTime": "2018-04-04T06:11:59Z",
+    "HITId": "33N1S8XHHMLZWRMS6CIOVHFZDT3Z1L",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:30:37Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:35:03Z",
+    "AutoApprovalTime": "2018-04-04T06:34:35Z",
+    "AssignmentId": "264",
+    "WorkerId": "264",
+    "answers": {
+        "subject_information": {
+            "totalLength": 760863,
+            "gameID": "4455-7c98f9ab-684a-4a7f-a655-d6e3feaa8dbd",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 31,
+            "role": "director",
+            "comments": "None",
+            "strategy": "I wanted to use less letters and to be quick"
+        },
+        "id": "4455-7c98f9ab-684a-4a7f-a655-d6e3feaa8dbd"
+    },
+    "AcceptTime": "2018-04-04T06:09:30Z",
+    "HITId": "341H3G5YF0EZP21AATEOHCWP81XZ0I",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:29:35Z"
+}

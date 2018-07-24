@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:47:03Z",
+    "AutoApprovalTime": "2018-04-03T21:46:31Z",
+    "AssignmentId": "223",
+    "WorkerId": "223",
+    "answers": {
+        "subject_information": {
+            "totalLength": 836157,
+            "gameID": "2171-b43de3b8-2af5-4e83-b8d2-8e6e4a938c8f",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 31,
+            "role": "matcher",
+            "comments": "It seems a little too easy to the point I was completely confident until you asked and that makes me worry there was some trick. \n\nI refrained from communicating pointless information (I knew he couldn't see items that might correspond to what he described) and did make some informed guesses about him misidentifying like spoon/wrench. If you wanted more communication you should have paid more than a cent per correct answer. ",
+            "strategy": "I did what the other guy told me even though he was a bit inaccurate and also slow. Which is why I think he was human and probably working other HITs or something. "
+        },
+        "id": "2171-b43de3b8-2af5-4e83-b8d2-8e6e4a938c8f"
+    },
+    "AcceptTime": "2018-04-03T21:23:02Z",
+    "HITId": "32CXT5U14G30LSC3ZASVTZNSPGEU8T",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:41:31Z"
+}

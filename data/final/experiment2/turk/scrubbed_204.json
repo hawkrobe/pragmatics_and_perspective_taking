@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:15:03Z",
+    "AutoApprovalTime": "2018-04-04T06:14:06Z",
+    "AssignmentId": "204",
+    "WorkerId": "204",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1465108,
+            "gameID": "0093-b4e1ce5c-2e5c-462a-bfed-87fa81611139",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 29,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I followed what the director said to do. "
+        },
+        "id": "0093-b4e1ce5c-2e5c-462a-bfed-87fa81611139"
+    },
+    "AcceptTime": "2018-04-04T05:27:08Z",
+    "HITId": "3EPG8DX9LKQ465L5KQMY79Q2FA1P58",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:09:06Z"
+}

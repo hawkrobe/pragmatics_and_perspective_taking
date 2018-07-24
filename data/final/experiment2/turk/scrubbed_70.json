@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:21:03Z",
+    "AutoApprovalTime": "2018-04-03T23:20:16Z",
+    "AssignmentId": "70",
+    "WorkerId": "70",
+    "answers": {
+        "subject_information": {
+            "totalLength": 609266,
+            "gameID": "8834-ddbb439f-b8ec-4e20-8bf0-07bbfe5bb277",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 32,
+            "role": "matcher",
+            "comments": "it seemed very simple and to be a waste of your money",
+            "strategy": "follow directions"
+        },
+        "id": "8834-ddbb439f-b8ec-4e20-8bf0-07bbfe5bb277"
+    },
+    "AcceptTime": "2018-04-03T23:00:47Z",
+    "HITId": "3QXFBUZ4ZKGFE7ILI84JLC4QDZUGUY",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:15:16Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T04:06:03Z",
+    "AutoApprovalTime": "2018-04-04T04:05:26Z",
+    "AssignmentId": "155",
+    "WorkerId": "155",
+    "answers": {
+        "subject_information": {
+            "totalLength": 997702,
+            "gameID": "3506-df8fd545-8ed1-4a0c-8315-ac3d09c38637",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 30,
+            "role": "director",
+            "comments": "No comment.",
+            "strategy": "There was no strategy besides typing the instruction.  It was a little annoying when it automatically placed instructions that weren't always clear."
+        },
+        "id": "3506-df8fd545-8ed1-4a0c-8315-ac3d09c38637"
+    },
+    "AcceptTime": "2018-04-04T03:19:30Z",
+    "HITId": "36JW4WBR06K4VLG67PR2KCFOID1HFA",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T04:00:26Z"
+}

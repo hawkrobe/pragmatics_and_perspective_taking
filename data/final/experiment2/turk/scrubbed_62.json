@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:23:03Z",
+    "AutoApprovalTime": "2018-04-03T23:22:09Z",
+    "AssignmentId": "62",
+    "WorkerId": "62",
+    "answers": {
+        "subject_information": {
+            "totalLength": 608226,
+            "gameID": "1423-c9e58987-02a2-4277-a40a-a24bc9f38de3",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 31,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I forgot about the curtain at first. After getting that wrong once, I just looked at everything in the white boxes to determine which the director was talking about."
+        },
+        "id": "1423-c9e58987-02a2-4277-a40a-a24bc9f38de3"
+    },
+    "AcceptTime": "2018-04-03T22:59:56Z",
+    "HITId": "3D06DR5225JVR809N6LNYGCT2IEMA0",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:17:09Z"
+}

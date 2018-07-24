@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:39:03Z",
+    "AutoApprovalTime": "2018-04-03T23:38:07Z",
+    "AssignmentId": "76",
+    "WorkerId": "76",
+    "answers": {
+        "subject_information": {
+            "totalLength": 608220,
+            "gameID": "0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "director",
+            "comments": "no",
+            "strategy": "name of object + direction + number of movements"
+        },
+        "id": "0253-f251d8ba-98a1-42f6-bf50-459c2e0c70dd"
+    },
+    "AcceptTime": "2018-04-03T23:19:40Z",
+    "HITId": "3MJ9GGZYO365K4WGDO23J7YVWDY2AQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:33:07Z"
+}

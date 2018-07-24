@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:40:03Z",
+    "AutoApprovalTime": "2018-04-04T06:39:52Z",
+    "AssignmentId": "285",
+    "WorkerId": "285",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1027027,
+            "gameID": "2762-7c6e403e-e6c1-434c-a474-f37162627a34",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 32,
+            "role": "matcher",
+            "comments": "It was fun!",
+            "strategy": "I followed the directions of the director. Looked at all items on the map and moved the best choice based on his or her description."
+        },
+        "id": "2762-7c6e403e-e6c1-434c-a474-f37162627a34"
+    },
+    "AcceptTime": "2018-04-04T06:13:11Z",
+    "HITId": "33N1S8XHHMLZWRMS6CIOVHFZDT3Z1L",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:34:52Z"
+}

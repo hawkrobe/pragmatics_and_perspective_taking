@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T04:09:03Z",
+    "AutoApprovalTime": "2018-04-04T04:08:12Z",
+    "AssignmentId": "172",
+    "WorkerId": "172",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1012592,
+            "gameID": "0925-bc219375-7a80-4963-8ea0-03854bb7aa4f",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 29,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "Listened to the simple instructions. If the instructions were not clear enough I had to guess. "
+        },
+        "id": "0925-bc219375-7a80-4963-8ea0-03854bb7aa4f"
+    },
+    "AcceptTime": "2018-04-04T03:42:25Z",
+    "HITId": "3K2CEDRACB1064ZIT6C4TL2LQ88TM3",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T04:03:12Z"
+}

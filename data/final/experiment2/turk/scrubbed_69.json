@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:10:03Z",
+    "AutoApprovalTime": "2018-04-03T23:09:49Z",
+    "AssignmentId": "69",
+    "WorkerId": "69",
+    "answers": {
+        "subject_information": {
+            "totalLength": 106217,
+            "gameID": "2047-38668323-11ba-4474-bd64-92399aa2aadc",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 1,
+            "role": "matcher",
+            "comments": "Was excited to try it so I'm a little disappointed that my partner disconnected.",
+            "strategy": "My strategy was going to be do exactly as the director says."
+        },
+        "id": "2047-38668323-11ba-4474-bd64-92399aa2aadc"
+    },
+    "AcceptTime": "2018-04-03T22:59:52Z",
+    "HITId": "3QXFBUZ4ZKGFE7ILI84JLC4QDZUGUY",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:04:49Z"
+}

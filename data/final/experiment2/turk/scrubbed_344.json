@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:42:03Z",
+    "AutoApprovalTime": "2018-04-04T07:41:55Z",
+    "AssignmentId": "344",
+    "WorkerId": "344",
+    "answers": {
+        "subject_information": {
+            "totalLength": 833010,
+            "gameID": "1027-5bb92b1d-edaa-4108-b379-99b869cc83d9",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 29,
+            "role": "director",
+            "comments": "I enjoyed the experiment! It was most interesting when the other player picked items from the hidden squares, which forced me to write a more thorough description of the item I wanted.",
+            "strategy": "I gave clues in the simplest manner possible. When it turned out to be incorrect because there were multiple versions of the same items, I then specified which one I was talking about by getting more descriptive (color, e.g.)."
+        },
+        "id": "1027-5bb92b1d-edaa-4108-b379-99b869cc83d9"
+    },
+    "AcceptTime": "2018-04-04T07:18:15Z",
+    "HITId": "3VGZ74AYTGGJSD1LWHJJR6IK601CG0",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:36:55Z"
+}

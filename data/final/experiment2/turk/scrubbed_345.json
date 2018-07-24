@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:16:03Z",
+    "AutoApprovalTime": "2018-04-04T07:15:51Z",
+    "AssignmentId": "345",
+    "WorkerId": "345",
+    "answers": {
+        "subject_information": {
+            "totalLength": 603378,
+            "gameID": "4972-ce06e036-981b-4b51-b414-5bebcdced745",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 31,
+            "role": "matcher",
+            "comments": "I still don't believe I was playing with another person in real time. The orders could have been human-generated, but they seemed to come from multiple different people.",
+            "strategy": "I followed the instructions. After the first mistake, I realized not to use the objects behind curtains."
+        },
+        "id": "4972-ce06e036-981b-4b51-b414-5bebcdced745"
+    },
+    "AcceptTime": "2018-04-04T06:57:18Z",
+    "HITId": "3VGZ74AYTGGJSD1LWHJJR6IK601CG0",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:10:51Z"
+}

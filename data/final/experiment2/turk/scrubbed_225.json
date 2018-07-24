@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:22:03Z",
+    "AutoApprovalTime": "2018-04-03T22:21:37Z",
+    "AssignmentId": "225",
+    "WorkerId": "225",
+    "answers": {
+        "subject_information": {
+            "totalLength": 433562,
+            "gameID": "7780-91e7f829-76b3-474e-8a56-bce331d65d6b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 13,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I tried my best to move the correct object described by the Director"
+        },
+        "id": "7780-91e7f829-76b3-474e-8a56-bce331d65d6b"
+    },
+    "AcceptTime": "2018-04-03T22:05:33Z",
+    "HITId": "32CXT5U14G30LSC3ZASVTZNSPGEU8T",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:16:37Z"
+}
