@@ -12,13 +12,449 @@ library(ggthemes)
 library(lme4)
 library(lmerTest)
 library(tidyboot)
+library(coda)
+library(irr)
+
+estimate_mode <- function(s) {
+  d <- density(s)
+  return(d$x[which.max(d$y)])
+}
+HPDhi<- function(s){
+  m <- HPDinterval(mcmc(s))
+  return(m["var1","upper"])
+}
+HPDlo<- function(s){
+  m <- HPDinterval(mcmc(s))
+  return(m["var1","lower"])
+}
 ```
 
 # Experiment 1
 
+## Setup data
+
+### Import turk survey data 
+
 ```{r}
-raw <- read_csv('../data/final/experiment1/chatMessage/messagesFromMongo.csv')
-exp1_messages <- read_csv('../data/final/experiment1/chatMessage/messagesFromMongo.csv') %>%
+exp1_subjInfo <- read_csv('../data/final/experiment1/planned_sample/turk/subjInfo.csv')
+```
+
+### Import message data and implement preregistered exclusions
+
+```{r}
+d_annotated <- read_csv('../data/final/experiment1/planned_sample/chatMessage/messages_with_annotations.csv') 
+
+# nonNativeSpeakerIDs <- unique((tangramSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
+incompleteIDs <- unique((d_annotated %>% group_by(gameid) %>% 
+                           filter(length(unique(trialNum)) != 24))$gameid)
+confused <- unique((exp1_subjInfo %>% filter(understandsInstructions != 'yes'))$gameid)
+nonNative <- unique((exp1_subjInfo %>% filter(nativeEnglish != 'yes'))$gameid)
+
+# Some speakers violated instructions by relying fully on location in grid 
+location_abusers <- c('8219-bb7861c1-43f4-480c-906b-8441c583c0ab', 
+                      '7726-3d4a266f-e56d-4afb-9a79-b40deb690a76', 
+                      '5684-f09de856-4d64-423c-b342-b30e7325eb0e', 
+                      '7600-346d56b5-bd76-406f-befb-6b47e07d5916')
+# Some speakers violated instructions by playing this weird taboo game where they gave riddles 
+tabooers <- c('2929-d218f724-b45e-416b-af44-5cab5658bad9', #(opposite of white... primary color...)
+              '7600-346d56b5-bd76-406f-befb-6b47e07d5916', # MERRY GO ROUND
+              '3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b') # CAN YOU SEE???
+badGames <- c(incompleteIDs, nonNative, location_abusers, confused, tabooers)
+
+d <- d_annotated %>%
+  mutate(numFeatures = colorMention + shapeMention + textureMention) %>%
+  filter(!(gameid %in% badGames)) %>%
+  mutate(occlusions = as.factor(occlusions),
+        context = as.factor(context))
+```
+
+How many recruited, how many excluded, for what reasons, etc?
+
+```{r}
+paste0('recruited ', length(exp1_subjInfo$gameid))
+paste0('total games ', length(unique(d_annotated$gameid)))
+paste0('incomplete ', length(incompleteIDs))
+paste0('confused ', length(setdiff(confused,incompleteIDs)))
+paste0('non-native english ', length(setdiff(nonNative, union(confused, incompleteIDs))))
+paste0('violated instructions ', length(setdiff(c(location_abusers, tabooers), union(nonNative, union(confused, incompleteIDs)))))
+paste0('final sample ', length(unique(d$gameid)))
+```
+
+### Import click data
+
+```{r}
+exp1_clicks <- read_tsv('../data/final/experiment1/planned_sample/clickedObj/clickedObj.csv') %>%
+  mutate(correct = ifelse(correct == 'true', 1, 0)) %>%
+  filter(!(gameid %in% badGames))
+```
+
+### Write out for modeling & bayesian data analysis
+
+Add missing column annotating whether critical distractor in close trials different from target in texture, color, or both...
+
+```{r}
+bdaInput = exp1_clicks %>% 
+  mutate(names = substr(names,2,nchar(names)-1)) %>%
+  separate(names, sep = ',', into = c('item1','item2','item3', 'item4', 'item5'),
+           extra = "merge", fill = "left") %>%
+  select(-item5) %>%
+  gather(distractorNum, distractorName, item1:item4) %>%
+  separate(intendedName, into = c('targetTexture', 'targetColor', 'targetShape')) %>%
+  filter(!is.na(distractorName)) %>%
+  separate(distractorName, into = c('distractorTexture', 'distractorColor', 'distractorShape')) %>%
+  filter(distractorShape == targetShape) %>%
+  mutate(textureMatch = distractorTexture == targetTexture) %>%
+  mutate(colorMatch = distractorColor == targetColor) %>%
+  mutate(distractorType = ifelse(textureMatch, 'texture_shape', ifelse(colorMatch, 'color_shape', 'shape_only'))) %>%
+  select(gameid, trialNum, distractorType) %>%
+  right_join(exp1_clicks) %>%
+  mutate(distractorType = ifelse(is.na(distractorType), 'diff_shape', distractorType)) %>%
+  right_join(d) 
+
+write_csv(bdaInput %>% select(gameid, trialNum, distractorType, context, hidden, 
+                              numDistractors, colorMention, shapeMention, textureMention),
+  '../modeling/bdaInput/bdaInput.csv')
+```
+
+## Speaker results
+
+### Visualize message length collapsing across all subjects
+
+```{r}
+dodge <- position_dodge(width=0.9)
+cbPalette = c(rgb(0.8, .8, .8), rgb(.8, .3, .3),  rgb(0, .6, .4), rgb(.4, .4, .4))
+
+d %>%
+  group_by(context, hidden) %>%
+  tidyboot_mean(column = numRawWords) %>%
+  ggplot(aes(x = context, y = empirical_stat, fill = hidden)) +
+    geom_bar(stat = 'identity', position = dodge) +
+    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), position = dodge, width = 0) +
+    theme_few() +
+    theme(aspect.ratio = 1, text = element_text(size=20)) +
+    scale_fill_manual(values=cbPalette) +
+    ylab('mean # words') 
+
+ggsave('../../pragmatics_of_perspective_taking_tex/pnas_format/figures/num_words.pdf', width = 4, height = 3)
+```
+
+### Full mixed-model for effects of condition
+
+```{r}
+contrasts(d$context) <- contr.treatment(2, base = 2)
+contrasts(d$occlusions) <- contr.treatment(2, base = 2)
+
+summary(lmer(numRawWords ~ context * occlusions + (1 + context * occlusions | gameid), data = d ))
+```
+
+
+### Use feature data instead
+
+```{r}
+d.booted <- d %>% 
+  gather(feature, mentioned, shapeMention, colorMention, textureMention) %>%
+  group_by(context, hidden, feature) %>% 
+  tidyboot_mean(column = mentioned) 
+
+d.booted %>%
+  mutate(feature = factor(feature, levels = c('shapeMention', 'colorMention', 'textureMention'))) %>%
+  ggplot(aes(x = context, y = mean, fill = hidden)) + 
+    geom_bar(stat = 'identity', position = dodge) +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0) +
+    facet_wrap(~ feature) + 
+    theme_few() +
+    theme(aspect.ratio = 1, text = element_text(size=20))  +
+    ylab('% utterances with feature') +
+    scale_fill_manual(values=cbPalette) 
+
+ggsave('../../pragmatics_of_perspective_taking_tex/pnas_format/figures/by-feature-analysis.pdf', 
+       height = 3, width = 9)
+```
+
+Note: Random interaction doesn't converge for full model (less variance in these numbers...)
+
+```{r}
+contrasts(d$context) <- contr.treatment(2, base = 2)
+contrasts(d$occlusions) <- contr.treatment(2, base = 2)
+summary(glmer(colorMention ~ occlusions * context + (1 + occlusions | gameid), 
+              family = 'binomial', data = d))
+```
+
+```{r}
+summary(glmer(textureMention ~ occlusions * context + (1 + occlusions | gameid), 
+              family = 'binomial', data = d))
+```
+
+## Listener analyses
+
+### How common are errors?
+
+Quite rare...
+
+```{r}
+## Errors by condition
+numErrorsByCondition <- exp1_clicks %>%
+  group_by(context, occlusions) %>%
+  summarize(totalCorrect = sum(correct), totalErrors = length(correct) - totalCorrect) 
+
+chisq.test(t(numErrorsByCondition[,3:4]))
+
+## Error distribution by pair
+exp1_clicks %>%
+  group_by(gameid) %>%
+  summarize(numErrors = 24- sum(correct)) %>%
+  group_by(numErrors) %>%
+  tally()
+```
+
+## Model-based analyses
+
+Look at pattern of predictives for each model, compared to empirical number of features mentioned
+
+```{r}
+rbind(read.csv('../modeling/bdaOutput/occlusionSensitivityPredictives.csv') %>% mutate(source = 'occlusion-sensitive model'),
+      read.csv('../modeling/bdaOutput/egocentricPredictives.csv') %>% mutate(source = 'occlusion-blind model')) %>%
+  mutate(i = row_number()) %>%
+  gather(condition, value, close_hidden:far_visible) %>%
+  group_by(condition, source) %>%
+  summarize(mean = estimate_mode(value),
+            ci_lower = round(HPDlo(value), 3),
+            ci_upper = round(HPDhi(value), 3)) %>%
+  separate(condition, into = c('context', 'hidden')) %>%
+  mutate(hidden = ifelse(hidden == 'hidden', 'yes', 'no')) %>%
+  rbind(d %>% 
+          group_by(context, hidden) %>% 
+          tidyboot_mean(column = numFeatures) %>%
+          ungroup() %>%
+          mutate(context = as.character(context)) %>%
+          mutate(source = as.character('empirical data')) %>% 
+          select(-empirical_stat, -n)) %>%
+  mutate(source = factor(source, levels = c('empirical data', 'occlusion-sensitive model', 
+                                            'occlusion-blind model'))) %>%
+  ggplot(aes(x = context, fill = hidden, y = mean)) +
+    geom_bar(stat = 'identity', position = dodge) +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0) +
+    facet_wrap(~ source) +
+    theme_few() +
+    theme(aspect.ratio = 1, text = element_text(size=20)) +
+    ylab('mean # features produced') 
+
+ggsave('../../pragmatics_of_perspective_taking_tex/pnas_format/figures/predictives.pdf',
+       height = 5, width = 9)
+```
+
+Get MAP estimates and CIs from param posteriors for occlusion-sensitive model
+
+```{r}
+params <- read.csv('../modeling/bdaOutput/occlusionSensitivityParams.csv') 
+
+params %>%
+  gather(parameter, value, alpha:shapeCost) %>%
+  group_by(parameter) %>%
+  summarize(mode = estimate_mode(value),
+            md_lo = HPDlo(value),
+            md_hi = HPDhi(value))
+```
+
+Visualize param posteriors
+
+```{r}
+numSamples = 5000
+params.samples <- params[rep(row.names(params), exp(params$prob)*numSamples), ] %>%
+    gather(parameter, value, alpha:shapeCost)
+
+answererParamPosteriors = ggplot(params.samples, aes(x=log(value)))+
+    geom_density(aes(y=..density..),
+                 data =subset(params.samples, parameter == "alpha" ),
+                 adjust = 3, alpha=.2, fill="#FF6666")+
+    geom_density(aes(y=..density..),
+                 data=subset(params.samples, parameter == "textureCost"),
+                 adjust = 3, alpha=.2, fill="#FF6666")+
+    geom_density(aes(y=..density..),
+                 data=subset(params.samples, parameter == "colorCost"),
+                 adjust = 3, alpha=.2, fill="#FF6666")+
+    geom_density(aes(y=..density..),
+                 data=subset(params.samples, parameter == "shapeCost"),
+                 adjust = 3, alpha=.2, fill="#FF6666")+
+    xlab('log parameter value')+
+    ggtitle("Parameter Posteriors (5000 samples)") +
+    facet_grid(parameter ~ . , scales = 'free') +
+    theme_few()
+
+answererParamPosteriors
+ggsave('../../pragmatics_of_perspective_taking_tex/pnas_format/appendix/figures/paramPosterior.pdf',
+       height = 4, width = 6)
+```
+
+log-likelihood plot
+
+```{r}
+rbind(read.csv('../modeling/bdaOutput/occlusionSensitivityParams.csv'),
+      read.csv('../modeling/bdaOutput/egocentricParams.csv')) %>%
+  group_by(source) %>%
+  summarize(maxLikelihood = max(logLikelihood)) %>%
+  ggplot(aes(x = source, y = maxLikelihood)) +
+    geom_bar(stat = 'identity') +
+    theme_few() +
+    coord_cartesian(ylim=c(0, -4000)) +
+    theme(aspect.ratio = 3)
+
+ggsave("../../pragmatics_of_perspective_taking_tex/pnas_format/appendix/figures/likelihoodPlot.pdf",
+       height = 6, width = 2)
+```
+
+## Additional checks & exploratory analyses:
+
+### check if speaker results differ across what the distractor is?
+
+```{r}
+bdaInput %>%
+  group_by(distractorType, hidden) %>%
+  tidyboot_mean(column = numFeatures) %>%
+  ggplot(aes(x = distractorType, y = mean, fill = hidden)) +
+    geom_bar(stat = 'identity', position = dodge) +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0)
+```
+
+### check if speaker results depend on number of distractors?
+
+```{r}
+bdaInput %>%
+  mutate(numVisible= numDistractors - numObjsOccluded) %>%
+  group_by(numVisible, hidden) %>%
+  tidyboot_mean(column = numFeatures) %>%
+  ggplot(aes(x = numVisible, y = mean, fill = hidden)) +
+    geom_bar(stat = 'identity', position = dodge) +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0)
+```
+
+### Visualize basic (no-hidden) pragmatic effect
+
+```{r}
+basic.d <- d %>%
+  filter(hidden == 'no') %>%
+  group_by(gameid, context) %>%
+  summarize(m = mean(numRawWords)) %>%
+  spread(context, m) %>%
+  mutate(diff = close- far,
+         ratio = log(close / far))
+ 
+ggplot(basic.d, aes(x = far, y = close)) +
+    geom_point() +
+    theme_bw() +
+    geom_abline(intercept = 0, slope = 1) +
+    ylim(1,12) +
+    xlim(1,12) +
+    theme(aspect.ratio = 1, text = element_text(size=20))
+```
+
+Aggregated to difference scores:
+
+```{r}
+tidyboot_mean(basic.d %>%ungroup(), column = diff) %>%
+  ggplot(aes(x = 'close - far', y = empirical_stat)) +
+      geom_bar(stat ='identity', width = 0.25) +
+      geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0) +
+      theme_few()+
+      geom_hline(yintercept = 0) +
+      #geom_vline(xintercept = 0) +
+      ylim(-1,1) +
+      # xlim(-4,4) +
+      ylab('# words used') +
+    theme(aspect.ratio = 1, text = element_text(size=20))
+
+t.test(basic.d$diff)
+```
+
+### Visualize individual differences in num features
+
+Some people used exactly the same number of words on every trial...
+
+```{r}
+hidden.d <- d %>%
+  group_by(gameid, context, hidden) %>%
+  summarize(m = mean(numFeatures)) %>%
+  spread(hidden, m) %>%
+  mutate(diff = yes- no,
+         ratio = log(yes/no)) 
+```
+
+```{r}
+ggplot(hidden.d, aes(x = no, y = yes)) +
+    geom_density_2d() +
+    facet_wrap(~ context) +
+    theme_bw() +
+    geom_abline(intercept = 0, slope = 1) +
+    ylim(0,3) +
+    ylab('# words (with occlusions)') +
+    xlab('# words (without occlusions)') +
+    #ggtitle('Within-pair comparisons of reference w/ and w/out occlusion') +
+    xlim(0,3) +
+    theme(aspect.ratio = 1, text = element_text(size=20)) 
+
+```
+
+Histogram
+
+```{r}
+hidden.d %>% 
+  #filter(!(gameid %in% all_the_things_ers)) %>% 
+  group_by(context) %>% 
+  mutate(m = mean(diff)) %>%
+  ggplot(aes(x = diff)) +
+      geom_histogram(binwidth = 0.33) +
+      theme_bw() +
+      geom_vline(xintercept = 0, linetype = 2) +
+      geom_vline(aes(xintercept = m), color = 'red') +
+      facet_wrap(~ context) +
+      # ylim(1,12) +
+      xlim(-3,3) +
+      theme(aspect.ratio = 1)
+```
+
+```{r}
+hidden.d %>%
+  group_by(context) %>%
+  summarize(m = mean(diff), se = sd(diff)/sqrt(length(diff))) %>%
+  ggplot(aes(x = context, y = m)) +
+    geom_bar(stat = 'identity', width = 0.25) +
+    geom_errorbar(aes(ymin = m - se, ymax = m + se), width = 0) +
+    theme_few() +
+    geom_hline(yintercept = 0) +
+    ylim(-3, 3) +
+    theme(aspect.ratio = 1, text = element_text(size=20))  +
+    ylab('# words (occlusions - no occlusions)')
+  
+```
+
+Histograms of number of features mentioned in each condition
+
+```{r}
+ggplot(d, aes(x = numFeatures)) +
+  geom_histogram(binwidth = 1) +
+  facet_grid(context ~ occlusions) +
+  theme_few()
+```
+
+```{r}
+d %>% group_by(context, occlusions) %>% 
+  mutate(numTrials = length(text)) %>% 
+  group_by(context, occlusions, colorMention, textureMention) %>% 
+  summarize(n = length(text)/mean(numTrials)) %>%
+  ggplot(aes(x = colorMention, y = textureMention, fill = n)) +
+    geom_bin2d(stat = 'identity') +
+    stat_bin2d(geom = "text", aes(label = round(n, 2))) +
+    scale_fill_gradient(low = "white", high = "red") +
+    facet_grid(occlusions ~ context) +
+    theme_few()
+```
+
+# Experiment 2
+
+## Import messages and drops
+
+```{r}
+exp2_messages <- read_csv('../data/final/experiment2/chatMessage/messagesFromMongo.csv') %>%
   mutate(critical = ifelse(critical == 'True', 1, 0)) %>%
   rename(messageTime = serverTime) %>%
   filter(sender == 'director') %>%
@@ -27,9 +463,9 @@ exp1_messages <- read_csv('../data/final/experiment1/chatMessage/messagesFromMon
             typingRT = sum(typingRT)) %>%   # Concatenate multiple utterance on same trial
   mutate(numRawWords = str_count(text, "\\S+")) 
 
-## Have to post-hoc attemptNum and instructionNum bugs (got reset for next trial prematurely)
+## Have to correct for post-hoc attemptNum and instructionNum bugs (got reset for next trial prematurely)
 ## Also, remove trials where multi-drop bug happened (i.e. where clicking multiple times triggered multiple instruction resetting)
-exp1_drops <- read_csv('../data/final/experiment1/drop/dropsFromMongo.csv') %>%
+exp2_drops <- read_csv('../data/final/experiment2/drop/dropsFromMongo.csv') %>%
   mutate(critical = ifelse(critical == 'True', 1, 0),
          correct = ifelse(correct == 'correct', 1, 0),
          instructionNum = ifelse(correct == 0, instructionNum + 1, instructionNum)) %>%
@@ -41,29 +477,41 @@ exp1_drops <- read_csv('../data/final/experiment1/drop/dropsFromMongo.csv') %>%
   select(-X1, -eventType)
 ```
 
+## Implement exclusion criteria
+
+First, get error rates on filler items...
+
 ```{r}
-exp1_subjInfo <- read_csv('../data/final/experiment1/turk/subjInfo.csv')
-incompleteIDs <- unique((exp1_messages %>% 
+fillerErrors <- exp2_drops %>%
+  #filter(critical != 1) %>%   # only look at mistakes on noncritical (filler) items
+  filter(attemptNum == 0) %>%   # don't want to double-count people for messing the same thing up multiple times
+  group_by(gameid, correct, critical, condition) %>%
+  tally() %>%
+  ungroup() %>%
+  mutate(correct = ifelse(correct == 1, 'no_mistake', 'mistake')) %>%
+  spread(correct, n, fill = 0) %>%
+  mutate(numErrors = mistake, errorRate = mistake/ (no_mistake + mistake) ) 
+
+nonCriticalMistakes = (fillerErrors %>%
+  filter(critical == 0) %>%
+  filter(numErrors >= 2))$gameid
+```
+
+And make exclusions based on subj info exit survey
+
+```{r}
+exp2_subjInfo <- read_csv('../data/final/experiment2/turk/subjInfo.csv')
+incompleteIDs <- unique((exp2_messages %>% 
                            group_by(gameid, trialNum, instructionNum) %>% 
                            summarize(id = row_number()) %>% 
                            group_by(gameid) %>% 
                            tally() %>% 
                            filter(n != 32))$gameid)
 
-confused <- unique((exp1_subjInfo %>% filter(understandsInstructions != 'yes'))$gameid)
-nonNative <- unique((exp1_subjInfo %>% filter(nativeEnglish != 'yes'))$gameid)
+confused <- unique((exp2_subjInfo %>% filter(understandsInstructions != 'yes'))$gameid)
+nonNative <- unique((exp2_subjInfo %>% filter(nativeEnglish != 'yes'))$gameid)
 
-nonCriticalMistakes <- unique((exp1_drops %>%
-  # only look at mistakes on noncritical (filler) items
-  filter(critical != 1) %>%
-  # don't want to double-count people for messing the same thing up multiple times
-  filter(attemptNum == 1) %>% 
-  group_by(gameid, correct) %>%
-  tally() %>%
-  # implement exclusion criteria of errors on >~10% of non-critical trials
-  filter(n > 1))$gameid)
-
-buggyTrials <- read_csv('../data/final/experiment1/drop/dropsFromMongo.csv') %>%
+buggyTrials <- read_csv('../data/final/experiment2/drop/dropsFromMongo.csv') %>%
   mutate(critical = ifelse(critical == 'True', 1, 0),
        correct = ifelse(correct == 'correct', 1, 0),
        instructionNum = ifelse(correct == 0, instructionNum + 1, instructionNum)) %>%
@@ -73,31 +521,31 @@ buggyTrials <- read_csv('../data/final/experiment1/drop/dropsFromMongo.csv') %>%
 
 taboo <- c('4241-cda4a373-ffd7-41e3-ae60-82b9d377a455')
 onlyLocation <- c('3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1', '9457-4189cc9b-a82b-4db9-828d-bf90d1987aee')
-exp1_badGames <- c(incompleteIDs, nonNative, confused, nonCriticalMistakes, taboo, onlyLocation, unique(buggyTrials$gameid))
-
-exp1_d <- exp1_drops %>% 
-  left_join(exp1_messages) %>% #, by = c('gameid', 'trialNum', 'instructionNum', 'trialType', 
+exp2_badGames <- c(incompleteIDs, nonNative, nonCriticalMistakes, confused, taboo, onlyLocation, unique(buggyTrials$gameid))
+exp2_d <- exp2_drops %>% 
+  left_join(exp2_messages) %>% #, by = c('gameid', 'trialNum', 'instructionNum', 'trialType', 
                       #         'targetObject', 'critical', 'condition', 'attemptNum')) %>%
-  filter(!(gameid %in% exp1_badGames))
+  filter(!(gameid %in% exp2_badGames))
+
 ```
+
 
 ## Descriptive stats
 
 How many recruited, how many excluded, for what reasons, etc?
 
 ```{r}
-paste0('recruited ', length(exp1_subjInfo$gameid))
-paste0('total games ', length(unique(exp1_drops$gameid)))
+paste0('total games ', length(unique(exp2_messages$gameid)))
 paste0('incomplete ', length(incompleteIDs))
-paste0('too many mistakes ', length(setdiff(union(confused, nonCriticalMistakes), incompleteIDs)))
-paste0('non-native english ', length(setdiff(nonNative, union(confused, union(nonCriticalMistakes, incompleteIDs)))))
-paste0('final sample ', length(unique(exp1_d$gameid)))
+paste0('too many mistakes or confused ', length(setdiff(unique(c(onlyLocation, taboo, unique(buggyTrials$gameid), nonCriticalMistakes, confused)), incompleteIDs)))
+paste0('non-native english ', length(setdiff(nonNative, unique(c(onlyLocation, taboo, unique(buggyTrials$gameid), confused, nonCriticalMistakes, incompleteIDs)))))
+paste0('final sample ', length(unique(exp2_d$gameid)))
 ```
 
 Happened to get slightly more people in scripted condition
 
 ```{r}
-exp1_d %>% 
+exp2_d %>% 
   group_by(gameid, condition) %>% 
   tally() %>% 
   group_by(condition) %>% 
@@ -107,7 +555,7 @@ exp1_d %>%
 And slightly uneven numbers of 'experimental' trials in each item... 
 
 ```{r}
-exp1_d %>% 
+exp2_d %>% 
   group_by(gameid, objectSet, trialType, condition) %>% 
   tally() %>% 
   group_by(condition, objectSet, trialType) %>% 
@@ -116,10 +564,10 @@ exp1_d %>%
 
 ## Listener Analyses
 
-First, look at error rates
+### Visualize & compare error rates across conditions
 
 ```{r}
-critTrials <- exp1_d %>% 
+critTrials <- exp2_d %>% 
   filter(attemptNum == 0) %>%
   filter(critical == 1) %>%
   filter(trialType == 'exp') %>%
@@ -129,7 +577,7 @@ critTrials %>%
   group_by(gameid, condition) %>%
   summarize(pctCriticalError = 4 - sum(correct)) %>%
   ggplot(aes(x = pctCriticalError, fill = condition)) +
-    geom_histogram(alpha = 0.5, position = 'dodge', binwidth = 0.5)  +
+    geom_histogram(alpha = 0.75, position = 'dodge', binwidth = 0.5)  +
     facet_grid(condition ~ .) +
     theme_few() +
     ylab('# pairs making k critical errors') +
@@ -139,30 +587,15 @@ critTrials %>%
     ggtitle('critical errors')
   
 
-ggsave('../writing/journal_manuscript/figures/criticalErrors.pdf')
+ggsave('../../pragmatics_of_perspective_taking_tex/pnas_format/figures/criticalErrors.pdf',
+       height = 5, width = 2.5)
 ```
-
-```{r}
-critTrials %>%
-  group_by(condition) %>%
-  tidyboot_mean(column = error) %>%
-  ggplot(aes(x = condition, y =empirical_stat, fill = condition)) +
-    geom_bar(stat = 'identity', alpha = .5) +
-    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0) +
-    ylab('% errors') +
-    scale_fill_colorblind()+
-    theme_few() +
-    theme(aspect.ratio = 1, legend.position="none") 
-
-ggsave('../writing/journal_manuscript/figures/errorMeans.pdf', height = 3, width = 3)
-```
-
 
 ```{r}
 errorTable <- critTrials %>%
   group_by(gameid, condition) %>%
   summarize(numErrors = 4 - sum(correct),
-            numPossible = length(correct),
+            numPossible = 4,
          atLeastOnce = sum(correct) < 4,
          atLeastTwice = sum(correct) < 3,
           atLeastThree = sum(correct) < 2,
@@ -174,102 +607,23 @@ errorTable <- critTrials %>%
             avgPctErrors = mean(pctErrors),
             totalNumErrors = sum(numErrors),
             totalPossible = sum(numPossible))
+
 errorTable
-```
-
-### Statistical tests of error reduction
-
-```{r}
 prop.test(errorTable$totalNumErrors, errorTable$totalPossible)
 ```
-
-### Control for item-level and subject-level error rates...
 
 ```{r}
 summary(glmer(correct ~ condition + (1|gameid) + (1+condition | objectSet), family = 'binomial', 
               data = critTrials))
 ```
 
-## Error heterogeneity across items...
-
-```{r}
-error_diffs <- critTrials %>% 
-  group_by(objectSet, condition, targetObject) %>%
-  summarize(pctErrors = mean(error)) %>%
-  spread(condition, pctErrors) %>%
-  mutate(errorReduction = scripted - unscripted) %>%
-  gather(condition, pctErrors, scripted, unscripted) %>%
-  right_join(critTrials) %>%
-  group_by(objectSet, condition, targetObject, errorReduction) %>%
-  tidyboot_mean(column = error) 
-
-ggplot(error_diffs, aes(x = reorder(targetObject, -errorReduction), y = empirical_stat, color = condition, group = condition)) +
-    geom_point() +
-    geom_line(stat = 'identity', position = 'dodge') +
-    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0) +
-    theme_few() +
-    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-    ggtitle('error heterogeneity across item') +
-    xlab('critical item') +
-    ylab('% error in condition')
-
-ggsave('../writing/journal_manuscript/figures//itemHeterogeneity.pdf')
-```
-
-## Test error homogeneity
-
-```{r}
-errorRates = critTrials %>% 
-  mutate(error = 1 - correct) %>%
-  group_by(objectSet, condition, targetObject) %>%
-  summarize(errors = sum(error), nonerrors = length(error) - errors) %>%
-  ungroup() 
-
-scriptedErrors <- errorRates %>% 
-  filter(condition == 'scripted') %>%
-  select(errors, nonerrors)
-chisq.test(as.matrix(rbind(scriptedErrors$errors, scriptedErrors$nonerrors)), simulate.p.value = T)
-  
-unscriptedErrors <- errorRates %>% 
-  filter(condition == 'unscripted') %>%
-  select(errors, nonerrors)
-chisq.test(as.matrix(rbind(unscriptedErrors$errors, unscriptedErrors$nonerrors)), simulate.p.value = T)
-```
-
-```{r}
-exp1_d %>% 
-  filter(attemptNum == 0) %>%
-  filter(correct == 1) %>%
-  filter(critical == 1) %>% 
-  ungroup() %>%
-  filter(responseTime < median(responseTime, na.rm = T) +  3* sd(responseTime)) %>%
-  group_by(trialType, condition) %>%
-  mutate(m = median(responseTime)) %>%
-  ggplot(aes(x = responseTime)) +
-    geom_histogram() +
-    geom_vline(aes(xintercept = m))+
-    facet_wrap(trialType ~ condition) +
-    scale_x_log10() +
-    theme_few() 
-```
-
-```{r}
-summary(lmer(log(responseTime) ~ trialType * condition + (1 | gameid),
-     data = exp1_d %>% 
-        filter(attemptNum == 0) %>%
-        filter(correct == 1) %>%
-        filter(critical == 1) %>% 
-        ungroup() %>%
-        filter(responseTime < median(responseTime, na.rm = T) +  3* sd(responseTime))))
-```
-
-## Mouse-tracking 
+### Mouse-tracking 
 
 Even on critical trials where they didn't make errors, how often did they 'consider' the distractor (i.e. hover over the distractor cell)
 
 ```{r}
-d.onDistractor <- exp1_d %>% 
-  left_join(read_csv('../data/final/experiment1/mouseOverDistractor/distractorMouseFromMongo.csv') %>% 
+d.onDistractor <- exp2_d %>% 
+  left_join(read_csv('../data/final/experiment2/mouseOverDistractor/distractorMouseFromMongo.csv') %>% 
               mutate(critical = ifelse(critical == 'True', 1, 0))
             ) %>%
   select(-serverTime, -X1) %>%
@@ -300,69 +654,29 @@ d.onDistractor %>%
     ylab('(log) ms hovering over distractor') +
     scale_fill_colorblind()+
     guides(fill='none') +
-    theme(aspect.ratio = 1, legend.position = 'top')
+    theme(aspect.ratio = 2, legend.position = 'top')
     
-ggsave('../../pragmatics_of_perspective_taking_tex/journal_manuscript/figures/hoverOverDistractor.pdf', height = 3, width = 3)
+ggsave('../../pragmatics_of_perspective_taking_tex/pnas_format/figures/hoverOverDistractor.pdf', height = 5, width = 2.5)
 ```
 
-```{r}
-summary(glmer(hovered ~ trialType * condition + (1 + trialType |gameid) + (1 |objectSet), data = d.onDistractor, family = 'binomial'))
-```
-Note that this is still significant for our preregistered dv (raw amount of data) -- it's just less interpretable given the distribution... 
+This is our pregistered DV
 
 ```{r}
-summary(lmer(totalAmtTimeOnDistractor ~ trialType * condition + (1 + trialType|gameid) + (1 |objectSet), 
+summary(lmer(totalAmtTimeOnDistractor ~ trialType * condition + (1 +trialType|gameid) + (1 +trialType|objectSet), 
              data = d.onDistractor))
 ```
 
-
-Note: because I stopped recording from the mouse as soon as someone starts dragging, it's technically possible for them to hover over the distractor object, click and start to drag it, but then drop it in place and go over to the target object. So they get it 'correct' even though it looks like their mouse never gets close... 
-
-Note: a couple researcher degrees of freedom here: 
-* do we take the time from 'object reveal' or from first mouse move (i.e. subtract off the first time recorded NOT in target or distractor)? 
-* do we restrict to only 'correct' trials (i.e. to make an argument like "even when they got it right, they were still distracted") or include everything?
-* how big a radius around the target center should we consider a 'mouse-fixation' (obviously needs to be close enough to move it, but objects were different sizes...)
+This is the 'cleaned up' proportionality measure we report in the footnote
 
 ```{r}
-# Touch people?
-touch <- c('0095-03bb67a7-ae89-402d-9f7f-c5898784e63f', '0093-b4e1ce5c-2e5c-462a-bfed-87fa81611139')
-targetRadius = 175
-d.mouse <- exp1_d %>% ungroup() %>%
-  left_join(read_csv('../data/final/experiment1/updateMouse/mouseFromMongo.csv') %>%
-                  mutate(critical = ifelse(critical == 'True', 1, 0))
-  ) %>%
-  filter(!(gameid %in% touch)) %>%
-  filter(critical == 1) %>% filter(attemptNum == 0) %>% filter(correct == 1) %>%
-  select(-critical, -attemptNum, -eventType, -iterationName) %>%
-  mutate(distractorDistance = as.numeric(distractorDistance)) %>%
-  group_by(condition, trialType, gameid, objectSet, onTarget = targetDistance < targetRadius) %>%
-  summarize(firstTime = first(timeFromReveal), 
-            lastTime = last(timeFromReveal)) %>%
-  group_by(condition, trialType, gameid, objectSet) %>%
-  summarize(initMouseMove = min(firstTime), 
-            initTargetHover = max(firstTime) - initMouseMove, 
-            finalTargetHover = max(lastTime) - initMouseMove) %>%
-  select(-initMouseMove) %>%
-  gather(metric, value, initTargetHover, finalTargetHover) %>%
-  #spread(onTarget, value) %>%
-  #mutate(timeFromFirstMouseMove = `TRUE` - `FALSE`) %>%
-  #ungroup() %>%
-  #filter(firstTime < mean(firstTime, na.rm = T) + 3 * sd(firstTime, na.rm = T)) %>%
-  group_by(condition, trialType, metric) %>%
-  tidyboot_mean(column = value)
-
-d.mouse
-ggplot(d.mouse, aes(x = trialType, y = empirical_stat, fill = metric)) +
-  geom_bar(stat= 'identity', position = dodge) +
-  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), position = dodge, width = 0) +
-  facet_wrap(~ condition) +
-  theme_few()
+summary(glmer(hovered ~ trialType * condition + (1|gameid) + (1+trialType|objectSet), data = d.onDistractor, family = 'binomial'))
 ```
+## Speaker analyses
 
-## Prep informativity norming stims
+### Prep informativity norming stims
 
 ```{r}
-refExps <- exp1_d %>% 
+refExps <- exp2_d %>% 
   filter(condition == 'unscripted') %>% 
   filter(critical == 1) %>% 
   filter(attemptNum == 0) %>% 
@@ -378,51 +692,46 @@ Look at all of them to make sure there aren't dumb duplicates...
 scripted_words <- c('glasses', 'bottom block', 'tape', 'large measuring cup', 'brush', 'eraser', 'small candle', 'mouse')
 scripted_refs <- data.frame(objectSet = c(1,2,3,4,5,6,7,8), text = scripted_words, stringsAsFactors=FALSE)
 
-standardized_refs <- read_csv('../data/final/experiment1/refExpressions_standardized.csv')
+standardized_refs <- read_csv('../data/final/experiment2/refExpressions_standardized.csv')
 cat('unique utterances: ', length(unique(c(scripted_refs, standardized_refs$text))))
-unscripted_utt_counts <- standardized_refs %>% 
+standardized_refs %>% 
   group_by(objectSet,text) %>%
   tally() %>%
   mutate(condition = 'unscripted')
 ```
 
-Unscripted speakers had significantly more words in their referring expressions across items... (note: if you just bootstrap cis for each item, it's significant for 6 of 8...)
+### Unscripted speakers had significantly more words in their referring expressions across items... 
+
+note: if you just bootstrap CIs for each item, it's significant for 6 of 8...
 
 ```{r}
-unscripted_refs <- read_csv('../data/final/experiment1/refExpressions.csv')
+unscripted_refs <- read_csv('../data/final/experiment2/refExpressions.csv')
 scripted.df <- data.frame(objectSet = c(1,2,3,4,5,6,7,8), scriptedMessage = scripted_refs, scriptedNumWords = c(1,2,1,3,1,1,2,1))
 diff.df <- unscripted_refs %>% 
   mutate(unscriptedNumWords = str_count(text, "\\S+")) %>%
   left_join(scripted.df, by = c('objectSet')) %>%
-  mutate(diff = unscriptedNumWords - scriptedNumWords)
+  mutate(diff = unscriptedNumWords - scriptedNumWords) %>%
+  filter(!(gameid %in% exp2_badGames))
 
-library(lmerTest)
 summary(lmer(diff ~ 1 + (1 | objectSet) + (1 | gameid), data= diff.df))
 ```
 
-## Analyze informativity ratings
+### Extract informativity ratings & compute inter-rater agreement
 
-First identify 4 turkers who were responding randomly...
+First identify 4 turkers who were responding randomly by looking at median RT and excluding those <1 second...
 
 ```{r}
-raw_inf_ratings <- read_csv('../informativity_ratings.csv')
-# ggplot(raw_inf_ratings %>% mutate(workerid = substr(workerid, 0, 6)), aes(x = response, fill = referent)) +
-#   geom_density(alpha = 0.5) +
-#   facet_wrap(~ workerid, scales = 'free_y')
-# 
-# ggplot(raw_inf_ratings %>% mutate(workerid = substr(workerid, 0, 6)), aes(x = slideNumber, y = response, color = referent)) + 
-#   geom_point() +
-#   facet_wrap(~ workerid)
+raw_inf_ratings <- read_csv('../data/final/norming/informativity_ratings.csv')
 
 raw_inf_ratings %>% mutate(workerid = substr(workerid, 0, 6)) %>%
   group_by(workerid) %>%
   summarize(medianRT = median(rt))
 
-bad_raters <- c('956e201e2604ead2f2fa81d0ef666626', '6559a18fae791987122350d706538e90', '2301c2d66270fecb3c16cd1593e4aa0f', 'dd0463e01b62413231a9218253908a91')#, 'deec4028cd9f327085a947bac0e19aab', '766e6aa74bc2c113e29531dab30d63e9')
+bad_raters <- c('956e201e2604ead2f2fa81d0ef666626', '6559a18fae791987122350d706538e90', 
+                '2301c2d66270fecb3c16cd1593e4aa0f', 'dd0463e01b62413231a9218253908a91')
 ```
 
 ```{r}
-library(irr)
 inf_ratings <- raw_inf_ratings %>%
   filter(!(workerid %in% bad_raters))
 
@@ -444,7 +753,7 @@ inf_diffs_collapsed <- inf_diffs %>%
             paired_inf = mean(diff))
 ```
 
-lmer mixed-model here is complicated because of the complex & partially crossed nature of the variance in the data (i.e. between judgements of raters, between object sets, between utterances chosen by different speakers)  TODO: double-bootstrapping thing where you first resample 'mean' ratings for each utterance, then you resample the distribution of utterances in a condition (i.e. within object set), then you take a weighted average to get your 'informativity' 
+lmer mixed-model here is complicated because of the complex & partially crossed nature of the variance in the data (i.e. between judgements of raters, between object sets, between utterances chosen by different speakers)  
 
 ```{r}
 ## Make a df with each utterance duplicated proportionally to the times it was said
@@ -457,47 +766,17 @@ utt_data <- left_join(
   inf_diffs %>% group_by(label) %>% summarize(m = mean(diff)),
   utt_data_tmp %>% rename(label = text)
 ) %>% filter(condition == 'scripted') %>% group_by(label, objectSet, condition) %>% summarize(m = mean(m)) %>%
-  right_join(critTrials %>% filter(condition == 'scripted'), by = c('objectSet', 'condition')) %>%
-  group_by(gameid, condition, objectSet, label) %>%
+  right_join(exp2_d %>% filter(attemptNum == 0) %>% filter(critical == 1) %>% filter(condition == 'scripted'), by = c('objectSet', 'condition')) %>%
   group_by(label, objectSet, condition, gameid) %>%
   tally() %>%
   select(-n) %>%
   rename(text = label) %>%
-  bind_rows(standardized_refs %>% mutate(condition = 'unscripted', objectSet = as.numeric(objectSet)))
+  bind_rows(standardized_refs %>% mutate(condition = 'unscripted', objectSet = as.numeric(objectSet))) %>%
+  filter(!(gameid %in% exp2_badGames))
 ```
 
 ```{r}
-## In the inner loop, we want to sample a 'mean' rating for each utterance
-## using same sample of *raters* for all utterances... 
-sampleRatings = function(df, indices) {
-  grouped_df <- df %>%
-    group_by(label, objectSet) %>%
-    do(data.frame(diff = mean(.$diff[indices]),
-                  target = mean(.$target[indices]),
-                  distractor = mean(.$distractor[indices])))
-  return(grouped_df)
-}
-
-## In outer loop, we want to sample 'pairs' as a unit (with their 8 utterances)
-samplePairs = function(df) {
-  uniq_ids <- unique(df$gameid)
-  new_ids <- sample(uniq_ids, length(uniq_ids), replace = TRUE)
-  resampled_ids = data.frame(gameid = new_ids,
-                             sampleid = 1:length(new_ids), 
-                             stringsAsFactors = FALSE)
-  return(left_join(resampled_ids, df, by = c('gameid')))
-}
-
-## Finally, want to sample object sets per pair
-sampleObjects = function(df, indices) {
-  new_objects <- data.frame(objectSet = df$objectSet[indices])
-  return(left_join(new_objects, df, by = c('objectSet')))
-}
-# sampleObjects(data.frame(objectSet = c(1,2,3,4,5,6,7,8), utt = c('a', 'b', 'c', 'a', 'b', 'c', 'd', 'e')),
-#               obj_sets)
-```
-
-```{r}
+source('./final_analysis_bootstrap_helpers.R')
 ## do a multi-stage bootstrap...
 ## 1. resample a set of raters to get a mean for each utterance...
 ## 2. sample object set indices (e.g. 5,2,3,3,5,1,8,5)
@@ -506,19 +785,21 @@ boot_samples = replicate(1000, {
   raters = sample(1:16,16,replace = TRUE)
   obj_sets = sample(1:8, 8, replace = TRUE)
   resampled_ratings = sampleRatings(inf_diffs, raters)
-
   resampled_pairs = utt_data %>%
     group_by(condition) %>%
     do(samplePairs(.)) %>%
     group_by(condition, sampleid) %>%
     do(sampleObjects(., obj_sets)) %>%
     rename(label = text)
-  
   combined <- left_join(resampled_pairs, resampled_ratings, by = 'label') %>%
     gather(referent, value, target,distractor,diff) %>%
     group_by(condition, referent) %>%
     summarize(m = mean(value))
-  diff_of_diffs <- combined %>% filter(referent == 'diff') %>% spread(condition, m) %>% mutate(diff_of_diffs = unscripted - scripted)
+  diff_of_diffs <- combined %>%
+    filter(referent == 'diff') %>%
+    spread(condition, m) %>%
+    mutate(diff_of_diffs = unscripted - scripted)
+
   return(c((combined %>% filter(referent != 'diff'))$m, diff_of_diffs$diff_of_diffs))
 })
 ```
@@ -554,9 +835,10 @@ ggplot(boot_stats, aes(x = condition, y = m, fill = condition, alpha = referent)
   scale_fill_colorblind() +
   guides(fill = 'none') +
   ylab('utterance informativity ratings') +
-  theme(aspect.ratio = 1)
+  theme(aspect.ratio = 2, legend.position = 'top')
 
-ggsave('../writing/journal_manuscript/figures/informativity.pdf')
+ggsave('../../pragmatics_of_perspective_taking_tex/pnas_format/figures/informativity.pdf',
+       height = 5, width = 2.5)
 ```
 
 ### How well does informativity correlate with error?
@@ -643,6 +925,155 @@ cat('r = ', mean(boot_correlation),
     ', ', sort(boot_correlation)[length(boot_correlation) * 0.975],']')
 ```
 
+## Exploratory & checks
+
+### Error heterogeneity across items (in supplemental)
+
+```{r}
+error_diffs <- critTrials %>% 
+  group_by(objectSet, condition, targetObject) %>%
+  summarize(pctErrors = mean(error)) %>%
+  spread(condition, pctErrors) %>%
+  mutate(errorReduction = scripted - unscripted) %>%
+  gather(condition, pctErrors, scripted, unscripted) %>%
+  right_join(critTrials) %>%
+  group_by(objectSet, condition, targetObject, errorReduction) %>%
+  tidyboot_mean(column = error) 
+
+ggplot(error_diffs, aes(x = reorder(targetObject, -errorReduction), y = empirical_stat, color = condition, group = condition)) +
+    geom_point() +
+    geom_line(stat = 'identity', position = 'dodge') +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0) +
+    theme_few() +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    ggtitle('error heterogeneity across item') +
+    xlab('critical item') +
+    ylab('% error in condition')
+
+ggsave('../writing/journal_manuscript/figures/itemHeterogeneity.pdf')
+```
+
+```{r}
+errorRates = critTrials %>% 
+  mutate(error = 1 - correct) %>%
+  group_by(objectSet, condition, targetObject) %>%
+  summarize(errors = sum(error), nonerrors = length(error) - errors) %>%
+  ungroup() 
+
+scriptedErrors <- errorRates %>% 
+  filter(condition == 'scripted') %>%
+  select(errors, nonerrors)
+chisq.test(as.matrix(rbind(scriptedErrors$errors, scriptedErrors$nonerrors)), simulate.p.value = T)
+  
+unscriptedErrors <- errorRates %>% 
+  filter(condition == 'unscripted') %>%
+  select(errors, nonerrors)
+chisq.test(as.matrix(rbind(unscriptedErrors$errors, unscriptedErrors$nonerrors)), simulate.p.value = T)
+```
+
+### Is there relationship between errors on critical and errors on filler?
+
+```{r}
+fillerErrors %>%
+  select(-mistake, -no_mistake, -numErrors) %>%
+  spread(critical, errorRate) %>%
+  ggplot(aes(x = `0`, y = `1`)) +
+    geom_point() +
+    geom_smooth(method = 'lm')
+
+fillerErrors %>%
+  ungroup() %>%
+  group_by(critical, condition) %>%
+  tidyboot_mean(column = errorRate)
+```
+
+### Visualize difference in mean error rates...
+
+```{r}
+critTrials %>%
+  group_by(condition) %>%
+  tidyboot_mean(column = error) %>%
+  ggplot(aes(x = condition, y =empirical_stat, fill = condition)) +
+    geom_bar(stat = 'identity', alpha = .5) +
+    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0) +
+    ylab('% errors') +
+    scale_fill_colorblind()+
+    theme_few() +
+    theme(aspect.ratio = 1, legend.position="none") 
+```
+
+### Examine reaction times (too imprecise)
+
+```{r}
+exp2_d %>% 
+  filter(attemptNum == 0) %>%
+  filter(correct == 1) %>%
+  filter(critical == 1) %>% 
+  ungroup() %>%
+  filter(responseTime < median(responseTime, na.rm = T) +  3* sd(responseTime)) %>%
+  group_by(trialType, condition) %>%
+  mutate(m = median(responseTime)) %>%
+  ggplot(aes(x = responseTime)) +
+    geom_histogram() +
+    geom_vline(aes(xintercept = m))+
+    facet_wrap(trialType ~ condition) +
+    scale_x_log10() +
+    theme_few() 
+```
+
+```{r}
+summary(lmer(log(responseTime) ~ trialType * condition + (1 | gameid),
+     data = exp2_d %>% 
+        filter(attemptNum == 0) %>%
+        filter(correct == 1) %>%
+        filter(critical == 1) %>% 
+        ungroup() %>%
+        filter(responseTime < median(responseTime, na.rm = T) +  3* sd(responseTime))))
+```
+
+
+Note: because I stopped recording from the mouse as soon as someone starts dragging, it's technically possible for them to hover over the distractor object, click and start to drag it, but then drop it in place and go over to the target object. So they get it 'correct' even though it looks like their mouse never gets close... 
+
+Note: a couple researcher degrees of freedom here: 
+* do we take the time from 'object reveal' or from first mouse move (i.e. subtract off the first time recorded NOT in target or distractor)? 
+* do we restrict to only 'correct' trials (i.e. to make an argument like "even when they got it right, they were still distracted") or include everything?
+* how big a radius around the target center should we consider a 'mouse-fixation' (obviously needs to be close enough to move it, but objects were different sizes...)
+
+```{r}
+# Touch people?
+touch <- c('0095-03bb67a7-ae89-402d-9f7f-c5898784e63f', '0093-b4e1ce5c-2e5c-462a-bfed-87fa81611139')
+targetRadius = 175
+d.mouse <- exp2_d %>% ungroup() %>%
+  left_join(read_csv('../data/final/experiment2/updateMouse/mouseFromMongo.csv') %>%
+                  mutate(critical = ifelse(critical == 'True', 1, 0))
+  ) %>%
+  filter(!(gameid %in% touch)) %>%
+  filter(critical == 1) %>% filter(attemptNum == 0) %>% filter(correct == 1) %>%
+  select(-critical, -attemptNum, -eventType, -iterationName) %>%
+  mutate(distractorDistance = as.numeric(distractorDistance)) %>%
+  group_by(condition, trialType, gameid, objectSet, onTarget = targetDistance < targetRadius) %>%
+  summarize(firstTime = first(timeFromReveal), 
+            lastTime = last(timeFromReveal)) %>%
+  group_by(condition, trialType, gameid, objectSet) %>%
+  summarize(initMouseMove = min(firstTime), 
+            initTargetHover = max(firstTime) - initMouseMove, 
+            finalTargetHover = max(lastTime) - initMouseMove) %>%
+  select(-initMouseMove) %>%
+  gather(metric, value, initTargetHover, finalTargetHover) %>%
+  #spread(onTarget, value) %>%
+  #mutate(timeFromFirstMouseMove = `TRUE` - `FALSE`) %>%
+  #ungroup() %>%
+  #filter(firstTime < mean(firstTime, na.rm = T) + 3 * sd(firstTime, na.rm = T)) %>%
+  group_by(condition, trialType, metric) %>%
+  tidyboot_mean(column = value)
+
+d.mouse
+ggplot(d.mouse, aes(x = trialType, y = empirical_stat, fill = metric)) +
+  geom_bar(stat= 'identity', position = dodge) +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), position = dodge, width = 0) +
+  facet_wrap(~ condition) +
+  theme_few()
+```
 
 ## TO-DO
 
@@ -651,448 +1082,3 @@ cat('r = ', mean(boot_correlation),
 3. Change in informativity over time (are people already being informative on first round? are people 'learning' to be more informative over course of expt? or getting less informative because tired of task?)
 4. Order effects (i.e. are people more likely to use a modifier when they had to on the previous round?)
 5. Are people more informative when there are more objects? 
-
-
-# Experiment 2
-
-## Import turk survey data 
-
-```{r}
-exp2_subjInfo <- read_csv('../data/final/experiment2/planned_sample/turk/subjInfo.csv')
-```
-
-## Import message data
-
-```{r}
-d_annotated <- read_csv('../data/final/experiment2/planned_sample/chatMessage/messages_with_annotations.csv') 
-
-# nonNativeSpeakerIDs <- unique((tangramSubjInfo %>% filter(nativeEnglish != "yes"))$gameid)
-incompleteIDs <- unique((d_annotated %>% group_by(gameid) %>% 
-                           filter(length(unique(trialNum)) != 24))$gameid)
-confused <- unique((exp2_subjInfo %>% filter(understandsInstructions != 'yes'))$gameid)
-nonNative <- unique((exp2_subjInfo %>% filter(nativeEnglish != 'yes'))$gameid)
-
-# Some speakers relied on location in grid (TODO: WHAT ABOUT 'BELOW' PEOPLE?)
-location_abusers <- c('8219-bb7861c1-43f4-480c-906b-8441c583c0ab', 
-                      '7726-3d4a266f-e56d-4afb-9a79-b40deb690a76', 
-                      '5684-f09de856-4d64-423c-b342-b30e7325eb0e', 
-                      '7600-346d56b5-bd76-406f-befb-6b47e07d5916')
-# Some speakers played this weird taboo game where they gave riddles 
-tabooers <- c('2929-d218f724-b45e-416b-af44-5cab5658bad9', #(opposite of white... primary color...)
-              '7600-346d56b5-bd76-406f-befb-6b47e07d5916', # MERRY GO ROUND
-              '3462-7e95c955-4087-4eb9-bbc8-05338f9a5e4b') # CAN YOU SEE???
-badGames <- c(incompleteIDs, nonNative, location_abusers, confused, tabooers)
-
-d <- d_annotated %>%
-  mutate(numFeatures = colorMention + shapeMention + textureMention) %>%
-  filter(!(gameid %in% badGames)) %>%
-  mutate(occlusions = as.factor(occlusions),
-        context = as.factor(context))
-```
-
-Write out for BDA
-
-```{r}
-d %>% 
-  select(-numRawWords, -numFeatures, -text, -occlusions) %>%
-  write_csv('../modeling/bdaInput/bdaInput.csv')
-```
-
-## Descriptive stats
-
-How many recruited, how many excluded, for what reasons, etc?
-
-```{r}
-paste0('recruited ', length(exp2_subjInfo$gameid))
-paste0('total games ', length(unique(d_annotated$gameid)))
-paste0('incomplete ', length(incompleteIDs))
-paste0('confused ', length(setdiff(confused,incompleteIDs)))
-paste0('non-native english ', length(setdiff(nonNative, union(confused, incompleteIDs))))
-paste0('violated instructions ', length(setdiff(c(location_abusers, tabooers), union(nonNative, union(confused, incompleteIDs)))))
-paste0('final sample ', length(unique(d$gameid)))
-```
-
-## Quick listener analysis: how common are errors?
-
-Errors rare...
-
-```{r}
-exp2_clicks <- read_tsv('../data/final/experiment2/planned_sample/clickedObj/clickedObj.csv') %>%
-  mutate(correct = ifelse(correct == 'true', 1, 0)) %>%
-  filter(!(gameid %in% badGames))
-
-## Errors by condition
-tmp <- exp2_clicks %>%
-  group_by(context, occlusions) %>%
-  summarize(m = sum(correct), total = length(correct) - m) 
-
-chisq.test(t(tmp[,3:4]))
-
-## Error distribution by pair
-exp2_clicks %>%
-  group_by(gameid) %>%
-  summarize(numErrors = 24- sum(correct)) %>%
-  group_by(numErrors) %>%
-  tally()
-```
-
-Add missing column annotating whether critical distractor in close trials different from target in texture, color, or both...
-
-```{r}
-library(dplyr)
-bdaInput = exp2_clicks %>% 
-  mutate(names = substr(names,2,nchar(names)-1)) %>%
-  separate(names, sep = ',', into = c('item1','item2','item3', 'item4', 'item5'),
-           extra = "merge", fill = "left") %>%
-  select(-item5) %>%
-  gather(distractorNum, distractorName, item1:item4) %>%
-  separate(intendedName, into = c('targetTexture', 'targetColor', 'targetShape')) %>%
-  filter(!is.na(distractorName)) %>%
-  separate(distractorName, into = c('distractorTexture', 'distractorColor', 'distractorShape')) %>%
-  filter(distractorShape == targetShape) %>%
-  mutate(textureMatch = distractorTexture == targetTexture) %>%
-  mutate(colorMatch = distractorColor == targetColor) %>%
-  mutate(distractorType = ifelse(textureMatch, 'texture_shape', ifelse(colorMatch, 'color_shape', 'shape_only'))) %>%
-  select(gameid, trialNum, distractorType) %>%
-  right_join(exp2_clicks) %>%
-  mutate(distractorType = ifelse(is.na(distractorType), 'diff_shape', distractorType)) %>%
-  right_join(d) %>%
-  select(gameid, trialNum, distractorType, context, hidden, numDistractors, colorMention, shapeMention, textureMention)
-
-write_csv(bdaInput, '../modeling/bdaInput/bdaInput.csv')
-```
-
-Now that we have these distractor types... check if results differ across what the distractor is?
-
-```{r}
-bdaInput %>%
-  group_by(distractorType, hidden) %>%
-  tidyboot_mean(column = numFeatures) %>%
-  ggplot(aes(x = distractorType, y = mean, fill = hidden)) +
-    geom_bar(stat = 'identity', position = dodge) +
-    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0)
-```
-
-check if results depend on number of distractors?
-
-```{r}
-bdaInput %>%
-  mutate(numVisible= numDistractors - numObjsOccluded) %>%
-  group_by(numVisible, hidden) %>%
-  tidyboot_mean(column = numFeatures) %>%
-  ggplot(aes(x = numVisible, y = mean, fill = hidden)) +
-    geom_bar(stat = 'identity', position = dodge) +
-    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0)
-```
-
-## Visualize basic (no-hidden) pragmatic effect
-
-```{r}
-basic.d <- d %>%
-  filter(hidden == 'no') %>%
-  group_by(gameid, context) %>%
-  summarize(m = mean(numRawWords)) %>%
-  spread(context, m) %>%
-  mutate(diff = close- far,
-         ratio = log(close / far))
- 
-summary(lmer(numRawWords ~ context + (1 + context | gameid), d %>% filter(hidden == 'no')))
-
-ggplot(basic.d, aes(x = far, y = close)) +
-    geom_point() +
-    theme_bw() +
-    geom_abline(intercept = 0, slope = 1) +
-    ylim(1,12) +
-    xlim(1,12) +
-    theme(aspect.ratio = 1, text = element_text(size=20))
-```
-
-Aggregated to difference scores:
-
-```{r}
-tidyboot_mean(basic.d %>%ungroup(), column = diff) %>%
-  ggplot(aes(x = 'close - far', y = empirical_stat)) +
-      geom_bar(stat ='identity', width = 0.25) +
-      geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), width = 0) +
-      theme_few()+
-      geom_hline(yintercept = 0) +
-      #geom_vline(xintercept = 0) +
-      ylim(-1,1) +
-      # xlim(-4,4) +
-      ylab('# words used') +
-    theme(aspect.ratio = 1, text = element_text(size=20))
-
-t.test(basic.d$diff)
-```
-
-## Visualize message length collapsing across all subjects
-
-```{r}
-dodge <- position_dodge(width=0.9)
-cbPalette = c(rgb(0.8, .8, .8), rgb(.8, .3, .3),  rgb(0, .6, .4), rgb(.4, .4, .4))
-
-d %>%
-  group_by(context, hidden) %>%
-  tidyboot_mean(column = numRawWords) %>%
-  ggplot(aes(x = context, y = empirical_stat, fill = hidden)) +
-    geom_bar(stat = 'identity', position = dodge) +
-    geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), position = dodge, width = 0) +
-    theme_few() +
-    ylab('mean # words') +
-    theme(aspect.ratio = 1, text = element_text(size=20)) +
-    scale_fill_manual(values=cbPalette) +
-    theme(aspect.ratio = 1)
-
-ggsave('../writing/journal_manuscript/figures/num_words.pdf', width = 4, height = 3)
-```
-
-## Visualize individual differences
-
-Some people used exactly the same number of words on every trial...
-
-```{r}
-hidden.d <- d %>%
-  group_by(gameid, context, hidden) %>%
-  summarize(m = mean(numRawWords)) %>%
-  spread(hidden, m) %>%
-  mutate(diff = yes- no,
-         ratio = log(yes/no)) 
-```
-
-```{r}
-ggplot(hidden.d, aes(x = no, y = yes)) +
-    geom_point() +
-    facet_wrap(~ context) +
-    theme_bw() +
-    geom_abline(intercept = 0, slope = 1) +
-    ylim(1,15) +
-    ylab('# words (with occlusions)') +
-    xlab('# words (without occlusions)') +
-    #ggtitle('Within-pair comparisons of reference w/ and w/out occlusion') +
-    xlim(1,15) +
-    theme(aspect.ratio = 1, text = element_text(size=20)) 
-
-ggsave('../writing/journal_manuscript/figures//scatter.pdf')
-```
-
-Histogram
-
-```{r}
-hidden.d %>% 
-  #filter(!(gameid %in% all_the_things_ers)) %>% 
-  group_by(context) %>% 
-  mutate(m = mean(diff)) %>%
-  ggplot(aes(x = diff)) +
-      geom_histogram(binwidth = 0.33) +
-      theme_bw() +
-      geom_vline(xintercept = 0, linetype = 2) +
-      geom_vline(aes(xintercept = m), color = 'red') +
-      facet_wrap(~ context) +
-      # ylim(1,12) +
-      xlim(-6,6) +
-      theme(aspect.ratio = 1)
-
-ggsave("~/Downloads/histograms.pdf")
-```
-
-Look for population who mentioned all the things all the time...
-
-```{r}
-hidden.d %>% 
-  filter(context == 'far') %>% 
-  mutate(group = case_when(diff < -0 ~ 'anti',
-                           diff > 0 ~ 'pro',
-                           TRUE ~ 'all_the_things')) %>%
-  group_by(group) %>% tally()
-
-all_the_things_ers <- (hidden.d %>% filter(context =='far') %>% filter(diff == 0))$gameid
-```
-
-```{r}
-hidden.d %>%
-  group_by(context) %>%
-  summarize(m = mean(diff), se = sd(diff)/sqrt(length(diff))) %>%
-  ggplot(aes(x = context, y = m)) +
-    geom_bar(stat = 'identity', width = 0.25) +
-    geom_errorbar(aes(ymin = m - se, ymax = m + se), width = 0) +
-    theme_few() +
-    geom_hline(yintercept = 0) +
-    ylim(-3, 3) +
-    theme(aspect.ratio = 1, text = element_text(size=20))  +
-    ylab('# words (occlusions - no occlusions)')
-  
-```
-
-# Stats
-
-Simple effect of hidden-ness in 'far' contexts 
-
-```{r}
-# summary(lmer(numRawWords ~ hidden + (1 + hidden | gameid), 
-#              data = d %>% filter(context == 'far') 
-))
-#t.test(numRawWords ~ hidden, data = d %>% filter(context == 'far') , var.equal = FALSE)
-```
-
-interaction-y way
-
-```{r}
-contrasts(d$context) <- contr.treatment(2, base = 2)
-contrasts(d$occlusions) <- contr.treatment(2, base = 2)
-
-summary(lmer(numRawWords ~ context * occlusions + (1 + context * occlusions | gameid), data = d ))
-```
-
-
-## Use feature data instead
-
-```{r}
-d %>% 
-  group_by(context, occlusions) %>% 
-  summarize(color = mean(colorMention), shape = mean(shapeMention), texture = mean(textureMention))
-```
-
-Histograms of number of features mentioned in each condition
-
-```{r}
-ggplot(d, aes(x = numFeatures)) +
-  geom_histogram(binwidth = 1) +
-  facet_grid(context ~ occlusions) +
-  theme_few()
-```
-
-```{r}
-d %>% group_by(context, occlusions) %>% 
-  mutate(numTrials = length(text)) %>% 
-  group_by(context, occlusions, colorMention, textureMention) %>% 
-  summarize(n = length(text)/mean(numTrials)) %>%
-  ggplot(aes(x = colorMention, y = textureMention, fill = n)) +
-    geom_bin2d(stat = 'identity') +
-    stat_bin2d(geom = "text", aes(label = round(n, 2))) +
-    scale_fill_gradient(low = "white", high = "red") +
-    facet_grid(occlusions ~ context) +
-    theme_few()
-```
-
-Note: Random interaction doesn't converge (less variance in these numbers...)
-
-```{r}
-```
-
-```{r}
-contrasts(d$context) <- contr.treatment(2, base = 2)
-contrasts(d$occlusions) <- contr.treatment(2, base = 2)
-summary(glmer(colorMention ~ occlusions * context + (1 + occlusions | gameid), 
-              family = 'binomial', data = d))
-```
-
-```{r}
-summary(glmer(textureMention ~ occlusions * context + (1 + occlusions | gameid), 
-              family = 'binomial', data = d))
-summary(tmp2)
-fixef(tmp2)
-baseprob = fixef(tmp2)[1] 
-cat('no-occlusion:', exp(baseprob) / (1 + exp(baseprob)))
-occludedprob = fixef(tmp2)[1] + fixef(tmp2)[2]
-cat('with occlusion:', exp(occludedprob) / (1 + exp(occludedprob)))
-```
-
-```{r}
-d %>% 
-  group_by(context, hidden) %>% 
-  tidyboot_mean(column = numFeatures) %>%
-  ggplot(aes(x = context, y = mean, fill = hidden)) +
-    geom_bar(stat = 'identity', position = dodge) +
-    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0)
-```
-
-```{r}
-d.booted <- d %>% 
-  gather(feature, mentioned, shapeMention, colorMention, textureMention) %>%
-  group_by(context, hidden, feature) %>% 
-  tidyboot_mean(column = mentioned) 
-
-ggplot(d.booted, aes(x = context, y = mean, fill = hidden)) + 
-  geom_bar(stat = 'identity', position = dodge) +
-  geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0) +
-  facet_wrap(~ feature) + 
-  theme_few() +
-  theme(aspect.ratio = 1, text = element_text(size=20))  +
-  ylab('% utterances with feature') +
-  scale_fill_manual(values=cbPalette) 
-
-ggsave('../writing/journal_manuscript/figures/by-feature-analysis.pdf', 
-       height = 3, width = 9)
-```
-
-## Model-based analyses
-
-```{r}
-library(coda)
-
-estimate_mode <- function(s) {
-  d <- density(s)
-  return(d$x[which.max(d$y)])
-}
-HPDhi<- function(s){
-  m <- HPDinterval(mcmc(s))
-  return(m["var1","upper"])
-}
-HPDlo<- function(s){
-  m <- HPDinterval(mcmc(s))
-  return(m["var1","lower"])
-}
-
-rbind(read.csv('../modeling/bdaOutput/occlusionSensitivityPredictives.csv') %>% mutate(source = 'occlusion-sensitive model'),
-      read.csv('../modeling/bdaOutput/egocentricPredictives.csv') %>% mutate(source = 'egocentric model')) %>%
-  mutate(i = row_number()) %>%
-  gather(condition, value, close_hidden:far_visible) %>%
-  group_by(condition, source) %>%
-  summarize(mean = estimate_mode(value),
-            ci_lower = round(HPDlo(value), 3),
-            ci_upper = round(HPDhi(value), 3)) %>%
-  separate(condition, into = c('context', 'hidden')) %>%
-  mutate(hidden = ifelse(hidden == 'hidden', 'yes', 'no')) %>%
-  rbind(d %>% 
-          group_by(context, hidden) %>% 
-          tidyboot_mean(column = numFeatures) %>%
-          ungroup() %>%
-          mutate(context = as.character(context)) %>%
-          mutate(source = as.character('empirical data')) %>% 
-          select(-empirical_stat, -n)) %>%
-  ggplot(aes(x = context, fill = hidden, y = mean)) +
-    geom_bar(stat = 'identity', position = dodge) +
-    geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0) +
-    facet_wrap(~ source) +
-    theme_few() +
-    ylab('mean # features produced') +
-    theme(aspect.ratio = 1)
-```
-
-Examine param posteriors for occlusion-sensitive model
-
-```{r}
-read.csv('../modeling/bdaOutput/occlusionSensitivityParams.csv') %>%
-  gather(parameter, value, alpha:shapeCost) %>%
-  group_by(parameter) %>%
-  summarize(mode = estimate_mode(value),
-            md_lo = round(HPDlo(value), 3),
-            md_hi = round(HPDhi(value), 3))
-```
-
-log-likelihood plot
-
-```{r}
-library(tidyverse)
-library(ggthemes)
-rbind(read.csv('../modeling/bdaOutput/occlusionSensitivityParams.csv'),
-      read.csv('../modeling/bdaOutput/egocentricParams.csv')) %>%
-  group_by(source) %>%
-  summarize(maxLikelihood = max(logLikelihood)) %>%
-  ggplot(aes(x = source, y = maxLikelihood)) +
-    geom_bar(stat = 'identity') +
-    theme_few() +
-    theme(aspect.ratio = 1)
-
-ggsave("../../pragmatics_of_perspective_taking_tex/journal_manuscript/figures/likelihoodPlot.pdf")
-```
