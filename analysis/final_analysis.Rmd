@@ -292,8 +292,8 @@ ggplot(to.plot, aes(x = occ_mean, y = emp_mean)) +
   xlab('predicted # features')+
   ylab('empirical # features') 
 
-ggsave('../../pragmatics_of_perspective_taking_tex/pnas_format/figures/predictiveScatter.pdf',
-       height = 5, width = 9)
+ggsave('../../pragmatics_of_perspective_taking_tex/cognition_format/figures/predictiveScatter.pdf',
+       useDingbats=FALSE )
 ```
 
 ```{r}
@@ -306,8 +306,9 @@ ggplot(to.plot, aes(x = ego_mean, y = emp_mean)) +
   theme(aspect.ratio = 1, text = element_text(size=20)) +
   xlab('predicted # features')+
   ylab('empirical # features') 
-ggsave('../../pragmatics_of_perspective_taking_tex/pnas_format/figures/egocentricScatter.pdf',
-       height = 5, width = 9)
+ggsave('../../pragmatics_of_perspective_taking_tex/cognition_format/figures/egocentricScatter.pdf',
+       useDingbats=FALSE)
+       #height = 5, width = 9)
 ```
 
 Get MAP estimates and CIs from param posteriors for occlusion-sensitive model
