@@ -22,8 +22,6 @@ var possibleObjects = Categorical({
        27/64]
 });
 
-//var possibleObjects = Categorical({vs: ['texture_otherColor_shape', 'otherTexture_otherColor_otherShape'], ps: [1/10, 9/10]})
-
 var contexts = {
   'diff_shape' : ['texture_color_shape', 'otherTexture_otherColor_otherShape',
 		  //'otherTexture_otherColor_otherShape'],
@@ -94,7 +92,7 @@ var S = cache(function(target, knownContext, params) {
     factor(params.alpha * utility);
     return utt;
   });
-});
+}, 1000);
 
 var getResponse = cache(function(trialInfo) {
   var responses = map(function(attribute) {
@@ -103,12 +101,13 @@ var getResponse = cache(function(trialInfo) {
   return filter(function(v) {return v != '';}, responses).join('_');
 });
 
-var getExpectedLength = function(condition, params) {
+var getExpectedLength = function(condition, additionalDistractors, params) {
   return expectation(Infer({method: 'enumerate'}, function() {
-    var additionalDistractor = (flip() ?
-				'texture_otherColor_otherShape' :
-				'otherTexture_color_otherShape');
-    var knownContext = contexts[condition.distractorType].concat(additionalDistractor);
+    
+    var additionalDistractors = repeat(additionalDistractors, function() {
+      return flip() ? 'texture_otherColor_otherShape' : 'otherTexture_color_otherShape';
+    })
+    var knownContext = contexts[condition.distractorType].concat(additionalDistractors);
     var dist = S('texture_color_shape', knownContext, extend({}, params, {hidden: condition.hidden}));
     return sample(dist).split('_').length;
   }));
@@ -116,35 +115,56 @@ var getExpectedLength = function(condition, params) {
 
 var bda = function() {
   var params = {
-    model: argv.model,//uniformDraw(['occlusionSensitivity', 'basic']),//modelPref: uniformDrift({a: 0, b: 1, width: 0.1}),
+    model: argv.model,
     alpha : uniformDrift({a: 0, b: 50, width: 5}),
     textureCost: uniformDrift({a: 0, b: 10, width: .1}),
     colorCost: uniformDrift({a: 0, b: 10, width: .1}),
     shapeCost: uniformDrift({a: 0, b: 10, width: .1})
   };
-  //var model = flip(params.modelPref) ? 'occlusionSensitivity' : 'basic';
-  var score = sum(mapData({data: data}, function(datum) {
+
+  globalStore.score = 0;
+  mapData({data: data}, function(datum) {
     var knownContext = contexts[datum.distractorType];
-    var modelPrediction = S('texture_color_shape',
-			    knownContext,
-			    _.extend({}, params, {hidden: datum.hidden}));
+    var modelPrediction = S('texture_color_shape', knownContext,
+  			    _.extend({}, params, {hidden: datum.hidden}));
     var response = getResponse(datum);
-    return modelPrediction.score(response);
-  }));
-  factor(score);
+    var score = modelPrediction.score(response);
+    factor(score)
+    globalStore.score += score;
+  });
   
   return {
-    params: _.zipObject([_.values(params).join(',')], [score]),
+    params: _.zipObject([_.values(params).join(',')], [globalStore.score]),
     predictives: _.zipObject([[
-      getExpectedLength({'distractorType': 'texture_shape', 'hidden' : 'yes'}, params),
-      getExpectedLength({'distractorType': 'diff_shape', 'hidden' : 'yes'}, params),
-      getExpectedLength({'distractorType': 'texture_shape', 'hidden' : 'no'}, params),
-      getExpectedLength({'distractorType': 'diff_shape', 'hidden' : 'no'}, params)
-    ].join(',')], [score])
+      getExpectedLength({'distractorType': 'texture_shape', 'hidden' : 'yes'}, 0, params),
+      getExpectedLength({'distractorType': 'texture_shape', 'hidden' : 'yes'}, 1, params),
+      getExpectedLength({'distractorType': 'texture_shape', 'hidden' : 'yes'}, 2, params), 
+      getExpectedLength({'distractorType': 'color_shape', 'hidden' : 'yes'}, 0, params),
+      getExpectedLength({'distractorType': 'color_shape', 'hidden' : 'yes'}, 1, params),
+      getExpectedLength({'distractorType': 'color_shape', 'hidden' : 'yes'}, 2, params),
+      getExpectedLength({'distractorType': 'shape_only', 'hidden' : 'yes'}, 0, params),
+      getExpectedLength({'distractorType': 'shape_only', 'hidden' : 'yes'}, 1, params),
+      getExpectedLength({'distractorType': 'shape_only', 'hidden' : 'yes'}, 2, params),
+      getExpectedLength({'distractorType': 'diff_shape', 'hidden' : 'yes'}, 0, params),
+      getExpectedLength({'distractorType': 'diff_shape', 'hidden' : 'yes'}, 1, params),
+      getExpectedLength({'distractorType': 'diff_shape', 'hidden' : 'yes'}, 2, params),      
+      getExpectedLength({'distractorType': 'texture_shape', 'hidden' : 'no'}, 0, params),
+      getExpectedLength({'distractorType': 'texture_shape', 'hidden' : 'no'}, 1, params),
+      getExpectedLength({'distractorType': 'texture_shape', 'hidden' : 'no'}, 2, params),
+      getExpectedLength({'distractorType': 'color_shape', 'hidden' : 'no'}, 0, params),
+      getExpectedLength({'distractorType': 'color_shape', 'hidden' : 'no'}, 1, params),
+      getExpectedLength({'distractorType': 'color_shape', 'hidden' : 'no'}, 2, params),
+      getExpectedLength({'distractorType': 'shape_only', 'hidden' : 'no'}, 0, params),
+      getExpectedLength({'distractorType': 'shape_only', 'hidden' : 'no'}, 1, params),
+      getExpectedLength({'distractorType': 'shape_only', 'hidden' : 'no'}, 2, params),
+      getExpectedLength({'distractorType': 'diff_shape', 'hidden' : 'no'}, 0, params),
+      getExpectedLength({'distractorType': 'diff_shape', 'hidden' : 'no'}, 1, params),
+      getExpectedLength({'distractorType': 'diff_shape', 'hidden' : 'no'}, 2, params)      
+    ].join(',')], [globalStore.score])
   };
 };
 
-var outputERP = Infer({method: 'MCMC', samples: 5000, burn: 5000, lag: 2, model: bda, verbose: true});
+var outputERP = Infer({method: 'MCMC', samples: 5000, burn: 10000, lag: 1, model: bda, verbose: true});
 
 refModule.bayesianErpWriter(outputERP, "./bdaOutput/" + argv.model);
 
