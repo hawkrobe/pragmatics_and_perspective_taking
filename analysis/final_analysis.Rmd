@@ -210,17 +210,22 @@ exp1_clicks %>%
 ## Model-based analyses
 
 Look at pattern of predictives for each model, compared to empirical number of features mentioned
-
 ```{r}
-rbind(read.csv('../modeling/bdaOutput/occlusionSensitivityPredictives.csv') %>% mutate(source = 'occlusion-sensitive model'),
-      read.csv('../modeling/bdaOutput/egocentricPredictives.csv') %>% mutate(source = 'occlusion-blind model')) %>%
+dodge <- position_dodge(width=0.9)
+
+rbind(
+    read.csv('../modeling/bdaOutput/occlusionSensitivityPredictives.csv') %>% mutate(source = 'occlusion-sensitive model'),
+    read.csv('../modeling/bdaOutput/egocentricPredictives.csv') %>% mutate(source = 'occlusion-blind model')
+    ) %>%
   mutate(i = row_number()) %>%
-  gather(condition, value, close_hidden:far_visible) %>%
-  group_by(condition, source) %>%
+  gather(condition, value, -prob, -MCMCprob, -source, -i) %>%
+  separate(condition, sep = '_', into = c('context', 'numDistractors', 'distractorType', 'hidden')) %>%
+  group_by(context, hidden, source) %>%
   summarize(mean = estimate_mode(value),
             ci_lower = round(HPDlo(value), 3),
             ci_upper = round(HPDhi(value), 3)) %>%
-  separate(condition, into = c('context', 'hidden')) %>%
+  #separate(condition, into = c('context', 'hidden')) %>%
+  ungroup() %>%
   mutate(hidden = ifelse(hidden == 'hidden', 'yes', 'no')) %>%
   rbind(d %>% 
           group_by(context, hidden) %>% 
@@ -240,6 +245,68 @@ rbind(read.csv('../modeling/bdaOutput/occlusionSensitivityPredictives.csv') %>% 
     ylab('mean # features produced') 
 
 ggsave('../../pragmatics_of_perspective_taking_tex/pnas_format/figures/predictives.pdf',
+       height = 5, width = 9)
+```
+
+```{r}
+to.plot <- rbind(read.csv('../modeling/bdaOutput/occlusionSensitivityPredictives.csv') %>% mutate(source = 'occlusion-sensitive model'),
+     read.csv('../modeling/bdaOutput/egocentricPredictives.csv') %>% mutate(source = 'occlusion-blind model')
+     ) %>%
+  mutate(i = row_number()) %>%
+  gather(condition, value, -prob, -MCMCprob, -source, -i) %>%
+  group_by(condition, source) %>%
+  summarize(mean = estimate_mode(value),
+            ci_lower = round(HPDlo(value), 3),
+            ci_upper = round(HPDhi(value), 3)) %>%
+  separate(condition, sep = '_', into = c('context', 'numDistractors', 'distractorType', 'hidden')) %>%
+  mutate(hidden = ifelse(hidden == 'hidden', 'yes', 'no')) %>%
+  rbind(read_csv('../modeling/bdaInput/bdaInput.csv') %>% 
+          mutate(numFeatures = color + shape + texture) %>%
+          group_by(context, distractorType, numDistractors, hidden) %>% 
+          tidyboot_mean(column = numFeatures) %>%
+          ungroup() %>%
+          mutate(numDistractors = numDistractors - 2) %>%
+          mutate(context = as.character(context)) %>%
+          mutate(distractorType = gsub("_", "", distractorType)) %>%
+          mutate(source = as.character('empirical data')) %>% 
+          ungroup() %>%
+          select(-empirical_stat, -n)) %>%
+  mutate(source = factor(source, levels = c('empirical data', 'occlusion-sensitive model', 
+                                            'occlusion-blind model'))) %>%
+  unite(col = asdf, mean, ci_lower, ci_upper) %>%
+  spread(source, asdf) %>%
+  separate(`empirical data`, sep = '_', into = c('emp_mean', 'emp_lower', 'emp_upper'))%>%
+  separate(`occlusion-sensitive model`, sep = '_', into = c('occ_mean', 'occ_lower', 'occ_upper')) %>%
+  separate(`occlusion-blind model`, sep = '_', into = c('ego_mean', 'ego_lower', 'ego_upper')) %>%
+  mutate(emp_mean = as.numeric(emp_mean), emp_lower = as.numeric(emp_lower), emp_upper = as.numeric(emp_upper),
+         occ_mean = as.numeric(occ_mean), occ_lower = as.numeric(occ_lower), occ_upper = as.numeric(occ_upper),
+         ego_mean = as.numeric(ego_mean), ego_lower = as.numeric(ego_lower), ego_upper = as.numeric(ego_upper)) 
+
+ggplot(to.plot, aes(x = occ_mean, y = emp_mean)) +
+  geom_point() +#(stat = 'identity', position = dodge) +
+  geom_errorbar(aes(ymin = emp_lower, ymax = emp_upper), width = 0) +
+  #geom_errorbarh(aes(xmin = occ_lower, xmax = occ_upper), width = 0) +
+  geom_smooth(method = 'lm') +
+  theme_few() +
+  theme(aspect.ratio = 1, text = element_text(size=20)) +
+  xlab('predicted # features')+
+  ylab('empirical # features') 
+
+ggsave('../../pragmatics_of_perspective_taking_tex/pnas_format/figures/predictiveScatter.pdf',
+       height = 5, width = 9)
+```
+
+```{r}
+ggplot(to.plot, aes(x = ego_mean, y = emp_mean)) +
+  geom_point() +#(stat = 'identity', position = dodge) +
+  geom_errorbar(aes(ymin = emp_lower, ymax = emp_upper), width = 0) +
+  #geom_errorbarh(aes(xmin = ego_lower, xmax = ego_upper), width = 0) +
+  geom_smooth(method = 'lm') +
+  theme_few() +
+  theme(aspect.ratio = 1, text = element_text(size=20)) +
+  xlab('predicted # features')+
+  ylab('empirical # features') 
+ggsave('../../pragmatics_of_perspective_taking_tex/pnas_format/figures/egocentricScatter.pdf',
        height = 5, width = 9)
 ```
 
