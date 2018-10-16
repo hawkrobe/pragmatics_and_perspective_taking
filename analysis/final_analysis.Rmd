@@ -242,6 +242,7 @@ rbind(
     geom_errorbar(aes(ymax = ci_upper, ymin = ci_lower), position = dodge, width = 0) +
     facet_wrap(~ source) +
     theme_few() +
+    ylim(0,3) +
     theme(aspect.ratio = .57, text = element_text(size=20)) +
     ylab('mean # features produced') 
 
