@@ -13,7 +13,7 @@ library(lme4)
 library(lmerTest)
 library(tidyboot)
 library(coda)
-library(irr)
+#library(irr)
 
 estimate_mode <- function(s) {
   d <- density(s)
@@ -536,11 +536,10 @@ exp2_messages <- read_csv('../data/final/experiment2/chatMessage/messagesFromMon
 ## Have to correct for post-hoc attemptNum and instructionNum bugs (got reset for next trial prematurely)
 ## Also, remove trials where multi-drop bug happened (i.e. where clicking multiple times triggered multiple instruction resetting)
 exp2_drops <- read_csv('../data/final/experiment2/drop/dropsFromMongo.csv') %>%
-  mutate(critical = ifelse(critical == 'True', 1, 0),
-         correct = ifelse(correct == 'correct', 1, 0),
-         instructionNum = ifelse(correct == 0, instructionNum + 1, instructionNum)) %>%
+  mutate(correct = correct == 'correct',
+         instructionNum = ifelse(correct == FALSE, instructionNum + 1, instructionNum)) %>%
   group_by(gameid, targetObject) %>%
-  filter(length(unique(instructionNum)) < 2) %>%
+  filter(length(unique(instructionNum)) == 1) %>% 
   group_by(gameid, instructionNum, trialNum) %>%
   mutate(attemptNum = ifelse(attemptNum == 0, max(attemptNum), attemptNum - 1)) %>%
   rename(dropTime = serverTime) %>%
@@ -553,17 +552,16 @@ First, get error rates on filler items...
 
 ```{r}
 fillerErrors <- exp2_drops %>%
-  #filter(critical != 1) %>%   # only look at mistakes on noncritical (filler) items
+  filter(critical == FALSE) %>%   # only look at mistakes on noncritical (filler) items
   filter(attemptNum == 0) %>%   # don't want to double-count people for messing the same thing up multiple times
   group_by(gameid, correct, critical, condition) %>%
   tally() %>%
   ungroup() %>%
-  mutate(correct = ifelse(correct == 1, 'no_mistake', 'mistake')) %>%
+  mutate(correct = ifelse(correct, 'no_mistake', 'mistake')) %>%
   spread(correct, n, fill = 0) %>%
   mutate(numErrors = mistake, errorRate = mistake/ (no_mistake + mistake) ) 
 
 nonCriticalMistakes = (fillerErrors %>%
-  filter(critical == 0) %>%
   filter(numErrors >= 2))$gameid
 ```
 
@@ -573,7 +571,7 @@ And make exclusions based on subj info exit survey
 exp2_subjInfo <- read_csv('../data/final/experiment2/turk/subjInfo.csv')
 incompleteIDs <- unique((exp2_messages %>% 
                            group_by(gameid, trialNum, instructionNum) %>% 
-                           summarize(id = row_number()) %>% 
+                           summarize(nn = n()) %>% 
                            group_by(gameid) %>% 
                            tally() %>% 
                            filter(n != 32))$gameid)
@@ -582,9 +580,8 @@ confused <- unique((exp2_subjInfo %>% filter(understandsInstructions != 'yes'))$
 nonNative <- unique((exp2_subjInfo %>% filter(nativeEnglish != 'yes'))$gameid)
 
 buggyTrials <- read_csv('../data/final/experiment2/drop/dropsFromMongo.csv') %>%
-  mutate(critical = ifelse(critical == 'True', 1, 0),
-       correct = ifelse(correct == 'correct', 1, 0),
-       instructionNum = ifelse(correct == 0, instructionNum + 1, instructionNum)) %>%
+  mutate(correct = correct == 'correct',
+       instructionNum = ifelse(correct == FALSE, instructionNum + 1, instructionNum)) %>%
   group_by(gameid, targetObject) %>%
   mutate(numInstructions = length(unique(instructionNum))) %>%
   filter(numInstructions > 1)
