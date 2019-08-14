@@ -684,6 +684,30 @@ summary(glmer(correct ~ condition + (1|gameid) + (1+condition | objectSet), fami
               data = critTrials))
 ```
 
+Examine how listeners might be adapting
+
+```{r}
+critTrials %>% 
+  #filter(condition == 'scripted') %>%
+  group_by(gameid) %>% 
+  mutate(trialNum = row_number(),
+         lastRoundIncorrect = 1-lag(correct)) %>% 
+  group_by(trialNum) %>% 
+  summarize(prop = sum(correct)/length(correct)) %>%
+  mutate(error = ifelse(correct == 0, 'error', 'no error')) %>%
+  ggplot(aes(x= trialNum, y = n, color = lastRoundIncorrect)) +
+    geom_line()
+```
+
+```{r}
+library(brms)
+summary(brm(correct ~ trialNum + (1 + trialNum| gameid), family = 'bernoulli', 
+              data = critTrials %>%   
+                    group_by(gameid) %>%
+                    mutate(trialNum = row_number(),
+                           lastRoundIncorrect = 1-lag(correct)), control = list(adapt_delta = .95)))
+```
+
 ### Mouse-tracking 
 
 Even on critical trials where they didn't make errors, how often did they 'consider' the distractor (i.e. hover over the distractor cell)
