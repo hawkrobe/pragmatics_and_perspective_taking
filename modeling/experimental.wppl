@@ -1,0 +1,100 @@
+///fold:
+var possibleUtterances = [
+  'shape', 'color', 'texture', 'texture_color', 'color_shape', 'texture_shape', 'texture_color_shape'
+];
+
+// hand-coded to match stimulus set used in experiment
+var possibleObjects = Categorical({
+  vs: ['texture_color_shape', 'otherTexture_color_shape', 'texture_otherColor_shape',
+       'otherTexture_otherColor_shape', 'texture_color_otherShape', 'texture_otherColor_otherShape',
+       'otherTexture_color_otherShape', 'otherTexture_otherColor_otherShape'],
+  ps: [1/64, 3/64, 3/64, 9/64, 3/64, 9/64, 9/64, 27/64]
+});
+
+var params = {
+  alpha: 1,
+  textureCost : 1,
+  shapeCost : 1,
+  colorCost : 1,
+  perspectiveCost : 1
+}
+
+var contexts = {
+  'diff_shape' : ['texture_color_shape', 'otherTexture_otherColor_otherShape'],
+  'shape_only' : ['texture_color_shape', 'otherTexture_otherColor_shape'],
+  'color_shape' : ['texture_color_shape', 'otherTexture_color_shape'],
+  'texture_shape' : ['texture_color_shape', 'texture_otherColor_shape']
+};
+
+var uttFitness = function(utt, object) {
+  var descriptors = utt.split('_');
+  var objProperties = object.split('_').slice(0,3);
+  var matches = _.every(map(function(descriptor) {
+    return _.includes(objProperties, descriptor);
+  }, descriptors));
+  return matches ? 0 : -100;
+};
+
+var uttCost = function(utt) {
+  var descriptors = utt.split('_');
+  return sum(map(function(descriptor) {
+    return descriptor == 'null' ? 0 : params[descriptor + 'Cost'];
+  }, descriptors));
+};
+//
+
+var getListenerUtility = function(perspective, partnerLevel, utt, target, context) {
+  var partnerContext = perspective == 'own' ? context : remove(find(function(x) {return last(x) == '2'}, context), context);
+  return marginalize(S(partnerLevel, target, partnerContext), function(x) {return x.utt}).score(utt)
+}
+
+var L = function(level, utt, context) {
+  return Infer({method: 'enumerate'}, function() {
+    var object = uniformDraw(context);
+    var weighting = level == 0 ? 0 : 0.5; 
+    
+    // Marginalized
+    var partnerLevel = uniformDraw(_.range(0, level + 1));
+    var perspective = flip(weighting) ? 'own' : 'other';
+    
+    var utility = (level == 0 ? uttFitness(utt, object) : 
+                   getListenerUtility(perspective, partnerLevel, utt, object, context));
+    factor(utility);
+    return object;
+  });
+};
+
+var getSpeakerUtility = function(perspective, partnerLevel, utt, target, context) {
+  if(perspective == 'own') {
+    return params.alpha * L(partnerLevel, utt, context).score(target) - uttCost(utt,params) 
+  } else {
+    var informativity = expectation(possibleObjects, function(obj) {
+      var possibleListenerView = context.concat(obj + '_2');
+      return L(partnerLevel, utt, possibleListenerView).score(target)
+    })
+    return (params.alpha * informativity 
+            - uttCost(utt,params) 
+            - params.perspectiveCost);
+  }
+}
+
+var S = function(level, target, context) {
+  return Infer({method: 'enumerate'}, function() {
+    // Agent choosing these
+    var utt = uniformDraw(possibleUtterances);
+    var egocentricWeighting = level == 0 ? 1 : .5; 
+    
+    // Marginalizing over these
+    var partnerLevel = uniformDraw(_.range(0, level + 1));
+    var perspective = flip(egocentricWeighting) ? 'own' : 'other';
+    
+    // Weight proportional to utility
+    var utility = getSpeakerUtility(perspective, partnerLevel, utt, target, context);
+    factor(utility);
+    return {utt, egocentricWeighting};
+  });
+};
+
+//viz(L(1, 'shape', contexts['diff_shape']))
+viz.marginals(S(1, 'texture_color_shape', contexts['diff_shape']))
+//viz(S(0, 'texture_color_shape', contexts['diff_shape']))
