@@ -12,11 +12,11 @@ var possibleObjects = Categorical({
 });
 
 var params = {
-  alpha: 1,
-  textureCost : 1,
-  shapeCost : 1,
-  colorCost : 1,
-  perspectiveCost : 1
+  alpha: 10,
+  textureCost : .1,
+  shapeCost : 0.1,
+  colorCost : 0.1,
+  perspectiveCost : 0
 }
 
 var contexts = {
@@ -43,34 +43,37 @@ var uttCost = function(utt) {
 };
 //
 
-var getListenerUtility = function(perspective, partnerLevel, utt, target, context) {
-  var partnerContext = perspective == 'own' ? context : remove(find(function(x) {return last(x) == '2'}, context), context);
-  return marginalize(S(partnerLevel, target, partnerContext), function(x) {return x.utt}).score(utt)
+var getListenerUtility = function(partnerLevel, utt, target, context) {
+  return marginalize(S(partnerLevel, target, context), function(x) {return x.utt}).score(utt)
 }
 
-var L = function(level, utt, context) {
+var L = function(level, weighting, utt, context) {
   return Infer({method: 'enumerate'}, function() {
-    var object = uniformDraw(context);
-    var weighting = level == 0 ? 0 : 0.5; 
     
     // Marginalized
-    var partnerLevel = uniformDraw(_.range(0, level + 1));
     var perspective = flip(weighting) ? 'own' : 'other';
-    
-    var utility = (level == 0 ? uttFitness(utt, object) : 
-                   getListenerUtility(perspective, partnerLevel, utt, object, context));
+    var partnerContext = perspective == 'own' ? context : remove(find(function(x) {return last(x) == '2'}, context), context);
+    var object = uniformDraw(partnerContext);
+    var utility = (
+      level == 0 ? uttFitness(utt, object) : 
+      marginalize(S(0, object, context), function(x) {return x.utt}).score(utt)
+    );
     factor(utility);
     return object;
   });
 };
 
-var getSpeakerUtility = function(perspective, partnerLevel, utt, target, context) {
+
+var getSpeakerUtility = function(perspective, partnerLevel, partnerWeighting, 
+                                  utt, target, context) {
   if(perspective == 'own') {
-    return params.alpha * L(partnerLevel, utt, context).score(target) - uttCost(utt,params) 
+//     print(utt)
+//     viz.table(L(partnerLevel, partnerWeighting, utt, context))
+    return params.alpha * L(partnerLevel, partnerWeighting, utt, context).score(target) - uttCost(utt,params) 
   } else {
     var informativity = expectation(possibleObjects, function(obj) {
       var possibleListenerView = context.concat(obj + '_2');
-      return L(partnerLevel, utt, possibleListenerView).score(target)
+      return L(partnerLevel, partnerWeighting, utt, possibleListenerView).score(target)
     })
     return (params.alpha * informativity 
             - uttCost(utt,params) 
@@ -82,19 +85,33 @@ var S = function(level, target, context) {
   return Infer({method: 'enumerate'}, function() {
     // Agent choosing these
     var utt = uniformDraw(possibleUtterances);
-    var egocentricWeighting = level == 0 ? 1 : .5; 
+    var egocentricWeighting = level == 0 ? 1 : uniformDraw([0.1, 0.9]); 
     
     // Marginalizing over these
-    var partnerLevel = uniformDraw(_.range(0, level + 1));
+    var partnerLevel = 0;//uniformDraw(_.range(0, level + 1));
+    var partnerWeighting = uniformDraw([1]);        
     var perspective = flip(egocentricWeighting) ? 'own' : 'other';
     
     // Weight proportional to utility
-    var utility = getSpeakerUtility(perspective, partnerLevel, utt, target, context);
+    var utility = getSpeakerUtility(perspective, partnerLevel, partnerWeighting,
+                                    utt, target, context);
+    if(level == 1) {
+      print(utt + ',' + partnerWeighting + ',')
+      print(utility)      
+    }
     factor(utility);
     return {utt, egocentricWeighting};
   });
 };
-
-//viz(L(1, 'shape', contexts['diff_shape']))
-viz.marginals(S(1, 'texture_color_shape', contexts['diff_shape']))
+var context = contexts['diff_shape']
+// var informativity = expectation(possibleObjects, function(obj) {
+//   var possibleListenerView = context.concat(obj + '_2');
+//   print(possibleListenerView)
+//   viz.table(L(0, 1, 'texture', possibleListenerView))
+//   return L(0, 1, 'texture', possibleListenerView).score('texture_color_shape')
+// })
+// print(informativity)
+//viz(L(0, .25, 'texture_color_shape', context.concat(['texture_color_shape_2'])))
+//viz.marginals(S(0, 'texture_color_shape', contexts['diff_shape']))
+viz.table(S(1, 'texture_color_shape', contexts['diff_shape']))
 //viz(S(0, 'texture_color_shape', contexts['diff_shape']))
