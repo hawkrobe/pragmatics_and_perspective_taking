@@ -1,24 +1,36 @@
-///fold:
-var possibleUtterances = [
-  'shape', 'color', 'texture', 'texture_color', 'color_shape', 'texture_shape', 'texture_color_shape'
-];
+// webppl experimental.wppl
 
-// hand-coded to match stimulus set used in experiment
+// the stimulus set in this world varies along 3 dimensions. because
+// the precise levels (e.g. 'blue', 'red') don't matter, we always
+// take the target to be 'texture_color_shape' (i.e. some set of
+// levels) and allow distractors to differ along any of these levels
+// (e.g. 'otherTexture_otherColor_shape' has the same shape as the
+// target, but different texture and color). the (optional)
+// probabilities the true probabilities of hidden distractors in the
+// experiment, if objects are sampled uniformly from the 4 x 4 x 4
+// space.
 var possibleObjects = Categorical({
-  vs: ['texture_color_shape', 'otherTexture_color_shape', 'texture_otherColor_shape',
-       'otherTexture_otherColor_shape', 'texture_color_otherShape', 'texture_otherColor_otherShape',
-       'otherTexture_color_otherShape', 'otherTexture_otherColor_otherShape']
+  vs: ['texture_color_shape', 'otherTexture_otherColor_otherShape',
+       'otherTexture_color_shape', 'texture_otherColor_shape', 'texture_color_otherShape',
+       'otherTexture_otherColor_shape', 'texture_otherColor_otherShape', 'otherTexture_color_otherShape',
+      ]
 //  ps: [1/64, 3/64, 3/64, 9/64, 3/64, 9/64, 9/64, 27/64]
 });
 
-var params = {
-  alpha: 10,
-  textureCost : 0.01,
-  shapeCost : 0.01,
-  colorCost : 0.01,
-  perspectiveCost : 1
-}
+// speaker can mention any combination of the 3 feature dimensions
+var possibleUtterances = Categorical({
+  vs: ['shape', 'color', 'texture',
+       'texture_color', 'color_shape', 'texture_shape',
+       'texture_color_shape']
+});
 
+// these are the possible mixture weights for perspective-taking
+// where 0 is purely egocentric and 1 is purely partner's perspective
+var possibleWeightings = Categorical({
+  vs: _.range(0, 1.1, 0.1)
+});
+
+// these are the possible conditions of visible objects presented to the speaker
 var contexts = {
   'diff_shape' : ['texture_color_shape', 'otherTexture_otherColor_otherShape'],
   'shape_only' : ['texture_color_shape', 'otherTexture_otherColor_shape'],
@@ -26,64 +38,64 @@ var contexts = {
   'texture_shape' : ['texture_color_shape', 'texture_otherColor_shape']
 };
 
-var uttFitness = function(utt, object) {
+// alpha: soft-max temperature
+// <feature>Cost: cost associated with producing this feature
+// perspectiveCost: cost associated with perspective-taking
+var params = {
+  alpha: 10,
+  textureCost : 0.01,
+  shapeCost : 0.01,
+  colorCost : 0.01,
+  perspectiveCost : 0.1
+};
+
+// utterance is true if object has all of the mentioned features
+var meaning = function(utt, object) {
   var descriptors = utt.split('_');
   var objProperties = object.split('_').slice(0,3);
   var matches = _.every(map(function(descriptor) {
     return _.includes(objProperties, descriptor);
   }, descriptors));
-  return matches
+  return matches;
 };
 
+// cost of producing utterance is sum of costs of the component words
 var uttCost = function(utt) {
   var descriptors = utt.split('_');
   return sum(map(function(descriptor) {
     return descriptor == 'null' ? 0 : params[descriptor + 'Cost'];
   }, descriptors));
 };
-//
 
-var getSpeakerView = function(context) {
-  var hiddenObj = find(function(x) {return last(x) == '2';}, context);
-  return remove(hiddenObj, context);
+// derives the speaker's perspective from the listener's visible context
+var getSpeakerView = function(listenerContext) {
+  var hiddenObj = find(function(x) {return last(x) == 'private';}, listenerContext);
+  return remove(hiddenObj, listenerContext);
 };
 
-// Interpret utterance literally using fixed mixture of perspectives
+// L0 interprets utterance literally using fixed mixture of perspectives
 var L0 = function(utt, context, weighting) {
   return Infer({method: 'enumerate'}, function() {
     var perspective = flip(weighting) ? 'other' : 'own';
     var partnerContext = perspective == 'own' ? context : getSpeakerView(context);
     var object = uniformDraw(partnerContext);
-    condition(uttFitness(utt, object));
+    condition(meaning(utt, object));
     return object;
   });
 };
 
-// Interpret utterance pragmatically using fixed mixture of perspectives.
-// Reasons about speaker's weighting.
-// var L1 = function(utt, context, weighting) {
-//   return Infer({method: 'enumerate'}, function() {
-//     var perspective = flip(weighting) ? 'own' : 'other';
-//     var partnerContext = perspective == 'own' ? context : getSpeakerView(context);
-//     var object = uniformDraw(partnerContext);
-//     observe(marginalize(S1(object, context), function(x) {return x.utt}), utt);
-//     return object;
-//   });
-// };
-
+// S1 selects utterance using fixed mixture of perspectives
+// (given belief about L0's mixture)
 var S1 = function(target, context, ownWeighting, partnerWeighting) {
   return Infer({method: 'enumerate'}, function() {
-    // Agent choosing these
     var utt = uniformDraw(possibleUtterances);
-        
-    // Marginalizing over these
-    var perspective = flip(ownWeighting) ? 'other' : 'own';
     
     // Weight proportional to utility
+    var perspective = flip(ownWeighting) ? 'other' : 'own';
     var informativity = (
       perspective == 'own' ? L0(utt, context, partnerWeighting).score(target) :
         expectation(possibleObjects, function(obj) {
-          var possibleListenerView = context.concat(obj + '_2');
+          var possibleListenerView = context.concat(obj + '_private');
           return (L0(utt, possibleListenerView, partnerWeighting).score(target));
         })
     );
@@ -93,36 +105,28 @@ var S1 = function(target, context, ownWeighting, partnerWeighting) {
   });
 };
 
-var S1_RR = function(target, context) {
+// meta-cognitive resource-rational speaker selects optimal mixture
+// weight, marginalizing over uncertainty about listener's weight
+var RR_speaker = function(target, context) {
   return Infer({method: 'enumerate'}, function() {
-    var ownWeighting = uniformDraw([0, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1]);
+    var ownWeighting = sample(possibleWeightings);
 
+    // Marginalize over partner's mixture weight and possible objects
+    // in partner's view
     var utility = expectation(possibleObjects, function(obj) {
-      return expectation(Categorical({vs: [0, 1]}), function(partnerWeighting) {
+      return expectation(possibleWeightings, function(partnerWeighting) {
         var hypotheticalSelf = S1(target, context, ownWeighting, partnerWeighting);
-        var possibleListenerView = context.concat(obj + '_2');
         var utt = MAP(hypotheticalSelf)['val'];
+        var possibleListenerView = context.concat(obj + '_2');
         return L0(utt, possibleListenerView, partnerWeighting).score(target);
       });
     });
 
-    factor(20*(utility - ownWeighting * 0.1))
+    // putting more weight on partner's perspective is costly
+    factor(utility - ownWeighting * params.perspectiveCost);
     return ownWeighting;
-  })
+  });
 }
 
 var context = contexts['diff_shape'];
-//console.log(JSON.stringify(S1('texture_color_shape', contexts['diff_shape'], 1)))
-console.log(JSON.stringify(S1_RR('texture_color_shape', contexts['diff_shape'])))
-
-// var informativity = expectation(possibleObjects, function(obj) {
-//   var possibleListenerView = context.concat(obj + '_2');
-//   print(possibleListenerView)
-//   viz.table(L(0, 1, 'texture', possibleListenerView))
-//   return L(0, 1, 'texture', possibleListenerView).score('texture_color_shape')
-// })
-// print(informativity)
-//viz(L(0, .25, 'texture_color_shape', context.concat(['texture_color_shape_2'])))
-//viz.marginals(S(0, 'texture_color_shape', contexts['diff_shape']))
-//viz.table(S(1, 'texture_color_shape', contexts['diff_shape']))
-//viz(S(0, 'texture_color_shape', contexts['diff_shape']))
+console.log(JSON.stringify(RR_speaker('texture_color_shape', context)));
