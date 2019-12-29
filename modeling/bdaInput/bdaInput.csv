@@ -1,4 +1,4 @@
-gameid,trialNum,distractorType,context,hidden,numDistractors,color,shape,texture
+gameid,trialNum,distractorType,context,hidden,numDistractors,colorMention,shapeMention,textureMention
 0036-cbf7b0c5-6796-4e02-ac77-7a411b19dc73,1,diff_shape,far,yes,4,TRUE,TRUE,FALSE
 0036-cbf7b0c5-6796-4e02-ac77-7a411b19dc73,2,diff_shape,far,no,3,TRUE,TRUE,FALSE
 0036-cbf7b0c5-6796-4e02-ac77-7a411b19dc73,3,diff_shape,far,no,4,TRUE,TRUE,FALSE
