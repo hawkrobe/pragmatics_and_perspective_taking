@@ -3,7 +3,7 @@
   "main": "ref.js",
   "dependencies": {
     "babyparse": "*",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.13",
     "npm": "^6.3.0"
   }
 }
