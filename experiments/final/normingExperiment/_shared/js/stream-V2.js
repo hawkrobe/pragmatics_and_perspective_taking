@@ -19,7 +19,9 @@ var slide = function (_slide, _private) {
 var _stream = function() {
   if (exp.nQs) {
     //if number of total questions is defined, then show progress bar
-    $('.bar').css('width', ( (exp.phase / exp.nQs)*100 + "%"));
+    var progressPct = (exp.phase / exp.nQs)*100 + "%";
+    $('.bar').css('width', progressPct);
+    $('.progress-text').text('Progress: ' + progressPct);
   } else {
     $(".progress").hide();
   }
