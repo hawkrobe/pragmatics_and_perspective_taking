@@ -18,26 +18,8 @@ class ReferenceGameServer {
   // if game relies on asynchronous stim logic, need to wait until everything
   // is fetched before starting game (otherwise race conditions)
   startGame(game) {
-    if(game.experimentName == 'chairs_chatbox') {
-      sendPostRequest('http://localhost:5000/db/getstims', {
-	json: {dbname: 'stimuli', colname: 'chairs1k',
-	       numRounds: game.numRounds, gameid: game.id}
-      }, (error, res, body) => {
-	if(!error && res.statusCode === 200) {
-      	  game.stimList = _.shuffle(body);
-      	  game.trialList = game.makeTrialList();
-	} else {
-	  console.log(`error getting stims: ${error} ${body}`);
-	  console.log(`falling back to local stimList`);
-	  var closeFamilies = require('./stimList_chairs').closeByFamily;
-	  game.stimList = _.flatten(_.sampleSize(closeFamilies, game.numRounds));
-	  game.trialList = game.makeTrialList();
-	}
-	game.newRound();
-      });
-    } else {
-      game.newRound();
-    }
+    console.log('starting game');
+    game.newRound(0);
   }
   /*
     Writes data specified by experiment instance to csv and/or mongodb
@@ -81,7 +63,7 @@ class ReferenceGameServer {
 
 	// Add game to player
 	player.game = game;
-	player.role = game.playerRoleNames.role2;
+	player.role = game.playerRoleNames.role1;
 	player.send('s.join.' + game.players.length + '.' + player.role);
 
 	// notify existing players that someone new is joining
@@ -98,6 +80,7 @@ class ReferenceGameServer {
     if(!joined_a_game) {
       this.createGame(player);
     }
+
   };
 
   // Will run when first player connects
@@ -115,7 +98,7 @@ class ReferenceGameServer {
     
     // assign role
     player.game = game;
-    player.role = game.playerRoleNames.role1;
+    player.role = game.playerRoleNames.role2;
     player.send('s.join.' + game.players.length + '.' + player.role);
     this.log('player ' + player.userid + ' created a game with id ' + player.game.id);
 
@@ -123,7 +106,10 @@ class ReferenceGameServer {
     this.games[game.id] = game;
     this.game_count++;
     
-    game.server_send_update();
+    if(game.player_count == game.players_threshold) {
+      this.startGame(game);
+    }
+
     return game;
   }; 
 
