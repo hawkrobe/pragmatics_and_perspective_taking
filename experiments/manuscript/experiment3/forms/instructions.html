@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Experiment</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  </head>
+
+  <body role="document">
+    
+    <div class="container theme-showcase" role="main">
+
+      </br>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 5%;"><span class="sr-only">5% Complete</span></div>
+      </div>
+
+      <div class="page-header">
+        <h1>Instructions</h1>
+      </div>
+      
+      <div class="well" style="width:800px; margin: 0 auto">
+
+	<p>
+	  In this experiment you will play a fun communication game
+	  with another turker! One of you will be assigned
+	  the <b>Director</b> role and the other will be
+	  the <b>Matcher</b>. Since you will not know which role you
+	  will play until the game starts, you will be responsible for
+	  understanding the responsibilities and goals of both roles.
+	</p>
+
+	<p>
+	  On each round of the game, we will randomly pick a few
+	  everyday objects and place them in a grid. Although you will
+	  just see a 2D view in the game, you can imagine you are
+	  sitting across the table from your partner with cubbyholes
+	  between you.
+	</p>
+
+	<p>
+	  <center>
+	    <img src="images/3d_objs.jpg"
+		 alt="Example array"
+		 style="width:300px;height:300px">
+	  </center>
+	</p>
+
+	<p>
+	  The Director will be shown a series of instructions about
+	  how the objects in the grid need to be moved. However, only
+	  the Matcher has the ability to move objects. To succeed at
+	  the game, the Director must send messages through the chat
+	  box telling the Matcher how to move the objects. It is
+	  important to give instructions as clearly as possible. Given
+	  the below screen, for example, the Director would want the
+	  Matcher to move the carrot up one square.
+	</p>
+
+	<p>
+	  <center>
+	    <img src="images/director_example.png"
+		 alt="director view"
+		 style="width:300px;height:300px">
+	  </center>
+	</p>
+
+	<p>
+	  The goal of the Matcher on each instruction is to identify
+	  which object must be moved, and where to move it, based on
+	  the message sent by the Director. You will follow these
+	  instructions by clicking and dragging items from one cell of
+	  the grid to another. If you are the Matcher, you will first
+	  need to wait until the Director has sent their message
+	  before being able to move an object or replying through the
+	  chatbox.
+	</p>
+
+	<p>
+	  Once the Matcher moves the object they believe the Director
+	  was talking about, both of you will be given feedback: the
+	  Director will see where the object was moved, and the
+	  Matcher will learn whether they made the correct move or
+	  not. If it is incorrect, the object will go back to its
+	  original position, and you will try again. If it is
+	  correct, you will both automatically advance to the next
+	  instruction. There are 8 different grids with different
+	  items in different locations, and four instructions per
+	  grid. After the final round you will answer a few more
+	  questions and be on your way.
+	</p>
+	
+	<h3> Hidden objects </h3>
+
+	<p>
+	  As you may have noticed in the above images, what makes this
+	  game more interesting is that
+	  <b>curtains</b> cover some cells. These curtains
+	  block the view of the Director, who cannot know what object,
+	  if any, is behind the curtain. To illustrate, here is the
+	  Director's view and Matcher's view of the same grid, side by
+	  side. The Matcher can see there there is a tennis ball on
+	  their side of the curtain, but the Director does not know it
+	  is there.
+	
+	<p>
+	  <center>
+	    <img src="images/view_comparison.png"
+		 alt="matcher view"
+		 style="width:523px;height:300px">
+	  </center>
+	</p>
+
+	<p>
+	  A few final notes: First, since you are playing with
+	  another player, you may see this screen before the game
+	  begins:
+	</p>
+
+	<p>
+	  <center>
+	    <img src="images/waitScreen.png" alt="wait screen"
+		 style="width:700px;height:150px">
+	  </center>
+	</p>
+
+	<p>
+	  Just hold tight. Another player should join the game within
+	  the next few minutes. If you're in the waiting room 15 minutes
+	  without another player joining, please return the HIT and try again later!
+	</p>
+
+	<p>
+	  Second, please be respectful of the worker you're playing
+	  with: pay close attention and try to be as responsive as
+	  possible. During each round, please talk only about the
+	  game and please use <b>properties of the object</b>
+	  instead of describing locations in the grid. We will be
+	  recording the messages you send for research
+	  purposes.
+	</p>
+
+	<p>
+	  Finally, please DO NOT refresh the page at any point once
+	  you start the game (including the waiting page). If you
+	  refresh, you will not be able to rejoin the game you were in
+	  and you may not be able to submit the HIT. <br> Thank you!
+	</p>
+	
+      </div>
+      <div class="page-header">
+        <h3>Comprehension Quiz</h3>
+      </div>
+
+      <div class="well" style="width:800px; margin: 0 auto">
+	<br>
+	The Director's goal in this game is to
+	<br>
+	<input type="radio" name="dgoal" value="yes"> Communicate instructions clearly
+	<br>
+	<input type="radio" name="dgoal" value="no"> Move objects to the correct locations
+	<br>
+
+
+	<br>
+	The Matcher's goal in this game is to 
+	<br>
+	<input type="radio" name="mgoal" value="no"> Communicate instructions clearly
+	<br>
+	<input type="radio" name="mgoal" value="yes"> Move objects to the correct locations
+	<br>
+
+	
+	<br>
+	If a square in the grid has a curtain, it means
+	<br>
+	<input type="radio" name="occ" value="no"> The <strong> Matcher cannot </strong> see the object behind it.
+	<br>
+	<input type="radio" name="occ" value="yes"> The <strong> Director cannot </strong> see the object behind it.
+	<br>
+	<input type="radio" name="occ" value="no"> Both players <strong> can </strong> see the object.
+	<br>
+	
+
+	<br> To move an object, the Matcher must
+	<br>
+	<input type="radio" name="move" value="yes"> Click and drag it
+	<br>
+	<input type="radio" name="move" value="no"> Use their keyboard to select the destination
+	<br>
+
+	<!-- <br> -->
+	<!-- At the end of a round -->
+	<!-- <br> -->
+	<!-- <input type="radio" name="comp" value="no"> Some objects stay the same -->
+	<!-- <br> -->
+	<!-- <input type="radio" name="comp" value="yes"> All of the objects are replaced by new objects in new locations -->
+	<!-- <br> -->
+	<br>
+	The speaker should describe the locations of objects in the grid (e.g. "upper-left corner").
+	<br>
+	<input type="radio" name="comp" value="no"> True
+	<br>
+	<input type="radio" name="comp" value="yes"> False
+	<br>
+
+        <br>
+	Have you participated in this study before? <br>
+	<input type="radio" name="completed" value="yes"> No
+        <br>
+	<input type="radio" name="completed" value="no"> Yes
+        <br>
+
+	<br>
+	<input id="quiz_submit" type="submit" value="Submit"> 
+	<br>
+	<br>
+	<div class="error" style="display:none"> Ooops! Looks like you made a mistake. You have one more try. </div>
+      </div> <!-- /container -->
+    </div>
+    <script type="text/javascript">
+      $('html,body').scrollTop(0);
+      var urlParams;
+	var match,
+	      pl     = /\+/g,  // Regex for replacing addition symbol with a space
+	      search = /([^&=]+)=?([^&]*)/g,
+	      decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+	      query  = location.search.substring(1);
+
+      urlParams = {};
+      while (match = search.exec(query))
+      urlParams[decode(match[1])] = decode(match[2]);
+      
+      console.log(urlParams)
+
+      var counter = 0;
+      document.getElementById("quiz_submit").onclick = function () {
+        var ans1 = $('input[name="comp"]:checked').val();
+        var ans2 = $('input[name="move"]:checked').val();
+        var ans3 = $('input[name="mgoal"]:checked').val();
+        var ans4 = $('input[name="dgoal"]:checked').val();
+        var ans5 = $('input[name="occ"]:checked').val();
+        var ans6 = $('input[name="completed"]:checked').val();
+        if(ans1 == "yes" && ans2 == "yes" && ans3 == "yes" && 
+           ans4 == "yes" && ans5 == "yes" && ans6 == "yes") {
+           var workerId = urlParams.workerId;
+           var assignmentId = urlParams.assignmentId;
+           var hitId = urlParams.hitId;
+           var turkSubmitTo = urlParams.turkSubmitTo;
+           location.replace("./pass.html?workerId=" + workerId
+                            + "&assignmentId=" + assignmentId
+                            + "&hitId=" + hitId + "&turkSubmitTo=" + turkSubmitTo);
+        } else if(counter == 3) {
+          location.replace("./fail.html");
+        } else {
+          $('.error').show()
+          counter += 1;
+        }
+      };
+    </script>
+    
+    <script src="./validate-form.js"></script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/lib/js/bootstrap.min.js"></script>
+  </body>
+</html>
