@@ -137,6 +137,24 @@ var L1 = function(utt, context, ownWeighting) {
   });
 };
 
+
+var listenerPosterior = function(data) {
+  return Infer({method: 'enumerate'}, function() {
+    var partnerWeighting = sample(possibleWeightings);
+    mapData({data: data}, function(datum) {
+      observe(S1(datum.target, datum.context, partnerWeighting), datum.utt);
+    });
+    return partnerWeighting;
+  });
+};
+
+var posterior = listenerPosterior([
+  {utt: 'texture', target: 'texture_color_shape', context: contexts['diff_shape']},
+  {utt: 'texture', target: 'texture_color_shape', context: contexts['diff_shape']},
+  {utt: 'texture', target: 'texture_color_shape', context: contexts['diff_shape']},
+  {utt: 'texture', target: 'texture_color_shape', context: contexts['diff_shape']}
+])
+
 // meta-cognitive resource-rational speaker selects optimal mixture
 // weight, marginalizing over uncertainty about listener's weight
 var RR_speaker = function(target, context) {
@@ -169,7 +187,7 @@ var RR_listener = function(utt, baseContext) {
 
     // Marginalize over partner's mixture weight and possible hidden objects
     var utility = expectation(possibleObjects, function(hiddenObj) {
-      return expectation(possibleWeightings, function(partnerWeighting) {
+      return expectation(posterior, function(partnerWeighting) {
         var context = baseContext.concat(hiddenObj + '_private');
         var realSpeakerView = getSpeakerView(context);
         var likelyUtt = MAP(S1('texture_color_shape', realSpeakerView, partnerWeighting))['val'];
@@ -181,13 +199,7 @@ var RR_listener = function(utt, baseContext) {
     factor(utility - ownWeighting * params.perspectiveCost);
     return ownWeighting;
   });
-}
+};
 
-var speakerContext = contexts['diff_shape'];
-console.log('resource-rational weight for speaker');
-console.log(JSON.stringify(RR_speaker('texture_color_shape', speakerContext)));
-console.log(MAP(RR_speaker('texture_color_shape', speakerContext)));
 
-console.log('resource-rational weight for listener');
-console.log(JSON.stringify(RR_listener('texture_color_shape', speakerContext)));
-console.log(MAP(RR_listener('texture_color_shape', speakerContext)));
+console.log(MAP(RR_listener('texture_color_shape', contexts['diff_shape'])));
