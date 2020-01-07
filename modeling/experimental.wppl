@@ -10,10 +10,11 @@
 // experiment, if objects are sampled uniformly from the 4 x 4 x 4
 // space.
 var possibleObjects = Categorical({
-  vs: ['texture_color_shape', 'otherTexture_otherColor_otherShape',
-       'otherTexture_color_shape', 'texture_otherColor_shape', 'texture_color_otherShape',
-       'otherTexture_otherColor_shape', 'texture_otherColor_otherShape', 'otherTexture_color_otherShape',
-      ]
+  vs: [
+    'texture_color_shape', 'othertexture_othercolor_othershape',
+    'othertexture_color_shape', 'texture_othercolor_shape', 'texture_color_othershape',
+    'othertexture_othercolor_shape', 'texture_othercolor_othershape', 'othertexture_color_othershape',
+  ]
 //  ps: [1/64, 27/64, 3/64, 3/64, 3/64, 9/64, 9/64, 9/64]
 });
 
@@ -21,7 +22,14 @@ var possibleObjects = Categorical({
 var possibleUtterances = Categorical({
   vs: ['shape', 'color', 'texture',
        'texture_color', 'color_shape', 'texture_shape',
-       'texture_color_shape']
+       'texture_color_shape',
+       'othershape', 'othercolor', 'othertexture',
+       'othertexture_othercolor', 'othercolor_othershape', 'othertexture_othershape',
+       'othertexture_othercolor_othershape',
+       'othertexture_color', 'texture_othercolor', 'color_othershape', 'othercolor_shape',
+       'othertexture_shape', 'texture_othershape', 'texture_color_othershape', 'texture_othercolor_shape',
+       'othertexture_color_shape', 'texture_othercolor_othershape', 'othertexture_color_othershape',
+       'othertexture_othercolor_shape']
 });
 
 // these are the possible mixture weights for perspective-taking
@@ -32,21 +40,30 @@ var possibleWeightings = Categorical({
 
 // these are the possible conditions of visible objects presented to the speaker
 var contexts = {
-  'diff_shape' : ['texture_color_shape', 'otherTexture_otherColor_otherShape'],
-  'shape_only' : ['texture_color_shape', 'otherTexture_otherColor_shape'],
-  'color_shape' : ['texture_color_shape', 'otherTexture_color_shape'],
-  'texture_shape' : ['texture_color_shape', 'texture_otherColor_shape']
+  'diff_shape' : ['texture_color_shape', 'othertexture_othercolor_othershape'],
+  'shape_only' : ['texture_color_shape', 'othertexture_othercolor_shape'],
+  'color_shape' : ['texture_color_shape', 'othertexture_color_shape'],
+  'texture_shape' : ['texture_color_shape', 'texture_othercolor_shape']
 };
 
 // alpha: soft-max temperature
 // <feature>Cost: cost associated with producing this feature
 // perspectiveCost: cost associated with perspective-taking
 var params = {
-  alpha: 10,
+  alpha: 5,
   textureCost : 0.01,
   shapeCost : 0.01,
   colorCost : 0.01,
   perspectiveCost : 0.1
+};
+
+var getTrueUtterances = function(context) {
+  var trueUtts = filter(function(utt) {
+    return _.some(map(function(obj) {
+      return meaning(utt, obj);
+    }, context));
+  }, possibleUtterances.support());
+  return Categorical({vs: trueUtts});
 };
 
 // utterance is true if object has all of the mentioned features
@@ -63,18 +80,18 @@ var meaning = function(utt, object) {
 var uttCost = function(utt) {
   var descriptors = utt.split('_');
   return sum(map(function(descriptor) {
-    return descriptor == 'null' ? 0 : params[descriptor + 'Cost'];
+    return descriptor == 'null' ? 0 : params[descriptor.replace('other', '') + 'Cost'];
   }, descriptors));
 };
 
 // derives the speaker's perspective from the listener's visible context
 var getSpeakerView = function(listenerContext) {
-  var hiddenObj = find(function(x) {return last(x) == 'private';}, listenerContext);
+  var hiddenObj = find(function(x) {return last(x.split('_')) == 'private';}, listenerContext);
   return remove(hiddenObj, listenerContext);
 };
 
 // L0 interprets utterance literally using fixed mixture of perspectives
-var L0 = function(utt, context, weighting) {
+var L0 = cache(function(utt, context, weighting) {
   return Infer({method: 'enumerate'}, function() {
     var perspective = flip(weighting) ? 'other' : 'own';
     var partnerContext = perspective == 'own' ? context : getSpeakerView(context);
@@ -82,18 +99,20 @@ var L0 = function(utt, context, weighting) {
     condition(meaning(utt, object));
     return object;
   });
-};
+});
 
 // S1 selects utterance using fixed mixture of perspectives
 // (given belief about L0's mixture)
-var S1 = function(target, context, ownWeighting, partnerWeighting) {
+var S1 = cache(function(target, context, ownWeighting) {
   return Infer({method: 'enumerate'}, function() {
-    var utt = uniformDraw(possibleUtterances);
-    
+    var utt = sample(getTrueUtterances(context));    
+    var partnerWeighting = sample(possibleWeightings);
+
     // Weight proportional to utility
     var perspective = flip(ownWeighting) ? 'other' : 'own';
+    
     var informativity = (
-      perspective == 'own' ? L0(utt, context, partnerWeighting).score(target) :
+      perspective == 'own' ? L0(utt, context, 0).score(target) :
         expectation(possibleObjects, function(obj) {
           var possibleListenerView = context.concat(obj + '_private');
           return (L0(utt, possibleListenerView, partnerWeighting).score(target));
@@ -103,6 +122,19 @@ var S1 = function(target, context, ownWeighting, partnerWeighting) {
     factor(params.alpha * (informativity - uttCost(utt,params)));
     return utt;
   });
+});
+
+// L1 selects objects given belief about S1's mixture
+var L1 = function(utt, context, ownWeighting) {
+  return Infer({method: 'enumerate'}, function() {
+    var perspective = flip(ownWeighting) ? 'other' : 'own';
+    var partnerContext = perspective == 'own' ? context : getSpeakerView(context);
+    var partnerWeight = perspective == 'own' ? 0 : sample(possibleWeightings);
+
+    var object = uniformDraw(partnerContext);
+    observe(S1(object, partnerContext, partnerWeight), utt);
+    return object;
+  });
 };
 
 // meta-cognitive resource-rational speaker selects optimal mixture
@@ -111,14 +143,15 @@ var RR_speaker = function(target, context) {
   return Infer({method: 'enumerate'}, function() {
     var ownWeighting = sample(possibleWeightings);
 
-    // Marginalize over partner's mixture weight and possible objects
-    // in partner's view
+    // Imagine how speaker with this weight would behave
+    var likelyUtt = MAP(S1(target, context, ownWeighting))['val'];
+    
+    // Imagine expected utility of that behavior, marginalizing over
+    // partner's mixture weight and possible objects in partner's view
     var utility = expectation(possibleObjects, function(obj) {
       return expectation(possibleWeightings, function(partnerWeighting) {
-        var hypotheticalSelf = S1(target, context, ownWeighting, partnerWeighting);
-        var utt = MAP(hypotheticalSelf)['val'];
-        var possibleListenerView = context.concat(obj + '_2');
-        return L0(utt, possibleListenerView, partnerWeighting).score(target);
+        var possibleListenerView = context.concat(obj + '_private');
+        return L0(likelyUtt, possibleListenerView, partnerWeighting).score(target);
       });
     });
 
@@ -128,5 +161,33 @@ var RR_speaker = function(target, context) {
   });
 }
 
-var context = contexts['diff_shape'];
-console.log(JSON.stringify(RR_speaker('texture_color_shape', context)));
+// meta-cognitive resource-rational speaker selects optimal mixture
+// weight, marginalizing over uncertainty about listener's weight
+var RR_listener = function(utt, baseContext) {
+  return Infer({method: 'enumerate'}, function() {
+    var ownWeighting = sample(possibleWeightings);
+
+    // Marginalize over partner's mixture weight and possible hidden objects
+    var utility = expectation(possibleObjects, function(hiddenObj) {
+      return expectation(possibleWeightings, function(partnerWeighting) {
+        var context = baseContext.concat(hiddenObj + '_private');
+        var realSpeakerView = getSpeakerView(context);
+        var likelyUtt = MAP(S1('texture_color_shape', realSpeakerView, partnerWeighting))['val'];
+        return L1(likelyUtt, context, ownWeighting).score('texture_color_shape');
+      });
+    });
+
+    // putting more weight on partner's perspective is costly
+    factor(utility - ownWeighting * params.perspectiveCost);
+    return ownWeighting;
+  });
+}
+
+var speakerContext = contexts['diff_shape'];
+console.log('resource-rational weight for speaker');
+console.log(JSON.stringify(RR_speaker('texture_color_shape', speakerContext)));
+console.log(MAP(RR_speaker('texture_color_shape', speakerContext)));
+
+console.log('resource-rational weight for listener');
+console.log(JSON.stringify(RR_listener('texture_color_shape', speakerContext)));
+console.log(MAP(RR_listener('texture_color_shape', speakerContext)));
