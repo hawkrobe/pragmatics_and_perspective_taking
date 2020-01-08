@@ -109,7 +109,7 @@ function serve() {
       const projection = request.body.projection;
 
       // hardcoded for now (TODO: get list of collections in db?)
-      var collectionList = ['speakerManipulation', 'replication'];
+      var collectionList = ['speakerManipulation', 'listenerManipulation', 'replication'];
 
       function checkCollectionForHits(collectionName, query, projection, callback) {
         const collection = database.collection(collectionName);        
