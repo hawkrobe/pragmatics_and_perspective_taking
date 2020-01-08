@@ -177,8 +177,6 @@ function dropdownTip(data){
 				    'role' : globalGame.my_role,
 				    'totalLength' : Date.now() - globalGame.startTime});
     globalGame.submitted = true;
-    globalGame.socket.send("exitSurvey." + JSON.stringify(globalGame.data));
-    
     if(_.size(globalGame.urlParams) == 4) {
       window.opener.turk.submit(globalGame.data, true);
       window.close(); 
