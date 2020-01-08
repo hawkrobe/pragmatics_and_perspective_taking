@@ -157,7 +157,6 @@ var client_addnewround = function(game) {
 var customSetup = function(game) {
   // Update messages log when other players send chat
   game.socket.on('chatMessage', function(data){
-    console.log('received', data);
     game.messageSent = true;
     // Bar responses until speaker has uttered at least one message
     $('.typing-msg').remove();
@@ -169,7 +168,7 @@ var customSetup = function(game) {
 	scrollTop: $("#messages").prop("scrollHeight")
       }, 800);
     if(globalGame.my_role == globalGame.playerRoleNames.role2 && globalGame.paused) {
-      var msg = 'Your partner said: \n"' + data.msg + '"\n\n\n Please click on the circle in the center to continue.';
+      var msg = 'Your partner said: \n"' + data.msg + '"\n\n\n Please click in the center to continue.';
       globalGame.get_player(globalGame.my_id).message = msg;
       drawScreen(globalGame, globalGame.get_player(globalGame.my_id));
       drawClickPoint(game);
@@ -194,11 +193,10 @@ var customSetup = function(game) {
     // For mouse-tracking, matcher must wait until director sends message
     if(globalGame.my_role == globalGame.playerRoleNames.role2) {
       var msg = 'Waiting for your partner to send a message...';
-      console.log('in here');
       setTimeout(function(){
         var msg = ['chatMessage', globalGame.currUtterance.replace(/\./g, '~~~')].join('.');
         globalGame.socket.send(msg);
-      }, 2000 + _.sample(_.range(-500, 500, 100));
+      }, 2000 + _.sample(_.range(-500, 500, 100)));
       globalGame.get_player(globalGame.my_id).message = msg;
       globalGame.paused = true;
     } else {
@@ -212,7 +210,6 @@ var customSetup = function(game) {
 
 var client_onjoingame = function(num_players, role) {
   // set role locally
-  console.log('role', role);
   globalGame.my_role = role;
   globalGame.get_player(globalGame.my_id).role = globalGame.my_role;
   _.map(_.range(num_players - 1), function(i){
