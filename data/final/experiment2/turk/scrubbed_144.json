@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:02:03Z",
+    "AutoApprovalTime": "2018-04-04T01:01:06Z",
+    "AssignmentId": "144",
+    "WorkerId": "144",
+    "answers": {
+        "subject_information": {
+            "totalLength": 678016,
+            "gameID": "5651-35ab95d3-21a7-43ae-a09d-40ab5d133303",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 29,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "Trying to follow directions and keep in mind the other person couldn't see the items behind curtains."
+        },
+        "id": "5651-35ab95d3-21a7-43ae-a09d-40ab5d133303"
+    },
+    "AcceptTime": "2018-04-04T00:42:27Z",
+    "HITId": "3VGZ74AYTGGJSD1LWHJJR6IK6ZQGCR",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:56:06Z"
+}

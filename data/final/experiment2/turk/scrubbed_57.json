@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:04Z",
+    "AutoApprovalTime": "2018-04-03T22:06:39Z",
+    "AssignmentId": "57",
+    "WorkerId": "57",
+    "answers": {
+        "subject_information": {
+            "totalLength": 543026,
+            "gameID": "3854-4096ea0a-299d-4d6b-9a80-5223d4b04902",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 27,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I followed the instructions, assuming that similar objects to the Director's instructions hidden by curtains weren't what they were referencing as they couldn't see them."
+        },
+        "id": "3854-4096ea0a-299d-4d6b-9a80-5223d4b04902"
+    },
+    "AcceptTime": "2018-04-03T21:50:08Z",
+    "HITId": "3X4Q1O9UBHM189NNTJOGGTZ8WALO7O",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:39Z"
+}

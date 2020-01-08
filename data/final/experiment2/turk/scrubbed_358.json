@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:06:03Z",
+    "AutoApprovalTime": "2018-04-03T22:05:47Z",
+    "AssignmentId": "358",
+    "WorkerId": "358",
+    "answers": {
+        "subject_information": {
+            "totalLength": 285869,
+            "gameID": "4062-d2f8112c-9530-4189-a2a5-c0e67e66e340",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 7,
+            "role": "director",
+            "comments": "No.",
+            "strategy": "I just described where to move stuff."
+        },
+        "id": "4062-d2f8112c-9530-4189-a2a5-c0e67e66e340"
+    },
+    "AcceptTime": "2018-04-03T21:34:47Z",
+    "HITId": "3D3B8GE892RN7SNHNGZFJPV41559P2",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:00:47Z"
+}

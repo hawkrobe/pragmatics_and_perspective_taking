@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:00:03Z",
+    "AutoApprovalTime": "2018-04-03T21:59:39Z",
+    "AssignmentId": "374",
+    "WorkerId": "374",
+    "answers": {
+        "subject_information": {
+            "totalLength": 743151,
+            "gameID": "7483-937857fa-3762-45d4-8273-61f4152c65fe",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 29,
+            "role": "director",
+            "comments": "I liked my own instructions better than yours, sorry!",
+            "strategy": "to try to write my own questions instead of the computer filling them in for me :("
+        },
+        "id": "7483-937857fa-3762-45d4-8273-61f4152c65fe"
+    },
+    "AcceptTime": "2018-04-03T21:39:59Z",
+    "HITId": "3M47JKRKCX1FJHM23SUSDT9CMUX684",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:54:39Z"
+}

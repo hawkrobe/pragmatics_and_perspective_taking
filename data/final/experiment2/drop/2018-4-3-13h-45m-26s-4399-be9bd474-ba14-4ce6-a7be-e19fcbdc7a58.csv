@@ -1,0 +1,3 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+pilot1	4399-be9bd474-ba14-4ce6-a7be-e19fcbdc7a58	1522788326529	unscripted	1	-1	scissors	1	base	3	false	incorrect	knife	2	2	3	4	1308	drop
+pilot1	4399-be9bd474-ba14-4ce6-a7be-e19fcbdc7a58	1522788336761	unscripted	1	0	scissors	0	base	3	false	correct	scissors	2	2	2	2	1505	drop

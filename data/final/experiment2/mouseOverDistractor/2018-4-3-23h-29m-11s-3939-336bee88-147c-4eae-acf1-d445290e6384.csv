@@ -1,0 +1,17 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823351593	scripted	1	1	computerMouse	0	base	8	true	on	1243	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823352528	scripted	1	1	computerMouse	0	base	8	true	off	2178	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823442430	scripted	2	2	middleBlock	0	exp	2	true	on	2367	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823446673	scripted	2	1	middleBlock	1	exp	2	true	off	6594	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823748549	scripted	5	1	mediumMeasuringCup	0	base	4	true	on	1130	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823749441	scripted	5	1	mediumMeasuringCup	0	base	4	true	off	2023	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823881011	scripted	7	3	mediumCandle	0	exp	7	true	on	1319	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823881870	scripted	7	2	mediumCandle	1	exp	7	true	off	2172	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823894433	scripted	7	3	mediumCandle	0	exp	7	true	on	1467	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823895472	scripted	7	3	mediumCandle	0	exp	7	true	off	2493	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823951970	scripted	8	2	boardEraser	0	base	6	true	on	1153	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823952272	scripted	8	2	boardEraser	0	base	6	true	off	1446	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823955206	scripted	8	2	boardEraser	0	base	6	true	on	4393	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823955312	scripted	8	2	boardEraser	0	base	6	true	off	4499	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823955943	scripted	8	2	boardEraser	0	base	6	true	on	5126	mouseOverDistractor
+planned_sample	3939-336bee88-147c-4eae-acf1-d445290e6384	1522823955953	scripted	8	2	boardEraser	0	base	6	true	off	5139	mouseOverDistractor

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T05:59:03Z",
+    "AutoApprovalTime": "2018-04-04T05:58:54Z",
+    "AssignmentId": "198",
+    "WorkerId": "198",
+    "answers": {
+        "subject_information": {
+            "totalLength": 729616,
+            "gameID": "0043-06d2e329-051d-4c4b-898a-1b45447c5290",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 30,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I listened to what the other person told me."
+        },
+        "id": "0043-06d2e329-051d-4c4b-898a-1b45447c5290"
+    },
+    "AcceptTime": "2018-04-04T05:36:04Z",
+    "HITId": "307L9TDWJYS1P5MOQSLDONNN1Z9N3K",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T05:53:54Z"
+}

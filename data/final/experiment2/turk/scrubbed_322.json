@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:03:03Z",
+    "AutoApprovalTime": "2018-04-04T07:02:34Z",
+    "AssignmentId": "322",
+    "WorkerId": "322",
+    "answers": {
+        "subject_information": {
+            "totalLength": 762464,
+            "gameID": "4250-c0df0e0b-03c5-427e-9972-4632861f7ad1",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 31,
+            "role": "director",
+            "comments": "There was a living mouse behind the curtain on the grid where we needed to move the computer mouse, wasn't there?",
+            "strategy": "State the object and the direction--make sure to include an adjective in case there was more than one of the object, one behind curtains."
+        },
+        "id": "4250-c0df0e0b-03c5-427e-9972-4632861f7ad1"
+    },
+    "AcceptTime": "2018-04-04T06:42:09Z",
+    "HITId": "3OJX0UFJ0Z70ZXVD42Y9TVI39ND9UG",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:57:34Z"
+}

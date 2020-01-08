@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:59:03Z",
+    "AutoApprovalTime": "2018-04-03T23:58:10Z",
+    "AssignmentId": "75",
+    "WorkerId": "75",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1507183,
+            "gameID": "1042-4cd92598-c59f-4411-b8b6-227e39f9a812",
+            "thinksHuman": "yes",
+            "confused": "confused",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 29,
+            "role": "director",
+            "comments": "It would be helpful to have somewhere that I could have rechecked the instructions during the HIT. I know for sure that I couldn't talk about specific boxes but I couldn't remember if I could say things like \"up\" or \"kiddie corner\"",
+            "strategy": "I tried to talk about the objects in relation to other objects and the directions those objects had already moved"
+        },
+        "id": "1042-4cd92598-c59f-4411-b8b6-227e39f9a812"
+    },
+    "AcceptTime": "2018-04-03T23:19:42Z",
+    "HITId": "3MJ9GGZYO365K4WGDO23J7YVWDY2AQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:53:10Z"
+}

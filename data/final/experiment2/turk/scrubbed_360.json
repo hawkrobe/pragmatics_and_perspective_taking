@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:55:03Z",
+    "AutoApprovalTime": "2018-04-03T21:54:49Z",
+    "AssignmentId": "360",
+    "WorkerId": "360",
+    "answers": {
+        "subject_information": {
+            "totalLength": 698932,
+            "gameID": "3398-9e59764f-161c-40af-ad2b-17b184ed3edc",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 32,
+            "role": "director",
+            "comments": "",
+            "strategy": "My strategy was to provide the best instructions for the other person. I normally just described the object and give details about how far to move it (example: down one)"
+        },
+        "id": "3398-9e59764f-161c-40af-ad2b-17b184ed3edc"
+    },
+    "AcceptTime": "2018-04-03T21:28:06Z",
+    "HITId": "3D3B8GE892RN7SNHNGZFJPV41559P2",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:49:49Z"
+}

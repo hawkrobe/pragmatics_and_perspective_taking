@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T00:17:04Z",
+    "AutoApprovalTime": "2018-04-04T00:16:40Z",
+    "AssignmentId": "100",
+    "WorkerId": "100",
+    "answers": {
+        "subject_information": {
+            "totalLength": 694522,
+            "gameID": "8358-0c3212d0-3e83-4f90-a4da-9a443d5e8081",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "Doing what the other person said to do."
+        },
+        "id": "8358-0c3212d0-3e83-4f90-a4da-9a443d5e8081"
+    },
+    "AcceptTime": "2018-04-03T23:55:32Z",
+    "HITId": "337F8MIIMZDJM5DLP0OYNGJG75I40X",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:11:40Z"
+}

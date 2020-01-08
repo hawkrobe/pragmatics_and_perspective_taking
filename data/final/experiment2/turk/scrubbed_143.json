@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:27:03Z",
+    "AutoApprovalTime": "2018-04-04T01:26:16Z",
+    "AssignmentId": "143",
+    "WorkerId": "143",
+    "answers": {
+        "subject_information": {
+            "totalLength": 869057,
+            "gameID": "0562-c375f066-1433-4cac-82fe-ce796f9747c9",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "matcher",
+            "comments": "no",
+            "strategy": "remembered that he couldn't see behind the curtain"
+        },
+        "id": "0562-c375f066-1433-4cac-82fe-ce796f9747c9"
+    },
+    "AcceptTime": "2018-04-04T01:03:16Z",
+    "HITId": "3VGZ74AYTGGJSD1LWHJJR6IK6ZQGCR",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T01:21:16Z"
+}

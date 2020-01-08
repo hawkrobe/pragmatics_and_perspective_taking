@@ -1,0 +1,16 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522819849023	scripted	2	3	cassetteTape	0	exp	3	true	on	2251	mouseOverDistractor
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522819850913	scripted	2	2	cassetteTape	1	exp	3	true	off	4137	mouseOverDistractor
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522819851356	scripted	2	2	cassetteTape	1	exp	3	true	on	4585	mouseOverDistractor
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522819851607	scripted	2	2	cassetteTape	1	exp	3	true	off	4837	mouseOverDistractor
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522819852056	scripted	2	2	cassetteTape	1	exp	3	true	on	5285	mouseOverDistractor
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522819852989	scripted	2	2	cassetteTape	1	exp	3	true	off	6219	mouseOverDistractor
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522819938253	scripted	3	3	mediumCandle	0	exp	7	true	on	936	mouseOverDistractor
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522819939907	scripted	3	2	mediumCandle	1	exp	7	true	off	2591	mouseOverDistractor
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522819940352	scripted	3	2	mediumCandle	1	exp	7	true	on	3036	mouseOverDistractor
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522819943640	scripted	3	3	mediumCandle	1	exp	7	true	on	6321	mouseOverDistractor
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522819954508	scripted	3	3	mediumCandle	1	exp	7	true	off	17193	mouseOverDistractor
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522820093203	scripted	6	1	computerMouse	0	exp	8	true	on	2019	mouseOverDistractor
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522820094027	scripted	6	0	computerMouse	1	exp	8	true	off	2842	mouseOverDistractor
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522820094485	scripted	6	0	computerMouse	1	exp	8	true	on	3304	mouseOverDistractor
+planned_sample	4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211	1522820096485	scripted	6	0	computerMouse	1	exp	8	true	off	5304	mouseOverDistractor

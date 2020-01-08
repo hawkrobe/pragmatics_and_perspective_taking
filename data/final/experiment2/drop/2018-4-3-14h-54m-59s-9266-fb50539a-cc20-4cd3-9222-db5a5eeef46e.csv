@@ -1,0 +1,15 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792499467	unscripted	1	0	comb	0	base	8	false	correct	comb	1	1	1	1	5181	drop
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792521509	unscripted	1	1	computerMouse	0	base	8	true	correct	computerMouse	4	2	4	2	1223	drop
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792542296	unscripted	1	2	castIronPan	0	base	8	false	correct	castIronPan	3	3	3	3	5069	drop
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792570600	unscripted	1	3	piano	0	base	8	false	correct	piano	1	4	1	4	4696	drop
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792592081	unscripted	2	0	banana	0	exp	6	false	correct	banana	4	2	4	2	3696	drop
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792610748	unscripted	2	1	dollar	0	exp	6	false	correct	dollar	4	3	4	3	3125	drop
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792646471	unscripted	2	2	boardEraser	0	exp	6	true	correct	boardEraser	2	3	2	3	4057	drop
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792667641	unscripted	2	3	feather	0	exp	6	false	correct	feather	2	4	2	4	3560	drop
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792693378	unscripted	3	0	airplane	0	exp	1	false	correct	airplane	3	1	3	1	6404	drop
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792714521	unscripted	3	1	sunGlasses	0	exp	1	true	correct	sunGlasses	4	4	4	4	4635	drop
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792732108	unscripted	3	2	barrel	0	exp	1	false	correct	barrel	4	3	4	3	2687	drop
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792748001	unscripted	3	3	saxophone	0	exp	1	false	correct	saxophone	2	3	2	3	2280	drop
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792773196	unscripted	4	0	scissors	0	base	3	false	correct	scissors	2	2	2	2	4711	drop
+planned_sample	9266-fb50539a-cc20-4cd3-9222-db5a5eeef46e	1522792789508	unscripted	4	1	knife	0	base	3	false	correct	knife	3	4	3	4	2106	drop

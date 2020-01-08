@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:08:03Z",
+    "AutoApprovalTime": "2018-04-04T07:07:12Z",
+    "AssignmentId": "270",
+    "WorkerId": "270",
+    "answers": {
+        "subject_information": {
+            "totalLength": 672747,
+            "gameID": "8538-cb44f86e-9bb4-4bb0-91b7-fcb7f3d080bf",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 29,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I simply followed the instructions but there was at least one time where I had forgotten that the director can not see behind the curtain for some objects and I should have messaged warnings to the director for these."
+        },
+        "id": "8538-cb44f86e-9bb4-4bb0-91b7-fcb7f3d080bf"
+    },
+    "AcceptTime": "2018-04-04T06:24:33Z",
+    "HITId": "3ZQX1VYFTD558NS63OGMUTV37V78OD",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:02:12Z"
+}

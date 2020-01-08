@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:21:03Z",
+    "AutoApprovalTime": "2018-04-04T07:20:28Z",
+    "AssignmentId": "327",
+    "WorkerId": "327",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1664096,
+            "gameID": "4872-eb216959-c47d-4b9b-9201-98a6b197b0df",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 29,
+            "role": "matcher",
+            "comments": "none",
+            "strategy": "To see if the director was good at giving directions without being able to see what objects were on the entire grid."
+        },
+        "id": "4872-eb216959-c47d-4b9b-9201-98a6b197b0df"
+    },
+    "AcceptTime": "2018-04-04T06:40:55Z",
+    "HITId": "3OJX0UFJ0Z70ZXVD42Y9TVI39ND9UG",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:15:28Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:16:04Z",
+    "AutoApprovalTime": "2018-04-03T21:16:03Z",
+    "AssignmentId": "12",
+    "WorkerId": "12",
+    "answers": {
+        "subject_information": {
+            "totalLength": 947608,
+            "gameID": "5601-ef5309ee-189f-4d87-84a2-d1d52c65c529",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 29,
+            "role": "director",
+            "comments": "Everything went smoothly. No technical difficulties and instructions were easy to understand.",
+            "strategy": "Be as descriptive  of the item as possible"
+        },
+        "id": "5601-ef5309ee-189f-4d87-84a2-d1d52c65c529"
+    },
+    "AcceptTime": "2018-04-03T20:52:29Z",
+    "HITId": "3GV1I4SEO9PAYO6LXH3WIYVI6UVL64",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:11:03Z"
+}

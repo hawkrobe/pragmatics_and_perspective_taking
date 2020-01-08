@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:22:03Z",
+    "AutoApprovalTime": "2018-04-03T22:21:50Z",
+    "AssignmentId": "24",
+    "WorkerId": "24",
+    "answers": {
+        "subject_information": {
+            "totalLength": 176190,
+            "gameID": "0964-f074949a-e3b5-4eb5-a3af-c16348d6b0bd",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 3,
+            "role": "matcher",
+            "comments": "It was very interesting",
+            "strategy": "Clearing all my doubts"
+        },
+        "id": "0964-f074949a-e3b5-4eb5-a3af-c16348d6b0bd"
+    },
+    "AcceptTime": "2018-04-03T21:57:16Z",
+    "HITId": "3WGCNLZJKF8WTQHWEUTR4PWWPAED1J",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:16:50Z"
+}

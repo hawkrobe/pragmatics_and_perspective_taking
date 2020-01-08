@@ -1,0 +1,19 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793420832	unscripted	1	0	banana	0	exp	6	false	director	move banana up one	4126	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793437140	unscripted	1	1	dollar	0	exp	6	false	director	move dollar right one	3856	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793451321	unscripted	1	2	boardEraser	0	exp	6	true	director	move eraser up one	3342	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793470634	unscripted	1	2	boardEraser	1	exp	6	true	director	move expo eraser up one	10076	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793486925	unscripted	1	3	feather	0	exp	6	false	director	move feather left one	4896	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793509119	unscripted	2	0	comb	0	base	8	false	director	move brown comb up one	10746	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793531598	unscripted	2	1	computerMouse	0	base	8	true	director	move grey computer mouse up one	10990	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793546688	unscripted	2	2	castIronPan	0	base	8	false	director	move pan up one	2886	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793565559	unscripted	2	3	piano	0	base	8	false	director	move piano left one	1958	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793584877	unscripted	3	0	carrot	0	base	4	false	director	move carrot up one	3074	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793613158	unscripted	3	1	mediumMeasuringCup	0	base	4	true	director	move pyrex measuring cup down one	18344	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793647749	unscripted	3	1	mediumMeasuringCup	1	base	4	true	director	move pyrex measuring cup down one	15308	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793661971	unscripted	3	2	waterBottle	1	base	4	false	director	move blue water bottle right one	4850	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793683705	unscripted	3	3	chair	1	base	4	false	director	move chair left one	9832	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793699286	unscripted	4	0	scissors	0	exp	3	false	director	move black scissors right one	4012	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793717398	unscripted	4	1	knife	0	exp	3	false	director	move knife down one	8802	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793730484	unscripted	4	2	barOfSoap	0	exp	3	false	director	move blue soap left one	4950	chatMessage
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793748828	unscripted	4	3	cassetteTape	0	exp	3	true	director	move cassette tape down one	6796	chatMessage

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:42:03Z",
+    "AutoApprovalTime": "2018-04-03T22:41:26Z",
+    "AssignmentId": "359",
+    "WorkerId": "359",
+    "answers": {
+        "subject_information": {
+            "totalLength": 854820,
+            "gameID": "7782-9f4edcd8-c073-4cec-875f-4681dcc3e900",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "A lot of waiting, for the next instruction"
+        },
+        "id": "7782-9f4edcd8-c073-4cec-875f-4681dcc3e900"
+    },
+    "AcceptTime": "2018-04-03T22:19:37Z",
+    "HITId": "3D3B8GE892RN7SNHNGZFJPV41559P2",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:36:26Z"
+}

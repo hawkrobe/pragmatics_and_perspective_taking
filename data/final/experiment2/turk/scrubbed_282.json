@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:52:03Z",
+    "AutoApprovalTime": "2018-04-04T06:51:52Z",
+    "AssignmentId": "282",
+    "WorkerId": "282",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1723940,
+            "gameID": "8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 28,
+            "role": "director",
+            "comments": "",
+            "strategy": "I mostly referenced the other pieces that I was moving towards, as well as the number of squares. "
+        },
+        "id": "8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee"
+    },
+    "AcceptTime": "2018-04-04T06:13:17Z",
+    "HITId": "33N1S8XHHMLZWRMS6CIOVHFZDT3Z1L",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:46:52Z"
+}

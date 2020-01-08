@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:30:03Z",
+    "AutoApprovalTime": "2018-04-04T06:29:41Z",
+    "AssignmentId": "273",
+    "WorkerId": "273",
+    "answers": {
+        "subject_information": {
+            "totalLength": 784638,
+            "gameID": "2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 28,
+            "role": "director",
+            "comments": "Would love to see more hits like this, thank you!",
+            "strategy": "Using directions including up/down one or left/right one"
+        },
+        "id": "2355-7948ce1d-148a-4d70-a344-43ca3aa3ff3e"
+    },
+    "AcceptTime": "2018-04-04T06:07:40Z",
+    "HITId": "3ZQX1VYFTD558NS63OGMUTV37V78OD",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:24:41Z"
+}

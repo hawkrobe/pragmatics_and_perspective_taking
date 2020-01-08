@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:50:03Z",
+    "AutoApprovalTime": "2018-04-03T21:49:18Z",
+    "AssignmentId": "349",
+    "WorkerId": "349",
+    "answers": {
+        "subject_information": {
+            "totalLength": 577127,
+            "gameID": "1336-781ddb71-735d-4dfe-90de-9b2b85a89f15",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 32,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I listened to what the human player said, and took into account that he/she couldn't see behind the curtains."
+        },
+        "id": "1336-781ddb71-735d-4dfe-90de-9b2b85a89f15"
+    },
+    "AcceptTime": "2018-04-03T21:27:58Z",
+    "HITId": "3SCKNODZ0XGJQONBS4O314Z360G7NS",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:44:18Z"
+}

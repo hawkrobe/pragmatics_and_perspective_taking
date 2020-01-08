@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:21:03Z",
+    "AutoApprovalTime": "2018-04-03T23:20:53Z",
+    "AssignmentId": "61",
+    "WorkerId": "61",
+    "answers": {
+        "subject_information": {
+            "totalLength": 680676,
+            "gameID": "8834-ddbb439f-b8ec-4e20-8bf0-07bbfe5bb277",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 32,
+            "role": "director",
+            "comments": "I thought I would have a chance to interact with my partner, but he never said anything.",
+            "strategy": "I stated the identity of the object and used left right up and down for directions. I clarified which object I meant if two were similar."
+        },
+        "id": "8834-ddbb439f-b8ec-4e20-8bf0-07bbfe5bb277"
+    },
+    "AcceptTime": "2018-04-03T22:59:48Z",
+    "HITId": "3D06DR5225JVR809N6LNYGCT2IEMA0",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:15:53Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:05:03Z",
+    "AutoApprovalTime": "2018-04-04T01:04:41Z",
+    "AssignmentId": "122",
+    "WorkerId": "122",
+    "answers": {
+        "subject_information": {
+            "totalLength": 738414,
+            "gameID": "3592-3f23ca18-c32b-4f96-bb57-90d47d86e040",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "matcher",
+            "comments": "This is a very interesting experiment. I had fun doing it.",
+            "strategy": "I followed the instructions and focused on the things the director can see."
+        },
+        "id": "3592-3f23ca18-c32b-4f96-bb57-90d47d86e040"
+    },
+    "AcceptTime": "2018-04-04T00:42:40Z",
+    "HITId": "3QE4DGPGBRBGX9O632D1886WEM9G4E",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:59:41Z"
+}

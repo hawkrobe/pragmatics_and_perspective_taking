@@ -1,0 +1,10 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	7915-6adabe85-d7fb-4a73-8f64-9feb28508e17	1522802869797	scripted	2	2	middleBlock	0	exp	2	true	on	713	mouseOverDistractor
+planned_sample	7915-6adabe85-d7fb-4a73-8f64-9feb28508e17	1522802870258	scripted	2	2	middleBlock	0	exp	2	true	off	1232	mouseOverDistractor
+planned_sample	7915-6adabe85-d7fb-4a73-8f64-9feb28508e17	1522802870362	scripted	2	2	middleBlock	0	exp	2	true	on	1332	mouseOverDistractor
+planned_sample	7915-6adabe85-d7fb-4a73-8f64-9feb28508e17	1522802871711	scripted	2	1	middleBlock	1	exp	2	true	off	2760	mouseOverDistractor
+planned_sample	7915-6adabe85-d7fb-4a73-8f64-9feb28508e17	1522803012420	scripted	3	2	boardEraser	0	base	6	true	on	16340	mouseOverDistractor
+planned_sample	7915-6adabe85-d7fb-4a73-8f64-9feb28508e17	1522803012543	scripted	3	2	boardEraser	0	base	6	true	off	16423	mouseOverDistractor
+planned_sample	7915-6adabe85-d7fb-4a73-8f64-9feb28508e17	1522803026196	scripted	3	2	boardEraser	0	base	6	true	on	3748	mouseOverDistractor
+planned_sample	7915-6adabe85-d7fb-4a73-8f64-9feb28508e17	1522803026892	scripted	3	2	boardEraser	0	base	6	true	off	4483	mouseOverDistractor
+planned_sample	7915-6adabe85-d7fb-4a73-8f64-9feb28508e17	1522803217129	scripted	5	3	cassetteTape	0	exp	3	true	on	1142	mouseOverDistractor

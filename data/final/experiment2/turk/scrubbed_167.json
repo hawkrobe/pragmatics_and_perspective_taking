@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T04:10:03Z",
+    "AutoApprovalTime": "2018-04-04T04:09:17Z",
+    "AssignmentId": "167",
+    "WorkerId": "167",
+    "answers": {
+        "subject_information": {
+            "totalLength": 749944,
+            "gameID": "2061-da69236f-9200-4ed8-aaf0-58fe064fa29b",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "director",
+            "comments": "This was fun! ",
+            "strategy": "I tried to be as descriptive of the objects as possible. After I realized in one round that the hidden objects could be similar to the ones I need to direct the other player to move, I added more detail to my descriptions. "
+        },
+        "id": "2061-da69236f-9200-4ed8-aaf0-58fe064fa29b"
+    },
+    "AcceptTime": "2018-04-04T03:47:15Z",
+    "HITId": "3FO95NVK5C0QOKZV9E3V5F09UCTSR1",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T04:04:17Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T04:06:03Z",
+    "AutoApprovalTime": "2018-04-04T04:05:56Z",
+    "AssignmentId": "164",
+    "WorkerId": "164",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1328300,
+            "gameID": "4241-cda4a373-ffd7-41e3-ae60-82b9d377a455",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 32,
+            "role": "director",
+            "comments": "I hope I did it correctly, I was nervous but enjoyed the experiment!",
+            "strategy": "I tried to use properties of the object to describe them, ex. produces sound. I tried not to make it obvious and use the name of the object as much as possible. "
+        },
+        "id": "4241-cda4a373-ffd7-41e3-ae60-82b9d377a455"
+    },
+    "AcceptTime": "2018-04-04T03:31:47Z",
+    "HITId": "3P4C70TRMRHCVHVR9UCIUP8709ALGK",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T04:00:56Z"
+}

@@ -1,0 +1,5 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	9555-b7652692-1cfa-43c5-a0fb-e4ba4682d200	1522820658049	unscripted	1	0	scissors	0	base	3	false	correct	scissors	2	2	2	2	12153	drop
+planned_sample	9555-b7652692-1cfa-43c5-a0fb-e4ba4682d200	1522820698615	unscripted	1	1	knife	0	base	3	false	correct	knife	3	4	3	4	11140	drop
+planned_sample	9555-b7652692-1cfa-43c5-a0fb-e4ba4682d200	1522820724360	unscripted	1	2	barOfSoap	0	base	3	false	correct	barOfSoap	3	3	3	3	4720	drop
+planned_sample	9555-b7652692-1cfa-43c5-a0fb-e4ba4682d200	1522820772116	unscripted	1	3	cassetteTape	0	base	3	true	correct	cassetteTape	3	2	3	2	15507	drop

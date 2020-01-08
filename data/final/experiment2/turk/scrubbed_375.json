@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:48:03Z",
+    "AutoApprovalTime": "2018-04-03T22:47:33Z",
+    "AssignmentId": "375",
+    "WorkerId": "375",
+    "answers": {
+        "subject_information": {
+            "totalLength": 993989,
+            "gameID": "0771-ecbcf018-95f2-4e94-a411-b996093c3c68",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 20,
+            "role": "director",
+            "comments": "Thank You! I enjoyed the study with no problems.",
+            "strategy": "I realized that their may be similar objects with a different color, and objects that have similar names but are different in shape. So I started explaining things in terms of colors and features of the objects, and I kept the movement basic. "
+        },
+        "id": "0771-ecbcf018-95f2-4e94-a411-b996093c3c68"
+    },
+    "AcceptTime": "2018-04-03T21:50:15Z",
+    "HITId": "3M47JKRKCX1FJHM23SUSDT9CMUX684",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:42:33Z"
+}

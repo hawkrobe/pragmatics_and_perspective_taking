@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T05:57:03Z",
+    "AutoApprovalTime": "2018-04-04T05:56:16Z",
+    "AssignmentId": "205",
+    "WorkerId": "205",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1215813,
+            "gameID": "0054-0f179884-b136-4292-8dd7-fb6fb720c7f0",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 28,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "At first I just followed instructions. It hit me later that they couldn't see what I saw and that multiple items were defined the same. I'm tired so I was slow to do so. "
+        },
+        "id": "0054-0f179884-b136-4292-8dd7-fb6fb720c7f0"
+    },
+    "AcceptTime": "2018-04-04T05:27:27Z",
+    "HITId": "3EPG8DX9LKQ465L5KQMY79Q2FA1P58",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T05:51:16Z"
+}

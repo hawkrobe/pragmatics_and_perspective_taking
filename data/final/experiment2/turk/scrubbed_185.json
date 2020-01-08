@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T05:45:03Z",
+    "AutoApprovalTime": "2018-04-04T05:44:18Z",
+    "AssignmentId": "185",
+    "WorkerId": "185",
+    "answers": {
+        "subject_information": {
+            "totalLength": 694114,
+            "gameID": "4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 29,
+            "role": "director",
+            "comments": "I didn't like it when the directions were automatically filled in for me.",
+            "strategy": "Just name the object and give the direction/space."
+        },
+        "id": "4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211"
+    },
+    "AcceptTime": "2018-04-04T05:22:40Z",
+    "HITId": "3SZYX62S5G0F0ZH5O4SH7NZHFGV75J",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T05:39:18Z"
+}

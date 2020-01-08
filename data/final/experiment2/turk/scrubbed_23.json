@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:03Z",
+    "AutoApprovalTime": "2018-04-03T22:06:31Z",
+    "AssignmentId": "23",
+    "WorkerId": "23",
+    "answers": {
+        "subject_information": {
+            "totalLength": 199941,
+            "gameID": "7975-32a7aea5-ac36-46c8-aee9-e8872dc31ce9",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 4,
+            "role": "matcher",
+            "comments": "We got disconnected too soon. Bummer! I hope my participation helped your study though. Thanks and have a great day!",
+            "strategy": "I just followed the director's instructions."
+        },
+        "id": "7975-32a7aea5-ac36-46c8-aee9-e8872dc31ce9"
+    },
+    "AcceptTime": "2018-04-03T21:53:10Z",
+    "HITId": "3WGCNLZJKF8WTQHWEUTR4PWWPAED1J",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:31Z"
+}

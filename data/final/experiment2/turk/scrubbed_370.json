@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:08:03Z",
+    "AutoApprovalTime": "2018-04-03T22:07:40Z",
+    "AssignmentId": "370",
+    "WorkerId": "370",
+    "answers": {
+        "subject_information": {
+            "totalLength": 194889,
+            "gameID": "8831-a9e4a1f5-3030-486f-8c21-4304d325728a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 0,
+            "role": "director",
+            "comments": "No other comments",
+            "strategy": "I followed the instructions but did not have time to develop a strategy because my partner disconnected"
+        },
+        "id": "8831-a9e4a1f5-3030-486f-8c21-4304d325728a"
+    },
+    "AcceptTime": "2018-04-03T21:43:02Z",
+    "HITId": "3M47JKRKCX1FJHM23SUSDT9CMUX684",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:02:40Z"
+}

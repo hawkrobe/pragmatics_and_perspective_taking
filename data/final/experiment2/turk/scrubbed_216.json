@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:41:03Z",
+    "AutoApprovalTime": "2018-04-04T06:40:58Z",
+    "AssignmentId": "216",
+    "WorkerId": "216",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1411334,
+            "gameID": "0621-d4706677-e888-487c-ab9d-3770f3986f4b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 31,
+            "role": "director",
+            "comments": "I didn't like how on certain objects I couldn't answer my partner's questions.  These were ones where I had to use a response already prepared for me, and it was usually vague and needed clarification that they asked for and  I wanted to give but was prevented from doing.",
+            "strategy": "I just told them to move the object in the direction of the arrow.  If I couldn't tell what the object was I tried to describe the shape and failed.  Then I tried to just guess what it night have been and said that and it worked."
+        },
+        "id": "0621-d4706677-e888-487c-ab9d-3770f3986f4b"
+    },
+    "AcceptTime": "2018-04-04T05:58:47Z",
+    "HITId": "3FDWKV9VCN2F6HE7TB2EYHON9MJUMZ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:35:58Z"
+}

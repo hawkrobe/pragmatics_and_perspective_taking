@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:03Z",
+    "AutoApprovalTime": "2018-04-03T22:06:04Z",
+    "AssignmentId": "364",
+    "WorkerId": "364",
+    "answers": {
+        "subject_information": {
+            "totalLength": 361266,
+            "gameID": "7799-d174c147-343b-43b9-8b31-bb290ead7a75",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 12,
+            "role": "director",
+            "comments": "Was fun, and I wish my partner hadn't left!",
+            "strategy": "I described the objects and hoped the person moving them did the correct thing."
+        },
+        "id": "7799-d174c147-343b-43b9-8b31-bb290ead7a75"
+    },
+    "AcceptTime": "2018-04-03T21:46:26Z",
+    "HITId": "3N5YJ55YXG319QL9Z70NBV1T78MNAZ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:04Z"
+}

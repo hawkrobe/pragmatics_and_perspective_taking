@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:07:03Z",
+    "AutoApprovalTime": "2018-04-04T07:06:34Z",
+    "AssignmentId": "291",
+    "WorkerId": "291",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1748165,
+            "gameID": "5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 29,
+            "role": "director",
+            "comments": "experiment was enjoyable",
+            "strategy": "strategic"
+        },
+        "id": "5862-da817f5f-5ac9-47f3-b2ca-34a68eff59fc"
+    },
+    "AcceptTime": "2018-04-04T06:24:58Z",
+    "HITId": "3UDTAB6HH6ZKJBJX6VKP4OUWTY990D",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:01:34Z"
+}

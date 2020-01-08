@@ -1,0 +1,2 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	eventType
+pilot1	2624-f46d1de3-64dc-41a5-b5b1-a52c6e52665c	1522694178590	unscripted	1	0	banana	0	base	6	false	correct	banana	4	2	4	2	drop

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:29:03Z",
+    "AutoApprovalTime": "2018-04-04T06:28:13Z",
+    "AssignmentId": "206",
+    "WorkerId": "206",
+    "answers": {
+        "subject_information": {
+            "totalLength": 501812,
+            "gameID": "7635-ae02f05a-ec28-4785-8542-f45af53fa496",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 1,
+            "role": "director",
+            "comments": "",
+            "strategy": "i was guiding through grids and was giving clear istructions to matcher"
+        },
+        "id": "7635-ae02f05a-ec28-4785-8542-f45af53fa496"
+    },
+    "AcceptTime": "2018-04-04T06:04:08Z",
+    "HITId": "3EPG8DX9LKQ465L5KQMY79Q2FA1P58",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:23:13Z"
+}

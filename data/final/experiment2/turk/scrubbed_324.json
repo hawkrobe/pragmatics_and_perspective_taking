@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:03:03Z",
+    "AutoApprovalTime": "2018-04-04T07:02:57Z",
+    "AssignmentId": "324",
+    "WorkerId": "324",
+    "answers": {
+        "subject_information": {
+            "totalLength": 778250,
+            "gameID": "4250-c0df0e0b-03c5-427e-9972-4632861f7ad1",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 31,
+            "role": "matcher",
+            "comments": "Interesting hit, and I'm glad I was paired with another human!",
+            "strategy": "Be mindful of the instructions and of the fact that the Director can't see items behind the curtain."
+        },
+        "id": "4250-c0df0e0b-03c5-427e-9972-4632861f7ad1"
+    },
+    "AcceptTime": "2018-04-04T06:40:50Z",
+    "HITId": "3OJX0UFJ0Z70ZXVD42Y9TVI39ND9UG",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:57:57Z"
+}

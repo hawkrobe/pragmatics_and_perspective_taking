@@ -1,0 +1,16 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792541335	unscripted	1	1	mediumMeasuringCup	0	exp	4	true	on	783	mouseOverDistractor
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792542368	unscripted	1	0	mediumMeasuringCup	1	exp	4	true	off	1817	mouseOverDistractor
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792800753	unscripted	4	1	roundBrush	0	exp	5	true	on	1011	mouseOverDistractor
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792801515	unscripted	4	0	roundBrush	1	exp	5	true	off	1780	mouseOverDistractor
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792802081	unscripted	4	0	roundBrush	1	exp	5	true	on	2344	mouseOverDistractor
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792805229	unscripted	4	1	roundBrush	1	exp	5	true	on	5496	mouseOverDistractor
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792808362	unscripted	4	1	roundBrush	1	exp	5	true	off	8625	mouseOverDistractor
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792811932	unscripted	4	1	roundBrush	1	exp	5	true	on	478	mouseOverDistractor
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792812762	unscripted	4	0	roundBrush	2	exp	5	true	off	1314	mouseOverDistractor
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792813193	unscripted	4	0	roundBrush	2	exp	5	true	on	1745	mouseOverDistractor
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792814279	unscripted	4	-1	roundBrush	3	exp	5	true	off	2830	mouseOverDistractor
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792814748	unscripted	4	-1	roundBrush	3	exp	5	true	on	3299	mouseOverDistractor
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792815063	unscripted	4	-1	roundBrush	3	exp	5	true	off	3610	mouseOverDistractor
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792815108	unscripted	4	-1	roundBrush	3	exp	5	true	on	3660	mouseOverDistractor
+planned_sample	7799-d174c147-343b-43b9-8b31-bb290ead7a75	1522792815376	unscripted	4	-2	roundBrush	4	exp	5	true	off	3929	mouseOverDistractor

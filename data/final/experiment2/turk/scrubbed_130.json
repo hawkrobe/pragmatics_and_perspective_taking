@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:51:03Z",
+    "AutoApprovalTime": "2018-04-04T01:50:08Z",
+    "AssignmentId": "130",
+    "WorkerId": "130",
+    "answers": {
+        "subject_information": {
+            "totalLength": 629853,
+            "gameID": "2424-e0f68d15-48c9-4e47-b792-605560d7a848",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "matcher",
+            "comments": "I had internet issues, so I was late. I'm so sorry!!",
+            "strategy": "I put my cursor in the middle and waited.  "
+        },
+        "id": "2424-e0f68d15-48c9-4e47-b792-605560d7a848"
+    },
+    "AcceptTime": "2018-04-04T00:48:12Z",
+    "HITId": "3KQC8JMJGCS9F90DNUQ0J3QRFMQ3HF",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T01:45:08Z"
+}

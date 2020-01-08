@@ -1,0 +1,15 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	5500-52e40b54-14b4-4e61-8fbc-37f9d794428e	1522825293680	scripted	2	1	roundBrush	0	exp	5	true	on	4034	mouseOverDistractor
+planned_sample	5500-52e40b54-14b4-4e61-8fbc-37f9d794428e	1522825294272	scripted	2	1	roundBrush	0	exp	5	true	off	4632	mouseOverDistractor
+planned_sample	5500-52e40b54-14b4-4e61-8fbc-37f9d794428e	1522825581917	scripted	4	2	boardEraser	0	exp	6	true	on	23175	mouseOverDistractor
+planned_sample	5500-52e40b54-14b4-4e61-8fbc-37f9d794428e	1522825582134	scripted	4	2	boardEraser	0	exp	6	true	off	23390	mouseOverDistractor
+planned_sample	5500-52e40b54-14b4-4e61-8fbc-37f9d794428e	1522825929892	scripted	6	3	mediumCandle	0	base	7	true	on	4607	mouseOverDistractor
+planned_sample	5500-52e40b54-14b4-4e61-8fbc-37f9d794428e	1522825930075	scripted	6	3	mediumCandle	0	base	7	true	off	4790	mouseOverDistractor
+planned_sample	5500-52e40b54-14b4-4e61-8fbc-37f9d794428e	1522826157184	scripted	8	1	computerMouse	0	exp	8	true	on	7285	mouseOverDistractor
+planned_sample	5500-52e40b54-14b4-4e61-8fbc-37f9d794428e	1522826157652	scripted	8	1	computerMouse	0	exp	8	true	off	7751	mouseOverDistractor
+planned_sample	5500-52e40b54-14b4-4e61-8fbc-37f9d794428e	1522826159161	scripted	8	0	computerMouse	1	exp	8	true	on	9264	mouseOverDistractor
+planned_sample	5500-52e40b54-14b4-4e61-8fbc-37f9d794428e	1522826159322	scripted	8	0	computerMouse	1	exp	8	true	off	9427	mouseOverDistractor
+planned_sample	5500-52e40b54-14b4-4e61-8fbc-37f9d794428e	1522826221676	scripted	8	1	computerMouse	1	exp	8	true	on	6725	mouseOverDistractor
+planned_sample	5500-52e40b54-14b4-4e61-8fbc-37f9d794428e	1522826222007	scripted	8	1	computerMouse	1	exp	8	true	off	7061	mouseOverDistractor
+planned_sample	5500-52e40b54-14b4-4e61-8fbc-37f9d794428e	1522826256272	scripted	8	1	computerMouse	2	exp	8	true	on	1856	mouseOverDistractor
+planned_sample	5500-52e40b54-14b4-4e61-8fbc-37f9d794428e	1522826256848	scripted	8	1	computerMouse	2	exp	8	true	off	2440	mouseOverDistractor

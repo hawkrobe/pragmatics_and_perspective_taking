@@ -1,0 +1,4 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	1873-84b792d7-8ca5-4803-b3de-aefcb4e7d1a6	1522825394692	unscripted	1	0	binoculars	0	base	2	false	correct	binoculars	2	4	2	4	11856	drop
+planned_sample	1873-84b792d7-8ca5-4803-b3de-aefcb4e7d1a6	1522825540540	unscripted	1	1	wrench	0	base	2	false	correct	wrench	2	1	2	1	23885	drop
+planned_sample	1873-84b792d7-8ca5-4803-b3de-aefcb4e7d1a6	1522825586748	unscripted	1	2	middleBlock	0	base	2	true	correct	middleBlock	3	3	3	3	10587	drop

@@ -1,0 +1,16 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793413193	scripted	1	0	airplane	0	base	1	false	correct	airplane	3	1	3	1	6247	drop
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793470030	scripted	1	1	sunGlasses	0	base	1	true	correct	sunGlasses	4	4	4	4	4391	drop
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793470478	scripted	1	1	sunGlasses	0	base	1	true	correct	sunGlasses	4	4	4	4	4837	drop
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793506982	scripted	1	3	saxophone	0	base	1	false	correct	saxophone	2	3	2	3	2729	drop
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793527473	scripted	2	0	binoculars	0	exp	2	false	correct	binoculars	2	4	2	4	1867	drop
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793548451	scripted	2	1	wrench	0	exp	2	false	correct	wrench	2	1	2	1	1802	drop
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793561531	scripted	2	1	middleBlock	1	exp	2	true	incorrect	bottomBlock	3	3	3	4	1700	drop
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793589583	scripted	2	2	middleBlock	0	exp	2	true	correct	middleBlock	3	3	3	3	3647	drop
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793627772	scripted	2	3	coffeeMug	0	exp	2	false	correct	coffeeMug	2	2	2	2	10177	drop
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793639408	scripted	3	0	banana	0	base	6	false	correct	banana	4	2	4	2	2094	drop
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793665958	scripted	3	1	dollar	0	base	6	false	correct	dollar	4	3	4	3	4734	drop
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793678602	scripted	3	2	boardEraser	0	base	6	true	correct	boardEraser	2	3	2	3	2272	drop
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793693604	scripted	3	3	feather	0	base	6	false	correct	feather	2	4	2	4	2054	drop
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793720788	scripted	4	0	scissors	0	exp	3	false	correct	scissors	2	2	2	2	5637	drop
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793732028	scripted	4	1	knife	0	exp	3	false	correct	knife	3	4	3	4	2650	drop

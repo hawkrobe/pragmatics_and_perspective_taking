@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T04:01:03Z",
+    "AutoApprovalTime": "2018-04-04T04:00:50Z",
+    "AssignmentId": "179",
+    "WorkerId": "179",
+    "answers": {
+        "subject_information": {
+            "totalLength": 802716,
+            "gameID": "1530-63446cf3-b006-4888-8af1-dc928951fabb",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "matcher",
+            "comments": "Everything was fine.",
+            "strategy": "I simply moved the objects as instructed."
+        },
+        "id": "1530-63446cf3-b006-4888-8af1-dc928951fabb"
+    },
+    "AcceptTime": "2018-04-04T03:38:57Z",
+    "HITId": "3TZ0XG8CBUK210O01ZX4X30ECWH89V",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T03:55:50Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:05:03Z",
+    "AutoApprovalTime": "2018-04-03T22:04:17Z",
+    "AssignmentId": "38",
+    "WorkerId": "38",
+    "answers": {
+        "subject_information": {
+            "totalLength": 479852,
+            "gameID": "4654-18429eb7-4402-4161-b97e-cbb4e3adeb7b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "director",
+            "comments": "",
+            "strategy": "naming the item and identifying color and then direction"
+        },
+        "id": "4654-18429eb7-4402-4161-b97e-cbb4e3adeb7b"
+    },
+    "AcceptTime": "2018-04-03T21:47:37Z",
+    "HITId": "3NFWQRSHVEEQVPLVNJ9KZC3N3CDGFX",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:59:17Z"
+}

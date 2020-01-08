@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:22:03Z",
+    "AutoApprovalTime": "2018-04-03T22:21:58Z",
+    "AssignmentId": "44",
+    "WorkerId": "44",
+    "answers": {
+        "subject_information": {
+            "totalLength": 666302,
+            "gameID": "8558-1965dc82-dc2c-42ea-be04-6af05278b5d9",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 21,
+            "role": "matcher",
+            "comments": "why did he quit?\n",
+            "strategy": "i followe dthe dirI followed the diredxctors ector lead"
+        },
+        "id": "8558-1965dc82-dc2c-42ea-be04-6af05278b5d9"
+    },
+    "AcceptTime": "2018-04-03T21:50:06Z",
+    "HITId": "3NFWQRSHVEEQVPLVNJ9KZC3N3CDGFX",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:16:58Z"
+}

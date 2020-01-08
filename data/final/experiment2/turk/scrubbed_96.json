@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T00:53:03Z",
+    "AutoApprovalTime": "2018-04-04T00:52:10Z",
+    "AssignmentId": "96",
+    "WorkerId": "96",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1054488,
+            "gameID": "2482-896fac89-c21a-4239-9064-304ba195a58b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 28,
+            "role": "director",
+            "comments": "some audible feedback when the mover finishes their turn would be helpful, is possible. I didn't notice the first time the mover missed a target and thought something was wrong.",
+            "strategy": "I tried to be specific about the object's color or other characteristics since I assume the mover could see two similar objects."
+        },
+        "id": "2482-896fac89-c21a-4239-9064-304ba195a58b"
+    },
+    "AcceptTime": "2018-04-04T00:26:16Z",
+    "HITId": "337F8MIIMZDJM5DLP0OYNGJG75I40X",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:47:10Z"
+}

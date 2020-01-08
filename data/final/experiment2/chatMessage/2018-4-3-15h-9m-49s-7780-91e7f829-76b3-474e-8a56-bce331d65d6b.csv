@@ -1,0 +1,17 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793389425	scripted	1	0	airplane	0	base	1	false	director	move the plan one block closer to barrell on same line	16814	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793395969	scripted	1	0	airplane	0	base	1	false	director	plane*	3006	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793458689	scripted	1	1	sunGlasses	0	base	1	true	director	move the glasses one space to the right	65722	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793500597	scripted	1	3	saxophone	0	base	1	false	director	move saxaphone up one block	19442	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793522596	scripted	2	0	binoculars	0	exp	2	false	director	move the binoculars one space to the right	41440	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793544100	scripted	2	1	wrench	0	exp	2	false	director	move the wrench one space to the left	9106	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793555565	scripted	2	2	middleBlock	0	exp	2	true	director	move the bottom block one space to the left	20571	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793581821	scripted	2	2	middleBlock	1	exp	2	true	director	move the B Block one space to interior	11346	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793613574	scripted	2	3	coffeeMug	0	exp	2	false	director	move coffee mug one space to right covering curtains	13716	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793634326	scripted	3	0	banana	0	base	6	false	director	move the banana up by one space	34468	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793657348	scripted	3	1	dollar	0	base	6	false	director	move the dollar bill one space to outside under banana	12606	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793674102	scripted	3	2	boardEraser	0	base	6	true	director	move the eraser up by one space	29358	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793689408	scripted	3	3	feather	0	base	6	false	director	move feather left one space	5512	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793713166	scripted	4	0	scissors	0	exp	3	false	director	move scirros one space right towards interior covering curtains	12528	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793727150	scripted	4	1	knife	0	exp	3	false	director	move the knife down one space	26511	chatMessage
+planned_sample	7780-91e7f829-76b3-474e-8a56-bce331d65d6b	1522793746695	scripted	4	2	barOfSoap	0	exp	3	false	director	move soap one space to interior	8350	chatMessage

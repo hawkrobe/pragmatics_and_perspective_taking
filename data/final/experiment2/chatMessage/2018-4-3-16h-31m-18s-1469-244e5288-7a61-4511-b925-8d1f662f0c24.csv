@@ -1,0 +1,40 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798278555	scripted	1	0	carrot	0	base	4	false	director	move the carrot up one space	NaN	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798312220	scripted	1	1	mediumMeasuringCup	0	base	4	true	director	move the large measuring cup down one space	NaN	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798326717	scripted	1	1	mediumMeasuringCup	0	base	4	true	director	move the large measuring cup down one space	NaN	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798349681	scripted	1	2	waterBottle	0	base	4	false	director	move the water bottle to the right	14791	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798369740	scripted	1	3	chair	0	base	4	false	director	move the chair to te left	8006	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798381359	scripted	2	0	banana	0	exp	6	false	director	move the banana up by one space	19609	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798401371	scripted	2	1	dollar	0	exp	6	false	director	dollar right	2240	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798413670	scripted	2	2	boardEraser	0	exp	6	true	director	move the eraser up by one space	14537	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798429779	scripted	2	2	boardEraser	1	exp	6	true	director	eraser up	1671	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798441494	scripted	2	2	boardEraser	2	exp	6	true	director	yes	41	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798454696	scripted	2	2	boardEraser	2	exp	6	true	director	ne	9147	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798459758	scripted	2	2	boardEraser	2	exp	6	true	director	one up	2030	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798480052	scripted	2	3	feather	0	exp	6	false	director	feather one to the left	4582	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798506709	scripted	3	0	basketball	0	base	5	false	director	bsketball one down	8819	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798523726	scripted	3	1	roundBrush	0	base	5	true	director	move the brush one space to the left	25835	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798548225	scripted	3	2	headphones	0	base	5	false	director	headphones one the the left	7871	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798563411	scripted	3	3	book	0	base	5	false	director	move the book one space to the right	23057	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798579609	scripted	4	0	comb	0	base	8	false	director	comb one up	3605	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798591945	scripted	4	1	computerMouse	0	base	8	true	director	move the mouse up by one space	15944	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798615441	scripted	4	2	castIronPan	0	base	8	false	director	skilet one up	3222	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798632559	scripted	4	3	piano	0	base	8	false	director	piano one left	2872	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798646608	scripted	5	0	magnet	0	exp	7	false	director	move the magnet down by one space	16918	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798671195	scripted	5	1	handcuffs	0	exp	7	false	director	cuffs one down	3912	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798691561	scripted	5	2	pandaToy	0	exp	7	false	director	teddy bear one down	3193	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798702994	scripted	5	3	mediumCandle	0	exp	7	true	director	move the small candle down by one space	14623	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798724241	scripted	6	0	scissors	0	exp	3	false	director	scissors 1 R	5203	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798737246	scripted	6	1	knife	0	exp	3	false	director	move the knife down one space	18204	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798755366	scripted	6	2	barOfSoap	0	exp	3	false	director	soap 1 L	4333	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798765952	scripted	6	3	cassetteTape	0	exp	3	true	director	move the tape down by one space	14917	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798785844	scripted	6	3	cassetteTape	1	exp	3	true	director	cassete 1 Down	3961	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798801969	scripted	7	0	airplane	0	base	1	false	director	plane 1 R	3474	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798815243	scripted	7	1	sunGlasses	0	base	1	true	director	move the glasses one space to the right	16743	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798827470	scripted	7	2	barrel	0	base	1	false	director	move the barrel down by one space	28972	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798842197	scripted	7	3	saxophone	0	base	1	false	director	sax 1 UP	1998	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798852867	scripted	8	0	binoculars	0	exp	2	false	director	move the binoculars one space to the right	12666	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798866055	scripted	8	0	binoculars	0	exp	2	false	director	move the binoculars one space to the right	25850	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798877117	scripted	8	1	wrench	0	exp	2	false	director	wrench 1 L	4363	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798888893	scripted	8	2	middleBlock	0	exp	2	true	director	move the bottom block one space to the left	16113	chatMessage
+planned_sample	1469-244e5288-7a61-4511-b925-8d1f662f0c24	1522798911764	scripted	8	3	coffeeMug	0	exp	2	false	director	white cup 1 R	5082	chatMessage

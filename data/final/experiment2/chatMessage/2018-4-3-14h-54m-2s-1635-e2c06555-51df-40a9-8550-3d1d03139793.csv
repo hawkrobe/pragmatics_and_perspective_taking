@@ -1,0 +1,13 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792442542	scripted	1	0	banana	0	exp	6	false	director	move the banana up by one space	NaN	chatMessage
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792537172	scripted	1	1	dollar	0	exp	6	false	director	move the dollar to the right one space	8294	chatMessage
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792558872	scripted	1	2	boardEraser	0	exp	6	true	director	move the eraser up by one space	29993	chatMessage
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792595935	scripted	1	3	feather	0	exp	6	false	director	move the feather to the left one space	7180	chatMessage
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792621197	scripted	2	0	scissors	0	base	3	false	director	move the scissors right one space	8357	chatMessage
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792633994	scripted	2	1	knife	0	base	3	false	director	move the knife down one space	21768	chatMessage
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792660000	scripted	2	2	barOfSoap	0	base	3	false	director	move the soap left one space	5975	chatMessage
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792672205	scripted	2	3	cassetteTape	0	base	3	true	director	move the tape down by one space	17747	chatMessage
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792729445	scripted	3	0	comb	0	base	8	false	director	move the comb up	4627	chatMessage
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792754099	scripted	3	1	computerMouse	0	base	8	true	director	move the mouse up by one space	28511	chatMessage
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792778638	scripted	3	2	castIronPan	0	base	8	false	director	move the pan up once	4537	chatMessage
+planned_sample	1635-e2c06555-51df-40a9-8550-3d1d03139793	1522792806629	scripted	3	3	piano	0	base	8	false	director	move the piano to the left once	5450	chatMessage

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:20:03Z",
+    "AutoApprovalTime": "2018-04-03T22:19:38Z",
+    "AssignmentId": "303",
+    "WorkerId": "303",
+    "answers": {
+        "subject_information": {
+            "totalLength": 808896,
+            "gameID": "4694-055e34cd-c722-495d-aafa-d349829c3c02",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 29,
+            "role": "director",
+            "comments": "Fun and interesting study!",
+            "strategy": "No strategy, I just followed the arrow and described to the Matcher where to move."
+        },
+        "id": "4694-055e34cd-c722-495d-aafa-d349829c3c02"
+    },
+    "AcceptTime": "2018-04-03T21:54:01Z",
+    "HITId": "3YD0MU1NC21C65TMJ0JYFYF37TH7A8",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:14:38Z"
+}

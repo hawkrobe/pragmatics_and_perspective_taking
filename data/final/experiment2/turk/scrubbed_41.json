@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:03Z",
+    "AutoApprovalTime": "2018-04-03T22:06:12Z",
+    "AssignmentId": "41",
+    "WorkerId": "41",
+    "answers": {
+        "subject_information": {
+            "totalLength": 378516,
+            "gameID": "7525-4c9ece91-607e-46dc-9e3a-82c40745fb88",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 12,
+            "role": "matcher",
+            "comments": "none",
+            "strategy": "I followed the directions they gave me and tried to make sure I was careful. I forgot a couple times they couldn't see the curtain boxes"
+        },
+        "id": "7525-4c9ece91-607e-46dc-9e3a-82c40745fb88"
+    },
+    "AcceptTime": "2018-04-03T21:51:58Z",
+    "HITId": "3NFWQRSHVEEQVPLVNJ9KZC3N3CDGFX",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:12Z"
+}

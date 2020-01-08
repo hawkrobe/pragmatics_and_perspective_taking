@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T00:05:03Z",
+    "AutoApprovalTime": "2018-04-04T00:04:29Z",
+    "AssignmentId": "103",
+    "WorkerId": "103",
+    "answers": {
+        "subject_information": {
+            "totalLength": 731324,
+            "gameID": "5533-1660cf7c-bd49-4065-8100-d998ebe926ac",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 31,
+            "role": "director",
+            "comments": "",
+            "strategy": "I tried to be descriptive enough to get the message across without being too complicated in my description."
+        },
+        "id": "5533-1660cf7c-bd49-4065-8100-d998ebe926ac"
+    },
+    "AcceptTime": "2018-04-03T23:42:59Z",
+    "HITId": "3UAU495MIIS36KZJ6RHRQLDS4LMOUU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:59:29Z"
+}

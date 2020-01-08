@@ -1,0 +1,13 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+close	none	0	4	planned_sample	1711-5ce2a20d-dda6-4152-9953-24da1b8fd1ef	1	1522720836481	wavy_green_star	asdf	speaker	234	chatMessage
+close	irrelevant	2	3	planned_sample	1711-5ce2a20d-dda6-4152-9953-24da1b8fd1ef	2	1522720840824	striped_green_circle	asdf	speaker	189	chatMessage
+far	irrelevant	1	2	planned_sample	1711-5ce2a20d-dda6-4152-9953-24da1b8fd1ef	3	1522720845441	spotted_green_star	asdf	speaker	231	chatMessage
+far	none	0	4	planned_sample	1711-5ce2a20d-dda6-4152-9953-24da1b8fd1ef	4	1522720849638	striped_red_square	asdf	speaker	214	chatMessage
+close	none	0	2	planned_sample	1711-5ce2a20d-dda6-4152-9953-24da1b8fd1ef	5	1522720854270	checked_red_circle	asdf	speaker	208	chatMessage
+far	irrelevant	1	2	planned_sample	1711-5ce2a20d-dda6-4152-9953-24da1b8fd1ef	6	1522720858168	spotted_blue_square	asdf	speaker	244	chatMessage
+close	irrelevant	1	2	planned_sample	1711-5ce2a20d-dda6-4152-9953-24da1b8fd1ef	7	1522720862415	checked_black_square	asdf	speaker	256	chatMessage
+far	none	0	3	planned_sample	1711-5ce2a20d-dda6-4152-9953-24da1b8fd1ef	8	1522720866596	striped_blue_circle	asdf	speaker	235	chatMessage
+far	none	0	3	planned_sample	1711-5ce2a20d-dda6-4152-9953-24da1b8fd1ef	9	1522720870907	checked_green_triangle	asdf	speaker	229	chatMessage
+close	irrelevant	1	2	planned_sample	1711-5ce2a20d-dda6-4152-9953-24da1b8fd1ef	10	1522720875276	wavy_blue_square	asdf	speaker	251	chatMessage
+close	none	0	2	planned_sample	1711-5ce2a20d-dda6-4152-9953-24da1b8fd1ef	11	1522720879970	checked_black_square	asdf	speaker	235	chatMessage
+far	irrelevant	2	3	planned_sample	1711-5ce2a20d-dda6-4152-9953-24da1b8fd1ef	12	1522720884875	checked_black_square	asdf	speaker	235	chatMessage

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:03Z",
+    "AutoApprovalTime": "2018-04-03T22:06:19Z",
+    "AssignmentId": "40",
+    "WorkerId": "40",
+    "answers": {
+        "subject_information": {
+            "totalLength": 504302,
+            "gameID": "4203-2a5f910b-59d7-400f-8e01-5152a2ac155c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 11,
+            "role": "matcher",
+            "comments": "no",
+            "strategy": "I just did what they told me to do and ignored the objects they could not see."
+        },
+        "id": "4203-2a5f910b-59d7-400f-8e01-5152a2ac155c"
+    },
+    "AcceptTime": "2018-04-03T21:47:41Z",
+    "HITId": "3NFWQRSHVEEQVPLVNJ9KZC3N3CDGFX",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:19Z"
+}

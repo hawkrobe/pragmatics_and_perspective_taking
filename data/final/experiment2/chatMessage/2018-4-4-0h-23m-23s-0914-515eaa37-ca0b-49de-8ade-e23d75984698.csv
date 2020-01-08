@@ -1,0 +1,34 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522826603782	unscripted	1	0	scissors	0	exp	3	false	director	move the scissors one square to your left	16436	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522826623209	unscripted	1	0	scissors	0	exp	3	false	director	possibly your right?	3482	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522826703010	unscripted	1	1	knife	0	exp	3	false	director	move the knife one square down	5007	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522826728108	unscripted	1	2	barOfSoap	0	exp	3	false	director	move the soap bar one square to the left 	9176	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522826754735	unscripted	1	3	cassetteTape	0	exp	3	true	director	move the radio cassette one square down	9520	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522826790390	unscripted	2	0	binoculars	0	base	2	false	director	move the binoculars one square to the right	6231	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522826824205	unscripted	2	1	wrench	0	base	2	false	director	move the wrench one square away from the cubby with the red curtain (to the left)	17175	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522826860374	unscripted	2	2	middleBlock	0	base	2	true	director	move the block with the blue letter B facing up one square to the left	16496	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522826938685	unscripted	2	3	coffeeMug	0	base	2	false	director	move the coffee mug one square to the right into a curtained cubby	24564	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522826967583	unscripted	3	0	magnet	0	base	7	false	director	move the U or horseshoe shaped magnet one square down 	14335	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522826988884	unscripted	3	1	handcuffs	0	base	7	false	director	move the handcuffs one square down	5622	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827012113	unscripted	3	2	pandaToy	0	base	7	false	director	move the stuffed panda one square down into the curtained cubby	8860	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827034831	unscripted	3	3	mediumCandle	0	base	7	true	director	move the red candle one square down	7215	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827052988	unscripted	4	0	comb	0	exp	8	false	director	move the comb one square up	4266	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827073321	unscripted	4	1	computerMouse	0	exp	8	true	director	move the computer mouse one square up 	7322	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827097608	unscripted	4	2	castIronPan	0	exp	8	false	director	move the cast iron black skillet or pan one square up	8715	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827131044	unscripted	4	3	piano	0	exp	8	false	director	move the grand piano one square to the left, away from the curtained cubby	17393	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827157280	unscripted	5	0	airplane	0	exp	1	false	director	move the red model airplane one square to the right towards the curtained cubby	10147	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827192237	unscripted	5	1	sunGlasses	0	exp	1	true	director	move the black sunglasses one square to the right into the red curtained cubby	12773	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827216634	unscripted	5	2	barrel	0	exp	1	false	director	move the wooden barrel one square down	9020	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827244000	unscripted	5	3	saxophone	0	exp	1	false	director	move the silver saxophone one square up 	6531	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827271662	unscripted	6	0	carrot	0	base	4	false	director	move the carrot one square up 	11063	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827299887	unscripted	6	1	mediumMeasuringCup	0	base	4	true	director	move the clear pyrex measuring cup down into the red curtained cubby	12357	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827328821	unscripted	6	2	waterBottle	0	base	4	false	director	move the plastic water bottle one box to the right into the red curtained cubby	12044	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827364638	unscripted	6	3	chair	0	base	4	false	director	Move the wooden/brown chair one cubby left into the red curtained cubby	13944	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827388125	unscripted	7	0	banana	0	exp	6	false	director	move the banana one square up	5278	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827414423	unscripted	7	1	dollar	0	exp	6	false	director	move the one dollar bill one square to the right	8273	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827451348	unscripted	7	2	boardEraser	0	exp	6	true	director	move the EXPO white board eraser one square up 	11767	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827487329	unscripted	7	3	feather	0	exp	6	false	director	move the gray feather one square to the left 	9228	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827514796	unscripted	8	0	basketball	0	base	5	false	director	move the basketball one square down into the red curtained cubby	7339	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827551315	unscripted	8	1	roundBrush	0	base	5	true	director	move the round barrel hairbrush in the bottom row one square to the left away from the red curtained cubby	17080	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827591452	unscripted	8	2	headphones	0	base	5	false	director	move the headphones one square to the left 	13434	chatMessage
+planned_sample	0914-515eaa37-ca0b-49de-8ade-e23d75984698	1522827617994	unscripted	8	3	book	0	base	5	false	director	move the orange book one square to the right	9054	chatMessage

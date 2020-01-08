@@ -1,0 +1,34 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802599215	unscripted	1	0	binoculars	0	exp	2	false	director	drag the object one box to the right	10483	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802632811	unscripted	1	0	binoculars	1	exp	2	false	director	drag the binoculars one box to the right	9560	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802654767	unscripted	1	1	wrench	0	exp	2	false	director	drag the wrench one box to the left	9903	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802688625	unscripted	1	2	middleBlock	0	exp	2	true	director	drag the cube w/ the B one box to the left	17806	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802724255	unscripted	1	3	coffeeMug	0	exp	2	false	director	drag the coffee cup one box to the right	16934	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802747630	unscripted	2	0	scissors	0	base	3	false	director	drag the scissors one box to the right	7168	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802774156	unscripted	2	1	knife	0	base	3	false	director	drag the knife one box below where it is now	14375	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802796361	unscripted	2	2	barOfSoap	0	base	3	false	director	drag the bar of soap one box to the left	12519	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802819725	unscripted	2	3	cassetteTape	0	base	3	true	director	drag the cassette tape one box below where it is now	10935	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802841511	unscripted	3	0	basketball	0	exp	5	false	director	move the basketball one box down	5560	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802856464	unscripted	3	1	roundBrush	0	exp	5	true	director	move the audio adapter one box to the left	6464	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802896715	unscripted	3	2	headphones	0	exp	5	false	director	sorry about that~~~ closer look it was a hairbrush~~~ move the headphones one box to the left	29423	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802917966	unscripted	3	3	book	0	exp	5	false	director	move the book over one space to the right	5934	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802935941	unscripted	4	0	airplane	0	exp	1	false	director	move the airplane over to the right one square	7490	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802966946	unscripted	4	1	sunGlasses	0	exp	1	true	director	move the sunglasses one square to the right	9644	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522802981605	unscripted	4	2	barrel	0	exp	1	false	director	move the barrel down one square	5083	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803000505	unscripted	4	3	saxophone	0	exp	1	false	director	move the saxophone up one square	5703	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803012942	unscripted	5	0	comb	0	base	8	false	director	move the comb up one square	3609	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803033092	unscripted	5	1	computerMouse	0	base	8	true	director	move the computer mouse up one square	7167	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803058986	unscripted	5	2	castIronPan	0	base	8	false	director	move the cast iron skillet up one square	14640	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803074110	unscripted	5	3	piano	0	base	8	false	director	move the piano left one square	5863	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803091841	unscripted	6	0	carrot	0	base	4	false	director	move the carrot up one square	5984	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803108740	unscripted	6	1	mediumMeasuringCup	0	base	4	true	director	move the measuring cup down one square	8975	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803127099	unscripted	6	2	waterBottle	0	base	4	false	director	move the water bottle one square to the right	7991	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803142097	unscripted	6	3	chair	0	base	4	false	director	move the wooden chair once to the left	6464	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803162195	unscripted	7	0	magnet	0	exp	7	false	director	move the u.shaped magnet down one square	9357	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803178245	unscripted	7	1	handcuffs	0	exp	7	false	director	move the handcuffs down one square	6719	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803203804	unscripted	7	2	pandaToy	0	exp	7	false	director	move the stuffed panda bear down one square	7448	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803224285	unscripted	7	3	mediumCandle	0	exp	7	true	director	move the red candlestick down one square	8108	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803240644	unscripted	8	0	banana	0	base	6	false	director	move the banana up one square	7767	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803256630	unscripted	8	1	dollar	0	base	6	false	director	move the dollar bill over to the right one time	5726	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803274318	unscripted	8	2	boardEraser	0	base	6	true	director	move the chalkboard eraser up one square	7320	chatMessage
+planned_sample	9696-71907a9b-6b17-48d9-83a5-dcd44739991e	1522803286658	unscripted	8	3	feather	0	base	6	false	director	move the leaf over to the left once	5015	chatMessage

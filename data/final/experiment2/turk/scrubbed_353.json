@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:59:03Z",
+    "AutoApprovalTime": "2018-04-03T21:58:07Z",
+    "AssignmentId": "353",
+    "WorkerId": "353",
+    "answers": {
+        "subject_information": {
+            "totalLength": 611437,
+            "gameID": "8008-3863a375-93c2-4672-b89f-7a9a4f35c72c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 30,
+            "role": "director",
+            "comments": "None.",
+            "strategy": "There was no strategy involved, I simply told the other person where to move the object."
+        },
+        "id": "8008-3863a375-93c2-4672-b89f-7a9a4f35c72c"
+    },
+    "AcceptTime": "2018-04-03T21:39:44Z",
+    "HITId": "3SCKNODZ0XGJQONBS4O314Z360G7NS",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:53:07Z"
+}

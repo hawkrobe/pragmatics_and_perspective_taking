@@ -1,0 +1,12 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	0248-0ddbec25-7e2d-4464-9e98-1ebbc125c4df	1522799463488	scripted	1	2	middleBlock	0	base	2	true	on	1298	mouseOverDistractor
+planned_sample	0248-0ddbec25-7e2d-4464-9e98-1ebbc125c4df	1522799471337	scripted	1	1	middleBlock	1	base	2	true	off	9145	mouseOverDistractor
+planned_sample	0248-0ddbec25-7e2d-4464-9e98-1ebbc125c4df	1522800071326	scripted	8	3	mediumCandle	0	exp	7	true	on	6332	mouseOverDistractor
+planned_sample	0248-0ddbec25-7e2d-4464-9e98-1ebbc125c4df	1522800071442	scripted	8	3	mediumCandle	0	exp	7	true	off	6449	mouseOverDistractor
+planned_sample	0248-0ddbec25-7e2d-4464-9e98-1ebbc125c4df	1522800078397	scripted	8	3	mediumCandle	0	exp	7	true	on	1865	mouseOverDistractor
+planned_sample	0248-0ddbec25-7e2d-4464-9e98-1ebbc125c4df	1522800082064	scripted	8	2	mediumCandle	1	exp	7	true	off	5532	mouseOverDistractor
+planned_sample	0248-0ddbec25-7e2d-4464-9e98-1ebbc125c4df	1522800083380	scripted	8	2	mediumCandle	1	exp	7	true	on	6852	mouseOverDistractor
+planned_sample	0248-0ddbec25-7e2d-4464-9e98-1ebbc125c4df	1522800085388	scripted	8	3	mediumCandle	1	exp	7	true	on	8863	mouseOverDistractor
+planned_sample	0248-0ddbec25-7e2d-4464-9e98-1ebbc125c4df	1522800088250	scripted	8	3	mediumCandle	1	exp	7	true	off	11720	mouseOverDistractor
+planned_sample	0248-0ddbec25-7e2d-4464-9e98-1ebbc125c4df	1522800089216	scripted	8	3	mediumCandle	1	exp	7	true	on	12687	mouseOverDistractor
+planned_sample	0248-0ddbec25-7e2d-4464-9e98-1ebbc125c4df	1522800097188	scripted	8	3	mediumCandle	1	exp	7	true	off	20657	mouseOverDistractor

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:24:03Z",
+    "AutoApprovalTime": "2018-04-03T22:23:26Z",
+    "AssignmentId": "351",
+    "WorkerId": "351",
+    "answers": {
+        "subject_information": {
+            "totalLength": 321028,
+            "gameID": "5035-3e68b0b0-161c-4a2a-a80e-91bc93cc4a5a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 6,
+            "role": "matcher",
+            "comments": "It was so easy, I'm wondering if the directions should have been more vague.",
+            "strategy": "I just followed the directions which were straightforward."
+        },
+        "id": "5035-3e68b0b0-161c-4a2a-a80e-91bc93cc4a5a"
+    },
+    "AcceptTime": "2018-04-03T22:06:25Z",
+    "HITId": "3SCKNODZ0XGJQONBS4O314Z360G7NS",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:18:26Z"
+}

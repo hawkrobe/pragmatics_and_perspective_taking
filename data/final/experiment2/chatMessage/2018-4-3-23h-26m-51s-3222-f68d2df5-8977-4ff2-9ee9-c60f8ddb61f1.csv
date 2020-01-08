@@ -1,0 +1,34 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823211838	unscripted	1	0	airplane	0	base	1	false	director	second square on the top left move 1 over to the right	14478	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823266181	unscripted	1	1	sunGlasses	0	base	1	true	director	3rd square on the very bottom move to the right 1 square	23873	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823311895	unscripted	1	2	barrel	0	base	1	false	director	second row 4th square move down 1 square	17020	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823343262	unscripted	1	3	saxophone	0	base	1	false	director	4th row second square move UP 1 square	15003	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823378612	unscripted	2	0	scissors	0	exp	3	false	director	second row first square move 1 square right	18507	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823418233	unscripted	2	1	knife	0	exp	3	false	director	3rd row 3rd square move down 1 square	16252	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823449762	unscripted	2	2	barOfSoap	0	exp	3	false	director	3rd row 4th square move left 1 square	18107	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823478671	unscripted	2	3	cassetteTape	0	exp	3	true	director	1st row 3rd square move down 1 square	11605	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823506223	unscripted	3	0	magnet	0	exp	7	false	director	3rd row 2nd square move down 1 square	13742	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823535732	unscripted	3	1	handcuffs	0	exp	7	false	director	2nd row 4th square move down 1 square	15692	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823558981	unscripted	3	2	pandaToy	0	exp	7	false	director	1st row 3rd square move down 1 square	11001	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823586118	unscripted	3	3	mediumCandle	0	exp	7	true	director	1st row 1st square move down 1 square	13228	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823605391	unscripted	4	0	carrot	0	base	4	false	director	4th row 2nd square move up 1 square	8986	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823628315	unscripted	4	1	mediumMeasuringCup	0	base	4	true	director	3rd row 4th square move down 1 square	10784	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823650047	unscripted	4	2	waterBottle	0	base	4	false	director	2nd row 1st square move right 1 square	10633	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823676696	unscripted	4	3	chair	0	base	4	false	director	2nd row 4th square move left 1 square	10725	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823702209	unscripted	5	0	binoculars	0	base	2	false	director	4th row 1st square move right 1  square	13449	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823728369	unscripted	5	1	wrench	0	base	2	false	director	1st row 3rd square move left 1 square	12401	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823762147	unscripted	5	2	middleBlock	0	base	2	true	director	3rd row 4th square move left 1 square	14857	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823794211	unscripted	5	3	coffeeMug	0	base	2	false	director	2nd row 1st square move right 1 square	17998	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823822960	unscripted	6	0	comb	0	exp	8	false	director	2nd row 1st square move UP 1 square	16493	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823845325	unscripted	6	1	computerMouse	0	exp	8	true	director	3rd row 4th square move up 1 square	6230	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823862913	unscripted	6	2	castIronPan	0	exp	8	false	director	4th row 3rd square move up 1 square	7038	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823886962	unscripted	6	3	piano	0	exp	8	false	director	4th row 2nd square move left 1 square	11358	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823909317	unscripted	7	0	basketball	0	exp	5	false	director	1st row 3rd square move down 1 square	9781	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823934455	unscripted	7	1	roundBrush	0	exp	5	true	director	4th row 3rd square move left 1 square	14581	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823951670	unscripted	7	2	headphones	0	exp	5	false	director	3rd row 4th square move left 1 square	7618	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522823975668	unscripted	7	3	book	0	exp	5	false	director	1st row 2nd square move right 1 square	12141	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522824003164	unscripted	8	0	banana	0	base	6	false	director	3rd row 4th square move UP 1 square	11761	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522824029836	unscripted	8	1	dollar	0	base	6	false	director	3rd row 3rd square move right 1 square	13100	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522824063001	unscripted	8	1	dollar	1	base	6	false	director	3rd row 3rd square move right 1 square	12801	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522824079186	unscripted	8	2	boardEraser	0	base	6	true	director	4th row 2nd square move up 1 square	5386	chatMessage
+planned_sample	3222-f68d2df5-8977-4ff2-9ee9-c60f8ddb61f1	1522824106155	unscripted	8	3	feather	0	base	6	false	director	4th row 3rd square move left 1 square	12838	chatMessage

@@ -1,0 +1,15 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822161381	unscripted	1	1	sunGlasses	0	exp	1	true	on	3768	mouseOverDistractor
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822161429	unscripted	1	1	sunGlasses	0	exp	1	true	off	3853	mouseOverDistractor
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822161501	unscripted	1	1	sunGlasses	0	exp	1	true	on	3904	mouseOverDistractor
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822161904	unscripted	1	1	sunGlasses	0	exp	1	true	off	4336	mouseOverDistractor
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822356143	unscripted	4	1	computerMouse	0	exp	8	true	on	1283	mouseOverDistractor
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822357344	unscripted	4	0	computerMouse	1	exp	8	true	off	2484	mouseOverDistractor
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822358853	unscripted	4	0	computerMouse	1	exp	8	true	on	3935	mouseOverDistractor
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822361293	unscripted	4	1	computerMouse	1	exp	8	true	on	6422	mouseOverDistractor
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822375381	unscripted	4	1	computerMouse	1	exp	8	true	off	20468	mouseOverDistractor
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822523764	unscripted	6	1	roundBrush	0	exp	5	true	on	621	mouseOverDistractor
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822524402	unscripted	6	0	roundBrush	1	exp	5	true	off	1254	mouseOverDistractor
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822525050	unscripted	6	0	roundBrush	1	exp	5	true	on	1671	mouseOverDistractor
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822527483	unscripted	6	1	roundBrush	1	exp	5	true	on	4340	mouseOverDistractor
+planned_sample	5041-402509fd-fa04-4bc8-932a-2ef7457c88d3	1522822528115	unscripted	6	1	roundBrush	1	exp	5	true	off	4957	mouseOverDistractor

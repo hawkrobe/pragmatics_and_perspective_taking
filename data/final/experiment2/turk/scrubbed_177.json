@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T04:07:03Z",
+    "AutoApprovalTime": "2018-04-04T04:07:01Z",
+    "AssignmentId": "177",
+    "WorkerId": "177",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1159294,
+            "gameID": "6708-44bfb893-c34e-412a-9f7a-e95b79d6eab1",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "director",
+            "comments": "",
+            "strategy": "two people working together to solve an problem"
+        },
+        "id": "6708-44bfb893-c34e-412a-9f7a-e95b79d6eab1"
+    },
+    "AcceptTime": "2018-04-04T03:39:31Z",
+    "HITId": "3TZ0XG8CBUK210O01ZX4X30ECWH89V",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T04:02:01Z"
+}

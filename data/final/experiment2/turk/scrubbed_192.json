@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T05:58:03Z",
+    "AutoApprovalTime": "2018-04-04T05:57:04Z",
+    "AssignmentId": "192",
+    "WorkerId": "192",
+    "answers": {
+        "subject_information": {
+            "totalLength": 962682,
+            "gameID": "6229-27cb9668-3653-4e1b-a73d-a44746d18b32",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "director",
+            "comments": "",
+            "strategy": "I did my best to make the game simple and easy for the other player to understand to maximize the bonus. "
+        },
+        "id": "6229-27cb9668-3653-4e1b-a73d-a44746d18b32"
+    },
+    "AcceptTime": "2018-04-04T05:22:32Z",
+    "HITId": "3RQVKZ7ZRKJN12YI6LQJ9GW5V6427D",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T05:52:04Z"
+}

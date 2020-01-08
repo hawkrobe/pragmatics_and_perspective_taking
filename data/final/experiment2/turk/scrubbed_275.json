@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:23:04Z",
+    "AutoApprovalTime": "2018-04-04T06:22:53Z",
+    "AssignmentId": "275",
+    "WorkerId": "275",
+    "answers": {
+        "subject_information": {
+            "totalLength": 188187,
+            "gameID": "9953-68c853c3-ef8a-4927-85a5-00fbc0d251e6",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 0,
+            "role": "matcher",
+            "comments": "No comments to be made due to my partner's disconnection",
+            "strategy": "I was not able to complete the game due to my partner's disconnection"
+        },
+        "id": "9953-68c853c3-ef8a-4927-85a5-00fbc0d251e6"
+    },
+    "AcceptTime": "2018-04-04T06:09:21Z",
+    "HITId": "3ZQX1VYFTD558NS63OGMUTV37V78OD",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:17:53Z"
+}

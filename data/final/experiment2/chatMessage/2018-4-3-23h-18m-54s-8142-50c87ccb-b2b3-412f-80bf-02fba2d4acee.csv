@@ -1,0 +1,37 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522822734337	unscripted	1	0	scissors	0	exp	3	false	director	Move the scissors towards the space between the cassette and the knife~~~ 	27630	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522822782353	unscripted	1	0	scissors	1	exp	3	false	director	Move the scissors halfway towards the space between the cassette and the knife~~~ 	20038	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522822812210	unscripted	1	1	knife	0	exp	3	false	director	Move the knife directly downward~~~ 	7994	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522822841823	unscripted	1	2	barOfSoap	0	exp	3	false	director	Move the soap to be directly above the knife~~~	15254	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522822871446	unscripted	1	3	cassetteTape	0	exp	3	true	director	Move the cassette to be directly above the soap~~~	9756	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522822934835	unscripted	2	0	magnet	0	base	7	false	director	Move the magnet away from the red candle and panda to be next to the yellowish candle~~~	40054	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823047908	unscripted	2	1	handcuffs	0	base	7	false	director	Move the handcuffs one square closer to the yellowish candle, while keeping it in the same column~~~	78398	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823096609	unscripted	2	2	pandaToy	0	base	7	false	director	Move the panda 1/3 of the way towards the yellowish candle~~~	27129	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823206939	unscripted	2	3	mediumCandle	0	base	7	true	director	Move the red candle down one square~~~	58293	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823243287	unscripted	3	0	airplane	0	exp	1	false	director	Move the airplane one square closer to the barrel, keeping it in the top row~~~	20329	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823295506	unscripted	3	1	sunGlasses	0	exp	1	true	director	Move the sunglasses to be under the barrel, but in the same row as the saxophone~~~ 	38854	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823327589	unscripted	3	2	barrel	0	exp	1	false	director	Move the barrel to be directly above the sunglasses~~~	18065	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823381695	unscripted	3	2	barrel	1	exp	1	false	director	Move the barrel down so that it is above the sunglasses~~~ Do not move the sunglasses~~~	26818	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823431308	unscripted	3	3	saxophone	0	exp	1	false	director	Move the saxophone up so it remains in the same column, but is in the same row as the barrel~~~ 	16366	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823483434	unscripted	4	0	binoculars	0	exp	2	false	director	Move the binoculars so they are one square closer to the block but still in the bottom row~~~	23514	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823516321	unscripted	4	1	wrench	0	exp	2	false	director	Move the wrench to be directly next to the "A" block and in the top row~~~	16359	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823565971	unscripted	4	2	middleBlock	0	exp	2	true	director	Move the "B" block one square away from the edge while remaining in the same row~~~	23167	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823624956	unscripted	4	2	middleBlock	1	exp	2	true	director	Move the blue "B" block one square towards the binoculars, while keeping it in the same row~~~	31589	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823663045	unscripted	4	3	coffeeMug	0	exp	2	false	director	Move the coffee cup one square so it is directly under the wrench~~~	12806	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823686276	unscripted	5	0	banana	0	base	6	false	director	Move the banana up one square~~~	5541	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823732752	unscripted	5	1	dollar	0	base	6	false	director	Move the dollar to be directly under the banana~~~	7515	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823765870	unscripted	5	2	boardEraser	0	base	6	true	director	Move the eraser up one square so it is in the same row as the dollar~~~	14914	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823801563	unscripted	5	3	feather	0	base	6	false	director	Move the feather to be directly under the eraser~~~	19021	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823830002	unscripted	6	0	carrot	0	base	4	false	director	Move the carrot up one row to be in the same row as the measuring cup~~~	11877	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823867663	unscripted	6	1	mediumMeasuringCup	0	base	4	true	director	Move the measuring cup down one square~~~ 	18630	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823889664	unscripted	6	2	waterBottle	0	base	4	false	director	Move the water bottle one square to be directly above the carrot~~~	7988	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823924375	unscripted	6	3	chair	0	base	4	false	director	Move the chair one square to be directly under the shot glass~~~	14454	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823951126	unscripted	7	0	comb	0	exp	8	false	director	Move the comb up one square~~~	12215	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522823973826	unscripted	7	1	computerMouse	0	exp	8	true	director	Move the mouse up one square~~~	4684	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522824037089	unscripted	7	1	computerMouse	1	exp	8	true	director	Move the mouse that is closer to the pan up one square	33560	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522824060093	unscripted	7	2	castIronPan	0	exp	8	false	director	Move the pan up one square	6605	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522824123066	unscripted	7	3	piano	0	exp	8	false	director	Move the piano one square so it is in the current row and the same column as the comb	26791	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522824149072	unscripted	8	0	basketball	0	base	5	false	director	Move the basketball down one square	4495	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522824190558	unscripted	8	1	roundBrush	0	base	5	true	director	Move the hairbrush so it is in the same row and immediately next to the gold and diamond ring	17494	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522824247779	unscripted	8	2	headphones	0	base	5	false	director	Move the red headphones one square away from the edge, in the same row	23834	chatMessage
+planned_sample	8142-50c87ccb-b2b3-412f-80bf-02fba2d4acee	1522824290208	unscripted	8	3	book	0	base	5	false	director	Move the red book so it is in the same row and is above the red headphones	14914	chatMessage

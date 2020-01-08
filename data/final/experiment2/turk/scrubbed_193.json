@@ -1,0 +1,25 @@
+{
+    "ApprovalTime": "2018-04-04T06:07:03Z",
+    "AutoApprovalTime": "2018-04-04T06:06:14Z",
+    "AssignmentId": "193",
+    "WorkerId": "193",
+    "answers": {
+        "subject_information": {
+            "totalLength": 761862,
+            "gameID": "7243-acd434ec-b5d6-4d4e-8c98-bc4cdb2b00ec",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "comments": "",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "director",
+            "strategy": "we both listened to each other "
+        },
+        "id": "7243-acd434ec-b5d6-4d4e-8c98-bc4cdb2b00ec"
+    },
+    "AcceptTime": "2018-04-04T05:43:12Z",
+    "HITId": "3RQVKZ7ZRKJN12YI6LQJ9GW5V6427D",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:01:14Z"
+}

@@ -1,0 +1,35 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522797954922	unscripted	1	0	comb	0	base	8	false	director	Hello~~~ Move the comb up	8146	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522797983135	unscripted	1	1	computerMouse	0	base	8	true	director	perfect~~~ Now the mouse~~~ same move	8070	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798010898	unscripted	1	2	castIronPan	0	base	8	false	director	Awesome~~~ The frying Pan is next and again, same move	14227	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798032986	unscripted	1	3	piano	0	base	8	false	director	The piano goes to the left	7333	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798051926	unscripted	2	0	banana	0	exp	6	false	director	Banana, up	4096	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798065111	unscripted	2	1	dollar	0	exp	6	false	director	dollar bill to the right	3527	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798075080	unscripted	2	2	boardEraser	0	exp	6	true	director	eraser up	1943	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798094120	unscripted	2	2	boardEraser	1	exp	6	true	director	nope, not quite, just one box up	8708	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798124039	unscripted	2	3	feather	0	exp	6	false	director	perfect, now the feather goes where the eraser was 	15828	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798141077	unscripted	3	0	airplane	0	exp	1	false	director	airplane to the right	4053	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798161945	unscripted	3	1	sunGlasses	0	exp	1	true	director	sunglasses to the right	7267	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798177870	unscripted	3	2	barrel	0	exp	1	false	director	keg goes down one spot	4966	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798192280	unscripted	3	3	saxophone	0	exp	1	false	director	saxophone goes up one spot	5106	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798209035	unscripted	4	0	binoculars	0	base	2	false	director	binoculars to the right	5349	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798224020	unscripted	4	1	wrench	0	base	2	false	director	wrench to the left	4904	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798238403	unscripted	4	2	middleBlock	0	base	2	true	director	block goes one square to the left	6425	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798258261	unscripted	4	3	coffeeMug	0	base	2	false	director	coffee cup goes one to the right	6527	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798276620	unscripted	5	0	basketball	0	exp	5	false	director	basketball goes down one	7344	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798292930	unscripted	5	1	roundBrush	0	exp	5	true	director	brush goes to the left	5335	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798315133	unscripted	5	1	roundBrush	1	exp	5	true	director	oops you must have an extra brush~~~ Round brush goes to the left	13855	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798336222	unscripted	5	2	headphones	0	exp	5	false	director	pink headphones to the left	6190	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798353459	unscripted	5	3	book	0	exp	5	false	director	red book to the right one square	6280	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798371282	unscripted	6	0	magnet	0	exp	7	false	director	red horseshoe down on square	5832	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798393571	unscripted	6	1	handcuffs	0	exp	7	false	director	silver handcuffs down one square	6350	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798423051	unscripted	6	2	pandaToy	0	exp	7	false	director	panda bear down one 	13994	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798444353	unscripted	6	3	mediumCandle	0	exp	7	true	director	red candle down one square	9549	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798462495	unscripted	7	0	carrot	0	base	4	false	director	carrot up one	3829	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798486775	unscripted	7	1	mediumMeasuringCup	0	base	4	true	director	pyrex cup with red writing down one	11300	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798509999	unscripted	7	2	waterBottle	0	base	4	false	director	water bottle with no label to the right	10093	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798530056	unscripted	7	3	chair	0	base	4	false	director	chair with padded seat to the left	8100	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798548166	unscripted	8	0	scissors	0	base	3	false	director	black handled scissors to the right	5947	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798571764	unscripted	8	1	knife	0	base	3	false	director	black handled steak knife down one	11787	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798595959	unscripted	8	2	barOfSoap	0	base	3	false	director	sudsy bar of soap one square to the left	12831	chatMessage
+planned_sample	5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a	1522798614594	unscripted	8	3	cassetteTape	0	base	3	true	director	cassette tape down one	8192	chatMessage

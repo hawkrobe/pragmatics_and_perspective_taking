@@ -1,0 +1,2 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	8831-a9e4a1f5-3030-486f-8c21-4304d325728a	1522792800558	scripted	1	0	magnet	0	base	7	false	director	move the magnet down by one space	NaN	chatMessage

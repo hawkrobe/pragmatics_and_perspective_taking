@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T05:44:03Z",
+    "AutoApprovalTime": "2018-04-04T05:43:43Z",
+    "AssignmentId": "194",
+    "WorkerId": "194",
+    "answers": {
+        "subject_information": {
+            "totalLength": 622507,
+            "gameID": "4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 29,
+            "role": "matcher",
+            "comments": "Enjoyed HIT!",
+            "strategy": "Listening to director's instructions as carefully and attentively as possible."
+        },
+        "id": "4783-4b92f9f8-da8a-46a3-8979-c6d0d2eed211"
+    },
+    "AcceptTime": "2018-04-04T05:24:04Z",
+    "HITId": "3RQVKZ7ZRKJN12YI6LQJ9GW5V6427D",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T05:38:43Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:44:03Z",
+    "AutoApprovalTime": "2018-04-03T23:43:49Z",
+    "AssignmentId": "77",
+    "WorkerId": "77",
+    "answers": {
+        "subject_information": {
+            "totalLength": 900450,
+            "gameID": "5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "director",
+            "comments": "This was a fun experiment. It took getting two wrong before I understood the point of them having objects behind curtains. It was fun. I wish all HITS were this fun. ",
+            "strategy": "I told the other player where each item went. Once we got two wrong I realized I had to be more specific in my descriptions of the objects. "
+        },
+        "id": "5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a"
+    },
+    "AcceptTime": "2018-04-03T23:19:35Z",
+    "HITId": "3MJ9GGZYO365K4WGDO23J7YVWDY2AQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:38:49Z"
+}

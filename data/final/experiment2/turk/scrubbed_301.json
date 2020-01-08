@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:41:03Z",
+    "AutoApprovalTime": "2018-04-03T21:40:21Z",
+    "AssignmentId": "301",
+    "WorkerId": "301",
+    "answers": {
+        "subject_information": {
+            "totalLength": 671913,
+            "gameID": "7329-6db17199-1eaa-4ece-95b4-a3d06e98ae3d",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 30,
+            "role": "director",
+            "comments": "",
+            "strategy": "I tried to simplify the best I could stating the color of the object and the name I thought most would know"
+        },
+        "id": "7329-6db17199-1eaa-4ece-95b4-a3d06e98ae3d"
+    },
+    "AcceptTime": "2018-04-03T21:21:49Z",
+    "HITId": "3YD0MU1NC21C65TMJ0JYFYF37TH7A8",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:35:21Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:54:03Z",
+    "AutoApprovalTime": "2018-04-04T06:53:19Z",
+    "AssignmentId": "318",
+    "WorkerId": "318",
+    "answers": {
+        "subject_information": {
+            "totalLength": 651359,
+            "gameID": "4166-9165e3c0-9da5-4f98-9307-c64fc9b509aa",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 30,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "Follow the director's instructions and try to remember that they can't see what is behind the curtains"
+        },
+        "id": "4166-9165e3c0-9da5-4f98-9307-c64fc9b509aa"
+    },
+    "AcceptTime": "2018-04-04T06:33:17Z",
+    "HITId": "33KGGVH24UHARWMD5UU3YWZO5T61XR",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:48:19Z"
+}

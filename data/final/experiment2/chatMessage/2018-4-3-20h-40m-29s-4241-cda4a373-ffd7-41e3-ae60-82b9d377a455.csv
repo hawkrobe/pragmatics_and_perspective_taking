@@ -1,0 +1,33 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813229290	unscripted	1	0	banana	0	base	6	false	director	Move the edible object up~~~	13815	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813261441	unscripted	1	1	dollar	0	base	6	false	director	Move the object that has value to the right	10342	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813304786	unscripted	1	2	boardEraser	0	base	6	true	director	Move the object that makes things disappear up	22388	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813362395	unscripted	1	3	feather	0	base	6	false	director	Move the light object to the left	36130	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813416743	unscripted	2	0	magnet	0	exp	7	false	director	Move the object that connects things down	37250	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813455923	unscripted	2	1	handcuffs	0	exp	7	false	director	Move the object that restricts movement down	16457	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813479295	unscripted	2	2	pandaToy	0	exp	7	false	director	Move the cuddly object down	7141	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813514824	unscripted	2	3	mediumCandle	0	exp	7	true	director	Move the object that illuminates down	8742	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813544819	unscripted	3	0	basketball	0	exp	5	false	director	Move the object that bounces down	12223	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813601257	unscripted	3	1	roundBrush	0	exp	5	true	director	Move the object used for grooming to the left	42106	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813629969	unscripted	3	2	headphones	0	exp	5	false	director	Move the object that produces sound to the left	11630	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813668870	unscripted	3	3	book	0	exp	5	false	director	Move the object that contains words to the right	23538	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813695210	unscripted	4	0	carrot	0	base	4	false	director	Move the crunchy object up	11893	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813716486	unscripted	4	1	mediumMeasuringCup	0	base	4	true	director	Move the object with a handle down	6901	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813746030	unscripted	4	2	waterBottle	0	base	4	false	director	Move the object that quenches to the right	10588	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813773837	unscripted	4	3	chair	0	base	4	false	director	Move the object used to rest to the left	11695	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813796844	unscripted	5	0	comb	0	exp	8	false	director	Move the grooming object up	7491	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813848015	unscripted	5	1	computerMouse	0	exp	8	true	director	Move the object that is also the name of a rodent up	37897	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813876072	unscripted	5	2	castIronPan	0	exp	8	false	director	Move the cooking utensil up	11399	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813901966	unscripted	5	3	piano	0	exp	8	false	director	Move the object that produces sounds to the left	12772	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813939830	unscripted	6	0	airplane	0	base	1	false	director	Move the object seen in the sky to the right	22852	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813971029	unscripted	6	1	sunGlasses	0	base	1	true	director	Move the object that decreases light to the right	11796	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522813992478	unscripted	6	2	barrel	0	base	1	false	director	Move the container down	7902	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522814014402	unscripted	6	3	saxophone	0	base	1	false	director	Move the object that produces sound up	11455	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522814076508	unscripted	7	0	scissors	0	base	3	false	director	Move the object that shortens to the right~~~	43827	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522814104628	unscripted	7	1	knife	0	base	3	false	director	Move the object that separates down	12516	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522814130620	unscripted	7	2	barOfSoap	0	base	3	false	director	Move the object that cleans to the left	9377	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522814162413	unscripted	7	3	cassetteTape	0	base	3	true	director	Move the object that records down	20000	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522814210098	unscripted	8	0	binoculars	0	exp	2	false	director	Move the object that brings things closer to the right	32636	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522814234275	unscripted	8	1	wrench	0	exp	2	false	director	Move the object that loosens to the left	10701	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522814276653	unscripted	8	2	middleBlock	0	exp	2	true	director	Move the square object with photos to the left	27080	chatMessage
+planned_sample	4241-cda4a373-ffd7-41e3-ae60-82b9d377a455	1522814305803	unscripted	8	3	coffeeMug	0	exp	2	false	director	Move the hot object to the right	11219	chatMessage

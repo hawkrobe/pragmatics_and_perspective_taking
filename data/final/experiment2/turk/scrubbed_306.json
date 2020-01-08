@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:23:03Z",
+    "AutoApprovalTime": "2018-04-03T22:22:42Z",
+    "AssignmentId": "306",
+    "WorkerId": "306",
+    "answers": {
+        "subject_information": {
+            "totalLength": 470309,
+            "gameID": "4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 9,
+            "role": "director",
+            "comments": "This was fun.  I hope to do more like this.  I was disappointed we lost connection as I would have liked to see how much I could have gotten for a bonus!",
+            "strategy": "just be clear and as simple as possible with directions"
+        },
+        "id": "4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317"
+    },
+    "AcceptTime": "2018-04-03T22:02:15Z",
+    "HITId": "3YD0MU1NC21C65TMJ0JYFYF37TH7A8",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:17:42Z"
+}

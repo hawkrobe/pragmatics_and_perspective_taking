@@ -1,0 +1,22 @@
+{
+    "ApprovalTime": "2018-04-04T06:18:03Z",
+    "AutoApprovalTime": "2018-04-04T06:17:09Z",
+    "AssignmentId": "247",
+    "WorkerId": "247",
+    "answers": {
+        "subject_information": {
+            "totalLength": 231571,
+            "gameID": "5065-6d060ded-4488-4321-8275-54a8a6d3d7d4",
+            "comments": "This is the error that I received. I am just posting so I don't have a rejected hit for not completing the work. \"\n\nOops! It looks like your partner lost their connection!\nCompleting this survey will submit your HIT so you will still receive full compensation.\n\nIf you experience any problems, please email us (rxdh@stanford.edu)\"",
+            "strategy": "It said my partner lost connection before we started but to still submit",
+            "score": 0,
+            "role": "director"
+        },
+        "id": "5065-6d060ded-4488-4321-8275-54a8a6d3d7d4"
+    },
+    "AcceptTime": "2018-04-04T06:03:34Z",
+    "HITId": "33BFF6QPI1BRCZV2ITC0K60EUBDW3K",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:12:09Z"
+}

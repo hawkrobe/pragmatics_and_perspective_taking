@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:00:03Z",
+    "AutoApprovalTime": "2018-04-03T21:59:49Z",
+    "AssignmentId": "4",
+    "WorkerId": "4",
+    "answers": {
+        "subject_information": {
+            "totalLength": 643868,
+            "gameID": "3075-f2ea5c22-1e1d-412b-9454-48d4a17cb50c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 32,
+            "role": "director",
+            "comments": "",
+            "strategy": "I just named the item and gave the direction. If I thought it could be ambiguous with a hidden item, I gave a little more detail like the color."
+        },
+        "id": "3075-f2ea5c22-1e1d-412b-9454-48d4a17cb50c"
+    },
+    "AcceptTime": "2018-04-03T21:41:23Z",
+    "HITId": "36818Z1KV3DU5MSZHOG82H3N2RU3AY",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:54:49Z"
+}

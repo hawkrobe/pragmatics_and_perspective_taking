@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:01:03Z",
+    "AutoApprovalTime": "2018-04-03T22:00:42Z",
+    "AssignmentId": "14",
+    "WorkerId": "14",
+    "answers": {
+        "subject_information": {
+            "totalLength": 488352,
+            "gameID": "9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 3,
+            "role": "director",
+            "comments": "The experiment quit working and I was unable to type anything into the box as the words kept disappearing. If my partner was real, I hate to say it, but they weren't too bright.",
+            "strategy": "Very straight forward and simple."
+        },
+        "id": "9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042"
+    },
+    "AcceptTime": "2018-04-03T21:42:56Z",
+    "HITId": "34HEO7RUG6UMOOD1SEH4KF6385BARA",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:55:42Z"
+}

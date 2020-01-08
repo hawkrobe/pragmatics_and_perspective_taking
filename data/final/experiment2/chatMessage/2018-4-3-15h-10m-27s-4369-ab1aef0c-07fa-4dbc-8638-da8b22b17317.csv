@@ -1,0 +1,13 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793427878	unscripted	1	0	basketball	0	exp	5	false	director	move the basketball down one box	6958	chatMessage
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793460235	unscripted	1	1	roundBrush	0	exp	5	true	director	move the hairbrush to the left 1 square	8830	chatMessage
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793512665	unscripted	1	1	roundBrush	1	exp	5	true	director	the hairbrush, in the bottom row, 3rd square over, move it to the 2nd square over	32941	chatMessage
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793553912	unscripted	1	2	headphones	0	exp	5	false	director	move the headphones to the left 1 square	7711	chatMessage
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793605480	unscripted	1	3	book	0	exp	5	false	director	move the book to the right one square to where the basketball originally was 	19933	chatMessage
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793632917	unscripted	2	0	magnet	0	base	7	false	director	move the magnet down 1 square	5008	chatMessage
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793660475	unscripted	2	1	handcuffs	0	base	7	false	director	move the handcuffs down 1 square	9870	chatMessage
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793680377	unscripted	2	2	pandaToy	0	base	7	false	director	move the panda down 1 square to behind the curtain	7821	chatMessage
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793697182	unscripted	2	3	mediumCandle	0	base	7	true	director	move the candle down 1 square	4054	chatMessage
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793715077	unscripted	3	0	comb	0	exp	8	false	director	move the comb up 1 square	5215	chatMessage
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793729308	unscripted	3	1	computerMouse	0	exp	8	true	director	move the mouse up 1 square	3668	chatMessage
+planned_sample	4369-ab1aef0c-07fa-4dbc-8638-da8b22b17317	1522793749443	unscripted	3	2	castIronPan	0	exp	8	false	director	move the cast iron skillet up 1 square	7312	chatMessage

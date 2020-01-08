@@ -1,0 +1,5 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	6189-2f479adc-a6f3-41e9-9aae-3d7148abd432	1522792670396	unscripted	1	0	basketball	0	exp	5	false	correct	basketball	3	2	3	2	2788	drop
+planned_sample	6189-2f479adc-a6f3-41e9-9aae-3d7148abd432	1522792699459	unscripted	1	0	roundBrush	1	exp	5	true	incorrect	hairBrush	2	4	3	1	3759	drop
+planned_sample	6189-2f479adc-a6f3-41e9-9aae-3d7148abd432	1522792736352	unscripted	1	1	roundBrush	0	exp	5	true	correct	roundBrush	2	4	2	4	5201	drop
+planned_sample	6189-2f479adc-a6f3-41e9-9aae-3d7148abd432	1522792759272	unscripted	1	2	headphones	0	exp	5	false	correct	headphones	3	3	3	3	2372	drop

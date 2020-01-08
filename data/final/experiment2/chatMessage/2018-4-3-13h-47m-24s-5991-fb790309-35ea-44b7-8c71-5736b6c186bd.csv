@@ -1,0 +1,3 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	5991-fb790309-35ea-44b7-8c71-5736b6c186bd	1522788444224	scripted	1	0	banana	0	exp	6	false	director	move the banana up by one space	NaN	chatMessage
+planned_sample	5991-fb790309-35ea-44b7-8c71-5736b6c186bd	1522788454116	scripted	1	1	dollar	0	exp	6	false	director	dollar	669	chatMessage

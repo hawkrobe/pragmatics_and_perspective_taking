@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:51:03Z",
+    "AutoApprovalTime": "2018-04-04T06:50:25Z",
+    "AssignmentId": "236",
+    "WorkerId": "236",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1104953,
+            "gameID": "0439-894baa37-3fc0-4e4d-b2c1-2b700e1215ba",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 3,
+            "role": "director",
+            "comments": "",
+            "strategy": "To be direct and concise."
+        },
+        "id": "0439-894baa37-3fc0-4e4d-b2c1-2b700e1215ba"
+    },
+    "AcceptTime": "2018-04-04T06:15:59Z",
+    "HITId": "3OPLMF3EU5NI59CDWYPDK9H41L0LNW",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:45:25Z"
+}

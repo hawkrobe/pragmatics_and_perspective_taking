@@ -1,0 +1,15 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826414615	scripted	1	0	magnet	0	base	7	false	correct	magnet	2	4	2	4	4430	drop
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826457781	scripted	1	1	handcuffs	0	base	7	false	correct	handcuffs	4	3	4	3	11130	drop
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826497299	scripted	1	2	pandaToy	0	base	7	false	correct	pandaToy	3	2	3	2	15018	drop
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826534460	scripted	1	3	mediumCandle	0	base	7	true	correct	mediumCandle	1	2	1	2	5184	drop
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826563904	scripted	2	0	airplane	0	exp	1	false	correct	airplane	3	1	3	1	5861	drop
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826598114	scripted	2	1	sunGlasses	0	exp	1	true	correct	sunGlasses	4	4	4	4	6839	drop
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826613778	scripted	2	2	barrel	0	exp	1	false	correct	barrel	4	3	4	3	5545	drop
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826647725	scripted	2	3	saxophone	0	exp	1	false	correct	saxophone	2	3	2	3	7697	drop
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826672542	scripted	3	0	basketball	0	base	5	false	correct	basketball	3	2	3	2	4234	drop
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826693878	scripted	3	1	roundBrush	0	base	5	true	correct	roundBrush	2	4	2	4	9753	drop
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826784108	scripted	3	2	headphones	0	base	5	false	correct	headphones	3	3	3	3	63680	drop
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826808420	scripted	3	3	book	0	base	5	false	correct	book	3	1	3	1	5854	drop
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826830598	scripted	4	0	binoculars	0	exp	2	false	correct	binoculars	2	4	2	4	7007	drop
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826873016	scripted	4	1	wrench	0	exp	2	false	correct	wrench	2	1	2	1	7121	drop

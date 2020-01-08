@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:06:03Z",
+    "AutoApprovalTime": "2018-04-04T06:05:22Z",
+    "AssignmentId": "199",
+    "WorkerId": "199",
+    "answers": {
+        "subject_information": {
+            "totalLength": 938130,
+            "gameID": "2330-f0a1f680-40cc-402e-807d-23882b89bdff",
+            "thinksHuman": "yes",
+            "confused": "confused",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 29,
+            "role": "director",
+            "comments": "I was not entirely sure if I was using the descriptions correctly. It forced me to submit some auto filled ones which I dont recall reading in the instructions but I figured it was the format it was supposed to be in so I worded the rest of the questions like that.",
+            "strategy": "To describe the objects color."
+        },
+        "id": "2330-f0a1f680-40cc-402e-807d-23882b89bdff"
+    },
+    "AcceptTime": "2018-04-04T05:39:29Z",
+    "HITId": "307L9TDWJYS1P5MOQSLDONNN1Z9N3K",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:00:22Z"
+}

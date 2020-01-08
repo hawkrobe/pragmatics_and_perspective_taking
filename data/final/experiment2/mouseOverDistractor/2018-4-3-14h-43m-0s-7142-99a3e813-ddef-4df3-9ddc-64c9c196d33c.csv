@@ -1,0 +1,16 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522791780201	scripted	2	2	middleBlock	0	exp	2	true	on	2975	mouseOverDistractor
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522791781475	scripted	2	1	middleBlock	1	exp	2	true	off	4259	mouseOverDistractor
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522791782192	scripted	2	1	middleBlock	1	exp	2	true	on	4877	mouseOverDistractor
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522791782873	scripted	2	0	middleBlock	2	exp	2	true	off	5660	mouseOverDistractor
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522791783573	scripted	2	0	middleBlock	2	exp	2	true	on	6361	mouseOverDistractor
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522792207116	scripted	5	3	cassetteTape	0	exp	3	true	on	1040	mouseOverDistractor
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522792207502	scripted	5	3	cassetteTape	0	exp	3	true	off	1424	mouseOverDistractor
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522792207510	scripted	5	3	cassetteTape	0	exp	3	true	on	1442	mouseOverDistractor
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522792207712	scripted	5	2	cassetteTape	1	exp	3	true	off	1642	mouseOverDistractor
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522792453792	scripted	8	3	mediumCandle	0	exp	7	true	on	14906	mouseOverDistractor
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522792455162	scripted	8	3	mediumCandle	0	exp	7	true	off	16275	mouseOverDistractor
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522792457219	scripted	8	3	mediumCandle	0	exp	7	true	on	1136	mouseOverDistractor
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522792458163	scripted	8	2	mediumCandle	1	exp	7	true	off	2088	mouseOverDistractor
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522792484419	scripted	8	3	mediumCandle	1	exp	7	true	on	437	mouseOverDistractor
+planned_sample	7142-99a3e813-ddef-4df3-9ddc-64c9c196d33c	1522792484450	scripted	8	3	mediumCandle	1	exp	7	true	off	470	mouseOverDistractor

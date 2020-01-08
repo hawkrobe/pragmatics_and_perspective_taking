@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:46:03Z",
+    "AutoApprovalTime": "2018-04-03T22:45:46Z",
+    "AssignmentId": "26",
+    "WorkerId": "26",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1087892,
+            "gameID": "6388-22eafe0c-1cb4-4052-890a-288a65fcbb89",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 31,
+            "role": "director",
+            "comments": "I think I experienced a glitch during round 7. I was unable to enter messages to my partner without them being immediately deleted before I hit send, and it seemed like my partner was having trouble moving the object around? I wasn't sure if it was part of the experiment or not, but it was strange.",
+            "strategy": "I tried to describe the object as clearly as I could and gave directions as clearly as possible"
+        },
+        "id": "6388-22eafe0c-1cb4-4052-890a-288a65fcbb89"
+    },
+    "AcceptTime": "2018-04-03T22:18:20Z",
+    "HITId": "3WGCNLZJKF8WTQHWEUTR4PWWPAED1J",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:40:46Z"
+}

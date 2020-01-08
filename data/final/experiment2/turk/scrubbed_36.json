@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:08:03Z",
+    "AutoApprovalTime": "2018-04-03T22:07:55Z",
+    "AssignmentId": "36",
+    "WorkerId": "36",
+    "answers": {
+        "subject_information": {
+            "totalLength": 638626,
+            "gameID": "1129-54869797-8935-4726-bad6-4b365484378d",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 17,
+            "role": "director",
+            "comments": "On some of the trials, the instruction was already written in the box and I couldn't change it. (I was the director.)  I could only hit \"send\".  I'm not sure if that's how things were supposed to work but I was surprised that for about half the trials I couldn't actually write what I wanted.",
+            "strategy": "I tried to describe the object as clearly as I could, making sure it was different from other objects I could see, and then give a clear instruction on where to move it."
+        },
+        "id": "1129-54869797-8935-4726-bad6-4b365484378d"
+    },
+    "AcceptTime": "2018-04-03T21:47:29Z",
+    "HITId": "3QQUBC64ZEED53T2AHS1V3CR8TVNX3",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:02:55Z"
+}

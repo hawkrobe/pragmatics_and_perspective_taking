@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:45:03Z",
+    "AutoApprovalTime": "2018-04-04T06:44:32Z",
+    "AssignmentId": "280",
+    "WorkerId": "280",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1222827,
+            "gameID": "6757-0b967c88-51bc-41f6-8dc0-fb4063bfdbeb",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 29,
+            "role": "director",
+            "comments": "None",
+            "strategy": "The strategy I used was to describe the item and color and explain which way to move it."
+        },
+        "id": "6757-0b967c88-51bc-41f6-8dc0-fb4063bfdbeb"
+    },
+    "AcceptTime": "2018-04-04T06:12:43Z",
+    "HITId": "33N1S8XHHMLZWRMS6CIOVHFZDT3Z1L",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:39:32Z"
+}

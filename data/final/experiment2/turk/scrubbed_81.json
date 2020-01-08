@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T00:09:03Z",
+    "AutoApprovalTime": "2018-04-04T00:08:15Z",
+    "AssignmentId": "81",
+    "WorkerId": "81",
+    "answers": {
+        "subject_information": {
+            "totalLength": 863500,
+            "gameID": "0248-0ddbec25-7e2d-4464-9e98-1ebbc125c4df",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 30,
+            "role": "matcher",
+            "comments": "Did I miss something in the directions? I found that the curtains never came into play. :)",
+            "strategy": "I read their directions and I followed them. We didn't have to deal with the curtains so it was self-explanatory. "
+        },
+        "id": "0248-0ddbec25-7e2d-4464-9e98-1ebbc125c4df"
+    },
+    "AcceptTime": "2018-04-03T23:45:16Z",
+    "HITId": "3PGQRAZX02KZLLBHN9VPDBT6XYZSYS",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:03:15Z"
+}

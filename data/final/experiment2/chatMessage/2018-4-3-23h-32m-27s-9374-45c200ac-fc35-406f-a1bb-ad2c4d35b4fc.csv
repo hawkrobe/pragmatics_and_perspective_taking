@@ -1,0 +1,33 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522823547545	unscripted	1	0	binoculars	0	base	2	false	director	move the binoculars to one cell on my right	28692	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522823589613	unscripted	1	1	wrench	0	base	2	false	director	Move the wrench to one cell to my left	16522	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522823630241	unscripted	1	2	middleBlock	0	base	2	true	director	Move the alphabet block to one cell to my left	25976	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522823676902	unscripted	1	3	coffeeMug	0	base	2	false	director	move the coffee mug to one cell to my right	19074	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522823719961	unscripted	2	0	banana	0	exp	6	false	director	move the banana to one cell up	13960	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522823755571	unscripted	2	1	dollar	0	exp	6	false	director	move the dollar bill to one cell to my right	14361	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522823804911	unscripted	2	2	boardEraser	0	exp	6	true	director	move the bundle which is near the feather to one cell up	20012	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522823842491	unscripted	2	3	feather	0	exp	6	false	director	move the feather to one cell to my left	15163	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522823867453	unscripted	3	0	carrot	0	exp	4	false	director	move the carrot to one cell up	9979	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522823902103	unscripted	3	1	mediumMeasuringCup	0	exp	4	true	director	move the measuring pyrex cup to one cell down	17847	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522823935937	unscripted	3	2	waterBottle	0	exp	4	false	director	move the blue bottle to one cell to my right	16483	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522823968866	unscripted	3	3	chair	0	exp	4	false	director	move the chair with cushion to one cell to my left	16996	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522823997929	unscripted	4	0	magnet	0	base	7	false	director	move the horse shaped red magnet to one cell down	15639	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824042867	unscripted	4	1	handcuffs	0	base	7	false	director	move the silver handcuffs to one cell down	33142	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824073363	unscripted	4	2	pandaToy	0	base	7	false	director	move the black and white teddy bear in top row to one cell down	19119	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824116176	unscripted	4	3	mediumCandle	0	base	7	true	director	move the lighted red candle in the top corner to one cell down	19982	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824152293	unscripted	5	0	comb	0	base	8	false	director	move the yellow comb to one cell up	21715	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824186479	unscripted	5	1	computerMouse	0	base	8	true	director	move the silver mouse to one cell up	13793	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824227892	unscripted	5	2	castIronPan	0	base	8	false	director	move the black idonised frying pan to one cell up	26567	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824267455	unscripted	5	3	piano	0	base	8	false	director	move the piano on stand to one cell to my left	23314	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824312892	unscripted	6	0	airplane	0	exp	1	false	director	move the red airplane to one cell to my right	18880	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824345251	unscripted	6	1	sunGlasses	0	exp	1	true	director	move the black sunglasses to one cell to my right	17126	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824375072	unscripted	6	2	barrel	0	exp	1	false	director	move the barrel to one cell down	15490	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824417433	unscripted	6	3	saxophone	0	exp	1	false	director	move the clarinet to one cell up	27556	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824454693	unscripted	7	0	scissors	0	exp	3	false	director	move the black scissors to one cell to my right	15761	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824508557	unscripted	7	1	knife	0	exp	3	false	director	move the knife near the soap to one cell down	27304	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824542929	unscripted	7	2	barOfSoap	0	exp	3	false	director	move the soap to one cell to my left	16090	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824589350	unscripted	7	3	cassetteTape	0	exp	3	true	director	move the cassette recorder to one cell down	24608	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824633538	unscripted	8	0	basketball	0	base	5	false	director	move the basketball near the book to one cell down	17373	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824668771	unscripted	8	1	roundBrush	0	base	5	true	director	move the round hair brush to one cell to my left	21077	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824705265	unscripted	8	2	headphones	0	base	5	false	director	move the red headphones to one cell to my left	17167	chatMessage
+planned_sample	9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc	1522824747804	unscripted	8	3	book	0	base	5	false	director	move the red book to one cell to my right	10870	chatMessage

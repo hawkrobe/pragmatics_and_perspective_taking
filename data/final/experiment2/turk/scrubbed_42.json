@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:24:03Z",
+    "AutoApprovalTime": "2018-04-03T22:23:59Z",
+    "AssignmentId": "42",
+    "WorkerId": "42",
+    "answers": {
+        "subject_information": {
+            "totalLength": 966251,
+            "gameID": "6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9",
+            "thinksHuman": "yes",
+            "confused": "confused",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 25,
+            "role": "matcher",
+            "comments": "I read the instructions but if was only after two wrongs that I remembered that the director could not see what I could see on the curtain blocks.  Therefore I then knew not to move any of them.",
+            "strategy": "Since I was the matcher I did what the director told me to do. "
+        },
+        "id": "6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9"
+    },
+    "AcceptTime": "2018-04-03T21:53:51Z",
+    "HITId": "3NFWQRSHVEEQVPLVNJ9KZC3N3CDGFX",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:18:59Z"
+}

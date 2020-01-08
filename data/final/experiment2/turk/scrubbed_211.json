@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:10:03Z",
+    "AutoApprovalTime": "2018-04-04T07:09:23Z",
+    "AssignmentId": "211",
+    "WorkerId": "211",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1178629,
+            "gameID": "5106-87778c2e-b0d4-4aa0-881f-824ae700e248",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "no",
+            "ratePartner": "loved",
+            "score": 29,
+            "role": "matcher",
+            "comments": "nice and enjoyable i love to work on that HIT",
+            "strategy": "nice and prompt but all depend the participant"
+        },
+        "id": "5106-87778c2e-b0d4-4aa0-881f-824ae700e248"
+    },
+    "AcceptTime": "2018-04-04T06:35:55Z",
+    "HITId": "3B0MCRZMBRU8ZF3O45VC5FVJ6A2PPU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:04:23Z"
+}

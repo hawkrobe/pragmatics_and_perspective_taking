@@ -1,0 +1,3 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+pilot1	2985-d4c5efb1-d4dd-460c-9a62-d0f07926bc86	1522737451671	unscripted	1	1	computerMouse	0	exp	8	true	on	8005	mouseOverDistractor
+pilot1	2985-d4c5efb1-d4dd-460c-9a62-d0f07926bc86	1522737451823	unscripted	1	1	computerMouse	0	exp	8	true	off	8155	mouseOverDistractor

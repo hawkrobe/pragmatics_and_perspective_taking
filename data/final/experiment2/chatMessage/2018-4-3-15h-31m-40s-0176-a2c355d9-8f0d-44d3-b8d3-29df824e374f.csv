@@ -1,0 +1,18 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522794700109	unscripted	1	0	banana	0	base	6	false	director	move	1848	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522794712858	unscripted	1	0	banana	0	base	6	false	director	banana	2862	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522794733104	unscripted	1	1	dollar	0	base	6	false	director	move dollars	7659	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522794774642	unscripted	1	2	boardEraser	0	base	6	true	director	move box	2607	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522794788643	unscripted	1	2	boardEraser	0	base	6	true	director	move	2016	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522794806546	unscripted	1	3	feather	0	base	6	false	director	move feather	3072	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522794824051	unscripted	1	3	feather	0	base	6	false	director	move	1877	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522794849882	unscripted	2	0	binoculars	0	exp	2	false	director	move microscope	12479	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522794874520	unscripted	2	1	wrench	0	exp	2	false	director	move tools	11973	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522794890696	unscripted	2	1	wrench	0	exp	2	false	director	move	1405	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522794918280	unscripted	2	2	middleBlock	0	exp	2	true	director	move the box	3599	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522794951017	unscripted	2	3	coffeeMug	0	exp	2	false	director	move mug	1704	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522795022057	unscripted	3	0	basketball	0	exp	5	false	director	ball	915	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522795059176	unscripted	3	1	roundBrush	0	exp	5	true	director	comb	840	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522795087744	unscripted	3	2	headphones	0	exp	5	false	director	headphone	1933	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522795111276	unscripted	3	3	book	0	exp	5	false	director	book	2202	chatMessage
+planned_sample	0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f	1522795155808	unscripted	4	0	scissors	0	base	3	false	director	scissors	1401	chatMessage

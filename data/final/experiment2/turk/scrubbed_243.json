@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:23:03Z",
+    "AutoApprovalTime": "2018-04-04T06:22:33Z",
+    "AssignmentId": "243",
+    "WorkerId": "243",
+    "answers": {
+        "subject_information": {
+            "totalLength": 394313,
+            "gameID": "9152-10896ddf-80ef-429f-ae5d-c76949f3402a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 1,
+            "role": "matcher",
+            "comments": "The matcher said \"move the brush left\" but each time I did, it said I was wrong.",
+            "strategy": "I followed the matcher's directions"
+        },
+        "id": "9152-10896ddf-80ef-429f-ae5d-c76949f3402a"
+    },
+    "AcceptTime": "2018-04-04T06:04:45Z",
+    "HITId": "33BFF6QPI1BRCZV2ITC0K60EUBDW3K",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:17:33Z"
+}

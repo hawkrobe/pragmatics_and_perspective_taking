@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:52:03Z",
+    "AutoApprovalTime": "2018-04-03T23:51:36Z",
+    "AssignmentId": "82",
+    "WorkerId": "82",
+    "answers": {
+        "subject_information": {
+            "totalLength": 620323,
+            "gameID": "1902-2cad7ac0-96be-42b1-a2e0-c5864d3961ae",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "matcher",
+            "comments": "none",
+            "strategy": "I read where to put the item and then looked for the item and then moved it to where the director told me too."
+        },
+        "id": "1902-2cad7ac0-96be-42b1-a2e0-c5864d3961ae"
+    },
+    "AcceptTime": "2018-04-03T23:19:22Z",
+    "HITId": "3PGQRAZX02KZLLBHN9VPDBT6XYZSYS",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:46:36Z"
+}

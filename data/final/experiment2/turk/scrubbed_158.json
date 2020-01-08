@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T21:57:03Z",
+    "AutoApprovalTime": "2018-04-03T21:56:15Z",
+    "AssignmentId": "158",
+    "WorkerId": "158",
+    "answers": {
+        "subject_information": {
+            "totalLength": 555596,
+            "gameID": "3369-af8a9aa6-2cc9-42b9-9c46-b8546a852c73",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "matcher",
+            "comments": "Great experiment!",
+            "strategy": "I relied on the properties that my partner described to me."
+        },
+        "id": "3369-af8a9aa6-2cc9-42b9-9c46-b8546a852c73"
+    },
+    "AcceptTime": "2018-04-03T21:18:50Z",
+    "HITId": "3VLL1PIENQOKSJTTCEGZ7DS763XZOQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T21:51:15Z"
+}

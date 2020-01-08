@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:08:03Z",
+    "AutoApprovalTime": "2018-04-03T22:07:24Z",
+    "AssignmentId": "32",
+    "WorkerId": "32",
+    "answers": {
+        "subject_information": {
+            "totalLength": 605760,
+            "gameID": "1129-54869797-8935-4726-bad6-4b365484378d",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 17,
+            "role": "matcher",
+            "comments": "It was ok,  would have been better if the two boxes aligned with each other and didn't have to scroll up and down each time.",
+            "strategy": "I just read what they told me and did it."
+        },
+        "id": "1129-54869797-8935-4726-bad6-4b365484378d"
+    },
+    "AcceptTime": "2018-04-03T21:47:35Z",
+    "HITId": "3QQUBC64ZEED53T2AHS1V3CR8TVNX3",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:02:24Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:11:03Z",
+    "AutoApprovalTime": "2018-04-04T06:11:02Z",
+    "AssignmentId": "242",
+    "WorkerId": "242",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1099604,
+            "gameID": "8193-460db540-c364-46c4-b148-bd646ae2c051",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 29,
+            "role": "director",
+            "comments": "Fun HIT, thanks.",
+            "strategy": "I tried to adjust my instructions based on feedback from my partner."
+        },
+        "id": "8193-460db540-c364-46c4-b148-bd646ae2c051"
+    },
+    "AcceptTime": "2018-04-04T05:45:53Z",
+    "HITId": "304QEQWKZPKNQYN38K371EPLOXV0OI",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:06:02Z"
+}

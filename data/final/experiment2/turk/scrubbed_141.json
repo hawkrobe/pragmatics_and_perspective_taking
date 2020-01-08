@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:27:03Z",
+    "AutoApprovalTime": "2018-04-04T01:26:35Z",
+    "AssignmentId": "141",
+    "WorkerId": "141",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1305642,
+            "gameID": "0562-c375f066-1433-4cac-82fe-ce796f9747c9",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 31,
+            "role": "director",
+            "comments": "",
+            "strategy": "Describe the object and where it should go clearly"
+        },
+        "id": "0562-c375f066-1433-4cac-82fe-ce796f9747c9"
+    },
+    "AcceptTime": "2018-04-04T00:53:16Z",
+    "HITId": "3VGZ74AYTGGJSD1LWHJJR6IK6ZQGCR",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T01:21:35Z"
+}

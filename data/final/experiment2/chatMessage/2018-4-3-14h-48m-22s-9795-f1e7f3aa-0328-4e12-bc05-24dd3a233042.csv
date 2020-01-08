@@ -1,0 +1,9 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792102982	scripted	1	0	scissors	0	base	3	false	director	move the scissors horizontally one square	23752	chatMessage
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792142462	scripted	1	0	scissors	1	base	3	false	director	move the scissors to the right one square	10154	chatMessage
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792204558	scripted	1	0	scissors	2	base	3	false	director	move the scissors to the right one square	30391	chatMessage
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792237821	scripted	1	3	cassetteTape	0	base	3	true	director	move the tape down by one space	63644	chatMessage
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792260533	scripted	2	0	banana	0	exp	6	false	director	move the banana up by one space	86364	chatMessage
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792291039	scripted	2	1	dollar	0	exp	6	false	director	move the dollar bill one space to the right	9055	chatMessage
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792310062	scripted	2	2	boardEraser	0	exp	6	true	director	move the eraser up by one space	28077	chatMessage
+planned_sample	9795-f1e7f3aa-0328-4e12-bc05-24dd3a233042	1522792334962	scripted	2	2	boardEraser	1	exp	6	true	director	move the eraser up one space	6239	chatMessage

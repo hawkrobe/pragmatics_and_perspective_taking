@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:22:03Z",
+    "AutoApprovalTime": "2018-04-03T22:21:43Z",
+    "AssignmentId": "372",
+    "WorkerId": "372",
+    "answers": {
+        "subject_information": {
+            "totalLength": 105185,
+            "gameID": "9189-ba055cb2-b571-4871-8afd-ee39be9172be",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 1,
+            "role": "director",
+            "comments": "",
+            "strategy": "I just told the other player where to move based on what i saw."
+        },
+        "id": "9189-ba055cb2-b571-4871-8afd-ee39be9172be"
+    },
+    "AcceptTime": "2018-04-03T22:10:13Z",
+    "HITId": "3M47JKRKCX1FJHM23SUSDT9CMUX684",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:16:43Z"
+}

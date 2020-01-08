@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T03:41:03Z",
+    "AutoApprovalTime": "2018-04-04T03:40:59Z",
+    "AssignmentId": "151",
+    "WorkerId": "151",
+    "answers": {
+        "subject_information": {
+            "totalLength": 755772,
+            "gameID": "5235-b24157e1-836b-40d1-afcd-17831199ed27",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 30,
+            "role": "director",
+            "comments": "the only errors that were made was when my response was already typed and i could not change the words. it gave incorrect commands twice.",
+            "strategy": "i was as descriptive as possible"
+        },
+        "id": "5235-b24157e1-836b-40d1-afcd-17831199ed27"
+    },
+    "AcceptTime": "2018-04-04T03:19:42Z",
+    "HITId": "3OND0WXMHWFCP7GACE7W2UUO6CMHES",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T03:35:59Z"
+}

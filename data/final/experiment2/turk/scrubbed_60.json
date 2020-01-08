@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:46:03Z",
+    "AutoApprovalTime": "2018-04-03T22:45:26Z",
+    "AssignmentId": "60",
+    "WorkerId": "60",
+    "answers": {
+        "subject_information": {
+            "totalLength": 570693,
+            "gameID": "0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 13,
+            "role": "director",
+            "comments": "",
+            "strategy": "SOMEWHAT NICE"
+        },
+        "id": "0176-a2c355d9-8f0d-44d3-b8d3-29df824e374f"
+    },
+    "AcceptTime": "2018-04-03T22:19:22Z",
+    "HITId": "3X4Q1O9UBHM189NNTJOGGTZ8WALO7O",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:40:26Z"
+}

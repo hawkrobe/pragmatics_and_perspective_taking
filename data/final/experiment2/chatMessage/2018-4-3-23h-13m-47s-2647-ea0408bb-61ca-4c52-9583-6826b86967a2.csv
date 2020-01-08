@@ -1,0 +1,35 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822427511	unscripted	1	0	banana	0	base	6	false	director	Move the banana up one space	6174	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822467702	unscripted	1	1	dollar	0	base	6	false	director	Move the dollar bill so that it is in the box under the banana	21411	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822492440	unscripted	1	2	boardEraser	0	base	6	true	director	Move the expo eraser up one box	7792	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822517986	unscripted	1	3	feather	0	base	6	false	director	Move the feather to the box below the expo eraser	9878	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822537486	unscripted	2	0	carrot	0	exp	4	false	director	Move the carrot up one box	6401	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822563825	unscripted	2	1	mediumMeasuringCup	0	exp	4	true	director	Move the pyrex measuring cup down one box	11552	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822606620	unscripted	2	1	mediumMeasuringCup	1	exp	4	true	director	Move the glass cup that is below the chair down one space	10039	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822657042	unscripted	2	2	waterBottle	0	exp	4	false	director	Move the water bottle one box over in the same row, so that it is closer to the chair	34445	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822699463	unscripted	2	3	chair	0	exp	4	false	director	Move the chair one box over in the same row, so that it will now be next to the water bottle	20296	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822721283	unscripted	3	0	basketball	0	base	5	false	director	Move the basketball one box down	5217	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822754007	unscripted	3	1	roundBrush	0	base	5	true	director	Move the round hair brush one box to the side, so that it is next to the ring	15869	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822788325	unscripted	3	2	headphones	0	base	5	false	director	Move the headphones one box to the side, in the same direction you just moved the hair brush	15415	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822823985	unscripted	3	3	book	0	base	5	false	director	Move the red book one box to the side, so that it will not be next to the dog	16871	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822880761	unscripted	4	0	binoculars	0	exp	2	false	director	Move the binoculars one box to the side	30577	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822932167	unscripted	4	1	wrench	0	exp	2	false	director	Move the tool (wrench?) one box to the side so that it is next to the block with the letter A	25927	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822954098	unscripted	4	2	middleBlock	0	exp	2	true	director	Move the block with the letter B one box to the side	8199	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522822982445	unscripted	4	3	coffeeMug	0	exp	2	false	director	Move the coffee mug one box to the side	11255	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823019312	unscripted	5	0	magnet	0	exp	7	false	director	Move the horseshoe shaped magnet one box down	16631	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823045400	unscripted	5	1	handcuffs	0	exp	7	false	director	Move the handcuffs one box down	3534	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823077759	unscripted	5	2	pandaToy	0	exp	7	false	director	Move the panda toy one box down	22241	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823090686	unscripted	5	3	mediumCandle	0	exp	7	true	director	Move the red candle one box down	3440	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823109177	unscripted	6	0	scissors	0	base	3	false	director	Move the scissors one box to the side	4423	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823136436	unscripted	6	1	knife	0	base	3	false	director	Move the knife one box down	2864	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823158374	unscripted	6	2	barOfSoap	0	base	3	false	director	Move the soap one box to the side, it will be above the knife	10119	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823194536	unscripted	6	3	cassetteTape	0	base	3	true	director	move the cassette tape one box down	4909	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823233592	unscripted	7	0	airplane	0	base	1	false	director	Move the plane one box to the side, it will then be diagonal from the barrel	21080	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823280612	unscripted	7	1	sunGlasses	0	base	1	true	director	Move the sunglasses one box to the side, they will be further away from the saxophone	19707	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823299374	unscripted	7	2	barrel	0	base	1	false	director	move the barrel one box down	2815	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823312609	unscripted	7	3	saxophone	0	base	1	false	director	move the saxophone one box up	3463	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823327115	unscripted	8	0	comb	0	exp	8	false	director	move the comb one box up	2678	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823342319	unscripted	8	1	computerMouse	0	exp	8	true	director	move the mouse one box up	3095	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823352424	unscripted	8	1	computerMouse	1	exp	8	true	director	computer mouse	1783	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823371795	unscripted	8	2	castIronPan	0	exp	8	false	director	move the pan one box up	3126	chatMessage
+planned_sample	2647-ea0408bb-61ca-4c52-9583-6826b86967a2	1522823392177	unscripted	8	3	piano	0	exp	8	false	director	move the piano one box to the side, it will be further away from the pan	9766	chatMessage

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:17:03Z",
+    "AutoApprovalTime": "2018-04-04T06:16:22Z",
+    "AssignmentId": "213",
+    "WorkerId": "213",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1265633,
+            "gameID": "5707-ac526852-17d2-48e8-bb09-cbfdc564089f",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "director",
+            "comments": "don't understand the point of the curtains, since they did not seem to inhibit the object-mover.",
+            "strategy": "It was really straightforward, once I knew I could actually name the object, ha. I said to move X object one space to the left/right/up/down. Easy."
+        },
+        "id": "5707-ac526852-17d2-48e8-bb09-cbfdc564089f"
+    },
+    "AcceptTime": "2018-04-04T05:43:19Z",
+    "HITId": "3FDWKV9VCN2F6HE7TB2EYHON9MJUMZ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:11:22Z"
+}

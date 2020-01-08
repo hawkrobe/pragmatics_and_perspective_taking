@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T08:08:03Z",
+    "AutoApprovalTime": "2018-04-04T08:07:41Z",
+    "AssignmentId": "326",
+    "WorkerId": "326",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1139178,
+            "gameID": "9184-f0d97cb9-887e-4450-9a07-6104da5e6d2b",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 29,
+            "role": "director",
+            "comments": "",
+            "strategy": "simple and if the other person got it wrong tried to add a description word."
+        },
+        "id": "9184-f0d97cb9-887e-4450-9a07-6104da5e6d2b"
+    },
+    "AcceptTime": "2018-04-04T07:37:48Z",
+    "HITId": "3OJX0UFJ0Z70ZXVD42Y9TVI39ND9UG",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T08:02:41Z"
+}

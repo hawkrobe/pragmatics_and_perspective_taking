@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T03:44:03Z",
+    "AutoApprovalTime": "2018-04-04T03:43:54Z",
+    "AssignmentId": "149",
+    "WorkerId": "149",
+    "answers": {
+        "subject_information": {
+            "totalLength": 569279,
+            "gameID": "8402-2678755e-7482-47f0-9372-0cdd1303303c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "matcher",
+            "comments": "No.",
+            "strategy": "Just moving items around."
+        },
+        "id": "8402-2678755e-7482-47f0-9372-0cdd1303303c"
+    },
+    "AcceptTime": "2018-04-04T03:27:04Z",
+    "HITId": "3OND0WXMHWFCP7GACE7W2UUO6CMHES",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T03:38:54Z"
+}

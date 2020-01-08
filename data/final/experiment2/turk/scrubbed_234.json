@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:07:03Z",
+    "AutoApprovalTime": "2018-04-04T06:06:25Z",
+    "AssignmentId": "234",
+    "WorkerId": "234",
+    "answers": {
+        "subject_information": {
+            "totalLength": 748535,
+            "gameID": "2551-8ca31618-cc9a-40a6-a06d-b843129fdce8",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 31,
+            "role": "director",
+            "comments": ":)",
+            "strategy": "straight forward and descriptive of each item. i told which direction to move and how many squares to move"
+        },
+        "id": "2551-8ca31618-cc9a-40a6-a06d-b843129fdce8"
+    },
+    "AcceptTime": "2018-04-04T05:45:50Z",
+    "HITId": "3OPLMF3EU5NI59CDWYPDK9H41L0LNW",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:01:25Z"
+}

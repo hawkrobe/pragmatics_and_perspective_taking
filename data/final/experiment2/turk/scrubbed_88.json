@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:44:03Z",
+    "AutoApprovalTime": "2018-04-03T23:43:16Z",
+    "AssignmentId": "88",
+    "WorkerId": "88",
+    "answers": {
+        "subject_information": {
+            "totalLength": 755470,
+            "gameID": "5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 30,
+            "role": "matcher",
+            "comments": "none",
+            "strategy": "tried to follow what they said.  Learned that if there were two items that were similar, move the one that is not behind the curtain."
+        },
+        "id": "5916-d53d4ab6-2f9f-47a1-bdf5-744cc44f8b2a"
+    },
+    "AcceptTime": "2018-04-03T23:19:22Z",
+    "HITId": "3PGQRAZX02KZLLBHN9VPDBT6XYZSYS",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:38:16Z"
+}

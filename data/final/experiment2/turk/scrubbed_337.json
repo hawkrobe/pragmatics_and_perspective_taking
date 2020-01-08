@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:47:03Z",
+    "AutoApprovalTime": "2018-04-04T07:46:55Z",
+    "AssignmentId": "337",
+    "WorkerId": "337",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1356608,
+            "gameID": "0914-515eaa37-ca0b-49de-8ade-e23d75984698",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 32,
+            "role": "director",
+            "comments": "I confused myself briefly about the cubby orientation, ie what I saw vs what my partner saw. Could be made more clear? Unless this was an experimental question. ",
+            "strategy": "I was clear about directions if they were to move an item into a cubby and careful to fully describe the directions they were to move the item and described the item"
+        },
+        "id": "0914-515eaa37-ca0b-49de-8ade-e23d75984698"
+    },
+    "AcceptTime": "2018-04-04T07:17:16Z",
+    "HITId": "3L60IFZKF3IO9H7C2FF2NXR1YSJHHD",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:41:55Z"
+}

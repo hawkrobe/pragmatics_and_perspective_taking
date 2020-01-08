@@ -1,0 +1,17 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826388644	scripted	1	0	magnet	0	base	7	false	director	move the magnet down by one space	NaN	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826440956	scripted	1	1	handcuffs	0	base	7	false	director	Move the  Handcuffs down by one space	13748	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826478762	scripted	1	2	pandaToy	0	base	7	false	director	Move the panda bear down by one space	6269	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826524877	scripted	1	3	mediumCandle	0	base	7	true	director	move the small candle down by one space	52359	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826553685	scripted	2	0	airplane	0	exp	1	false	director	Move the airplane to the right by one space	5419	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826578875	scripted	2	1	sunGlasses	0	exp	1	true	director	move the glasses one space to the right	30441	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826604390	scripted	2	2	barrel	0	exp	1	false	director	move the barrel down by one space	56095	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826633138	scripted	2	3	saxophone	0	exp	1	false	director	Move the sex phone up by one space	4988	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826665311	scripted	3	0	basketball	0	base	5	false	director	Move the basketball down by one space	4946	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826680854	scripted	3	1	roundBrush	0	base	5	true	director	move the brush one space to the left	20392	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826714659	scripted	3	2	headphones	0	base	5	false	director	Move the headphones to the left	5315	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826769324	scripted	3	2	headphones	0	base	5	false	matcher	I assume one space?	6210	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826779699	scripted	3	2	headphones	0	base	5	false	director	Yes 	4249	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826796540	scripted	3	3	book	0	base	5	false	director	move the book one space to the right	21158	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826818610	scripted	4	0	binoculars	0	exp	2	false	director	move the binoculars one space to the right	43223	chatMessage
+planned_sample	4422-19abb38e-72c1-4c70-9fe4-d514b2327887	1522826859533	scripted	4	1	wrench	0	exp	2	false	director	Move the silver adjustable wrench one space to the left	9002	chatMessage

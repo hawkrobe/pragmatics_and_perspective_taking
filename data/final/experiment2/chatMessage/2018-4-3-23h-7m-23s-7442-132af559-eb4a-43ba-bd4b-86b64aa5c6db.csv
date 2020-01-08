@@ -1,0 +1,55 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822043614	scripted	1	0	banana	0	base	6	false	director	move the banana up by one space	NaN	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822110144	scripted	1	1	dollar	0	base	6	false	director	Move George in the direction he is looking	22415	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822152827	scripted	1	2	boardEraser	0	base	6	true	director	move the eraser up by one space	65099	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822193080	scripted	1	3	feather	0	base	6	false	director	move feather in direction of end closest to body	22790	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822241674	scripted	1	3	feather	0	base	6	false	matcher	i do not see a body	7901	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822268640	scripted	2	0	magnet	0	exp	7	false	director	move the magnet down by one space	18447	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822303338	scripted	2	1	handcuffs	0	exp	7	false	director	move handcuffs towards ground	8763	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822340571	scripted	2	2	pandaToy	0	exp	7	false	director	push panda towards center of the earth	7969	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822386966	scripted	2	2	pandaToy	1	exp	7	false	director	move object south of panda one down	13750	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822447734	scripted	2	2	pandaToy	2	exp	7	false	director	using geographical conventions move item below panda to miami	26583	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822501782	scripted	2	2	pandaToy	3	exp	7	false	director	move panda down one square	7943	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822530401	scripted	2	2	pandaToy	4	exp	7	false	director	move item below panda over the handcuffs	11774	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822577832	scripted	2	2	pandaToy	5	exp	7	false	director	move item under panda over candle	8070	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822633316	scripted	2	2	pandaToy	5	exp	7	false	matcher	am i allowed to move the squares with a curtain ? can i move the curtains?	18356	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822659201	scripted	2	2	pandaToy	6	exp	7	false	director	Yes open the curtains	6242	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822680867	scripted	2	2	pandaToy	6	exp	7	false	matcher	how	1330	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822710001	scripted	2	2	pandaToy	6	exp	7	false	director	try clicking and dragging	21762	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822766152	scripted	2	2	pandaToy	7	exp	7	false	director	perhaps the panda would like some bamboo	7303	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822806140	scripted	2	3	mediumCandle	0	exp	7	true	director	move the small candle down by one space	47295	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822838556	scripted	3	0	basketball	0	exp	5	false	director	Play basketball with the Chinese team	8559	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822859284	scripted	3	1	roundBrush	0	exp	5	true	director	move the brush one space to the left	29288	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822891054	scripted	3	1	roundBrush	1	exp	5	true	director	move hairbrush left	4988	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822939457	scripted	3	1	roundBrush	1	exp	5	true	matcher	i did on the last turn, i moved the brush one spot to the left which was correct yet it came back with an x	40875	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822950653	scripted	3	1	roundBrush	1	exp	5	true	director	its on the bottom row	13352	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822958544	scripted	3	1	roundBrush	1	exp	5	true	matcher	i did it correctly the last time and was rejected, im confused	18307	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822971029	scripted	3	1	roundBrush	1	exp	5	true	matcher	oh, i see another brush~~~~~~~~~lol	7682	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522822973723	scripted	3	1	roundBrush	1	exp	5	true	director	try again I did not see an x	6814	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823016300	scripted	3	2	headphones	0	exp	5	false	director	move headphones same direction as brush	9743	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823046893	scripted	3	3	book	0	exp	5	false	director	move the book one space to the right	40334	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823075819	scripted	4	0	carrot	0	base	4	false	director	move the carrot up one space	69262	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823119172	scripted	4	1	mediumMeasuringCup	0	base	4	true	director	move the large measuring cup down one space	112615	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823150691	scripted	4	2	waterBottle	0	base	4	false	director	move your water bottle closer to the center	9919	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823181124	scripted	4	3	chair	0	base	4	false	director	slide the windsor chair to the bottle	10208	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823212156	scripted	5	0	comb	0	exp	8	false	director	comb the top of your head	13630	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823238570	scripted	5	1	computerMouse	0	exp	8	true	director	move the mouse up by one space	40046	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823259427	scripted	5	1	computerMouse	1	exp	8	true	director	the computer mouse not the house mouse	7391	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823292962	scripted	5	2	castIronPan	0	exp	8	false	director	move the frying pan skywards	7200	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823329995	scripted	5	3	piano	0	exp	8	false	director	piano moving is really hard but try to put that aside	16182	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823358610	scripted	6	0	scissors	0	exp	3	false	director	cut sharply to the right	4556	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823404738	scripted	6	0	scissors	1	exp	3	false	director	trim your fabric on right side of the jacket	13662	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823449625	scripted	6	1	knife	0	exp	3	false	director	move the knife down one space	58550	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823474265	scripted	6	2	barOfSoap	0	exp	3	false	director	slide the soap inwards	7478	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823499866	scripted	6	3	cassetteTape	0	exp	3	true	director	move the tape down by one space	33079	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823541001	scripted	6	3	cassetteTape	0	exp	3	true	matcher	masking tape or cassette tape?	19812	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823566915	scripted	6	3	cassetteTape	0	exp	3	true	director	move the tape down by one space	100131	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823622785	scripted	6	3	cassetteTape	1	exp	3	true	director	move cassette mix tape downwards	7607	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823640408	scripted	7	0	binoculars	0	base	2	false	director	move the binoculars one space to the right	25230	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823687208	scripted	7	1	wrench	0	base	2	false	director	move the wrench to the left, not the wench	10726	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823724570	scripted	7	2	middleBlock	0	base	2	true	director	move the bottom block one space to the left	48078	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823766124	scripted	7	3	coffeeMug	0	base	2	false	director	move my coffee over to the right, thanks	9491	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823797402	scripted	8	0	airplane	0	base	1	false	director	land the fighter plane to the right	7654	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823822080	scripted	8	1	sunGlasses	0	base	1	true	director	move the glasses one space to the right	32334	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823841746	scripted	8	2	barrel	0	base	1	false	director	move the barrel down by one space	51998	chatMessage
+planned_sample	7442-132af559-eb4a-43ba-bd4b-86b64aa5c6db	1522823881890	scripted	8	3	saxophone	0	base	1	false	director	elevate bill clinton's favorite instrument	9576	chatMessage

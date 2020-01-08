@@ -1,0 +1,14 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823172412	unscripted	2	1	computerMouse	0	exp	8	true	on	726	mouseOverDistractor
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823173160	unscripted	2	1	computerMouse	0	exp	8	true	off	1476	mouseOverDistractor
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823174692	unscripted	2	0	computerMouse	1	exp	8	true	on	3010	mouseOverDistractor
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823174975	unscripted	2	0	computerMouse	1	exp	8	true	off	3292	mouseOverDistractor
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823196976	unscripted	2	1	computerMouse	1	exp	8	true	on	25293	mouseOverDistractor
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823208225	unscripted	2	1	computerMouse	1	exp	8	true	off	36542	mouseOverDistractor
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823599784	unscripted	5	2	middleBlock	0	exp	2	true	on	3485	mouseOverDistractor
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823600884	unscripted	5	2	middleBlock	0	exp	2	true	off	4586	mouseOverDistractor
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522824002289	unscripted	8	2	boardEraser	0	base	6	true	on	4658	mouseOverDistractor
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522824002373	unscripted	8	2	boardEraser	0	base	6	true	off	4741	mouseOverDistractor
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522824035555	unscripted	8	2	boardEraser	0	base	6	true	on	37923	mouseOverDistractor
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522824035588	unscripted	8	2	boardEraser	0	base	6	true	off	37956	mouseOverDistractor
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522824039923	unscripted	8	2	boardEraser	0	base	6	true	on	3329	mouseOverDistractor

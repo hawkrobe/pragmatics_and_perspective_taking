@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:40:03Z",
+    "AutoApprovalTime": "2018-04-04T06:39:47Z",
+    "AssignmentId": "269",
+    "WorkerId": "269",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1153239,
+            "gameID": "1968-d8d8332d-9575-41ab-a27d-19aaae052df1",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 28,
+            "role": "director",
+            "comments": "Fun study. I really enjoyed it. Thank You!",
+            "strategy": "I used as little information as possible to have him/her move the object to correct position."
+        },
+        "id": "1968-d8d8332d-9575-41ab-a27d-19aaae052df1"
+    },
+    "AcceptTime": "2018-04-04T06:11:48Z",
+    "HITId": "341H3G5YF0EZP21AATEOHCWP81XZ0I",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:34:47Z"
+}

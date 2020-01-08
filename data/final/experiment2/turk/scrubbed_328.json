@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:26:03Z",
+    "AutoApprovalTime": "2018-04-04T07:25:42Z",
+    "AssignmentId": "328",
+    "WorkerId": "328",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1360424,
+            "gameID": "5500-52e40b54-14b4-4e61-8fbc-37f9d794428e",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 29,
+            "role": "director",
+            "comments": "",
+            "strategy": "Very basic, used the given prompt to instruct partner "
+        },
+        "id": "5500-52e40b54-14b4-4e61-8fbc-37f9d794428e"
+    },
+    "AcceptTime": "2018-04-04T06:52:28Z",
+    "HITId": "3EQPA8A374W6R82WW1OUZHBL7A4JZA",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:20:42Z"
+}

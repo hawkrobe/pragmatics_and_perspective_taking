@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:45:03Z",
+    "AutoApprovalTime": "2018-04-03T22:44:57Z",
+    "AssignmentId": "35",
+    "WorkerId": "35",
+    "answers": {
+        "subject_information": {
+            "totalLength": 999326,
+            "gameID": "6388-22eafe0c-1cb4-4052-890a-288a65fcbb89",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 31,
+            "role": "matcher",
+            "comments": "no.",
+            "strategy": "I just did what the director told me as instructed."
+        },
+        "id": "6388-22eafe0c-1cb4-4052-890a-288a65fcbb89"
+    },
+    "AcceptTime": "2018-04-03T22:07:15Z",
+    "HITId": "3QQUBC64ZEED53T2AHS1V3CR8TVNX3",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:39:57Z"
+}

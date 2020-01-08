@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:22:03Z",
+    "AutoApprovalTime": "2018-04-03T22:21:56Z",
+    "AssignmentId": "17",
+    "WorkerId": "17",
+    "answers": {
+        "subject_information": {
+            "totalLength": 469226,
+            "gameID": "6068-59d1743c-c6f4-46d8-b524-4834fd4c43cf",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 14,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I tried to follow what they said. Something wonky happened at the end and I messed up b/c the connection was laggy."
+        },
+        "id": "6068-59d1743c-c6f4-46d8-b524-4834fd4c43cf"
+    },
+    "AcceptTime": "2018-04-03T22:03:53Z",
+    "HITId": "34HEO7RUG6UMOOD1SEH4KF6385BARA",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:16:56Z"
+}

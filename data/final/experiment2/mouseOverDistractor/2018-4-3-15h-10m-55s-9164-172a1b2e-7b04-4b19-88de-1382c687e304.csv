@@ -1,0 +1,12 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793455378	unscripted	1	2	boardEraser	0	exp	6	true	on	1924	mouseOverDistractor
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793456551	unscripted	1	1	boardEraser	1	exp	6	true	off	3101	mouseOverDistractor
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793456675	unscripted	1	1	boardEraser	1	exp	6	true	on	3225	mouseOverDistractor
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793460088	unscripted	1	2	boardEraser	1	exp	6	true	on	6638	mouseOverDistractor
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793460127	unscripted	1	2	boardEraser	1	exp	6	true	off	6677	mouseOverDistractor
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793477844	unscripted	1	2	boardEraser	0	exp	6	true	on	2757	mouseOverDistractor
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793477883	unscripted	1	2	boardEraser	0	exp	6	true	off	2789	mouseOverDistractor
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793479444	unscripted	1	2	boardEraser	0	exp	6	true	on	4358	mouseOverDistractor
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793479476	unscripted	1	2	boardEraser	0	exp	6	true	off	4390	mouseOverDistractor
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793611134	unscripted	3	1	mediumMeasuringCup	0	base	4	true	on	24932	mouseOverDistractor
+planned_sample	9164-172a1b2e-7b04-4b19-88de-1382c687e304	1522793612784	unscripted	3	1	mediumMeasuringCup	0	base	4	true	off	26582	mouseOverDistractor

@@ -1,0 +1,14 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	8008-3863a375-93c2-4672-b89f-7a9a4f35c72c	1522791932412	scripted	3	1	computerMouse	0	exp	8	true	on	2508	mouseOverDistractor
+planned_sample	8008-3863a375-93c2-4672-b89f-7a9a4f35c72c	1522791933873	scripted	3	0	computerMouse	1	exp	8	true	off	3969	mouseOverDistractor
+planned_sample	8008-3863a375-93c2-4672-b89f-7a9a4f35c72c	1522791934602	scripted	3	0	computerMouse	1	exp	8	true	on	4699	mouseOverDistractor
+planned_sample	8008-3863a375-93c2-4672-b89f-7a9a4f35c72c	1522791936962	scripted	3	1	computerMouse	1	exp	8	true	on	7058	mouseOverDistractor
+planned_sample	8008-3863a375-93c2-4672-b89f-7a9a4f35c72c	1522791937728	scripted	3	1	computerMouse	1	exp	8	true	off	7824	mouseOverDistractor
+planned_sample	8008-3863a375-93c2-4672-b89f-7a9a4f35c72c	1522792153913	scripted	6	1	roundBrush	0	exp	5	true	on	1170	mouseOverDistractor
+planned_sample	8008-3863a375-93c2-4672-b89f-7a9a4f35c72c	1522792159211	scripted	6	0	roundBrush	1	exp	5	true	off	6468	mouseOverDistractor
+planned_sample	8008-3863a375-93c2-4672-b89f-7a9a4f35c72c	1522792160391	scripted	6	0	roundBrush	1	exp	5	true	on	7649	mouseOverDistractor
+planned_sample	8008-3863a375-93c2-4672-b89f-7a9a4f35c72c	1522792162190	scripted	6	0	roundBrush	1	exp	5	true	off	9448	mouseOverDistractor
+planned_sample	8008-3863a375-93c2-4672-b89f-7a9a4f35c72c	1522792178048	scripted	6	1	roundBrush	1	exp	5	true	on	2514	mouseOverDistractor
+planned_sample	8008-3863a375-93c2-4672-b89f-7a9a4f35c72c	1522792179119	scripted	6	1	roundBrush	1	exp	5	true	off	3585	mouseOverDistractor
+planned_sample	8008-3863a375-93c2-4672-b89f-7a9a4f35c72c	1522792326127	scripted	8	3	mediumCandle	0	base	7	true	on	2184	mouseOverDistractor
+planned_sample	8008-3863a375-93c2-4672-b89f-7a9a4f35c72c	1522792326261	scripted	8	3	mediumCandle	0	base	7	true	off	2317	mouseOverDistractor

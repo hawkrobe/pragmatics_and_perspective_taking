@@ -1,0 +1,9 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	7771-25381e94-e2c4-4093-89e5-870e7a8fc8d4	1522793515848	unscripted	1	0	airplane	0	base	1	false	director	move the airplane one to the right	12455	chatMessage
+planned_sample	7771-25381e94-e2c4-4093-89e5-870e7a8fc8d4	1522793556383	unscripted	1	1	sunGlasses	0	base	1	true	director	Move the sunglasses to the left	6812	chatMessage
+planned_sample	7771-25381e94-e2c4-4093-89e5-870e7a8fc8d4	1522793587113	unscripted	1	1	sunGlasses	1	base	1	true	director	move the sunglasses one space to the right	14770	chatMessage
+planned_sample	7771-25381e94-e2c4-4093-89e5-870e7a8fc8d4	1522793619282	unscripted	1	2	barrel	0	base	1	false	director	move the barrel down one 	13554	chatMessage
+planned_sample	7771-25381e94-e2c4-4093-89e5-870e7a8fc8d4	1522793642594	unscripted	1	3	saxophone	0	base	1	false	director	move saxophone up one	3682	chatMessage
+planned_sample	7771-25381e94-e2c4-4093-89e5-870e7a8fc8d4	1522793660943	unscripted	2	0	carrot	0	exp	4	false	director	move carrot up one	3728	chatMessage
+planned_sample	7771-25381e94-e2c4-4093-89e5-870e7a8fc8d4	1522793703569	unscripted	2	1	mediumMeasuringCup	0	exp	4	true	director	measuring cup down one space	20450	chatMessage
+planned_sample	7771-25381e94-e2c4-4093-89e5-870e7a8fc8d4	1522793747633	unscripted	2	1	mediumMeasuringCup	1	exp	4	true	director	move pyrex cup down one space	17969	chatMessage

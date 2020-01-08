@@ -1,0 +1,16 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789017366	scripted	1	1	computerMouse	0	base	8	true	on	25018	mouseOverDistractor
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789017399	scripted	1	1	computerMouse	0	base	8	true	off	25051	mouseOverDistractor
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789244956	scripted	3	2	boardEraser	0	exp	6	true	on	1522	mouseOverDistractor
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789247080	scripted	3	1	boardEraser	1	exp	6	true	off	3650	mouseOverDistractor
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789249945	scripted	3	1	boardEraser	1	exp	6	true	on	6514	mouseOverDistractor
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789250119	scripted	3	2	boardEraser	1	exp	6	true	on	6687	mouseOverDistractor
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789254653	scripted	3	2	boardEraser	1	exp	6	true	off	11221	mouseOverDistractor
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789405318	scripted	5	1	mediumMeasuringCup	0	exp	4	true	on	1216	mouseOverDistractor
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789408434	scripted	5	0	mediumMeasuringCup	1	exp	4	true	off	4334	mouseOverDistractor
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789413491	scripted	5	1	mediumMeasuringCup	1	exp	4	true	on	9391	mouseOverDistractor
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789413544	scripted	5	1	mediumMeasuringCup	1	exp	4	true	off	9441	mouseOverDistractor
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789742866	scripted	8	3	mediumCandle	0	exp	7	true	on	1176	mouseOverDistractor
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789742898	scripted	8	3	mediumCandle	0	exp	7	true	off	1209	mouseOverDistractor
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789743084	scripted	8	3	mediumCandle	0	exp	7	true	on	1395	mouseOverDistractor
+planned_sample	5601-ef5309ee-189f-4d87-84a2-d1d52c65c529	1522789744856	scripted	8	2	mediumCandle	1	exp	7	true	off	3168	mouseOverDistractor

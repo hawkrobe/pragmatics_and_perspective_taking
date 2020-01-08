@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:18:03Z",
+    "AutoApprovalTime": "2018-04-04T07:17:43Z",
+    "AssignmentId": "330",
+    "WorkerId": "330",
+    "answers": {
+        "subject_information": {
+            "totalLength": 831003,
+            "gameID": "6311-dc082b71-244c-45d7-b61e-9e2b248007e8",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 31,
+            "role": "director",
+            "comments": "",
+            "strategy": "I tried to be specific incase there were objects behind the curtains."
+        },
+        "id": "6311-dc082b71-244c-45d7-b61e-9e2b248007e8"
+    },
+    "AcceptTime": "2018-04-04T06:55:11Z",
+    "HITId": "3EQPA8A374W6R82WW1OUZHBL7A4JZA",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:12:43Z"
+}

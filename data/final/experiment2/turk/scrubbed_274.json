@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:47:03Z",
+    "AutoApprovalTime": "2018-04-04T06:47:01Z",
+    "AssignmentId": "274",
+    "WorkerId": "274",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1380605,
+            "gameID": "1355-f0a9740c-e244-4ea6-bda8-026465ddf941",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 31,
+            "role": "director",
+            "comments": "Very interesting!",
+            "strategy": "I tried to keep the instructions as simple as possible.  I wanted to be polite to the other player so they would feel respected."
+        },
+        "id": "1355-f0a9740c-e244-4ea6-bda8-026465ddf941"
+    },
+    "AcceptTime": "2018-04-04T06:08:00Z",
+    "HITId": "3ZQX1VYFTD558NS63OGMUTV37V78OD",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:42:01Z"
+}

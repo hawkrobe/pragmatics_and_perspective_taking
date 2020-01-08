@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:02:04Z",
+    "AutoApprovalTime": "2018-04-04T01:01:45Z",
+    "AssignmentId": "127",
+    "WorkerId": "127",
+    "answers": {
+        "subject_information": {
+            "totalLength": 608811,
+            "gameID": "3256-9d713cc0-958a-43cb-b12c-44daee3e492d",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 32,
+            "role": "director",
+            "comments": "none",
+            "strategy": "object, direction, number of spaces"
+        },
+        "id": "3256-9d713cc0-958a-43cb-b12c-44daee3e492d"
+    },
+    "AcceptTime": "2018-04-04T00:43:54Z",
+    "HITId": "3KQC8JMJGCS9F90DNUQ0J3QRFMQ3HF",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:56:45Z"
+}

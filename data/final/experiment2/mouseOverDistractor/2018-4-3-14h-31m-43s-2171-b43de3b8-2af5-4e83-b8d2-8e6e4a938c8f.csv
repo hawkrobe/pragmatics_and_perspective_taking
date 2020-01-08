@@ -1,0 +1,5 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	2171-b43de3b8-2af5-4e83-b8d2-8e6e4a938c8f	1522791103622	scripted	3	1	computerMouse	0	base	8	true	on	32834	mouseOverDistractor
+planned_sample	2171-b43de3b8-2af5-4e83-b8d2-8e6e4a938c8f	1522791103739	scripted	3	1	computerMouse	0	base	8	true	off	32951	mouseOverDistractor
+planned_sample	2171-b43de3b8-2af5-4e83-b8d2-8e6e4a938c8f	1522791200043	scripted	5	1	roundBrush	0	exp	5	true	on	1678	mouseOverDistractor
+planned_sample	2171-b43de3b8-2af5-4e83-b8d2-8e6e4a938c8f	1522791201126	scripted	5	1	roundBrush	0	exp	5	true	off	2761	mouseOverDistractor

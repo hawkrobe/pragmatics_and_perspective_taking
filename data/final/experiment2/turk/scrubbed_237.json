@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:13:03Z",
+    "AutoApprovalTime": "2018-04-04T06:12:05Z",
+    "AssignmentId": "237",
+    "WorkerId": "237",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1156528,
+            "gameID": "8193-460db540-c364-46c4-b148-bd646ae2c051",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 29,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "As the game progressed, we realized that the director had to give extra details to describe the object, since there were sometimes two objects that could be called the same thing (i.e. cassette tape and scotch tape)"
+        },
+        "id": "8193-460db540-c364-46c4-b148-bd646ae2c051"
+    },
+    "AcceptTime": "2018-04-04T05:45:17Z",
+    "HITId": "304QEQWKZPKNQYN38K371EPLOXV0OI",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:07:05Z"
+}

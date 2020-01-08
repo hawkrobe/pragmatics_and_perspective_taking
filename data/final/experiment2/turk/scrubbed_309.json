@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:04:03Z",
+    "AutoApprovalTime": "2018-04-04T07:03:33Z",
+    "AssignmentId": "309",
+    "WorkerId": "309",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1009507,
+            "gameID": "0715-06250ca0-7a76-4415-8f41-b39fa652d804",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 29,
+            "role": "matcher",
+            "comments": "My only thought is that I think the experiment moved longer than I expected. My partner and I were quick, and with only 3 mistakes it still took us about 20 minutes to complete. Other than that great Hit.",
+            "strategy": "I just made sure I read the sentence clearly each time."
+        },
+        "id": "0715-06250ca0-7a76-4415-8f41-b39fa652d804"
+    },
+    "AcceptTime": "2018-04-04T06:37:50Z",
+    "HITId": "3GONHBMNHVYWSG8HZY1MF932B4YZMT",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:58:33Z"
+}

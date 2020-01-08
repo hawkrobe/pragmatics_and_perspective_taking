@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:34:03Z",
+    "AutoApprovalTime": "2018-04-04T07:33:32Z",
+    "AssignmentId": "343",
+    "WorkerId": "343",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1298370,
+            "gameID": "1625-e9aca54a-0b20-416d-82ec-a29cfaa8f991",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "matcher",
+            "comments": "None",
+            "strategy": "I feel it was good."
+        },
+        "id": "1625-e9aca54a-0b20-416d-82ec-a29cfaa8f991"
+    },
+    "AcceptTime": "2018-04-04T06:58:13Z",
+    "HITId": "3L60IFZKF3IO9H7C2FF2NXR1YSJHHD",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:28:32Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:35:03Z",
+    "AutoApprovalTime": "2018-04-04T06:34:04Z",
+    "AssignmentId": "265",
+    "WorkerId": "265",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1103776,
+            "gameID": "1319-aa1b7da5-7bad-49c3-9664-b87dec4d800f",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 0,
+            "role": "matcher",
+            "comments": "perhaps have an estimated queue timer",
+            "strategy": "was unable to play, partner disconnected"
+        },
+        "id": "1319-aa1b7da5-7bad-49c3-9664-b87dec4d800f"
+    },
+    "AcceptTime": "2018-04-04T06:07:26Z",
+    "HITId": "341H3G5YF0EZP21AATEOHCWP81XZ0I",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:29:04Z"
+}

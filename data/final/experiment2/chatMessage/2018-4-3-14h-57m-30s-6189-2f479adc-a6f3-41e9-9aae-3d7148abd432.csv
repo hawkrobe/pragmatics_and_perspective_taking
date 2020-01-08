@@ -1,0 +1,6 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	6189-2f479adc-a6f3-41e9-9aae-3d7148abd432	1522792650408	unscripted	1	0	basketball	0	exp	5	false	director	Move the basketball downwards once	14665	chatMessage
+planned_sample	6189-2f479adc-a6f3-41e9-9aae-3d7148abd432	1522792693591	unscripted	1	1	roundBrush	0	exp	5	true	director	Move the hairbrush left one time	16353	chatMessage
+planned_sample	6189-2f479adc-a6f3-41e9-9aae-3d7148abd432	1522792721280	unscripted	1	1	roundBrush	1	exp	5	true	director	move the hairbrush left one time	7090	chatMessage
+planned_sample	6189-2f479adc-a6f3-41e9-9aae-3d7148abd432	1522792754334	unscripted	1	2	headphones	0	exp	5	false	director	move the headphones left one time	7122	chatMessage
+planned_sample	6189-2f479adc-a6f3-41e9-9aae-3d7148abd432	1522792781251	unscripted	1	3	book	0	exp	5	false	director	move the red book right one time	12014	chatMessage

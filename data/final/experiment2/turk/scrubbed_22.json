@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:23:03Z",
+    "AutoApprovalTime": "2018-04-03T22:22:30Z",
+    "AssignmentId": "22",
+    "WorkerId": "22",
+    "answers": {
+        "subject_information": {
+            "totalLength": 340978,
+            "gameID": "5035-3e68b0b0-161c-4a2a-a80e-91bc93cc4a5a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 6,
+            "role": "director",
+            "comments": "I'm disappointed that my partner was disconnected. It seemed pretty easy and I wanted to see if we could finish with a perfect record.",
+            "strategy": "It was pretty much to accurately describe where to move each specific item following the same wording as the example provided in the first round."
+        },
+        "id": "5035-3e68b0b0-161c-4a2a-a80e-91bc93cc4a5a"
+    },
+    "AcceptTime": "2018-04-03T22:06:02Z",
+    "HITId": "34HEO7RUG6UMOOD1SEH4KF6385BARA",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:17:30Z"
+}

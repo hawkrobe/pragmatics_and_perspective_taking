@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T04:09:03Z",
+    "AutoApprovalTime": "2018-04-04T04:08:08Z",
+    "AssignmentId": "181",
+    "WorkerId": "181",
+    "answers": {
+        "subject_information": {
+            "totalLength": 601610,
+            "gameID": "2061-da69236f-9200-4ed8-aaf0-58fe064fa29b",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "Just followed the director as best I could"
+        },
+        "id": "2061-da69236f-9200-4ed8-aaf0-58fe064fa29b"
+    },
+    "AcceptTime": "2018-04-04T03:51:48Z",
+    "HITId": "3TZ0XG8CBUK210O01ZX4X30ECWH89V",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T04:03:08Z"
+}

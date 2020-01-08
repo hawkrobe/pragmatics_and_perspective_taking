@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:16:03Z",
+    "AutoApprovalTime": "2018-04-04T01:15:07Z",
+    "AssignmentId": "123",
+    "WorkerId": "123",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1207636,
+            "gameID": "9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 31,
+            "role": "director",
+            "comments": "Thank you for allowing me to be a part of your study.",
+            "strategy": "I tried to describe the object as well as I could incase the other person could see another one that was similar behind a curtain"
+        },
+        "id": "9364-1c5f814f-a77f-4f6f-ba61-eff48aae848d"
+    },
+    "AcceptTime": "2018-04-04T00:38:27Z",
+    "HITId": "3QE4DGPGBRBGX9O632D1886WEM9G4E",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T01:10:07Z"
+}

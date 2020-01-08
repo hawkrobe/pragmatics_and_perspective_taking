@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:29:03Z",
+    "AutoApprovalTime": "2018-04-04T06:28:18Z",
+    "AssignmentId": "209",
+    "WorkerId": "209",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1350840,
+            "gameID": "4230-a88d183a-6d82-4aa2-b5b3-194fd9deb2a0",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "matcher",
+            "comments": "Really made me wonder what things look like to the director.",
+            "strategy": "Most of the time is was very straightforward - just do exactly as I was told. A couple times things were ambiguous, so I had to weigh what he or she might have actually meant.  One time I was told to move the \"bottom block\" and saw only one block. But direction to move made it obvious that's the only one that could be moved."
+        },
+        "id": "4230-a88d183a-6d82-4aa2-b5b3-194fd9deb2a0"
+    },
+    "AcceptTime": "2018-04-04T05:56:43Z",
+    "HITId": "3B0MCRZMBRU8ZF3O45VC5FVJ6A2PPU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:23:18Z"
+}

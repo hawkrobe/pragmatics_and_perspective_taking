@@ -1,0 +1,34 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823021301	unscripted	1	0	airplane	0	base	1	false	director	Move the airplane to the right one space~~~	21896	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823057502	unscripted	1	1	sunGlasses	0	base	1	true	director	Move the sunglasses to the right one space~~~	12592	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823087659	unscripted	1	2	barrel	0	base	1	false	director	Move the barrel down one space~~~	15455	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823112386	unscripted	1	3	saxophone	0	base	1	false	director	Move the instrument up one space~~~	12183	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823142763	unscripted	2	0	comb	0	exp	8	false	director	Move the comb up one space~~~	11713	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823166654	unscripted	2	1	computerMouse	0	exp	8	true	director	Move the mouse up one space~~~	11632	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823204197	unscripted	2	1	computerMouse	1	exp	8	true	director	Move the computer mouse up one space~~~	12392	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823240046	unscripted	2	2	castIronPan	0	exp	8	false	director	Move the skillet up one space~~~	19606	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823265883	unscripted	2	3	piano	0	exp	8	false	director	Move the piano left one space~~~	11182	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823286965	unscripted	3	0	carrot	0	exp	4	false	director	Move the carrot up one space~~~	9506	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823334027	unscripted	3	1	mediumMeasuringCup	0	exp	4	true	director	Move the pyrex measuring glass with the handle down one space~~~	34519	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823368580	unscripted	3	2	waterBottle	0	exp	4	false	director	Move the water bottle to the right one space~~~	17072	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823394210	unscripted	3	3	chair	0	exp	4	false	director	Move the chair to the left one space~~~	12040	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823418754	unscripted	4	0	scissors	0	base	3	false	director	Move the scissors to the right one space~~~	10676	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823445087	unscripted	4	1	knife	0	base	3	false	director	Move the knife down one space~~~	12308	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823468872	unscripted	4	2	barOfSoap	0	base	3	false	director	Move the soap to the left one space~~~	10862	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823502831	unscripted	4	3	cassetteTape	0	base	3	true	director	Move the cassette tape down one space~~~	21217	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823528677	unscripted	5	0	binoculars	0	exp	2	false	director	Move the binoculars to the right one space~~~	12543	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823564949	unscripted	5	1	wrench	0	exp	2	false	director	Move the wrench to the left one space~~~	24244	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823590930	unscripted	5	2	middleBlock	0	exp	2	true	director	Move the toy block left one space~~~	11593	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823636523	unscripted	5	3	coffeeMug	0	exp	2	false	director	Move the coffee mug with coffee to the right one space~~~	24477	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823672255	unscripted	6	0	magnet	0	base	7	false	director	Move the red and silver magnet down one space~~~	15774	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823702690	unscripted	6	1	handcuffs	0	base	7	false	director	Move the silver handcuffs down one space~~~	13447	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823724914	unscripted	6	2	pandaToy	0	base	7	false	director	Move the stuffed panda bear down one space~~~	11777	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823774744	unscripted	6	3	mediumCandle	0	base	7	true	director	Move the red candle in a candle holder down one space~~~	31245	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823799897	unscripted	7	0	basketball	0	exp	5	false	director	Move the orange basketball down one space~~~	11457	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823859823	unscripted	7	1	roundBrush	0	exp	5	true	director	Move the hairbrush with two lines on the handle to the left one space~~~	42532	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823915800	unscripted	7	2	headphones	0	exp	5	false	director	Move the headphones with full ear coverage to the left one space~~~	40629	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823946687	unscripted	7	3	book	0	exp	5	false	director	Move the red book to the right one space~~~	16778	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823969644	unscripted	8	0	banana	0	base	6	false	director	Move the banana up one space~~~	9541	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522823993106	unscripted	8	1	dollar	0	base	6	false	director	Move the one dollar bill to the right one space~~~	11203	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522824031589	unscripted	8	2	boardEraser	0	base	6	true	director	Move the Expo eraser up one space~~~	19363	chatMessage
+planned_sample	7744-d41dd430-a713-4edf-a863-c1cde5455560	1522824059916	unscripted	8	3	feather	0	base	6	false	director	Move the feather to the left one space~~~	10699	chatMessage

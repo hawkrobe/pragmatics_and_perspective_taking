@@ -1,0 +1,5 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522822943117	unscripted	2	2	boardEraser	0	base	6	true	on	27351	mouseOverDistractor
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522822943183	unscripted	2	2	boardEraser	0	base	6	true	off	27417	mouseOverDistractor
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823023060	unscripted	3	1	sunGlasses	0	base	1	true	on	22645	mouseOverDistractor
+planned_sample	2762-7c6e403e-e6c1-434c-a474-f37162627a34	1522823023110	unscripted	3	1	sunGlasses	0	base	1	true	off	22695	mouseOverDistractor

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:23:03Z",
+    "AutoApprovalTime": "2018-04-03T22:22:13Z",
+    "AssignmentId": "53",
+    "WorkerId": "53",
+    "answers": {
+        "subject_information": {
+            "totalLength": 391430,
+            "gameID": "9489-f1b6be6b-0365-42fa-983a-bf08215320d8",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 6,
+            "role": "director",
+            "comments": "This is fun. I hope the partner really lost their connection!",
+            "strategy": "I just told the person where the object is and give the command. "
+        },
+        "id": "9489-f1b6be6b-0365-42fa-983a-bf08215320d8"
+    },
+    "AcceptTime": "2018-04-03T22:06:48Z",
+    "HITId": "3X4Q1O9UBHM189NNTJOGGTZ8WALO7O",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:17:13Z"
+}

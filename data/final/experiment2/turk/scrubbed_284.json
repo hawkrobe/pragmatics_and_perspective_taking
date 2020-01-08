@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:59:03Z",
+    "AutoApprovalTime": "2018-04-04T06:58:48Z",
+    "AssignmentId": "284",
+    "WorkerId": "284",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1396965,
+            "gameID": "9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 32,
+            "role": "director",
+            "comments": "no",
+            "strategy": "I described the object to be moved in detail"
+        },
+        "id": "9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc"
+    },
+    "AcceptTime": "2018-04-04T06:20:53Z",
+    "HITId": "33N1S8XHHMLZWRMS6CIOVHFZDT3Z1L",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:53:48Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T05:54:03Z",
+    "AutoApprovalTime": "2018-04-04T05:54:00Z",
+    "AssignmentId": "212",
+    "WorkerId": "212",
+    "answers": {
+        "subject_information": {
+            "totalLength": 129672,
+            "gameID": "5599-08d184b2-7eb9-43e9-8b24-18c3b1c517a1",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 1,
+            "role": "director",
+            "comments": "This was a fun experiment. I am a little disappointed that my partner disconnected from the experiment though.",
+            "strategy": "Identify the object in question and state how many spaces that object must be moved."
+        },
+        "id": "5599-08d184b2-7eb9-43e9-8b24-18c3b1c517a1"
+    },
+    "AcceptTime": "2018-04-04T05:42:53Z",
+    "HITId": "3B0MCRZMBRU8ZF3O45VC5FVJ6A2PPU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T05:49:00Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:48:03Z",
+    "AutoApprovalTime": "2018-04-04T06:47:23Z",
+    "AssignmentId": "238",
+    "WorkerId": "238",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1148495,
+            "gameID": "7744-d41dd430-a713-4edf-a863-c1cde5455560",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 31,
+            "role": "matcher",
+            "comments": "I do not.",
+            "strategy": "I just went with what the other \"person\" said, and used my gut when it wasnt clear."
+        },
+        "id": "7744-d41dd430-a713-4edf-a863-c1cde5455560"
+    },
+    "AcceptTime": "2018-04-04T06:19:48Z",
+    "HITId": "304QEQWKZPKNQYN38K371EPLOXV0OI",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:42:23Z"
+}

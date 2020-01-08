@@ -1,0 +1,3 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	9555-b7652692-1cfa-43c5-a0fb-e4ba4682d200	1522820759008	unscripted	1	3	cassetteTape	0	base	3	true	on	2397	mouseOverDistractor
+planned_sample	9555-b7652692-1cfa-43c5-a0fb-e4ba4682d200	1522820759170	unscripted	1	3	cassetteTape	0	base	3	true	off	2555	mouseOverDistractor

@@ -1,0 +1,16 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793262910	scripted	3	1	computerMouse	0	exp	8	true	on	3110	mouseOverDistractor
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793262914	scripted	3	1	computerMouse	0	exp	8	true	off	3127	mouseOverDistractor
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793262985	scripted	3	1	computerMouse	0	exp	8	true	on	3412	mouseOverDistractor
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793263993	scripted	3	1	computerMouse	0	exp	8	true	off	4243	mouseOverDistractor
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793264714	scripted	3	1	computerMouse	0	exp	8	true	on	5182	mouseOverDistractor
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793266259	scripted	3	0	computerMouse	1	exp	8	true	off	6776	mouseOverDistractor
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793266336	scripted	3	0	computerMouse	1	exp	8	true	on	6860	mouseOverDistractor
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793267004	scripted	3	0	computerMouse	1	exp	8	true	off	7597	mouseOverDistractor
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793267256	scripted	3	0	computerMouse	1	exp	8	true	on	7840	mouseOverDistractor
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793614650	scripted	6	1	mediumMeasuringCup	0	exp	4	true	on	4128	mouseOverDistractor
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793616120	scripted	6	1	mediumMeasuringCup	0	exp	4	true	off	5574	mouseOverDistractor
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793616336	scripted	6	1	mediumMeasuringCup	0	exp	4	true	on	5811	mouseOverDistractor
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793618118	scripted	6	0	mediumMeasuringCup	1	exp	4	true	off	7599	mouseOverDistractor
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793618229	scripted	6	0	mediumMeasuringCup	1	exp	4	true	on	7710	mouseOverDistractor
+planned_sample	6085-ef7dd3b1-8500-4b16-aa7a-fa95bcc0ebc9	1522793618245	scripted	6	0	mediumMeasuringCup	1	exp	4	true	off	7726	mouseOverDistractor

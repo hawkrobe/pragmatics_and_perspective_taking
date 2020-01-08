@@ -1,0 +1,23 @@
+{
+    "ApprovalTime": "2018-04-04T06:15:03Z",
+    "AutoApprovalTime": "2018-04-04T06:14:22Z",
+    "AssignmentId": "235",
+    "WorkerId": "235",
+    "answers": {
+        "subject_information": {
+            "totalLength": 906877,
+            "gameID": "0849-3c0ff096-1ccb-4100-bc6e-640aef71617b",
+            "confused": "yes",
+            "comments": "I wonder what it is you are studying.",
+            "strategy": "Participatory.",
+            "score": 32,
+            "role": "matcher"
+        },
+        "id": "0849-3c0ff096-1ccb-4100-bc6e-640aef71617b"
+    },
+    "AcceptTime": "2018-04-04T05:48:17Z",
+    "HITId": "3OPLMF3EU5NI59CDWYPDK9H41L0LNW",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:09:22Z"
+}

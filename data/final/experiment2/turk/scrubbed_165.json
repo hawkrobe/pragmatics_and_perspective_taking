@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T04:03:03Z",
+    "AutoApprovalTime": "2018-04-04T04:02:09Z",
+    "AssignmentId": "165",
+    "WorkerId": "165",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1271720,
+            "gameID": "1590-9eeaa5f0-c5a2-49bb-8227-d95a13fb8ea3",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 32,
+            "role": "director",
+            "comments": "",
+            "strategy": "I explained the name and color of the object and then indicated in capital letters where to move it."
+        },
+        "id": "1590-9eeaa5f0-c5a2-49bb-8227-d95a13fb8ea3"
+    },
+    "AcceptTime": "2018-04-04T03:30:22Z",
+    "HITId": "3P4C70TRMRHCVHVR9UCIUP8709ALGK",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T03:57:09Z"
+}

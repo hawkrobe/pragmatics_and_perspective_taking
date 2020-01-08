@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T04:37:03Z",
+    "AutoApprovalTime": "2018-04-04T04:36:05Z",
+    "AssignmentId": "169",
+    "WorkerId": "169",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1367285,
+            "gameID": "8181-5b943f79-f3a7-4b00-9e30-648b53212d3a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 31,
+            "role": "matcher",
+            "comments": "Good experience.",
+            "strategy": "First identifying the correct things and after identify the correct place."
+        },
+        "id": "8181-5b943f79-f3a7-4b00-9e30-648b53212d3a"
+    },
+    "AcceptTime": "2018-04-04T03:50:11Z",
+    "HITId": "3FO95NVK5C0QOKZV9E3V5F09UCTSR1",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T04:31:05Z"
+}

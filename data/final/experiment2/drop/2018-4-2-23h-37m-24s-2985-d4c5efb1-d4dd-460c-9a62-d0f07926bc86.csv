@@ -1,0 +1,4 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+pilot1	2985-d4c5efb1-d4dd-460c-9a62-d0f07926bc86	1522737444625	unscripted	1	0	comb	0	exp	8	false	correct	comb	1	1	1	1	956	drop
+pilot1	2985-d4c5efb1-d4dd-460c-9a62-d0f07926bc86	1522737453662	unscripted	1	1	computerMouse	0	exp	8	true	correct	computerMouse	4	2	4	2	970	drop
+pilot1	2985-d4c5efb1-d4dd-460c-9a62-d0f07926bc86	1522737751666	unscripted	1	2	castIronPan	0	exp	8	false	correct	castIronPan	3	3	3	3	1220	drop

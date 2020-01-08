@@ -1,0 +1,4 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	9812-c8bf7480-90ac-4909-a186-acefc1ab4cc2	1522823501602	scripted	2	1	sunGlasses	0	exp	1	true	on	22406	mouseOverDistractor
+planned_sample	9812-c8bf7480-90ac-4909-a186-acefc1ab4cc2	1522823501798	scripted	2	1	sunGlasses	0	exp	1	true	off	22602	mouseOverDistractor
+planned_sample	9812-c8bf7480-90ac-4909-a186-acefc1ab4cc2	1522823530730	scripted	2	1	sunGlasses	0	exp	1	true	on	1679	mouseOverDistractor

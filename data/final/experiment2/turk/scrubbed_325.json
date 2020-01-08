@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:07:03Z",
+    "AutoApprovalTime": "2018-04-04T07:06:45Z",
+    "AssignmentId": "325",
+    "WorkerId": "325",
+    "answers": {
+        "subject_information": {
+            "totalLength": 648772,
+            "gameID": "8538-cb44f86e-9bb4-4bb0-91b7-fcb7f3d080bf",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 29,
+            "role": "director",
+            "comments": "N/A",
+            "strategy": "I tried to keep the instructions simple and in the same format while describing the objects in as specific but brief a way as possible."
+        },
+        "id": "8538-cb44f86e-9bb4-4bb0-91b7-fcb7f3d080bf"
+    },
+    "AcceptTime": "2018-04-04T06:48:21Z",
+    "HITId": "3OJX0UFJ0Z70ZXVD42Y9TVI39ND9UG",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T07:01:45Z"
+}

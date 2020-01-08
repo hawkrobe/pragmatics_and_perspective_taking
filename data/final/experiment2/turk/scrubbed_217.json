@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:28:03Z",
+    "AutoApprovalTime": "2018-04-04T06:27:40Z",
+    "AssignmentId": "217",
+    "WorkerId": "217",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1691513,
+            "gameID": "1902-d09f4a57-3905-44dd-ae98-be36bce68361",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 27,
+            "role": "director",
+            "comments": "",
+            "strategy": "Use move that object. Then what move"
+        },
+        "id": "1902-d09f4a57-3905-44dd-ae98-be36bce68361"
+    },
+    "AcceptTime": "2018-04-04T05:50:04Z",
+    "HITId": "3FDWKV9VCN2F6HE7TB2EYHON9MJUMZ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:22:40Z"
+}

@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T07:01:03Z",
+    "AutoApprovalTime": "2018-04-04T07:00:12Z",
+    "AssignmentId": "292",
+    "WorkerId": "292",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1417091,
+            "gameID": "9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 32,
+            "role": "matcher",
+            "comments": "My partner was so slow he had to be doing another hit at the same time. Also he described things so strangely. Also he doesnt know what a panda is. I was pretty sure he was a robot.",
+            "strategy": "read the instructions of the director"
+        },
+        "id": "9374-45c200ac-fc35-406f-a1bb-ad2c4d35b4fc"
+    },
+    "AcceptTime": "2018-04-04T06:28:15Z",
+    "HITId": "3UDTAB6HH6ZKJBJX6VKP4OUWTY990D",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:55:12Z"
+}

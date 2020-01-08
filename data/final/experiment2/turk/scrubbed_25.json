@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:40:03Z",
+    "AutoApprovalTime": "2018-04-03T22:39:26Z",
+    "AssignmentId": "25",
+    "WorkerId": "25",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1098668,
+            "gameID": "2388-41d9ba83-3ce4-40be-abe1-1afff9a441fc",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 27,
+            "role": "director",
+            "comments": "",
+            "strategy": "I copied the format of the given commands."
+        },
+        "id": "2388-41d9ba83-3ce4-40be-abe1-1afff9a441fc"
+    },
+    "AcceptTime": "2018-04-03T21:42:41Z",
+    "HITId": "3WGCNLZJKF8WTQHWEUTR4PWWPAED1J",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:34:26Z"
+}

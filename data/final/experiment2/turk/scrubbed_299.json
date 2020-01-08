@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:54:03Z",
+    "AutoApprovalTime": "2018-04-04T06:53:21Z",
+    "AssignmentId": "299",
+    "WorkerId": "299",
+    "answers": {
+        "subject_information": {
+            "totalLength": 656057,
+            "gameID": "4166-9165e3c0-9da5-4f98-9307-c64fc9b509aa",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "director",
+            "comments": "It was actually fun. I learned to describe the items more accurately because there could have been similar items under the curtains.",
+            "strategy": "I tried describing the items and where to go, pretty simply."
+        },
+        "id": "4166-9165e3c0-9da5-4f98-9307-c64fc9b509aa"
+    },
+    "AcceptTime": "2018-04-04T06:34:59Z",
+    "HITId": "3FBEFUUYRK5T25FH0QE69KF7CJD6AQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:48:21Z"
+}

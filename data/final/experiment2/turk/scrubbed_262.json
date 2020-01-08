@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:44:03Z",
+    "AutoApprovalTime": "2018-04-04T06:43:34Z",
+    "AssignmentId": "262",
+    "WorkerId": "262",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1089435,
+            "gameID": "6757-0b967c88-51bc-41f6-8dc0-fb4063bfdbeb",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 29,
+            "role": "matcher",
+            "comments": "Thanks! I had so much fun :).",
+            "strategy": "I just tried to listen to the communicator the best and use my best judgement when he wasn't detailed in the directions."
+        },
+        "id": "6757-0b967c88-51bc-41f6-8dc0-fb4063bfdbeb"
+    },
+    "AcceptTime": "2018-04-04T06:11:33Z",
+    "HITId": "341H3G5YF0EZP21AATEOHCWP81XZ0I",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:38:34Z"
+}

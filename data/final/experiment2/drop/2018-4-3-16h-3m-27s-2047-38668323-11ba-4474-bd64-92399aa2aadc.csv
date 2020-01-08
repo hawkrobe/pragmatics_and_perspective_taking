@@ -1,0 +1,2 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	correct	attemptedObject	intendedX	intendedY	attemptedX	attemptedY	responseTime	eventType
+planned_sample	2047-38668323-11ba-4474-bd64-92399aa2aadc	1522796607699	scripted	1	0	binoculars	0	exp	2	false	correct	binoculars	2	4	2	4	8116	drop

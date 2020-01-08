@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:06:03Z",
+    "AutoApprovalTime": "2018-04-03T22:06:02Z",
+    "AssignmentId": "28",
+    "WorkerId": "28",
+    "answers": {
+        "subject_information": {
+            "totalLength": 132087,
+            "gameID": "7879-6b108512-4ef5-4a09-ba00-34456c55675c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "not much",
+            "score": 1,
+            "role": "matcher",
+            "comments": "thank you!",
+            "strategy": "I just followed one instruction from the director and it seems like they disconnected."
+        },
+        "id": "7879-6b108512-4ef5-4a09-ba00-34456c55675c"
+    },
+    "AcceptTime": "2018-04-03T21:42:58Z",
+    "HITId": "3WGCNLZJKF8WTQHWEUTR4PWWPAED1J",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:02Z"
+}

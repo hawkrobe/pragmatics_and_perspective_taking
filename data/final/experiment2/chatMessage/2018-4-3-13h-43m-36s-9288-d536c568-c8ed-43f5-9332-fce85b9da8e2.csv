@@ -1,0 +1,2 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+pilot1	9288-d536c568-c8ed-43f5-9332-fce85b9da8e2	1522788216369	scripted	1	0	airplane	0	exp	1	false	director	red airplane	1394	chatMessage

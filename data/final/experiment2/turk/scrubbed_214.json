@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:16:03Z",
+    "AutoApprovalTime": "2018-04-04T06:15:11Z",
+    "AssignmentId": "214",
+    "WorkerId": "214",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1184350,
+            "gameID": "5707-ac526852-17d2-48e8-bb09-cbfdc564089f",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 30,
+            "role": "matcher",
+            "comments": "",
+            "strategy": "I didn't see a need for a strategy...just to follow the instructions of the director"
+        },
+        "id": "5707-ac526852-17d2-48e8-bb09-cbfdc564089f"
+    },
+    "AcceptTime": "2018-04-04T05:43:12Z",
+    "HITId": "3FDWKV9VCN2F6HE7TB2EYHON9MJUMZ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:10:11Z"
+}

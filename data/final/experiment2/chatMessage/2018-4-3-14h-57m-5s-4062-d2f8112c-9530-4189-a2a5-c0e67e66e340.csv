@@ -1,0 +1,10 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	sender	contents	typingRT	eventType
+planned_sample	4062-d2f8112c-9530-4189-a2a5-c0e67e66e340	1522792625598	unscripted	1	0	comb	0	exp	8	false	director	Move the comb up~~~	3165	chatMessage
+planned_sample	4062-d2f8112c-9530-4189-a2a5-c0e67e66e340	1522792650372	unscripted	1	1	computerMouse	0	exp	8	true	director	move the mouse up	2606	chatMessage
+planned_sample	4062-d2f8112c-9530-4189-a2a5-c0e67e66e340	1522792668392	unscripted	1	1	computerMouse	2	exp	8	true	director	move the computer mouse up one	4160	chatMessage
+planned_sample	4062-d2f8112c-9530-4189-a2a5-c0e67e66e340	1522792699241	unscripted	1	2	castIronPan	0	exp	8	false	director	move the frying pan up one	3964	chatMessage
+planned_sample	4062-d2f8112c-9530-4189-a2a5-c0e67e66e340	1522792714454	unscripted	1	3	piano	0	exp	8	false	director	move the piano over to the left	5119	chatMessage
+planned_sample	4062-d2f8112c-9530-4189-a2a5-c0e67e66e340	1522792746858	unscripted	2	0	binoculars	0	base	2	false	director	move the binoculars over one to the right 	13280	chatMessage
+planned_sample	4062-d2f8112c-9530-4189-a2a5-c0e67e66e340	1522792763754	unscripted	2	1	wrench	0	base	2	false	director	move the wrench over one to the left	4794	chatMessage
+planned_sample	4062-d2f8112c-9530-4189-a2a5-c0e67e66e340	1522792784315	unscripted	2	2	middleBlock	0	base	2	true	director	move the block over one to the left	5051	chatMessage
+planned_sample	4062-d2f8112c-9530-4189-a2a5-c0e67e66e340	1522792805686	unscripted	2	3	coffeeMug	0	base	2	false	director	move the coffee mug over one to the right	9546	chatMessage

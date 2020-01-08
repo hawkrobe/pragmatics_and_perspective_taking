@@ -1,0 +1,13 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	6729-d84430fa-22ab-40e1-aa07-9784a3bc0722	1522821671576	scripted	1	2	boardEraser	0	exp	6	true	on	1868	mouseOverDistractor
+planned_sample	6729-d84430fa-22ab-40e1-aa07-9784a3bc0722	1522822054396	scripted	5	3	mediumCandle	0	exp	7	true	on	2440	mouseOverDistractor
+planned_sample	6729-d84430fa-22ab-40e1-aa07-9784a3bc0722	1522822054431	scripted	5	3	mediumCandle	0	exp	7	true	off	2474	mouseOverDistractor
+planned_sample	6729-d84430fa-22ab-40e1-aa07-9784a3bc0722	1522822054878	scripted	5	3	mediumCandle	0	exp	7	true	on	2924	mouseOverDistractor
+planned_sample	6729-d84430fa-22ab-40e1-aa07-9784a3bc0722	1522822055644	scripted	5	2	mediumCandle	1	exp	7	true	off	3691	mouseOverDistractor
+planned_sample	6729-d84430fa-22ab-40e1-aa07-9784a3bc0722	1522822056509	scripted	5	2	mediumCandle	1	exp	7	true	on	4557	mouseOverDistractor
+planned_sample	6729-d84430fa-22ab-40e1-aa07-9784a3bc0722	1522822057327	scripted	5	2	mediumCandle	1	exp	7	true	off	5374	mouseOverDistractor
+planned_sample	6729-d84430fa-22ab-40e1-aa07-9784a3bc0722	1522822279303	scripted	8	1	computerMouse	0	exp	8	true	on	1330	mouseOverDistractor
+planned_sample	6729-d84430fa-22ab-40e1-aa07-9784a3bc0722	1522822305489	scripted	8	1	computerMouse	1	exp	8	true	on	4339	mouseOverDistractor
+planned_sample	6729-d84430fa-22ab-40e1-aa07-9784a3bc0722	1522822306403	scripted	8	0	computerMouse	2	exp	8	true	off	5258	mouseOverDistractor
+planned_sample	6729-d84430fa-22ab-40e1-aa07-9784a3bc0722	1522822333241	scripted	8	1	computerMouse	2	exp	8	true	on	748	mouseOverDistractor
+planned_sample	6729-d84430fa-22ab-40e1-aa07-9784a3bc0722	1522822333684	scripted	8	1	computerMouse	2	exp	8	true	off	1182	mouseOverDistractor

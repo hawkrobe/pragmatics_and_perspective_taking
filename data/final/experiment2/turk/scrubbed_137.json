@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:05:03Z",
+    "AutoApprovalTime": "2018-04-04T01:04:14Z",
+    "AssignmentId": "137",
+    "WorkerId": "137",
+    "answers": {
+        "subject_information": {
+            "totalLength": 848302,
+            "gameID": "7915-6adabe85-d7fb-4a73-8f64-9feb28508e17",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 29,
+            "role": "matcher",
+            "comments": "None",
+            "strategy": "At first just followed the directions and then thought about what the other user could see."
+        },
+        "id": "7915-6adabe85-d7fb-4a73-8f64-9feb28508e17"
+    },
+    "AcceptTime": "2018-04-04T00:42:36Z",
+    "HITId": "3P4C70TRMRHCVHVR9UCIUP87084LGC",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:59:14Z"
+}

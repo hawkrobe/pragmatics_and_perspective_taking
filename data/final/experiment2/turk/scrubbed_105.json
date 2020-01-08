@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T00:15:03Z",
+    "AutoApprovalTime": "2018-04-04T00:14:12Z",
+    "AssignmentId": "105",
+    "WorkerId": "105",
+    "answers": {
+        "subject_information": {
+            "totalLength": 854788,
+            "gameID": "4665-31f9dda8-f9f9-4769-96bc-bb8cc935f74b",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 30,
+            "role": "matcher",
+            "comments": "Fun! I did have one occasion where it said I got a message but the green dot didn't show up. I clicked randomly and it eventually went forward. ",
+            "strategy": "Tried to follow the directions as closely as possible. "
+        },
+        "id": "4665-31f9dda8-f9f9-4769-96bc-bb8cc935f74b"
+    },
+    "AcceptTime": "2018-04-03T23:52:47Z",
+    "HITId": "3UAU495MIIS36KZJ6RHRQLDS4LMOUU",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T00:09:12Z"
+}

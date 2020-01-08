@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T06:51:03Z",
+    "AutoApprovalTime": "2018-04-04T06:50:13Z",
+    "AssignmentId": "290",
+    "WorkerId": "290",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1066440,
+            "gameID": "7986-c20fcf00-00a5-4f25-a4a4-4c51a3acac9a",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 30,
+            "role": "director",
+            "comments": "this was a very different activity. i enjoyed doing something a little different on Mturk",
+            "strategy": "I was clear in my instructions. i named the object and how many spaces to move and what direction such as up or down, or right, left"
+        },
+        "id": "7986-c20fcf00-00a5-4f25-a4a4-4c51a3acac9a"
+    },
+    "AcceptTime": "2018-04-04T06:24:04Z",
+    "HITId": "3UDTAB6HH6ZKJBJX6VKP4OUWTY990D",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T06:45:13Z"
+}

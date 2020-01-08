@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:07:03Z",
+    "AutoApprovalTime": "2018-04-03T22:06:03Z",
+    "AssignmentId": "91",
+    "WorkerId": "91",
+    "answers": {
+        "subject_information": {
+            "totalLength": 135577,
+            "gameID": "7879-6b108512-4ef5-4a09-ba00-34456c55675c",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "okay",
+            "score": 1,
+            "role": "director",
+            "comments": "",
+            "strategy": "I looked at the object and went with where the arrow was to move it, I only had one chance becaue my partner dropped the connection"
+        },
+        "id": "7879-6b108512-4ef5-4a09-ba00-34456c55675c"
+    },
+    "AcceptTime": "2018-04-03T21:55:42Z",
+    "HITId": "31KSVEGZ34SJV1G4TJDW243U0ODRW1",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:01:03Z"
+}

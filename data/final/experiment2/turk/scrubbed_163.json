@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T22:22:03Z",
+    "AutoApprovalTime": "2018-04-03T22:21:51Z",
+    "AssignmentId": "163",
+    "WorkerId": "163",
+    "answers": {
+        "subject_information": {
+            "totalLength": 401756,
+            "gameID": "9164-172a1b2e-7b04-4b19-88de-1382c687e304",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "liked",
+            "score": 11,
+            "role": "director",
+            "comments": "",
+            "strategy": "Describing the object my partner needed to move and which direction as simply as possible"
+        },
+        "id": "9164-172a1b2e-7b04-4b19-88de-1382c687e304"
+    },
+    "AcceptTime": "2018-04-03T22:05:24Z",
+    "HITId": "3VLL1PIENQOKSJTTCEGZ7DS763XZOQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T22:16:51Z"
+}

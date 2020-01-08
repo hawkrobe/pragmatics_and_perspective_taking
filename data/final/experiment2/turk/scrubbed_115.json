@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-04T01:22:03Z",
+    "AutoApprovalTime": "2018-04-04T01:21:44Z",
+    "AssignmentId": "115",
+    "WorkerId": "115",
+    "answers": {
+        "subject_information": {
+            "totalLength": 1075336,
+            "gameID": "4084-d6e49d21-6227-4725-9d5c-58f9fca83593",
+            "thinksHuman": "no",
+            "confused": "yes",
+            "nativeEnglish": "no",
+            "ratePartner": "not much",
+            "score": 29,
+            "role": "director",
+            "comments": "",
+            "strategy": "Tried to somewhat copy how some of the sentences were written."
+        },
+        "id": "4084-d6e49d21-6227-4725-9d5c-58f9fca83593"
+    },
+    "AcceptTime": "2018-04-04T00:50:19Z",
+    "HITId": "3WRBLBQ2GR8ZYL65K1QZW5GJXAT0GI",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-04T01:16:44Z"
+}

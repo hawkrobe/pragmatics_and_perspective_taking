@@ -1,0 +1,13 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	5235-b24157e1-836b-40d1-afcd-17831199ed27	1522812438764	scripted	3	2	middleBlock	0	exp	2	true	on	2103	mouseOverDistractor
+planned_sample	5235-b24157e1-836b-40d1-afcd-17831199ed27	1522812442164	scripted	3	2	middleBlock	0	exp	2	true	off	5500	mouseOverDistractor
+planned_sample	5235-b24157e1-836b-40d1-afcd-17831199ed27	1522812442293	scripted	3	2	middleBlock	0	exp	2	true	on	5633	mouseOverDistractor
+planned_sample	5235-b24157e1-836b-40d1-afcd-17831199ed27	1522812443021	scripted	3	1	middleBlock	1	exp	2	true	off	6361	mouseOverDistractor
+planned_sample	5235-b24157e1-836b-40d1-afcd-17831199ed27	1522812443097	scripted	3	1	middleBlock	1	exp	2	true	on	6437	mouseOverDistractor
+planned_sample	5235-b24157e1-836b-40d1-afcd-17831199ed27	1522812443109	scripted	3	1	middleBlock	1	exp	2	true	off	6452	mouseOverDistractor
+planned_sample	5235-b24157e1-836b-40d1-afcd-17831199ed27	1522812443457	scripted	3	1	middleBlock	1	exp	2	true	on	6798	mouseOverDistractor
+planned_sample	5235-b24157e1-836b-40d1-afcd-17831199ed27	1522812465869	scripted	3	2	middleBlock	1	exp	2	true	on	29206	mouseOverDistractor
+planned_sample	5235-b24157e1-836b-40d1-afcd-17831199ed27	1522812465913	scripted	3	2	middleBlock	1	exp	2	true	off	29250	mouseOverDistractor
+planned_sample	5235-b24157e1-836b-40d1-afcd-17831199ed27	1522812811839	scripted	8	1	mediumMeasuringCup	0	exp	4	true	on	1583	mouseOverDistractor
+planned_sample	5235-b24157e1-836b-40d1-afcd-17831199ed27	1522812813085	scripted	8	1	mediumMeasuringCup	0	exp	4	true	off	2900	mouseOverDistractor
+planned_sample	5235-b24157e1-836b-40d1-afcd-17831199ed27	1522812813143	scripted	8	1	mediumMeasuringCup	0	exp	4	true	on	2933	mouseOverDistractor

@@ -1,0 +1,17 @@
+iterationName	gameid	serverTime	condition	trialNum	instructionNum	targetObject	attemptNum	trialType	objectSet	critical	onOff	timeElapsed	eventType
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823278433	unscripted	5	1	mediumMeasuringCup	0	base	4	true	on	11848	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823278446	unscripted	5	1	mediumMeasuringCup	0	base	4	true	off	11863	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823429017	unscripted	7	1	roundBrush	0	exp	5	true	on	11268	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823430412	unscripted	7	1	roundBrush	0	exp	5	true	off	12676	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823447599	unscripted	7	1	roundBrush	0	exp	5	true	on	8433	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823448878	unscripted	7	1	roundBrush	0	exp	5	true	off	9715	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823448927	unscripted	7	1	roundBrush	0	exp	5	true	on	9764	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823448994	unscripted	7	1	roundBrush	0	exp	5	true	off	9832	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823449139	unscripted	7	1	roundBrush	0	exp	5	true	on	9976	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823449194	unscripted	7	1	roundBrush	0	exp	5	true	off	10033	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823458009	unscripted	7	1	roundBrush	1	exp	5	true	on	18847	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823458093	unscripted	7	1	roundBrush	1	exp	5	true	off	18929	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823464461	unscripted	7	1	roundBrush	1	exp	5	true	on	25298	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823464528	unscripted	7	1	roundBrush	1	exp	5	true	off	25365	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823485861	unscripted	7	1	roundBrush	2	exp	5	true	on	20412	mouseOverDistractor
+planned_sample	1968-d8d8332d-9575-41ab-a27d-19aaae052df1	1522823496594	unscripted	7	1	roundBrush	2	exp	5	true	off	31146	mouseOverDistractor

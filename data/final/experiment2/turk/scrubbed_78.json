@@ -1,0 +1,26 @@
+{
+    "ApprovalTime": "2018-04-03T23:50:03Z",
+    "AutoApprovalTime": "2018-04-03T23:49:06Z",
+    "AssignmentId": "78",
+    "WorkerId": "78",
+    "answers": {
+        "subject_information": {
+            "totalLength": 782003,
+            "gameID": "1469-244e5288-7a61-4511-b925-8d1f662f0c24",
+            "thinksHuman": "yes",
+            "confused": "yes",
+            "nativeEnglish": "yes",
+            "ratePartner": "loved",
+            "score": 30,
+            "role": "director",
+            "comments": "Thanks, I loved it, I hope I did the HIT to your liking and I hope verbose instructions were not needed (just clear ones).\nAlso I was a little 'thrown off' by the fact that many of the instructions were already typed.",
+            "strategy": "I wanted to use simple and clear but fast instructions."
+        },
+        "id": "1469-244e5288-7a61-4511-b925-8d1f662f0c24"
+    },
+    "AcceptTime": "2018-04-03T23:19:35Z",
+    "HITId": "3MJ9GGZYO365K4WGDO23J7YVWDY2AQ",
+    "Assignment": "",
+    "AssignmentStatus": "Approved",
+    "SubmitTime": "2018-04-03T23:44:06Z"
+}
