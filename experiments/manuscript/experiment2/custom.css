@@ -113,6 +113,8 @@ html , body {
 	font-weight:lighter;
 }
 
+
+
 #roundnumber {
     height: 2vh;
     width: 20vh;
@@ -163,14 +165,13 @@ ALOT...don't understand how to adjust that.*/
 	position: absolute;
 }
 
+
 #viewport {
-	float: center;
-	border:solid 1px #333;
-	height: 75vh;
-	width: 75vh;
-	margin-top: 0%;
-	margin-right: 5%;
-	background: #383838;
+    border:solid 1px #333;
+    height: 75vh;
+    width: 75vh;
+    margin-top: 0%;
+    background: #383838;
 }
 
 #message_panel {

@@ -150,7 +150,6 @@ game_core.prototype.getUtterance = function(trialInfo) {
 };
 
 game_core.prototype.newRound = function(delay) {
-  console.log('starting new round');
   var players = this.get_active_players();
   var localThis = this;
   setTimeout(function() {
@@ -170,7 +169,6 @@ game_core.prototype.newRound = function(delay) {
       };
       localThis.trialInfo['currUtterance'] = localThis.getUtterance(localThis.trialInfo);
       var state = localThis.server_send_update();
-      console.log(state);
       _.forEach(players, p => p.player.instance.emit( 'newRoundUpdate', state));
     }
   }, delay);
