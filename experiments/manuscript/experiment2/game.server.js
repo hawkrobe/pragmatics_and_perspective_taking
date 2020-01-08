@@ -127,12 +127,21 @@ var dataOutput = function() {
 
   var clickedObjOutput = function(client, message_data) {
     var objects = client.game.trialInfo.currStim.objects;
+    var occlusions = client.game.trialInfo.currStim.occlusions;
+    var clickedObj = _.find(objects, {'name' : message_data[1]});
+    var clickedHiddenObj = _.findIndex(occlusions, o => {
+      return _.isMatch(o, { 'gridX' : clickedObj.gridX, 'gridY' : clickedObj.gridY});
+    }) > -1;
     var intendedName = getIntendedTargetName(objects);
     var objLocations = _.zipObject(getObjectLocHeaderArray(), getObjectProperties(objects));
-    return _.extend({},
+    return _.extend(
+      {},
       commonOutput(client, message_data),
       client.game.trialInfo.currContextType,
       objLocations, {
+	occlusion1: '[' + [occlusions[0]['gridX'], occlusions[0]['gridY']]+ ']',
+	occlusion2: '[' + [occlusions[1]['gridX'], occlusions[1]['gridY']] + ']',
+	clickedHiddenObj,
 	intendedName,
 	clickedName: message_data[1],
 	correct: intendedName === message_data[1],
@@ -160,7 +169,6 @@ var dataOutput = function() {
 	typingRT: message_data[2]
       }
     );
-    console.log(_.pick(output, ['gameid', 'trialNum', 'text', 'context', 'occlusions']));
     return output;
   };
 

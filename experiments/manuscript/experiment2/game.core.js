@@ -140,8 +140,6 @@ game_core.prototype.getUtterance = function(trialInfo) {
   var relevantDistractors = _.filter(stim, v => v.targetStatus != 'target' && v.shape == target.shape);
   var textureClash = _.filter(relevantDistractors, {'texture' : target.texture});
   var colorClash = _.filter(relevantDistractors, {'color' : target.color});
-  console.log('texture', textureClash);
-  console.log('color', colorClash);
   var textureOrColorClash = textureClash.length > 0 || colorClash.length > 0;
   var prefix = _.sample(['', 'the ']);
   var longModifier = (
