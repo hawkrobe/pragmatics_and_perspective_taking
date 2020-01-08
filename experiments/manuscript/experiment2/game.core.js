@@ -62,7 +62,7 @@ var game_core = function(options){
   this.numOcclusions = 2;
   
   // How many rounds do we want people to complete?
-  this.numRounds = 24;
+  this.numRounds = 26;
   this.feedbackDelay = 100;
 
   // This will be populated with the tangram set
@@ -138,15 +138,24 @@ game_core.prototype.getUtterance = function(trialInfo) {
   var contextType = trialInfo.currContextType;
   var target = _.find(stim, v => v.targetStatus == 'target');
   var relevantDistractors = _.filter(stim, v => v.targetStatus != 'target' && v.shape == target.shape);
-  var textureClash = _.find(relevantDistractors, v => v.texture == target.texture);
-  var colorClash = _.find(relevantDistractors, v => v.color == target.color);
-  var textureAndColorClash = textureClash && colorClash;  
-  var word = (contextType.context == 'close' && contextType.occlusions == 'none' ?
-              (//textureAndColorClash ? target.texture + ' ' + target.color + ' ' + target.shape :
-                textureClash ? target.color + ' ' + target.shape :
-                  target.texture + ' ' + target.shape) :
-              target.shape);
-  return _.sample(['', 'the ']) + word;
+  var textureClash = _.filter(relevantDistractors, {'texture' : target.texture});
+  var colorClash = _.filter(relevantDistractors, {'color' : target.color});
+  console.log('texture', textureClash);
+  console.log('color', colorClash);
+  var textureOrColorClash = textureClash.length > 0 || colorClash.length > 0;
+  var prefix = _.sample(['', 'the ']);
+  var longModifier = (
+    textureOrColorClash ? target.texture + ' ' + target.color:
+      (_.sample([true, false]) ? target.color : target.texture)
+  ) + ' ';
+
+  if(contextType.occlusions == 'critical') {
+    return prefix + target.shape;
+  } else if(contextType.context == 'close') {
+    return prefix + longModifier + target.shape;
+  } else {
+    return prefix + (_.sample([true, false]) ? longModifier + target.shape : target.shape);
+  }
 };
 
 game_core.prototype.newRound = function(delay) {
@@ -207,20 +216,29 @@ game_core.prototype.makeTrialList = function () {
 };
 
 game_core.prototype.genTrialBlock = function() {
-  return [].concat(Array(this.numRounds/12).fill(    
+  return [].concat(Array(2).fill(    
+    {context : 'close', occlusions: 'irrelevant'}
+  ).concat(Array(2).fill(
     {context : 'far', occlusions: 'irrelevant'}
-  ).concat(Array(this.numRounds/12).fill(
-    {context : 'far', occlusions: 'irrelevant'}
-  )).concat(Array(this.numRounds/12).fill(
+  )).concat(Array(2).fill(
     {context : 'close', occlusions: 'critical'}
-  )).concat(Array(this.numRounds/12).fill(
+  )).concat(Array(2).fill(
+    {context : 'far', occlusions: 'irrelevant'}
+  )));
+};
+
+game_core.prototype.practiceBlock = function() {
+  return [].concat(Array(1).fill(    
+    {context : 'close', occlusions: 'irrelevant'}
+  ).concat(Array(1).fill(
     {context : 'far', occlusions: 'irrelevant'}
   )));
 };
 
 // Ensure each object appears even number of times, evenly spaced across trial types...?
 game_core.prototype.sampleSequence = function() {
-  var trials = _.shuffle(this.genTrialBlock())
+  var trials = _.shuffle(this.practiceBlock())
+  	.concat(_.shuffle(this.genTrialBlock()))
 	.concat(_.shuffle(this.genTrialBlock()))
 	.concat(_.shuffle(this.genTrialBlock()));  
   var targetReps = this.numRounds / this.objects.length;
