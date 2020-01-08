@@ -1,0 +1,4 @@
+iterationName	gameid	trialNum	serverTime	targetDistance	distractorDistance	localTime	rawMouseX	rawMouseY	eventType
+planned_sample	6574-84ca37db-3fd9-45ef-94a9-d72a5cf756b8	1	1522402181908	41	1334	1522402181896	860	1511	updateMouse
+planned_sample	6574-84ca37db-3fd9-45ef-94a9-d72a5cf756b8	1	1522402183923	41	1334	1522402183914	860	1511	updateMouse
+planned_sample	6574-84ca37db-3fd9-45ef-94a9-d72a5cf756b8	1	1522402184585	41	1334	1522402184580	860	1511	updateMouse
