@@ -73,7 +73,7 @@ var game_core = function(options){
     this.expName = options.expName;
     this.player_count = options.player_count;
     this.objects = require('./images/objects.json');
-    this.condition = _.sample(['scripted', 'unscripted']);
+    this.condition = _.sample(['scripted']);
     this.trialList = this.makeTrialList();
     this.data = {
       id : this.id,
@@ -208,9 +208,9 @@ game_core.prototype.makeTrialList = function () {
 
 game_core.prototype.genTrialBlock = function() {
   return [].concat(Array(this.numRounds/12).fill(    
-    {context : 'close', occlusions: 'none'}
+    {context : 'far', occlusions: 'irrelevant'}
   ).concat(Array(this.numRounds/12).fill(
-    {context : 'far', occlusions: 'none'}
+    {context : 'far', occlusions: 'irrelevant'}
   )).concat(Array(this.numRounds/12).fill(
     {context : 'close', occlusions: 'critical'}
   )).concat(Array(this.numRounds/12).fill(
