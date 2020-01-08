@@ -55,6 +55,9 @@ var onMessage = function(client,message) {
     });
     break;
 
+  case 'exitSurvey' :
+    break;
+    
   case 'h' : // Receive message when browser focus shifts
     target.visible = message_parts[1];
     break;
@@ -139,6 +142,13 @@ var dataOutput = function() {
     );
   };
 
+  var exitSurveyOutput = function(client, message_data) {
+    var subjInfo = JSON.parse(message_data.slice(1));
+    return _.extend({}, _.omit(commonOutput(client, message_data),
+			       ['targetImg', 'repNum', 'trialNum', 'context_id']),
+		    subjInfo);
+  };
+  
   var messageOutput = function(client, message_data) {
     var intendedName = getIntendedTargetName(client.game.trialInfo.currStim.objects);
     var output = _.extend({},
@@ -157,7 +167,8 @@ var dataOutput = function() {
   return {
     'updateMouse' : mouseOutput,
     'chatMessage' : messageOutput,
-    'clickedObj' : clickedObjOutput
+    'clickedObj' : clickedObjOutput,
+    'exitSurvey' : exitSurveyOutput
   };
 }();
 

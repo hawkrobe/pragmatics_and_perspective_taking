@@ -31,7 +31,7 @@ var ondisconnect = function(data) {
   ].join('');
 
   console.log(globalGame.email);
-  console.log($('#exit_survey'));
+
   if(globalGame.roundNum + 2 > globalGame.numRounds) { 
     $('#exit_survey').prepend(successMsg);    
   } else {
@@ -170,14 +170,15 @@ function dropdownTip(data){
     globalGame.data.subject_information = _.extend(globalGame.data.subject_information,
 						   {'confused' : commands[1]}); break;
   case 'submit' :
+    $('#button_error').show();
     globalGame.data.subject_information = _.extend(globalGame.data.subject_information, 
 						   {'comments' : $('#comments').val(),
 						    'strategy' : $('#strategy').val(),
 				    'role' : globalGame.my_role,
 				    'totalLength' : Date.now() - globalGame.startTime});
     globalGame.submitted = true;
-    console.log("data is...");
-    console.log(globalGame.data);
+    globalGame.socket.send("exitSurvey." + JSON.stringify(globalGame.data));
+    
     if(_.size(globalGame.urlParams) == 4) {
       window.opener.turk.submit(globalGame.data, true);
       window.close(); 
