@@ -62,7 +62,7 @@ var game_core = function(options){
   this.numOcclusions = 2;
   
   // How many rounds do we want people to complete?
-  this.numRounds = 26;
+  this.numRounds = 28;
   this.feedbackDelay = 100;
 
   // This will be populated with the tangram set
@@ -143,7 +143,8 @@ game_core.prototype.getUtterance = function(trialInfo) {
   var textureOrColorClash = textureClash.length > 0 || colorClash.length > 0;
   var prefix = _.sample(['', 'the ']);
   var longModifier = (
-    textureOrColorClash ? target.texture + ' ' + target.color:
+    textureClash ? target.color :
+      colorClash ? target.texture :
       (_.sample([true, false]) ? target.color : target.texture)
   ) + ' ';
 
@@ -152,7 +153,7 @@ game_core.prototype.getUtterance = function(trialInfo) {
   } else if(contextType.context == 'close') {
     return prefix + longModifier + target.shape;
   } else {
-    return prefix + (_.sample([true, false]) ? longModifier + target.shape : target.shape);
+    return prefix + (_.sample([true, false, false]) ? longModifier + target.shape : target.shape);
   }
 };
 
@@ -228,7 +229,7 @@ game_core.prototype.genTrialBlock = function() {
 game_core.prototype.practiceBlock = function() {
   return [].concat(Array(1).fill(    
     {context : 'close', occlusions: 'irrelevant'}
-  ).concat(Array(1).fill(
+  ).concat(Array(3).fill(
     {context : 'far', occlusions: 'irrelevant'}
   )));
 };
