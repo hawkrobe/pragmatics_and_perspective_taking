@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,17 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../favicon.ico">
-
     <title>Experiment</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
-    <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="theme.css" rel="stylesheet">
+    <link href="./dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -32,29 +26,26 @@
     <div class="container theme-showcase" role="main">
 
       </br>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"><span class="sr-only">0% Complete</span></div>
+      </div>
+
+      <div class="page-header">
+        <h1>Sorry, you can't participate in this experiment multiple times.</h1>
+      </div>
 
       <p>
-        <center><button id="agree" type="button" class="btn btn-sm btn-primary">START</button></center>
-	<noscript><strong>JavaScript must be enabled to start.</strong></noscript>
+	Please return this HIT now to avoid any impact on your
+	approval rating.
       </p>
 
     </div> <!-- /container -->
 
-    
-    <script type="text/javascript">
-      document.getElementById("agree").onclick = function () {
-        var id = Math.floor(Math.random() * 1e12);
-        location.replace("http://nospoon.mit.edu:8888/index.html?id=" + id);
-      };
-    </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../dist/js/bootstrap.min.js"></script>
-    <script src="../assets/js/docs.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="./dist/js/bootstrap.min.js"></script>
   </body>
 </html>
