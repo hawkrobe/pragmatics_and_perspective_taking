@@ -34,7 +34,7 @@ var game_core = function(options){
   this.email = 'rdhawkins@princeton.edu';
   this.projectName = 'ToM';
   this.experimentName = 'listenerManipulation';
-  this.iterationName = 'pilot0';
+  this.iterationName = 'pilot1';
   this.anonymizeCSV = true;
   this.bonusAmt = 1; // in cents
   
@@ -140,10 +140,11 @@ game_core.prototype.getUtterance = function(trialInfo) {
   var relevantDistractors = _.filter(stim, v => v.targetStatus != 'target' && v.shape == target.shape);
   var textureClash = _.filter(relevantDistractors, {'texture' : target.texture});
   var colorClash = _.filter(relevantDistractors, {'color' : target.color});
-  var textureOrColorClash = textureClash.length > 0 || colorClash.length > 0;
+  var textureAndColorClash = textureClash.length > 0 && colorClash.length > 0;
   var prefix = _.sample(['', 'the ']);
   var longModifier = (
-    textureClash ? target.color :
+    textureAndColorClash ? target.texture + ' ' + target.color :
+      textureClash ? target.color :
       colorClash ? target.texture :
       (_.sample([true, false]) ? target.color : target.texture)
   ) + ' ';
