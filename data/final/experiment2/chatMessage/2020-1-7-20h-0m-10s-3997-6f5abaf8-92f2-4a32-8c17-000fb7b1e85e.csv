@@ -1,0 +1,29 @@
+context	occlusions	numObjsOccluded	numDistractors	iterationName	gameid	trialNum	serverTime	intendedName	text	role	typingRT	eventType
+far	irrelevant	2	4	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	1	1578456010027	spotted_red_triangle	the red triangle	listener		chatMessage
+close	irrelevant	1	2	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	2	1578456026714	striped_green_triangle	the green triangle	listener		chatMessage
+far	irrelevant	1	4	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	3	1578456036682	spotted_red_triangle	red triangle	listener		chatMessage
+far	irrelevant	2	4	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	4	1578456067638	striped_black_star	the star	listener		chatMessage
+close	critical	1	4	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	5	1578456076882	striped_green_star	the star	listener		chatMessage
+close	irrelevant	1	2	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	6	1578456087186	checked_black_square	black square	listener		chatMessage
+close	critical	2	3	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	7	1578456093473	striped_green_square	square	listener		chatMessage
+far	irrelevant	1	2	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	8	1578456101866	checked_black_star	the star	listener		chatMessage
+far	irrelevant	2	4	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	9	1578456109226	striped_black_triangle	the triangle	listener		chatMessage
+close	irrelevant	1	2	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	10	1578456118418	striped_black_square	the black square	listener		chatMessage
+far	irrelevant	1	2	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	11	1578456127918	striped_blue_triangle	triangle	listener		chatMessage
+far	irrelevant	2	3	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	12	1578456134606	spotted_red_circle	the circle	listener		chatMessage
+far	irrelevant	2	4	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	13	1578456141206	wavy_black_circle	circle	listener		chatMessage
+close	critical	1	2	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	14	1578456148778	spotted_green_circle	the circle	listener		chatMessage
+far	irrelevant	1	2	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	15	1578456157150	wavy_green_triangle	the green triangle	listener		chatMessage
+close	critical	2	3	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	16	1578456163842	spotted_blue_star	the star	listener		chatMessage
+close	irrelevant	1	2	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	17	1578456170202	spotted_blue_square	the blue square	listener		chatMessage
+far	irrelevant	1	3	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	18	1578456176993	spotted_green_circle	green circle	listener		chatMessage
+close	irrelevant	1	2	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	19	1578456182741	wavy_green_circle	green circle	listener		chatMessage
+far	irrelevant	2	4	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	20	1578456190737	striped_green_square	square	listener		chatMessage
+close	critical	1	2	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	21	1578456198005	wavy_black_circle	the circle	listener		chatMessage
+far	irrelevant	2	4	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	22	1578456205329	striped_blue_star	the star	listener		chatMessage
+far	irrelevant	1	2	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	23	1578456211884	spotted_blue_circle	blue circle	listener		chatMessage
+close	irrelevant	1	2	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	24	1578456218436	striped_green_star	green star	listener		chatMessage
+close	critical	1	3	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	25	1578456226433	checked_black_circle	circle	listener		chatMessage
+close	irrelevant	1	2	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	26	1578456233004	striped_red_square	red square	listener		chatMessage
+far	irrelevant	2	3	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	27	1578456240041	wavy_red_star	the star	listener		chatMessage
+far	irrelevant	1	3	pilot1	3997-6f5abaf8-92f2-4a32-8c17-000fb7b1e85e	28	1578456246701	striped_red_circle	the circle	listener		chatMessage
