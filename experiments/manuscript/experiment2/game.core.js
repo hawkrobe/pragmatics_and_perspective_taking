@@ -31,10 +31,10 @@ var game_core = function(options){
   this.server = options.server ;
 
   // Some config settings
-  this.email = 'rxdh@stanford.edu';
+  this.email = 'rdhawkins@princeton.edu';
   this.projectName = 'ToM';
-  this.experimentName = 'speakerManipulation';
-  this.iterationName = 'planned_sample';
+  this.experimentName = 'listenerManipulation';
+  this.iterationName = 'pilot0';
   this.anonymizeCSV = true;
   this.bonusAmt = 1; // in cents
   
