@@ -54,18 +54,28 @@ var drawGrid = function(game){
   game.ctx.stroke();
 };
 
+// Preload so that all images render at same time
+var loadImages = function(sources, callback) {
+  var numLoaded = 0;
+  var images = {};
+  _.forEach(sources, function(source) {
+    images[source.name] = new Image();
+    images[source.name].onload = function() {
+      if(++numLoaded >= sources.length) {
+	callback(images);
+      }
+    };
+    images[source.name].src = source.url;
+  });
+};
+
 // Loop through the object list and draw each one in its specified location
 var drawObjects = function(game) {
-  _.map(game.objects, function(obj) {
-    if(game.my_role == game.playerRoleNames.role2 ||
-       !containsCell(game.occlusions, [obj.gridX, obj.gridY])) {
-      var imgObj = new Image();
-      imgObj.onload = () => {
-	game.ctx.drawImage(imgObj, obj.trueX, obj.trueY,
-				 obj.width, obj.height);
-      };
-      imgObj.src = obj.url;
-    }
+  var numloaded = 0;
+  loadImages(game.objects, function(images) {
+    _.forEach(game.objects, function(obj) {
+      game.ctx.drawImage(images[obj.name], obj.trueX, obj.trueY, obj.width, obj.height);
+    });
   });
 };
 
