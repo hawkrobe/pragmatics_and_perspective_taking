@@ -1,7 +1,7 @@
 // webppl noisyContextRSA.wppl --require ./refModule/ -- --model occlusionSensitivity
 // webppl noisyContextRSA.wppl --require ./refModule/ -- --model egocentric
 
-var data = refModule.readCSV('./bdaInput/bdaInput.csv');
+var data = refModule.readCSV('./input/bdaInput.csv');
 var possibleUtterances = ['shape', 'color', 'texture',
 			  'texture_color', 'color_shape', 'texture_shape',
 			  'texture_color_shape'];
