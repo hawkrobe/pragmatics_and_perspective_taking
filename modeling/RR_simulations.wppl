@@ -1,4 +1,4 @@
-// webppl experimental.wppl
+// webppl RR_simulations.wppl --require ./refModule
 
 // the stimulus set in this world varies along 3 dimensions. because
 // the precise levels (e.g. 'blue', 'red') don't matter, we always
@@ -35,15 +35,12 @@ var possibleUtterances = Categorical({
 // these are the possible mixture weights for perspective-taking
 // where 0 is purely egocentric and 1 is purely partner's perspective
 var possibleWeightings = Categorical({
-  vs: _.range(0, 1.1, 0.1)
+  vs: _.range(0, 1, 0.05)
 });
 
 // these are the possible conditions of visible objects presented to the speaker
 var contexts = {
-  'diff_shape' : ['texture_color_shape', 'othertexture_othercolor_othershape'],
-  'shape_only' : ['texture_color_shape', 'othertexture_othercolor_shape'],
-  'color_shape' : ['texture_color_shape', 'othertexture_color_shape'],
-  'texture_shape' : ['texture_color_shape', 'texture_othercolor_shape']
+  'diff_shape' : ['texture_color_shape', 'othertexture_othercolor_othershape']
 };
 
 // alpha: soft-max temperature
@@ -54,7 +51,7 @@ var params = {
   textureCost : 0.01,
   shapeCost : 0.01,
   colorCost : 0.01,
-  perspectiveCost : 0.1
+  perspectiveCost : argv.perspectiveCost
 };
 
 var getTrueUtterances = function(context) {
@@ -157,7 +154,7 @@ var RR_speaker = function(target, context) {
 
     // putting more weight on partner's perspective is costly
     factor(utility - ownWeighting * params.perspectiveCost);
-    return ownWeighting;
+    return {weighting: ownWeighting, perspectiveCost: params.perspectiveCost};
   });
 }
 
@@ -179,15 +176,15 @@ var RR_listener = function(utt, baseContext) {
 
     // putting more weight on partner's perspective is costly
     factor(utility - ownWeighting * params.perspectiveCost);
-    return ownWeighting;
+    return {weighting: ownWeighting, perspectiveCost: params.perspectiveCost};
   });
 };
 
 var speakerContext = contexts['diff_shape'];
 console.log('resource-rational weight for speaker');
-console.log(JSON.stringify(RR_speaker('texture_color_shape', speakerContext)));
+csv.writeJoint(RR_speaker('texture_color_shape', speakerContext), './output/RRspeakerOutput' + argv.chainNum + '.csv');
 console.log(MAP(RR_speaker('texture_color_shape', speakerContext)));
 
 console.log('resource-rational weight for listener');
-console.log(JSON.stringify(RR_listener('texture_color_shape', speakerContext)));
+csv.writeJoint(RR_listener('texture_color_shape', speakerContext), './output/RRlistenerOutput' + argv.chainNum + '.csv');
 console.log(MAP(RR_listener('texture_color_shape', speakerContext)));

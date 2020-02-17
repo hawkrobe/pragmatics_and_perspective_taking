@@ -15,7 +15,6 @@ var possibleObjects = Categorical({
     'othertexture_color_shape', 'texture_othercolor_shape', 'texture_color_othershape',
     'othertexture_othercolor_shape', 'texture_othercolor_othershape', 'othertexture_color_othershape',
   ]
-//  ps: [1/64, 27/64, 3/64, 3/64, 3/64, 9/64, 9/64, 9/64]
 });
 
 // speaker can mention any combination of the 3 feature dimensions
@@ -35,7 +34,7 @@ var possibleUtterances = Categorical({
 // these are the possible mixture weights for perspective-taking
 // where 0 is purely egocentric and 1 is purely partner's perspective
 var possibleWeightings = Categorical({
-  vs: _.range(0, 1.1, 0.1)
+  vs: _.range(0, 1, 0.05)
 });
 
 // these are the possible conditions of visible objects presented to the speaker
@@ -148,36 +147,16 @@ var listenerPosterior = function(data) {
   });
 };
 
-var posterior = listenerPosterior([
-  {utt: 'texture', target: 'texture_color_shape', context: contexts['diff_shape']},
-  {utt: 'texture', target: 'texture_color_shape', context: contexts['diff_shape']},
-  {utt: 'texture', target: 'texture_color_shape', context: contexts['diff_shape']},
-  {utt: 'texture', target: 'texture_color_shape', context: contexts['diff_shape']}
-])
-
-// meta-cognitive resource-rational speaker selects optimal mixture
-// weight, marginalizing over uncertainty about listener's weight
-var RR_speaker = function(target, context) {
-  return Infer({method: 'enumerate'}, function() {
-    var ownWeighting = sample(possibleWeightings);
-
-    // Imagine how speaker with this weight would behave
-    var likelyUtt = MAP(S1(target, context, ownWeighting))['val'];
-    
-    // Imagine expected utility of that behavior, marginalizing over
-    // partner's mixture weight and possible objects in partner's view
-    var utility = expectation(possibleObjects, function(obj) {
-      return expectation(possibleWeightings, function(partnerWeighting) {
-        var possibleListenerView = context.concat(obj + '_private');
-        return L0(likelyUtt, possibleListenerView, partnerWeighting).score(target);
-      });
-    });
-
-    // putting more weight on partner's perspective is costly
-    factor(utility - ownWeighting * params.perspectiveCost);
-    return ownWeighting;
-  });
-}
+var datapoint =  {
+  utt: 'texture',
+  target: 'texture_color_shape',
+  context: contexts['diff_shape']
+};
+var data = repeat(argv.numDatapoints, function() {
+  return datapoint;
+});
+console.log(data);
+var posterior = listenerPosterior(data);
 
 // meta-cognitive resource-rational speaker selects optimal mixture
 // weight, marginalizing over uncertainty about listener's weight
@@ -197,9 +176,10 @@ var RR_listener = function(utt, baseContext) {
 
     // putting more weight on partner's perspective is costly
     factor(utility - ownWeighting * params.perspectiveCost);
-    return ownWeighting;
+    return {weighting: ownWeighting, numDatapoints: argv.numDatapoints};
   });
 };
 
 
-console.log(MAP(RR_listener('texture_color_shape', contexts['diff_shape'])));
+csv.writeJoint(RR_listener('texture_color_shape', contexts['diff_shape']),
+               './output/dynamicsOutput' + argv.chainNum + '.csv');
