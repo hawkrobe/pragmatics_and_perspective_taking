@@ -207,7 +207,49 @@ exp1_clicks %>%
   tally()
 ```
 
-## Model-based analyses
+## Model-based analyses (Appendix)
+
+### Resource-rational simulations
+
+```{r}
+RR <- bind_rows(
+  read_csv('../modeling/output/RRlistenerOutput.csv') %>% mutate(src = 'listener'),
+  read_csv('../modeling/output/RRspeakerOutput.csv') %>% mutate(src ='speaker')
+)
+
+ggplot(RR, aes(x = weighting, y = prob, color = perspectiveCost, group = perspectiveCost)) +
+  geom_line() +
+  facet_wrap(~ src) +
+  theme_few() +
+  xlim(0,1) +
+  theme(aspect.ratio = 1)
+
+ggsave('../../pragmatics_and_perspective_taking_tex/cognitive_science_revision/figures/simulations.pdf')
+```
+
+### Dynamics simulations
+
+```{r}
+dynamics <- bind_rows(
+  read_csv('../modeling/output/dynamicsOutput.csv')
+)
+
+dynamics %>%
+  group_by(numDatapoints) %>%
+  filter(prob == max(prob)) %>%
+  ggplot(aes(x = numDatapoints, y = weighting)) +
+    geom_line() +
+    theme_few() +
+    xlim(0, 30) +
+    ylim(.5, 1) +
+    labs(x = 'length of interaction', y = 'optimal weighting') +
+    theme(aspect.ratio = 1) 
+
+ggsave('../../pragmatics_and_perspective_taking_tex/cognitive_science_revision/figures/dynamics.pdf', width = 2, height = 2,
+       units = 'in')
+```
+
+### Model comparison
 
 Look at pattern of predictives for each model, compared to empirical number of features mentioned
 ```{r}
@@ -528,7 +570,8 @@ exp2_messages <- read_csv('../data/final/experiment2/chatMessage/messagesFromMon
   mutate(critical = ifelse(critical == 'True', 1, 0)) %>%
   rename(messageTime = serverTime) %>%
   filter(sender == 'director') %>%
-  group_by(gameid, trialNum, instructionNum, attemptNum, critical, condition, objectSet, targetObject) %>%
+  group_by(gameid, trialNum, instructionNum, attemptNum, 
+           critical, condition, objectSet, targetObject) %>%
   summarize(text = paste0(contents, collapse = ' '),
             typingRT = sum(typingRT)) %>%   # Concatenate multiple utterance on same trial
   mutate(numRawWords = str_count(text, "\\S+")) 
@@ -684,56 +727,31 @@ summary(glmer(correct ~ condition + (1|gameid) + (1+condition | objectSet), fami
               data = critTrials))
 ```
 
-Examine how listeners might be adapting
-
-```{r}
-critTrials %>% 
-  #filter(condition == 'scripted') %>%
-  group_by(gameid) %>% 
-  mutate(trialNum = row_number(),
-         lastRoundIncorrect = 1-lag(correct)) %>% 
-  group_by(trialNum) %>% 
-  summarize(prop = sum(correct)/length(correct)) %>%
-  mutate(error = ifelse(correct == 0, 'error', 'no error')) %>%
-  ggplot(aes(x= trialNum, y = n, color = lastRoundIncorrect)) +
-    geom_line()
-```
-
-```{r}
-library(brms)
-summary(brm(correct ~ trialNum + (1 + trialNum| gameid), family = 'bernoulli', 
-              data = critTrials %>%   
-                    group_by(gameid) %>%
-                    mutate(trialNum = row_number(),
-                           lastRoundIncorrect = 1-lag(correct)), control = list(adapt_delta = .95)))
-```
-
 ### Mouse-tracking 
 
 Even on critical trials where they didn't make errors, how often did they 'consider' the distractor (i.e. hover over the distractor cell)
 
 ```{r}
-d.onDistractor <- exp2_d %>% 
-  left_join(read_csv('../data/final/experiment2/mouseOverDistractor/distractorMouseFromMongo.csv') %>% 
-              mutate(critical = ifelse(critical == 'True', 1, 0))
-            ) %>%
-  select(-serverTime, -X1) %>%
+d.onDistractor.correctOnly <- exp2_d %>% 
+  filter(correct) %>%
   filter(attemptNum == 0) %>%
-  filter(correct == 1) %>%
   filter(critical == 1) %>%
+  left_join(read_csv('../data/final/experiment2/mouseOverDistractor/distractorMouseFromMongo.csv'),
+            by = c('gameid', 'trialNum', 'objectSet', 'trialType', 'condition', 'attemptNum')) %>%
+  select(-serverTime, -X1, -ends_with('.y')) %>%
   group_by(gameid, trialNum) %>%
   mutate(toggle = floor((row_number() - 1) / 2)) %>%
   mutate(onOff = ifelse(is.na(onOff), 'off', onOff)) %>%
   spread(onOff, timeElapsed) %>%
   mutate(diff = ifelse(is.na(off), 0, off - on)) %>%
-  group_by(gameid,condition,objectSet, trialType) %>%
+  group_by(gameid,trialNum,condition,objectSet, trialType) %>%
   summarize(totalAmtTimeOnDistractor = sum(diff)) %>%
   mutate(totalAmtTimeOnDistractor = ifelse(totalAmtTimeOnDistractor == 0, 0, log(totalAmtTimeOnDistractor))) %>%
   mutate(hovered = totalAmtTimeOnDistractor > 0) %>%
   ungroup() 
 
 dodge <- position_dodge(width=0.9)
-d.onDistractor %>%
+d.onDistractor.correctOnly %>%
   group_by(condition, trialType) %>%
   tidyboot_mean(column = totalAmtTimeOnDistractor) %>%
   mutate(trial = ifelse(trialType == 'base', 'baseline', 'experimental')) %>%
@@ -754,14 +772,50 @@ This is our pregistered DV
 
 ```{r}
 summary(lmer(totalAmtTimeOnDistractor ~ trialType * condition + (1 +trialType|gameid) + (1 +trialType|objectSet), 
-             data = d.onDistractor))
+             data = d.onDistractor.correctOnly))
 ```
 
 This is the 'cleaned up' proportionality measure we report in the footnote
 
 ```{r}
-summary(glmer(hovered ~ trialType * condition + (1|gameid) + (1+trialType|objectSet), data = d.onDistractor, family = 'binomial'))
+summary(glmer(hovered ~ trialType * condition + (1|gameid) + (1+trialType|objectSet), 
+              data = d.onDistractor.correctOnly, family = 'binomial'))
 ```
+
+## Adaptation over time
+
+```{r}
+critTrials %>% 
+  group_by(gameid) %>% 
+  mutate(trialNum = row_number()) %>% 
+  group_by(trialNum) %>% 
+  summarize(prop = sum(correct)/length(correct)) %>%
+  #mutate(error = ifelse(correct == 0, 'error', 'no error')) %>%
+  ggplot(aes(x= trialNum, y = prop)) +
+    geom_point() +
+    geom_smooth(method = 'lm')
+```
+
+Mixed-effects model on raw error probability
+
+```{r}
+summary(glmer(correct ~ trialNum * condition + (1 | gameid), family = 'binomial',
+             data = critTrials %>%   
+                    group_by(gameid) %>%
+                    mutate(trialNum = row_number())))
+```
+
+Supplementary Bayesian version with more complete random effects
+
+```{r}
+library(brms)
+summary(brm(correct ~ trialNum * condition  + (1 + trialNum | gameid), family = 'bernoulli', 
+              data = critTrials %>%   
+                    group_by(gameid) %>%
+                    mutate(trialNum = row_number(),
+                           lastRoundIncorrect = 1-lag(correct)), control = list(adapt_delta = .95)))
+```
+
 ## Speaker analyses
 
 ### Prep informativity norming stims
@@ -1173,3 +1227,91 @@ ggplot(d.mouse, aes(x = trialType, y = empirical_stat, fill = metric)) +
 3. Change in informativity over time (are people already being informative on first round? are people 'learning' to be more informative over course of expt? or getting less informative because tired of task?)
 4. Order effects (i.e. are people more likely to use a modifier when they had to on the previous round?)
 5. Are people more informative when there are more objects? 
+
+
+# Supplemental experiment
+
+```{r}
+library(tidyverse)
+d.supp.clicks <- read_tsv('../data/final/supplemental_exp/clickedObj/allClicks.csv')
+paste0(c('we have', length(unique(d.supp.clicks$gameid)), 'participants.'), collapse = ' ')
+
+# Following same criterion as above, we remove participants who make more than one
+# non-critical error (ignoring errors in the initial practice block)
+exclusions <- d.supp.clicks %>%
+  rowwise() %>%
+  filter(occlusions != 'critical'  || (occlusions == 'critical' && !clickedHiddenObj && !correct)) %>%
+  filter(trialNum > 4) %>%
+  group_by(gameid) %>%
+  summarize(nonCriticalErrors = sum(!correct)) %>%
+  filter(nonCriticalErrors > 1) %>%
+  pull(gameid)
+```
+
+```{r}
+d.supp.clicks %>%
+  filter(!(gameid %in% exclusions)) %>%
+  group_by(gameid) %>%
+  filter(occlusions == 'critical') %>%
+  mutate(instance = row_number()) %>%
+  filter(clickedHiddenObj) %>%
+  group_by(gameid) %>%
+  summarize(errorInstances = paste0(instance, collapse =  ',')) #%>%
+  # group_by(instance) %>%
+  # summarize(clickedHidden =sum(clickedHiddenObj))
+```
+
+```{r}
+critical_only <- read_tsv('../data/final/supplemental_exp/clickedObj/allClicks.csv') %>%
+  filter(occlusions =='critical') %>%
+  rowwise() %>%
+  mutate(shape_of_target = strsplit(intendedName, '_')[[1]][3]) %>%
+  rowwise() %>%
+  mutate(i = grep(shape_of_target, strsplit(names, ',')[[1]])[1]) %>%
+  mutate(criticalDistractorX = as.numeric(gsub('\\[', '', strsplit(gridXs, ',')[[1]][i])),
+         criticalDistractorY = as.numeric(gsub('\\[', '', strsplit(gridYs, ',')[[1]][i])),
+         criticalDistractorLeftBorder = 600 * (criticalDistractorX - 1),
+         criticalDistractorRightBorder = 600 * (criticalDistractorX),
+         criticalDistractorTopBorder = 600 * (criticalDistractorY-1),
+         criticalDistractorBottomBorder = 600 * (criticalDistractorY)) %>%
+  select(gameid, trialNum, criticalDistractorLeftBorder,criticalDistractorRightBorder,criticalDistractorTopBorder,criticalDistractorBottomBorder)
+```
+
+```{r}
+distractor <- left_join(
+  read_tsv('../data/final/supplemental_exp/updateMouse/mouse.csv'),
+   read_tsv('../data/final/supplemental_exp/clickedObj/allClicks.csv'),
+  by = c('trialNum', 'gameid')) %>%
+  filter(occlusions == 'critical') %>%
+  left_join(critical_only, by = c('gameid', 'trialNum')) %>%
+  rowwise() %>%
+  mutate(overDistractor = (
+    rawMouseX < criticalDistractorRightBorder && 
+    rawMouseX > criticalDistractorLeftBorder &&
+    rawMouseY < criticalDistractorBottomBorder && 
+    rawMouseY > criticalDistractorTopBorder
+    )
+  ) %>%
+  filter(!(gameid %in% exclusions)) %>%
+  group_by(gameid, trialNum) %>% 
+  summarize(hovered = sum(overDistractor) > 0) %>%
+  mutate(instance = row_number()) 
+
+distractor %>%
+  group_by(instance) %>%
+  tidyboot_mean(sum(hovered) / length(hovered)) %>%
+  ggplot(aes(x = instance, y = empirical_stat)) +
+    geom_point() +
+    #geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0) +
+    geom_smooth(method = 'lm', formula = y ~ poly(x, 2), se = F) +
+    theme_bw() +
+    ylab('% trials hovering over distractor') +
+    xlab('occurrence in trial sequence') +
+    theme(aspect.ratio = 1/2)
+
+ggsave('hoverReduction.pdf')
+library(lme4)
+library(tidyboot)
+library(lmerTest)
+summary(lmer(hovered ~ instance + (1 | gameid), data = distractor))
+```
