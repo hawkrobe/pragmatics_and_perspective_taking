@@ -114,35 +114,43 @@ var writeERP = function(erp, labels, filename, fixed) {
 var supportWriter = function(s, p, handle) {
   var sLst = _.toPairs(s);
   var l = sLst.length;
+  console.log('writing')
+  console.log(sLst[0].join(',')+','+p+'\n');
   fs.writeSync(handle, sLst[0].join(',')+','+p+'\n');
   // for (var i = 0; i < l; i++) {
   //   fs.writeSync(handle, sLst[i].join(',')+','+p+'\n');
   // }
 };
 
-// Note this is highly specific to a single type of erp
-var bayesianErpWriter = function(erp, filePrefix) {
+var predictivesErpWriter = function(erp, filePrefix) {
   var predictiveFile = fs.openSync(filePrefix + "Predictives.csv", 'w');
-    fs.writeSync(predictiveFile, [
-	"close_0_textureshape_hidden", "close_1_textureshape_hidden", "close_2_textureshape_hidden",
-	"close_0_colorshape_hidden", "close_1_colorshape_hidden", "close_2_colorshape_hidden",
-	"close_0_shapeonly_hidden", "close_1_shapeonly_hidden", "close_2_shapeonly_hidden",	
-	"far_0_diffshape_hidden", "far_1_diffshape_hidden", "far_2_diffshape_hidden",
-	"close_0_textureshape_visible", "close_1_textureshape_visible", "close_2_textureshape_visible",
-	"close_0_colorshape_visible", "close_1_colorshape_visible", "close_2_colorshape_visible",
-	"close_0_shapeonly_visible", "close_1_shapeonly_visible", "close_2_shapeonly_visible",
-	"far_0_diffshape_visible", "far_1_diffshape_visible", "far_2_diffshape_visible",	
-	"prob", "MCMCprob"] + '\n');
-
-  var paramFile = fs.openSync(filePrefix + "Params.csv", 'w');
-  fs.writeSync(paramFile, ["model", "alpha", "textureCost", "colorCost", "shapeCost", "logLikelihood", "prob"] + '\n');
-
-  var supp = erp.support();
+  fs.writeSync(predictiveFile, [
+    "close_0_textureshape_hidden", "close_1_textureshape_hidden", "close_2_textureshape_hidden",
+    "close_0_colorshape_hidden", "close_1_colorshape_hidden", "close_2_colorshape_hidden",
+    "close_0_shapeonly_hidden", "close_1_shapeonly_hidden", "close_2_shapeonly_hidden",	
+    "far_0_diffshape_hidden", "far_1_diffshape_hidden", "far_2_diffshape_hidden",
+    "close_0_textureshape_visible", "close_1_textureshape_visible", "close_2_textureshape_visible",
+    "close_0_colorshape_visible", "close_1_colorshape_visible", "close_2_colorshape_visible",
+    "close_0_shapeonly_visible", "close_1_shapeonly_visible", "close_2_shapeonly_visible",
+    "far_0_diffshape_visible", "far_1_diffshape_visible", "far_2_diffshape_visible",	
+    "prob", "MCMCprob"] + '\n');
+  var supp = erp.samples;
   supp.forEach(function(s) {
-    supportWriter(s.predictives, erp.score(s), predictiveFile);
-    supportWriter(s.params, erp.score(s), paramFile);
+    supportWriter(s['value']['predictives'], NaN, predictiveFile);
   });
   fs.closeSync(predictiveFile);
+};
+
+// Note this is highly specific to a single type of erp
+var paramsErpWriter = function(erp, filePrefix) {
+  var paramFile = fs.openSync(filePrefix + "Params.csv", 'w');
+  fs.writeSync(paramFile, ["alpha", "ownWeighting", "textureCost", "colorCost",
+                           "shapeCost", "logLikelihood", "prob"] + '\n');
+  
+  var supp = erp.support();
+  supp.forEach(function(s) {
+    supportWriter(s.params, erp.score(s), paramFile);
+  });
   fs.closeSync(paramFile);
   console.log('writing complete.');
 };
@@ -192,7 +200,7 @@ var getRelativeLength = function(params, label) {
 module.exports = {
   possibleUtts, possibleObjects,
   constructLexicon, powerset, getSubset, 
-  bayesianErpWriter, writeERP, writeCSV,
+  paramsErpWriter, predictivesErpWriter, writeERP, writeCSV,
   readCSV, locParse, getRelativeLength,
   getRelativeLogFrequency, getTypSubset
 };
