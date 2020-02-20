@@ -149,15 +149,14 @@ var bda = function() {
     factor(score);
     globalStore.score += score;
   });
-  console.log(globalStore.score);
   return {
     params: _.zipObject([_.values(params).join(',')], [globalStore.score]),
     objParams: params
   };
 };
 
-if(argv.AIS == true){
-  console.log([argv.model, AIS(bda, {samples: 1, steps: 30000})].join(','));
+if(argv.AIS == "true"){
+  console.log([argv.model, AIS(bda, {samples: 1, steps: 5000})].join(','));
 } else {
   var outputERP = Infer({method: 'MCMC', samples: 1000, burn: 1000, lag: 1, model: bda, verbose: true});
   refModule.paramsErpWriter(outputERP, "./output/" + argv.model + "BDA");

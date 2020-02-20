@@ -1,0 +1,240 @@
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-3081.158912566182
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-2835.731427059794
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-9991.501379242842
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3666.291527949254
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-2918.9959129879885
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-3202.0473879018323
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3471.698392405591
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-4380.4498071821345
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-3634.2338903201435
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3711.624494004322
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3034.043794453057
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3021.560189789254
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3402.7657133006755
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3216.3217787328426
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3683.61531972045
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-2793.14611136586
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-2950.0323404215474
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-2861.4894735019097
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-2954.515166871312
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3770.994355228177
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3855.4146322141723
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3712.1411615081975
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3687.8774695106304
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3847.798397837395
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-2790.7353914165033
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3253.148314989969
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-4430.003672944869
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3666.9984701952367
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3675.9235159826417
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3846.3860787741237
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3276.681387532798
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3681.9818140227508
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3638.805856523811
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3434.880068792764
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3706.798479902907
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3743.0769656234224
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-4333.2924231866555
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3827.4602170150815
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3943.2734284350176
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-7786.858865189786
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3145.6755311031607
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3169.3657160330117
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3771.1886330059924
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3747.423739214619
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+egocentric,-3904.0040481743144
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-2881.217434445095
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-2898.1423022197127
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+mixture,-3086.713443685383
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-2972.6310355324813
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-2810.526627991786
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-2791.8239575990133
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-2835.7709969406324
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-2890.977982751584
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-9874.345639762552
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-2779.960570978903
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-3144.826135686513
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-4630.479396443264
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-4517.706367066616
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-2859.0198349643915
+undefined
+10000 function calls have been cached.
+The size of the cache can be limited by calling cache(f, maxSize).
+occlusionSensitive,-3525.2637043404297
+undefined
