@@ -128,7 +128,7 @@ var getExpectedLength = function(condition, additionalDistractors, params) {
 
 var bda = function() {
   var params = {
-    alpha : uniformDrift({a: 0, b: 1000, width: 30}),
+    alpha : uniformDrift({a: 0, b: 1000, width: 50}),
     ownWeighting: (argv.model == 'egocentric' ? 0 :
                    argv.model == 'occlusionSensitive' ? 1 :
                    argv.model == 'mixture' ? uniformDrift({a: 0, b: 1, width: 0.1}) :
@@ -156,7 +156,7 @@ var bda = function() {
 };
 
 if(argv.AIS == "true"){
-  console.log([argv.model, AIS(bda, {samples: 1, steps: 5000})].join(','));
+  console.log([argv.model, AIS(bda, {samples: 1, steps: 10000})].join(','));
 } else {
   var outputERP = Infer({method: 'MCMC', samples: 1000, burn: 1000, lag: 1, model: bda, verbose: true});
   refModule.paramsErpWriter(outputERP, "./output/" + argv.model + "BDA");
