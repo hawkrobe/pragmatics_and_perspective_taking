@@ -5,7 +5,7 @@
   "dependencies": {
     "csv-parse": "~0.0.6",
     "jsonfile": "~2.4.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.13",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "mongodb": "^2.2.28",
