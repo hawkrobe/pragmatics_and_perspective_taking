@@ -4,7 +4,7 @@ To run these experiments on your machine, follow the instructions below:
 
 1. navigate to the location where you want to create your project, and enter 
    ```
-   git clone https://github.com/hawkrobe/keysar_replication.git
+   git clone https://github.com/hawkrobe/pragmatics_and_perspective_taking.git
    ```
    at the command line to create a local copy of this repository. On Windows, run this command in the shell.
 
