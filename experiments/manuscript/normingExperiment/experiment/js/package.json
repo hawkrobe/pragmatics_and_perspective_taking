@@ -11,6 +11,6 @@
     "mongodb": "^2.2.28",
     "node-uuid": "1.4.1",
     "underscore": "~1.7.0",
-    "papaparse": "~4.4.0"
+    "papaparse": "~5.2.0"
   }
 }
