@@ -5,17 +5,14 @@
 // take the target to be 'texture_color_shape' (i.e. some set of
 // levels) and allow distractors to differ along any of these levels
 // (e.g. 'otherTexture_otherColor_shape' has the same shape as the
-// target, but different texture and color). the (optional)
-// probabilities the true probabilities of hidden distractors in the
-// experiment, if objects are sampled uniformly from the 4 x 4 x 4
-// space.
+// target, but different texture and color).
 var possibleObjects = Categorical({
   vs: [
     'texture_color_shape', 'othertexture_othercolor_othershape',
     'othertexture_color_shape', 'texture_othercolor_shape', 'texture_color_othershape',
-    'othertexture_othercolor_shape', 'texture_othercolor_othershape', 'othertexture_color_othershape',
+    'othertexture_othercolor_shape', 'texture_othercolor_othershape',
+    'othertexture_color_othershape'
   ]
-//  ps: [1/64, 27/64, 3/64, 3/64, 3/64, 9/64, 9/64, 9/64]
 });
 
 // speaker can mention any combination of the 3 feature dimensions
@@ -25,11 +22,12 @@ var possibleUtterances = Categorical({
        'texture_color_shape',
        'othershape', 'othercolor', 'othertexture',
        'othertexture_othercolor', 'othercolor_othershape', 'othertexture_othershape',
-       'othertexture_othercolor_othershape',
        'othertexture_color', 'texture_othercolor', 'color_othershape', 'othercolor_shape',
-       'othertexture_shape', 'texture_othershape', 'texture_color_othershape', 'texture_othercolor_shape',
-       'othertexture_color_shape', 'texture_othercolor_othershape', 'othertexture_color_othershape',
-       'othertexture_othercolor_shape']
+       'othertexture_shape', 'texture_othershape',
+       'texture_color_othershape', 'texture_othercolor_shape', 'othertexture_color_shape',
+       'texture_othercolor_othershape', 'othertexture_color_othershape',
+       'othertexture_othercolor_shape',
+       'othertexture_othercolor_othershape']
 });
 
 // these are the possible mixture weights for perspective-taking
@@ -93,7 +91,7 @@ var L0 = cache(function(utt, context, weighting) {
     var perspective = flip(weighting) ? 'other' : 'own';
     var partnerContext = perspective == 'own' ? context : getSpeakerView(context);
     var object = uniformDraw(partnerContext);
-    condition(meaning(utt, object));
+    factor(meaning(utt, object) ? 0 : -100);
     return object;
   });
 });
@@ -103,20 +101,15 @@ var L0 = cache(function(utt, context, weighting) {
 var S1 = cache(function(target, context, ownWeighting) {
   return Infer({method: 'enumerate'}, function() {
     var utt = sample(getTrueUtterances(context));    
-    var partnerWeighting = sample(possibleWeightings);
-
-    // Weight proportional to utility
-    var perspective = flip(ownWeighting) ? 'other' : 'own';
-    
-    var informativity = (
-      perspective == 'own' ? L0(utt, context, 0).score(target) :
-        expectation(possibleObjects, function(obj) {
-          var possibleListenerView = context.concat(obj + '_private');
-          return (L0(utt, possibleListenerView, partnerWeighting).score(target));
-        })
-    );
-
-    factor(params.alpha * (informativity - uttCost(utt,params)));
+    var combinedUtility = expectation(possibleWeightings, function(partnerWeighting) {
+      var egocentricUtility = L0(utt, context, 0).score(target) - uttCost(utt,params);
+      var asymmetricUtility = expectation(possibleObjects, function(obj) {
+        var possibleListenerView = context.concat(obj + '_private');
+        return L0(utt, possibleListenerView, partnerWeighting).score(target) - uttCost(utt,params);
+      });
+      return ownWeighting * asymmetricUtility + (1 - ownWeighting) * egocentricUtility;
+    });
+    factor(params.alpha * combinedUtility);
     return utt;
   });
 });
