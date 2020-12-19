@@ -4,21 +4,20 @@ output: html_document
 ---
 
 ```{r}
-setwd('~/Repos/keysar_replication/experiment1/data/')
-preMouseDExp1 = read.csv('mouse/fullSampleMouse.csv')
-preErrorDExp1 = read.csv('error/fullSampleError.csv')
-preMessageDExp1 = read.csv('message/fullSampleMessage.csv')
-
-setwd('~/Repos/keysar_replication/experiment2/data/')
-preMouseDExp2 = read.csv('mouse/exp2Mouse.csv')
-preErrorDExp2 = read.csv('error/exp2Error.csv')
-preMessageDExp2 = read.csv('message/exp2Message.csv')
 library(tidyr)
 library(dplyr)
 library(ggplot2)
 library(lme4)
 library(lmerTest)
 library(binom)
+
+preMouseDExp1 = read.csv('../data/exp1Mouse.csv')
+preErrorDExp1 = read.csv('../data/exp1Error.csv')
+preMessageDExp1 = read.csv('../data/exp1Message.csv')
+
+preMouseDExp2 = read.csv('../data/exp2Mouse.csv')
+preErrorDExp2 = read.csv('../data/exp2Error.csv')
+preMessageDExp2 = read.csv('../data/exp2Message.csv')
 ```
 
 Filter out bad participants
@@ -210,13 +209,13 @@ Need to join the coder ratings...
 ```{r}
 library(boot)
 library(irr)
-turkerRatings <- read.csv("../normingExperiment/data/keysarNorming-trials.csv")
+turkerRatings <- read.csv("../data/informativities.csv")
 relevantProperties <- c("objectSet", "label")
 
-criticalMessagesExp1 <- read.csv("../experiment1/data/processedLabelsExp1.csv") %>%
+criticalMessagesExp1 <- read.csv("../data/Exp1SpeakerLabels.csv") %>%
   left_join(turkerRatings, by = relevantProperties) %>%
   mutate(exp = "Exp.1")
-criticalMessagesExp2 <- read.csv("../experiment2/data/processedLabelsExp2.csv") %>%
+criticalMessagesExp2 <- read.csv("../data/Exp2SpeakerLabels.csv") %>%
   left_join(turkerRatings, by = relevantProperties) %>%
   mutate(exp = "Exp.2")
 
@@ -369,7 +368,7 @@ g <- (ggplot(Exp2ItemwiseForPlot, aes(x = fitness, y = errorRate))
   + ylab("Error rate")
   + xlab("Distractor fitness / target fitness"))
 g
-ggsave("~/Repos/keysar_replication/writing/cogsci-revision/images/itemWiseFitness.pdf")
+ggsave("../../writing/cogsci-revision/images/itemWiseFitness.pdf")
 ```
 
 ```{r}
@@ -436,17 +435,6 @@ distractorPlot +
   ylab("predicted probability of error") +
   ggtitle("distractor informativity") + 
   labs(color="item")
-
-# Shoudln't worry too much about convergence errors: appear to be false positives
-# https://groups.google.com/forum/#!topic/predicts_project/gVfnVxCSYog
-
-# gg <- mmRes2@optinfo$derivs$grad
-# hh <- mmRes2@optinfo$derivs$Hessian
-# vv <- sqrt(diag(solve(hh/2)))
-# print(summary(abs(gg*vv)))
-# 
-# relgrad <- with(mmRes2@optinfo$derivs,solve(Hessian,gradient))
-# print(max(abs(relgrad)))
 
 ```
 
@@ -663,37 +651,4 @@ ggplot(d.model, aes(x=x, y=y, fill = x)) +
   scale_fill_manual(values = c('red', 'blue')) +
   facet_wrap(~ source) +
   ylab("")
-```
-
-# Create input for BDA
-
-Create the informativities csv
-
-```{r}
-rbind(read_csv('../data/exp1SpeakerLabels.csv') %>% mutate(exp = 'scripted'),
-      read_csv('../data/exp2SpeakerLabels.csv') %>% mutate(exp = 'unscripted')) %>%
-  mutate(label = str_replace_all(label, fixed(' '), '')) %>%
-  mutate(label = str_replace_all(label, "[[:punct:]]", "")) %>% 
-  mutate(label = str_to_lower(label, locale = "en")) %>%
-  write_csv(path = '../modeling/bdaInput/speakerData.csv')
-```
-
-```{r}
-library(ggthemes)
-View(turkerRatings)
-
-d <- turkerRatings %>%
-  filter(objectSet == 3) %>%
-  group_by(label,referent) %>% 
-  mutate(avg = mean(response),
-            med = median(response))
-
-ggplot(d, aes(x = response)) +
-    geom_histogram(binwidth = .1) +
-    geom_vline(aes(xintercept=med)) +
-    facet_grid(label ~ referent) +
-    theme_few() +
-    theme(aspect.ratio = .25, text = element_text(size=8))
-
-ggsave(filename = '~/Downloads/cassette_informativity_ratings.png', height = 5)
 ```
